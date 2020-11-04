@@ -1,10 +1,10 @@
-image: registry.gitlab.com/pages/hugo:latest
-# image: monachus/hugo
+# image: registry.gitlab.com/pages/hugo:latest
+image: monachus/hugo:latest
 
 stages:
-  # - .pre
-  - test
+  - .pre
   - build
+  - test
   - deploy
   # - .post
 
@@ -13,12 +13,13 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
   SSH_PK: SSH_PRIVATE_KEY
 
-# prepare ssh key:
-#   stage: .pre
-#   script:
-#     # - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
-#     # - eval $(ssh-agent -s)
-#     - ssh-add <(echo "$SSH_PK" | base64 -d)
+prepare ssh key:
+  stage: .pre
+  script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    # - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PK" | base64 -d)
 #     # - mkdir -p ~/.ssh
 #     # - chmod 700 ~/.ssh
 
@@ -33,7 +34,7 @@ test:
   stage: test
   script:
     - hugo
-  except:
+  only:
     - master
 
 genrate static:
@@ -49,6 +50,7 @@ genrate static:
 publish fozzy:
   stage: deploy
   script:
-    - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PK"
+    - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo
+    # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PK"
   only:
     - master
