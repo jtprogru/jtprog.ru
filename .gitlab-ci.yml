@@ -21,7 +21,7 @@ prepare ssh key:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
-    - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 -d)
+    - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
     - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
 
 rm ssh key:
