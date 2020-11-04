@@ -72,7 +72,7 @@ publish fozzy:
   script:
     - echo "Building static"
     - hugo --config ./config.yml
-    - echo "Copy static to remote host: jtprog.ru"
+    - echo "Copy static to remote host jtprog.ru"
     - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i $SSH_PRIVATE_KEY
     # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PRIVATE_KEY"
   only:
