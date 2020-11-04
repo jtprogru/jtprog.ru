@@ -39,6 +39,15 @@ rm ssh key:
 
 genrate static:
   stage: build
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
+    - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
+    - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
+    - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
   script:
     - hugo --config ./config.yml
   artifacts:
@@ -49,6 +58,15 @@ genrate static:
 
 publish fozzy:
   stage: deploy
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
+    - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
+    - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
+    - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
   script:
     - ssh-keyscan
     - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i $SSH_PRIVATE_KEY
