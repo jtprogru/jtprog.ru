@@ -44,6 +44,7 @@ genrate static:
     - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
     - eval $(ssh-agent -s)
     - mkdir -p ~/.ssh
+    # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - chmod 700 ~/.ssh
     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
     - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
@@ -63,12 +64,15 @@ publish fozzy:
     - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
     - eval $(ssh-agent -s)
     - mkdir -p ~/.ssh
+    # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - chmod 700 ~/.ssh
     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
     - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
     - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
   script:
-    - ssh-keyscan
+    - echo "Building static"
+    - hugo --config ./config.yml
+    - echo "Copy static to remote host: jtprog.ru"
     - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i $SSH_PRIVATE_KEY
     # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PRIVATE_KEY"
   only:
