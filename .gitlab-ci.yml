@@ -1,5 +1,5 @@
 # image: registry.gitlab.com/pages/hugo:latest
-# image: monachus/hugo:latest
+image: monachus/hugo:latest
 
 stages:
   - .pre
