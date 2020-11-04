@@ -9,7 +9,7 @@ stages:
   - .post
 
 variables:
-  CI_DEBUG_TRACE: "true"
+  CI_DEBUG_TRACE: "false"
   GIT_SUBMODULE_STRATEGY: recursive
   SSH_PK: SSH_PRIVATE_KEY
 
