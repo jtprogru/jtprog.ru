@@ -3,32 +3,32 @@
 image: ubuntu:focal
 
 stages:
-  - .pre
-  - build
+  # - .pre
+  # - build
   # - test
   - deploy
-  - .post
+  # - .post
 
 variables:
-  CI_DEBUG_TRACE: "false"
+  CI_DEBUG_TRACE: "true"
   GIT_SUBMODULE_STRATEGY: recursive
 
-prepare ssh key:
-  stage: .pre
-  script:
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
-    - eval $(ssh-agent -s)
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
-    - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
-    - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
-
-rm ssh key:
-  stage: .post
-  script:
-    - rm -f ./ssh_pk
+# prepare ssh key:
+#   stage: .pre
+#   script:
+#     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+#     - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
+#     - eval $(ssh-agent -s)
+#     - mkdir -p ~/.ssh
+#     - chmod 700 ~/.ssh
+#     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
+#     - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
+#     - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
+#
+# rm ssh key:
+#   stage: .post
+#   script:
+#     - rm -f ./ssh_pk
 
 # test:
 #   stage: test
@@ -37,34 +37,32 @@ rm ssh key:
 #   only:
 #     - master
 
-genrate static:
-  stage: build
-  before_script:
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
-    - eval $(ssh-agent -s)
-    - mkdir -p ~/.ssh
-    # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-    - chmod 700 ~/.ssh
-    - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
-    - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
-    - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
-  script:
-    - hugo --config ./config.yml
-  artifacts:
-    paths:
-    - public
-  only:
-    - master
+# genrate static:
+#   stage: build
+#   before_script:
+#     - apt-get update -y && apt-get install openssh-client hugo rsync -y
+#     - eval $(ssh-agent -s)
+#     - mkdir -p ~/.ssh
+#     # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+#     - chmod 700 ~/.ssh
+#     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
+#     - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
+#     - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
+#   script:
+#     - hugo --config ./config.yml
+#   artifacts:
+#     paths:
+#     - public
+#   only:
+#     - master
 
 publish fozzy:
   stage: deploy
   before_script:
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
+    - apt-get update -y && apt-get install openssh-client hugo rsync -y
     - eval $(ssh-agent -s)
     - mkdir -p ~/.ssh
-    # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - chmod 700 ~/.ssh
     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
     - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
@@ -72,8 +70,15 @@ publish fozzy:
   script:
     - echo "Building static"
     - hugo --config ./config.yml
-    - echo "Copy static to remote host jtprog.ru"
-    - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i $SSH_PRIVATE_KEY
+    - echo "Запуск rsync"
+    - rsync -avz --progress --delete public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo
+    - echo "Копируем .htaccess"
+    - scp ./content/.htaccess jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo/.htaccess
+    - echo "Копируем robots.txt"
+    - scp ./content/robots.txt jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo/robots.txt
+    - echo "Завершён деплой"
+    # - echo "Copy static to remote host jtprog.ru"
+    # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i $SSH_PRIVATE_KEY
     # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PRIVATE_KEY"
   only:
     - master
