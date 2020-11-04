@@ -4,7 +4,7 @@ image: monachus/hugo:latest
 stages:
   - .pre
   - build
-  - test
+  # - test
   - deploy
   - .post
 
@@ -29,17 +29,17 @@ rm ssh key:
   script:
     - rm -f ./ssh_pk
 
-test:
-  stage: test
-  script:
-    - hugo
-  only:
-    - master
+# test:
+#   stage: test
+#   script:
+#     - hugo --config ./config.yml
+#   only:
+#     - master
 
 genrate static:
   stage: build
   script:
-    - hugo
+    - hugo --config ./config.yml
   artifacts:
     paths:
     - public

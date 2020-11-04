@@ -1,4 +1,4 @@
-baseURL: "/"
+baseURL: "https://hugo.jtprog.ru"
 theme: "papermod"
 title: "SysOps"
 languageCode: "ru-RU"
@@ -79,19 +79,33 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog =)
+    Title: "Приветствую \U0001F44B"
+    Content: Добро пожаловать на мой бложек
 
   socialIcons:
     - name: telegram
-      url: 'https://ttttt.me/sysopschannel'
+      url: 'https://t.me/sysopschannel'
     - name: twitter
       url: 'https://twitter.com/jtprogru'
     - name: github
       url: 'https://github.com/jtprog'
+    - name: gitlab
+      url: 'https://gitlab.com/jtprog'
     - name: stackoverflow
-      url: 'https://stackoverflow.com'
-    
+      url: 'https://stackoverflow.com/users/6744296/jtprog'
+    - name: linkedin
+      url: 'https://linkedin.com/mihail-jtprogru-savin'
+    # - name: medium
+    #   url: 'https://medium.com/@jtprog'
+    - name: facebook
+      url: 'https://www.facebook.com/sysodminium'
+    - name: instagram
+      url: 'https://instagram.com/jtprog'
+    # - name: rss
+    #   url: '/rss'
+    - name: email
+      url: 'mailto:mail@jtprog.ru'
+
 
 
 
