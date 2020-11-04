@@ -6,12 +6,12 @@ env/
 __pycache__/
 .env
 .vscode/
-#themes/
 conf.yml
-#content/
-#jekyll/
-resources/
-#static/syntax.css
+# content/
+# jekyll/
+# resources/
+# static/syntax.css
 _draft/
 jekyll/
 draft/
+public/

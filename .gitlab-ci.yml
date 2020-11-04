@@ -1,0 +1,46 @@
+image: registry.gitlab.com/pages/hugo:latest
+# image: monachus/hugo
+
+stages:
+  - .pre
+  - test
+  - build
+  - deploy
+
+variables:
+  CI_DEBUG_TRACE: "true"
+  GIT_SUBMODULE_STRATEGY: recursive
+  SSH_PK: SSH_PRIVATE_KEY
+
+prepare ssh key:
+  stage: .pre
+  script:
+    # - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PK" | base64 -d)
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+
+test:
+  stage: test
+  script:
+    - hugo
+  except:
+    - master
+
+genrate static:
+  stage: build
+  script:
+    - hugo
+  artifacts:
+    paths:
+    - public
+  only:
+    - master
+
+publish fozzy:
+  stage: deploy
+  script:
+    - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PK"
+  only:
+    - master
