@@ -1,0 +1,17 @@
+*~
+.DS_Store
+venv/
+env/
+.idea/
+__pycache__/
+.env
+.vscode/
+#themes/
+conf.yml
+#content/
+#jekyll/
+resources/
+#static/syntax.css
+_draft/
+jekyll/
+draft/

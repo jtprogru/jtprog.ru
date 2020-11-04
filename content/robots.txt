@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /vkontakte/
+Disallow: /facebook/
+Disallow: /gplus/
+Disallow: /telegram/
+Disallow: /twitter/
+Disallow: /digitalocean/
+Disallow: */trackback
+Disallow: */comment
+Disallow: /?p=
+Disallow: /not-found/
+Disallow: /ip/
+
+Crawl-delay: 10
+
+Sitemap: https://jtprog.ru/sitemap.xml
+
+Host: jtprog.ru
