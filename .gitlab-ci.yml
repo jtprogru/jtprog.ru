@@ -2,7 +2,7 @@ image: registry.gitlab.com/pages/hugo:latest
 # image: monachus/hugo
 
 stages:
-  - .pre
+  # - .pre
   - test
   - build
   - deploy
@@ -13,14 +13,14 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
   SSH_PK: SSH_PRIVATE_KEY
 
-prepare ssh key:
-  stage: .pre
-  script:
-    # - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
-    # - eval $(ssh-agent -s)
-    - ssh-add <(echo "$SSH_PK" | base64 -d)
-    # - mkdir -p ~/.ssh
-    # - chmod 700 ~/.ssh
+# prepare ssh key:
+#   stage: .pre
+#   script:
+#     # - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+#     # - eval $(ssh-agent -s)
+#     - ssh-add <(echo "$SSH_PK" | base64 -d)
+#     # - mkdir -p ~/.ssh
+#     # - chmod 700 ~/.ssh
 
 # rm ssh key:
 #   stage: .post
