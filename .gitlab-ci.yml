@@ -6,7 +6,7 @@ stages:
   - build
   - test
   - deploy
-  # - .post
+  - .post
 
 variables:
   CI_DEBUG_TRACE: "true"
@@ -17,18 +17,18 @@ prepare ssh key:
   stage: .pre
   script:
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    # - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
     - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
     - ssh-add <(echo "$SSH_PK" | base64 -d)
-#     # - mkdir -p ~/.ssh
-#     # - chmod 700 ~/.ssh
+    - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
 
-# rm ssh key:
-#   stage: .post
-#   script:
-#     - rm -f ~/.ssh/id_rsa
-#   tags:
-#     - ops
+rm ssh key:
+  stage: .post
+  script:
+    - rm -f ./ssh_pk
 
 test:
   stage: test
@@ -50,7 +50,8 @@ genrate static:
 publish fozzy:
   stage: deploy
   script:
-    - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo
+    - ssh-keyscan
+    - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i ./ssh_pk
     # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PK"
   only:
     - master
