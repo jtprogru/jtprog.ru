@@ -11,7 +11,6 @@ stages:
 variables:
   CI_DEBUG_TRACE: "false"
   GIT_SUBMODULE_STRATEGY: recursive
-  SSH_PK: SSH_PRIVATE_KEY
 
 prepare ssh key:
   stage: .pre
@@ -22,7 +21,7 @@ prepare ssh key:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
-    - ssh-add <(echo "$SSH_PK" | base64 -d)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 -d)
     - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
 
 rm ssh key:
@@ -51,7 +50,7 @@ publish fozzy:
   stage: deploy
   script:
     - ssh-keyscan
-    - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i ./ssh_pk
-    # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PK"
+    - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i $SSH_PRIVATE_KEY
+    # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PRIVATE_KEY"
   only:
     - master
