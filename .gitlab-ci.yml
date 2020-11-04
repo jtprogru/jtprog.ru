@@ -1,5 +1,6 @@
-image: registry.gitlab.com/pages/hugo:latest
+# image: registry.gitlab.com/pages/hugo:latest
 # image: monachus/hugo:latest
+image: ubuntu:focal
 
 stages:
   - .pre
