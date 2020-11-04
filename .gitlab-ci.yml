@@ -6,6 +6,7 @@ stages:
   - test
   - build
   - deploy
+  # - .post
 
 variables:
   CI_DEBUG_TRACE: "true"
@@ -16,10 +17,17 @@ prepare ssh key:
   stage: .pre
   script:
     # - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
-    - eval $(ssh-agent -s)
+    # - eval $(ssh-agent -s)
     - ssh-add <(echo "$SSH_PK" | base64 -d)
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
+    # - mkdir -p ~/.ssh
+    # - chmod 700 ~/.ssh
+
+# rm ssh key:
+#   stage: .post
+#   script:
+#     - rm -f ~/.ssh/id_rsa
+#   tags:
+#     - ops
 
 test:
   stage: test
