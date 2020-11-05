@@ -1,6 +1,6 @@
-# image: registry.gitlab.com/pages/hugo:latest
+image: registry.gitlab.com/pages/hugo:latest
 # image: monachus/hugo:latest
-image: ubuntu:focal
+# image: ubuntu:focal
 
 stages:
   # - .pre
@@ -68,7 +68,7 @@ publish fozzy:
     - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
     - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
   script:
-    - echo "Building static"
+    - echo "Генерация статики"
     - hugo --config ./config.yml
     - echo "Запуск rsync"
     - rsync -avz --progress --delete public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo
