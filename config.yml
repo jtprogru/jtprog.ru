@@ -64,7 +64,7 @@ params:
   ShowReadingTime: true
   disableSpecial1stPost: true
   homeInfoParams:
-    Title: "Приветствую \U0001F44B"
+    Title: "Welcome \U0001F44B"
     Content: Добро пожаловать на мой бложек
 
   socialIcons:
