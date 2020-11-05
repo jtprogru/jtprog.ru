@@ -32,10 +32,10 @@ params:
   disqusShortname: "jtprog"
   label:
       text: "SysOps"
-      icon: /logo.jpg
+      icon: /draft-logo.jpeg
       # iconHeight: 135
   assets:
-    favicon: '/logo.jpg'
+    favicon: '/draft-logo.ico'
   # homeInfoParams:
     # Title: "Hi there \U0001F44B"
     # Content: Welcome to my blog
@@ -92,17 +92,17 @@ params:
 
 
 
-  # analytics:
-  #   google:
-  #     SiteVerificationTag: "XYZabc"
+  analytics:
+    google:
+      SiteVerificationTag: "UA-176073511-1"
 
   entry:
     meta: ["date", "tags", "author"] # Enable meta fields in given order
     toc: false # Enable Table of Contents
     tocOpen: false # Open Table of Contents block. Optional
 
-  # featured:
-  #   previewOnly: true # Show only preview featured image
+  featured:
+    previewOnly: true # Show only preview featured image
 
   # breadcrumb:
   #   enable: false # Enable breadcrumb block globally
