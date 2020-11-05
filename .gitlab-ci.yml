@@ -15,7 +15,10 @@ deploy fozzy:
   stage: build
   script:
     # - docker pull $CI_REGISTRY_IMAGE:latest || true
-    - docker build --build-arg SSH_PK="${SSH_PRIVATE_KEY}" --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
+    - docker build --build-arg SSH_PRIVATE_KEY="${SSH_PRIVATE_KEY}" \
+    --build-arg SSH_USER="${SSH_USER}" \
+    --build-arg SSH_HOST="${SSH_HOST}" \
+    --build-arg REMOTE_PATH="${REMOTE_PATH}"  --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
     # - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
     # - docker push $CI_REGISTRY_IMAGE:latest
   only:
