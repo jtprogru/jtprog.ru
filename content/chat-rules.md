@@ -6,7 +6,7 @@ author: jtprog
 layout: page
 guid: https://jtprog.ru/?page_id=263
 ---
-[ЧАТ: SysOps](https://t.me/sysodminium_chat)
+[ЧАТ: SysOps](https://t.me/sysopschat)
 
 Настоятельно рекомендуется:
 

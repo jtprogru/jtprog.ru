@@ -1,84 +1,22 @@
-image: registry.gitlab.com/pages/hugo:latest
-# image: monachus/hugo:latest
-# image: ubuntu:focal
+image: docker:19.03.12
 
-stages:
-  # - .pre
-  # - build
-  # - test
-  - deploy
-  # - .post
+services:
+  - docker:19.03.12-dind
 
 variables:
   CI_DEBUG_TRACE: "false"
   GIT_SUBMODULE_STRATEGY: recursive
+  SSH_PK: $SSH_PRIVATE_KEY
+  DOCKER_DRIVER: overlay
 
-# prepare ssh key:
-#   stage: .pre
-#   script:
-#     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-#     - 'which hugo || ( apt-get update -y && apt-get install hugo -y )'
-#     - eval $(ssh-agent -s)
-#     - mkdir -p ~/.ssh
-#     - chmod 700 ~/.ssh
-#     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
-#     - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
-#     - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
-#
-# rm ssh key:
-#   stage: .post
-#   script:
-#     - rm -f ./ssh_pk
-
-# test:
-#   stage: test
-#   script:
-#     - hugo --config ./config.yml
-#   only:
-#     - master
-
-# genrate static:
-#   stage: build
-#   before_script:
-#     - apt-get update -y && apt-get install openssh-client hugo rsync -y
-#     - eval $(ssh-agent -s)
-#     - mkdir -p ~/.ssh
-#     # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-#     - chmod 700 ~/.ssh
-#     - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
-#     - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
-#     - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
-#   script:
-#     - hugo --config ./config.yml
-#   artifacts:
-#     paths:
-#     - public
-#   only:
-#     - master
-
-publish fozzy:
-  stage: deploy
-  # before_script:
-  #   - apt-get update -y && apt-get install openssh-client hugo rsync -y
-  #   - eval $(ssh-agent -s)
-  #   - mkdir -p ~/.ssh
-  #   - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-  #   - chmod 700 ~/.ssh
-  #   - ssh-keyscan -p 22 jtprog.ru > ~/.ssh/known_hosts
-  #   - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode | ssh-add -
-  #   - echo $SSH_PRIVATE_KEY | base64 -d > ./ssh_pk
+# before_script:
+#   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+deploy fozzy:
+  stage: build
   script:
-    - echo "Генерация статики"
-    - hugo --config ./config.yml
-    - echo "Запуск rsync"
-    - rsync -avz --progress --delete public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo
-    - echo "Копируем .htaccess"
-    - scp ./content/.htaccess jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo/.htaccess
-    - echo "Копируем robots.txt"
-    - scp ./content/robots.txt jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo/robots.txt
-    - echo "Завершён деплой"
-    # - echo "Copy static to remote host jtprog.ru"
-    # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i $SSH_PRIVATE_KEY
-    # - scp -r ./public/ jtprogru@jtprog.ru:/home/jtprogru/subdomains/hugo -i "$SSH_PRIVATE_KEY"
+    - docker pull $CI_REGISTRY_IMAGE:latest || true
+    - docker build --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
+    # - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+    # - docker push $CI_REGISTRY_IMAGE:latest
   only:
     - master

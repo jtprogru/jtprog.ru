@@ -4,14 +4,11 @@ title: "SysOps"
 languageCode: "ru-RU"
 defaultContentLanguage: "ru"
 enableEmoji: true
-# enablegitinfo: true
-# forcesyncstatic: true
+enablegitinfo: true
+forcesyncstatic: true
 paginate: 10
-# canonifyURLs: true
-# summaryLength: 15
-# disableAliases: false
-# enableRobotsTXT: true
-# env: production
+canonifyURLs: true
+summaryLength: 15
 
 # author: # Used in authorbox
 #   name: "JTProg"
@@ -32,7 +29,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   comments: true
   # hidemeta: true
-  # disqusShortname: "jtprog"
+  disqusShortname: "jtprog"
   label:
       text: "SysOps"
       icon: /logo.jpg
@@ -49,7 +46,8 @@ params:
   description: "Записная книжка админа-самоучки"
   mainSections:  ["post"]
   # columns: 1 # Set the number of cards columns. Possible values: 1, 2, 3
-  dateFormat: "2006-01-02 15:04" # Change the format of dates
+  # Change the format of dates
+  dateFormat: "2006-01-02 15:04"
   # colorTheme: "dark-violet" # dark-green, dark-blue, dark-red, dark-violet
   # mainMenuAlignment: "right" # Align main menu (desktop version) to the right side
   # authorbox: true # Show authorbox at bottom of single pages if true
@@ -65,19 +63,6 @@ params:
   ShowShareButtons: true
   ShowReadingTime: true
   disableSpecial1stPost: true
-  # profile-mode
-  # profileMode:
-  #   enabled: false # needs to be explicitly set
-  #   title: ExampleSite
-  #   # imageUrl: '<img location>'
-  #   # imageTitle: my image
-  #   buttons:
-  #     - name: Posts
-  #       url: posts
-  #     - name: Tags
-  #       url: tags
-
-  # home-info mode
   homeInfoParams:
     Title: "Приветствую \U0001F44B"
     Content: Добро пожаловать на мой бложек
@@ -95,14 +80,12 @@ params:
       url: 'https://stackoverflow.com/users/6744296/jtprog'
     - name: linkedin
       url: 'https://linkedin.com/mihail-jtprogru-savin'
-    # - name: medium
-    #   url: 'https://medium.com/@jtprog'
     - name: facebook
       url: 'https://www.facebook.com/sysodminium'
     - name: instagram
       url: 'https://instagram.com/jtprog'
-    # - name: rss
-    #   url: '/rss'
+    - name: rss
+      url: '/index.xml'
     - name: email
       url: 'mailto:mail@jtprog.ru'
 
@@ -343,3 +326,20 @@ menu:
 #       gzip: false
 #     - pattern: "^.+\\.(html|xml|json)$"
 #       gzip: true
+
+module:
+  mounts:
+  - source: content
+    target: content
+  - source: static
+    target: static
+  - source: layouts
+    target: layouts
+  - source: data
+    target: data
+  - source: assets
+    target: assets
+  - source: i18n
+    target: i18n
+  - source: archetypes
+    target: archetypes
