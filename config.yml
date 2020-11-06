@@ -10,10 +10,6 @@ paginate: 10
 canonifyURLs: true
 summaryLength: 15
 
-# author: # Used in authorbox
-#   name: "JTProg"
-#   bio: "RTFM!!!"
-#   avatar: "profile.png"
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
@@ -26,40 +22,40 @@ minify:
   minifyOutput: true
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production
   comments: true
-  # hidemeta: true
   disqusShortname: "jtprog"
   label:
       text: "SysOps"
-      icon: /draft-logo.jpeg
+      icon: /logo.jpg
       # iconHeight: 135
   assets:
     favicon: '/draft-logo.ico'
-  # homeInfoParams:
-    # Title: "Hi there \U0001F44B"
-    # Content: Welcome to my blog
-  # opengraph: true # Enable OpenGraph if true
-  # twitter_cards: true # Enable Twitter Cards if true
-  # copyright: "Mihael (JTProg) Savin"
+  opengraph: true
+  twitter_cards: true
+  copyright: "Mihael (JTProg) Savin"
   title: "SysOps"
   description: "Записная книжка админа-самоучки"
   mainSections:  ["post"]
-  # columns: 1 # Set the number of cards columns. Possible values: 1, 2, 3
-  # Change the format of dates
   dateFormat: "2006-01-02 15:04"
-  # colorTheme: "dark-violet" # dark-green, dark-blue, dark-red, dark-violet
-  # mainMenuAlignment: "right" # Align main menu (desktop version) to the right side
-  # authorbox: true # Show authorbox at bottom of single pages if true
-  # comments: true # Enable comments for all site pages
-  # related: true # Enable Related content for single pages
-  # relatedMax: 5 # Set the maximum number of elements that can be displayed in related block. Optional
-  # mathjax: false # Enable MathJax for all site pages
-  # mathjaxPath: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path. Optional
-  # mathjaxConfig: "TeX-AMS-MML_HTMLorMML" # Specify MathJax config. Optional
-  # hideNoPostsWarning: false # Don't show no posts empty state warning in main page, if true
-  # twitterName: "jtprogru"
-  # yaMoney: "410011675062464"
+  comments: false
+  related: true
+  relatedMax: 5
+  keywords:
+    - linux
+    - ubuntu
+    - centos
+    - debian
+    - iptables
+    - firewall
+    - devops
+    - gitlab-ci
+    - route add
+    - route add windows
+    - route windows
+    -
+
+
   ShowShareButtons: true
   ShowReadingTime: true
   disableSpecial1stPost: true
@@ -84,8 +80,8 @@ params:
       url: 'https://www.facebook.com/sysodminium'
     - name: instagram
       url: 'https://instagram.com/jtprog'
-    - name: rss
-      url: '/index.xml'
+    # - name: rss
+    #   url: '/index.xml'
     - name: email
       url: 'mailto:mail@jtprog.ru'
 
@@ -94,72 +90,49 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "UA-176073511-1"
+      SiteVerificationTag: "7XYgVY2xnjODEkc6HA_dLMdLSQDNEQ3v5bG40MpnB0U"
 
   entry:
-    meta: ["date", "tags", "author"] # Enable meta fields in given order
-    toc: false # Enable Table of Contents
-    tocOpen: false # Open Table of Contents block. Optional
+    meta: ["date", "tags", "author"]
+    toc: false
+    tocOpen: false
 
   featured:
-    previewOnly: true # Show only preview featured image
+    previewOnly: true
 
-  # breadcrumb:
-  #   enable: false # Enable breadcrumb block globally
-  #   homeText: "Главная" # Home node text
+  # MANIFEST:
+  #   name: "SysOps"
+  #   shortName: "Binario"
+  #   display: "browser"
+  #   startUrl: "/"
+  #   backgroundColor: "#102020"
+  #   themeColor: "#1b1b1b"
+  #   description: "Записная книжка админа-самоучки"
+  #   orientation: "portrait"
+  #   scope: "/"
 
-  # social:
-  #   email: "mail@jtprog.ru"
-  #   jabber: "jtprog@jabber.ru"
-  #   facebook: "sysodminium"
-  #   twitter: "jtprogru"
-  #   telegram: "sysodminium"
-  #   instagram: "jtprog"
-  #   linkedin: "mihail-jtprogru-savin"
-  #   github: "jtprog"
-  #   gitlab: "jtprog"
-  #   stackoverflow: "6744296"
-  #   medium: "jtprog"
-
-  # Share: # Entry Share block
-  #   facebook: true
-  #   twitter: true
-  #   reddit: true
-  #   linkedin: true
-  #   vk: true
-  #   pocket: true
-  #   pinterest: true
-
-  # Manifest:
-    # name: "SysOps"
-    # shortName: "Binario"
-    # display: "browser"
-    # startUrl: "/"
-    # backgroundColor: "#102020"
-    # themeColor: "#1b1b1b"
-    # description: "Записная книжка админа-самоучки"
-    # orientation: "portrait"
-    # scope: "/"
-
-# outputFormats:
-#   MANIFEST:
-#     mediaType: "application/json"
-#     baseName: "manifest"
-#     isPlainText: true
-#     notAlternative: true
-#   RSS:
-#     mediaType: "application/rss+xml"
-#     baseName: "manifest"
-#     isPlainText: true
-#     notAlternative: true
+outputFormats:
+  RSS:
+    mediaType: "application/rss+xml"
+    baseName: "manifest"
+    isPlainText: true
+    notAlternative: true
+  # MANIFEST:
+  #   mediaType: "application/json"
+  #   baseName: "manifest"
+  #   isPlainText: true
+  #   notAlternative: true
 
 outputs:
-  home: ["HTML", "RSS"] #, "MANIFEST"]
+  home:
+    - "HTML"
+    - "RSS"
+    # - "MANIFEST"
 
 
-# taxonomies:
-#   category: "categories"
-#   tag: "tags"
+taxonomies:
+  category: "categories"
+  tag: "tags"
 
 permalinks:
   post: "/:slug/"
@@ -168,111 +141,111 @@ menu:
   main:
   - name: "GitHub"
     url: "/github/"
-    weight: 10
+    weight: 1
   - name: "Навыки"
     url: "/skillz/"
-    weight: 30
-  - name: "Резюме"
+    weight: 2
+  - name: "CV"
     url: "/resume/"
-    weight: 20
+    weight: 3
 
-# frontmatter:
-#   date: ["date", "publishDate", "lastmod"]
-#   lastmod: [":git", "lastmod", "date", "publishDate"]
-#   publishDate: ["publishDate", "date"]
-#   expiryDate: ["expiryDate"]
+frontmatter:
+  date: ["date", "publishDate", "lastmod"]
+  lastmod: [":git", "lastmod", "date", "publishDate"]
+  publishDate: ["publishDate", "date"]
+  expiryDate: ["expiryDate"]
 
 
-# markup:
-  # highlight:
-  #   anchorLineNos: false
-  #   codeFences: true
-  #   guessSyntax: false
-  #   hl_Lines: ""
-  #   lineAnchors: ""
-  #   lineNoStart: 1
-  #   lineNos: false
-  #   lineNumbersInTable: true
-  #   noClasses: true
-  #   style: "monokai"
-  #   tabWidth: 4
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: "monokai"
+    tabWidth: 4
 
-  # blackFriday:
-  #   angledQuotes: false
-  #   footnoteAnchorPrefix: ""
-  #   footnoteReturnLinkContents: ""
-  #   fractions: true
-  #   hrefTargetBlank: false
-  #   latexDashes: true
-  #   nofollowLinks: false
-  #   noreferrerLinks: false
-  #   plainIDAnchors: true
-  #   skipHTML: false
-  #   smartDashes: true
-  #   smartypants: true
-  #   smartypantsQuotesNBSP: false
-  #   taskLists: true
+  blackFriday:
+    angledQuotes: false
+    footnoteAnchorPrefix: ""
+    footnoteReturnLinkContents: ""
+    fractions: true
+    hrefTargetBlank: false
+    latexDashes: true
+    nofollowLinks: false
+    noreferrerLinks: false
+    plainIDAnchors: true
+    skipHTML: false
+    smartDashes: true
+    smartypants: true
+    smartypantsQuotesNBSP: false
+    taskLists: true
 
-  # goldmark:
-  #   extensions:
-  #     definitionList: true
-  #     footnote: true
-  #     linkify: true
-  #     strikethrough: true
-  #     table: true
-  #     taskList: true
-  #     typographer: true
-  #   parser:
-  #     attribute: true
-  #     autoHeadingID: true
-  #     autoHeadingIDType: "github"
-  #   renderer:
-  #     hardWraps: false
-  #     unsafe: false
-  #     xhtml: false
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: "github"
+    renderer:
+      hardWraps: false
+      unsafe: false
+      xhtml: false
 
-# minify:
-#   disableCSS: false
-#   disableHTML: false
-#   disableJS: false
-#   disableJSON: false
-#   disableSVG: false
-#   disableXML: false
-#   minifyOutput: false
-#   tdewolff:
-#     css:
-#       decimals: -1
-#       keepCSS2: true
-#     html:
-#       keepConditionalComments: true
-#       keepDefaultAttrVals: true
-#       keepDocumentTags: true
-#       keepEndTags: true
-#       keepQuotes: false
-#       keepWhitespace: false
-#     js:
-#     json:
-#     svg:
-#       decimals: -1
-#     xml:
-#       keepWhitespace: false
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: false
+  tdewolff:
+    css:
+      decimals: -1
+      keepCSS2: true
+    html:
+      keepConditionalComments: true
+      keepDefaultAttrVals: true
+      keepDocumentTags: true
+      keepEndTags: true
+      keepQuotes: false
+      keepWhitespace: false
+    js:
+    json:
+    svg:
+      decimals: -1
+    xml:
+      keepWhitespace: false
 
-# caches:
-#   assets:
-#     dir: ":resourceDir/_gen"
-#     maxAge: -1
-#   getcsv:
-#     dir: ":cacheDir/:project"
-#     maxAge: -1
-#   getjson:
-#     dir: ":cacheDir/:project"
-#     maxAge: -1
-#   images:
-#     dir: ":resourceDir/_gen"
-#     maxAge: -1
-#   modules:
-#     dir: ":cacheDir/modules"
-#     maxAge: -1
+caches:
+  assets:
+    dir: ":resourceDir/_gen"
+    maxAge: -1
+  getcsv:
+    dir: ":cacheDir/:project"
+    maxAge: -1
+  getjson:
+    dir: ":cacheDir/:project"
+    maxAge: -1
+  images:
+    dir: ":resourceDir/_gen"
+    maxAge: -1
+  modules:
+    dir: ":cacheDir/modules"
+    maxAge: -1
 
 # deployment:
 #   # By default, files are uploaded in an arbitrary order.
@@ -343,3 +316,20 @@ module:
     target: i18n
   - source: archetypes
     target: archetypes
+
+
+    # Скопируйте приведенный ниже код и вставьте его на каждую страницу сайта.
+    # Вставьте этот фрагмент в раздел <head> кода страницы как можно ближе к началу:
+    # <!-- Google Tag Manager -->
+    # <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    # new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    # j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    # 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    # })(window,document,'script','dataLayer','GTM-P44GNHT');</script>
+    # <!-- End Google Tag Manager -->
+
+    # Также вставьте сразу после открывающего тега <body> следующий фрагмент:
+    # <!-- Google Tag Manager (noscript) -->
+    # <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P44GNHT"
+    # height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    # <!-- End Google Tag Manager (noscript) -->
