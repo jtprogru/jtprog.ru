@@ -20,17 +20,17 @@ googleAnalytics: UA-176073511-1
 minify:
   disableXML: true
   minifyOutput: true
-
+pluralizeListTitles: true
 params:
   env: production
-  comments: true
-  disqusShortname: "jtprog"
+  comments: false
+  # disqusShortname: "jtprog"
   label:
       text: "SysOps"
-      icon: /logo.jpg
+      icon: logo.jpg
       # iconHeight: 135
   assets:
-    favicon: '/draft-logo.ico'
+    favicon: favicon.ico
   opengraph: true
   twitter_cards: true
   copyright: "Mihael (JTProg) Savin"
@@ -42,18 +42,18 @@ params:
   related: true
   relatedMax: 5
   keywords:
-    - linux
-    - ubuntu
-    - centos
-    - debian
-    - iptables
-    - firewall
-    - devops
-    - gitlab-ci
-    - route add
-    - route add windows
-    - route windows
-    -
+    - "linux"
+    - "ubuntu"
+    - "centos"
+    - "debian"
+    - "iptables"
+    - "firewall"
+    - "devops"
+    - "gitlab-ci"
+    - "route add"
+    - "route add windows"
+    - "route windows"
+    - "сисадмин"
 
 
   ShowShareButtons: true
@@ -111,31 +111,43 @@ params:
   #   orientation: "portrait"
   #   scope: "/"
 
-outputFormats:
-  RSS:
-    mediaType: "application/rss+xml"
-    baseName: "manifest"
-    isPlainText: true
-    notAlternative: true
-  # MANIFEST:
-  #   mediaType: "application/json"
-  #   baseName: "manifest"
-  #   isPlainText: true
-  #   notAlternative: true
-
-outputs:
-  home:
-    - "HTML"
-    - "RSS"
+# outputs:
+#   home:
+#     - "HTML"
+#     - "RSS"
     # - "MANIFEST"
+  outputs:
+    home: [ "HTML", "RSS" ]
+    section: [ "HTML", "RSS"]
 
+  outputFormats:
+    RSS:
+      mediaType: "application/rss+xml"
+      baseName: "manifest"
+      isPlainText: true
+      notAlternative: true
+    # MANIFEST:
+    #   mediaType: "application/json"
+    #   baseName: "manifest"
+    #   isPlainText: true
+    #   notAlternative: true
+    # REDIR:
+    #   mediatype: "text/netlify"
+    #   baseName: "_redirects"
+    #   isPlainText: true
+    #   notAlternative: true
+    # HEADERS:
+    #   mediatype: "text/netlify"
+    #   baseName: "_headers"
+    #   isPlainText: true
+    #   notAlternative: true
 
-taxonomies:
-  category: "categories"
-  tag: "tags"
+  taxonomies:
+    category: "categories"
+    tag: "tags"
 
-permalinks:
-  post: "/:slug/"
+  permalinks:
+    post: "/:slug/"
 
 menu:
   main:
@@ -157,21 +169,22 @@ frontmatter:
 
 
 markup:
-  highlight:
-    anchorLineNos: false
-    codeFences: true
-    guessSyntax: false
-    hl_Lines: ""
-    lineAnchors: ""
-    lineNoStart: 1
-    lineNos: false
-    lineNumbersInTable: true
-    noClasses: true
-    style: "monokai"
-    tabWidth: 4
-
+  asciidocExt:
+    attributes: {}
+    backend: html5
+    extensions: []
+    failureLevel: fatal
+    noHeaderOrFooter: true
+    preserveTOC: false
+    safeMode: unsafe
+    sectionNumbers: false
+    trace: false
+    verbose: false
+    workingFolderCurrent: false
   blackFriday:
     angledQuotes: false
+    extensions: null
+    extensionsMask: null
     footnoteAnchorPrefix: ""
     footnoteReturnLinkContents: ""
     fractions: true
@@ -185,6 +198,7 @@ markup:
     smartypants: true
     smartypantsQuotesNBSP: false
     taskLists: true
+  defaultMarkdownHandler: goldmark
 
   goldmark:
     extensions:
@@ -198,11 +212,23 @@ markup:
     parser:
       attribute: true
       autoHeadingID: true
-      autoHeadingIDType: "github"
+      autoHeadingIDType: github
     renderer:
       hardWraps: false
       unsafe: false
       xhtml: false
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
 
 minify:
   disableCSS: false
