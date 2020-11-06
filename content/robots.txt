@@ -10,10 +10,9 @@ Disallow: */comment
 Disallow: /?p=
 Disallow: /not-found/
 Disallow: /ip/
-Disallow: *
 
 Crawl-delay: 10
 
-Sitemap: http://hugo.jtprog.ru/sitemap.xml
+Sitemap: https://jtprog.ru/sitemap.xml
 
-Host: hugo.jtprog.ru
+Host: jtprog.ru
