@@ -18,8 +18,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y update \
     && rm -rf /var/cache/apt/* \
     && mkdir -p /root/.ssh \
     && echo "Host *\n\tStrictHostKeyChecking no\n\n" > /root/.ssh/config \
-    && cat /root/.ssh/config && chmod 700 /root/.ssh \
-    && ssh-keyscan -p 22 ${SSH_HOST} > /root/.ssh/known_hosts \
+    && chmod 700 /root/.ssh ssh-keyscan -p 22 ${SSH_HOST} > /root/.ssh/known_hosts \
     && git submodule update --remote --merge \
     && echo "Генерирование страниц началось" && hugo \
     && echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode > /root/.ssh/id_rsa && chmod 600 /root/.ssh/id_rsa && cat /root/.ssh/id_rsa \
