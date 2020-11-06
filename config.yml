@@ -27,10 +27,10 @@ params:
   # disqusShortname: "jtprog"
   label:
       text: "SysOps"
-      icon: logo.jpg
+      icon: /logo.jpg
       # iconHeight: 135
   assets:
-    favicon: favicon.ico
+    favicon: /favicon.ico
   opengraph: true
   twitter_cards: true
   copyright: "Mihael (JTProg) Savin"
