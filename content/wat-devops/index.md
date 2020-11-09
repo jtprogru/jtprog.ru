@@ -1,7 +1,6 @@
 ---
 title: '[Opinion] Что ты такое – DevOps?'
 date: 2020-09-15T20:08:09+03:00
-weight: 1
 categories: 'Opinion'
 tags: ["devops", "opinion", "sysops"]
 type: 'post'
