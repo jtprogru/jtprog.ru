@@ -151,12 +151,6 @@ params:
 
 menu:
   main:
-  - name: "GitHub"
-    url: "/github/"
-    weight: 1
-  - name: "Навыки"
-    url: "/skillz/"
-    weight: 2
   - name: "CV"
     url: "/resume/"
     weight: 3
