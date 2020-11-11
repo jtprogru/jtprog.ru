@@ -1,10 +1,10 @@
 ---
 weight: 1
-categories: 'Opinion'
-tags: ["devops", "opinion", "sysops"]
+title: "Резюме"
+tags: ["devops", "sysadmin", "sysops", "сисадмин", "девопс"]
 type: 'page'
 author: "JTProg"
-description: "Очередная статья про DevOps"
+description: "Резюме"
 showToc: false
 TocOpen: false
 draft: false
