@@ -15,3 +15,6 @@ _draft/
 jekyll/
 draft/
 public/
+resources/
+rundev.sh
+

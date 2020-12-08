@@ -20,3 +20,5 @@ disableShare: false
 #     relative: false
 comments: false
 ---
+
+Привет, `%username%`!
