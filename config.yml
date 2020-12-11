@@ -60,8 +60,10 @@ params:
   ShowReadingTime: true
   disableSpecial1stPost: true
   homeInfoParams:
-    Title: "Приветствую \U0001F44B"
-    Content: Добро пожаловать на мой бложек
+    Title: "Привет, `%username%`!"
+    Content: |
+      Добро пожаловать на мой бложек,
+      подписывайся на [канал](https://t.me/sysopschannel) и заходи в [чат](https://t.me/sysopschat)
 
   socialIcons:
     - name: telegram
