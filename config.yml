@@ -63,7 +63,7 @@ params:
     Title: "Привет, `%username%`!"
     Content: |
       Добро пожаловать на мой бложек,
-      подписывайся на [канал](https://t.me/sysopschannel) и заходи в [чат](https://t.me/sysopschat)
+      подписывайся на [канал](https://t.me/sysopschannel) и заходи в [чат](https://t.me/sysopschat), ну или просто скажи [спасибо](https://www.patreon.com/jtprog)
 
   socialIcons:
     - name: telegram
@@ -82,8 +82,10 @@ params:
       url: 'https://www.facebook.com/sysodminium'
     - name: instagram
       url: 'https://instagram.com/jtprog'
-    # - name: rss
-    #   url: '/index.xml'
+    - name: keybase
+      url: 'https://keybase.io/jtprog'
+    - name: rss
+      url: '/index.xml'
     - name: email
       url: 'mailto:mail@jtprog.ru'
 
