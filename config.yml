@@ -76,6 +76,8 @@ params:
       url: 'https://gitlab.com/jtprog'
     - name: discord
       url: 'https://discord.gg/zS2gNwt2Ka'
+    - name: slack
+      url: 'https://sysops20.slack.com'
     - name: stackoverflow
       url: 'https://stackoverflow.com/users/6744296/jtprog'
     - name: linkedin
