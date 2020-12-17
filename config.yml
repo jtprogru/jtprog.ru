@@ -80,6 +80,8 @@ params:
       url: 'https://sysops20.slack.com'
     - name: stackoverflow
       url: 'https://stackoverflow.com/users/6744296/jtprog'
+    - name: medium
+      url: 'https://jtprog.medium.com'
     - name: linkedin
       url: 'https://linkedin.com/mihail-jtprogru-savin'
     - name: facebook
