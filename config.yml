@@ -74,6 +74,9 @@ params:
       url: 'https://github.com/jtprog'
     - name: gitlab
       url: 'https://gitlab.com/jtprog'
+    - name: dev
+      url: 'https://dev.to/jtprog'
+
     - name: discord
       url: 'https://discord.gg/zS2gNwt2Ka'
     - name: slack
@@ -85,7 +88,7 @@ params:
     - name: linkedin
       url: 'https://linkedin.com/mihail-jtprogru-savin'
     - name: facebook
-      url: 'https://www.facebook.com/sysodminium'
+      url: 'https://www.facebook.com/sysopschannel'
     - name: instagram
       url: 'https://instagram.com/jtprog'
     - name: keybase
@@ -94,6 +97,8 @@ params:
       url: '/index.xml'
     - name: email
       url: 'mailto:mail@jtprog.ru'
+#   - name: patreon
+#     url: 'https://www.patreon.com/jtprog?fan_landing=true'
 
 
 
