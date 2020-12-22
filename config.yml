@@ -41,20 +41,6 @@ params:
   comments: false
   related: true
   relatedMax: 5
-  keywords:
-    - "linux"
-    - "ubuntu"
-    - "centos"
-    - "debian"
-    - "iptables"
-    - "firewall"
-    - "devops"
-    - "gitlab-ci"
-    - "route add"
-    - "route add windows"
-    - "route windows"
-    - "сисадмин"
-
 
   ShowShareButtons: true
   ShowReadingTime: true
@@ -76,7 +62,6 @@ params:
       url: 'https://gitlab.com/jtprog'
     - name: dev
       url: 'https://dev.to/jtprog'
-
     - name: discord
       url: 'https://discord.gg/zS2gNwt2Ka'
     - name: slack

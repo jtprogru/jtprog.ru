@@ -102,12 +102,12 @@ comments: false
 
 Тут я подобрал список материалов, на которые я опирался при составлении статьи.
 
-1. https://habr.com/ru/company/flant/blog/322686/
-2. https://habr.com/ru/company/itsumma/blog/525070/
-3. https://www.itexpert.ru/rus/biblio/detail.php?ID=16167
-4. <https://leadstartup.ru/db/devops>
-5. <https://aws.amazon.com/ru/devops/what-is-devops/>
-6. <https://azure.microsoft.com/ru-ru/overview/what-is-devops/>
-7. <https://habr.com/ru/company/oleg-bunin/blog/448492/>
+1. [https://habr.com/ru/company/flant/blog/322686/](https://habr.com/ru/company/flant/blog/322686/)
+2. [https://habr.com/ru/company/itsumma/blog/525070/](https://habr.com/ru/company/itsumma/blog/525070/)
+3. [https://www.itexpert.ru/rus/biblio/detail.php?ID=16167](https://www.itexpert.ru/rus/biblio/detail.php?ID=16167)
+4. [https://leadstartup.ru/db/devops](https://leadstartup.ru/db/devops)
+5. [https://aws.amazon.com/ru/devops/what-is-devops/](https://aws.amazon.com/ru/devops/what-is-devops/)
+6. [https://azure.microsoft.com/ru-ru/overview/what-is-devops/](https://azure.microsoft.com/ru-ru/overview/what-is-devops/)
+7. [https://habr.com/ru/company/oleg-bunin/blog/448492/](https://habr.com/ru/company/oleg-bunin/blog/448492/)
 
 На этом всё! Если с чем-то не согласны или вам есть что сказать или как-то дополнить, то жду в [чате](https://t.me/sysopschat)!
