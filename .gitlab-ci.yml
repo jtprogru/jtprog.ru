@@ -1,3 +1,4 @@
+---
 image: docker:19.03.12
 
 services:
@@ -8,10 +9,41 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
   DOCKER_DRIVER: overlay
 
-deploy fozzy:
+manual deploy:
   stage: build
   script:
     - docker build --build-arg SSH_PRIVATE_KEY="${SSH_PRIVATE_KEY}" --build-arg SSH_USER="${SSH_USER}" --build-arg SSH_HOST="${SSH_HOST}" --build-arg REMOTE_PATH="${REMOTE_PATH}" --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
 #   - docker build --build-arg SSH_PRIVATE_KEY="${SSH_PRIVATE_KEY}" --build-arg SSH_USER="${SSH_USER}" --build-arg SSH_HOST="${SSH_HOST}" --build-arg REMOTE_PATH="${REMOTE_PATH}" --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
   only:
     - master
+  when: manual
+
+auto deploy:
+  stage: build
+  script:
+    - echo "${SSH_PRIVATE_KEY}"
+    - echo "${SSH_USER}"
+    - echo "${SSH_HOST}"
+    - echo "${REMOTE_PATH}"
+    - mkdir -p ~/.ssh
+    - echo "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - chmod 700 ~/.ssh
+    - ssh-keyscan -p 22 ${SSH_HOST} > ~/.ssh/known_hosts
+    # - git submodule update --remote --merge
+    - echo "Генерирование страниц началось"
+    - hugo
+    - echo "${SSH_PRIVATE_KEY}" |  tr -d ' ' | base64 --decode > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - cp ./content/.htaccess ./public/.htaccess
+    - cp ./content/robots.txt ./public/robots.txt
+    - echo "Запуск rsync"
+    - rsync -avz -e "ssh -i ~/.ssh/id_rsa" --progress --delete public/ ${SSH_USER}@${SSH_HOST}:${REMOTE_PATH}
+    - echo "Завершён деплой"
+  only:
+    - master
+  tags:
+    - raspberry
+    - ansible
+    - raspberrypi
+    - shell
+    - ops
