@@ -6,8 +6,11 @@ author: "JTProg"
 description: "Савин Михаил Иванович – Резюме"
 draft: false
 hidemeta: false
-disableShare: false
-comments: false
+cover:
+  image: "/header.jpeg"
+  alt: "Resume"
+  caption: ""
+  relative: true
 ---
 
 # **Савин Михаил Иванович**
