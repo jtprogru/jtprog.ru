@@ -4,9 +4,7 @@ title: GitHub projects
 date: 2020-09-22T18:42:33+03:00
 author: jtprog
 layout: page
-guid: https://jtprog.ru/?page_id=19
-online_portfolio_sidebar_layout:
-  - default-sidebar
+slug: '/github/'
 ---
 ## [zbx2jira](https://github.com/sysodminium/zbx2jira)
 

@@ -4,7 +4,7 @@ title: Политика ПДн
 date: 2020-09-02T21:36:39+03:00
 author: jtprog
 layout: page
-guid: https://jtprog.ru/?page_id=283
+slug: '/privacy-policy/'
 ---
 ## 1. Общие положения
 

@@ -4,7 +4,7 @@ title: ЧП
 date: 2020-09-01T21:35:54+03:00
 author: jtprog
 layout: page
-guid: https://jtprog.ru/?page_id=263
+slug: '/chat-rules/'
 ---
 [ЧАТ: SysOps](https://t.me/sysopschat)
 
