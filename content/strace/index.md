@@ -90,19 +90,115 @@ strace -o trace_output.txt -p 1234
 
 Предлагаю попробовать запустить что-нибудь и поглазеть, как `strace` ведёт себя в реальной жизни. Возьмём одну из наиболее часто используемых программ и посмотрим, что же она делает "за кулисами".
 ```bash
-strace -o /home/user/tmp/strace.log /bin/ls
+strace -o ~/strace.log /bin/ls
 ```
 Вывод файла достаточно велик, поэтому здесь не выкладываю. Думаю, кому интересно, сами попробуют на своей системе. Рассмотрим лишь несколько строк в качестве примера.
 ```bash
-execve("/bin/ls", ["/bin/ls"], [/* 37 vars */]) = 0
-brk(0)                                  = 0x9841000
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb779e000
+execve("/bin/ls", ["/bin/ls"], 0x7ffc28d52f70 /* 26 vars */) = 0
+brk(NULL)                               = 0x561942184000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffeedfde460) = -1 EINVAL (Invalid argument)
 access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
-open("/etc/ld.so.cache", O_RDONLY)      = 3
-fstat64(3, {st_mode=S_IFREG|0644, st_size=78866, ...}) = 0
-mmap2(NULL, 78866, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb778a000
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=25678, ...}) = 0
+mmap(NULL, 25678, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f2f60f22000
 close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@p\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=163200, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2f60f20000
+mmap(NULL, 174600, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2f60ef5000
+mprotect(0x7f2f60efb000, 135168, PROT_NONE) = 0
+mmap(0x7f2f60efb000, 102400, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f2f60efb000
+mmap(0x7f2f60f14000, 28672, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f2f60f14000
+mmap(0x7f2f60f1c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7f2f60f1c000
+mmap(0x7f2f60f1e000, 6664, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2f60f1e000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\363\377?\332\200\270\27\304d\245n\355Y\377\t\334"..., 68, 880) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\363\377?\332\200\270\27\304d\245n\355Y\377\t\334"..., 68, 880) = 68
+mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2f60d03000
+mprotect(0x7f2f60d28000, 1847296, PROT_NONE) = 0
+mmap(0x7f2f60d28000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7f2f60d28000
+mmap(0x7f2f60ea0000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7f2f60ea0000
+mmap(0x7f2f60eeb000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f2f60eeb000
+mmap(0x7f2f60ef1000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2f60ef1000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\"\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=584392, ...}) = 0
+mmap(NULL, 586536, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2f60c73000
+mmap(0x7f2f60c75000, 409600, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f2f60c75000
+mmap(0x7f2f60cd9000, 163840, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x66000) = 0x7f2f60cd9000
+mmap(0x7f2f60d01000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8d000) = 0x7f2f60d01000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \22\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=18816, ...}) = 0
+mmap(NULL, 20752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2f60c6d000
+mmap(0x7f2f60c6e000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f2f60c6e000
+mmap(0x7f2f60c70000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f2f60c70000
+mmap(0x7f2f60c71000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f2f60c71000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\201\0\0\0\0\0\0"..., 832) = 832
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0O\305\3743\364B\2216\244\224\306@\261\23\327o"..., 68, 824) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=157224, ...}) = 0
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0O\305\3743\364B\2216\244\224\306@\261\23\327o"..., 68, 824) = 68
+mmap(NULL, 140408, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2f60c4a000
+mmap(0x7f2f60c51000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7f2f60c51000
+mmap(0x7f2f60c62000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7f2f60c62000
+mmap(0x7f2f60c67000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c000) = 0x7f2f60c67000
+mmap(0x7f2f60c69000, 13432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2f60c69000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2f60c48000
+arch_prctl(ARCH_SET_FS, 0x7f2f60c49400) = 0
+mprotect(0x7f2f60eeb000, 12288, PROT_READ) = 0
+mprotect(0x7f2f60c67000, 4096, PROT_READ) = 0
+mprotect(0x7f2f60c71000, 4096, PROT_READ) = 0
+mprotect(0x7f2f60d01000, 4096, PROT_READ) = 0
+mprotect(0x7f2f60f1c000, 4096, PROT_READ) = 0
+mprotect(0x561941595000, 4096, PROT_READ) = 0
+mprotect(0x7f2f60f56000, 4096, PROT_READ) = 0
+munmap(0x7f2f60f22000, 25678)           = 0
+set_tid_address(0x7f2f60c496d0)         = 575033
+set_robust_list(0x7f2f60c496e0, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f2f60c51bf0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f2f60c5f3c0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f2f60c51c90, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f2f60c5f3c0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+statfs("/sys/fs/selinux", 0x7ffeedfde3b0) = -1 ENOENT (No such file or directory)
+statfs("/selinux", 0x7ffeedfde3b0)      = -1 ENOENT (No such file or directory)
+brk(NULL)                               = 0x561942184000
+brk(0x5619421a5000)                     = 0x5619421a5000
+openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(3, "nodev\tsysfs\nnodev\ttmpfs\nnodev\tbd"..., 1024) = 435
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+access("/etc/selinux/config", F_OK)     = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3390256, ...}) = 0
+mmap(NULL, 3390256, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f2f6090c000
+close(3)                                = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TIOCGWINSZ, {ws_row=63, ws_col=238, ws_xpixel=3808, ws_ypixel=2268}) = 0
+openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents64(3, /* 42 entries */, 32768)  = 1424
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x4), ...}) = 0
+write(1, "adv  alert_install.sh  bashscrip"..., 229) = 229
+close(1)                                = 0
+close(2)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
 ```
 Структура каждой строки вывода `strace` следующая. Первым идёт имя системного вызова. Затем в круглых скобках выводится список параметров, переданных вызову. И последним, после знака равенства, отображается код завершения системного вызова. Подробную документацию по каждому системному вызову в случае необходимости можно найти на соответствующих man-страницах второго раздела.
 
