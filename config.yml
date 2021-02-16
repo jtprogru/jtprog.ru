@@ -18,8 +18,30 @@ buildExpired: false
 googleAnalytics: UA-176073511-1
 
 minify:
-  disableXML: true
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
   minifyOutput: true
+  tdewolff:
+    css:
+      decimals: -1
+      keepCSS2: true
+    html:
+      keepConditionalComments: true
+      keepDefaultAttrVals: true
+      keepDocumentTags: true
+      keepEndTags: true
+      keepQuotes: false
+      keepWhitespace: false
+    js:
+    json:
+    svg:
+      decimals: -1
+    xml:
+      keepWhitespace: false
 pluralizeListTitles: true
 params:
   env: production
@@ -38,7 +60,6 @@ params:
   description: "Записная книжка админа-самоучки"
   mainSections:  ["post"]
   dateFormat: "2006-01-02 15:04"
-  comments: false
   related: true
   relatedMax: 5
 
@@ -149,11 +170,11 @@ params:
   permalinks:
     post: "/:slug/"
 
-menu:
-  main:
-  - name: "CV"
-    url: "/resume/"
-    weight: 3
+# menu:
+#   main:
+#   - name: "CV"
+#     url: "/resume/"
+#     weight: 3
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
@@ -224,31 +245,7 @@ markup:
     style: monokai
     tabWidth: 4
 
-minify:
-  disableCSS: false
-  disableHTML: false
-  disableJS: false
-  disableJSON: false
-  disableSVG: false
-  disableXML: false
-  minifyOutput: false
-  tdewolff:
-    css:
-      decimals: -1
-      keepCSS2: true
-    html:
-      keepConditionalComments: true
-      keepDefaultAttrVals: true
-      keepDocumentTags: true
-      keepEndTags: true
-      keepQuotes: false
-      keepWhitespace: false
-    js:
-    json:
-    svg:
-      decimals: -1
-    xml:
-      keepWhitespace: false
+
 
 caches:
   assets:
