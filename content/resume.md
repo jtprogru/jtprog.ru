@@ -17,11 +17,11 @@ cover:
 
 Пол: М. Возраст: 31 лет. Женат.
 
-**Telegram**: [@JTProgru](https://t.me/JTProgru) – _предпочитаемый способ связи_  
+**Telegram**: [@jtprogru](https://t.me/jtprogru) – _предпочитаемый способ связи_  
 **Мобильный**: [+7 (906) 0272719](tel:+79060272719)  
 **Email**: [mail@jtprog.ru](mailto:mail@jtprog.ru)  
 **Site**: [jtprog.ru](https://jtprog.ru/)  
-**GitHub**: [github.com/jtprog](https://github.com/jtprog/)  
+**GitHub**: [github.com/jtprogru](https://github.com/jtprogru/)  
 **Проекты**: [status.jtprog.ru](https://status.jtprog.ru)  \
 **Список курсов/сертификатов**: [Образование](https://jtprog.ru/skillz/)  
 
