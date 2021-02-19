@@ -78,7 +78,7 @@ params:
     - name: twitter
       url: 'https://twitter.com/jtprogru'
     - name: github
-      url: 'https://github.com/jtprog'
+      url: 'https://github.com/jtprogru'
     - name: gitlab
       url: 'https://gitlab.com/jtprog'
     - name: dev
