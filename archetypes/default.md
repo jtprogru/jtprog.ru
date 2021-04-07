@@ -6,7 +6,7 @@ date: {{ .Date }}
 categories: 'Work'
 tags: ["first"]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 description: ""
 showToc: false
 TocOpen: false
