@@ -5,7 +5,6 @@ categories: 'Work'
 tags: ["bitrix", "bitrixvm", "hosting"]
 type: 'post'
 author: "jtprogru"
-description: "Процедура переноса сайта написанного на Битрикс с одного хостинга на другой"
 showToc: false
 TocOpen: false
 draft: false
