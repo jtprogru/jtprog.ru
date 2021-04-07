@@ -2,7 +2,7 @@
 title: "[Work] Перенос сайта на хостинг с BitrixVM"
 date: 2021-04-07T22:31:31+03:00
 categories: 'Work'
-tags: ["bitrix", "bitrixvm", "hosting"]
+tags: ["bitrix", "bitrixvm", "hosting", "nginx"]
 type: 'post'
 author: "jtprogru"
 showToc: false
