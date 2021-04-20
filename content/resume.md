@@ -1,8 +1,8 @@
 ---
 title: "Резюме"
-tags: ["devops", "sysadmin", "sysops", "сисадмин", "девопс", "Савин Михаил", "Савин Михаил Иванович"]
+tags: ["devops", "sysadmin", "sysops", "сисадмин", "девопс", "Савин Михаил", "Савин Михаил Иванович", "jtprog", "jtprogru"]
 type: 'page'
-author: "JTProg"
+author: "jtprogru"
 description: "Савин Михаил Иванович – Резюме"
 draft: false
 hidemeta: true

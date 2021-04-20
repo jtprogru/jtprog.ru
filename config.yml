@@ -47,15 +47,30 @@ params:
   env: production
   comments: false
   # disqusShortname: "jtprog"
+  ShowPostNavLinks: true
+  editPost:
+    URL: "https://gitlab.com/jtprogru/blog/-/tree/master/content"
+    Text: "Edit..." # edit text
+    appendFilePath: true # to aepend file path to Edit link
   label:
       text: "SysOps"
       icon: /logo.jpg
       # iconHeight: 135
   assets:
     favicon: /favicon.ico
+    disableFingerprinting: true
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
   opengraph: true
   twitter_cards: true
-  copyright: "Mihael (JTProg) Savin"
+  copyright: "Mihael (jtprogru) Savin"
   title: "SysOps"
   description: "Записная книжка админа-самоучки"
   mainSections:  ["post"]
@@ -80,7 +95,7 @@ params:
     - name: github
       url: 'https://github.com/jtprogru'
     - name: gitlab
-      url: 'https://gitlab.com/jtprog'
+      url: 'https://gitlab.com/jtprogru'
     - name: dev
       url: 'https://dev.to/jtprog'
     - name: discord
@@ -92,26 +107,26 @@ params:
     - name: medium
       url: 'https://jtprog.medium.com'
     - name: linkedin
-      url: 'www.linkedin.com/in/jtprogru'
+      url: 'https://www.linkedin.com/in/jtprogru'
     - name: facebook
       url: 'https://www.facebook.com/sysopschannel'
     - name: instagram
-      url: 'https://instagram.com/jtprog'
+      url: 'https://instagram.com/jtprogru'
     - name: keybase
       url: 'https://keybase.io/jtprog'
     - name: rss
       url: '/index.xml'
     - name: email
       url: 'mailto:mail@jtprog.ru'
-#   - name: patreon
-#     url: 'https://www.patreon.com/jtprog?fan_landing=true'
-
-
+    - name: unsplash
+      url: 'https://unsplash.com/@jtprog'
 
 
   analytics:
     google:
       SiteVerificationTag: "7XYgVY2xnjODEkc6HA_dLMdLSQDNEQ3v5bG40MpnB0U"
+    yandex:
+      SiteVerificationTag: "766a09b06b27e0f2"
 
   entry:
     meta: ["date", "tags", "author"]
@@ -138,7 +153,7 @@ params:
 #     - "RSS"
     # - "MANIFEST"
   outputs:
-    home: [ "HTML", "RSS" ]
+    home: [ "HTML", "RSS", "JSON" ]
     section: [ "HTML", "RSS"]
 
   outputFormats:
@@ -170,11 +185,14 @@ params:
   permalinks:
     post: "/:slug/"
 
-# menu:
-#   main:
-#   - name: "CV"
-#     url: "/resume/"
-#     weight: 3
+menu:
+  main:
+    - name: "CV"
+      url: "/resume/"
+      weight: 3
+#   - name: "Srch"
+#     url: "/search/"
+#     weight: 1
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
