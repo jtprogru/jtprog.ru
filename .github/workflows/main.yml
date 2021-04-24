@@ -1,0 +1,71 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Hugo setup
+        # You may pin to the exact commit or the version.
+        # uses: peaceiris/actions-hugo@2e89aa66d0093e4cd14751b3028fc1a179452c2e
+        uses: peaceiris/actions-hugo@v2.4.13
+        with:
+          # The Hugo version to download (if necessary) and use. Example: 0.58.2
+          hugo-version: latest
+          # Download (if necessary) and use Hugo extended version. Example: true
+          extended: true
+
+    - uses: actions/checkout@v2
+    - name: Deploy to Fozzy.com
+      uses: up9cloud/action-rsync@v1.1
+      env:
+        HOST: jtprgo.ru
+        KEY: ${{secrets.DEPLOY_SSH_KEY}}
+        TARGET: /home/jtprogru/public_html
+
+        VERBOSE: true
+        USER: jtprogru
+        # PORT: 2222 # no need to set this, because of $SSH_ARGS
+        # -avz -e "ssh -i ~/.ssh/id_rsa" --progress --delete public/ ${SSH_USER}@${SSH_HOST}:${REMOTE_PATH}
+        ARGS: -avz --exclude=/.git/ --progress --delete
+        SSH_ARGS: '-p 22 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+        SOURCE: ./public/
+
+        PRE_SCRIPT: |
+          echo start at:
+          date -u
+        POST_SCRIPT: "echo done at: && date -u"
+    
+    - name: Telegram Notify
+      uses: appleboy/telegram-action@0.0.3
+        with:
+          to: ${{ secrets.TELEGRAM_USER_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          disable_web_page_preview: true
+          message: |
+            The ${{ github.event_name }} event triggered final step.
+
+########
+# END OF FILE
+########
