@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-hugomod-
 
       - name: Build
-        run: hugo --minify
+        run: hugo
 
 
       - uses: actions/checkout@v2
