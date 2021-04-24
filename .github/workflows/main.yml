@@ -1,69 +1,29 @@
-# This is a basic workflow to help you get started with Actions
-
+---
 name: CI
-
-# Controls when the action will run.
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+'on':
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  deploy-website:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
+      - name: Do a git checkout including submodules
+        uses: actions/checkout@master
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - uses: actions/cache@v2
-        with:
-          path: /tmp/hugo_cache
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
-
-      - name: Build
-        run: hugo
-
-
-      - uses: actions/checkout@v2
-      - name: Deploy to Fozzy.com
-        uses: up9cloud/action-rsync@v1.1
+      - name: Generate and deploy website
+        uses: ronvanderheijden/hugo-rsync-deployment@master
         env:
-          HOST: ${{secrets.DEPLOY_HOST}}
-          KEY: ${{secrets.DEPLOY_SSH_KEY}}
-          TARGET: ${{secrets.DEPLOY_TARGET_PATH}}
-          VERBOSE: true
-          USER: ${{secrets.DEPLOY_USER}}
-          MODE: 'push'
-          PORT: 22 # no need to set this, because of $SSH_ARGS
-          # -avz -e "ssh -i ~/.ssh/id_rsa" --progress --delete public/ ${SSH_USER}@${SSH_HOST}:${REMOTE_PATH}
-          ARGS: -avz --progress --delete --exclude=/.git/ --exclude=/.github/ --no-o --no-g
-          SSH_ARGS: '-i ./.ssh_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-          SOURCE: ./public/
-
-          PRE_SCRIPT: |
-            echo 'start at:' && date -u
-            echo ${{secrets.DEPLOY_SSH_KEY}} > ./.ssh_key
-          POST_SCRIPT: "echo 'done at:' && date -u"
+          VPS_DEPLOY_KEY: ${{secrets.DEPLOY_SSH_KEY}}
+          VPS_DEPLOY_USER: ${{secrets.DEPLOY_USER}}
+          VPS_DEPLOY_HOST: ${{secrets.DEPLOY_HOST}}
+          VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
+        with:
+          hugo-arguments: '--minify'
+          rsync-arguments: '--archive --compress --xattrs --delete'
 
       - name: Telegram Notify
         uses: appleboy/telegram-action@0.0.3
@@ -72,7 +32,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           disable_web_page_preview: true
           message: |
-            The ${{ github.event_name }} event triggered final step.
+            The ${{ github.event_name }} event finished with status: ${{ job.status }}.
 
 ########
 # END OF FILE
