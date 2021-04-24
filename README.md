@@ -1,9 +1,11 @@
 # [SysOps](https://jtprog.ru)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jtprogru/jtprog.ru/CI?label=CI)
+![GitHub](https://img.shields.io/github/license/jtprogru/jtprog.ru)
+[![GitHub tag](https://img.shields.io/github/tag/jtprogru/jtprog.ru.svg)](https://github.com/jtprogru/jtprog.ru/tags)
 
 Все статьи опубликованные в моем блоге.
 
 TODO:
 - [ ] Обновить/добавить тэг Description для всех страниц;
 - [ ] Прикрутить нормальный RSS/Atom-feed;
-- [ ] Прикрутить отдельный RSS-feed для Я.Турбо - [документация](https://yandex.ru/dev/turbo/doc/rss/markup.html);
 - [ ] Автоматические публикации в Telegram;
