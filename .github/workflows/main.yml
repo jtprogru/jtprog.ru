@@ -34,6 +34,6 @@ jobs:
           message: |
             The ${{ github.event_name }} event finished with status: ${{ job.status }}.
 
-#########
+########
 # END OF FILE
 ########
