@@ -48,12 +48,12 @@ jobs:
       - name: Deploy to Fozzy.com
         uses: up9cloud/action-rsync@v1.1
         env:
-          HOST: jtprgo.ru
+          HOST: ${{secrets.DEPLOY_HOST}}
           KEY: ${{secrets.DEPLOY_SSH_KEY}}
-          TARGET: /home/jtprogru/public_html
+          TARGET: ${{secrets.DEPLOY_TARGET_PATH}}
 
           VERBOSE: true
-          USER: jtprogru
+          USER: ${{secrets.DEPLOY_USER}}
           # PORT: 2222 # no need to set this, because of $SSH_ARGS
           # -avz -e "ssh -i ~/.ssh/id_rsa" --progress --delete public/ ${SSH_USER}@${SSH_HOST}:${REMOTE_PATH}
           ARGS: -avz --exclude=/.git/ --progress --delete
