@@ -22,7 +22,7 @@ jobs:
           VPS_DEPLOY_HOST: ${{secrets.DEPLOY_HOST}}
           VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
         with:
-          hugo-arguments: ''
+          hugo-arguments: '--minify'
           rsync-arguments: '--archive --compress --xattrs --delete'
 
       - name: Telegram Notify
