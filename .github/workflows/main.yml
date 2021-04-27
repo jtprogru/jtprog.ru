@@ -31,12 +31,13 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_USER_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
           disable_web_page_preview: true
           message: |
             Deploy status: ✅
-            Project: blog
-            Runs: https://github.com/${{github.repository}}/runs/${{github.job}}
-            Branch: ${{github.ref}}
+            Project: `${{github.repository}}`
+            Runs on: https://github.com/${{github.repository}}/tree/${{github.sha}}
+            Branch: `${{github.ref}}`
 
       - name: Telegram Notify NOK
         if: ${{ failure() }}
@@ -44,12 +45,13 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_USER_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
           disable_web_page_preview: true
           message: |
             Deploy status: ❌
-            Project: blog
-            Runs: https://github.com/${{github.repository}}/runs/${{github.job}}
-            Branch: ${{github.ref}}
+            Project: `${{github.repository}}`
+            Runs on: https://github.com/${{github.repository}}/tree/${{github.sha}}
+            Branch: `${{github.ref}}`
 ########
 # END OF FILE
 ########
