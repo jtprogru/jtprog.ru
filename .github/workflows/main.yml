@@ -25,15 +25,31 @@ jobs:
           hugo-arguments: '--minify'
           rsync-arguments: '-avz --delete --progress'
 
-      - name: Telegram Notify
+      - name: Telegram Notify OK
+        if: ${{ success() }}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_USER_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           disable_web_page_preview: true
           message: |
-            The ${{ github.event_name }} event finished with status: ${{ job.status }}.
+            Deploy status: ✅
+            Project: blog
+            Runs: https://github.com/jtprogru/jtprog.ru/runs/${{github.run_id}}
+            Branch: ${{GITHUB_REF}}
 
+      - name: Telegram Notify NOK
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_USER_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          disable_web_page_preview: true
+          message: |
+            Deploy status: ❌
+            Project: blog
+            Runs: https://github.com/jtprogru/jtprog.ru/runs/${{github.run_id}}
+            Branch: ${{GITHUB_REF}}
 ########
 # END OF FILE
 ########
