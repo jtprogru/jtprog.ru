@@ -34,10 +34,10 @@ jobs:
           format: markdown
           disable_web_page_preview: true
           message: |
-            __Deploy status__: ✅
-            __Project__: `${{github.repository}}`
-            __Runs on__: https://github.com/${{github.repository}}/tree/${{github.sha}}
-            __Branch__: `${{github.ref}}`
+            <b>Deploy status</b>: ✅
+            <b>Project</b>: `${{github.repository}}`
+            <b>Runs on</b>: https://github.com/${{github.repository}}/tree/${{github.sha}}
+            <b>Branch</b>: `${{github.ref}}`
 
       - name: Telegram Notify NOK
         if: ${{ failure() }}
@@ -48,10 +48,10 @@ jobs:
           format: markdown
           disable_web_page_preview: true
           message: |
-            __Deploy status__: ❌
-            __Project__: `${{github.repository}}`
-            __Runs on__: https://github.com/${{github.repository}}/tree/${{github.sha}}
-            __Branch__: `${{github.ref}}`
+            <b>Deploy status</b>: ❌
+            <b>Project</b>: `${{github.repository}}`
+            <b>Runs on</b>: https://github.com/${{github.repository}}/tree/${{github.sha}}
+            <b>Branch</b>: `${{github.ref}}`
 ########
 # END OF FILE
 ########
