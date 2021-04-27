@@ -35,8 +35,8 @@ jobs:
           message: |
             Deploy status: ✅
             Project: blog
-            Runs: https://github.com/jtprogru/jtprog.ru/runs/${{github.run_id}}
-            Branch: $GITHUB_REF
+            Runs: https://github.com/${{github.repository}}/runs/${{github.run_id}}
+            Branch: ${{github.ref}}
 
       - name: Telegram Notify NOK
         if: ${{ failure() }}
@@ -48,8 +48,8 @@ jobs:
           message: |
             Deploy status: ❌
             Project: blog
-            Runs: https://github.com/jtprogru/jtprog.ru/runs/${{github.run_id}}
-            Branch: $GITHUB_REF
+            Runs: https://github.com/${{github.repository}}/runs/${{github.run_id}}
+            Branch: ${{github.ref}}
 ########
 # END OF FILE
 ########
