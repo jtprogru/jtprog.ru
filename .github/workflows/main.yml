@@ -23,7 +23,7 @@ jobs:
           VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
         with:
           hugo-arguments: '--minify'
-          rsync-arguments: '--archive --compress --xattrs --delete'
+          rsync-arguments: '--archive --compress --xattrs --delete --progress'
 
       - name: Telegram Notify
         uses: appleboy/telegram-action@master
