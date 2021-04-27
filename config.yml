@@ -48,10 +48,10 @@ params:
   comments: false
   # disqusShortname: "jtprog"
   ShowPostNavLinks: true
-  editPost:
-    URL: "https://github.com/jtprogru/jtprog.ru/-/tree/master/content"
-    Text: "Edit..." # edit text
-    appendFilePath: true # to aepend file path to Edit link
+# editPost:
+#   URL: "https://github.com/jtprogru/jtprog.ru/-/tree/master/content"
+#   Text: "Edit..." # edit text
+#   appendFilePath: true # to aepend file path to Edit link
   label:
       text: "SysOps"
       icon: /logo.jpg
