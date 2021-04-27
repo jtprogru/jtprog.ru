@@ -17,7 +17,7 @@ jobs:
       - name: Generate and deploy website
         uses: jtprogru/hugo-rsync-deployment@master
         env:
-          VPS_DEPLOY_KEY: 'jtprog.ru'  ## ${{secrets.DEPLOY_SSH_KEY}}
+          VPS_DEPLOY_KEY: ${{secrets.DEPLOY_SSH_KEY}}
           VPS_DEPLOY_USER: ${{secrets.DEPLOY_USER}}
           VPS_DEPLOY_HOST: ${{secrets.DEPLOY_HOST}}
           VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
