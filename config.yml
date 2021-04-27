@@ -1,6 +1,7 @@
 baseURL: "https://jtprog.ru"
 theme: "papermod"
 title: "SysOps"
+copyright: "Mihael (jtprogru) Savin @@@COMMIT@@@"
 languageCode: "ru-RU"
 defaultContentLanguage: "ru"
 enableEmoji: true
