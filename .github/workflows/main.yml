@@ -35,7 +35,7 @@ jobs:
           message: |
             Deploy status: ✅
             Project: blog
-            Runs: https://github.com/${{github.repository}}/runs/${{github.run_id}}
+            Runs: https://github.com/${{github.repository}}/runs/${{github.job}}
             Branch: ${{github.ref}}
 
       - name: Telegram Notify NOK
@@ -48,7 +48,7 @@ jobs:
           message: |
             Deploy status: ❌
             Project: blog
-            Runs: https://github.com/${{github.repository}}/runs/${{github.run_id}}
+            Runs: https://github.com/${{github.repository}}/runs/${{github.job}}
             Branch: ${{github.ref}}
 ########
 # END OF FILE
