@@ -6,7 +6,6 @@ env/
 __pycache__/
 .env
 .vscode/
-conf.yml
 # content/
 # jekyll/
 # resources/
@@ -17,4 +16,5 @@ draft/
 public/
 resources/
 rundev.sh
+draft-config.yml
 
