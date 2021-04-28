@@ -3,9 +3,9 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 # weight: 1
 # aliases: ["/first"]
-categories: 'Work'
+categories: "Work"
 tags: ["first"]
-type: 'post'
+type: "post"
 author: "jtprogru"
 description: ""
 showToc: false
