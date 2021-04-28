@@ -47,16 +47,10 @@ pluralizeListTitles: true
 params:
   env: production
   comments: false
-  # disqusShortname: "jtprog"
   ShowPostNavLinks: true
-# editPost:
-#   URL: "https://github.com/jtprogru/jtprog.ru/-/tree/master/content"
-#   Text: "Edit..." # edit text
-#   appendFilePath: true # to aepend file path to Edit link
   label:
       text: "SysOps"
       icon: /logo.jpg
-      # iconHeight: 135
   assets:
     favicon: /favicon.ico
     disableFingerprinting: true
@@ -129,22 +123,6 @@ params:
   featured:
     previewOnly: true
 
-  # MANIFEST:
-  #   name: "SysOps"
-  #   shortName: "Binario"
-  #   display: "browser"
-  #   startUrl: "/"
-  #   backgroundColor: "#102020"
-  #   themeColor: "#1b1b1b"
-  #   description: "Записная книжка админа-самоучки"
-  #   orientation: "portrait"
-  #   scope: "/"
-
-# outputs:
-#   home:
-#     - "HTML"
-#     - "RSS"
-    # - "MANIFEST"
   outputs:
     home: [ "HTML", "RSS", "JSON" ]
     section: [ "HTML", "RSS"]
@@ -155,21 +133,6 @@ params:
       baseName: "manifest"
       isPlainText: true
       notAlternative: true
-    # MANIFEST:
-    #   mediaType: "application/json"
-    #   baseName: "manifest"
-    #   isPlainText: true
-    #   notAlternative: true
-    # REDIR:
-    #   mediatype: "text/netlify"
-    #   baseName: "_redirects"
-    #   isPlainText: true
-    #   notAlternative: true
-    # HEADERS:
-    #   mediatype: "text/netlify"
-    #   baseName: "_headers"
-    #   isPlainText: true
-    #   notAlternative: true
 
   taxonomies:
     category: "categories"
@@ -183,9 +146,6 @@ menu:
     - name: "CV"
       url: "/resume/"
       weight: 3
-#   - name: "Srch"
-#     url: "/search/"
-#     weight: 1
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
@@ -256,8 +216,6 @@ markup:
     style: monokai
     tabWidth: 4
 
-
-
 caches:
   assets:
     dir: ":resourceDir/_gen"
@@ -274,59 +232,6 @@ caches:
   modules:
     dir: ":cacheDir/modules"
     maxAge: -1
-
-# deployment:
-#   # By default, files are uploaded in an arbitrary order.
-#   # Files that match the regular expressions in the "Order" list
-#   # will be uploaded first, in the listed order.
-#   order: [".jpg$", ".gif$"]
-
-
-#   targets:
-#     # An arbitrary name for this target.
-#     name: "mydeployment"
-#     # The Go Cloud Development Kit URL to deploy to. Examples:
-#     # GCS; see https://gocloud.dev/howto/blob/#gcs
-#     # URL: "gs://<Bucket Name>"
-
-#     # S3; see https://gocloud.dev/howto/blob/#s3
-#     # For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
-#     # URL: "s3://<Bucket Name>?region=<AWS region>"
-
-#     # Azure Blob Storage; see https://gocloud.dev/howto/blob/#azure
-#     # URL: "azblob://$web"
-
-#     # You can use a "prefix=" query parameter to target a subfolder of the bucket:
-#     # URL: "gs://<Bucket Name>?prefix=a/subfolder/"
-
-#     # If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
-#     cloudFrontDistributionID: <ID>
-
-#     # Optionally, you can include or exclude specific files.
-#     # See https://godoc.org/github.com/gobwas/glob#Glob for the glob pattern syntax.
-#     # If non-empty, the pattern is matched against the local path.
-#     # All paths are matched against in their filepath.ToSlash form.
-#     # If exclude is non-empty, and a local or remote file's path matches it, that file is not synced.
-#     # If include is non-empty, and a local or remote file's path does not match it, that file is not synced.
-#     # As a result, local files that don't pass the include/exclude filters are not uploaded to remote,
-#     # and remote files that don't pass the include/exclude filters are not deleted.
-#     # include: "**.html" # would only include files with ".html" suffix
-#     # exclude: "**.{jpg, png}" # would exclude files with ".jpg" or ".png" suffix
-
-
-#   # [[deployment.matchers]] configure behavior for files that match the Pattern.
-#   # Samples:
-
-#   matchers:
-#     #  Cache static assets for 1 hour.
-#     - pattern: "^.+\\.(js|css|svg|ttf)$"
-#       cacheControl: "max-age=3600, no-transform, public"
-#       gzip: true
-#     - pattern: "^.+\\.(png|jpg)$"
-#       cacheControl: "max-age=3600, no-transform, public"
-#       gzip: false
-#     - pattern: "^.+\\.(html|xml|json)$"
-#       gzip: true
 
 module:
   mounts:
@@ -345,31 +250,3 @@ module:
   - source: archetypes
     target: archetypes
 
-
-    # Скопируйте приведенный ниже код и вставьте его на каждую страницу сайта.
-    # Вставьте этот фрагмент в раздел <head> кода страницы как можно ближе к началу:
-    # <!-- Google Tag Manager -->
-    # <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    # new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    # j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    # 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    # })(window,document,'script','dataLayer','GTM-P44GNHT');</script>
-    # <!-- End Google Tag Manager -->
-
-    # Также вставьте сразу после открывающего тега <body> следующий фрагмент:
-    # <!-- Google Tag Manager (noscript) -->
-    # <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P44GNHT"
-    # height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    # <!-- End Google Tag Manager (noscript) -->
-    # <!-- Global site tag (gtag.js) - Google Analytics -->
-    # <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176073511-1"></script>
-    # <script>
-    #     window.dataLayer = window.dataLayer || [];
-    #     function gtag(){dataLayer.push(arguments);}
-    #     gtag('js', new Date());
-    #     gtag('config', 'UA-176073511-1');
-    # </script>
-    # <!-- Global site tag (gtag.js) - Google Analytics -->
-    # <!-- Yandex.Metrika counter -->
-    # <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(31190141, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/31190141" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    # <!-- /Yandex.Metrika counter -->
