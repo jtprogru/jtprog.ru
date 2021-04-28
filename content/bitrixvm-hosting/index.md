@@ -10,6 +10,11 @@ TocOpen: false
 draft: false
 hidemeta: false
 disableShare: false
+coder:
+    image: "bitrixvm.jpg"
+    alt: "BitrixVM"
+    caption: ""
+    relative: true
 comments: false
 ---
 
