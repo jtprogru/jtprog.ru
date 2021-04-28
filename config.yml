@@ -217,7 +217,7 @@ markup:
     lineNos: false
     lineNumbersInTable: true
     noClasses: true
-    style: monokai
+    style: onedark
     tabWidth: 4
 
 caches:
