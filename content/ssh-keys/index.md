@@ -11,6 +11,11 @@ TocOpen: false
 draft: false
 hidemeta: false
 disableShare: false
+cover:
+    image: "cover.jpg"
+    alt: "Security system"
+    caption: "Photo by [FLY:D](https://unsplash.com/@flyd2069) on [Unsplash](https://unsplash.com/)"
+    relative: true
 comments: false
 ---
 
