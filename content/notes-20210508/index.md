@@ -57,7 +57,13 @@ apiVersion: extensions/v1beta1
 {{- end }}
 ```
 
-Сейчас уже не найду ошибку, но что-то было связано с тем, что указано `apiVersion: networking.k8s.io/v1beta1` – типа уже есть релиз. Ну я возьми и поправь это на `apiVersion: networking.k8s.io/v1`.
+При попытке проверить встроенным в helm литером, возникает вот такой варнинг:
+
+```bash
+[WARNING] templates/ingress.yaml: networking.k8s.io/v1beta1 Ingress is deprecated in v1.19+, unavailable in v1.22+; use networking.k8s.io/v1 Ingress
+```
+
+Ну я возьми и поправь это на `apiVersion: networking.k8s.io/v1`.
 
 При попытке установить чарт с помощью Helm'а или с помощью werf'а будет вылетать вот такая ошибка:
 ```bash
