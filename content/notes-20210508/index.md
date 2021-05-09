@@ -94,6 +94,26 @@ Error: UPGRADE FAILED: error validating "": error validating data: [ValidationEr
 
 И как результат у тебя нихера не работает! А работать начинает только тогда, когда ты вернёшь всё в зад – пофиксишь обратно `apiVersion` и пофиксишь обратно описание backend'а.
 
+Причина по которой не работали внесенные мною изменения довольно простая: надо читать документацию. Поясню: в новой спецификации для `apiVersion: networking.k8s.io/v1` в разделе `backend` необходимо указывать немного по другому информацию о порте – примерно вот так:
+
+```yaml
+{{- range .paths }}
+- path: {{ .path }}
+    backend:
+      service:
+        name: {{ $fullName }}
+        port:
+          number: {{ $svcPort }}
+          name: {{ $svcName }}
+{{- end }}
+```
+
+Т.е. раньше в поле `port` согласно новой спецификации передается объект, а не число как раньше и у этого объекта имеются поля (выдержка из документации):
+- `name` <string> – Name is the name of the port on the Service. This is a mutually exclusive setting with "Number";
+- `number` <integer> – Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name";
+
+Итого получаем тот факт, что у меня ушло дохрена времени на то, что можно было бы решить простейшим чтением документации и спецификации ingress'a. 
+
 За сим откланяюсь! Не совершай моих ошибок!  
 
 ---
