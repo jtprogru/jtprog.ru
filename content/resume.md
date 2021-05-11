@@ -24,7 +24,7 @@ cover:
 **Email**: [mail@jtprog.ru](mailto:mail@jtprog.ru)  
 **Site**: [jtprog.ru](https://jtprog.ru/)  
 **GitHub**: [github.com/jtprogru](https://github.com/jtprogru/)  
-**Проекты**: [status.jtprog.ru](https://status.jtprog.ru)  \
+**Проекты**: [stats.uptimerobot.com/zQn8JfR3yw](https://stats.uptimerobot.com/zQn8JfR3yw)  
 **Список курсов/сертификатов**: [Образование](https://jtprog.ru/skillz/)  
 
 Проживаю: Москва, м. Водный стадион  
