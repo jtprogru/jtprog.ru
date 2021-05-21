@@ -149,7 +149,16 @@ menu:
   main:
     - name: "CV"
       url: "/resume/"
+      weight: 4
+    - name: "RSS"
+      url: "/index.xml"
       weight: 3
+    - name: "Телеграм"
+      url: "https://t.me/sysopschannel"
+      weight: 1
+    - name: "Чат"
+      url: "https://t.me/sysopschat"
+      weight: 2
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
