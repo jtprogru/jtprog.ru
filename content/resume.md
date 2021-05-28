@@ -49,6 +49,14 @@ cover:
 **Позиция**: Старший инженер доступности  
 **Описание**: Поддержание работоспособности внутреннего продукта "Поиск". Инструменты: Salt, Ansible, GitLab, Jira, Confluence, Nagios, Kubernetes.
 
+### Secret StartUp
+
+Москва, [example.com](https://example.com)  
+**Период**: январь 2021 – настоящее время  
+**О компании**: NDA  
+**Позиция**: DevOps  
+**Описание**: Проектирование, сопровождение контуров dev и prod. Помощь команде разработки в организации CI/CD. Инструменты: Kubernetes, Ansible, Python, Prometheus, Grafana, DigitalOcean, MinIO, ELK, Jira, Confluence.
+
 ### ADV/web-engineering co.
 
 Москва, [www.adv.ru](https://www.adv.ru)  
