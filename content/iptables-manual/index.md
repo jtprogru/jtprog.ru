@@ -5,6 +5,7 @@ draft: false
 slug: '/iptables-manual/'
 categories: "how-to"
 tags: ['iptables', 'man', 'linux']
+author: "jtprogru"
 comments: true
 noauthor: false
 share: true
@@ -353,15 +354,18 @@ iptables -t nat -A POSTROUTING -j SNAT --to-source 192.168.1.20-192.168.1.25
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT 
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport 22 -j ACCEPT 
 ## cups (printing service) udp/tcp port 631 для локальной сети ##
-iptables -A INPUT -s 192.168.1.0/24 -p udp -m udp --dport 631 -j ACCEPT iptables -A INPUT -s 192.168.1.0/24 -p tcp -m tcp --dport 631 -j ACCEPT 
+iptables -A INPUT -s 192.168.1.0/24 -p udp -m udp --dport 631 -j ACCEPT
+iptables -A INPUT -s 192.168.1.0/24 -p tcp -m tcp --dport 631 -j ACCEPT 
 ## time sync via NTP для локальной сети (udp port 123) ## 
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p udp --dport 123 -j ACCEPT 
 ## tcp port 25 (smtp) ##
 iptables -A INPUT -m state --state NEW -p tcp --dport 25 -j ACCEPT 
 ## dns server ports ##
-iptables -A INPUT -m state --state NEW -p udp --dport 53 -j ACCEPT iptables -A INPUT -m state --state NEW -p tcp --dport 53 -j ACCEPT 
+iptables -A INPUT -m state --state NEW -p udp --dport 53 -j ACCEPT
+iptables -A INPUT -m state --state NEW -p tcp --dport 53 -j ACCEPT
 ## http/https www server port ## 
-iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT iptables -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT 
+iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT 
 ## tcp port 110 (pop3) ## 
 iptables -A INPUT -m state --state NEW -p tcp --dport 110 -j ACCEPT 
 ## tcp port 143 (imap) ## 
@@ -413,11 +417,11 @@ netstat -tulpn | grep :80
 ```
 Проверим, что iptables разрешает соединение с `80` портом:
 ```bash
-iptables -L INPUT -v -n | grep 80
+iptables -L OUTPUT -v -n | grep 80
 ```
 В противном случае откроем его для всех:
 ```bash
-iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
+iptables -A OUTPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
 ```
 Проверяем с помощью `telnet`
 ```bash
@@ -428,3 +432,4 @@ telnet ya.ru 80
 nmap -sS -p 80 ya.ru
 ```
 На этом можно и притормозить, потому что описанных здесь методов достаточно, чтобы  разобраться как с помощью `iptables` управлять сетевой безопасностью сервера и маршрутизацией на нем.
+
