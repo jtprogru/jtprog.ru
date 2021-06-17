@@ -4,7 +4,7 @@ date: 2020-11-04T16:14:13+03:00
 type: 'post'
 # aliases: ["/first"]
 tags: ["first"]
-author: "JTProg"
+author: "jtprogru"
 # author: ["Me", "You"] # multiple authors
 showToc: false
 TocOpen: false

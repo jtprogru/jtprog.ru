@@ -6,7 +6,7 @@ date: 2020-11-27T20:20:00+03:00
 categories: 'Work'
 tags: ["systemd", "timesyncd"]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 description: "Настройка штатного механизма синхронизации времени systemd-timesyncd"
 showToc: false
 TocOpen: false

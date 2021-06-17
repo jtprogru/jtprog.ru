@@ -4,7 +4,7 @@ date: 2020-11-09T22:25:00+03:00
 categories: 'Opinion'
 tags: ["devops", "opinion", "sysops"]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 description: "Очередная статья про DevOps"
 showToc: false
 TocOpen: false

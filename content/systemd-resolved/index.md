@@ -6,7 +6,7 @@ date: 2020-11-29T12:00:00+03:00
 categories: 'Work'
 tags: ["systemd", "resolved", "systemd-resolved"]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 description: "Базовая настройка кэширующего DNS-resolver systemd-resolved"
 showToc: false
 TocOpen: false

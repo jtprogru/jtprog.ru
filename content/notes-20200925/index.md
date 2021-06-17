@@ -6,7 +6,7 @@ date: 2020-09-25T20:39:00+03:00
 categories: 'Fuckup'
 tags: ["ansible", "ssh", "sshconfig", "заметкинаполях"]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 # author: ["Me", "You"] # multiple authors
 # showToc: false
 # TocOpen: false

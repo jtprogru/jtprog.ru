@@ -6,7 +6,7 @@ date: 2020-12-05T19:36:36+03:00
 categories: 'Work'
 tags: ["atop", "linux", "monitoring"]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 description: "Установка, настройка и использование мощного инструмента анализа нагрузки и производительности сервера"
 showToc: false
 TocOpen: false

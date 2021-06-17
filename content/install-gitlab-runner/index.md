@@ -6,7 +6,7 @@ date: 2020-11-27T13:30:00+03:00
 categories: 'Work'
 tags: ["gitlab-ci", "gitlab runner", "work"]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 description: "Установка и регистрация GitLab-runner"
 showToc: false
 TocOpen: false

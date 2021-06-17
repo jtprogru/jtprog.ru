@@ -4,7 +4,7 @@ date: 2020-11-05T23:00:00+03:00
 categories: 'DevOps'
 tags: ["gitlab-ci", "devops", "hugo", "ci-cd"]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 description: "Упрощение жизни и работы с Hugo через Docker, GitLab-CI"
 showToc: false
 TocOpen: false

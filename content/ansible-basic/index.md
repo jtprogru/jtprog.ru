@@ -4,7 +4,7 @@ date: 2020-12-29T00:30:54+03:00
 categories: 'Work'
 tags: ["DevOps", "Ansible", "Configuration management", IaC]
 type: 'post'
-author: "JTProg"
+author: "jtprogru"
 description: "Что такое Ansible, для каких задач он нужен? Что такое IaC?"
 draft: false
 ---
