@@ -69,8 +69,10 @@ params:
   related: true
   relatedMax: 5
 
-  ShowShareButtons: true
   ShowReadingTime: true
+  ShowShareButtons: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
   disableSpecial1stPost: true
   homeInfoParams:
     Title: "Привет, `%username%`!"
