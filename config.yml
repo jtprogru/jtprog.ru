@@ -83,6 +83,8 @@ params:
       url: 'https://t.me/sysopschannel'
     - name: twitter
       url: 'https://twitter.com/jtprogru'
+    - name: youtube
+      url: 'https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg'
     - name: github
       url: 'https://github.com/jtprogru'
     - name: gitlab
