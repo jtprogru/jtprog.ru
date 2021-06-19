@@ -92,7 +92,7 @@ params:
     - name: gitlab
       url: 'https://gitlab.com/jtprogru'
     - name: dev
-      url: 'https://dev.to/jtprog'
+      url: 'https://dev.to/jtprogru'
     - name: discord
       url: 'https://discord.gg/zS2gNwt2Ka'
     - name: slack
