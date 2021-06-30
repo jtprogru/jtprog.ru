@@ -152,7 +152,7 @@ params:
 menu:
   main:
     - name: "CV"
-      url: "/resume/"
+      url: "https://savinmi.ru/"
       weight: 4
     - name: "RSS"
       url: "/index.xml"
