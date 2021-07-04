@@ -151,6 +151,9 @@ params:
 
 menu:
   main:
+    - name: "Patreon"
+      url: "https://www.patreon.com/jtprogru"
+      weight: 2
     - name: "CV"
       url: "https://savinmi.ru/"
       weight: 4
