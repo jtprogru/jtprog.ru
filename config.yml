@@ -87,6 +87,8 @@ params:
       url: 'https://twitter.com/jtprogru'
     - name: youtube
       url: 'https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg'
+    - name: patreon
+      url: 'https://patreon.com/jtprogru'
     - name: github
       url: 'https://github.com/jtprogru'
     - name: gitlab
