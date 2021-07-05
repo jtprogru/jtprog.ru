@@ -156,16 +156,16 @@ menu:
       weight: 2
     - name: "CV"
       url: "https://savinmi.ru/"
-      weight: 4
+      weight: 5
     - name: "RSS"
       url: "/index.xml"
-      weight: 3
+      weight: 4
     - name: "Телеграм"
       url: "https://t.me/sysopschannel"
       weight: 1
     - name: "Чат"
       url: "https://t.me/sysopschat"
-      weight: 2
+      weight: 3
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
