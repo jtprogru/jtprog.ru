@@ -155,7 +155,7 @@ menu:
       url: "https://www.patreon.com/jtprogru"
       weight: 2
     - name: "CV"
-      url: "https://savinmi.ru/"
+      url: "http://savinmi.ru/"
       weight: 5
     - name: "RSS"
       url: "/index.xml"
