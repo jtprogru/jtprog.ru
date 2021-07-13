@@ -3,7 +3,7 @@ id: 263
 title: Правила чата
 date: 2020-09-01T21:35:54+03:00
 author: jtprog
-layout: page
+type: page
 slug: '/chat-rules/'
 ---
 [ЧАТ: SysOps](https://t.me/sysopschat)

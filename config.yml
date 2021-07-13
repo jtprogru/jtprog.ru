@@ -1,6 +1,6 @@
 baseURL: "https://jtprog.ru"
 theme: "papermod"
-title: "SysOps"
+title: "Книга админа"
 copyright: "Mihael (jtprogru) Savin / Commit: @@@COMMIT@@@"
 languageCode: "ru-RU"
 defaultContentLanguage: "ru"
@@ -53,8 +53,8 @@ params:
     Text: "Edit..." # edit text
     appendFilePath: true # to aepend file path to Edit link
   label:
-      text: "SysOps"
-      icon: /logo.jpg
+      text: "@jtprogru"
+      icon: /logo-new.png
   assets:
     favicon: /favicon.ico
     disableFingerprinting: true
@@ -62,15 +62,15 @@ params:
   opengraph: true
   twitter_cards: true
   copyright: "Mihael (jtprogru) Savin"
-  title: "SysOps"
-  description: "Записная книжка админа-самоучки"
+  # title: "Книга админа"
+  # description: "Записная книжка админа-самоучки"
   mainSections:  ["post"]
   dateFormat: "2006-01-02 15:04"
   related: true
   relatedMax: 5
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   disableSpecial1stPost: true
@@ -91,6 +91,10 @@ params:
       url: 'https://github.com/jtprogru'
     - name: gitlab
       url: 'https://gitlab.com/jtprogru'
+    - name: buymeacoffee
+      url: 'https://www.buymeacoffee.com/jtprogru'
+    - name: paypal
+      url: 'http://paypal.me/jtprog'
     - name: dev
       url: 'https://dev.to/jtprogru'
     - name: discord

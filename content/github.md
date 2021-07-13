@@ -3,7 +3,7 @@ id: 19
 title: GitHub projects
 date: 2020-09-22T18:42:33+03:00
 author: jtprog
-layout: page
+type: page
 slug: '/github/'
 ---
 ## [zbx2jira](https://github.com/sysodminium/zbx2jira)
