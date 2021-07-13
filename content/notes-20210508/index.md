@@ -117,4 +117,4 @@ Error: UPGRADE FAILED: error validating "": error validating data: [ValidationEr
 За сим откланяюсь! Не совершай моих ошибок!  
 
 ---
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/sysopschat), а так же подписывайся на [канал](https://t.me/sysopschannel).
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/myblog_chats), а так же подписывайся на [канал](https://t.me/myblog_channel).

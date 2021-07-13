@@ -78,11 +78,11 @@ params:
     Title: "Привет, `%username%`!"
     Content: |
       Добро пожаловать на мой бложек,
-      подписывайся на [канал](https://t.me/sysopschannel) и заходи в [чат](https://t.me/sysopschat), ну или просто скажи [спасибо](https://www.patreon.com/jtprogru)
+      подписывайся на [канал](https://t.me/myblog_channel) и заходи в [чат](https://t.me/myblog_chats), ну или просто скажи [спасибо](https://www.patreon.com/jtprogru)
 
   socialIcons:
     - name: telegram
-      url: 'https://t.me/sysopschannel'
+      url: 'https://t.me/myblog_channel'
     - name: twitter
       url: 'https://twitter.com/jtprogru'
     - name: youtube
@@ -99,26 +99,26 @@ params:
       url: 'https://dev.to/jtprogru'
     - name: discord
       url: 'https://discord.gg/zS2gNwt2Ka'
-    - name: slack
-      url: 'https://sysops20.slack.com'
-    - name: stackoverflow
-      url: 'https://stackoverflow.com/users/6744296/jtprog'
+    # - name: slack
+    #   url: 'https://sysops20.slack.com'
+    # - name: stackoverflow
+    #   url: 'https://stackoverflow.com/users/6744296/jtprog'
     - name: medium
       url: 'https://jtprogru.medium.com'
     - name: linkedin
       url: 'https://www.linkedin.com/in/jtprogru'
-    - name: facebook
-      url: 'https://www.facebook.com/sysopschannel'
-    - name: instagram
-      url: 'https://instagram.com/jtprogru'
+    # - name: facebook
+    #   url: 'https://www.facebook.com/sysopschannel'
+    # - name: instagram
+    #   url: 'https://instagram.com/jtprogru'
     - name: keybase
       url: 'https://keybase.io/jtprog'
     - name: rss
       url: '/index.xml'
-    - name: email
-      url: 'mailto:mail@jtprog.ru'
-    - name: unsplash
-      url: 'https://unsplash.com/@jtprog'
+    # - name: email
+    #   url: 'mailto:mail@jtprog.ru'
+    - name: soundcloud
+      url: 'https://soundcloud.com/jtprog_ru/'
 
 
   analytics:
@@ -165,10 +165,10 @@ menu:
       url: "/index.xml"
       weight: 4
     - name: "Телеграм"
-      url: "https://t.me/sysopschannel"
+      url: "https://t.me/myblog_channel"
       weight: 1
     - name: "Чат"
-      url: "https://t.me/sysopschat"
+      url: "https://t.me/myblog_chats"
       weight: 3
 
 frontmatter:
