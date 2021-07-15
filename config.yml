@@ -1,6 +1,7 @@
 baseURL: "https://jtprog.ru"
 theme: "papermod"
-title: "Книга админа"
+title: "Savin Michael aka @jtprogru"
+description: "Записная книга админа-самоучки"
 copyright: "Mihael (jtprogru) Savin / Commit: @@@COMMIT@@@"
 languageCode: "ru-RU"
 defaultContentLanguage: "ru"
@@ -53,7 +54,7 @@ params:
     Text: "Edit..." # edit text
     appendFilePath: true # to aepend file path to Edit link
   label:
-      text: "@jtprogru"
+#     text: "@jtprogru"
       icon: /logo-new.png
   assets:
     favicon: /favicon.ico
@@ -77,12 +78,12 @@ params:
   homeInfoParams:
     Title: "Привет, `%username%`!"
     Content: |
-      Добро пожаловать на мой бложек,
-      подписывайся на [канал](https://t.me/myblog_channel) и заходи в [чат](https://t.me/myblog_chats), ну или просто скажи [спасибо](https://www.patreon.com/jtprogru)
+      Меня зовут Михаил и добро пожаловать на бложек имени меня.
+      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в [telegram-чат](https://t.me/jtprogru_chat) и задавай вопросы. Купить мне [кофе](https://www.buymeacoffee.com/jtprogru) или подписаться на мой [Patreon](https://www.patreon.com/jtprogru) в качестве благодарности очень приветствуется.
 
   socialIcons:
     - name: telegram
-      url: 'https://t.me/myblog_channel'
+      url: 'https://t.me/jtprogru_channel'
     - name: twitter
       url: 'https://twitter.com/jtprogru'
     - name: youtube
