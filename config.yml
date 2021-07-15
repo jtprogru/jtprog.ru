@@ -156,21 +156,21 @@ params:
 
 menu:
   main:
+    - name: "Канал"
+      url: "https://t.me/jtprogru_channel"
+      weight: 1
     - name: "Patreon"
       url: "https://www.patreon.com/jtprogru"
       weight: 2
-    - name: "CV"
-      url: "http://savinmi.ru/"
-      weight: 5
-    - name: "RSS"
-      url: "/index.xml"
-      weight: 4
-    - name: "Телеграм"
-      url: "https://t.me/jtprogru_channel"
-      weight: 1
     - name: "Чат"
       url: "https://t.me/jtprogru_chat"
       weight: 3
+    - name: "RSS"
+      url: "/index.xml"
+      weight: 4
+    - name: "Резюме"
+      url: "http://savinmi.ru/"
+      weight: 5
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
