@@ -83,7 +83,7 @@ params:
 
   socialIcons:
     - name: telegram
-      url: 'https://t.me/jtprogru_channel'
+      url: 'https://t.me/jtprogru_chat'
     - name: twitter
       url: 'https://twitter.com/jtprogru'
     - name: youtube
@@ -166,10 +166,10 @@ menu:
       url: "/index.xml"
       weight: 4
     - name: "Телеграм"
-      url: "https://t.me/myblog_channel"
+      url: "https://t.me/jtprogru_channel"
       weight: 1
     - name: "Чат"
-      url: "https://t.me/myblog_chats"
+      url: "https://t.me/jtprogru_chat"
       weight: 3
 
 frontmatter:

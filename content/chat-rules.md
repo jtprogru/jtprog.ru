@@ -6,7 +6,7 @@ author: jtprog
 type: page
 slug: '/chat-rules/'
 ---
-[ЧАТ: SysOps](https://t.me/myblog_chats)
+[ЧАТ: SysOps](https://t.me/jtprogru_chat)
 
 Настоятельно рекомендуется:
 
