@@ -1,6 +1,6 @@
 ---
 title: "[Opinion] Документация, Сухой поцелуй и джуны"
-date: 2021-07-15T21:00:00+03:00
+date: 2021-07-16T16:00:00+03:00
 categories: "Opinion"
 tags: ["rtfm", "kiss", "dry", "documentation", "junior"]
 type: "post"
