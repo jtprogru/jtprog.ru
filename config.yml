@@ -169,7 +169,7 @@ menu:
       url: "/index.xml"
       weight: 4
     - name: "Резюме"
-      url: "http://savinmi.ru/"
+      url: "https://savinmi.ru/"
       weight: 5
 
 frontmatter:
