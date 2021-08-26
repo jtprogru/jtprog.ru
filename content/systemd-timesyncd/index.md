@@ -174,3 +174,8 @@ Fri Nov 27 20:31:52 MSK 2020
 `MSK` свидетельствует об установке нашей зоны (`Europe/Moscow` это `UTC+03`)
 
 На этом все! Profit!
+
+UPD: На Ansible Galaxy есть моя ролька для автоматизации – [jtprogru.configure_timesyncd](https://galaxy.ansible.com/jtprogru/configure_timesyncd).
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
