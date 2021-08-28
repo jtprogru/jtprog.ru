@@ -1,6 +1,6 @@
 ---
 title: "[Basic] Ротация логов с logrotate"
-date: 2021-08-27T21:18:29+03:00
+date: 2021-08-28T14:30:00+03:00
 categories: "Work"
 tags: ["logrotate", "basics", "примитивы"]
 type: "post"
