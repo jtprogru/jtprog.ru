@@ -4,7 +4,7 @@ tags: ["devops", "sysadmin", "sysops", "сисадмин", "девопс", "Са
 type: 'page'
 author: "jtprogru"
 description: "Савин Михаил Иванович – Резюме"
-draft: false
+draft: true
 hidemeta: true
 cover:
   image: "/header.jpeg"
