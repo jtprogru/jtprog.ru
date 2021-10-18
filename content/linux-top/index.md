@@ -3,7 +3,7 @@ title: "[Linux] Что показывает top?"
 date: 2020-11-04T16:14:13+03:00
 type: 'post'
 # aliases: ["/first"]
-tags: ["first"]
+tags: ["linux", "top", "basics"]
 author: "jtprogru"
 # author: ["Me", "You"] # multiple authors
 showToc: false
