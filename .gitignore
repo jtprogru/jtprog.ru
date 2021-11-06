@@ -17,4 +17,5 @@ public/
 resources/
 rundev.sh
 draft-config.yml
+.hugo_build.lock
 
