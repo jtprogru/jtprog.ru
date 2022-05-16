@@ -100,26 +100,21 @@ params:
       url: 'https://dev.to/jtprogru'
     - name: discord
       url: 'https://discord.gg/zS2gNwt2Ka'
-    # - name: slack
-    #   url: 'https://sysops20.slack.com'
-    # - name: stackoverflow
-    #   url: 'https://stackoverflow.com/users/6744296/jtprog'
     - name: medium
       url: 'https://jtprogru.medium.com'
     - name: linkedin
       url: 'https://www.linkedin.com/in/jtprogru'
-    # - name: facebook
-    #   url: 'https://www.facebook.com/sysopschannel'
-    # - name: instagram
-    #   url: 'https://instagram.com/jtprogru'
+    - name: unsplash
+      url: 'https://unsplash.com/@jtprogru'
+    - name: instagram
+      url: 'https://t.me/michael_behind_lens'
     - name: keybase
       url: 'https://keybase.io/jtprog'
     - name: rss
       url: '/index.xml'
-    # - name: email
-    #   url: 'mailto:mail@jtprog.ru'
     - name: soundcloud
       url: 'https://soundcloud.com/jtprogru/'
+
 
 
   analytics:
