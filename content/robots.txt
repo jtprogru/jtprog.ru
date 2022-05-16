@@ -11,6 +11,7 @@ Disallow: /?p=
 Disallow: /?share=
 Disallow: /not-found/
 Disallow: /ip/
+Clean-param: p&share
 
 Crawl-delay: 10
 
