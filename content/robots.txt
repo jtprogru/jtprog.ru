@@ -8,6 +8,7 @@ Disallow: /digitalocean/
 Disallow: */trackback
 Disallow: */comment
 Disallow: /?p=
+Disallow: /?share=
 Disallow: /not-found/
 Disallow: /ip/
 
