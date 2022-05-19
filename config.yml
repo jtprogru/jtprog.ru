@@ -17,7 +17,8 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-googleAnalytics: UA-176073511-1
+# googleAnalytics: UA-176073511-1
+googleAnalytics: G-NK4TC343YF
 
 minify:
   disableCSS: false
