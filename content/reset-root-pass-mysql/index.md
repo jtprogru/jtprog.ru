@@ -3,7 +3,7 @@ title: "[MySQL] Если Вы забыли пароль MySQL (сброс пар
 date: 2015-10-09T10:15:30+03:00
 draft: false
 slug: '/reset-root-pass-mysql/'
-categories: "how-to"
+categories: "howto"
 tags: ['mysql', 'password']
 comments: true
 noauthor: false

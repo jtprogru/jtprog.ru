@@ -3,7 +3,7 @@ title: "[CentOS] Настройка виртуальных хостов Nginx в
 date: 2017-10-27T14:36:00+03:00
 draft: false
 slug: '/virt-host-nginx/'
-categories: "how-to"
+categories: "howto"
 tags: ['nginx', 'vhosts', 'centos']
 comments: true
 noauthor: false

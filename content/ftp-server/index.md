@@ -3,7 +3,7 @@ title: "[vsFTPd] Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04"
 date: 2015-02-02T17:25:00+03:00
 draft: false
 slug: '/ftp-server/'
-categories: "how-to"
+categories: "howto"
 tags: ['vsftpd', 'ubuntu', 'ftp']
 comments: true
 noauthor: false

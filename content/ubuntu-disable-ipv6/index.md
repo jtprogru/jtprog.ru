@@ -3,7 +3,7 @@ title: "[Ubuntu] Отключаем IPv6 на сервере"
 date: 2016-08-12T11:54:00+03:00
 draft: false
 slug: '/ubuntu-disable-ipv6/'
-categories: "how-to"
+categories: "howto"
 tags: ['ipv6', 'linux']
 comments: true
 noauthor: false

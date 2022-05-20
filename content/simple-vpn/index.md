@@ -3,7 +3,7 @@ title: "[pptpd] Простой VPN-сервер на базе Ubuntu+pptpd"
 date: 2015-03-30T14:39:00+03:00
 draft: false
 slug: '/simple-vpn/'
-categories: "how-to"
+categories: "howto"
 tags: ['vpn', 'pptpd', 'ubuntu']
 comments: true
 noauthor: false

@@ -3,7 +3,7 @@ title: "[DNSmasq] Своя доменная зона с dnsmasq"
 date: 2015-12-16T10:48:00+03:00
 draft: false
 slug: '/domain-zone-dnsmasq/'
-categories: "how-to"
+categories: "howto"
 tags: ['dnsmasq', 'dns', 'linux']
 comments: true
 noauthor: false

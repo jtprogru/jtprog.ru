@@ -3,7 +3,7 @@ title: "[iptables] Шпаргалка по iptables"
 date: 2015-03-30T16:48:37+03:00
 draft: false
 slug: '/iptables-manual/'
-categories: "how-to"
+categories: "howto"
 tags: ['iptables', 'man', 'linux']
 author: "jtprogru"
 comments: true

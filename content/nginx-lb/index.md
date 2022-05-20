@@ -4,7 +4,7 @@ date: 2019-08-21T19:10:00+03:00
 draft: false
 slug: '/nginx-lb/'
 description: 'Немного о балансировке бэкендов в Nginx'
-categories: "how-to"
+categories: "howto"
 tags: ['load balancing', 'nginx']
 comments: true
 noauthor: false

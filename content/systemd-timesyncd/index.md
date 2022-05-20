@@ -1,8 +1,6 @@
 ---
 title: "[Linux] Настраиваем systemd-timesyncd"
 date: 2020-11-27T20:20:00+03:00
-# weight: 1
-# aliases: ["/first"]
 categories: 'Work'
 tags: ["systemd", "timesyncd"]
 type: 'post'

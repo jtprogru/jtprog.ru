@@ -3,7 +3,7 @@ title: "[Ubuntu] Fix locale Perl"
 date: 2016-08-08T10:34:00+03:00
 draft: false
 slug: '/fix-locale-perl/'
-categories: "how-to"
+categories: "howto"
 tags: ['locale', 'perl', 'linux']
 comments: true
 noauthor: false

@@ -4,7 +4,7 @@ date: 2019-07-29T11:47:56+03:00
 draft: false
 slug: '/rpmdb-altered/'
 description: 'Устранение ошибки RPMDB altered outside of yum в CentOS'
-categories: "how-to"
+categories: "howto"
 tags: ['rpmdb', 'centos', 'yum']
 comments: true
 noauthor: false

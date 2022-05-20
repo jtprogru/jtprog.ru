@@ -3,7 +3,7 @@ title: "[Android] Подключаем Android к Windows 7"
 date: 2015-06-26T14:42:00+03:00
 draft: false
 slug: '/android-to-windows-7/'
-categories: "how-to"
+categories: "howto"
 tags: ['android', 'windows']
 comments: true
 noauthor: false

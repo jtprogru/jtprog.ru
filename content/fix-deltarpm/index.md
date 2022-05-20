@@ -4,7 +4,7 @@ date: 2019-08-05T12:24:55+03:00
 draft: false
 slug: '/fix-deltarpm/'
 description: 'Устранение ошибки Delta RPMs disabled в CentOS'
-categories: "how-to"
+categories: "howto"
 tags: ['centos', 'yum', 'deltarpm']
 comments: true
 noauthor: false

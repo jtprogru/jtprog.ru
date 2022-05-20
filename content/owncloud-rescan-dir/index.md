@@ -3,7 +3,7 @@ title: "[ownCloud] Удаляем фантомные файлы"
 date: 2017-05-25T15:41:28+03:00
 draft: false
 slug: '/owncloud-rescan-dir/'
-categories: "how-to"
+categories: "howto"
 tags: ['owncloud', 'linux']
 comments: true
 noauthor: false

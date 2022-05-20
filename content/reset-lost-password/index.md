@@ -3,7 +3,7 @@ title: "[Ubuntu] Сбросить забытый пароль"
 date: 2018-06-18T14:57:25+03:00
 draft: false
 slug: '/reset-lost-password/'
-categories: "how-to"
+categories: "howto"
 tags: ['linux', 'password', 'root']
 comments: true
 noauthor: false

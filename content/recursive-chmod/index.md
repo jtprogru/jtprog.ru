@@ -3,7 +3,7 @@ title: "[chmod] Recursive chmod"
 date: 2015-06-30T19:33:11+03:00
 draft: false
 slug: '/recursive-chmod/'
-categories: "how-to"
+categories: "howto"
 tags: ['chmod', 'linux']
 comments: true
 noauthor: false

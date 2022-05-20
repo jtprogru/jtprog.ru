@@ -3,7 +3,7 @@ title: "[Docker] Как зайти в контейнер и выполнить �
 date: 2016-08-01T15:00:28+03:00
 draft: false
 slug: '/edit-file-in-docker/'
-categories: "how-to"
+categories: "howto"
 tags: ['docker', 'linux']
 comments: true
 noauthor: false

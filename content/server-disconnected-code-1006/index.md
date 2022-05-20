@@ -3,7 +3,7 @@ title: "[Proxmox] Ошибка Server disconnected (code: 1006)"
 date: 2016-08-03T10:00:03+03:00
 draft: false
 slug: '/server-disconnected-code-1006/'
-categories: "how-to"
+categories: "howto"
 tags: ['proxmox', 'cert']
 comments: true
 noauthor: false

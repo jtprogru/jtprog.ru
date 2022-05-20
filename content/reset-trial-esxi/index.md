@@ -3,7 +3,7 @@ title: "[ESXi 5.5] Сбрасываем триал на VMware ESXi 5.5"
 date: 2015-11-10T12:09:00+03:00
 draft: false
 slug: '/reset-trial-esxi/'
-categories: "how-to"
+categories: "howto"
 tags: ['esxi', 'vmware', 'trial']
 comments: true
 noauthor: false

@@ -3,7 +3,7 @@ title: "[kworker] Одно ядро на 90-97% загружено процес�
 date: 2015-09-11T17:21:00+03:00
 draft: false
 slug: '/kworker-eat-cpu/'
-categories: "how-to"
+categories: "howto"
 tags: ['kworker', 'cpu', 'interrupts']
 comments: true
 noauthor: false

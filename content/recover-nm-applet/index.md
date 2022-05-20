@@ -3,7 +3,7 @@ title: "[Ubuntu] Лечим исчезнувший NetworkManager applet"
 date: 2016-02-02T21:51:19+03:00
 draft: false
 slug: '/recover-nm-applet/'
-categories: "how-to"
+categories: "howto"
 tags: ['ubuntu', 'network', 'networkmanager']
 comments: true
 noauthor: false

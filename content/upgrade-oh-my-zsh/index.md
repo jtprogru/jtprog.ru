@@ -3,7 +3,7 @@ title: "[OhMyZsh] Upgrade OhMyZsh"
 date: 2015-09-23T10:21:00+03:00
 draft: false
 slug: '/upgrade-oh-my-zsh/'
-categories: "how-to"
+categories: "howto"
 tags: ['zsh', 'oh-my-zsh', 'linux']
 comments: true
 noauthor: false

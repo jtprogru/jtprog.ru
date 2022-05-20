@@ -3,7 +3,7 @@ title: "[Mac OS X] Разрешаем просмотр pdf-файлов в Safar
 date: 2016-08-01T05:55:44+03:00
 draft: false
 slug: '/disable-safari-pdf-view/'
-categories: "how-to"
+categories: "howto"
 tags: ['macos', 'safari']
 comments: true
 noauthor: false

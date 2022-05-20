@@ -3,7 +3,7 @@ title: "[Mail Server] Задержки почтового сервера на Ub
 date: 2015-06-04T19:14:00+03:00
 draft: false
 slug: '/delay-ubuntu-iredmail/'
-categories: "how-to"
+categories: "howto"
 tags: ['iredmail', 'ubuntu', 'mail']
 comments: true
 noauthor: false

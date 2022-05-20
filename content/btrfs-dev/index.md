@@ -3,7 +3,7 @@ title: "[Btrfs] Btrfs - работаем с разделом"
 date: 2019-05-22T12:27:22+03:00
 draft: false
 slug: '/btrfs-dev/'
-categories: "how-to"
+categories: "howto"
 tags: ['btrfs', 'linux']
 comments: true
 noauthor: false

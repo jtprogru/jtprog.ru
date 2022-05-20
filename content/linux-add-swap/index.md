@@ -4,7 +4,7 @@ date: 2019-11-11T11:23:09+03:00
 draft: false
 slug: '/linux-add-swap/'
 description: 'Коротко о том, как добавить SWAP в Linux'
-categories: "how-to"
+categories: "howto"
 tags: ['swap', 'linux']
 comments: true
 noauthor: false

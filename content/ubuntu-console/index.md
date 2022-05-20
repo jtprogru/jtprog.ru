@@ -3,7 +3,7 @@ title: "[Encoding table] Кракозябры в консоли"
 date: 2015-06-19T12:37:00+03:00
 draft: false
 slug: '/ubuntu-console/'
-categories: "how-to"
+categories: "howto"
 tags: ['encoding', 'cli', 'linux']
 comments: true
 noauthor: false

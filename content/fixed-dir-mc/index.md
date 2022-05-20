@@ -3,7 +3,7 @@ title: "[macOS] Исправляем глюк Midnight Commander"
 date: 2016-10-04T12:36:54+03:00
 draft: false
 slug: '/fixed-dir-mc/'
-categories: "how-to"
+categories: "howto"
 tags: ['mc', 'macos']
 comments: true
 noauthor: false

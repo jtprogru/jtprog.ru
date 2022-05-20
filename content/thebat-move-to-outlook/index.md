@@ -3,7 +3,7 @@ title: "[Email] Перенос почты с The Bat в Outlook"
 date: 2015-01-10T19:56:11+03:00
 draft: false
 slug: '/thebat-move-to-outlook/'
-categories: "how-to"
+categories: "howto"
 tags: ['the bast', 'outlook', 'windows']
 comments: true
 noauthor: false

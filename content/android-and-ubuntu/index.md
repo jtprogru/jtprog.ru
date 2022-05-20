@@ -3,7 +3,7 @@ title: "[Ubuntu] Дружим Android и Ubuntu 14.04"
 date: 2015-02-18T14:49:00+03:00
 draft: false
 slug: '/android-and-ubuntu/'
-categories: "how-to"
+categories: "howto"
 tags: ['android', 'ubuntu', 'mtp', 'udev rules']
 comments: true
 noauthor: false

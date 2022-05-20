@@ -3,7 +3,7 @@ title: '[Amarok] Связываем Amarok и MySQL'
 date: 2015-10-09T09:45:00+03:00
 draft: false
 url: '/amarok-on-mysql/'
-categories: "how-to"
+categories: "howto"
 tags: ['amarok', 'mysql', 'audio']
 comments: true
 noauthor: false
