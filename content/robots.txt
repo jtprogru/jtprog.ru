@@ -11,7 +11,12 @@ Disallow: /?p=
 Disallow: /?share=
 Disallow: /not-found/
 Disallow: /ip/
-Clean-param: p&share
+
+
+User-agent: Yandex
+Disallow:
+Clean-param: p
+Clean-param: share
 
 Crawl-delay: 10
 
