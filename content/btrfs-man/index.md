@@ -3,7 +3,7 @@ title: "[Btrfs] Btrfs - что это и как это"
 date: 2019-05-20T10:55:05+03:00
 draft: false
 slug: '/btrfs-man/'
-categories: "man"
+categories: "Basics"
 tags: ['btrfs', 'linux']
 comments: true
 noauthor: false
