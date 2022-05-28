@@ -1,8 +1,8 @@
 ---
 title: "[Notes] Заметки на полях  2021.05.08"
 date: 2021-05-08T18:37:56+03:00
-categories: "Fuckup"
-tags: ["заметкинаполях", "werf", "helm", "kubernetes", "k8s"]
+categories: "Notes"
+tags: ["fuckup", "заметкинаполях", "werf", "helm", "kubernetes", "k8s"]
 type: "post"
 author: "jtprogru"
 description: ""

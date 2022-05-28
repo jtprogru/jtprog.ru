@@ -3,7 +3,7 @@ title: "[Start] Быть или не быть..."
 date: 2013-07-05T21:16:00+03:00
 draft: false
 slug: '/be-or-not-to-be/'
-categories: "Start"
+categories: "Other"
 tags: ['start', 'first post']
 comments: true
 noauthor: false

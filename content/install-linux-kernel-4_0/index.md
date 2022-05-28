@@ -3,7 +3,7 @@ title: "[Ubuntu] Обновляем ядро до версии 4.0 в Ubuntu"
 date: 2015-04-21T18:55:51+03:00
 draft: false
 slug: '/install-linux-kernel-4_0/'
-categories: "Ubuntu"
+categories: "Linux"
 tags: ['kernel', 'upgrade', 'ubuntu']
 comments: true
 noauthor: false

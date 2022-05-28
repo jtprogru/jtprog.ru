@@ -4,7 +4,7 @@ date: 2017-10-05T13:00:15+03:00
 draft: false
 slug: '/install-zabbix-centos/'
 description: 'Описан процесс установки Zabbix 3.4 на CentOS 7'
-categories: "CentOS"
+categories: "Linux"
 tags: ['zabbix', 'centos']
 comments: true
 noauthor: false

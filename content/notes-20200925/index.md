@@ -1,15 +1,10 @@
 ---
 title: "[Notes] Заметки на полях 2020.09.25"
 date: 2020-09-25T20:39:00+03:00
-# weight: -1
-# aliases: ["/first"]
-categories: 'Fuckup'
-tags: ["ansible", "ssh", "sshconfig", "заметкинаполях"]
+categories: 'Notes'
+tags: ["fuckup", "ansible", "ssh", "sshconfig", "заметкинаполях"]
 type: 'post'
 author: "jtprogru"
-# author: ["Me", "You"] # multiple authors
-# showToc: false
-# TocOpen: false
 draft: false
 hidemeta: false
 disableShare: false

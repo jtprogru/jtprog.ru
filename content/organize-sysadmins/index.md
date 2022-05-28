@@ -2,9 +2,9 @@
 title: "[Work] Как организовать команду сисадминов"
 date: 2018-07-28T14:29:00+03:00
 draft: false
-slug: '/organize-sysadmins/'
+slug: "/organize-sysadmins/"
 categories: "Work"
-tags: ['work', 'admins']
+tags: ["work", "admins"]
 comments: true
 noauthor: false
 share: true

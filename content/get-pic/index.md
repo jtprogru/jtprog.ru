@@ -4,7 +4,7 @@ date: 2019-08-15T19:50:55+03:00
 draft: false
 slug: '/get-pic/'
 description: 'Небольшой пример работы с API Unsplash из Python 3 с использованием библиотеки pyunsplash'
-categories: "Python"
+categories: "Develop"
 tags: ['python', 'requests']
 comments: true
 noauthor: false

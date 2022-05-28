@@ -3,7 +3,7 @@ title: "[CentOS] Установка iperf3"
 date: 2018-07-11T10:38:39+03:00
 draft: false
 slug: '/iperf3/'
-categories: "CentOS"
+categories: "Linux"
 tags: ['iperf', 'linux', 'network']
 comments: true
 noauthor: false

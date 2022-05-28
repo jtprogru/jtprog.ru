@@ -5,7 +5,7 @@ draft: false
 author: "jtprogru"
 slug: '/bad-isp-twbot/'
 description: 'Небольшой проект который мне помог поднять качество работы моего Интернет-провайдера написаный на Python 3'
-categories: "Python"
+categories: "Develop"
 tags: ['python', 'twitter api']
 comments: true
 noauthor: false
