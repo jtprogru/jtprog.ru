@@ -5,7 +5,7 @@ lastmod: 2020-07-11T18:42:33+03:00
 draft: false
 slug: '/install-grafana7/'
 description: 'Немного пробежимся по типичной установке типичной [Grafana 7](https://grafana.com) на типичную [Ubuntu 20.04](https://ubuntu.com). Так же из плюшек у нас будет авторизация по `LDAP` (MS Active Directory)'
-categories: 'Ubuntu'
+categories: "Linux"
 tags: ['grafana', 'ubuntu', 'monitoring', 'ldap']
 comments: true
 image: ''

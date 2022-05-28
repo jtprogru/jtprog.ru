@@ -5,7 +5,7 @@ lastmod: 2020-07-10T02:27:09+03:00
 draft: false
 slug: '/install-zabbix50/'
 description: 'Описан процесс чистой установки Zabbix 5.0 с PostgreSQL 12 на Ubuntu 20.04'
-categories: 'Ubuntu'
+categories: "Linux"
 tags: ['zabbix', 'ubuntu', 'monitoring', 'zbx']
 comments: true
 noauthor: false

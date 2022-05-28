@@ -4,7 +4,7 @@ date: 2020-02-18T22:40:00+03:00
 draft: false
 slug: '/install-zabbix-ubuntu/'
 description: 'Описан процесс установки Zabbix 4.4 на Ubuntu 18.04'
-categories: 'Ubuntu'
+categories: "Linux"
 tags: ['zabbix', 'ubuntu', 'monitoring', 'zbx']
 comments: true
 noauthor: false
