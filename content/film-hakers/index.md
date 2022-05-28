@@ -3,7 +3,7 @@ title: "[Film] Фильм изменивший мои интересы"
 date: 2013-08-05T21:10:56+03:00
 draft: false
 slug: '/film-hakers/'
-categories: "Films"
+categories: "Story"
 tags: ['films', 'hackers']
 comments: true
 noauthor: false
