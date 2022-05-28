@@ -158,12 +158,9 @@ menu:
     - name: "Донаты"
       url: "/donations/"
       weight: 2
-#    - name: "Чат"
-#     url: "https://t.me/jtprogru_chat"
-#     weight: 3
-    - name: "RSS"
-      url: "/index.xml"
-      weight: 4
+    # - name: "RSS"
+    #   url: "/index.xml"
+    #   weight: 4
     - name: "Резюме"
       url: "https://savinmi.ru/"
       weight: 5
