@@ -5,7 +5,7 @@ lastmod: 2020-08-08T18:55:00+03:00
 draft: false
 slug: '/docker-base/'
 description: 'Шпаргалка о Docker, а так же что такое Dockerfile и с чем его едят'
-categories: 'Docker'
+categories: "Basics"
 tags: ['docker', 'dockerfile', 'docker-compose']
 comments: true
 image: ''

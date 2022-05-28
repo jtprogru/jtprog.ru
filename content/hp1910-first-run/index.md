@@ -3,7 +3,7 @@ title: "[HP1910] Начальная настройка коммутатора HP
 date: 2018-01-07T22:10:30+03:00
 draft: false
 slug: '/hp1910-first-run/'
-categories: "Network"
+categories: "howto"
 tags: ['hp 1910', 'network']
 comments: true
 noauthor: false

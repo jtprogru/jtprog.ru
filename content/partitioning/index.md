@@ -3,7 +3,7 @@ title: "[PostgreSQL] Партицирование таблиц в PostgreSQL"
 date: 2018-07-16T16:27:55+03:00
 draft: false
 slug: '/partitioning/'
-categories: "pgsql"
+categories: "DevOps"
 tags: ['postgres', 'pgsql', 'linux']
 comments: true
 noauthor: false

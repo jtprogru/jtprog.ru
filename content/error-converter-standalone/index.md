@@ -3,7 +3,7 @@ title: "[VMware] vCenter Converter Standalone error"
 date: 2018-09-17T07:00:05+03:00
 draft: false
 slug: '/error-converter-standalone/'
-categories: "VMware"
+categories: "DevOps"
 tags: ['centos', 'converter', 'vmware']
 comments: true
 noauthor: false

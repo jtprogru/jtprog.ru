@@ -4,7 +4,7 @@ date: 2020-03-11T22:50:00+03:00
 draft: false
 slug: '/grafana-exports/'
 description: 'Как можно выгрузить datasources и dashboards из Grafana'
-categories: 'Python'
+categories: 'Develop'
 tags: ['grafana', 'export', 'python']
 comments: true
 noauthor: false

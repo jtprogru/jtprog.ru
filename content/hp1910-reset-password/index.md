@@ -3,7 +3,7 @@ title: "[HP1910] Сброс пароля на коммутаторе HP 1910 с�
 date: 2018-01-07T21:40:57+03:00
 draft: false
 slug: '/hp1910-reset-password/'
-categories: "Network"
+categories: "howto"
 tags: ['hp 1910', 'network']
 comments: true
 noauthor: false

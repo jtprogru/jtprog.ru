@@ -3,7 +3,7 @@ title: "[PostgreSQL] Работаем руками"
 date: 2018-07-12T16:15:04+03:00
 draft: false
 slug: '/psql-cli/'
-categories: "pgsql"
+categories: "DevOps"
 tags: ['postgres', 'pgsql', 'cli']
 comments: true
 noauthor: false

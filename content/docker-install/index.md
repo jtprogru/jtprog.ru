@@ -5,7 +5,7 @@ lastmod: 2020-08-02T16:14:21+03:00
 draft: false
 slug: '/docker-install/'
 description: 'Описаны шаги по установке Docker и docker-compose на Ubuntu 20.04'
-categories: 'Docker'
+categories: "howto"
 tags: ['docker', 'docker-compose', 'howto']
 comments: true
 image: ''
