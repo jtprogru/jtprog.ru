@@ -1,7 +1,7 @@
 ---
 title: "[Basics] Кластеризация и доступность"
 date: 2021-08-27T21:00:00+03:00
-categories: "Work"
+categories: "Basics"
 tags: ["HA", "high availability", "clusterisation", "architecture", "примитивы"]
 type: "post"
 author: "jtprogru"

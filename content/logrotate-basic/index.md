@@ -1,7 +1,7 @@
 ---
 title: "[Basics] Ротация логов с logrotate"
 date: 2021-08-28T14:30:00+03:00
-categories: "Work"
+categories: "Basics"
 tags: ["logrotate", "basics", "примитивы"]
 type: "post"
 author: "jtprogru"

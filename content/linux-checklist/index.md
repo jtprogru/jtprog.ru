@@ -1,7 +1,7 @@
 ---
 title: "[Linux] Мой личный чек-лист для Linux сервера"
 date: 2021-08-26T20:14:09+03:00
-categories: "Work"
+categories: "Basics"
 tags: ["linux", "checklist", "basics"]
 type: "post"
 author: "jtprogru"
