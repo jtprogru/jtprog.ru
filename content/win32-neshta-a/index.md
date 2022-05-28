@@ -3,7 +3,7 @@ title: "[Virus] Win32.Neshta.A - устраняем последствия"
 date: 2015-03-19T19:11:00+03:00
 draft: false
 slug: '/win32-neshta-a/'
-categories: "virus"
+categories: "Work"
 tags: ['windows', 'neshta', 'virus']
 comments: true
 noauthor: false

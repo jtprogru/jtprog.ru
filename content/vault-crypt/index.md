@@ -3,7 +3,7 @@ title: "[Virus] Очередной шифровальщик"
 date: 2015-06-18T21:12:00+03:00
 draft: false
 slug: '/vault-crypt/'
-categories: "Virus"
+categories: "Work"
 tags: ['vault', 'cryptor', 'virus']
 comments: true
 noauthor: false

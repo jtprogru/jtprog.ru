@@ -3,7 +3,7 @@ title: "[Security] Использование ПО в компании"
 date: 2015-07-03T12:30:00+03:00
 draft: false
 slug: '/use-software/'
-categories: "Security"
+categories: "Work"
 tags: ['soft', 'work', 'company']
 comments: true
 noauthor: false

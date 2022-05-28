@@ -3,7 +3,7 @@ title: "[Virus] Спам и шифрование или Печальная ис�
 date: 2014-09-18T19:20:00+03:00
 draft: false
 slug: '/bad-story/'
-categories: "Virus"
+categories: "Work"
 tags: ['spam', 'virus', 'cryptor']
 comments: true
 noauthor: false

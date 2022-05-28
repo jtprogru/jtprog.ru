@@ -3,7 +3,7 @@ title: '[CentOS] Исправляем работу конвертера'
 date: "2018-09-25T12:12:00+03:00"
 draft: false
 slug: '/centos-after-convert/'
-categories: 'CentOS'
+categories: 'Linux'
 tags: ['centos', 'converter', 'vmware']
 comments: true
 noauthor: false
