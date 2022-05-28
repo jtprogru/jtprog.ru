@@ -1,7 +1,7 @@
 ---
 title: "[Patreon] Как пройти собеседование"
 date: 2021-07-22T20:18:34+03:00
-categories: "Work"
+categories: "Interview"
 tags: ["interview", "work", "patreon"]
 type: "post"
 author: "jtprogru"

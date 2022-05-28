@@ -1,7 +1,7 @@
 ---
-title: "[Work] Я прошел 50 собесов и вот что я понял"
+title: "[Interview] Я прошел 50 собесов и вот что я понял"
 date: 2022-05-22T20:20:00+03:00
-categories: "Work"
+categories: "Interview"
 tags: ["interview", "собеседование", "мысли"]
 type: "post"
 author: "jtprogru"
