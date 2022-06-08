@@ -3,7 +3,7 @@
 name="00000000-init"
 host="0.0.0.0"
 port="1313"
-config="config.toml"
+config="config.yaml"
 
 new:
 	@hugo new "content/$(name)/index.md" --verbose
@@ -13,7 +13,7 @@ serve:
 		--baseURL "http://${host}:${port}" --noHTTPCache \
 		--gc --disableFastRender --verbose --watch --printMemoryUsage \
 		--templateMetricsHints --templateMetrics \
-		--config ${config}
+		--config ./${config}
 
 list.all:
 	@hugo list all --verbose
