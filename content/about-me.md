@@ -20,7 +20,7 @@ type: "page"
 
 Интересуюсь IT, психологией, фантастикой и вообще много чем еще. Так же люблю почитать самые разные книги. Много чего еще можно рассказать о себе, но лень :-)
 
-Для связи со мной есть [Twitter](https://twitter.com/jtprogru), [Telegram-чат](https://t.me/jtprogru_chat), E-mail: [mail@jtprog.ru](mailto:mail@jtprog.ru). Еще у меня есть канал в [Telegram](https://t.me/jtprogru_channel) – туда я стараюсь писать свой опыт, мысли и анонсы статей с этого блога.
+Для связи со мной есть [Twitter](https://twitter.com/jtprogru), [Telegram-чат](https://ttttt.me/jtprogru_chat), E-mail: [mail@jtprog.ru](mailto:mail@jtprog.ru). Еще у меня есть канал в [Telegram](https://ttttt.me/jtprogru_channel) – туда я стараюсь писать свой опыт, мысли и анонсы статей с этого блога.
 
 **UPD**: Меня опубликовали на [Хабре](https://habr.com/ru/post/333732/) в июле 2017. Для меня, как для самоучки это достижение, пусть и маленькое.
 

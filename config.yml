@@ -80,11 +80,11 @@ params:
     Title: "Привет, `%username%`!"
     Content: |
       Меня зовут Михаил и добро пожаловать на бложек имени меня.
-      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в [telegram-чат](https://t.me/jtprogru_chat) и задавай вопросы. Купить мне [кофе](https://www.buymeacoffee.com/jtprogru) или подписаться на мой [Patreon](https://www.patreon.com/jtprogru) в качестве благодарности очень приветствуется.
+      Подписывайся на [telegram-канал](https://ttttt.me/jtprogru_channel) или заходи в [telegram-чат](https://ttttt.me/jtprogru_chat) и задавай вопросы. Купить мне [кофе](https://www.buymeacoffee.com/jtprogru) или подписаться на мой [Patreon](https://www.patreon.com/jtprogru) в качестве благодарности очень приветствуется.
 
   socialIcons:
     - name: telegram
-      url: 'https://t.me/jtprogru_chat'
+      url: 'https://ttttt.me/jtprogru_chat'
     - name: twitter
       url: 'https://twitter.com/jtprogru'
     - name: youtube
@@ -153,7 +153,7 @@ params:
 menu:
   main:
     - name: "Telegram"
-      url: "https://t.me/jtprogru_channel"
+      url: "https://ttttt.me/jtprogru_channel"
       weight: 1
     - name: "Донаты"
       url: "/donations/"
