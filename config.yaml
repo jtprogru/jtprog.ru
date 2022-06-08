@@ -91,14 +91,14 @@ params:
       url: 'https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg'
     - name: github
       url: 'https://github.com/jtprogru'
-    - name: gitlab
-      url: 'https://gitlab.com/jtprogru'
+    # - name: gitlab
+    #   url: 'https://gitlab.com/jtprogru'
     - name: buymeacoffee
       url: 'https://www.buymeacoffee.com/jtprogru'
-    - name: paypal
-      url: 'http://paypal.me/jtprog'
-    - name: dev
-      url: 'https://dev.to/jtprogru'
+    # - name: paypal
+    #   url: 'http://paypal.me/jtprog'
+    # - name: dev
+    #   url: 'https://dev.to/jtprogru'
     - name: discord
       url: 'https://discord.gg/zS2gNwt2Ka'
     - name: medium
@@ -107,8 +107,8 @@ params:
       url: 'https://www.linkedin.com/in/jtprogru'
     - name: unsplash
       url: 'https://unsplash.com/@jtprogru'
-    - name: instagram
-      url: 'https://t.me/michael_behind_lens'
+    # - name: instagram
+    #   url: 'https://t.me/michael_behind_lens'
     - name: keybase
       url: 'https://keybase.io/jtprog'
     - name: rss
@@ -155,12 +155,9 @@ menu:
     - name: "Telegram"
       url: "https://ttttt.me/jtprogru_channel"
       weight: 1
-    - name: "Донаты"
+    - name: "Спасибо"
       url: "/donations/"
       weight: 2
-    # - name: "RSS"
-    #   url: "/index.xml"
-    #   weight: 4
     - name: "Резюме"
       url: "https://savinmi.ru/"
       weight: 5
