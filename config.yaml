@@ -1,7 +1,6 @@
 baseURL: "https://jtprog.ru"
 theme: "papermod"
 title: "Savin Michael aka @jtprogru"
-description: "Записная книга админа-самоучки"
 copyright: "Mihael (jtprogru) Savin / Commit: @@@COMMIT@@@"
 languageCode: "ru-RU"
 defaultContentLanguage: "ru"
@@ -50,6 +49,7 @@ params:
   env: production
   comments: false
   ShowPostNavLinks: true
+  description: "Записная книга админа-самоучки"
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/master/content"
     Text: "Edit..." # edit text
