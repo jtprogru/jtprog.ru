@@ -13,7 +13,7 @@ hidemeta: false
 disableShare: false
 cover:
     image: "cover.jpeg"
-    alt: "<alt text>"
+    alt: "Interview"
     caption: "Interview"
     relative: false
 comments: false
