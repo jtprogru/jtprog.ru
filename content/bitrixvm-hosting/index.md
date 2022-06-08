@@ -35,7 +35,7 @@ comments: false
 5. Открыть в браузере Битрикс на новом хостинге;
 6. В установщике выбрать восстановление из бэкапа и следовать инструкциям;
 
-Это все очень просто, а сложности начинаются потом. Мы убеждаемся в том, что сайт открылся по IP-адресу и работает. Настраиваем vhosts в nginx и проверяем, что сайт открывается корректно по HTTP. После чего мы можем спокойно приступить к настройке SSL-сертификата от Let'sEncrypt – тут все просто, т.к. `certbot` наше всё. 
+Это все очень просто, а сложности начинаются потом. Мы убеждаемся в том, что сайт открылся по IP-адресу и работает. Настраиваем vhosts в nginx и проверяем, что сайт открывается корректно по HTTP. После чего мы можем спокойно приступить к настройке SSL-сертификата от Let'sEncrypt – тут все просто, т.к. `certbot` наше всё.
 
 ## Ставим `certbot`
 
@@ -43,7 +43,7 @@ comments: false
 
 ```bash
 cd /usr/local/sbin
-sudo wget https://dl.eff.org/certbot-auto 
+sudo wget https://dl.eff.org/certbot-auto
 ```
 
 Дадим боту права на исполнение:
@@ -52,7 +52,7 @@ sudo wget https://dl.eff.org/certbot-auto
 sudo chmod a+x /usr/local/sbin/certbot-auto
 ```
 
-Для получения сертификата необходимо выполнить команду с вызовом Certbot'a с определенными параметрами: 
+Для получения сертификата необходимо выполнить команду с вызовом Certbot'a с определенными параметрами:
 
 ```bash
 certbot-auto certonly --webroot --agree-tos --email admin@jtprog-magazine.ru -w /home/bitrix/www/ -d jtprog-magazine.ru -d www.jtprog-magazine.ru
