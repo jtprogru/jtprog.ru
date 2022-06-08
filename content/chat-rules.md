@@ -34,4 +34,3 @@ slug: '/chat-rules/'
 По вопросам правил и сотрудничества: [@jtprogru](https://t.me/jtprogru)
 
 В для глобальных обсуждений голосом или с демонстрацией экрана есть Discord-сервер [SysOps](https://discord.gg/zS2gNwt2Ka), а с недавних пор это возможно и в самом Telegram.
-

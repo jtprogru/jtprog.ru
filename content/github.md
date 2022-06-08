@@ -8,15 +8,15 @@ slug: '/github/'
 ---
 ## [zbx2jira](https://github.com/sysodminium/zbx2jira)
 
-Создание заявок в Jira ServiceDesk при срабатывании триггер. Имеет довольно подробный [README.md](https://github.com/sysodminium/zbx2jira/blob/master/README.md).
+Создание заявок в Jira ServiceDesk при срабатывании триггера в Zabbix, а так же автоматическое комментирование при резолве триггера. Имеет довольно подробный [README.md](https://github.com/sysodminium/zbx2jira/blob/master/README.md).
 
 ## [backup_jenkins_jobs](https://github.com/jtprog/backup_jenkins_jobs)
 
-Резервное копирование Jenkins jobs. Jobs должны соответствовать определенной структуре.
+Резервное копирование Jenkins jobs. Jobs'ы должны соответствовать определенной структуре.
 
 ## [twitter-excuse](https://github.com/jtprog/twitter-excuse)
 
-По cron&#8217;у постит в Twitter отмазки из заготовленного списка.
+По cron&#8217;у постит в Twitter фразочки из заготовленного списка.
 
 ## [bad-isp-twbot](https://github.com/jtprog/bad-isp-twbot)
 
@@ -25,6 +25,10 @@ slug: '/github/'
 ## [pyfluxfeed](https://github.com/jtprog/pyfluxfeed)
 
 Попытка сделать аналог [miniflux.app](https://miniflux.app), только на Python.
+
+## [hotel_manage](https://github.com/jtprog/hotel_manage)
+
+Проект на коленке для управления гостиницей/отелем. Попытка разобраться в [Django](https://www.djangoproject.com).
 
 ## [fast_hotel](https://github.com/jtprog/fast_hotel)
 

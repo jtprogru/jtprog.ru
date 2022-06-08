@@ -58,7 +58,6 @@ comments: false
 - Поддерживается завершение дополнительных процессов;
 - Поддерживается собственный журнал с помощью journald;
 
-
 Дополнительно почитать в [Wikipedia](https://ru.wikipedia.org/wiki/Systemd).
 
 ## Upstart

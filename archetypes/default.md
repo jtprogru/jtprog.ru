@@ -23,7 +23,5 @@ comments: false
 
 Привет, `%username%`!
 
-
-
 ---
 Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).
