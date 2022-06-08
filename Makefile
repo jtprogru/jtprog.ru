@@ -3,7 +3,7 @@
 name="00000000-init"
 host="0.0.0.0"
 port="1313"
-config="config.yaml"
+config="config.yml"
 
 new:
 	@hugo new "content/$(name)/index.md" --verbose
