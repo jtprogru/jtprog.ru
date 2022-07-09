@@ -1,3 +1,4 @@
+---
 baseURL: "https://jtprog.ru"
 theme: "papermod"
 title: "Savin Michael aka @jtprogru"
@@ -38,8 +39,8 @@ minify:
       keepEndTags: true
       keepQuotes: false
       keepWhitespace: false
-    js:
-    json:
+    js: {}
+    json: {}
     svg:
       decimals: -1
     xml:
@@ -52,11 +53,11 @@ params:
   description: "Записная книга админа-самоучки"
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/master/content"
-    Text: "Edit..." # edit text
-    appendFilePath: true # to aepend file path to Edit link
+    Text: "Edit..."  # edit text
+    appendFilePath: true  # to aepend file path to Edit link
   label:
-#     text: "@jtprogru"
-      icon: /logo-new.png
+    # text: "@jtprogru"
+    icon: /logo-new.png
   assets:
     favicon: /favicon.ico
     disableFingerprinting: true
@@ -64,9 +65,7 @@ params:
   opengraph: true
   twitter_cards: true
   copyright: "Mihael (jtprogru) Savin"
-  # title: "Книга админа"
-  # description: "Записная книжка админа-самоучки"
-  mainSections:  ["post"]
+  mainSections: ["post"]
   dateFormat: "2006-01-02 15:04"
   related: true
   relatedMax: 5
@@ -78,9 +77,12 @@ params:
   disableSpecial1stPost: true
   homeInfoParams:
     Title: "Привет, `%username%`!"
-    Content: |
+    Content: |+
       Меня зовут Михаил и добро пожаловать на бложек имени меня.
-      Подписывайся на [telegram-канал](https://ttttt.me/jtprogru_channel) или заходи в [telegram-чат](https://ttttt.me/jtprogru_chat) и задавай вопросы. Купить мне [кофе](https://www.buymeacoffee.com/jtprogru) или подписаться на мой [Patreon](https://www.patreon.com/jtprogru) в качестве благодарности очень приветствуется.
+      Подписывайся на [telegram-канал](https://ttttt.me/jtprogru_channel) или заходи в
+      [telegram-чат](https://ttttt.me/jtprogru_chat) и задавай вопросы. Купить мне
+      [кофе](https://www.buymeacoffee.com/jtprogru) или подписаться на мой
+      [Patreon](https://www.patreon.com/jtprogru) в качестве благодарности очень приветствуется.
 
   socialIcons:
     - name: telegram
@@ -115,8 +117,6 @@ params:
       url: '/index.xml'
     - name: soundcloud
       url: 'https://soundcloud.com/jtprogru/'
-
-
 
   analytics:
     google:
@@ -168,7 +168,6 @@ frontmatter:
   publishDate: ["publishDate", "date"]
   expiryDate: ["expiryDate"]
 
-
 markup:
   asciidocExt:
     attributes: {}
@@ -182,6 +181,7 @@ markup:
     trace: false
     verbose: false
     workingFolderCurrent: false
+
   blackFriday:
     angledQuotes: false
     extensions: null
@@ -250,18 +250,18 @@ caches:
 
 module:
   mounts:
-  - source: content
-    target: content
-  - source: static
-    target: static
-  - source: layouts
-    target: layouts
-  - source: data
-    target: data
-  - source: assets
-    target: assets
-  - source: i18n
-    target: i18n
-  - source: archetypes
-    target: archetypes
+    - source: content
+      target: content
+    - source: static
+      target: static
+    - source: layouts
+      target: layouts
+    - source: data
+      target: data
+    - source: assets
+      target: assets
+    - source: i18n
+      target: i18n
+    - source: archetypes
+      target: archetypes
 
