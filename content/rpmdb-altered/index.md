@@ -1,15 +1,18 @@
 ---
-title: "[CentOS] RPMDB altered outside of yum"
-date: 2019-07-29T11:47:56+03:00
-draft: false
-slug: '/rpmdb-altered/'
-description: 'Устранение ошибки RPMDB altered outside of yum в CentOS'
-categories: "howto"
-tags: ['rpmdb', 'centos', 'yum']
+categories: howto
 comments: true
+date: "2019-07-29T11:47:56+03:00"
+description: Устранение ошибки RPMDB altered outside of yum в CentOS
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /rpmdb-altered/
+tags:
+- rpmdb
+- centos
+- yum
+title: '[CentOS] RPMDB altered outside of yum'
+type: post
 ---
 
 Привет, `%username%`! При работе с менеджером пакетов `yum` иногда возникают ошибки, чаще всего из-за человеческого фактора. Как исправить одну из таких читай ниже! 

@@ -1,14 +1,16 @@
 ---
-title: "[Film] Фильм изменивший мои интересы"
-date: 2013-08-05T21:10:56+03:00
-draft: false
-slug: '/film-hakers/'
-categories: "Story"
-tags: ['films', 'hackers']
+categories: Story
 comments: true
+date: "2013-08-05T21:10:56+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /film-hakers/
+tags:
+- films
+- hackers
+title: '[Film] Фильм изменивший мои интересы'
+type: post
 ---
 
 Относительно давно мне довелось увидеть фильм `Хакеры` 1995 года выпуска. Это было лет 9-10 назад. Так вот! Данный фильм еще тогда очень сильно меня зацепил. Меня начали интересовать компьютеры только после просмотра этого фильма.

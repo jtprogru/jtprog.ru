@@ -1,14 +1,17 @@
 ---
-title: "[1Cv8.3] Пошаговая инструкция настройки web-сервисов для 1Сv8.3 и IIS 8.5"
-date: 2016-01-19T16:13:31+03:00
-draft: false
-slug: '/web-service-1cv83-iisv85/'
-categories: "Windows"
-tags: ['windows', '1c', 'iis']
+categories: Windows
 comments: true
+date: "2016-01-19T16:13:31+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /web-service-1cv83-iisv85/
+tags:
+- windows
+- 1c
+- iis
+title: '[1Cv8.3] Пошаговая инструкция настройки web-сервисов для 1Сv8.3 и IIS 8.5'
+type: post
 ---
 
 Доброго времени суток тебе, открывший сюда. Эта инструкция настройки web-сервисов для 1Сv8.3 и IIS 8.5. была рождена в попытке исправить косяки одной компании, обслуживающей нас по сопровождению продуктов 1С. Проблема так же будет рассмотрена.

@@ -1,16 +1,21 @@
 ---
-title: '[Ubuntu] Установка Zabbix 5.0 на Ubuntu 20.04'
-date: 2020-07-10T02:00:00+03:00
-lastmod: 2020-07-10T02:27:09+03:00
-draft: false
-slug: '/install-zabbix50/'
-description: 'Описан процесс чистой установки Zabbix 5.0 с PostgreSQL 12 на Ubuntu 20.04'
-categories: "Linux"
-tags: ['zabbix', 'ubuntu', 'monitoring', 'zbx']
+categories: Linux
 comments: true
+date: "2020-07-10T02:00:00+03:00"
+description: Описан процесс чистой установки Zabbix 5.0 с PostgreSQL 12 на Ubuntu
+  20.04
+draft: false
+lastmod: "2020-07-10T02:27:09+03:00"
 noauthor: false
 share: true
-type: 'post'
+slug: /install-zabbix50/
+tags:
+- zabbix
+- ubuntu
+- monitoring
+- zbx
+title: '[Ubuntu] Установка Zabbix 5.0 на Ubuntu 20.04'
+type: post
 ---
 Привет, `%username%`! Данная статья - обычный пересказ официальной документации [Zabbix](https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.04_focal&db=postgresql&ws=nginx) и не содержит в себе ничего магического. Да и процесс установки уже мною освещался ранее на [CentOS](https://jtprog.ru/install-zabbix-centos/) и [Ubuntu](https://jtprog.ru/install-zabbix-ubuntu/).
 

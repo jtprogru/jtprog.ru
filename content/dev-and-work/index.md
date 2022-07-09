@@ -1,22 +1,29 @@
 ---
-title: "[Work] Программирование и работа"
-date: 2022-05-19T12:50:30+03:00
-categories: "Work"
-tags: ["python", "golang", "leetcode", "codewars", "stepik", "selfedu"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Work
+comments: false
+cover:
+  alt: Development
+  caption: Photo by [Fotis Fotopoulos](https://unsplash.com/@ffstop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/s/photos/development?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.jpg
+  relative: false
+date: "2022-05-19T12:50:30+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "Development"
-    caption: "Photo by [Fotis Fotopoulos](https://unsplash.com/@ffstop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/development?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- python
+- golang
+- leetcode
+- codewars
+- stepik
+- selfedu
+title: '[Work] Программирование и работа'
+type: post
 ---
 
 Привет, `%username%`! Какое-то время назад я делал опрос на тему [“Должен ли Ops уметь программировать?”](https://ttttt.me/jtprogru_channel/4005) – большинство сошлось во мнении, что “ДА, Ops должен уметь кодить”. И вот теперь коротко о том, какой путь выбрал я.

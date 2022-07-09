@@ -1,14 +1,17 @@
 ---
-title: '[CentOS] Добавляем диск в lvm без перезагрузки виртуальной машины'
+categories: Linux
+comments: true
 date: "2018-07-18T12:29:00+03:00"
 draft: false
-url: '/add-disk-lvm/'
-categories: "Linux"
-tags: ['centos', 'lvm', 'disks']
-comments: true
 noauthor: false
 share: true
-type: "post"
+tags:
+- centos
+- lvm
+- disks
+title: '[CentOS] Добавляем диск в lvm без перезагрузки виртуальной машины'
+type: post
+url: /add-disk-lvm/
 ---
 
 Привет, `%username%`! Есть такая непередаваемая боль, как "заканчивается место на разделе". Давайте рассмотрим как это провернуть на боевом сервере без остановки/перезагрузки и вообще сделаем красиво. Сразу скажу, что тут ничего сложного и с этим сможет справиться любой.

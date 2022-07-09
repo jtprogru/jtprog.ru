@@ -1,14 +1,17 @@
 ---
-title: '[Amarok] Связываем Amarok и MySQL'
-date: 2015-10-09T09:45:00+03:00
-draft: false
-url: '/amarok-on-mysql/'
-categories: "howto"
-tags: ['amarok', 'mysql', 'audio']
+categories: howto
 comments: true
+date: "2015-10-09T09:45:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+tags:
+- amarok
+- mysql
+- audio
+title: '[Amarok] Связываем Amarok и MySQL'
+type: post
+url: /amarok-on-mysql/
 ---
 
 

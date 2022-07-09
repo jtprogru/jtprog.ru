@@ -1,14 +1,16 @@
 ---
-title: "[MySQL] Если Вы забыли пароль MySQL (сброс пароля)"
-date: 2015-10-09T10:15:30+03:00
-draft: false
-slug: '/reset-root-pass-mysql/'
-categories: "howto"
-tags: ['mysql', 'password']
+categories: howto
 comments: true
+date: "2015-10-09T10:15:30+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /reset-root-pass-mysql/
+tags:
+- mysql
+- password
+title: '[MySQL] Если Вы забыли пароль MySQL (сброс пароля)'
+type: post
 ---
 
 В предыдущей статье я [описал](https://jtprog.ru/amarok-on-mysql/) как заставить удобный плеер Amarok хранить базу музыкальной библиотеки в MySQL. Сейчас все прекрасно работает и летает. А позже случился *~~пи%%ец~~* казус - я забыл пароль `root`'а от MySQL.

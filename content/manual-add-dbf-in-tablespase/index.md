@@ -1,14 +1,18 @@
 ---
-title: "[Oracle] Ручное добавление файлов данных в табличной пространство в CentOS 7"
-date: 2017-11-21T17:26:35+03:00
-draft: false
-slug: '/manual-add-dbf-in-tablespase/'
-categories: "Linux"
-tags: ['oracle db', 'centos', 'orcl_data']
+categories: Linux
 comments: true
+date: "2017-11-21T17:26:35+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /manual-add-dbf-in-tablespase/
+tags:
+- oracle db
+- centos
+- orcl_data
+title: '[Oracle] Ручное добавление файлов данных в табличной пространство в CentOS
+  7'
+type: post
 ---
 
 Привет `%username%`! При работе с БД Oracle иногда приходится вручную добавлять файлы данных в табличное пространство `ORCL_DATA`.

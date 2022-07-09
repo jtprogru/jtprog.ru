@@ -1,14 +1,16 @@
 ---
-title: "[HP1910] Сброс пароля на коммутаторе HP 1910 серии"
-date: 2018-01-07T21:40:57+03:00
-draft: false
-slug: '/hp1910-reset-password/'
-categories: "howto"
-tags: ['hp 1910', 'network']
+categories: howto
 comments: true
+date: "2018-01-07T21:40:57+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /hp1910-reset-password/
+tags:
+- hp 1910
+- network
+title: '[HP1910] Сброс пароля на коммутаторе HP 1910 серии'
+type: post
 ---
 
 В данной заметке опишу способ сброса пароля на коммутаторе HP 1910 серии. А так как компания Hewlett-Packard поглотила в свое время 3Com и продолжила выпускать их продукцию уже под своим брендом, то написанное ниже будет справедливо также и для коммутаторов 3Com Baseline Switch 2952 и подобной серии.

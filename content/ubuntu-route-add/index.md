@@ -1,14 +1,17 @@
 ---
-title: "[Routing] Шпаргалка про роутинг в Ubuntu"
-date: 2015-06-08T18:51:46+03:00
-draft: false
-slug: '/ubuntu-route-add/'
-categories: "Linux"
-tags: ['ubuntu', 'route', 'man']
+categories: Linux
 comments: true
+date: "2015-06-08T18:51:46+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /ubuntu-route-add/
+tags:
+- ubuntu
+- route
+- man
+title: '[Routing] Шпаргалка про роутинг в Ubuntu'
+type: post
 ---
 
 Про правила добавления маршрутов в Windows я уже [написал](https://jtprog.ru/windows-route-add/). Пришла пора написать про правила добавления маршрутов в любимой мною Ubuntu. Так же есть немного общей информации по данной теме, относящейся к Ubuntu и маршрутизации. И сразу поясню, что все действия требуется делать от имени суперпользователя (`root`).

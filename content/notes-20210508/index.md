@@ -1,22 +1,28 @@
 ---
-title: "[Notes] Заметки на полях  2021.05.08"
-date: 2021-05-08T18:37:56+03:00
-categories: "Notes"
-tags: ["fuckup", "заметкинаполях", "werf", "helm", "kubernetes", "k8s"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Notes
+comments: false
+cover:
+  alt: Keyboard
+  caption: Photo by [Katharina Gloth](https://unsplash.com/@kath_a) on [Unsplash](https://unsplash.com/)
+  image: cover.jpg
+  relative: false
+date: "2021-05-08T18:37:56+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-     image: "cover.jpg"
-     alt: "Keyboard"
-     caption: 'Photo by [Katharina Gloth](https://unsplash.com/@kath_a) on [Unsplash](https://unsplash.com/)'
-     relative: false
-comments: false
+showToc: false
+tags:
+- fuckup
+- заметкинаполях
+- werf
+- helm
+- kubernetes
+- k8s
+title: '[Notes] Заметки на полях  2021.05.08'
+type: post
 ---
 
 Привет, `%username%`! Очередная рубрика факапов и человеческого фактора.

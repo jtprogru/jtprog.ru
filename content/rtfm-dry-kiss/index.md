@@ -1,22 +1,28 @@
 ---
-title: "[Opinion] Документация, Сухой поцелуй и джуны"
-date: 2021-07-16T16:00:00+03:00
-categories: "Opinion"
-tags: ["rtfm", "kiss", "dry", "documentation", "junior"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Opinion
+comments: false
+cover:
+  alt: Cover
+  caption: Photo by [Sigmund](https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/s/photos/documentation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.jpg
+  relative: false
+date: "2021-07-16T16:00:00+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "Cover"
-    caption: "Photo by [Sigmund](https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/documentation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- rtfm
+- kiss
+- dry
+- documentation
+- junior
+title: '[Opinion] Документация, Сухой поцелуй и джуны'
+type: post
 ---
 
 Привет, `%username%`! Современный мир обязывает быстро получать новую информацию и очень много знать. Давай по-рассуждаем о том, как быть и что делать, ну и про джунов поговорим. Ну и в целом перетрём за жизнь о доках, джунах и прочем.

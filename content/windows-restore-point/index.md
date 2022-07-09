@@ -1,14 +1,16 @@
 ---
-title: "[Windows] Автоматическое создание точек восстановления Windows"
-date: 2015-06-18T21:06:00+03:00
-draft: false
-slug: '/windows-restore-point/'
-categories: "Windows"
-tags: ['restore point', 'windows']
+categories: Windows
 comments: true
+date: "2015-06-18T21:06:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /windows-restore-point/
+tags:
+- restore point
+- windows
+title: '[Windows] Автоматическое создание точек восстановления Windows'
+type: post
 ---
 
 

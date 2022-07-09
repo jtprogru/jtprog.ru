@@ -1,18 +1,21 @@
 ---
-title: '[MySQL] Максимальное количество коннектов'
-date: 2020-08-14T17:42:54+03:00
-lastmod: 2020-08-14T17:42:54+03:00
-draft: false
-slug: '/max-connections/'
-description: 'Чиним ошибку "too many connections" в MySQL'
-categories: 'Linux'
-tags: ['mysql', 'max connections', 'linux']
-comments: true
-image: ''
 authorbox: true
+categories: Linux
+comments: true
+date: "2020-08-14T17:42:54+03:00"
+description: Чиним ошибку "too many connections" в MySQL
+draft: false
+image: ""
+lastmod: "2020-08-14T17:42:54+03:00"
 share: true
+slug: /max-connections/
+tags:
+- mysql
+- max connections
+- linux
+title: '[MySQL] Максимальное количество коннектов'
 toc: false
-type: 'post'
+type: post
 ---
 Привет, `%username%`! Рано или поздно при работе с MySQL возникает ошибка `too many connections`. Пофиксить ее можно легко и даже без перезапуска сервиса, изменив всего один параметр - `max_connections`, тем самым увеличив количество разрешенных коннектов. 
 

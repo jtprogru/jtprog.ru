@@ -1,22 +1,19 @@
 ---
-title: "[Linux] Настраиваем systemd-timesyncd"
-date: 2020-11-27T20:20:00+03:00
-categories: 'Work'
-tags: ["systemd", "timesyncd"]
-type: 'post'
-author: "jtprogru"
-description: "Настройка штатного механизма синхронизации времени systemd-timesyncd"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Work
+comments: false
+date: "2020-11-27T20:20:00+03:00"
+description: Настройка штатного механизма синхронизации времени systemd-timesyncd
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-# cover:
-#     image: "<image path/url>"
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false
-comments: false
+showToc: false
+tags:
+- systemd
+- timesyncd
+title: '[Linux] Настраиваем systemd-timesyncd'
+type: post
 ---
 
 Привет, `%username%`! Для синхронизации времени в Linux традиционно используется `ntpd` как стандарт де-факто, но есть альтернатива в виде `systemd-timesyncd`. Посмотрим как оно настраивается и включается, а `ntpd` забудем и удалим.

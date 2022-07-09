@@ -1,24 +1,21 @@
 ---
-title: "[Linux] Что показывает atop?"
-date: 2020-12-05T19:36:36+03:00
-# weight: 1
-# aliases: ["/first"]
-categories: 'Work'
-tags: ["atop", "linux", "monitoring"]
-type: 'post'
-author: "jtprogru"
-description: "Установка, настройка и использование мощного инструмента анализа нагрузки и производительности сервера"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Work
+comments: true
+date: "2020-12-05T19:36:36+03:00"
+description: Установка, настройка и использование мощного инструмента анализа нагрузки
+  и производительности сервера
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-# cover:
-#   image: "atop1.png"
-#   alt: "ALT Shit happens"
-#   caption: "CAPTION Shit happens"
-#   relative: true
-comments: true
+showToc: false
+tags:
+- atop
+- linux
+- monitoring
+title: '[Linux] Что показывает atop?'
+type: post
 ---
 
 Привет, `%username%`! Мониторинга много не бывает, а значит такие инструменты как Zabbix, Prometheus и другие имеют какие-то недостатки. Одним из основных недостатков может быть то, что для мониторинга нужна инфраструктура. А если у нас один сервер, то нам может быть достаточно такого инструмента как `atop`.

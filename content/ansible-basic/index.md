@@ -1,11 +1,15 @@
 ---
-title: "[DevOps] Ansible – основы управления конфигурацией"
-date: 2020-12-29T00:30:54+03:00
-categories: 'Work'
-tags: ["DevOps", "Ansible", "Configuration management", "IaC"]
-type: 'post'
-author: "jtprogru"
+author: jtprogru
+categories: Work
+date: "2020-12-29T00:30:54+03:00"
 draft: false
+tags:
+- DevOps
+- Ansible
+- Configuration management
+- IaC
+title: '[DevOps] Ansible – основы управления конфигурацией'
+type: post
 ---
 
 Привет, `%username%`! На страницах этого блога уже [было](/notes-20200925/) небольшое упоминание [Ansible](https://www.ansible.com) – инструмента для управления конфигурацией. Пройдемся по основам, определениям дабы зафиксировать.

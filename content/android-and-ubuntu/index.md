@@ -1,14 +1,18 @@
 ---
-title: "[Ubuntu] Дружим Android и Ubuntu 14.04"
-date: 2015-02-18T14:49:00+03:00
-draft: false
-slug: '/android-and-ubuntu/'
-categories: "howto"
-tags: ['android', 'ubuntu', 'mtp', 'udev rules']
+categories: howto
 comments: true
+date: "2015-02-18T14:49:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /android-and-ubuntu/
+tags:
+- android
+- ubuntu
+- mtp
+- udev rules
+title: '[Ubuntu] Дружим Android и Ubuntu 14.04'
+type: post
 ---
 
 Я относительно недавно обзавелся довольно простой мобилкой - `HTC Desire 310` на `Android 4.2.2`. И все было нормально до тех пор пока мне не понадобилось подружить этот агрегат с моим ноутбуком, на котором стоит Ubuntu 14.04 LTS. 

@@ -1,14 +1,17 @@
 ---
-title: "[Routing] Шпаргалка про роутинг в Windows"
-date: 2015-06-08T12:49:00+03:00
-draft: false
-slug: '/windows-route-add/'
-tags: ['windows', 'route', 'man']
+categories: Windows
 comments: true
+date: "2015-06-08T12:49:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
-categories: "Windows"
+slug: /windows-route-add/
+tags:
+- windows
+- route
+- man
+title: '[Routing] Шпаргалка про роутинг в Windows'
+type: post
 ---
 
 Привет, `%username%`! Поскольку часто приходится настраивать ВПНы на чужих машинах и предоставлять доступ к каки-либо ресурсам нашей сети, а чаще всего это просто конкретные машины, то надо записать себе шпаргалку по добавлению статических маршрутов в ОСях семейства Windows (XP/7/8/8.1). Все элементарно и просто. 

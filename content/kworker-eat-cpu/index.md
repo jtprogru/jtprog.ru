@@ -1,14 +1,17 @@
 ---
-title: "[kworker] Одно ядро на 90-97% загружено процессом kworker"
-date: 2015-09-11T17:21:00+03:00
-draft: false
-slug: '/kworker-eat-cpu/'
-categories: "howto"
-tags: ['kworker', 'cpu', 'interrupts']
+categories: howto
 comments: true
+date: "2015-09-11T17:21:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /kworker-eat-cpu/
+tags:
+- kworker
+- cpu
+- interrupts
+title: '[kworker] Одно ядро на 90-97% загружено процессом kworker'
+type: post
 ---
 
 Всем пинг! Относительно давно поставил `htop` для того, чтобы поглядывать на загруженность системы. Но поскольку я его очень редко использовал я почти не замечал ничего. И вот некоторое время спустя я поставил себе Conky и после настройки я увидел полную загруженность одного ядра.

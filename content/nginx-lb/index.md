@@ -1,15 +1,17 @@
 ---
-title: "[Nginx] Балансировка бэкендов"
-date: 2019-08-21T19:10:00+03:00
-draft: false
-slug: '/nginx-lb/'
-description: 'Немного о балансировке бэкендов в Nginx'
-categories: "howto"
-tags: ['load balancing', 'nginx']
+categories: howto
 comments: true
+date: "2019-08-21T19:10:00+03:00"
+description: Немного о балансировке бэкендов в Nginx
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /nginx-lb/
+tags:
+- load balancing
+- nginx
+title: '[Nginx] Балансировка бэкендов'
+type: post
 ---
 
 Привет, `%username%`! Немного накину на вентилятор о страшных вещах вроде `load balancing`, `nginx`, `high load` и вот этих вот кишочках.

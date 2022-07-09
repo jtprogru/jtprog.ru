@@ -1,22 +1,20 @@
 ---
-title: '[Opinion] Что ты такое – DevOps?'
-date: 2020-11-09T22:25:00+03:00
-categories: 'Opinion'
-tags: ["devops", "opinion", "sysops"]
-type: 'post'
-author: "jtprogru"
-description: "Очередная статья про DevOps"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Opinion
+comments: false
+date: "2020-11-09T22:25:00+03:00"
+description: Очередная статья про DevOps
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-#cover:
-#  image: "<image path/url>"
-#  alt: "<alt text>"
-#  caption: "<text>"
-#  relative: false
-comments: false
+showToc: false
+tags:
+- devops
+- opinion
+- sysops
+title: '[Opinion] Что ты такое – DevOps?'
+type: post
 ---
 
 Привет, `%username%`! Последние несколько лет у всех на слуху такой термин как `DevOps`. И скажу больше – я даже нанимал иногда людей на позицию `DevOps`. Но вот на просторах интернета очень много статей на тему, что это такое и эта будет еще одной – отражающей мое мнение о том, что или кто этот ваш `DevOps`.

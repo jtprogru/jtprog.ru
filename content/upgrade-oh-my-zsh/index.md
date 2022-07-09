@@ -1,14 +1,17 @@
 ---
-title: "[OhMyZsh] Upgrade OhMyZsh"
-date: 2015-09-23T10:21:00+03:00
-draft: false
-slug: '/upgrade-oh-my-zsh/'
-categories: "howto"
-tags: ['zsh', 'oh-my-zsh', 'linux']
+categories: howto
 comments: true
+date: "2015-09-23T10:21:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /upgrade-oh-my-zsh/
+tags:
+- zsh
+- oh-my-zsh
+- linux
+title: '[OhMyZsh] Upgrade OhMyZsh'
+type: post
 ---
 Всем пинг! Уже некоторое время я пользуюсь такой прекрасной вещью как командная оболочка [ZSH](https://ru.wikipedia.org/wiki/Zsh) и я вам скажу "ЭТО ПИПЕЦ КАК КРУТО!" Отказаться от стандартной для Ubuntu оболочки Bash меня сподвигла статья [afiskon'а](https://eax.me/zsh/). В большей степени я просто воспользовался его файлом настроек и пока всем доволен. Так же у меня установлена такая вещь как [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh).
 

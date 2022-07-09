@@ -1,15 +1,17 @@
 ---
-title: "[CentOS] Установка и настройка Zabbix 3.4 на CentOS 7"
-date: 2017-10-05T13:00:15+03:00
-draft: false
-slug: '/install-zabbix-centos/'
-description: 'Описан процесс установки Zabbix 3.4 на CentOS 7'
-categories: "Linux"
-tags: ['zabbix', 'centos']
+categories: Linux
 comments: true
+date: "2017-10-05T13:00:15+03:00"
+description: Описан процесс установки Zabbix 3.4 на CentOS 7
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /install-zabbix-centos/
+tags:
+- zabbix
+- centos
+title: '[CentOS] Установка и настройка Zabbix 3.4 на CentOS 7'
+type: post
 ---
 
 Привет `%username%`! В этом посте я подробно расскажу об установке и начальной настройке Zabbix 3.4 на примере CentOS 7. Выбор ОС был очевидным ввиду того, что только эта ОСь используется у нас в компании, а мониторинг просто необходим. Все подробности под катом.

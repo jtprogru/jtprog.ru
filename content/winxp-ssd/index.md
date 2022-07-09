@@ -1,14 +1,16 @@
 ---
-title: '[Windows] Windows XP на новом SSD'
-date: 2016-07-15T19:14:00+03:00
-draft: false
-url: '/winxp-ssd/'
-categories: "Windows"
-tags: ['windows', 'upgrade']
+categories: Windows
 comments: true
+date: "2016-07-15T19:14:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+tags:
+- windows
+- upgrade
+title: '[Windows] Windows XP на новом SSD'
+type: post
+url: /winxp-ssd/
 ---
 
 Давно я ничего не писал. Все работа да работа. Но все исправил тот факт, что мне надо было в отпуск. И вот собственно в отпуске и началось веселье. У мамы был старенький компьютер за которым она работала. Обычная персоналка на AMD примерно 5-7 летней давности. На которой стоит Windows XP SP3  полностью лицензионный. И этот самый динозавр стал дико тормозить.

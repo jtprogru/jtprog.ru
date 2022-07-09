@@ -1,14 +1,16 @@
 ---
-title: "[ownCloud] Удаляем фантомные файлы"
-date: 2017-05-25T15:41:28+03:00
-draft: false
-slug: '/owncloud-rescan-dir/'
-categories: "howto"
-tags: ['owncloud', 'linux']
+categories: howto
 comments: true
+date: "2017-05-25T15:41:28+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /owncloud-rescan-dir/
+tags:
+- owncloud
+- linux
+title: '[ownCloud] Удаляем фантомные файлы'
+type: post
 ---
 
 Я очень давно пользуюсь такой прелестной вещью как ownCloud как на работе, так и для себя лично. Меня этот комбайн во всем устраивает. И я умудрился столкнуться с интересным глюком в его работе.

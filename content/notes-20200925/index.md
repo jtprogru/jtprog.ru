@@ -1,19 +1,19 @@
 ---
-title: "[Notes] Заметки на полях 2020.09.25"
-date: 2020-09-25T20:39:00+03:00
-categories: 'Notes'
-tags: ["fuckup", "ansible", "ssh", "sshconfig", "заметкинаполях"]
-type: 'post'
-author: "jtprogru"
+author: jtprogru
+categories: Notes
+comments: false
+date: "2020-09-25T20:39:00+03:00"
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-# cover:
-#     image: "<image path/url>"
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false
-comments: false
+tags:
+- fuckup
+- ansible
+- ssh
+- sshconfig
+- заметкинаполях
+title: '[Notes] Заметки на полях 2020.09.25'
+type: post
 ---
 
 Привет, `%username%`! Бывают в работе такие момент, что ни в сказке сказать, ни пером описать.

@@ -1,22 +1,19 @@
 ---
-title: "[Linux] Что показывает top?"
-date: 2020-11-04T16:14:13+03:00
-type: 'post'
-categories: "Basics"
-tags: ["linux", "top", "basics"]
-author: "jtprogru"
-# author: ["Me", "You"] # multiple authors
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Basics
+comments: false
+date: "2020-11-04T16:14:13+03:00"
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-# cover:
-#     image: "<image path/url>"
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false
-comments: false
+showToc: false
+tags:
+- linux
+- top
+- basics
+title: '[Linux] Что показывает top?'
+type: post
 ---
 
 Привет, `%username%`! Для того, чтобы посмотреть чем именно занят ваш Linux-сервер, надо посмотреть, что же запущено в нем – какие процессы, сколько ресурсов они используют. Для этого есть замечательная утилита `top`, которая присутствует "из коробки".

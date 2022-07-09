@@ -1,14 +1,16 @@
 ---
-title: "[chmod] Recursive chmod"
-date: 2015-06-30T19:33:11+03:00
-draft: false
-slug: '/recursive-chmod/'
-categories: "howto"
-tags: ['chmod', 'linux']
+categories: howto
 comments: true
+date: "2015-06-30T19:33:11+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /recursive-chmod/
+tags:
+- chmod
+- linux
+title: '[chmod] Recursive chmod'
+type: post
 ---
 
 На днях пришлось выставлять права на файлы и каталоги на одном из серверов. Собственно задача самая простая, но после двух каталогов мне стало лень ползать по каждому каталогу и повторять одно и то же действие.

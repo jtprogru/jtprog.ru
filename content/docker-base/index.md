@@ -1,18 +1,21 @@
 ---
-title: '[Docker] Основы Docker: Dockerfile и docker-compose.yml'
-date: 2020-08-08T18:50:00+03:00
-lastmod: 2020-08-08T18:55:00+03:00
-draft: false
-slug: '/docker-base/'
-description: 'Шпаргалка о Docker, а так же что такое Dockerfile и с чем его едят'
-categories: "Basics"
-tags: ['docker', 'dockerfile', 'docker-compose']
-comments: true
-image: ''
 authorbox: true
+categories: Basics
+comments: true
+date: "2020-08-08T18:50:00+03:00"
+description: Шпаргалка о Docker, а так же что такое Dockerfile и с чем его едят
+draft: false
+image: ""
+lastmod: "2020-08-08T18:55:00+03:00"
 share: true
+slug: /docker-base/
+tags:
+- docker
+- dockerfile
+- docker-compose
+title: '[Docker] Основы Docker: Dockerfile и docker-compose.yml'
 toc: false
-type: 'post'
+type: post
 ---
 Привет, `%username%`! Поскольку Docker мы уже установили, теперь надо что-то в нем запустить. И как только мы захотели что-то запустить, то первое с чем мы сталкиваемся это `Dockerfile` и `docker-compose.yml`. О них и будет речь далее.
 

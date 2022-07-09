@@ -1,14 +1,16 @@
 ---
-title: "[Active Directory] Ubuntu в домене Windows AD"
-date: 2014-08-24T22:40:30+03:00
-draft: false
-slug: '/ubuntu-in-domen-windows/'
-categories: "Work"
-tags: ['ubuntu', 'active directory']
+categories: Work
 comments: true
+date: "2014-08-24T22:40:30+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /ubuntu-in-domen-windows/
+tags:
+- ubuntu
+- active directory
+title: '[Active Directory] Ubuntu в домене Windows AD'
+type: post
 ---
 
 Некоторое время назад на работе достался мне для работы ноутбук HP ProBook 6460b. Ну и пришла в голову идея поставить на него вместо надоевшей Windows 7 Pro давно понравившуюся мне Ubuntu 14.04 Trusty LTS. Выбор операционной системы связан с тем, что Ubuntu я использую на домашнем ноутбуке и мне захотелось иметь такую же систему на рабочем компьютере. Потому, что постоянное переключение между ОСями дома и на работе быстро надоело мне и я решился на установку Ubuntu на рабочем ноуте.

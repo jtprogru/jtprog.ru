@@ -1,14 +1,17 @@
 ---
-title: "[MeetUP] Security Meetup Mail.Ru Group"
-date: 2018-04-04T15:02:00+03:00
-draft: false
-slug: '/security-meetup-mailru/'
-categories: "meetup"
-tags: ['event', 'meetup', 'mailru']
+categories: meetup
 comments: true
+date: "2018-04-04T15:02:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /security-meetup-mailru/
+tags:
+- event
+- meetup
+- mailru
+title: '[MeetUP] Security Meetup Mail.Ru Group'
+type: post
 ---
 
 Привет, всем! Мне удалось посетить Security Meetup MailRu Group в этот вторник 03.04.2018 г. Посетил данное мероприятие я по счастливой случайности и отличному стечению обстоятельств вместе со своей *будущей* женой.

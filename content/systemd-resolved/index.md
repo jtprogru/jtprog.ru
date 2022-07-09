@@ -1,24 +1,20 @@
 ---
-title: "[Linux] Настройка systemd-resolved"
-date: 2020-11-29T12:00:00+03:00
-# weight: 1
-# aliases: ["/first"]
-categories: 'Work'
-tags: ["systemd", "resolved", "systemd-resolved"]
-type: 'post'
-author: "jtprogru"
-description: "Базовая настройка кэширующего DNS-resolver systemd-resolved"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Work
+comments: false
+date: "2020-11-29T12:00:00+03:00"
+description: Базовая настройка кэширующего DNS-resolver systemd-resolved
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-# cover:
-#     image: "<image path/url>"
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false
-comments: false
+showToc: false
+tags:
+- systemd
+- resolved
+- systemd-resolved
+title: '[Linux] Настройка systemd-resolved'
+type: post
 ---
 
 Привет, `%username%`! Очень давно я писал о том, как я настраивал [dnsmasq](https://jtprog.ru/domain-zone-dnsmasq/) для настройки локальной зоны. Сейчас мы настроим `systemd-resolved` как локальный кэширующий резолвер.

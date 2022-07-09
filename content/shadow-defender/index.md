@@ -1,14 +1,16 @@
 ---
-title: "[Security] Shadow Defender или Простая защита от дурака"
-date: 2014-12-29T20:28:00+03:00
-draft: false
-slug: '/shadow-defender/'
-categories: "Windows"
-tags: ['windows', 'shadow defender']
+categories: Windows
 comments: true
+date: "2014-12-29T20:28:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /shadow-defender/
+tags:
+- windows
+- shadow defender
+title: '[Security] Shadow Defender или Простая защита от дурака'
+type: post
 ---
 
 Была в моей работе [печальная история](https://jtprog.ru/bad-story/) связанная с плохой компьютерной грамотностью пользователей. Ситуация была прямо скажу совсем говно. Но посовещавшись мы нашли выход и решение, дающее гарантию, что данная ситуация не повторится. А решение было простое - установить на машины пользователей ПО под названием [Shadow Defender](https://ru.wikipedia.org/wiki/Shadow_Defender).

@@ -1,14 +1,17 @@
 ---
-title: "[Diskpart] Делаем MBR из GPT"
-date: 2015-03-23T21:16:38+03:00
-draft: false
-slug: '/gpt-to-mbr/'
-categories: "Windows"
-tags: ['gpt', 'mbr', 'windows']
+categories: Windows
 comments: true
+date: "2015-03-23T21:16:38+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /gpt-to-mbr/
+tags:
+- gpt
+- mbr
+- windows
+title: '[Diskpart] Делаем MBR из GPT'
+type: post
 ---
 
 Давно пора сделать маленький пост как памятку о том, как правильно преобразовывать GPT разделы в MBR перед установкой Windows 7 (да и любой другой наверно тоже).

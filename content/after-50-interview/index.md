@@ -1,22 +1,24 @@
 ---
-title: "[Interview] Я прошел 50 собесов и вот что я понял"
-date: 2022-05-22T20:20:00+03:00
-categories: "Interview"
-tags: ["interview", "собеседование", "мысли"]
-type: "post"
-author: "jtprogru"
+author: jtprogru
+categories: Interview
+comments: false
+cover:
+  alt: Interview
+  caption: Interview
+  image: cover.jpeg
+  relative: false
+date: "2022-05-22T20:20:00+03:00"
 description: ""
-showToc: false
-TocOpen: false
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpeg"
-    alt: "Interview"
-    caption: "Interview"
-    relative: false
-comments: false
+showToc: false
+tags:
+- interview
+- собеседование
+- мысли
+title: '[Interview] Я прошел 50 собесов и вот что я понял'
+type: post
 ---
 
 Привет, `%username%`! За 2021 год я прошел примерно 50 собеседований и понял одну страшную для себя вещь – я ничего не знаю, но кое-чему научился.

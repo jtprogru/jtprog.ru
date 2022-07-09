@@ -1,21 +1,23 @@
 ---
-title: "[Work] Обновление Bitrix VA"
-date: 2021-08-20T22:47:51+03:00
-categories: "Work"
-tags: ["bitrix", "work"]
-type: "post"
-author: "jtprogru"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Work
+comments: false
+cover:
+  alt: Bitrix
+  caption: Bitrix управление сайтом
+  image: cover.jpg
+  relative: false
+date: "2021-08-20T22:47:51+03:00"
+disableShare: true
 draft: false
 hidemeta: false
-disableShare: true
-cover:
-    image: "cover.jpg"
-    alt: "Bitrix"
-    caption: "Bitrix управление сайтом"
-    relative: false
-comments: false
+showToc: false
+tags:
+- bitrix
+- work
+title: '[Work] Обновление Bitrix VA'
+type: post
 ---
 
 Привет, `%username%`! Это старая заметка о процедуре обновления Bitrix VA до версии PHP 7.4. Но вдруг кому-то будет полезно, так что пусть тут живет.

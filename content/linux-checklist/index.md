@@ -1,22 +1,26 @@
 ---
-title: "[Linux] Мой личный чек-лист для Linux сервера"
-date: 2021-08-26T20:14:09+03:00
-categories: "Basics"
-tags: ["linux", "checklist", "basics"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Basics
+comments: false
+cover:
+  alt: Pi Supply
+  caption: Photo by [Pi Supply](https://unsplash.com/@pisupply?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/s/photos/server?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.png
+  relative: false
+date: "2021-08-26T20:14:09+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.png"
-    alt: "Pi Supply"
-    caption: "Photo by [Pi Supply](https://unsplash.com/@pisupply?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/server?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- linux
+- checklist
+- basics
+title: '[Linux] Мой личный чек-лист для Linux сервера'
+type: post
 ---
 
 Привет, `%username%`! Небольшая заметка (в первую очередь для меня) о том, что требуется сделать при разворачивании нового Linux-сервера.

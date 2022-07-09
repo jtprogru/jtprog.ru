@@ -1,14 +1,16 @@
 ---
-title: "[Linux] Лечим Postfix"
-date: 2019-05-23T15:48:55+03:00
-draft: false
-slug: '/postfix-ipv4/'
-categories: "Linux"
-tags: ['postfix', 'linux']
+categories: Linux
 comments: true
+date: "2019-05-23T15:48:55+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /postfix-ipv4/
+tags:
+- postfix
+- linux
+title: '[Linux] Лечим Postfix'
+type: post
 ---
 
 

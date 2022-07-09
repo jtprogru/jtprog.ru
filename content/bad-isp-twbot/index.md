@@ -1,16 +1,19 @@
 ---
-title: "[Python] Bad ISP Twitter bot"
-date: 2019-08-14T12:10:00+03:00
-draft: false
-author: "jtprogru"
-slug: '/bad-isp-twbot/'
-description: 'Небольшой проект который мне помог поднять качество работы моего Интернет-провайдера написаный на Python 3'
-categories: "Develop"
-tags: ['python', 'twitter api']
+author: jtprogru
+categories: Develop
 comments: true
+date: "2019-08-14T12:10:00+03:00"
+description: Небольшой проект который мне помог поднять качество работы моего Интернет-провайдера
+  написаный на Python 3
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /bad-isp-twbot/
+tags:
+- python
+- twitter api
+title: '[Python] Bad ISP Twitter bot'
+type: post
 ---
 
 Привет, `%username%`! Каким бы хорошим не был домашний и/или корпоративный интернет, иногда встречаются проблемы. Для фиксации таких проблем и был мною написан бот для Твиттера.

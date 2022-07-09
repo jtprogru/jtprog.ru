@@ -1,14 +1,17 @@
 ---
-title: "[Virus] Win32.Neshta.A - устраняем последствия"
-date: 2015-03-19T19:11:00+03:00
-draft: false
-slug: '/win32-neshta-a/'
-categories: "Work"
-tags: ['windows', 'neshta', 'virus']
+categories: Work
 comments: true
+date: "2015-03-19T19:11:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /win32-neshta-a/
+tags:
+- windows
+- neshta
+- virus
+title: '[Virus] Win32.Neshta.A - устраняем последствия'
+type: post
 ---
 
 Собрал себе свежую рабочую лошадку работу работать. По характеристикам не самый сахар, но вроде сойдет. Поставил свежую винду семерку запускаю со своей рабочей флешки (которая только для рабочих нужд используется) DriverPack Solution последний и тут начинается интересное :-) 

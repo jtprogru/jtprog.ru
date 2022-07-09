@@ -1,14 +1,17 @@
 ---
-title: "[Ubuntu] Обновляем ядро до версии 4.0 в Ubuntu"
-date: 2015-04-21T18:55:51+03:00
-draft: false
-slug: '/install-linux-kernel-4_0/'
-categories: "Linux"
-tags: ['kernel', 'upgrade', 'ubuntu']
+categories: Linux
 comments: true
+date: "2015-04-21T18:55:51+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /install-linux-kernel-4_0/
+tags:
+- kernel
+- upgrade
+- ubuntu
+title: '[Ubuntu] Обновляем ядро до версии 4.0 в Ubuntu'
+type: post
 ---
 
 Захотелось мне обновить ядро в своей Ubuntu 14.04 LTS до версии 4.0. Сама по себе задача довольно простая. Ядро версии 4.0 вышло недавно и все ниже описанное я делаю на свой страх и риск. По дальнейшему описанию можно будет устанавливать любые версии ядра при условии предварительно удаления уже установленных (этот как раз тот случай, когда делается даунгрэйд версии ядра). 

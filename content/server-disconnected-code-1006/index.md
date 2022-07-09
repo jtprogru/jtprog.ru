@@ -1,14 +1,16 @@
 ---
-title: "[Proxmox] Ошибка Server disconnected (code: 1006)"
-date: 2016-08-03T10:00:03+03:00
-draft: false
-slug: '/server-disconnected-code-1006/'
-categories: "howto"
-tags: ['proxmox', 'cert']
+categories: howto
 comments: true
+date: "2016-08-03T10:00:03+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /server-disconnected-code-1006/
+tags:
+- proxmox
+- cert
+title: '[Proxmox] Ошибка Server disconnected (code: 1006)'
+type: post
 ---
 
 Познакомившись с гипервизором Proxmox, я столкнулся с ошибкой при попытке открыть консоль noVNC на любую виртуалку. Ошибка гласила `Server disconected (code: 1006)`. А мне ну категорически срочно надо было попасть на виртуалку для того, чтобы поставить на нее систему.

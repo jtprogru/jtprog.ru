@@ -1,18 +1,21 @@
 ---
-title: '[MySQL] Репликация Master-Slave'
-date: 2020-04-01T23:55:00+03:00
-lastmod: 2020-04-02T00:00:00+03:00
-draft: false
-slug: '/master-slave/'
-description: 'Настройка репликации master-slave на прмиере MySQL 5.7'
-categories: 'Linux'
-tags: ['mysql', 'replication', 'howto']
-comments: true
-image: ''
 authorbox: true
+categories: Linux
+comments: true
+date: "2020-04-01T23:55:00+03:00"
+description: Настройка репликации master-slave на прмиере MySQL 5.7
+draft: false
+image: ""
+lastmod: "2020-04-02T00:00:00+03:00"
 share: true
+slug: /master-slave/
+tags:
+- mysql
+- replication
+- howto
+title: '[MySQL] Репликация Master-Slave'
 toc: false
-type: 'post'
+type: post
 ---
 Привет, `%username%`! Тут я рассмотрю настройку репликации master-slave в БД MySQL. Процесс установки всех необходимых пакетов не вижу смысла описывать, т.к. подобное можно прочитать в документации. Упомяну лишь то, что в моем случае стоит Percona XtraDB 5.7 на Ubuntu 16.04. 
 

@@ -1,16 +1,20 @@
 ---
-title: "[DevOps] GitLab-CI – делаем себе просто"
-date: 2020-11-05T23:00:00+03:00
-categories: 'DevOps'
-tags: ["gitlab-ci", "devops", "hugo", "ci-cd"]
-type: 'post'
-author: "jtprogru"
-description: "Упрощение жизни и работы с Hugo через Docker, GitLab-CI"
-showToc: false
 TocOpen: false
-hidemeta: false
-disableShare: false
+author: jtprogru
+categories: DevOps
 comments: false
+date: "2020-11-05T23:00:00+03:00"
+description: Упрощение жизни и работы с Hugo через Docker, GitLab-CI
+disableShare: false
+hidemeta: false
+showToc: false
+tags:
+- gitlab-ci
+- devops
+- hugo
+- ci-cd
+title: '[DevOps] GitLab-CI – делаем себе просто'
+type: post
 ---
 
 Привет, `%username%`! Я решил вернуться к генераторам статических сайтов. На просторах данного блога я уже писал о переезде с [Wordpress на Hugo](https://jtprog.ru/gohugo/). В сентябре я решил дать Wordpress'у второй шанс, но увы и ах.

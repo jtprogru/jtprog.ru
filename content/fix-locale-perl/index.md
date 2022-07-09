@@ -1,14 +1,17 @@
 ---
-title: "[Ubuntu] Fix locale Perl"
-date: 2016-08-08T10:34:00+03:00
-draft: false
-slug: '/fix-locale-perl/'
-categories: "howto"
-tags: ['locale', 'perl', 'linux']
+categories: howto
 comments: true
+date: "2016-08-08T10:34:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /fix-locale-perl/
+tags:
+- locale
+- perl
+- linux
+title: '[Ubuntu] Fix locale Perl'
+type: post
 ---
 
 Привет, `%username%`! В последнее время заметил на всех сервера под управлением `Ubuntu Server 14.04` одну общую проблему. При попытке обновиться стандартными средствами выдается ошибка настройки локализации. Быстрый гуглеж выдает вот такое примитивное решение.

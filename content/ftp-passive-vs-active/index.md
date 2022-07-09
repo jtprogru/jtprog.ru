@@ -1,14 +1,16 @@
 ---
-title: "[FTP] FTP passive VS. FTP active"
-date: 2015-06-25T10:52:13+03:00
-draft: false
-slug: '/ftp-passive-vs-active/'
-categories: "Basics"
-tags: ['man', 'ftp']
+categories: Basics
 comments: true
+date: "2015-06-25T10:52:13+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /ftp-passive-vs-active/
+tags:
+- man
+- ftp
+title: '[FTP] FTP passive VS. FTP active'
+type: post
 ---
 
 На днях задались вопросом с коллегой: "А в чем собственно различия между активным и пассивным режимом при работе по FTP?" И быстренько загуглив этот вопрос нашли вполне внятное объяснение, которое я и выложил тут, дабы всегда можно было вспомнить если мозг забудет. При работе по протоколу `FTP` между клиентом и сервером устанавливается два соединения:

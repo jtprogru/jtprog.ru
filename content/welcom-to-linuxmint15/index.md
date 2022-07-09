@@ -1,14 +1,16 @@
 ---
-title: "[Linux] Основательный переезд"
-date: 2013-09-22T03:36:00+03:00
-draft: false
-slug: '/welcom-to-linuxmint15/'
-categories: "Other"
-tags: ['linux mint', 'go to linux']
+categories: Other
 comments: true
+date: "2013-09-22T03:36:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /welcom-to-linuxmint15/
+tags:
+- linux mint
+- go to linux
+title: '[Linux] Основательный переезд'
+type: post
 ---
 
 И так! Наконец-то дошли руки и голова додумала! Я уже говорил о том, что хочу установить что-нибудь *nix'овое и вот это свершилось. Я хотел поставить Linux и не потерять все свои данные под семеркой. Жесткий диск у меня не очень уж и большой - всего 320 GB. Но по воле случая мне достался еще один ненужный никому винчестер тоже на 320 GB, только возрастом он, наверное, постарше.

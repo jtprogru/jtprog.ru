@@ -1,22 +1,26 @@
 ---
-title: "[Basics] Ротация логов с logrotate"
-date: 2021-08-28T14:30:00+03:00
-categories: "Basics"
-tags: ["logrotate", "basics", "примитивы"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Basics
+comments: false
+cover:
+  alt: Manufacture
+  caption: Photo by [Science in HD](https://unsplash.com/@scienceinhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/s/photos/automation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.jpg
+  relative: false
+date: "2021-08-28T14:30:00+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "Manufacture"
-    caption: "Photo by [Science in HD](https://unsplash.com/@scienceinhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/automation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- logrotate
+- basics
+- примитивы
+title: '[Basics] Ротация логов с logrotate'
+type: post
 ---
 
 Привет, `%username%`! Логи – наше всё! Это знает каждый нормальный админ. Но что делать если они растут в объёме? Правильно! Настраивать logrotate чтоб он рулил размерами и количеством.

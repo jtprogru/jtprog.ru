@@ -1,22 +1,26 @@
 ---
-title: "[Nginx] Логи Nginx в JSON"
-date: 2021-08-26T18:14:09+03:00
-categories: "Work"
-tags: ["nginx", "json", "logs"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Work
+comments: false
+cover:
+  alt: Timetravel
+  caption: Photo by [Artur Kechter](https://unsplash.com/@rtrkchtr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/s/photos/timetravel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.jpg
+  relative: false
+date: "2021-08-26T18:14:09+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "Timetravel"
-    caption: "Photo by [Artur Kechter](https://unsplash.com/@rtrkchtr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/timetravel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- nginx
+- json
+- logs
+title: '[Nginx] Логи Nginx в JSON'
+type: post
 ---
 
 Привет, `%username%`! Логи это очень хорошо! Логи – это машина времени, которая работает исключительно в прошлое. А логи в JSON сильно проще парсить и лить в тот же ELK.

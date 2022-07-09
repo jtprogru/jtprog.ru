@@ -1,14 +1,17 @@
 ---
-title: "[ESXi 5.5] Сбрасываем триал на VMware ESXi 5.5"
-date: 2015-11-10T12:09:00+03:00
-draft: false
-slug: '/reset-trial-esxi/'
-categories: "howto"
-tags: ['esxi', 'vmware', 'trial']
+categories: howto
 comments: true
+date: "2015-11-10T12:09:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /reset-trial-esxi/
+tags:
+- esxi
+- vmware
+- trial
+title: '[ESXi 5.5] Сбрасываем триал на VMware ESXi 5.5'
+type: post
 ---
 
 По роду своей деятельности часто приходится работать с таким продуктом как гипервизор ESXi версии 5.5 от VMware. Были попытки использовать версию 6.0, но они не увенчались успехом, т.к. она еще не стабильна. 

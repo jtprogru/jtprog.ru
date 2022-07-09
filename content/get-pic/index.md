@@ -1,15 +1,18 @@
 ---
-title: "[Python] Качаем и ресайзим картинки"
-date: 2019-08-15T19:50:55+03:00
-draft: false
-slug: '/get-pic/'
-description: 'Небольшой пример работы с API Unsplash из Python 3 с использованием библиотеки pyunsplash'
-categories: "Develop"
-tags: ['python', 'requests']
+categories: Develop
 comments: true
+date: "2019-08-15T19:50:55+03:00"
+description: Небольшой пример работы с API Unsplash из Python 3 с использованием библиотеки
+  pyunsplash
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /get-pic/
+tags:
+- python
+- requests
+title: '[Python] Качаем и ресайзим картинки'
+type: post
 ---
 
 Привет, `%username%`! Для оформления нового поста мне необходимо где-то взять новую картинку. Решение нашлось довольно быстро: [unsplash.com](https://unsplash.com).

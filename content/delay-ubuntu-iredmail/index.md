@@ -1,14 +1,17 @@
 ---
-title: "[Mail Server] Задержки почтового сервера на Ubuntu + iRedMail"
-date: 2015-06-04T19:14:00+03:00
-draft: false
-slug: '/delay-ubuntu-iredmail/'
-categories: "howto"
-tags: ['iredmail', 'ubuntu', 'mail']
+categories: howto
 comments: true
+date: "2015-06-04T19:14:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /delay-ubuntu-iredmail/
+tags:
+- iredmail
+- ubuntu
+- mail
+title: '[Mail Server] Задержки почтового сервера на Ubuntu + iRedMail'
+type: post
 ---
 
 Привет, `%username%`! Вчера на работе возникла проблема с почтовым сервером. Проблема проявляла себя следующим образом: клиенты (сотрудники компании в подавляющем большинстве) стали жаловаться на то, что почта у них приходит с задержками. Задержки были самыми разными по времени. 

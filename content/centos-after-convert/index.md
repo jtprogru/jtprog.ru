@@ -1,14 +1,17 @@
 ---
-title: '[CentOS] Исправляем работу конвертера'
+categories: Linux
+comments: true
 date: "2018-09-25T12:12:00+03:00"
 draft: false
-slug: '/centos-after-convert/'
-categories: 'Linux'
-tags: ['centos', 'converter', 'vmware']
-comments: true
 noauthor: false
 share: true
-type: "post"
+slug: /centos-after-convert/
+tags:
+- centos
+- converter
+- vmware
+title: '[CentOS] Исправляем работу конвертера'
+type: post
 ---
 
 Привет, `%username%`! Сейчас мы будем исправлять [последствия работы](https://jtprog.ru/error-converter-standalone/) VMware Center Converter Standalone на клоне. Если не знаешь, то можно только угадать. Нас ждут проблемы с загрузкой и сетевыми интерфейсами. Исправляется все очень просто.

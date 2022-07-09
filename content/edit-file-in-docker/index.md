@@ -1,14 +1,16 @@
 ---
-title: "[Docker] Как зайти в контейнер и выполнить команду внутри"
-date: 2016-08-01T15:00:28+03:00
-draft: false
-slug: '/edit-file-in-docker/'
-categories: "howto"
-tags: ['docker', 'linux']
+categories: howto
 comments: true
+date: "2016-08-01T15:00:28+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /edit-file-in-docker/
+tags:
+- docker
+- linux
+title: '[Docker] Как зайти в контейнер и выполнить команду внутри'
+type: post
 ---
 
 Привет, `%username%`! Я с недавних пор начал изучать контейнеризацию на базе Docker. И вот в определенный момент мне понадобилось подправить пару файлов внутри готового и запущенного контейнера `gitlab`. Оказалось это делается довольно просто.

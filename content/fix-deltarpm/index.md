@@ -1,15 +1,18 @@
 ---
-title: "[CentOS] Delta RPMs disabled"
-date: 2019-08-05T12:24:55+03:00
-draft: false
-slug: '/fix-deltarpm/'
-description: 'Устранение ошибки Delta RPMs disabled в CentOS'
-categories: "howto"
-tags: ['centos', 'yum', 'deltarpm']
+categories: howto
 comments: true
+date: "2019-08-05T12:24:55+03:00"
+description: Устранение ошибки Delta RPMs disabled в CentOS
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /fix-deltarpm/
+tags:
+- centos
+- yum
+- deltarpm
+title: '[CentOS] Delta RPMs disabled'
+type: post
 ---
 
 Привет, `%username%`! Продолжаем исправлять косяки, которые периодически возникают при работе с менеджером пакетов `YUM`.

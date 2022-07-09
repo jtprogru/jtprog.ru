@@ -1,15 +1,17 @@
 ---
-title: '[Linux] Настройка memcached в Битрикс'
-date: 2020-01-13T19:48:58+03:00
-draft: false
-slug: '/memcached-bitrix/'
-description: 'Типовая настройка Memcached для работы с Битрикс'
-categories: 'Linux'
-tags: ['bitrix', 'memcached']
+categories: Linux
 comments: true
+date: "2020-01-13T19:48:58+03:00"
+description: Типовая настройка Memcached для работы с Битрикс
+draft: false
 noauthor: false
 share: true
-type: 'post'
+slug: /memcached-bitrix/
+tags:
+- bitrix
+- memcached
+title: '[Linux] Настройка memcached в Битрикс'
+type: post
 ---
 Привет, `%username%`! Немного поговорим о том, что такое `memcached` и как его включить для Битрикса.
 

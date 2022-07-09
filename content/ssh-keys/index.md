@@ -1,22 +1,25 @@
 ---
-title: "[Linux] Авторизация по ключу при подключении по SSH"
-date: 2021-04-22T10:37:20+03:00
-categories: 'Linux'
-tags: ["linux", "ssh", "ssh key"]
-type: 'post'
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Linux
+comments: false
+cover:
+  alt: Security system
+  caption: Photo by [FLY:D](https://unsplash.com/@flyd2069) on [Unsplash](https://unsplash.com/)
+  image: cover.jpg
+  relative: true
+date: "2021-04-22T10:37:20+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "Security system"
-    caption: "Photo by [FLY:D](https://unsplash.com/@flyd2069) on [Unsplash](https://unsplash.com/)"
-    relative: true
-comments: false
+showToc: false
+tags:
+- linux
+- ssh
+- ssh key
+title: '[Linux] Авторизация по ключу при подключении по SSH'
+type: post
 ---
 
 Привет, `%username%`! В 21-ом веке на сервера уже никто не ходит руками, а если требуется такое, то ходить по паролю – моветон!

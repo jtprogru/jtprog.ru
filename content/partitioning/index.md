@@ -1,14 +1,17 @@
 ---
-title: "[PostgreSQL] Партицирование таблиц в PostgreSQL"
-date: 2018-07-16T16:27:55+03:00
-draft: false
-slug: '/partitioning/'
-categories: "DevOps"
-tags: ['postgres', 'pgsql', 'linux']
+categories: DevOps
 comments: true
+date: "2018-07-16T16:27:55+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /partitioning/
+tags:
+- postgres
+- pgsql
+- linux
+title: '[PostgreSQL] Партицирование таблиц в PostgreSQL'
+type: post
 ---
 
 Привет, `%username%`! Мне понадобилось на работе заняться партицированием одной из таблиц в БД у заказчика. Не буду рассказывать о том, почему именно я выбрал партиционирование т.к. по этому вопросу и так много информации в сети Интернет. Далее в статье будет немного о том, как делается партицирование (секционирование).

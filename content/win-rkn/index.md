@@ -1,14 +1,16 @@
 ---
-title: "[Windows] Блокировка сайтов в Windows"
-date: 2019-05-13T14:17:25+03:00
+categories: Windows
 comments: true
-slug: '/win-rkn/'
-categories: "Windows"
-tags: ['windows', 'rkn']
+date: "2019-05-13T14:17:25+03:00"
 draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /win-rkn/
+tags:
+- windows
+- rkn
+title: '[Windows] Блокировка сайтов в Windows'
+type: post
 ---
 
 Блокировка сайта в Windows (Windows XP/7/10), реализуется довольно просто при наличии административного доступа к ОС.

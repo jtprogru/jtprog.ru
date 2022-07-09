@@ -1,14 +1,16 @@
 ---
-title: "[Python] Пишем отмазки в Twitter"
-date: 2017-09-13T15:00:00+03:00
-draft: false
-slug: '/twitter-excuse/'
-categories: "Develop"
-tags: ['python', 'twitter api']
+categories: Develop
 comments: true
+date: "2017-09-13T15:00:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /twitter-excuse/
+tags:
+- python
+- twitter api
+title: '[Python] Пишем отмазки в Twitter'
+type: post
 ---
 
 Привет `%username%`! Давно я тут ничего не писал и тут мне захотелось поделиться. Решил я ради развлечения написать небольшую приблуду для своего любимого `zsh`. Теперь он по команде `excuse` отправляет случайное предложение из базы данных Redis, которая крутится у меня в Docker'е. Для страждущих собственно [код](https://github.com/jtprog/twitter-excuse). Остальным под кат.

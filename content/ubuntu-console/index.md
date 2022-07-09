@@ -1,14 +1,17 @@
 ---
-title: "[Encoding table] Кракозябры в консоли"
-date: 2015-06-19T12:37:00+03:00
-draft: false
-slug: '/ubuntu-console/'
-categories: "howto"
-tags: ['encoding', 'cli', 'linux']
+categories: howto
 comments: true
+date: "2015-06-19T12:37:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /ubuntu-console/
+tags:
+- encoding
+- cli
+- linux
+title: '[Encoding table] Кракозябры в консоли'
+type: post
 ---
 
 У тех, кто рабоает в консоли часто встречается проблема отображения кракозябр вместо символов кириллицы. С такой проблемой и я столкнулся недавно. Решилась она довольно просто. Нужно всего лишь в ручную подправить файлик и всё. Для пользователей английской версии это не актуально, т.к. вся информация выводится без использования символов кириллицы.

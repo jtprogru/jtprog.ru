@@ -1,22 +1,29 @@
 ---
-title: "[Work] Что стоит спрашивать на собеседовании"
-date: 2021-07-03T15:55:00+03:00
-categories: "Interview"
-tags: ["work", "работа", "собеседование", "интервью", "вопросы", "interview"]
-type: "post"
-author: "jtprogru"
-description: "Что стоит спрашивать у представителей компании во время проведения интервью"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Interview
+comments: false
+cover:
+  alt: For hire
+  caption: Photo by [Clem Onojeghuo](https://unsplash.com/@clemono?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/s/photos/job-interview?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.jpg
+  relative: false
+date: "2021-07-03T15:55:00+03:00"
+description: Что стоит спрашивать у представителей компании во время проведения интервью
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "For hire"
-    caption: "Photo by [Clem Onojeghuo](https://unsplash.com/@clemono?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/job-interview?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- work
+- работа
+- собеседование
+- интервью
+- вопросы
+- interview
+title: '[Work] Что стоит спрашивать на собеседовании'
+type: post
 ---
 
 Привет, `%username%`! Нам не редко приходится искать работу и проходить собеседования. Главное что многие забывают – собеседование это процедура в обе стороны.

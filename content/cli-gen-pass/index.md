@@ -1,15 +1,18 @@
 ---
-title: '[Linux] Генерация паролей в CLI'
-date: 2020-02-17T15:13:11+03:00
-draft: false
-slug: '/cli-gen-pass/'
-description: 'Генерация случайных паролей в консоли'
-categories: 'Linux'
-tags: ['linux', 'cli', 'pass']
+categories: Linux
 comments: true
+date: "2020-02-17T15:13:11+03:00"
+description: Генерация случайных паролей в консоли
+draft: false
 noauthor: false
 share: true
-type: 'post'
+slug: /cli-gen-pass/
+tags:
+- linux
+- cli
+- pass
+title: '[Linux] Генерация паролей в CLI'
+type: post
 ---
 Привет, `%username%`! Довольно не редко приходится придумывать себе и/или кому-то пароль и далеко не всегда есть под рукой менеджер паролей с функцией генератора паролей. Рассмотрим несколько способов генерации паролей прямо в `CLI` - мне так очень удобно.
 

@@ -1,15 +1,18 @@
 ---
-title: '[Monitoring] Мониторинг: что/куда/зачем?'
-date: 2020-10-14T20:48:00+03:00
-draft: false
-description: 'Поговорим о том, что такое мониторинг, зачем он нужен, как его готовить.'
-categories: 'Work'
-tags: ['monitoring', 'prometheus', 'zabbix']
+categories: Work
 comments: false
-image: ''
+date: "2020-10-14T20:48:00+03:00"
+description: Поговорим о том, что такое мониторинг, зачем он нужен, как его готовить.
+draft: false
+image: ""
 share: true
+tags:
+- monitoring
+- prometheus
+- zabbix
+title: '[Monitoring] Мониторинг: что/куда/зачем?'
 toc: false
-type: 'post'
+type: post
 ---
 
 Привет, `%username%`! Поговорим о такой безумно важной вещи как **мониторинг**! Постараемся ответить на некоторые вопросы связанные с мониторингом инфраструктуры и приложений.

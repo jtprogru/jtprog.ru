@@ -1,14 +1,17 @@
 ---
-title: "[Ubuntu] Сбросить забытый пароль"
-date: 2018-06-18T14:57:25+03:00
-draft: false
-slug: '/reset-lost-password/'
-categories: "howto"
-tags: ['linux', 'password', 'root']
+categories: howto
 comments: true
+date: "2018-06-18T14:57:25+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /reset-lost-password/
+tags:
+- linux
+- password
+- root
+title: '[Ubuntu] Сбросить забытый пароль'
+type: post
 ---
 
 Привет, `%username%`! Как бы это печально не звучало, но все мы рано или поздно забываем свои пароли. Существует множество различных утилит для восстановления пароля к системам Windows. Но тут будет краткая и простая инструкция восстановления пароля root от систем Ubuntu.

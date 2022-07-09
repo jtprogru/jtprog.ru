@@ -1,24 +1,20 @@
 ---
-title: "[GitLab] Установка GitLab Runner"
-date: 2020-11-27T13:30:00+03:00
-# weight: 1
-# aliases: ["/first"]
-categories: 'Work'
-tags: ["gitlab-ci", "gitlab runner", "work"]
-type: 'post'
-author: "jtprogru"
-description: "Установка и регистрация GitLab-runner"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Work
+comments: false
+date: "2020-11-27T13:30:00+03:00"
+description: Установка и регистрация GitLab-runner
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-# cover:
-#     image: "<image path/url>"
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false
-comments: false
+showToc: false
+tags:
+- gitlab-ci
+- gitlab runner
+- work
+title: '[GitLab] Установка GitLab Runner'
+type: post
 ---
 
 Привет, `%username%`! Простая шпаргалка о том, как быстро и просто установить Gitlab Runner на Ubuntu/Debian.

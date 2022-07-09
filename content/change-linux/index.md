@@ -1,14 +1,15 @@
 ---
-title: "[Choice] Какую *nix-систему поставить на ноутбук?!"
-date: 2013-08-26T19:14:00+03:00
-draft: false
-slug: '/change-linux/'
-categories: "Linux"
-tags: ['linux',]
+categories: Linux
 comments: true
+date: "2013-08-26T19:14:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /change-linux/
+tags:
+- linux
+title: '[Choice] Какую *nix-систему поставить на ноутбук?!'
+type: post
 ---
 
 Пришла в мою светлую ~~(читай **дурную**)~~ голову "гениальная" мысль - поставить что-нибудь *nix'овое на свой ноутбук. Буквально на днях поднял этот [вопрос](http://it-talk.org/topic16323.html) на одном замечательном форуме, который читаю уже давно. Вопрос выбора операционки очень серьезный.

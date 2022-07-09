@@ -1,15 +1,18 @@
 ---
-title: "[Linux] Наблюдение за процессами при помощи strace"
-date: 2019-07-29T12:01:18+03:00
-draft: false
-slug: '/strace/'
-description: 'Заметка о том, как базово пользоваться strace для подглядывания и отладки процессов'
-tags: ['strace', 'linux']
-categories: "Linux"
+categories: Linux
 comments: true
+date: "2019-07-29T12:01:18+03:00"
+description: Заметка о том, как базово пользоваться strace для подглядывания и отладки
+  процессов
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /strace/
+tags:
+- strace
+- linux
+title: '[Linux] Наблюдение за процессами при помощи strace'
+type: post
 ---
 
 Привет, `%username%`! Поговорим о такой болезни как [вуайеризм](https://ru.m.wikipedia.org/wiki/Вуайеризм). Подглядывать мы будем за процессами в Linux, а использовать для столь интимного дела мы будем утилиту `strace`.

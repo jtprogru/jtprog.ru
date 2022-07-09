@@ -1,14 +1,17 @@
 ---
-title: "[Outlook] Ошибка 0x8004010F в Outlook 2010-2013"
-date: 2015-11-05T15:15:00+03:00
-draft: false
-slug: '/error-0x8004010f/'
-categories: "Windows"
-tags: ['windows', 'outlook', '0x8004010F']
+categories: Windows
 comments: true
+date: "2015-11-05T15:15:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /error-0x8004010f/
+tags:
+- windows
+- outlook
+- "0x8004010F"
+title: '[Outlook] Ошибка 0x8004010F в Outlook 2010-2013'
+type: post
 ---
 
 По долгу службы приходится общаться с таким продуктом ~~корпорации зла~~ Microsoft как Outlook из пакета Microsoft Office. И довольно часто в его работе появляются удивительные ошибки (как и у большинства продуктов Microsoft), которые порой ставят в тупик. 

@@ -1,14 +1,17 @@
 ---
-title: "[pptpd] Простой VPN-сервер на базе Ubuntu+pptpd"
-date: 2015-03-30T14:39:00+03:00
-draft: false
-slug: '/simple-vpn/'
-categories: "howto"
-tags: ['vpn', 'pptpd', 'ubuntu']
+categories: howto
 comments: true
+date: "2015-03-30T14:39:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /simple-vpn/
+tags:
+- vpn
+- pptpd
+- ubuntu
+title: '[pptpd] Простой VPN-сервер на базе Ubuntu+pptpd'
+type: post
 ---
 
 Приспичило поднять VPN-сервер, с которым смогли бы работать все устройства (Android, Windows) потому, что старый добрый VPN поднятый на базе Cisco работал исключительно через специальное приложение-клиент. Нам хотелось работать просто и без постороннего ПО, пусть даже и просто запускаемого на стороне клиента без всяких установок. Решение было найдено довольно быстро, а главное бесплатно.

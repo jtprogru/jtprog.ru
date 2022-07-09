@@ -1,22 +1,27 @@
 ---
-title: "[Notes] Заметки на полях 24.04.2022"
-date: 2022-04-24T14:30:18+03:00
-categories: "Notes"
-tags: ["заметкинаполях", "apt", "apt-key", "ubuntu"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Notes
+comments: false
+cover:
+  alt: Lock
+  caption: Photo by [FLY:D](https://unsplash.com/@flyd2069?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/s/photos/security?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.jpg
+  relative: false
+date: "2022-04-24T14:30:18+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "Lock"
-    caption: "Photo by [FLY:D](https://unsplash.com/@flyd2069?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/security?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- заметкинаполях
+- apt
+- apt-key
+- ubuntu
+title: '[Notes] Заметки на полях 24.04.2022'
+type: post
 ---
 
 Привет, `%username%`! Сегодня я решил пересобрать свой домашний стенд из старенького ноутбука и переустановить на

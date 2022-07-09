@@ -1,14 +1,16 @@
 ---
-title: "[ESXi] Знакомство с виртуальными серверами, или Первое рабочее задание"
-date: 2014-06-18T17:10:00+03:00
-draft: false
-slug: '/welcom-to-virtualisation/'
-categories: "Work"
-tags: ['esxi', 'work']
+categories: Work
 comments: true
+date: "2014-06-18T17:10:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /welcom-to-virtualisation/
+tags:
+- esxi
+- work
+title: '[ESXi] Знакомство с виртуальными серверами, или Первое рабочее задание'
+type: post
 ---
 
 Задача в общем и целом была такова:

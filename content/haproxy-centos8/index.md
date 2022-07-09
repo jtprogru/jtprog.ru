@@ -1,18 +1,22 @@
 ---
-title: '[HAProxy] Установка HAProxy на Centos 8'
-date: 2020-04-09T01:30:00+03:00
-lastmod: 2020-04-09T01:27:28+03:00
-draft: false
-slug: '/haproxy-centos8/'
-description: 'Процедура установки HAProxy из исходников на CentOS 8 с поддержкой метрик для Prometheus'
-categories: 'Linux'
-tags: ['haproxy', 'centos', 'howto']
-comments: true
-image: ''
 authorbox: true
+categories: Linux
+comments: true
+date: "2020-04-09T01:30:00+03:00"
+description: Процедура установки HAProxy из исходников на CentOS 8 с поддержкой метрик
+  для Prometheus
+draft: false
+image: ""
+lastmod: "2020-04-09T01:27:28+03:00"
 share: true
+slug: /haproxy-centos8/
+tags:
+- haproxy
+- centos
+- howto
+title: '[HAProxy] Установка HAProxy на Centos 8'
 toc: false
-type: 'post'
+type: post
 ---
 Привет, `%username%`! Тут мы будем устанавливать свежую стабильную версию `HAProxy` из исходников, т.к. в репах доступна еще 1.8.15.
 

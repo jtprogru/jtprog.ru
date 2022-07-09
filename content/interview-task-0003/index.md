@@ -1,22 +1,28 @@
 ---
-title: "[Interview] Задачка с собеса 0003"
-date: 2022-01-22T13:00:00+03:00
-categories: "Interview"
-tags: ["interview", "собеседование", "задача", "task", "тасксобес"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Interview
+comments: false
+cover:
+  alt: Architecture
+  caption: Photo by [Shubham Dhage](https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/t/blockchain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.jpg
+  relative: false
+date: "2022-01-22T13:00:00+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "Architecture"
-    caption: "Photo by [Shubham Dhage](https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/t/blockchain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- interview
+- собеседование
+- задача
+- task
+- тасксобес
+title: '[Interview] Задачка с собеса 0003'
+type: post
 ---
 
 Привет, `%username%`! Очередная задача с собесов, которая является вариацией [задачи 0002](https://ttttt.me/jtprogru_channel/4084), но не менее интересная из-за своих нюансов и условий – она про архитектуру.

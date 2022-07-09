@@ -1,14 +1,16 @@
 ---
-title: "[Ubuntu] Очередь и blacklist Postfix"
-date: 2016-10-31T09:00:14+03:00
-draft: false
-slug: '/queue-blacklist-postfix/'
-categories: "Linux"
-tags: ['postfix', 'blacklist']
+categories: Linux
 comments: true
+date: "2016-10-31T09:00:14+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /queue-blacklist-postfix/
+tags:
+- postfix
+- blacklist
+title: '[Ubuntu] Очередь и blacklist Postfix'
+type: post
 ---
 
 Приветствую, `%username%`! Рано или поздно все сталкиваются с проблемами в работе почтового сервера. И одна из распространенных причин это переполнение очереди сообщений. Рассмотрим как же эту очередь посмотреть и почистить.

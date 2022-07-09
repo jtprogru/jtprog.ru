@@ -1,14 +1,16 @@
 ---
-title: "[Start] Быть или не быть..."
-date: 2013-07-05T21:16:00+03:00
-draft: false
-slug: '/be-or-not-to-be/'
-categories: "Other"
-tags: ['start', 'first post']
+categories: Other
 comments: true
+date: "2013-07-05T21:16:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /be-or-not-to-be/
+tags:
+- start
+- first post
+title: '[Start] Быть или не быть...'
+type: post
 ---
 
 Пришла мне в голову мысль вспомнить статую профессию - программист. В связи с моей службой в армии, а это целых 3 года (**!**), часть знаний утеряна. Желание есть и огромное. А вот с мозгами мягко говоря проблемы. Что-то вспоминается легко, а что-то ну просто отказывается лезть в голову.

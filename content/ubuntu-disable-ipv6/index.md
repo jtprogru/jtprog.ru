@@ -1,14 +1,16 @@
 ---
-title: "[Ubuntu] Отключаем IPv6 на сервере"
-date: 2016-08-12T11:54:00+03:00
-draft: false
-slug: '/ubuntu-disable-ipv6/'
-categories: "howto"
-tags: ['ipv6', 'linux']
+categories: howto
 comments: true
+date: "2016-08-12T11:54:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /ubuntu-disable-ipv6/
+tags:
+- ipv6
+- linux
+title: '[Ubuntu] Отключаем IPv6 на сервере'
+type: post
 ---
 
 Возникла потребность отключить использование IPv6 на одном из серверов под управлением Ubuntu Server 16.04.1. Задача довольно простая и легко выполнима в несколько команд. Необходим только доступ к серверу и выполнение команд от имени root'а.

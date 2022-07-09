@@ -1,21 +1,25 @@
 ---
-title: "[Work] Перенос сайта на хостинг с BitrixVM"
-date: 2021-04-07T22:31:31+03:00
-categories: 'Work'
-tags: ["bitrix", "bitrixvm", "hosting", "nginx"]
-type: 'post'
-author: "jtprogru"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Work
+comments: false
+cover:
+  alt: BitrixVM
+  caption: ""
+  image: bitrixvm.jpg
+  relative: false
+date: "2021-04-07T22:31:31+03:00"
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "bitrixvm.jpg"
-    alt: "BitrixVM"
-    caption: ""
-    relative: false
-comments: false
+showToc: false
+tags:
+- bitrix
+- bitrixvm
+- hosting
+- nginx
+title: '[Work] Перенос сайта на хостинг с BitrixVM'
+type: post
 ---
 
 Привет, `%username%`! У многих хостинг-провайдеров есть тарифные планы для тех "малышей", кому хочется ~~свой бизнес~~ интернет-магазин. Данный тариф представляет из себя максимально минимальную по характеристикам VM с предустановленной CMS Bitrix – стандартное коробочное решение поставляемое авторами данного продукта в виде готовой BitrixVM.

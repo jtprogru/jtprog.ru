@@ -1,14 +1,16 @@
 ---
-title: "[macOS] Записываем ISO-образ на флешку или диск"
-date: 2016-09-27T17:27:00+03:00
-draft: false
-slug: '/macos-burn-iso/'
-categories: "macOS"
-tags: ['macos', 'iso']
+categories: macOS
 comments: true
+date: "2016-09-27T17:27:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /macos-burn-iso/
+tags:
+- macos
+- iso
+title: '[macOS] Записываем ISO-образ на флешку или диск'
+type: post
 ---
 
 

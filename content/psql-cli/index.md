@@ -1,14 +1,17 @@
 ---
-title: "[PostgreSQL] Работаем руками"
-date: 2018-07-12T16:15:04+03:00
-draft: false
-slug: '/psql-cli/'
-categories: "DevOps"
-tags: ['postgres', 'pgsql', 'cli']
+categories: DevOps
 comments: true
+date: "2018-07-12T16:15:04+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /psql-cli/
+tags:
+- postgres
+- pgsql
+- cli
+title: '[PostgreSQL] Работаем руками'
+type: post
 ---
 
 Привет, `%username%`! Иногда бывает необходимо поработать ручками с базой данных PostgreSQL, но не для всех бывает очевидно что и как там делать. Поэтому ниже будет список из нескольких полезных примеров команд, которые помогу быстро разобраться и начать. Главное помнить: не тестируйте на production-серверах!

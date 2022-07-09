@@ -1,14 +1,16 @@
 ---
-title: "[Mac OS X] Разрешаем просмотр pdf-файлов в Safari"
-date: 2016-08-01T05:55:44+03:00
-draft: false
-slug: '/disable-safari-pdf-view/'
-categories: "howto"
-tags: ['macos', 'safari']
+categories: howto
 comments: true
+date: "2016-08-01T05:55:44+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /disable-safari-pdf-view/
+tags:
+- macos
+- safari
+title: '[Mac OS X] Разрешаем просмотр pdf-файлов в Safari'
+type: post
 ---
 
 С недавних пор я стал маководом, прикупив себе не новый `MacBook Pro 15` 2011 года. Конфигурация вполне себе приличная для такого старичка:

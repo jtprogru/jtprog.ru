@@ -1,14 +1,16 @@
 ---
-title: "[macOS] Исправляем глюк Midnight Commander"
-date: 2016-10-04T12:36:54+03:00
-draft: false
-slug: '/fixed-dir-mc/'
-categories: "howto"
-tags: ['mc', 'macos']
+categories: howto
 comments: true
+date: "2016-10-04T12:36:54+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /fixed-dir-mc/
+tags:
+- mc
+- macos
+title: '[macOS] Исправляем глюк Midnight Commander'
+type: post
 ---
 
 В работе часто приходится пользоваться консолью и Midnight Commander'ом aka `mc`. Так вот, с недавнего времени у меня обнаружился глюк. При открытии он в правой панели открывает текущую директорию, а в левой одну и ту же. В целом ничего страшного, но пипец как неудобно. Решение оказалось довольно простым.

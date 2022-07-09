@@ -1,14 +1,17 @@
 ---
-title: "[CentOS] Установка iperf3"
-date: 2018-07-11T10:38:39+03:00
-draft: false
-slug: '/iperf3/'
-categories: "Linux"
-tags: ['iperf', 'linux', 'network']
+categories: Linux
 comments: true
+date: "2018-07-11T10:38:39+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /iperf3/
+tags:
+- iperf
+- linux
+- network
+title: '[CentOS] Установка iperf3'
+type: post
 ---
 
 Привет, `%username%`! Иногда возникают ситуации, в которых необходимо протестировать качество связи между двумя серверами находящимися на разных площадках. Для таких целей есть отличная утилита под названием `iperf`. Её мы и будем ставить, а так же посмотрим как её использовать.

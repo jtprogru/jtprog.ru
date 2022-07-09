@@ -1,14 +1,16 @@
 ---
-title: "[Btrfs] Btrfs - работаем с разделом"
-date: 2019-05-22T12:27:22+03:00
-draft: false
-slug: '/btrfs-dev/'
-categories: "howto"
-tags: ['btrfs', 'linux']
+categories: howto
 comments: true
+date: "2019-05-22T12:27:22+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /btrfs-dev/
+tags:
+- btrfs
+- linux
+title: '[Btrfs] Btrfs - работаем с разделом'
+type: post
 ---
 Привет, `%username%`! Неожиданно для себя я открыл такую файловую систему как BTRFS.
 

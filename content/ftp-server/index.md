@@ -1,14 +1,17 @@
 ---
-title: "[vsFTPd] Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04"
-date: 2015-02-02T17:25:00+03:00
-draft: false
-slug: '/ftp-server/'
-categories: "howto"
-tags: ['vsftpd', 'ubuntu', 'ftp']
+categories: howto
 comments: true
+date: "2015-02-02T17:25:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /ftp-server/
+tags:
+- vsftpd
+- ubuntu
+- ftp
+title: '[vsFTPd] Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04'
+type: post
 ---
 
 Давным-давно... Хотя... Короче говоря понадобился нам для рабочих нужд нормальный FTP-сервер. Долго шли к такому решению и все же приняли его. Да и вообще FTP-сервер штука полезная во многих ситуациях. 

@@ -1,22 +1,28 @@
 ---
-title: "[Basics] Кластеризация и доступность"
-date: 2021-08-27T21:00:00+03:00
-categories: "Basics"
-tags: ["HA", "high availability", "clusterisation", "architecture", "примитивы"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Basics
+comments: false
+cover:
+  alt: Space Cluster
+  caption: Photo by [Arnaud Mariat](https://unsplash.com/@arnaudmariat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/s/photos/space-cluster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  image: cover.jpg
+  relative: false
+date: "2021-08-27T21:00:00+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "cover.jpg"
-    alt: "Space Cluster"
-    caption: "Photo by [Arnaud Mariat](https://unsplash.com/@arnaudmariat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/space-cluster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- HA
+- high availability
+- clusterisation
+- architecture
+- примитивы
+title: '[Basics] Кластеризация и доступность'
+type: post
 ---
 
 Привет, `%username%`! Часто можно слышать, что "приложение запущено в кластере" или не редко вопросом для новичков на собесе может быть такое: "Что такое кластеризация приложения?" или "Что такое HA?"

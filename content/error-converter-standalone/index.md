@@ -1,14 +1,17 @@
 ---
-title: "[VMware] vCenter Converter Standalone error"
-date: 2018-09-17T07:00:05+03:00
-draft: false
-slug: '/error-converter-standalone/'
-categories: "DevOps"
-tags: ['centos', 'converter', 'vmware']
+categories: DevOps
 comments: true
+date: "2018-09-17T07:00:05+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /error-converter-standalone/
+tags:
+- centos
+- converter
+- vmware
+title: '[VMware] vCenter Converter Standalone error'
+type: post
 ---
 
 Привет, `%username%`! Бывают ситуации когда единственное решение это конвертировать физический сервер в виртуальный. Ошибка с которой я столкнулся при работе с конвертером звучит вот так `A file i/o error occurred while accessing`. Рассмотрим когда она возникает и как её лечить.

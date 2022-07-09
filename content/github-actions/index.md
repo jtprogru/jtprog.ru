@@ -1,22 +1,26 @@
 ---
-title: "[DevOps] Github Actions для блогера"
-date: 2021-04-28T16:27:11+03:00
-categories: 'DevOps'
-tags: ["devops", "github", "GitHub Actions"]
-type: "post"
-author: "jtprogru"
-description: "Пример использования GitHub Actions для публикации статических сайтов на базе Hugo"
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: DevOps
+comments: false
+cover:
+  alt: GitHub
+  caption: Photo by [Yancy Min](https://unsplash.com/@yancymin) on [Unsplash](https://unsplash.com/)
+  image: gha.jpg
+  relative: false
+date: "2021-04-28T16:27:11+03:00"
+description: Пример использования GitHub Actions для публикации статических сайтов
+  на базе Hugo
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-    image: "gha.jpg"
-    alt: "GitHub"
-    caption: "Photo by [Yancy Min](https://unsplash.com/@yancymin) on [Unsplash](https://unsplash.com/)"
-    relative: false
-comments: false
+showToc: false
+tags:
+- devops
+- github
+- GitHub Actions
+title: '[DevOps] Github Actions для блогера'
+type: post
 ---
 
 Привет, `%username%`! Я тут недавно у себя на [Medium](https://jtprog.medium.com/как-и-зачем-я-веду-свой-блог-cd0c429f9ffa) расписывал как именно я работаю с контентом на этом сайте.

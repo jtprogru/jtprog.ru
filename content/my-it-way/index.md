@@ -1,22 +1,25 @@
 ---
-title: "[Story] Как я вошёл в IT"
-date: 2021-05-15T18:30:00+03:00
-categories: "Story"
-tags: ["story", "войти в айти", "войтивайти"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
 TocOpen: false
+author: jtprogru
+categories: Story
+comments: false
+cover:
+  alt: MacBook
+  caption: Photo by [Dayne Topkin](https://unsplash.com/@dtopkin1) on [Unsplash](https://unsplash.com/)
+  image: cover.jpg
+  relative: false
+date: "2021-05-15T18:30:00+03:00"
+description: ""
+disableShare: false
 draft: false
 hidemeta: false
-disableShare: false
-cover:
-  image: "cover.jpg"
-  alt: "MacBook"
-  caption: "Photo by [Dayne Topkin](https://unsplash.com/@dtopkin1) on [Unsplash](https://unsplash.com/)"
-  relative: false
-comments: false
+showToc: false
+tags:
+- story
+- войти в айти
+- войтивайти
+title: '[Story] Как я вошёл в IT'
+type: post
 ---
 
 Привет, `%username%`! Ниже по тексту не будет никаких советов, рекомендаций, списков курсов которые тебе могут помочь. Будет только моя личная история о том, как я смог "Войти в АйТи".

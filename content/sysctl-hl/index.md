@@ -1,15 +1,17 @@
 ---
-title: "[Linux] Настройка Linux для HL и защиты от DDoS"
-date: 2019-07-26T18:50:58+03:00
-draft: false
-slug: '/sysctl-hl/'
-description: 'Заметка о sysctl и их базовых значениях для высоких нагрузок'
-categories: "Linux"
-tags: ['sysctl', 'linux']
+categories: Linux
 comments: true
+date: "2019-07-26T18:50:58+03:00"
+description: Заметка о sysctl и их базовых значениях для высоких нагрузок
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /sysctl-hl/
+tags:
+- sysctl
+- linux
+title: '[Linux] Настройка Linux для HL и защиты от DDoS'
+type: post
 ---
 
 Привет, `%username%`! Настройки ядра, защита от DDoS, HL и высокие нагрузки. Именно в таких ситуациях думаешь, что пора настраивать параметры через `sysctl`. Эта инструкция далеко не первая, и уж тем более не последняя.

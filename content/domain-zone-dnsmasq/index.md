@@ -1,14 +1,17 @@
 ---
-title: "[DNSmasq] Своя доменная зона с dnsmasq"
-date: 2015-12-16T10:48:00+03:00
-draft: false
-slug: '/domain-zone-dnsmasq/'
-categories: "howto"
-tags: ['dnsmasq', 'dns', 'linux']
+categories: howto
 comments: true
+date: "2015-12-16T10:48:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /domain-zone-dnsmasq/
+tags:
+- dnsmasq
+- dns
+- linux
+title: '[DNSmasq] Своя доменная зона с dnsmasq'
+type: post
 ---
 
 Всем привет! Сейчас будем создавать свою собственную доменную зону с помощью dnsmasq на локальном компьютере. Это очень удобно если вы занимаетесь разработкой сайтов или вам часто приходится смотреть какие-либо подобные вещи на локальной машине, а на хостинг не имеет смысла разоряться "ради посмотреть". Будем делать доменную зону `*.dev`. В итоге у нас будут красивые имена сайтов типа `blog.dev` или `mybestcrm.dev`, открывающиеся с локального компьютера.

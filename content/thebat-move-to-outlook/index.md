@@ -1,14 +1,17 @@
 ---
-title: "[Email] Перенос почты с The Bat в Outlook"
-date: 2015-01-10T19:56:11+03:00
-draft: false
-slug: '/thebat-move-to-outlook/'
-categories: "howto"
-tags: ['the bast', 'outlook', 'windows']
+categories: howto
 comments: true
+date: "2015-01-10T19:56:11+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /thebat-move-to-outlook/
+tags:
+- the bast
+- outlook
+- windows
+title: '[Email] Перенос почты с The Bat в Outlook'
+type: post
 ---
 
 Возникла проблема: Надоел сотруднику `The Bat!` и он захотел `MS Outlook` при условии сохранения всей базы писем. Для сотрудников на должностях манагеров-продажников почта, к сожалению, фактически ключевой инструмент. При условии покупки пакета `MS Office` на каждого сотрудника глупо было закупать еще несколько десятков лицензий на `The Bat!`

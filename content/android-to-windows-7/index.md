@@ -1,14 +1,16 @@
 ---
-title: "[Android] Подключаем Android к Windows 7"
-date: 2015-06-26T14:42:00+03:00
-draft: false
-slug: '/android-to-windows-7/'
-categories: "howto"
-tags: ['android', 'windows']
+categories: howto
 comments: true
+date: "2015-06-26T14:42:00+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /android-to-windows-7/
+tags:
+- android
+- windows
+title: '[Android] Подключаем Android к Windows 7'
+type: post
 ---
 
 Некоторое время назад столкнулся с проблемой при попытке подключить Андроидофон к рабочему компу (Windpws 7 x64) сотрудника в режиме MTP. Естесственно нихрена не получилось :-) ЭтожВинда! Пораскинув мозгами и поработав с паре с гуглом решение было найдено. Так вот где собака зарыта!

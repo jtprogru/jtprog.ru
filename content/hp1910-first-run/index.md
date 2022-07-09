@@ -1,14 +1,16 @@
 ---
-title: "[HP1910] Начальная настройка коммутатора HP 1910 серии"
-date: 2018-01-07T22:10:30+03:00
-draft: false
-slug: '/hp1910-first-run/'
-categories: "howto"
-tags: ['hp 1910', 'network']
+categories: howto
 comments: true
+date: "2018-01-07T22:10:30+03:00"
+draft: false
 noauthor: false
 share: true
-type: "post"
+slug: /hp1910-first-run/
+tags:
+- hp 1910
+- network
+title: '[HP1910] Начальная настройка коммутатора HP 1910 серии'
+type: post
 ---
 
 
