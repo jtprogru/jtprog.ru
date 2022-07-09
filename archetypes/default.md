@@ -1,24 +1,22 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-# weight: 1
-# aliases: ["/first"]
-categories: "Work"
-tags: ["first"]
-type: "post"
-author: "jtprogru"
-description: ""
-showToc: false
-TocOpen: false
-draft: true
-hidemeta: false
-disableShare: false
+author: jtprogru
+categories: Work
+comments: false
 # cover:
 #     image: "<image path/url>"
 #     alt: "<alt text>"
 #     caption: "<text>"
 #     relative: false
-comments: false
+date: {{ .Date }}
+description: ""
+disableShare: false
+draft: true
+hidemeta: false
+showToc: false
+tags:
+  - first
+title: '{{ replace .Name "-" " " | title }}'
+type: post
 ---
 
 Привет, `%username%`!
