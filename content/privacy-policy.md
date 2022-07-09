@@ -1,10 +1,10 @@
 ---
-id: 283
-title: Политика ПДн
-date: 2020-09-02T21:36:39+03:00
 author: jtprog
+date: "2020-09-02T21:36:39+03:00"
+id: 283
+slug: /privacy-policy/
+title: Политика ПДн
 type: page
-slug: '/privacy-policy/'
 ---
 ## 1. Общие положения
 

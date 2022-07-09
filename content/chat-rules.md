@@ -1,10 +1,10 @@
 ---
-id: 263
-title: Правила чата
-date: 2020-09-01T21:35:54+03:00
 author: jtprog
+date: "2020-09-01T21:35:54+03:00"
+id: 263
+slug: /chat-rules/
+title: Правила чата
 type: page
-slug: '/chat-rules/'
 ---
 Чат [@jtprogru_chat](https://ttttt.me/jtprogru_chat)
 

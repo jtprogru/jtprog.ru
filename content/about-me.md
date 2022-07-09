@@ -1,13 +1,13 @@
 ---
-date: 2019-05-07T17:01:32+03:00
 comments: false
-slug: '/about-me/'
-image: None
+date: "2019-05-07T17:01:32+03:00"
 draft: false
+image: None
 noauthor: true
 share: false
-title: "Обо мне..."
-type: "page"
+slug: /about-me/
+title: Обо мне...
+type: page
 ---
 
 ## **Привет, `%username%`!**
