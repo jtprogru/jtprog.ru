@@ -2,9 +2,11 @@
 name: CI
 'on':
   push:
-    branches: [ master ]
+    branches:
+      - "master"
   pull_request:
-    branches: [ master ]
+    branches:
+      - "master"
 jobs:
   deploy-website:
     runs-on: ubuntu-latest
@@ -52,6 +54,4 @@ jobs:
             **Project**: `${{github.repository}}`
             **Runs on**: https://github.com/${{github.repository}}/tree/${{github.sha}}
             **Branch**: `${{github.ref}}`
-########
-# END OF FILE
-########
+
