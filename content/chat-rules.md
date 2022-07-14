@@ -37,10 +37,10 @@ type: page
 
 Немного актуальной статистики канала:
 
-<img src="https://tgstat.ru/channel/@jtprogru_channel/stat-widget.png" />
+![Channel stat](https://tgstat.ru/channel/@jtprogru_channel/stat-widget.png)
 
 Немного актуальной статистики чата:
 
-<img src="https://tgstat.ru/channel/@jtprogru_chat/stat-widget.png" />
+![Chat stat](https://tgstat.ru/channel/@jtprogru_chat/stat-widget.png)
 
 В для глобальных обсуждений голосом или с демонстрацией экрана есть Discord-сервер [SysOps](https://discord.gg/zS2gNwt2Ka), а с недавних пор это возможно и в самом Telegram.
