@@ -63,7 +63,7 @@ ID: **410011675062464**
 
 - [RescueTime](https://www.rescuetime.com/ref/2146766)
 - [DigitalOcean](https://m.do.co/c/915531dbfa41)
-- [Fozzy](https://fozzy.com/aff.php?aff=1116&page=domains)
+- [Fozzy](https://fozzy.com/aff.php?aff=1116)
 - [SmartApe](http://www.smartape.ru/?partner=52369)
 
 **СПАСИБО ТЕБЕ, `%username%`!**
