@@ -93,8 +93,8 @@ params:
       url: 'https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg'
     - name: github
       url: 'https://github.com/jtprogru'
-    # - name: gitlab
-    #   url: 'https://gitlab.com/jtprogru'
+    - name: mastodon
+      url: 'https://mas.to/@jtprogru'
     - name: buymeacoffee
       url: 'https://www.buymeacoffee.com/jtprogru'
     # - name: paypal
