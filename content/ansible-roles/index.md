@@ -110,9 +110,9 @@ Nребуется использовать в том случае, когда т
 
 Немного о том, что и за что отвечает я тебе рассказал. Теперь я тебе расскажу свой подход к разработке ролей, как я стараюсь делать и как я не делаю, а главное поясню "почему именно так, а не иначе".
 
-### Создание роли
+### Инициализация роли
 
-Если речь идет о не публичной роли – той, которую я не буду публиковать в Ansible Galaxy – то тут все просто:
+Если речь идет о не публичной роли (которую я не буду публиковать в Ansible Galaxy или хоть как-то показывать кому-то кроме себя), то тут все просто:
 
 ```bash
 cd roles
@@ -121,25 +121,99 @@ vim .
 git init/add/commit/push
 ```
 
-Если речь идет о публичной роли – той, которую я буду публиковать в Ansible Galaxy – то тут по канону используется утилита `ansible-galaxy`:
+Если речь идет о публичной роли (которую я буду публиковать в Ansible Galaxy), то тут можно воспользоваться утилитой `ansible-galaxy`:
 
 ```bash
-ansible-galaxy init jtprogru.my_new_role
-cd jtprogru.my_new_role
+ansible-galaxy init my_new_role
+cd my_new_role
 vim .
 git init/add/commit/push
 ```
 
-Я же пользуюсь альтернативным вариантом - инициализация директории с ролью через Molecule (сразу генерируется шаблон для тестирования роли с использованием Molecule):
+Я же пользуюсь альтернативным вариантом - инициализация роли через Molecule (сразу генерируется шаблон для тестирования роли с использованием Molecule):
 
 ```bash
 molecule init role jtprogru.my_new_role --driver-name docker
-cd jtprogru.my_new_role
+cd my_new_role
 vim .
 git init/add/commit/push
 ```
 
 У меня была попытка сделать шаблон роли – [sample-role](https://github.com/jtprogru/sample-role). Чтоб можно было форкнуть/скачать архив/скопипастить и иметь уже готовый скелет с тестами в виде Molecule и прочим, а в идеале собрать из нее нормальный шаблон для [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) – если будет желание, кидай PR.
+
+### Написание кода
+
+В чем писать - вообще до фонаря, главное чтобы твой редактор умел корректно работать с отступами. Я в зависимости от настроения использую VIM, VS Code, GoLand/PyCharm - все с кучей разных плагинов.
+
+На что стоит обращать внимание при написании кода роли:
+
+#### именование тасок
+
+Простой пример:
+
+```yaml
+- name: my_new_role | install pkg
+  ansible.builtin.apt:
+    name: "{{ base_soft_list }}"
+    update_cache: false
+```
+
+Каждый раз, когда имя задачи начинается с имени роли я мысленно говорю себе спасибо за то, что я смогу отличить эту задачу в общем выхлопе плейбука. Ведь задача с именем `- name: install pkg` может быть где угодно, так ведь? А вот с конкретным имененем `- name: my_new_role | install pkg` будет явно только в моей роли.
+
+#### хендлеры
+
+На конференции [DevOpsConf 2022](https://devopsconf.io/moscow/2022/schedule) я совершенно случайно узнал про "топики". Топики это такая штука, благодаря которой тебе в своих задачах не надо перечислять нотифаи. Вот так ты делаешь обычно:
+
+```yaml
+- name: "jtprogru.install_atop | generate default config for atop"
+  ansible.builin.template:
+    src: "atop.j2"
+    dest: "{{ atop_config_path }}"
+    owner: root
+    group: root
+    mode: 0644
+  notify: 
+    - restart atop
+    - restart atopacct
+```
+
+А теперь ты можешь просто написать один нотифай, а ansible сам все поймет и сделает правильно. Например вот так будет выглядеть задача:
+
+```yaml
+# tasks/main.yaml
+- name: "jtprogru.install_atop | generate default config for atop"
+  ansible.builin.template:
+    src: "atop.j2"
+    dest: "{{ atop_config_path }}"
+    owner: root
+    group: root
+    mode: 0644
+  notify: atop listner
+
+# handlers/main.yaml
+- name: restart atop
+  ansible.builtin.service:
+    name: atop.service
+    state: restarted
+  listen: atop listner
+
+- name: restart atopacct
+  ansible.builtin.service:
+    name: atopacct.service
+    state: restarted
+  listen: atop listner
+```
+
+И оба этих сервиса будут перезапущены. Более того, ты в своих ролях можешь слать нотифай в топики других своих ролей.
+
+#### линтеры
+
+Обязательно используй линтеры! Их не так много, но их достаточно:
+
+- `ansible-lint`
+- `yamllint`
+
+Каждый из них растраиваешь и прогоняешь перед коммитом. В идеале добавить их в [pre-commit](https://pre-commit.com/) и тогда система тебе просто не даст закоммитить в репозиторий кривой код.
 
 ## Итоги
 
