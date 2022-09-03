@@ -2,11 +2,11 @@
 author: jtprogru
 categories: Basics
 comments: false
-# cover:
-#     image: "<image path/url>"
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false
+cover:
+    image: "cover.png"
+    alt: "Simple site.yaml"
+    caption: "Playbook with some roles"
+    relative: false
 date: 2022-08-21T12:09:58+03:00
 description: ""
 disableShare: false
@@ -171,7 +171,7 @@ git init/add/commit/push
     dest: "{{ atop_config_path }}"
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify: 
     - restart atop
     - restart atopacct
@@ -187,7 +187,7 @@ git init/add/commit/push
     dest: "{{ atop_config_path }}"
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   notify: atop listner
 
 # handlers/main.yaml
