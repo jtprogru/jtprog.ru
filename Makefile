@@ -9,11 +9,11 @@ port="1313"
 config="config.yml"
 
 
-.PHONY: new
+.PHONY: new.post
 ## Create new post content/$(name)/index.md;
 ## Parametrize by make new name="post-name"
-new:
-	hugo new "content/$(name)/index.md" --verbose
+new.post:
+	hugo new --kind post "content/$(name)/index.md" --verbose
 
 .PHONY: serve
 ## Run local development server with hugo
