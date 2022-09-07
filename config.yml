@@ -288,3 +288,4 @@ module:
       target: i18n
     - source: archetypes
       target: archetypes
+
