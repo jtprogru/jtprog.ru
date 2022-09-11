@@ -134,6 +134,8 @@ params:
       url: 'https://keybase.io/jtprog'
     - name: soundcloud
       url: 'https://soundcloud.com/jtprogru/'
+    - name: cv
+      url: "https://savinmi.ru"
     - name: rss
       url: '/index.xml'
 
