@@ -8,6 +8,10 @@ host="0.0.0.0"
 port="1313"
 config="config.yml"
 
+.PHONY: build
+## Build static site
+build:
+	hugo -D --gc --verbose --config ./${config}
 
 .PHONY: new.post
 ## Create new post content/$(name)/index.md;
