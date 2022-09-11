@@ -17,7 +17,6 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-  # googleAnalytics: UA-176073511-1
 googleAnalytics: G-NK4TC343YF
 
 minify:
@@ -111,6 +110,8 @@ params:
       url: 'https://ttttt.me/jtprogru_chat'
     - name: twitter
       url: 'https://twitter.com/jtprogru'
+    - name: vkcom
+      url: "https://vk.com/jtprogru_channel"
     - name: youtube
       url: 'https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg'
     - name: github
