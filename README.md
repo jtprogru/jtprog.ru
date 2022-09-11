@@ -5,4 +5,3 @@
 ![GitHub issues](https://img.shields.io/github/issues/jtprogru/jtprog.ru?style=plastic)
 
 Все статьи опубликованные в моем блоге.
-
