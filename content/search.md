@@ -1,8 +1,7 @@
 ---
-title: "Поиск" # in any language you want
-layout: "search" # is necessary
-url: "/search"
-# description: "Description for Search"
+title: "Поиск"
+layout: "search"
+url: "/search/"
 summary: "search"
 placeholder: "Найти на сайте"
 ---

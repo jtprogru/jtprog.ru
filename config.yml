@@ -20,30 +20,8 @@ buildExpired: false
 googleAnalytics: G-NK4TC343YF
 
 minify:
-  disableCSS: false
-  disableHTML: false
-  disableJS: false
-  disableJSON: false
-  disableSVG: false
-  disableXML: false
+  disableXML: true
   minifyOutput: true
-  tdewolff:
-    css:
-      decimals: -1
-      keepCSS2: true
-    html:
-      keepConditionalComments: true
-      keepDefaultAttrVals: true
-      keepDocumentTags: true
-      keepEndTags: true
-      keepQuotes: false
-      keepWhitespace: false
-    js: {}
-    json: {}
-    svg:
-      decimals: -1
-    xml:
-      keepWhitespace: false
 
 pluralizeListTitles: true
 
@@ -76,7 +54,7 @@ params:
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
-    location: 0
+    location: 1
     distance: 1000
     threshold: 0.2
     minMatchCharLength: 0
@@ -84,7 +62,7 @@ params:
 
   opengraph: true
   twitter_cards: true
-  images: ["static"]
+  images: ["twitter-card.svg"]
   defaultTheme: auto
   copyright: "Mihael (jtprogru) Savin"
   mainSections: ["post"]
