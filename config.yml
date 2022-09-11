@@ -177,17 +177,12 @@ params:
 
 menu:
   main:
-    - name: "Найти"
+    - name: "Поиск"
       url: "/search/"
-    - name: "Telegram"
-      url: "https://ttttt.me/jtprogru_channel"
-      weight: 1
-    - name: "Спасибо"
-      url: "/donations/"
       weight: 2
-    - name: "Резюме"
-      url: "https://savinmi.ru/"
-      weight: 5
+    - name: "Поддержать"
+      url: "/donations/"
+      weight: 1
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
