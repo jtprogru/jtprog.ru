@@ -19,6 +19,12 @@ build:
 new.post:
 	hugo new --kind post "content/$(name)/index.md" --verbose
 
+.PHONY: new.page
+## Create new page content/$(name)/index.md;
+## Parametrize by make new name="page-name"
+new.page:
+	hugo new --kind page "content/$(name)/index.md" --verbose
+
 .PHONY: serve
 ## Run local development server with hugo
 serve:
