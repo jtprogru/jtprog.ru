@@ -1,7 +1,7 @@
 ---
 baseURL: "https://jtprog.ru"
-theme: "papermod"
-title: "Savin Michael aka @jtprogru"
+theme: "bear"
+title: "Мишка на сервере"
 copyright: "Mihael (jtprogru) Savin / Commit: @@@COMMIT@@@"
 languageCode: "ru-RU"
 defaultContentLanguage: "ru"
@@ -17,53 +17,53 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-# googleAnalytics: UA-176073511-1
 googleAnalytics: G-NK4TC343YF
 
 minify:
-  disableCSS: false
-  disableHTML: false
-  disableJS: false
-  disableJSON: false
-  disableSVG: false
-  disableXML: false
+  disableXML: true
   minifyOutput: true
-  tdewolff:
-    css:
-      decimals: -1
-      keepCSS2: true
-    html:
-      keepConditionalComments: true
-      keepDefaultAttrVals: true
-      keepDocumentTags: true
-      keepEndTags: true
-      keepQuotes: false
-      keepWhitespace: false
-    js: {}
-    json: {}
-    svg:
-      decimals: -1
-    xml:
-      keepWhitespace: false
+
 pluralizeListTitles: true
+
 params:
   env: production
   comments: false
   ShowPostNavLinks: true
-  description: "Записная книга админа-самоучки"
+  description: "Записная книга самоучки"
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/master/content"
     Text: "Edit..."  # edit text
     appendFilePath: true  # to aepend file path to Edit link
   label:
-    # text: "@jtprogru"
-    icon: /logo-new.png
+    text: "Мишка на сервере"
+    icon: /favicon.svg
+    iconHeight: 35
+    icon_dark: /fav-light.svg
+    icon_light: /fav-dark.svg
   assets:
-    favicon: /favicon.ico
+    favicon: /favicon.svg
+    favicon16x16: /favicon-16x16.svg
+    favicon32x32: /favicon-32x32.svg
+    apple_touch_icon: /apple-touch-icon.svg
+    safari_pinned_tab: /safari-pinned-tab.svg
     disableFingerprinting: true
+  cover:
+    hidden: false  # hide everywhere but not in structured data
+    hiddenInList: false  # hide on list pages and home
+    hiddenInSingle: false  # hide on single page
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 1
+    distance: 1000
+    threshold: 0.2
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 
   opengraph: true
   twitter_cards: true
+  images: ["twitter-card.svg"]
+  defaultTheme: auto
   copyright: "Mihael (jtprogru) Savin"
   mainSections: ["post"]
   dateFormat: "2006-01-02 15:04"
@@ -75,20 +75,21 @@ params:
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   disableSpecial1stPost: true
+
   homeInfoParams:
     Title: "Привет, `%username%`!"
     Content: |+
-      Меня зовут Михаил и добро пожаловать на бложек имени меня.
+      Меня зовут Михаил и добро пожаловать на страницы моего блога.
       Подписывайся на [telegram-канал](https://ttttt.me/jtprogru_channel) или заходи в
-      [telegram-чат](https://ttttt.me/jtprogru_chat) и задавай вопросы. Купить мне
-      [кофе](https://www.buymeacoffee.com/jtprogru) или подписаться на мой
-      [Patreon](https://www.patreon.com/jtprogru) в качестве благодарности очень приветствуется.
+      [telegram-чат](https://ttttt.me/jtprogru_chat) и задавай вопросы.
 
   socialIcons:
     - name: telegram
       url: 'https://ttttt.me/jtprogru_chat'
     - name: twitter
       url: 'https://twitter.com/jtprogru'
+    - name: vkcom
+      url: "https://vk.com/jtprogru_channel"
     - name: youtube
       url: 'https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg'
     - name: github
@@ -97,10 +98,8 @@ params:
       url: 'https://mas.to/@jtprogru'
     - name: buymeacoffee
       url: 'https://www.buymeacoffee.com/jtprogru'
-    # - name: paypal
-    #   url: 'http://paypal.me/jtprog'
-    # - name: dev
-    #   url: 'https://dev.to/jtprogru'
+    - name: dev
+      url: 'https://dev.to/jtprogru'
     - name: discord
       url: 'https://discord.gg/zS2gNwt2Ka'
     - name: medium
@@ -109,14 +108,14 @@ params:
       url: 'https://www.linkedin.com/in/jtprogru'
     - name: unsplash
       url: 'https://unsplash.com/@jtprogru'
-    # - name: instagram
-    #   url: 'https://t.me/michael_behind_lens'
     - name: keybase
       url: 'https://keybase.io/jtprog'
-    - name: rss
-      url: '/index.xml'
     - name: soundcloud
       url: 'https://soundcloud.com/jtprogru/'
+    - name: cv
+      url: "https://savinmi.ru"
+    - name: rss
+      url: '/index.xml'
 
   analytics:
     google:
@@ -127,14 +126,18 @@ params:
   entry:
     meta: ["date", "tags", "author"]
     toc: false
-    tocOpen: false
 
   featured:
     previewOnly: true
 
   outputs:
-    home: [ "HTML", "RSS", "JSON" ]
-    section: [ "HTML", "RSS"]
+    home:
+      - "HTML"
+      - "RSS"
+      - "JSON"
+    section:
+      - "HTML"
+      - "RSS"
 
   outputFormats:
     RSS:
@@ -152,15 +155,12 @@ params:
 
 menu:
   main:
-    - name: "Telegram"
-      url: "https://ttttt.me/jtprogru_channel"
-      weight: 1
-    - name: "Спасибо"
-      url: "/donations/"
+    - name: "Поиск"
+      url: "/search/"
       weight: 2
-    - name: "Резюме"
-      url: "https://savinmi.ru/"
-      weight: 5
+    - name: "Поддержать"
+      url: "/donations/"
+      weight: 1
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
@@ -199,7 +199,7 @@ markup:
     smartypants: true
     smartypantsQuotesNBSP: false
     taskLists: true
-  defaultMarkdownHandler: goldmark
+    defaultMarkdownHandler: goldmark
 
   goldmark:
     extensions:
