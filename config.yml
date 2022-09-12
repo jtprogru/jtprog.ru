@@ -32,14 +32,14 @@ params:
   description: "Записная книга самоучки"
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/master/content"
-    Text: "Edit..."  # edit text
-    appendFilePath: true  # to aepend file path to Edit link
+    Text: "Edit..."
+    appendFilePath: true
   label:
     text: "Мишка на сервере"
-    icon: /favicon.svg
+    icon: /fav-light.svg
     iconHeight: 35
-    icon_dark: /fav-light.svg
-    icon_light: /fav-dark.svg
+    # icon_dark: /fav-light.svg
+    # icon_light: /fav-dark.svg
   assets:
     favicon: /favicon.svg
     favicon16x16: /favicon-16x16.svg
