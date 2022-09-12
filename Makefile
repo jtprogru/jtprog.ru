@@ -30,7 +30,7 @@ new.page:
 serve:
 	hugo server -D -E -F --bind ${host} --port ${port} \
 		--baseURL "http://${host}:${port}" --noHTTPCache \
-		--gc --disableFastRender --verbose --watch --printMemoryUsage \
+		--gc --renderStaticToDisk --forceSyncStatic --verbose --watch --printMemoryUsage \
 		--templateMetricsHints --templateMetrics \
 		--config ./${config}
 
