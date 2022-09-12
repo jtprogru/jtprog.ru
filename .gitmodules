@@ -1,3 +1,4 @@
 [submodule "themes/bear"]
 	path = themes/bear
-	url = https://github.com/jtprogru/hugo-bear.git
+    url = https://github.com/jtprogru/hugo-bear.git
+    branch = main
