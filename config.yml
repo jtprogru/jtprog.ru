@@ -90,6 +90,8 @@ params:
       url: 'https://twitter.com/jtprogru'
     - name: vkcom
       url: "https://vk.com/jtprogru_channel"
+    - name: boosty
+      url: 'https://boosty.to/jtprogru'
     - name: youtube
       url: 'https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg'
     - name: github
