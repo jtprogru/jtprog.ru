@@ -19,12 +19,14 @@ type: post
 
 Для ручного добавления файла данных в табличной пространство `ORCL_DATA` требуется подключиться к БД из командной строки через `SQLPlus` под владельцем схемы и выполнить:
 
-### Получение последнего файла с данными в `ORCL_DATA`
+Получение последнего файла с данными в `ORCL_DATA`:
+
 ```sql
 select max(d.FILE_NAME) from dba_data_files d where d.TABLESPACE_NAME = 'ORCL_DATA';
 ```
 
-### Добавление следующего файла данных в `ORCL_DATA` (рекомендуется располагать его в папке с существующими файлами и с именем, содержащим следующий по порядку номер)
+Добавление следующего файла данных в `ORCL_DATA` (рекомендуется располагать его в папке с существующими файлами и с именем, содержащим следующий по порядку номер):
+
 ```sql
 ALTER tablespace SOFI_DATA add DATAFILE '/opt/oracle/oradata/orcl/orcl_data2.dbf' SIZE 32M AUTOEXTEND ON NEXT 32M MAXSIZE unlimited;
 ```
@@ -36,14 +38,17 @@ ALTER tablespace SOFI_DATA add DATAFILE '/opt/oracle/oradata/orcl/orcl_data2.dbf
 При добавлении нужно указать номер нового файла: `ORCL_DATA2.DBF`, `ORCL_DATA3.DBF` и т.д.
 
 Команда для добавления файла #2:
+
 ```sql  
 ALTER tablespace SOFI_DATA add DATAFILE '/opt/oracle/oradata/orcl/orcl_data2.dbf' SIZE 32M AUTOEXTEND ON NEXT 32M MAXSIZE unlimited;
 ```
 
 Делаем в терминале:
+
 ```bash
 sqlplus /nolog
 ```
+
 ```sql
 SQL> conn / as sysdba connected 
 SQL> ALTER tablespace ORCL_DATA add DATAFILE '/opt/oracle/oradata/orcl/orcl_data2.dbf' SIZE 32M AUTOEXTEND ON NEXT 32M MAXSIZE unlimited; 
@@ -54,13 +59,17 @@ Tablespace altered
 
 В папке `/opt/oracle/oradata/orcl/` появятся файлы по порядку:
 
--   `ORCL_DATA.DBF`
--   `ORCL_DATA2.DBF`
--   `ORCL_DATA3.DBF`
+- `ORCL_DATA.DBF`
+- `ORCL_DATA2.DBF`
+- `ORCL_DATA3.DBF`
 
 Если не хватит `TEMP` файлов, то следует добавить еще:
+
 ```sql
 SQL> ALTER tablespace TEMP add TEMPFILE '/opt/oracle/oradata/orcl/temp02.dbf' SIZE 32M AUTOEXTEND ON NEXT 32M MAXSIZE unlimited;
 ```
 
 На этом всё!
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

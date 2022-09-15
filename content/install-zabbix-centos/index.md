@@ -31,7 +31,7 @@ yum install vim mc git -y
 После завершения установки своего любимого софта приступаем к основному действию. Для начала отключаем **SElinux**. Я не вижу смысла с ним заморачиваться на сервере мониторинга в локальной сети.
 
 ```bash
-# vim /etc/sysconfig/selinux
+vim /etc/sysconfig/selinux
 ```
 
 Редактируем строку:
@@ -70,6 +70,7 @@ systemctl enable mariadb.service
 ```bash
 rpm -Uvh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-1.el7.centos.noarch.rpm
 ```
+
 Устанавливаем Zabbix сервер с веб-интерфейсом и с базой данных MySQL:
 
 ```bash
@@ -119,6 +120,7 @@ DBPassword=zabpassword
 systemctl start zabbix-server  
 systemctl enable zabbix-server
 ```
+
 Проверяем лог файл на наличие ошибок:
 
 ```bash
@@ -182,3 +184,6 @@ Password: zabbix
 Нас встречает голая панель управления, так как никаких параметров мы не наблюдаем и не имеем ни одного объекта сбора данных. Далее мы расставляем агенты на все сервера и/или компьютеры которые хотим мониторить (*информации в официальной документации достаточно*) и радуемся жизни.
 
 На этом всё!
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

@@ -23,32 +23,44 @@ type: post
 ## Добавить новое устройство в раздел btrfs
 
 Создаем раздел с файловой системой btrfs
+
 ```bash
-# mkfs.btrfs /dev/device1
-# mount /dev/device1
+mkfs.btrfs /dev/device1
+mount /dev/device1
 ```
+
 Добавляем в него второй (трети,пятый) девайс
+
 ```bash
-# btrfs device add /dev/device2 /mount-point
+btrfs device add /dev/device2 /mount-point
 ```
+
 ## Балансировка btrfs между несколькими устройствами
 
 Метаданные и данные на этих устройствах по-прежнему хранятся только в `/dev/device1`. Теперь сбалансируем btrfs так, чтобы метаданные распространились на все устройства.
+
 ```bash
-# btrfs filesystem balance /mount-point
+btrfs filesystem balance /mount-point
 ```
+
 Балансировка файловой системы займет некоторое время, поскольку она считывает все данные и метаданные файловой системы и перезаписывает их на новом устройстве.
 
 ## Удаляем устройство из btrfs раздела
+
 Используйте команду удаления устройства btrfs, чтобы удалить подключенное устройство. Он перераспределяет любые используемые экстенты на другие устройства в файловой системе для безопасного удаления. Никаких ручных действий не требуется. Сначала создайте и смонтируйте несколько файловых систем btrfs.
+
 ```bash
-# mkfs.btrfs /dev/sdb /dev/sdc /dev/sdd /dev/sde
-# mount /dev/sdb /mnt
+mkfs.btrfs /dev/sdb /dev/sdc /dev/sdd /dev/sde
+mount /dev/sdb /mnt
 ```
 
 Добавим некоторые данные на файловую систему и запустим удаление необходимого устройства:
+
 ```bash
-# btrfs device delete /dev/sdc /mnt
+btrfs device delete /dev/sdc /mnt
 ```
 
 На этом всё! Profit!
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

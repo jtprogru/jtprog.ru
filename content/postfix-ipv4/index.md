@@ -16,10 +16,13 @@ type: post
 
 
 После отключения IPv6 на сервере перестал запускаться Postfix, но оставлял в логах следующие ошибки:
+
 ```bash
 fatal: parameter inet_interfaces: no local interface found for ::1
 ```
+
 Или что-то подобное:
+
 ```bash
 May 23 15:46:27 myserver.local postfix/postsuper[25738]: warning: inet_protocols: disabling IPv6 name/address support: Address family not supported by protocol
 May 23 15:46:28 myserver.local postfix[25657]: /usr/sbin/postconf: warning: inet_protocols: disabling IPv6 name/address support: Address family not supported by protocol
@@ -46,4 +49,8 @@ inet_protocols=ipv4
 ```bash
 systemctl restart postfix
 ```
+
 Profit!
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

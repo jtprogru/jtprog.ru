@@ -19,7 +19,8 @@ type: post
 ---
 Привет, `%username%`! Поговорим о такой классной штуке как [Netbox](https://netbox.readthedocs.io/en/stable/), а так же установим её на Ubuntu 20.04 и прикрутим авторизацию через MS Active Directory.
 
-## Подготовка 
+## Подготовка
+
 Начнем по порядку с обновления пакетов и установки PostgreSQL:
 
 ```bash
@@ -73,6 +74,7 @@ sudo apt-get install -y python3 python3-pip python3-venv python3-dev build-essen
 ## Установка Netbox
 
 Качаем архив с github'a и распаковываем его:
+
 ```bash
 wget https://github.com/netbox-community/netbox/archive/v2.8.8.tar.gz
 tar -xzf v2.8.8.tar.gz -C /opt
@@ -90,6 +92,7 @@ chown --recursive netbox /opt/netbox/netbox/media/
 ```
 
 Это `<gid_netbox_from_etc_group>` заменить на число, которое можно посмотреть вот так:
+
 ```bash
 sudo cat /etc/group | grep netbox
 ```
@@ -102,14 +105,17 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-## Настройка Netbox:
+## Настройка Netbox
+
 Копируем пример конфигурации:
+
 ```bash
 cd netbox/netbox/
 cp configuration.example.py configuration.py
 ```
 
 Файл `configuration.py` приводим к похожему виду:
+
 ```python
 #########################
 #                       #
@@ -390,6 +396,7 @@ SHORT_TIME_FORMAT = 'H:i:s'
 DATETIME_FORMAT = 'N j, Y g:i a'
 SHORT_DATETIME_FORMAT = 'Y-m-d H:i'
 ```
+
 Сгенерировать новый `SECRET_KEY` можно с помощью имеющегося скрипта `netbox/generate_secret_key.py`.
 
 Запускаем миграции БД:
@@ -434,7 +441,7 @@ python3 manage.py collectstatic --no-input
 python3 manage.py runserver 0.0.0.0:8000 --insecure
 ```
 
-Далее можем открыть в браузере то, что указывали в `ALLOWED_HOSTS` и указываем в строке порт `8000` - http://netbox.jtprog.ru:8000 и увидеть что-то похожее на скриншоты ниже, но лучше доделать до конца.
+Далее можем открыть в браузере то, что указывали в `ALLOWED_HOSTS` и указываем в строке порт `8000` - `http://netbox.jtprog.ru:8000` и увидеть что-то похожее на скриншоты ниже, но лучше доделать до конца.
 
 По умолчанию доступ в данный интерфейс есть для всех, а о том как его закрыть читай документацию и внимательнос смотри в `configuration.py`.
 
@@ -447,6 +454,7 @@ python3 manage.py runserver 0.0.0.0:8000 --insecure
 Теперь можно “почти” пользоваться.
 
 ## Запуск
+
 Устанавливаем Nginx:
 
 ```bash
@@ -480,7 +488,9 @@ sudo systemctl enable netbox netbox-rq
 ```bash
 sudo systemctl status netbox.service
 ```
+
 ## Настройка LDAP
+
 Устанавливаем пакеты для работы с LDAP (MS AD):
 
 ```bash
@@ -568,3 +578,6 @@ sudo journalctl -xef -u netbox.service
 ```
 
 На этом всё! Profit!
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

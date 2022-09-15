@@ -25,10 +25,10 @@ type: post
 
 Затем измените настройки подключения в:
 
--   Speed (baud) – 38400;
--   Data bits – 8;
--   Stop bits – 1;
--   Flow control – None.
+- Speed (baud) – 38400;
+- Data bits – 8;
+- Stop bits – 1;
+- Flow control – None.
 
 ![](/wp-content/uploads/2018/01/2018-01-07_21-40_03.jpg)
 
@@ -150,8 +150,8 @@ Reboot device by command.
 
 При загрузке вы увидите информацию `Startup configuration file does not exist`. Все настройки были удалены. Логин и пароль по-умолчанию, используемые в коммутаторах данных серий:
 
--   логин – Admin;
--   пароль – пустой, его нет.
+- логин – Admin;
+- пароль – пустой, его нет.
 
 ```bash
 Starting……
@@ -263,5 +263,7 @@ File uploaded successfully.
 
 Надеюсь, данная информация окажется кому-то полезной.
 
-
 **PS**: Среди коммутаторов HP эту статью можно применить к моделям JE005A, JE006A, JE007A, JE008A, JE009A, JG348A, JG349A, JG350A
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

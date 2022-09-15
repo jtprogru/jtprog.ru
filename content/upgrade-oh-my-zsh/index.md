@@ -16,9 +16,11 @@ type: post
 Всем пинг! Уже некоторое время я пользуюсь такой прекрасной вещью как командная оболочка [ZSH](https://ru.wikipedia.org/wiki/Zsh) и я вам скажу "ЭТО ПИПЕЦ КАК КРУТО!" Отказаться от стандартной для Ubuntu оболочки Bash меня сподвигла статья [afiskon'а](https://eax.me/zsh/). В большей степени я просто воспользовался его файлом настроек и пока всем доволен. Так же у меня установлена такая вещь как [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh).
 
 Все было прекрасно и радужно до одно момента. Сегодня я решил обновить этот самый `Oh-My-Zsh` и в ответ на команду:
+
 ```bash
 upgrade_oh_my_zsh
 ```
+
 Мне вылетело следующее сообщение:
 
 ```bash
@@ -29,12 +31,14 @@ Please commit or stash them.
 ```
 
 Исправить данную ошибку можно таким вот способом:
+
 ```bash
 cd ~/.oh-my-zsh/
 git add .
 git commit -m "commit message"
 upgrade_oh_my_zsh
 ```
+
 Сразу оговорюсь, что в ручную я первый раз попытался сделать обновление. А данная [ошибка](https://github.com/robbyrussell/oh-my-zsh/issues/1991) не нова и висит с 2013 года.
 
 В общем после таких скромных манипуляций вы спокойно сможете обновить Oh-My-Zsh.
@@ -44,6 +48,7 @@ upgrade_oh_my_zsh
 ЗЫЖ Тем, кто заинтересовался работой в данной оболочке советую прочесть прекрасную статью [afiskon'а](http://eax.me/zsh/).
 
 Так же ниже листинг моего файла `~/.zshrc`
+
 ```bash
 # Path to your oh-my-zsh installation.
 export ZSH=/home/jtprog/.oh-my-zsh
@@ -189,3 +194,6 @@ command_not_found_handler() {
 }
 setopt autocdsetopt extendedglobsetopt hist_ignore_all_dupssetopt hist_ignore_space
 ```
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).
