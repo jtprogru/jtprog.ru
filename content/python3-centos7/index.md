@@ -32,7 +32,7 @@ sudo yum groupinstall development
 
 ## Установка Python 3.x
 
-В стандартных репозиториях отсутствует последняя стабильная сборка Python и нам необходимо установить дополнительный репозиторий `IUS (Inline with Upstream Stable)`. 
+В стандартных репозиториях отсутствует последняя стабильная сборка Python и нам необходимо установить дополнительный репозиторий `IUS (Inline with Upstream Stable)`.
 
 ```bash
 sudo yum install https://centos7.iuscommunity.org/ius-release.rpm

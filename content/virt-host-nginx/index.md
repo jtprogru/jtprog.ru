@@ -95,7 +95,7 @@ vim /var/www/example.com/html/index.html
 
 Добавьте в этот файл простой HTML-код:
 
-```
+```bash
 Welcome to Example.com!
 
 Success! The example.com server block is working!
