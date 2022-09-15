@@ -1,5 +1,5 @@
 ---
-categories: macOS
+categories: OS
 comments: true
 date: "2016-09-27T17:27:00+03:00"
 draft: false

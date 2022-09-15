@@ -1,6 +1,6 @@
 ---
 authorbox: true
-categories: Linux
+categories: OS
 comments: true
 date: "2020-04-01T23:55:00+03:00"
 description: Настройка репликации master-slave на прмиере MySQL 5.7

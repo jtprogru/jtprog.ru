@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2019-07-29T12:01:18+03:00"
 description: Заметка о том, как базово пользоваться strace для подглядывания и отладки

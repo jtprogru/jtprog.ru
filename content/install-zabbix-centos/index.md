@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2017-10-05T13:00:15+03:00"
 description: Описан процесс установки Zabbix 3.4 на CentOS 7

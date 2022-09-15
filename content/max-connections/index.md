@@ -1,6 +1,6 @@
 ---
 authorbox: true
-categories: Linux
+categories: OS
 comments: true
 date: "2020-08-14T17:42:54+03:00"
 description: Чиним ошибку "too many connections" в MySQL

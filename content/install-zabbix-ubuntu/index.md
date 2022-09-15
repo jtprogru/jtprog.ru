@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2020-02-18T22:40:00+03:00"
 description: Описан процесс установки Zabbix 4.4 на Ubuntu 18.04

@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2020-02-17T15:13:11+03:00"
 description: Генерация случайных паролей в консоли

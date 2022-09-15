@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2020-07-10T02:00:00+03:00"
 description: Описан процесс чистой установки Zabbix 5.0 с PostgreSQL 12 на Ubuntu

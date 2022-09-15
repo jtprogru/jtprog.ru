@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2020-01-13T19:48:58+03:00"
 description: Типовая настройка Memcached для работы с Битрикс

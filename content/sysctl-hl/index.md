@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2019-07-26T18:50:58+03:00"
 description: Заметка о sysctl и их базовых значениях для высоких нагрузок
