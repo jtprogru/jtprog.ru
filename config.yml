@@ -157,9 +157,9 @@ params:
 
 menu:
   main:
-    - name: "Поиск"
-      url: "/search/"
-      weight: 2
+#   - name: "Поиск"
+#     url: "/search/"
+#     weight: 2
     - name: "Поддержать"
       url: "/donations/"
       weight: 1
