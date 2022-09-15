@@ -41,3 +41,6 @@ url: /amarok-on-mysql/
 Если будут проблемы с треками, содержащими кириллицу в тегах, то необходимо в `/etc/my.cnf` в разделе `[mysql]` вписать `default-character-set = utf8`.
 
 На этом все! Profit!
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

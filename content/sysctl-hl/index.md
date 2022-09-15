@@ -366,3 +366,5 @@ net.core.wmem_max = 16777216
 wc -l /proc/net/ip_conntrack
 ```
 
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

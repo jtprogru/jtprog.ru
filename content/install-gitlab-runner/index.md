@@ -19,7 +19,7 @@ type: post
 
 Привет, `%username%`! Простая шпаргалка о том, как быстро и просто установить Gitlab Runner на Ubuntu/Debian.
 
-### Добавляем репозиторий
+## Добавляем репозиторий
 
 Имеем в распоряжении сервер на Ubuntu:
 
@@ -39,7 +39,7 @@ root@mysrv:~#
 curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
 ```
 
-### Установка
+## Установка
 
 Установка последней версии выполняется просто:
 
@@ -56,7 +56,7 @@ sudo apt-cache madison gitlab-runner
 export GITLAB_RUNNER_DISABLE_SKEL=true; sudo -E apt-get install gitlab-runner=10.0.0
 ```
 
-### Регистрация
+## Регистрация
 
 Для регистрации ранера необходимо получить токен в настройках репозитория (или группы репозиториев). Это делается в разделе `Settings` -> `CI/CD` -> `Runners`. А выглядит интересующий нас пункт примерно вот так:
 
@@ -84,8 +84,11 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 
 Тут мы зарегистрировали самый простой вариант ранера с обычным шеллом (shell) в качестве исполнителя. Это нам позволит выполнять на ранере такого типа абсолютно все, что я могу выполнить руками в консоли.
 
-### Автоматизация
+## Автоматизация
 
 Для работы с gitlab-runner есть официальный [модуль](https://docs.ansible.com/ansible/latest/collections/community/general/gitlab_runner_module.html) в Ansible, а так же есть вроде бы не плохая [роль](https://github.com/riemers/ansible-gitlab-runner) для установки gitlab-runner.
 
 На это всё! Profit!
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

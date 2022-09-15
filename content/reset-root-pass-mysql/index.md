@@ -20,33 +20,50 @@ type: post
 Относительно быстрый гуглеж привел меня к довольно простому рецепту лечения склероза. Для смены пароля root'а от MySQL требуется произвести следующие манипуляции в консоли.
 
 Останавливаем MySQL:
+
 ```bash
 /etc/init.d/mysqld stop
 ```
+
 Запускаем MySQL с особыми параметрами:
+
 ```bash
 /usr/bin/mysqld_safe --skip-grant-tables --user=root &
 ```
+
 Запускаем клиента MySQL:
+
 ```bash
 mysql -u root
 ```
+
 Выполняем запрос SQL:
+
 ```sql
 UPDATE mysql.user SET Password=PASSWORD(`siskisiski`) WHERE User=`root`;
 ```
+
 где `siskisiski` - новый пароль
 
 Применяем изменения:
+
 ```sql
 FLUSH PRIVILEGES;
 ```
+
 Выходим из клиента MySQL:
+
 ```sql
 exit
 ```
+
 Перезапускаем MySQL сервер:
+
 ```bash
 /etc/init.d/mysqld restart
 ```
+
 На этом всё - пароль рута MySQL изменён на `siskisiski`. Запоминаем его и стараемся не забывать. Profit!
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).

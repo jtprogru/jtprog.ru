@@ -50,7 +50,9 @@ System View: return to User View with Ctrl+Z.
 Time Zone : MSK4 add 04:00:00  
 [Main-Switch]
 ```
+
 Теперь активируем необходимые сервисы (Telnet и SSH), задаем супер-пароль и пароль локальному пользователю `admin` (пароли задавайте свои). По желанию, вы можете завести своего пользователя (не забудьте только дать ему разрешение на интересующие вас сервисы: `ssh`, `telnet` или `terminal`):
+
 ```bash
 [Main-Switch]telnet server enable  
 % Start Telnet server  
@@ -62,7 +64,9 @@ Info: Enable SSH server.
 [Main-Switch-luser-admin]quit  
 [Main-Switch]
 ```
+
 Настроим параметры интерфейса `Vlan-interface1` (в который объединены по-умолчанию все сетевые интерфейсы коммутатора): его описание, ip-адрес, установим маршрут по-умолчанию (`192.168.0.1` – маршрутизатор), настроим сервис сетевого времени ntp (на `192.168.0.1` работает `ntpd` сети):
+
 ```bash
 [Main-Switch]interface Vlan-interface1  
 [Main-Switch-Vlan-interface1]description LOCALNET  
@@ -72,13 +76,17 @@ Info: Enable SSH server.
 [Main-Switch]ntp-service source-interface Vlan-interface1  
 [Main-Switch]ntp-service unicast-server 192.168.0.1
 ```
+
 Зададим настройки для DNS:
+
 ```bash
 [Main-Switch]dns domain domain.ru  
 [Main-Switch]dns server 192.168.0.2  
 [Main-Switch]dns source-interface Vlan-interface1
 ```
+
 Пусть, к примеру, с 1 по 6 интерфейс нашего коммутатора будут не использованными. Зададим каждому из них описание и “опустим” его:
+
 ```bash
 [Main-Switch]interface GigabitEthernet 1/0/1  
 [Main-Switch-GigabitEthernet1/0/1]description NOT-USED  
@@ -86,7 +94,9 @@ Info: Enable SSH server.
 [Main-Switch-GigabitEthernet1/0/1]quit  
 [Main-Switch]
 ```
+
 Если вы желаете собирать статистику с помощью `snmp`, вам необходимо сделать следующие настройки:
+
 ```bash
 [Main-Switch]snmp-agent  
 [Main-Switch]snmp-agent community read public  
@@ -95,9 +105,11 @@ Info: Enable SSH server.
 [Main-Switch]snmp-agent sys-info location SIT, Domian  
 [Main-Switch]snmp-agent sys-info version all
 ```
+
 Про настройку `vlan`. Допустим в нашей сети существует `vlan 100`, предназначенный для гостей и сторонних пользователей. Разберем общий случай, когда наш настраиваемый сейчас коммутатор является “проходным”. Т.е. к нему непосредственно подключено два “гостя” из подсети, настроенной для `vlan 100` (порты `GigabitEthernet 1/0/20` и `GigabitEthernet 1/0/21`, в которых будет непосредственно тегированный трафик) и два порта являются транслирующими гибридными (`GigabitEthernet 1/0/27` и `GigabitEthernet 1/0/28`, по которым идет и тегированный трафик, и нетегированный).
 
 Обозначим наличие нашего `vlan` и сделаем описание для портов `GigabitEthernet 1/0/20` и `GigabitEthernet 1/0/21`:
+
 ```bash
 [Main-Switch]vlan 100  
 [Main-Switch-vlan100]description GUESTNET  
@@ -112,7 +124,9 @@ Info: Enable SSH server.
 [Main-Switch-GigabitEthernet1/0/21]quit  
 [Main-Switch]
 ```
+
 Настроим гибридные порты `GigabitEthernet 1/0/27` и `GigabitEthernet 1/0/28`:
+
 ```bash
 [Main-Switch]interface GigabitEthernet 1/0/27  
 [Main-Switch-GigabitEthernet1/0/27]description TO-SERVERN  
@@ -132,7 +146,9 @@ Please wait... Done.
 [Main-Switch-GigabitEthernet1/0/28]quit  
 [Main-Switch]
 ```
+
 Теперь можно просмотреть, что у нас получилось и сохраним сделанные изменения:
+
 ```bash
 [Main-Switch]display current-configuration  
   
@@ -252,7 +268,9 @@ Saved the current configuration to mainboard device successfully.
 Configuration is saved to device successfully.  
 [Main-Switch]
 ```
+
 Как настроен тот или иной элемент вашей конфигурации можно просмотреть с помощью команды `display` + ...
+
 ```bash
 [Main-Switch]display dns server  
 Type:  
@@ -297,8 +315,12 @@ SIT, Domian
 SNMP version running in the system:  
 SNMPv1 SNMPv2c SNMPv3
 ```
+
 Отменить какую-либо настройку можно с помощью команды `undo`.
 
 Вот, в принципе, и все. Именно с такими настройками у меня работает несколько коммутаторов в сети с поддержкой нескольких `vlan`.
 
 **PS**: Среди коммутаторов HP эту статью можно применить к моделям JE005A, JE006A, JE007A, JE008A, JE009A, JG348A, JG349A, JG350A
+
+---
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).
