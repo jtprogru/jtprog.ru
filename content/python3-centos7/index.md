@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2019-08-15T11:33:00+03:00"
 description: Как установить Python 3 на CentOS 7

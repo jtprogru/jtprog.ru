@@ -1,6 +1,6 @@
 ---
 authorbox: true
-categories: Linux
+categories: OS
 comments: true
 date: "2020-07-11T02:00:00+03:00"
 description: Немного пробежимся по типичной установке типичной [Grafana 7](https://grafana.com)

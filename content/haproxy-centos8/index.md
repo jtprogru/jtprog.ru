@@ -1,6 +1,6 @@
 ---
 authorbox: true
-categories: Linux
+categories: OS
 comments: true
 date: "2020-04-09T01:30:00+03:00"
 description: Процедура установки HAProxy из исходников на CentOS 8 с поддержкой метрик

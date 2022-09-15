@@ -1,5 +1,5 @@
 ---
-categories: Windows
+categories: OS
 comments: true
 date: "2016-01-19T16:13:31+03:00"
 draft: false

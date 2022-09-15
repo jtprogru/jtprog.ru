@@ -1,7 +1,7 @@
 ---
 TocOpen: false
 author: jtprogru
-categories: Linux
+categories: OS
 comments: false
 cover:
   alt: Security system

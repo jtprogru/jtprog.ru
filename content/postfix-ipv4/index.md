@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2019-05-23T15:48:55+03:00"
 draft: false

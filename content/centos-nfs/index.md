@@ -1,5 +1,5 @@
 ---
-categories: Linux
+categories: OS
 comments: true
 date: "2019-07-19T14:35:42+03:00"
 description: Разворачиваем NFS сервер на базе CentOS 7
