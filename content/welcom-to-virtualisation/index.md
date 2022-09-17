@@ -1,10 +1,13 @@
 ---
 categories: Work
-comments: true
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2014-06-18T17:10:00+03:00"
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /welcom-to-virtualisation/
 tags:
 - esxi

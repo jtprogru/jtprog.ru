@@ -1,14 +1,15 @@
 ---
-TocOpen: false
 author: jtprogru
 categories: Work
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 comments: false
 date: "2020-11-29T12:00:00+03:00"
-description: Базовая настройка кэширующего DNS-resolver systemd-resolved
-disableShare: false
+description: ""
 draft: false
-hidemeta: false
-showToc: false
 tags:
 - systemd
 - resolved

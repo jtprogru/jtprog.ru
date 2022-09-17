@@ -1,14 +1,14 @@
 ---
-TocOpen: false
 author: jtprogru
 categories: Work
-comments: false
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2020-11-27T20:20:00+03:00"
-description: Настройка штатного механизма синхронизации времени systemd-timesyncd
-disableShare: false
+description: ""
 draft: false
-hidemeta: false
-showToc: false
 tags:
 - systemd
 - timesyncd

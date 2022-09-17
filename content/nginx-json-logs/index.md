@@ -1,20 +1,15 @@
 ---
-TocOpen: false
 author: jtprogru
 categories: Work
 comments: false
 cover:
-  alt: Timetravel
-  caption: Photo by [Artur Kechter](https://unsplash.com/@rtrkchtr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/s/photos/timetravel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  image: cover.jpg
+  alt: work
+  caption: work
+  image: work.png
   relative: false
 date: "2021-08-26T18:14:09+03:00"
 description: ""
-disableShare: false
 draft: false
-hidemeta: false
-showToc: false
 tags:
 - nginx
 - json

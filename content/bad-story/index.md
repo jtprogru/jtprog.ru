@@ -1,10 +1,14 @@
 ---
 categories: Work
-comments: true
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
+comments: false
 date: "2014-09-18T19:20:00+03:00"
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /bad-story/
 tags:
 - spam

@@ -1,15 +1,15 @@
 ---
-TocOpen: false
 author: jtprogru
 categories: Work
-comments: true
+comments: false
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2020-12-05T19:36:36+03:00"
-description: Установка, настройка и использование мощного инструмента анализа нагрузки
-  и производительности сервера
-disableShare: false
+description: ""
 draft: false
-hidemeta: false
-showToc: false
 tags:
 - atop
 - linux

@@ -2,17 +2,14 @@
 author: jtprogru
 categories: Work
 comments: false
-# cover:
-#     image: "<image path/url>"
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: {{ .Date }}
 description: ""
-disableShare: false
 draft: true
-hidemeta: false
-showToc: false
 tags:
   - first
 title: '{{ replace .Name "-" " " | title }}'

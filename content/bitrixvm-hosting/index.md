@@ -4,9 +4,9 @@ author: jtprogru
 categories: Work
 comments: false
 cover:
-  alt: BitrixVM
-  caption: ""
-  image: bitrixvm.jpg
+  alt: work
+  caption: work
+  image: work.png
   relative: false
 date: "2021-04-07T22:31:31+03:00"
 disableShare: false

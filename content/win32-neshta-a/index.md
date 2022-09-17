@@ -1,10 +1,13 @@
 ---
 categories: Work
-comments: true
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2015-03-19T19:11:00+03:00"
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /win32-neshta-a/
 tags:
 - windows
