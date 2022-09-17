@@ -1,12 +1,14 @@
 ---
 categories: Develop
-comments: true
+cover:
+  alt: develop
+  caption: develop
+  image: develop.png
+  relative: false
 date: "2019-08-15T19:50:55+03:00"
-description: Небольшой пример работы с API Unsplash из Python 3 с использованием библиотеки
-  pyunsplash
+description: ""
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /get-pic/
 tags:
 - python

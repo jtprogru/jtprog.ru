@@ -1,10 +1,13 @@
 ---
 categories: Develop
-comments: true
+cover:
+  alt: develop
+  caption: develop
+  image: develop.png
+  relative: false
 date: "2017-09-13T15:00:00+03:00"
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /twitter-excuse/
 tags:
 - python

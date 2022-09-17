@@ -1,11 +1,14 @@
 ---
 categories: Develop
-comments: true
+cover:
+  alt: develop
+  caption: develop
+  image: develop.png
+  relative: false
 date: "2020-03-11T22:50:00+03:00"
-description: Как можно выгрузить datasources и dashboards из Grafana
+description: ""
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /grafana-exports/
 tags:
 - grafana

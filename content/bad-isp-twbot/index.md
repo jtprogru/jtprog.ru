@@ -1,13 +1,15 @@
 ---
 author: jtprogru
 categories: Develop
-comments: true
+cover:
+  alt: develop
+  caption: develop
+  image: develop.png
+  relative: false
 date: "2019-08-14T12:10:00+03:00"
-description: Небольшой проект который мне помог поднять качество работы моего Интернет-провайдера
-  написаный на Python 3
+description: ""
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /bad-isp-twbot/
 tags:
 - python
