@@ -2,7 +2,7 @@
 categories: Other
 cover:
   alt: other
-  caption: other
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: other.png
   relative: false
 date: "2015-08-31T18:31:00+03:00"

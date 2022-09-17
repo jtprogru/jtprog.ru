@@ -2,7 +2,7 @@
 categories: Develop
 cover:
   alt: develop
-  caption: develop
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: develop.png
   relative: false
 date: "2019-08-15T19:50:55+03:00"

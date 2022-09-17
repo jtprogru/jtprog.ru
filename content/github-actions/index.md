@@ -2,7 +2,7 @@
 categories: DevOps
 cover:
   alt: devops
-  caption: devops
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: devops.png
   relative: false
 date: "2021-04-28T16:27:11+03:00"
@@ -14,13 +14,13 @@ title: '[DevOps] Github Actions для блогера'
 type: post
 ---
 
-Привет, `%username%`! Я тут недавно у себя на [Medium](https://jtprog.medium.com/как-и-зачем-я-веду-свой-блог-cd0c429f9ffa) расписывал как именно я работаю с контентом на этом сайте.
+Привет, `%username%`! Я тут недавно на [Medium](https://jtprog.medium.com/как-и-зачем-я-веду-свой-блог-cd0c429f9ffa) расписывал как именно я работаю с контентом на этом сайте.
 
 > Блогер – человек, который ведет свой [блог](https://ru.wikipedia.org/wiki/Блог), а не вот эти ваши с ютубов ~~блэт~~.
 
 Так исторически сложилось, что для себя и своих проектов я чаще использую GitHub, а GitLab я использую исключительно в работе. В крайних случаях используется Bitbucket (но это прям вообще жесть для меня).
 
-Вариантов ведения блога у меня было уже несколько, о чем можно почитать в той же статье на [Medium](https://jtprog.medium.com/как-и-зачем-я-веду-свой-блог-cd0c429f9ffa), [тут](/gohugo/) и [тут](/gitlab-ci/), так что описывать причины я не вижу смысла.
+Вариантов ведения блога у меня было уже несколько, о чем можно почитать в той же статье на [Medium](https://jtprog.medium.com/как-и-зачем-я-веду-свой-блог-cd0c429f9ffa), [тут](https://jtprog.ru/gohugo/) и [тут](https://jtprog.ru/gitlab-ci/), так что описывать причины я не вижу смысла.
 
 ## "Ближе к телу!"
 

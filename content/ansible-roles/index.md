@@ -4,7 +4,7 @@ comments: false
 cover:
     image: "basics.png"
     alt: "basics"
-    caption: ""
+    caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
     relative: false
 date: 2022-09-05T10:15:00+03:00
 description: ""
@@ -340,6 +340,8 @@ dependencies: []
 Вообще по части именования, kubespray, на мой взгляд, самый хороший пример. Ты открываешь директорию с ролями и по наименованиям понимаешь, что именно делает та или иная роль. Рекомендую делать так же – просто и понятно, не пытаясь усложнить то, что не требует усложнения.
 
 ### Вредные советы
+
+![site.yaml](site-yaml.png)
 
 **Вредный совет 1**: Чем больше в твоей роли вызовов `ansible.builtin.command`, `ansible.builtin.raw` или `ansible.builtin.shell`, тем веселее тебе будет дебажить. Особенно есть ты подкладываешь всякие `script.sh`.
 

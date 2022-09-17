@@ -2,7 +2,7 @@
 categories: Work
 cover:
   alt: work
-  caption: work
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: work.png
   relative: false
 date: "2021-04-07T22:31:31+03:00"
@@ -117,7 +117,7 @@ X-Powered-CMS: Bitrix Site Manager (651ca9fa6ad144b900fef86e26831111)
 http: error: ContentDecodingError: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))
 ```
 
-И видя такое впервые в жизни ты начинаешь думать, что косяк в настройках `gzip`. Только есть шанс уйти не туда: в дефолтной BitrixVM, которая работает на базе CentOS 7, запускается `httpd` вместо ожидаемого `php-fpm`. Может возникнуть желание поковырять настройки httpd, потому что "ну nginx-то работает как калаш" – не делайте этого.
+И видя такое впервые в жизни ты начинаешь думать, что косяк в настройках `gzip`. Только есть шанс уйти не туда: в дефолтной BitrixVM, которая работает на базе CentOS 7, запускается `httpd` вместо ожидаемого `php-fpm`. Может возникнуть желание поковырять настройки `httpd`, потому что "ну nginx-то работает как калаш" – не делайте этого.
 
 Короче идем в настройки Nginx и выставляем вот такие настройки для `gzip` в файле `/etc/nginx/nginx.conf`:
 

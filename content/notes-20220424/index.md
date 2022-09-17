@@ -2,7 +2,7 @@
 categories: Notes
 cover:
   alt: notes
-  caption: notes
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: notes.png
   relative: false
 date: "2022-04-24T14:30:18+03:00"

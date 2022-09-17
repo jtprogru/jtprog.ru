@@ -2,7 +2,7 @@
 categories: Opinion
 cover:
   alt: opinions
-  caption: opinions
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: opinions.png
   relative: false
 date: "2021-07-13T13:00:00+03:00"
@@ -23,11 +23,11 @@ type: post
 
 В 2014 году бложик жил на Wordpress и выглядел примерно вот так:
 
-![My blog 2014](2014-12-17.png)
+![My blog 2014](img/2014-12-17.png)
 
 А в 2019 уже немного по другому:
 
-![My Blog 2019](2019-01-07.png)
+![My Blog 2019](img/2019-01-07.png)
 
 Ну а как сейчас выглядит бложик – думаю и так ясно. Правда появились темная и светлая тема (переключатель возле заголовка – я предпочитаю темную).
 
