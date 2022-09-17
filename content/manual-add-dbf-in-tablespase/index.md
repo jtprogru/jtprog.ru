@@ -1,17 +1,16 @@
 ---
-categories: OS
-comments: true
+categories: howto
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2017-11-21T17:26:35+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /manual-add-dbf-in-tablespase/
 tags:
-- oracle db
+- oracledb
 - centos
 - orcl_data
-title: '[Oracle] Ручное добавление файлов данных в табличной пространство в CentOS
-  7'
+title: '[HowTo] Ручное добавление файлов данных в табличной пространство в CentOS 7'
 type: post
 ---
 

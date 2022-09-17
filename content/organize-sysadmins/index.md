@@ -1,11 +1,11 @@
 ---
 categories: Work
-comments: true
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2018-07-28T14:29:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /organize-sysadmins/
 tags:
 - work
 - admins

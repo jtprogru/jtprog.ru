@@ -1,17 +1,17 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2015-02-18T14:49:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /android-and-ubuntu/
 tags:
 - android
 - ubuntu
 - mtp
 - udev rules
-title: '[Ubuntu] Дружим Android и Ubuntu 14.04'
+title: '[HowTo] Дружим Android и Ubuntu 14.04'
 type: post
 ---
 

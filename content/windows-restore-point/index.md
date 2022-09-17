@@ -1,15 +1,15 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2015-06-18T21:06:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /windows-restore-point/
 tags:
 - restore point
 - windows
-title: '[Windows] Автоматическое создание точек восстановления Windows'
+title: '[OS] Автоматическое создание точек восстановления Windows'
 type: post
 ---
 

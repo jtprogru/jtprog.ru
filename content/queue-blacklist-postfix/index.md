@@ -1,15 +1,15 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2016-10-31T09:00:14+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /queue-blacklist-postfix/
 tags:
 - postfix
 - blacklist
-title: '[Ubuntu] Очередь и blacklist Postfix'
+title: '[OS] Очередь и blacklist Postfix'
 type: post
 ---
 

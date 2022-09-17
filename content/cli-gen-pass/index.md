@@ -1,17 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2020-02-17T15:13:11+03:00"
-description: Генерация случайных паролей в консоли
-draft: false
-noauthor: false
-share: true
-slug: /cli-gen-pass/
 tags:
 - linux
 - cli
 - pass
-title: '[Linux] Генерация паролей в CLI'
+title: '[OS] Генерация паролей в CLI'
 type: post
 ---
 

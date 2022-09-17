@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2015-06-19T12:37:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /ubuntu-console/
 tags:
 - encoding
 - cli
 - linux
-title: '[Encoding table] Кракозябры в консоли'
+title: '[HowTo] Кракозябры в консоли'
 type: post
 ---
 

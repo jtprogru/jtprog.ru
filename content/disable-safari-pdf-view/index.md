@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2016-08-01T05:55:44+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /disable-safari-pdf-view/
 tags:
 - macos
 - safari
-title: '[Mac OS X] Разрешаем просмотр pdf-файлов в Safari'
+title: '[HowTo] Разрешаем просмотр pdf-файлов в Safari'
 type: post
 ---
 

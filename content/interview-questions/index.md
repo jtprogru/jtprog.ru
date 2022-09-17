@@ -1,20 +1,11 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Interview
-comments: false
 cover:
-  alt: For hire
-  caption: Photo by [Clem Onojeghuo](https://unsplash.com/@clemono?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/s/photos/job-interview?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  image: cover.jpg
+  alt: Interview
+  caption: Interview
+  image: interview.png
   relative: false
 date: "2021-07-03T15:55:00+03:00"
-description: Что стоит спрашивать у представителей компании во время проведения интервью
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - work
 - работа

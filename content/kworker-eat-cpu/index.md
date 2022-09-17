@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2015-09-11T17:21:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /kworker-eat-cpu/
 tags:
 - kworker
 - cpu
 - interrupts
-title: '[kworker] Одно ядро на 90-97% загружено процессом kworker'
+title: '[HowTo] Одно ядро на 90-97% загружено процессом kworker'
 type: post
 ---
 

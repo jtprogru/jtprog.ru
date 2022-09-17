@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2016-08-03T10:00:03+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /server-disconnected-code-1006/
 tags:
 - proxmox
 - cert
-title: '[Proxmox] Ошибка Server disconnected (code: 1006)'
+title: '[HowTo] Ошибка Server disconnected (code: 1006)'
 type: post
 ---
 

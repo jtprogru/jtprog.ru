@@ -1,16 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2015-03-23T21:16:38+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /gpt-to-mbr/
 tags:
 - gpt
 - mbr
 - windows
-title: '[Diskpart] Делаем MBR из GPT'
+title: '[OS] Делаем MBR из GPT'
 type: post
 ---
 

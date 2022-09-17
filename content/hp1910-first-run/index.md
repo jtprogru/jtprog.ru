@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2018-01-07T22:10:30+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /hp1910-first-run/
 tags:
-- hp 1910
+- hp1910
 - network
-title: '[HP1910] Начальная настройка коммутатора HP 1910 серии'
+title: '[HowTo] Начальная настройка коммутатора HP 1910 серии'
 type: post
 ---
 

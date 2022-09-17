@@ -1,20 +1,11 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Basics
-comments: false
 cover:
-  alt: Space Cluster
-  caption: Photo by [Arnaud Mariat](https://unsplash.com/@arnaudmariat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/s/photos/space-cluster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  image: cover.jpg
-  relative: false
+    image: "basics.png"
+    alt: "basics"
+    caption: ""
+    relative: false
 date: "2021-08-27T21:00:00+03:00"
-description: ""
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - HA
 - high availability

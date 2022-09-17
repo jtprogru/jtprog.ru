@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2019-05-22T12:27:22+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /btrfs-dev/
 tags:
 - btrfs
 - linux
-title: '[Btrfs] Btrfs - работаем с разделом'
+title: '[HowTo] Btrfs - работаем с разделом'
 type: post
 ---
 Привет, `%username%`! Неожиданно для себя я открыл такую файловую систему как BTRFS.

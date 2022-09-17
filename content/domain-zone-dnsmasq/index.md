@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2015-12-16T10:48:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /domain-zone-dnsmasq/
 tags:
 - dnsmasq
 - dns
 - linux
-title: '[DNSmasq] Своя доменная зона с dnsmasq'
+title: '[HowTo] Своя доменная зона с dnsmasq'
 type: post
 ---
 

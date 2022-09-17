@@ -1,14 +1,14 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2013-08-26T19:14:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /change-linux/
 tags:
 - linux
-title: '[Choice] Какую *nix-систему поставить на ноутбук?!'
+title: '[OS] Какую *nix-систему поставить на ноутбук?!'
 type: post
 ---
 

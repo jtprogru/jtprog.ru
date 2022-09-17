@@ -1,16 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2015-11-05T15:15:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /error-0x8004010f/
 tags:
 - windows
 - outlook
 - "0x8004010F"
-title: '[Outlook] Ошибка 0x8004010F в Outlook 2010-2013'
+title: '[OS] Ошибка 0x8004010F в Outlook 2010-2013'
 type: post
 ---
 

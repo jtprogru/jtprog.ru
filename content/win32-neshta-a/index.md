@@ -1,16 +1,16 @@
 ---
 categories: Work
-comments: true
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2015-03-19T19:11:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /win32-neshta-a/
 tags:
 - windows
 - neshta
 - virus
-title: '[Virus] Win32.Neshta.A - устраняем последствия'
+title: '[Work] Win32.Neshta.A - устраняем последствия'
 type: post
 ---
 

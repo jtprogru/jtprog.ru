@@ -1,16 +1,15 @@
 ---
-categories: OS
-comments: true
+categories: howto
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2017-10-05T13:00:15+03:00"
-description: Описан процесс установки Zabbix 3.4 на CentOS 7
-draft: false
-noauthor: false
-share: true
-slug: /install-zabbix-centos/
 tags:
 - zabbix
 - centos
-title: '[CentOS] Установка и настройка Zabbix 3.4 на CentOS 7'
+title: '[HowTo] Установка и настройка Zabbix 3.4 на CentOS 7'
 type: post
 ---
 

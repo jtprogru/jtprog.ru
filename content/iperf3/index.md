@@ -1,16 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2018-07-11T10:38:39+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /iperf3/
 tags:
 - iperf
 - linux
 - network
-title: '[CentOS] Установка iperf3'
+title: '[OS] Установка iperf3'
 type: post
 ---
 

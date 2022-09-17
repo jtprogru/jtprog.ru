@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2018-01-07T21:40:57+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /hp1910-reset-password/
 tags:
-- hp 1910
+- hp1910
 - network
-title: '[HP1910] Сброс пароля на коммутаторе HP 1910 серии'
+title: '[HowTo] Сброс пароля на коммутаторе HP 1910 серии'
 type: post
 ---
 

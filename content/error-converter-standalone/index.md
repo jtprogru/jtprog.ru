@@ -1,16 +1,16 @@
 ---
-categories: DevOps
-comments: true
+categories: OS
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2018-09-17T07:00:05+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /error-converter-standalone/
 tags:
 - centos
 - converter
 - vmware
-title: '[VMware] vCenter Converter Standalone error'
+title: '[OS] vCenter Converter Standalone error'
 type: post
 ---
 

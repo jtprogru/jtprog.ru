@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2017-10-27T14:36:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /virt-host-nginx/
 tags:
 - nginx
 - vhosts
 - centos
-title: '[CentOS] Настройка виртуальных хостов Nginx в CentOS 7'
+title: '[HowTo] Настройка виртуальных хостов Nginx в CentOS 7'
 type: post
 ---
 

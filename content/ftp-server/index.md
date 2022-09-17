@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2015-02-02T17:25:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /ftp-server/
 tags:
 - vsftpd
 - ubuntu
 - ftp
-title: '[vsFTPd] Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04'
+title: '[HowTo] Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04'
 type: post
 ---
 

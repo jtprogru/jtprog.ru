@@ -1,16 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2015-06-08T12:49:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /windows-route-add/
 tags:
 - windows
 - route
 - man
-title: '[Routing] Шпаргалка про роутинг в Windows'
+title: '[OS] Шпаргалка про роутинг в Windows'
 type: post
 ---
 

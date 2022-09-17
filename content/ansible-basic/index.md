@@ -1,6 +1,10 @@
 ---
-author: jtprogru
 categories: Work
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2020-12-29T00:30:54+03:00"
 draft: false
 tags:

@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2017-05-25T15:41:28+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /owncloud-rescan-dir/
 tags:
 - owncloud
 - linux
-title: '[ownCloud] Удаляем фантомные файлы'
+title: '[HowTo] Удаляем фантомные файлы'
 type: post
 ---
 

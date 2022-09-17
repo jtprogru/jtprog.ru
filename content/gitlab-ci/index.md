@@ -1,13 +1,11 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: DevOps
-comments: false
+cover:
+  alt: devops
+  caption: devops
+  image: devops.png
+  relative: false
 date: "2020-11-05T23:00:00+03:00"
-description: Упрощение жизни и работы с Hugo через Docker, GitLab-CI
-disableShare: false
-hidemeta: false
-showToc: false
 tags:
 - gitlab-ci
 - devops

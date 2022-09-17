@@ -1,20 +1,16 @@
 ---
-authorbox: true
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2020-08-02T16:10:00+03:00"
-description: Описаны шаги по установке Docker и docker-compose на Ubuntu 20.04
-draft: false
-image: ""
-lastmod: "2020-08-02T16:14:21+03:00"
-share: true
-slug: /docker-install/
 tags:
 - docker
 - docker-compose
 - howto
-title: '[Docker] Установка Docker на Ubuntu 20.04'
-toc: false
+title: '[HowTo] Установка Docker на Ubuntu 20.04'
 type: post
 ---
 Привет, `%username%`! Это небольшая заметка “на память”, о том какие шаги необходимо выполнить для установки Docker на свежий сервер с Ubuntu 20.04.

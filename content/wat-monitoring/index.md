@@ -1,17 +1,18 @@
 ---
-categories: Work
-comments: false
+categories: Basics
+cover:
+  alt: basics
+  caption: basics
+  image: basics.png
+  relative: false
 date: "2020-10-14T20:48:00+03:00"
-description: Поговорим о том, что такое мониторинг, зачем он нужен, как его готовить.
+description: ""
 draft: false
-image: ""
-share: true
 tags:
 - monitoring
 - prometheus
 - zabbix
-title: '[Monitoring] Мониторинг: что/куда/зачем?'
-toc: false
+title: '[Basics] Мониторинг: что/куда/зачем?'
 type: post
 ---
 

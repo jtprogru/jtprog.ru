@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2015-06-04T19:14:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /delay-ubuntu-iredmail/
 tags:
 - iredmail
 - ubuntu
 - mail
-title: '[Mail Server] Задержки почтового сервера на Ubuntu + iRedMail'
+title: '[HowTo] Задержки почтового сервера на Ubuntu + iRedMail'
 type: post
 ---
 

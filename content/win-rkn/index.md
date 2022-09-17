@@ -1,15 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2019-05-13T14:17:25+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /win-rkn/
 tags:
 - windows
 - rkn
-title: '[Windows] Блокировка сайтов в Windows'
+- hosts
+title: '[OS] Блокировка сайтов в Windows'
 type: post
 ---
 

@@ -1,16 +1,16 @@
 ---
-categories: meetup
-comments: true
+categories: Meetup
+cover:
+  alt: meetup
+  caption: meetup
+  image: meetup.png
+  relative: false
 date: "2018-04-04T15:02:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /security-meetup-mailru/
 tags:
 - event
 - meetup
 - mailru
-title: '[MeetUP] Security Meetup Mail.Ru Group'
+title: '[Meetup] Security Meetup Mail.Ru Group'
 type: post
 ---
 

@@ -1,19 +1,16 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Work
-comments: false
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2020-11-27T13:30:00+03:00"
-description: Установка и регистрация GitLab-runner
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - gitlab-ci
 - gitlab runner
-- work
-title: '[GitLab] Установка GitLab Runner'
+- gitlab
+title: '[Work] Установка GitLab Runner'
 type: post
 ---
 

@@ -1,20 +1,11 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Work
-comments: false
 cover:
-  alt: Development
-  caption: Photo by [Fotis Fotopoulos](https://unsplash.com/@ffstop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/s/photos/development?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  image: cover.jpg
+  alt: work
+  caption: work
+  image: work.png
   relative: false
 date: "2022-05-19T12:50:30+03:00"
-description: ""
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - python
 - golang

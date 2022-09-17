@@ -1,19 +1,11 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Notes
-comments: false
 cover:
-  alt: Keyboard
-  caption: Photo by [Katharina Gloth](https://unsplash.com/@kath_a) on [Unsplash](https://unsplash.com/)
-  image: cover.jpg
+  alt: notes
+  caption: notes
+  image: notes.png
   relative: false
 date: "2021-05-08T18:37:56+03:00"
-description: ""
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - fuckup
 - заметкинаполях

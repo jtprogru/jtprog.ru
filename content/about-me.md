@@ -1,11 +1,5 @@
 ---
-comments: false
 date: "2019-05-07T17:01:32+03:00"
-draft: false
-image: None
-noauthor: true
-share: false
-slug: /about-me/
 title: Обо мне...
 type: page
 ---

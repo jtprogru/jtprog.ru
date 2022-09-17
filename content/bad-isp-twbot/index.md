@@ -1,18 +1,15 @@
 ---
-author: jtprogru
 categories: Develop
-comments: true
+cover:
+  alt: develop
+  caption: develop
+  image: develop.png
+  relative: false
 date: "2019-08-14T12:10:00+03:00"
-description: Небольшой проект который мне помог поднять качество работы моего Интернет-провайдера
-  написаный на Python 3
-draft: false
-noauthor: false
-share: true
-slug: /bad-isp-twbot/
 tags:
 - python
 - twitter api
-title: '[Python] Bad ISP Twitter bot'
+title: '[Develop] Bad ISP Twitter bot'
 type: post
 ---
 

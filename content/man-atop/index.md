@@ -1,20 +1,16 @@
 ---
-TocOpen: false
-author: jtprogru
-categories: Work
-comments: true
+categories: Basics
+cover:
+  alt: basics
+  caption: basics
+  image: basics.png
+  relative: false
 date: "2020-12-05T19:36:36+03:00"
-description: Установка, настройка и использование мощного инструмента анализа нагрузки
-  и производительности сервера
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - atop
 - linux
 - monitoring
-title: '[Linux] Что показывает atop?'
+title: '[Basics] Что показывает atop?'
 type: post
 ---
 

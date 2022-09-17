@@ -1,17 +1,16 @@
 ---
 categories: Develop
-comments: true
+cover:
+  alt: develop
+  caption: develop
+  image: develop.png
+  relative: false
 date: "2020-03-11T22:50:00+03:00"
-description: Как можно выгрузить datasources и dashboards из Grafana
-draft: false
-noauthor: false
-share: true
-slug: /grafana-exports/
 tags:
 - grafana
 - export
 - python
-title: '[Python] Экспорт dashboards/datasource из Grafana'
+title: '[Develop] Экспорт dashboards/datasource из Grafana'
 type: post
 ---
 Привет, `%username%`! Небольшая заметка о том, как не пролюбить (с любовью настроенные) дашборды в [Grafana](https://grafana.com) если вдруг понадобилось перенести хранение настроек с SQLite на MySQL.

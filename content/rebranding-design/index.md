@@ -1,24 +1,15 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Opinion
-comments: false
 cover:
-  alt: Cover
-  caption: Photo by [Sigmund](https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/s/photos/documentation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  image: cover.jpg
+  alt: opinions
+  caption: opinions
+  image: opinions.png
   relative: false
 date: "2021-07-13T13:00:00+03:00"
-description: ""
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - opinion
 - share knowledge
-title: '[Reboot] Ребрендинг и дезигн'
+title: '[Opinion] Ребрендинг и дезигн'
 type: post
 ---
 

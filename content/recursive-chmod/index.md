@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2015-06-30T19:33:11+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /recursive-chmod/
 tags:
 - chmod
 - linux
-title: '[chmod] Recursive chmod'
+title: '[HowTo] Recursive chmod'
 type: post
 ---
 

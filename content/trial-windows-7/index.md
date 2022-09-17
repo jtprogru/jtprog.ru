@@ -1,15 +1,15 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2014-12-03T14:00:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /trial-windows-7/
 tags:
 - windows
 - trial
-title: '[Activate] Если некогда искать ключ активации Windows 7'
+title: '[OS] Если некогда искать ключ активации Windows 7'
 type: post
 ---
 

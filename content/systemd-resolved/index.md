@@ -1,19 +1,16 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Work
-comments: false
+cover:
+  alt: work
+  caption: work
+  image: work.png
+  relative: false
 date: "2020-11-29T12:00:00+03:00"
-description: Базовая настройка кэширующего DNS-resolver systemd-resolved
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - systemd
 - resolved
 - systemd-resolved
-title: '[Linux] Настройка systemd-resolved'
+title: '[Work] Настройка systemd-resolved'
 type: post
 ---
 

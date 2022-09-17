@@ -1,24 +1,16 @@
 ---
-TocOpen: false
-author: jtprogru
-categories: OS
-comments: false
+categories: Basics
 cover:
-  alt: Security system
-  caption: Photo by [FLY:D](https://unsplash.com/@flyd2069) on [Unsplash](https://unsplash.com/)
-  image: cover.jpg
-  relative: true
+  alt: basics
+  caption: basics
+  image: basics.png
+  relative: false
 date: "2021-04-22T10:37:20+03:00"
-description: ""
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - linux
 - ssh
 - ssh key
-title: '[Linux] Авторизация по ключу при подключении по SSH'
+title: '[Basics] Авторизация по ключу при подключении по SSH'
 type: post
 ---
 

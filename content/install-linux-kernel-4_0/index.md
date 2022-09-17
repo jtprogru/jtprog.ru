@@ -1,16 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2015-04-21T18:55:51+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /install-linux-kernel-4_0/
 tags:
 - kernel
 - upgrade
 - ubuntu
-title: '[Ubuntu] Обновляем ядро до версии 4.0 в Ubuntu'
+title: '[OS] Обновляем ядро до версии 4.0 в Ubuntu'
 type: post
 ---
 

@@ -1,16 +1,16 @@
 ---
 categories: DevOps
-comments: true
-date: "2018-07-12T16:15:04+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /psql-cli/
+cover:
+  alt: devops
+  caption: devops
+  image: devops.png
+  relative: false
+date: '2018-07-12T16:15:04+03:00'
 tags:
 - postgres
 - pgsql
 - cli
-title: '[PostgreSQL] Работаем руками'
+title: '[DevOps] Работаем руками'
 type: post
 ---
 

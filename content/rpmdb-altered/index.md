@@ -1,17 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2019-07-29T11:47:56+03:00"
-description: Устранение ошибки RPMDB altered outside of yum в CentOS
-draft: false
-noauthor: false
-share: true
-slug: /rpmdb-altered/
 tags:
 - rpmdb
 - centos
 - yum
-title: '[CentOS] RPMDB altered outside of yum'
+title: '[HowTo] RPMDB altered outside of yum'
 type: post
 ---
 

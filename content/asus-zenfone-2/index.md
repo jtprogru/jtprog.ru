@@ -1,16 +1,16 @@
 ---
 categories: Other
-comments: true
+cover:
+  alt: other
+  caption: other
+  image: other.png
+  relative: false
 date: "2015-08-31T18:31:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /asus-zenfone-2/
 tags:
 - asus
 - zenfone
 - mobile
-title: '[Zenfone 2] Мой новый телефончик ASUS Zenfone 2'
+title: '[Other] Мой новый телефончик ASUS Zenfone 2'
 type: post
 ---
 

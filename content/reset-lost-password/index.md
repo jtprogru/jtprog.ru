@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2018-06-18T14:57:25+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /reset-lost-password/
 tags:
 - linux
 - password
 - root
-title: '[Ubuntu] Сбросить забытый пароль'
+title: '[HowTo] Сбросить забытый пароль'
 type: post
 ---
 

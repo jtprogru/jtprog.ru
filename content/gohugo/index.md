@@ -1,9 +1,11 @@
 ---
 categories: Blog
-comments: true
+cover:
+  alt: blog
+  caption: blog
+  image: blog.png
+  relative: false
 date: "2019-07-22T15:00:00+03:00"
-noauthor: false
-share: true
 tags:
 - blog
 - hugo

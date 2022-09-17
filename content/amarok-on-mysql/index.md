@@ -1,17 +1,17 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2015-10-09T09:45:00+03:00"
-draft: false
-noauthor: false
-share: true
 tags:
 - amarok
 - mysql
 - audio
-title: '[Amarok] Связываем Amarok и MySQL'
+title: '[HowTo] Связываем Amarok и MySQL'
 type: post
-url: /amarok-on-mysql/
 ---
 
 

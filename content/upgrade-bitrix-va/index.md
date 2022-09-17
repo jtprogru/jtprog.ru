@@ -1,18 +1,11 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Work
-comments: false
 cover:
-  alt: Bitrix
-  caption: Bitrix управление сайтом
-  image: cover.jpg
+  alt: work
+  caption: work
+  image: work.png
   relative: false
 date: "2021-08-20T22:47:51+03:00"
-disableShare: true
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - bitrix
 - work

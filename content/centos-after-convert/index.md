@@ -1,16 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2018-09-25T12:12:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /centos-after-convert/
 tags:
 - centos
 - converter
 - vmware
-title: '[CentOS] Исправляем работу конвертера'
+title: '[OS] Исправляем работу конвертера'
 type: post
 ---
 

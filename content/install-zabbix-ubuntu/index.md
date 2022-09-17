@@ -1,18 +1,17 @@
 ---
-categories: OS
-comments: true
+categories: howto
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2020-02-18T22:40:00+03:00"
-description: Описан процесс установки Zabbix 4.4 на Ubuntu 18.04
-draft: false
-noauthor: false
-share: true
-slug: /install-zabbix-ubuntu/
 tags:
 - zabbix
 - ubuntu
 - monitoring
 - zbx
-title: '[Ubuntu] Установка и настройка Zabbix 4.4 на Ubuntu'
+title: '[HowTo] Установка и настройка Zabbix 4.4 на Ubuntu'
 type: post
 ---
 Привет, `%username%`! Данная статья - обычный пересказ официальной документации [Zabbix](https://www.zabbix.com/download?zabbix=4.4&os_distribution=ubuntu&os_version=18.04_bionic&db=postgresql&ws=nginx) и не содержит в себе ничего магического. Да и процесс установки уже мною освещался ранее на [CentOS](https://jtprog.ru/install-zabbix-centos/).

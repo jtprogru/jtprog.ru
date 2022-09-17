@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2016-02-02T21:51:19+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /recover-nm-applet/
 tags:
 - ubuntu
 - network
 - networkmanager
-title: '[Ubuntu] Лечим исчезнувший NetworkManager applet'
+title: '[HowTo] Лечим исчезнувший NetworkManager applet'
 type: post
 ---
 

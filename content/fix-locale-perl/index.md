@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: howto
+  caption: howto
+  image: howto.png
+  relative: false
 date: "2016-08-08T10:34:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /fix-locale-perl/
 tags:
 - locale
 - perl
 - linux
-title: '[Ubuntu] Fix locale Perl'
+title: '[HowTo] Fix locale Perl'
 type: post
 ---
 
