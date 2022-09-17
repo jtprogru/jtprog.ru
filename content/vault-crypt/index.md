@@ -6,14 +6,12 @@ cover:
   image: work.png
   relative: false
 date: "2015-06-18T21:12:00+03:00"
-draft: false
 author: "jtprogru"
-slug: /vault-crypt/
 tags:
 - vault
 - cryptor
 - virus
-title: '[Virus] Очередной шифровальщик'
+title: '[Work] Очередной шифровальщик'
 type: post
 ---
 

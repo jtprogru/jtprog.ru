@@ -1,21 +1,17 @@
 ---
-TocOpen: false
 author: jtprogru
 categories: Basics
-comments: false
 cover:
     image: "basics.png"
     alt: "basics"
     caption: ""
     relative: false
 date: "2021-08-26T20:14:09+03:00"
-description: ""
-draft: false
 tags:
 - linux
 - checklist
 - basics
-title: '[Linux] Мой личный чек-лист для Linux сервера'
+title: '[Basics] Мой личный чек-лист для Linux сервера'
 type: post
 ---
 

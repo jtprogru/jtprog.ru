@@ -1,19 +1,16 @@
 ---
 categories: Work
-comments: true
+author: "jtprogru"
 cover:
   alt: work
   caption: work
   image: work.png
   relative: false
 date: "2014-08-24T22:40:30+03:00"
-draft: false
-author: "jtprogru"
-slug: /ubuntu-in-domen-windows/
 tags:
 - ubuntu
 - active directory
-title: '[Active Directory] Ubuntu в домене Windows AD'
+title: '[Work] Ubuntu в домене Windows AD'
 type: post
 ---
 

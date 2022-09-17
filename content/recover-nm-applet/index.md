@@ -1,5 +1,6 @@
 ---
 categories: howto
+author: "jtprogru"
 cover:
   alt: howto
   caption: howto

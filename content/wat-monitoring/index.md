@@ -1,9 +1,9 @@
 ---
-categories: Work
+categories: Basics
 cover:
-  alt: work
-  caption: work
-  image: work.png
+  alt: basics
+  caption: basics
+  image: basics.png
   relative: false
 date: "2020-10-14T20:48:00+03:00"
 description: ""
@@ -12,7 +12,7 @@ tags:
 - monitoring
 - prometheus
 - zabbix
-title: '[Monitoring] Мониторинг: что/куда/зачем?'
+title: '[Basics] Мониторинг: что/куда/зачем?'
 type: post
 ---
 

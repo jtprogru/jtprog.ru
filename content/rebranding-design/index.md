@@ -1,6 +1,6 @@
 ---
-author: jtprogru
 categories: Opinion
+author: "jtprogru"
 cover:
   alt: opinions
   caption: opinions

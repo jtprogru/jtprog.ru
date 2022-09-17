@@ -1,20 +1,17 @@
 ---
 author: jtprogru
 categories: Work
-comments: false
 cover:
   alt: work
   caption: work
   image: work.png
   relative: false
 date: "2021-08-26T18:14:09+03:00"
-description: ""
-draft: false
 tags:
 - nginx
 - json
 - logs
-title: '[Nginx] Логи Nginx в JSON'
+title: '[Work] Логи Nginx в JSON'
 type: post
 ---
 

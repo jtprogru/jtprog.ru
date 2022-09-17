@@ -1,18 +1,16 @@
 ---
 categories: Develop
+author: 'jtprogru'
 cover:
   alt: develop
   caption: develop
   image: develop.png
   relative: false
-date: "2017-09-13T15:00:00+03:00"
-draft: false
-author: "jtprogru"
-slug: /twitter-excuse/
+date: '2017-09-13T15:00:00+03:00'
 tags:
 - python
 - twitter api
-title: '[Python] Пишем отмазки в Twitter'
+title: '[Develop] Пишем отмазки в Twitter'
 type: post
 ---
 

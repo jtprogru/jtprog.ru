@@ -1,19 +1,16 @@
 ---
 categories: Basics
-comments: true
+author: 'jtprogru'
 cover:
     image: "basics.png"
     alt: "basics"
     caption: ""
     relative: false
 date: "2015-06-25T10:52:13+03:00"
-draft: false
-author: "jtprogru"
-slug: /ftp-passive-vs-active/
 tags:
 - man
 - ftp
-title: '[FTP] FTP passive VS. FTP active'
+title: '[Basics] FTP passive VS. FTP active'
 type: post
 ---
 

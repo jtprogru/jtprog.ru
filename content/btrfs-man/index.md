@@ -1,19 +1,16 @@
 ---
 categories: Basics
-comments: true
 cover:
     image: "basics.png"
     alt: "basics"
     caption: ""
     relative: false
 date: "2019-05-20T10:55:05+03:00"
-draft: false
 author: "jtprogru"
-slug: /btrfs-man/
 tags:
 - btrfs
 - linux
-title: '[Btrfs] Btrfs - что это и как это'
+title: '[Basics] Btrfs - что это и как это'
 type: post
 ---
 **Btrfs** (иногда произносится butter fs) — новая свободная файловая система, разрабатываемая при поддержке компании Oracle. Распространяется по лицензии GPL. Несмотря на то, что её разработка ещё далека от завершения, 9 января 2009 года файловая система была интегрирована в ядро Linux, и доступна в Debian Squueze.

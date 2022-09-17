@@ -1,19 +1,17 @@
 ---
 categories: DevOps
+author: 'jtprogru'
 cover:
   alt: devops
   caption: devops
   image: devops.png
   relative: false
-date: "2018-07-16T16:27:55+03:00"
-draft: false
-author: "jtprogru"
-slug: /partitioning/
+date: '2018-07-16T16:27:55+03:00'
 tags:
 - postgres
 - pgsql
 - linux
-title: '[PostgreSQL] Партицирование таблиц в PostgreSQL'
+title: '[DevOps] Партицирование таблиц в PostgreSQL'
 type: post
 ---
 

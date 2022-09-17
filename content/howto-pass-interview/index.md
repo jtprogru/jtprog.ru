@@ -1,20 +1,17 @@
 ---
 author: jtprogru
 categories: Interview
-comments: false
 cover:
   alt: Interview
   caption: Interview
   image: interview.png
   relative: false
 date: "2021-07-22T20:18:34+03:00"
-description: ""
-draft: false
 tags:
 - interview
 - work
 - patreon
-title: '[Patreon] Как пройти собеседование'
+title: '[Interview] Как пройти собеседование'
 type: post
 ---
 

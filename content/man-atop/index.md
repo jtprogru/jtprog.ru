@@ -1,11 +1,11 @@
 ---
 author: jtprogru
-categories: Work
+categories: Basics
 comments: false
 cover:
-  alt: work
-  caption: work
-  image: work.png
+  alt: basics
+  caption: basics
+  image: basics.png
   relative: false
 date: "2020-12-05T19:36:36+03:00"
 description: ""
@@ -14,7 +14,7 @@ tags:
 - atop
 - linux
 - monitoring
-title: '[Linux] Что показывает atop?'
+title: '[Basics] Что показывает atop?'
 type: post
 ---
 

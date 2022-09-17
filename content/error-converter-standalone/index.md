@@ -1,13 +1,12 @@
 ---
 categories: OS
+author: "jtprogru"
 cover:
   alt: OS
   caption: OS
   image: OS.png
   relative: false
 date: "2018-09-17T07:00:05+03:00"
-draft: false
-author: "jtprogru"
 tags:
 - centos
 - converter

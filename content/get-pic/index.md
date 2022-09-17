@@ -6,14 +6,11 @@ cover:
   image: develop.png
   relative: false
 date: "2019-08-15T19:50:55+03:00"
-description: ""
-draft: false
 author: "jtprogru"
-slug: /get-pic/
 tags:
 - python
 - requests
-title: '[Python] Качаем и ресайзим картинки'
+title: '[Develop] Качаем и ресайзим картинки'
 type: post
 ---
 

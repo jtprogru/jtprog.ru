@@ -1,5 +1,6 @@
 ---
 categories: OS
+author: "jtprogru"
 cover:
   alt: OS
   caption: OS

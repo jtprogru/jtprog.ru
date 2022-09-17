@@ -7,14 +7,10 @@ cover:
   image: develop.png
   relative: false
 date: "2019-08-14T12:10:00+03:00"
-description: ""
-draft: false
-author: "jtprogru"
-slug: /bad-isp-twbot/
 tags:
 - python
 - twitter api
-title: '[Python] Bad ISP Twitter bot'
+title: '[Develop] Bad ISP Twitter bot'
 type: post
 ---
 
