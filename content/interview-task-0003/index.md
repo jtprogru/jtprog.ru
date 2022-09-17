@@ -1,20 +1,15 @@
 ---
-TocOpen: false
 author: jtprogru
 categories: Interview
 comments: false
 cover:
-  alt: Architecture
-  caption: Photo by [Shubham Dhage](https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/t/blockchain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  image: cover.jpg
+  alt: Interview
+  caption: Interview
+  image: interview.png
   relative: false
 date: "2022-01-22T13:00:00+03:00"
 description: ""
-disableShare: false
 draft: false
-hidemeta: false
-showToc: false
 tags:
 - interview
 - собеседование
