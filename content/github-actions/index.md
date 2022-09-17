@@ -1,20 +1,14 @@
 ---
-TocOpen: false
 author: jtprogru
 categories: DevOps
-comments: false
 cover:
-  alt: GitHub
-  caption: Photo by [Yancy Min](https://unsplash.com/@yancymin) on [Unsplash](https://unsplash.com/)
-  image: gha.jpg
+  alt: devops
+  caption: devops
+  image: devops.png
   relative: false
 date: "2021-04-28T16:27:11+03:00"
-description: Пример использования GitHub Actions для публикации статических сайтов
-  на базе Hugo
-disableShare: false
+description: ""
 draft: false
-hidemeta: false
-showToc: false
 tags:
 - devops
 - github

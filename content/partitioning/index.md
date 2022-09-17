@@ -1,10 +1,13 @@
 ---
 categories: DevOps
-comments: true
+cover:
+  alt: devops
+  caption: devops
+  image: devops.png
+  relative: false
 date: "2018-07-16T16:27:55+03:00"
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /partitioning/
 tags:
 - postgres
