@@ -1,14 +1,11 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Opinion
-comments: false
+cover:
+  alt: opinions
+  caption: opinions
+  image: opinions.png
+  relative: false
 date: "2020-11-09T22:25:00+03:00"
-description: Очередная статья про DevOps
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - devops
 - opinion

@@ -1,14 +1,11 @@
 ---
-author: jtprogru
 categories: Work
-comments: false
 cover:
   alt: work
   caption: work
   image: work.png
   relative: false
 date: "2021-08-20T22:47:51+03:00"
-draft: false
 tags:
 - bitrix
 - work

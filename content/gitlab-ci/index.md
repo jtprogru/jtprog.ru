@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: DevOps
 cover:
   alt: devops
@@ -7,7 +6,6 @@ cover:
   image: devops.png
   relative: false
 date: "2020-11-05T23:00:00+03:00"
-description: ""
 tags:
 - gitlab-ci
 - devops

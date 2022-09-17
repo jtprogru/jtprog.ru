@@ -1,6 +1,5 @@
 ---
 categories: Basics
-author: 'jtprogru'
 cover:
     image: "basics.png"
     alt: "basics"

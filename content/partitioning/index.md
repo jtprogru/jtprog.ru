@@ -1,6 +1,5 @@
 ---
 categories: DevOps
-author: 'jtprogru'
 cover:
   alt: devops
   caption: devops

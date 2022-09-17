@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: Interview
 cover:
   alt: Interview

@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: Notes
 cover:
   alt: notes

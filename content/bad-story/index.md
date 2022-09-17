@@ -7,7 +7,6 @@ cover:
   relative: false
 comments: false
 date: "2014-09-18T19:20:00+03:00"
-author: "jtprogru"
 tags:
 - spam
 - virus

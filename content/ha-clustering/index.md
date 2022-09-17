@@ -1,15 +1,11 @@
 ---
-author: jtprogru
 categories: Basics
-comments: false
 cover:
     image: "basics.png"
     alt: "basics"
     caption: ""
     relative: false
 date: "2021-08-27T21:00:00+03:00"
-description: ""
-draft: false
 tags:
 - HA
 - high availability

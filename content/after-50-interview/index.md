@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: Interview
 comments: false
 cover:

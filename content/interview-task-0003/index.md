@@ -1,15 +1,11 @@
 ---
-author: jtprogru
 categories: Interview
-comments: false
 cover:
   alt: Interview
   caption: Interview
   image: interview.png
   relative: false
 date: "2022-01-22T13:00:00+03:00"
-description: ""
-draft: false
 tags:
 - interview
 - собеседование

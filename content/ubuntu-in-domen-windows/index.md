@@ -1,6 +1,5 @@
 ---
 categories: Work
-author: "jtprogru"
 cover:
   alt: work
   caption: work

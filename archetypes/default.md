@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: Work
 cover:
   alt: work

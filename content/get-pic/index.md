@@ -6,7 +6,6 @@ cover:
   image: develop.png
   relative: false
 date: "2019-08-15T19:50:55+03:00"
-author: "jtprogru"
 tags:
 - python
 - requests

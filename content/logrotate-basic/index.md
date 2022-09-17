@@ -1,18 +1,11 @@
 ---
-author: jtprogru
 categories: Basics
-comments: false
 cover:
     image: "basics.png"
     alt: "basics"
     caption: ""
     relative: false
 date: "2021-08-28T14:30:00+03:00"
-description: ""
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - logrotate
 - basics

@@ -6,9 +6,6 @@ cover:
   image: work.png
   relative: false
 date: "2018-07-28T14:29:00+03:00"
-draft: false
-author: "jtprogru"
-slug: /organize-sysadmins/
 tags:
 - work
 - admins

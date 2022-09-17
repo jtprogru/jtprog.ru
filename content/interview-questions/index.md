@@ -1,15 +1,11 @@
 ---
-author: jtprogru
 categories: Interview
-comments: false
 cover:
   alt: Interview
   caption: Interview
   image: interview.png
   relative: false
 date: "2021-07-03T15:55:00+03:00"
-description: ""
-draft: false
 tags:
 - work
 - работа

@@ -29,7 +29,8 @@ params:
   env: production
   comments: false
   ShowPostNavLinks: true
-  description: "Записная книга самоучки"
+  description: 'Записная книга самоучки'
+  author: 'jtprogru'
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/master/content"
     Text: "Edit..."

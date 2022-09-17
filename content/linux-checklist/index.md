@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: Basics
 cover:
     image: "basics.png"

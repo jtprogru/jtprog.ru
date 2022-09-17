@@ -1,15 +1,11 @@
 ---
-author: jtprogru
 categories: Work
-comments: false
 cover:
   alt: work
   caption: work
   image: work.png
   relative: false
 date: "2022-05-19T12:50:30+03:00"
-description: ""
-draft: false
 tags:
 - python
 - golang

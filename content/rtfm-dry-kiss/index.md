@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: Opinion
 cover:
   alt: opinions

@@ -1,18 +1,11 @@
 ---
-TocOpen: false
-author: jtprogru
 categories: Work
-comments: false
 cover:
   alt: work
   caption: work
   image: work.png
   relative: false
 date: "2021-04-07T22:31:31+03:00"
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
 - bitrix
 - bitrixvm

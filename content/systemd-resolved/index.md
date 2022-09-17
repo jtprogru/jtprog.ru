@@ -1,20 +1,16 @@
 ---
-author: jtprogru
 categories: Work
 cover:
   alt: work
   caption: work
   image: work.png
   relative: false
-comments: false
 date: "2020-11-29T12:00:00+03:00"
-description: ""
-draft: false
 tags:
 - systemd
 - resolved
 - systemd-resolved
-title: '[Linux] Настройка systemd-resolved'
+title: '[Work] Настройка systemd-resolved'
 type: post
 ---
 

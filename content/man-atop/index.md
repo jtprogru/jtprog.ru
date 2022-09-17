@@ -1,15 +1,11 @@
 ---
-author: jtprogru
 categories: Basics
-comments: false
 cover:
   alt: basics
   caption: basics
   image: basics.png
   relative: false
 date: "2020-12-05T19:36:36+03:00"
-description: ""
-draft: false
 tags:
 - atop
 - linux

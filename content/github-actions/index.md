@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: DevOps
 cover:
   alt: devops
@@ -7,8 +6,6 @@ cover:
   image: devops.png
   relative: false
 date: "2021-04-28T16:27:11+03:00"
-description: ""
-draft: false
 tags:
 - devops
 - github

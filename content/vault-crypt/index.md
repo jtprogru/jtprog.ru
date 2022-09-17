@@ -6,7 +6,6 @@ cover:
   image: work.png
   relative: false
 date: "2015-06-18T21:12:00+03:00"
-author: "jtprogru"
 tags:
 - vault
 - cryptor

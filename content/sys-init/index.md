@@ -1,14 +1,11 @@
 ---
-author: jtprogru
 categories: Basics
-comments: false
 cover:
     image: "basics.png"
     alt: "basics"
     caption: ""
     relative: false
 date: "2021-09-12T12:13:37+03:00"
-description: ""
 tags:
 - systemd
 - openrc

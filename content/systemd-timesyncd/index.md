@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: Work
 cover:
   alt: work
@@ -7,12 +6,11 @@ cover:
   image: work.png
   relative: false
 date: "2020-11-27T20:20:00+03:00"
-description: ""
-draft: false
 tags:
 - systemd
 - timesyncd
-title: '[Linux] Настраиваем systemd-timesyncd'
+- linux
+title: '[Work] Настраиваем systemd-timesyncd'
 type: post
 ---
 

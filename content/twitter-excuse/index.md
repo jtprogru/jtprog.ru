@@ -1,6 +1,5 @@
 ---
 categories: Develop
-author: 'jtprogru'
 cover:
   alt: develop
   caption: develop

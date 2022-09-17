@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: Basics
 comments: false
 cover:

@@ -6,7 +6,6 @@ cover:
     caption: ""
     relative: false
 date: "2019-05-20T10:55:05+03:00"
-author: "jtprogru"
 tags:
 - btrfs
 - linux

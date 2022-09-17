@@ -6,7 +6,6 @@ cover:
   image: develop.png
   relative: false
 date: "2020-03-11T22:50:00+03:00"
-author: "jtprogru"
 tags:
 - grafana
 - export

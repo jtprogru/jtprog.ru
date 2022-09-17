@@ -1,5 +1,4 @@
 ---
-author: jtprogru
 categories: howto
 cover:
   alt: howto
