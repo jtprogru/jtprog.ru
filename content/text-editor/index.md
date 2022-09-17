@@ -1,18 +1,11 @@
 ---
-author: jtprogru
 categories: Blog
-comments: false
 cover:
-    image: "cover.png"
-    alt: "iA Writer text editor"
-    caption: "Simple text edition"
-    relative: false
+  alt: blog
+  caption: blog
+  image: blog.png
+  relative: false
 date: 2022-09-03T23:04:09+03:00
-description: ""
-disableShare: false
-draft: false
-hidemeta: false
-showToc: false
 tags:
   - iawriter
   - editor
