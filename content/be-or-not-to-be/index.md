@@ -1,15 +1,15 @@
 ---
 categories: Other
-comments: true
+cover:
+  alt: other
+  caption: other
+  image: other.png
+  relative: false
 date: "2013-07-05T21:16:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /be-or-not-to-be/
 tags:
 - start
 - first post
-title: '[Start] Быть или не быть...'
+title: '[Other] Быть или не быть...'
 type: post
 ---
 

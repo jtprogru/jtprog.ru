@@ -1,15 +1,15 @@
 ---
 categories: Other
-comments: true
+cover:
+  alt: other
+  caption: other
+  image: other.png
+  relative: false
 date: "2013-09-22T03:36:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /welcom-to-linuxmint15/
 tags:
 - linux mint
 - go to linux
-title: '[Linux] Основательный переезд'
+title: '[Other] Основательный переезд'
 type: post
 ---
 
