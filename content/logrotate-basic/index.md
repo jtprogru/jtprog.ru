@@ -1,14 +1,12 @@
 ---
-TocOpen: false
 author: jtprogru
 categories: Basics
 comments: false
 cover:
-  alt: Manufacture
-  caption: Photo by [Science in HD](https://unsplash.com/@scienceinhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/s/photos/automation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  image: cover.jpg
-  relative: false
+    image: "basics.png"
+    alt: "basics"
+    caption: ""
+    relative: false
 date: "2021-08-28T14:30:00+03:00"
 description: ""
 disableShare: false

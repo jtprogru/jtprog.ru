@@ -3,16 +3,13 @@ author: jtprogru
 categories: Basics
 comments: false
 cover:
-    image: "cover.png"
-    alt: "Simple site.yaml"
-    caption: "Playbook with some roles"
+    image: "basics.png"
+    alt: "basics"
+    caption: ""
     relative: false
 date: 2022-09-05T10:15:00+03:00
 description: ""
-disableShare: false
 draft: false
-hidemeta: false
-showToc: false
 tags:
   - ansible
   - basics

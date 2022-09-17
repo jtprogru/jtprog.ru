@@ -4,17 +4,13 @@ author: jtprogru
 categories: Basics
 comments: false
 cover:
-  alt: Pi Supply
-  caption: Photo by [Pi Supply](https://unsplash.com/@pisupply?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/s/photos/server?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  image: cover.png
-  relative: false
+    image: "basics.png"
+    alt: "basics"
+    caption: ""
+    relative: false
 date: "2021-08-26T20:14:09+03:00"
 description: ""
-disableShare: false
 draft: false
-hidemeta: false
-showToc: false
 tags:
 - linux
 - checklist

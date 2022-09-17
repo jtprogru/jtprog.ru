@@ -2,11 +2,14 @@
 author: jtprogru
 categories: Basics
 comments: true
+cover:
+    image: "basics.png"
+    alt: "basics"
+    caption: ""
+    relative: false
 date: "2020-08-08T18:50:00+03:00"
 draft: false
-image: ""
 lastmod: "2020-08-08T18:55:00+03:00"
-share: true
 slug: /docker-base/
 tags:
 - docker

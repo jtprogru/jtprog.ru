@@ -1,10 +1,14 @@
 ---
 categories: Basics
 comments: true
+cover:
+    image: "basics.png"
+    alt: "basics"
+    caption: ""
+    relative: false
 date: "2015-06-25T10:52:13+03:00"
 draft: false
-noauthor: false
-share: true
+author: "jtprogru"
 slug: /ftp-passive-vs-active/
 tags:
 - man
