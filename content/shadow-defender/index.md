@@ -1,15 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2014-12-29T20:28:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /shadow-defender/
 tags:
 - windows
 - shadow defender
-title: '[Security] Shadow Defender или Простая защита от дурака'
+- security
+title: '[OS] Shadow Defender или Простая защита от дурака'
 type: post
 ---
 

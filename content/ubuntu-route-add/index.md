@@ -1,16 +1,16 @@
 ---
-categories: OS
-comments: true
+categories: howto
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2015-06-08T18:51:46+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /ubuntu-route-add/
 tags:
 - ubuntu
 - route
 - man
-title: '[Routing] Шпаргалка про роутинг в Ubuntu'
+title: '[HowTo] Шпаргалка про роутинг в Ubuntu'
 type: post
 ---
 

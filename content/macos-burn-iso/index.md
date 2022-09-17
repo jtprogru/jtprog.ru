@@ -1,15 +1,15 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2016-09-27T17:27:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /macos-burn-iso/
 tags:
 - macos
 - iso
-title: '[macOS] Записываем ISO-образ на флешку или диск'
+title: '[OS] Записываем ISO-образ на флешку или диск'
 type: post
 ---
 

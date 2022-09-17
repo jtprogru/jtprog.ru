@@ -1,16 +1,17 @@
 ---
-categories: OS
-comments: true
+categories: howto
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2016-01-19T16:13:31+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /web-service-1cv83-iisv85/
 tags:
 - windows
 - 1c
+- 1cv8
 - iis
-title: '[1Cv8.3] Пошаговая инструкция настройки web-сервисов для 1Сv8.3 и IIS 8.5'
+title: '[HowTo] Пошаговая инструкция настройки web-сервисов для 1Сv8.3 и IIS 8.5'
 type: post
 ---
 

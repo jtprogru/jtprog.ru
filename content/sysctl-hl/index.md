@@ -1,16 +1,15 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2019-07-26T18:50:58+03:00"
-description: Заметка о sysctl и их базовых значениях для высоких нагрузок
-draft: false
-noauthor: false
-share: true
-slug: /sysctl-hl/
 tags:
 - sysctl
 - linux
-title: '[Linux] Настройка Linux для HL и защиты от DDoS'
+title: '[OS] Настройка Linux для HL и защиты от DDoS'
 type: post
 ---
 

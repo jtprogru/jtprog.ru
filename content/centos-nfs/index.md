@@ -1,17 +1,16 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2019-07-19T14:35:42+03:00"
-description: Разворачиваем NFS сервер на базе CentOS 7
-draft: false
-noauthor: false
-share: true
-slug: /centos-nfs/
 tags:
 - centos
 - linux
 - nfs
-title: '[Linux] Установка NFS сервера на CentOS 7'
+title: '[OS] Установка NFS сервера на CentOS 7'
 type: post
 ---
 Привет, `%username%`! Рассмотрим довольно простую задачу: развернуть NFS-сервер на базе CentOS 7. Что и куда писать? Короче всё просто и легко!

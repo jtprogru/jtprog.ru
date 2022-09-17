@@ -1,17 +1,15 @@
 ---
 categories: OS
-comments: true
+cover:
+  alt: OS
+  caption: OS
+  image: OS.png
+  relative: false
 date: "2019-07-29T12:01:18+03:00"
-description: Заметка о том, как базово пользоваться strace для подглядывания и отладки
-  процессов
-draft: false
-noauthor: false
-share: true
-slug: /strace/
 tags:
 - strace
 - linux
-title: '[Linux] Наблюдение за процессами при помощи strace'
+title: '[OS] Наблюдение за процессами при помощи strace'
 type: post
 ---
 

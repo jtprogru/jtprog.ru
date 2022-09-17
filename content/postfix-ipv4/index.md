@@ -1,19 +1,17 @@
 ---
-categories: OS
-comments: true
+categories: howto
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2019-05-23T15:48:55+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /postfix-ipv4/
 tags:
 - postfix
 - linux
-title: '[Linux] Лечим Postfix'
+title: '[HowTo] Лечим Postfix'
 type: post
 ---
-
-
 
 После отключения IPv6 на сервере перестал запускаться Postfix, но оставлял в логах следующие ошибки:
 
