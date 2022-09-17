@@ -2,9 +2,9 @@
 author: jtprogru
 categories: howto
 cover:
-  alt: wiki
-  caption: wiki
-  image: wiki.png
+  alt: howto
+  caption: howto
+  image: howto.png
   relative: false
 date: "2015-03-30T16:48:37+03:00"
 tags:

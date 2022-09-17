@@ -1,11 +1,12 @@
 ---
 author: jtprogru
 categories: Notes
-comments: false
+cover:
+  alt: notes
+  caption: notes
+  image: notes.png
+  relative: false
 date: "2020-09-25T20:39:00+03:00"
-disableShare: false
-draft: false
-hidemeta: false
 tags:
 - fuckup
 - ansible

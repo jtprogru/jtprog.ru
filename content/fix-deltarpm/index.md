@@ -1,9 +1,9 @@
 ---
 categories: howto
 cover:
-  alt: wiki
-  caption: wiki
-  image: wiki.png
+  alt: howto
+  caption: howto
+  image: howto.png
   relative: false
 date: "2019-08-05T12:24:55+03:00"
 tags:

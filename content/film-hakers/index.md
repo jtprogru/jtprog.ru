@@ -1,15 +1,15 @@
 ---
 categories: Story
-comments: true
+cover:
+  alt: stories
+  caption: stories
+  image: stories.png
+  relative: false
 date: "2013-08-05T21:10:56+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /film-hakers/
 tags:
 - films
 - hackers
-title: '[Film] Фильм изменивший мои интересы'
+title: '[Story] Фильм изменивший мои интересы'
 type: post
 ---
 
