@@ -1,16 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2019-08-21T19:10:00+03:00"
-description: Немного о балансировке бэкендов в Nginx
-draft: false
-noauthor: false
-share: true
-slug: /nginx-lb/
 tags:
 - load balancing
 - nginx
-title: '[Nginx] Балансировка бэкендов'
+title: '[HowTo] Балансировка бэкендов'
 type: post
 ---
 

@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2016-10-04T12:36:54+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /fixed-dir-mc/
 tags:
 - mc
 - macos
-title: '[macOS] Исправляем глюк Midnight Commander'
+title: '[HowTo] Исправляем глюк Midnight Commander'
 type: post
 ---
 

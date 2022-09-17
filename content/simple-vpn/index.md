@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2015-03-30T14:39:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /simple-vpn/
 tags:
 - vpn
 - pptpd
 - ubuntu
-title: '[pptpd] Простой VPN-сервер на базе Ubuntu+pptpd'
+title: '[HowTo] Простой VPN-сервер на базе Ubuntu+pptpd'
 type: post
 ---
 

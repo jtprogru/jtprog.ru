@@ -1,17 +1,17 @@
 ---
 author: jtprogru
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2015-03-30T16:48:37+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /iptables-manual/
 tags:
 - iptables
 - man
 - linux
-title: '[iptables] Шпаргалка по iptables'
+title: '[HowTo] Шпаргалка по iptables'
 type: post
 ---
 

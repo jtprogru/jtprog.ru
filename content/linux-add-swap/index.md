@@ -1,16 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2019-11-11T11:23:09+03:00"
-description: Коротко о том, как добавить SWAP в Linux
-draft: false
-noauthor: false
-share: true
-slug: /linux-add-swap/
 tags:
 - swap
 - linux
-title: '[Linux] Добавление SWAP в систему'
+title: '[HowTo] Добавление SWAP в систему'
 type: post
 ---
 Привет, `%username%`! Есть сервер на который при разворачивании не добавили `SWAP` раздел и это необходимо исправить. Все как всегда довольно просто.

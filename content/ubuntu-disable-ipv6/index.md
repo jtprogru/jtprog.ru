@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2016-08-12T11:54:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /ubuntu-disable-ipv6/
 tags:
 - ipv6
 - linux
-title: '[Ubuntu] Отключаем IPv6 на сервере'
+title: '[HowTo] Отключаем IPv6 на сервере'
 type: post
 ---
 

@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2015-10-09T10:15:30+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /reset-root-pass-mysql/
 tags:
 - mysql
 - password
-title: '[MySQL] Если Вы забыли пароль MySQL (сброс пароля)'
+title: '[HowTo] Если Вы забыли пароль MySQL (сброс пароля)'
 type: post
 ---
 

@@ -1,20 +1,16 @@
 ---
-authorbox: true
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2020-07-22T23:15:00+03:00"
-description: Установка Netbox на Ubuntu 20.04 и настройка LDAP
-draft: false
-image: ""
-lastmod: "2020-07-22T23:15:00+03:00"
-share: true
-slug: /netbox/
 tags:
 - netbox
 - ldap
 - ubuntu
-title: '[Netbox] Установка Netbox на Ubuntu 20.04'
-toc: false
+title: '[HowTo] Установка Netbox на Ubuntu 20.04'
 type: post
 ---
 Привет, `%username%`! Поговорим о такой классной штуке как [Netbox](https://netbox.readthedocs.io/en/stable/), а так же установим её на Ubuntu 20.04 и прикрутим авторизацию через MS Active Directory.

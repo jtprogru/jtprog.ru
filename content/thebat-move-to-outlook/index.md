@@ -1,16 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2015-01-10T19:56:11+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /thebat-move-to-outlook/
 tags:
 - the bast
 - outlook
 - windows
-title: '[Email] Перенос почты с The Bat в Outlook'
+title: '[HowTo] Перенос почты с The Bat в Outlook'
 type: post
 ---
 

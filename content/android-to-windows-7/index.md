@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2015-06-26T14:42:00+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /android-to-windows-7/
 tags:
 - android
 - windows
-title: '[Android] Подключаем Android к Windows 7'
+title: '[HowTo] Подключаем Android к Windows 7'
 type: post
 ---
 

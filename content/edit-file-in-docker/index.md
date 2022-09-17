@@ -1,15 +1,15 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2016-08-01T15:00:28+03:00"
-draft: false
-noauthor: false
-share: true
-slug: /edit-file-in-docker/
 tags:
 - docker
 - linux
-title: '[Docker] Как зайти в контейнер и выполнить команду внутри'
+title: '[HowTo] Как зайти в контейнер и выполнить команду внутри'
 type: post
 ---
 

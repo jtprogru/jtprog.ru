@@ -1,17 +1,16 @@
 ---
 categories: howto
-comments: true
+cover:
+  alt: wiki
+  caption: wiki
+  image: wiki.png
+  relative: false
 date: "2019-08-05T12:24:55+03:00"
-description: Устранение ошибки Delta RPMs disabled в CentOS
-draft: false
-noauthor: false
-share: true
-slug: /fix-deltarpm/
 tags:
 - centos
 - yum
 - deltarpm
-title: '[CentOS] Delta RPMs disabled'
+title: '[HowTo] Delta RPMs disabled'
 type: post
 ---
 
