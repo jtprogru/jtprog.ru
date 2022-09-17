@@ -2,7 +2,7 @@
 categories: OS
 cover:
   alt: OS
-  caption: OS
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: OS.png
   relative: false
 date: "2019-07-29T12:01:18+03:00"

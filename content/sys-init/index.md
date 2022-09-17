@@ -3,7 +3,7 @@ categories: Basics
 cover:
     image: "basics.png"
     alt: "basics"
-    caption: ""
+    caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
     relative: false
 date: "2021-09-12T12:13:37+03:00"
 tags:

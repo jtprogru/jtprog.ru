@@ -2,7 +2,7 @@
 categories: Notes
 cover:
   alt: notes
-  caption: notes
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: notes.png
   relative: false
 date: "2021-05-08T18:37:56+03:00"
@@ -13,7 +13,7 @@ tags:
 - helm
 - kubernetes
 - k8s
-title: '[Notes] Заметки на полях  2021.05.08'
+title: '[Notes] Заметки на полях 2021.05.08'
 type: post
 ---
 

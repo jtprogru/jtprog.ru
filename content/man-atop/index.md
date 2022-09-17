@@ -2,7 +2,7 @@
 categories: Basics
 cover:
   alt: basics
-  caption: basics
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
   image: basics.png
   relative: false
 date: "2020-12-05T19:36:36+03:00"
@@ -94,7 +94,7 @@ sudo atop -r /var/log/atop/atop_20201205 -b 19:35:00 -e 21:15:00
 sudo atopsar -r /var/log/atop/atop_20201205 -b 19:35:00 -e 21:15:00 -m
 ```
 
-![Нагрузка на RAM](atop1.png)
+![Нагрузка на RAM](img/atop1.png)
 
 Нагрузка по сетевым интерфейсам:
 
@@ -102,7 +102,7 @@ sudo atopsar -r /var/log/atop/atop_20201205 -b 19:35:00 -e 21:15:00 -m
 sudo atopsar -r /var/log/atop/atop_20201205 -b 19:35:00 -e 21:15:00 -i
 ```
 
-![Нагрузка по сетевым интерфейсам](atop3.png)
+![Нагрузка по сетевым интерфейсам](img/atop3.png)
 
 Нагрузка на диски:
 
@@ -110,7 +110,7 @@ sudo atopsar -r /var/log/atop/atop_20201205 -b 19:35:00 -e 21:15:00 -i
 sudo atopsar -r /var/log/atop/atop_20201205 -b 19:35:00 -e 21:15:00 -d
 ```
 
-![Нагрузка на диски](atop2.png)
+![Нагрузка на диски](img/atop2.png)
 
 ## Итоги
 
