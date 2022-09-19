@@ -158,11 +158,8 @@ params:
 
 menu:
   main:
-#   - name: "Поиск"
-#     url: "/search/"
-#     weight: 2
     - name: "Поддержать"
-      url: "/donations/"
+      url: "https://bearonserver.ru/donations/"
       weight: 1
 
 frontmatter:
