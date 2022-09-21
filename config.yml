@@ -125,7 +125,8 @@ params:
       SiteVerificationTag: "7XYgVY2xnjODEkc6HA_dLMdLSQDNEQ3v5bG40MpnB0U"
     yandex:
       SiteVerificationTag: "766a09b06b27e0f2"
-
+  metrics:
+    yandexMetrics: 31190141
   entry:
     meta: ["date", "tags", "author"]
     toc: false
