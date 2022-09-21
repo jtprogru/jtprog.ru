@@ -4,9 +4,14 @@ name: CI
   push:
     branches:
       - "master"
-  # pull_request:
-  #   branches:
-  #     - "master"
+
+env:
+  VPS_DEPLOY_KEY: ${{secrets.DEPLOY_SSH_KEY}}
+  VPS_DEPLOY_USER: ${{secrets.DEPLOY_USER}}
+  VPS_DEPLOY_HOST: ${{secrets.DEPLOY_HOST}}
+  VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
+  HUGO_VERSION: '0.103.1'
+
 jobs:
   deploy-website:
     runs-on: ubuntu-latest
@@ -16,16 +21,40 @@ jobs:
         with:
           submodules: true
 
-      - name: Generate and deploy website
-        uses: jtprogru/hugo-rsync-deployment@master
-        env:
-          VPS_DEPLOY_KEY: ${{secrets.DEPLOY_SSH_KEY}}
-          VPS_DEPLOY_USER: ${{secrets.DEPLOY_USER}}
-          VPS_DEPLOY_HOST: ${{secrets.DEPLOY_HOST}}
-          VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
-        with:
-          hugo-arguments: '--minify'
-          rsync-arguments: '-avz --delete --progress'
+      - name: Prepare environment
+        run: |
+          sudo apt update && sudo apt upgrade && sudo apt install -y wget curl git openssh rsync
+          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz -O /tmp/hugo.tar.gz
+          tar xf /tmp/hugo.tar.gz hugo -C /tmp/ && cp /tmp/hugo /usr/bin
+          mkdir "${HOME}/.ssh"
+          echo "${VPS_DEPLOY_KEY}" > "${HOME}/.ssh/id_rsa_deploy"
+          chmod 600 "${HOME}/.ssh/id_rsa_deploy"
+          ssh-keyscan -p 22 ${VPS_DEPLOY_HOST} > ~/.ssh/known_hosts
+
+        shell: bash
+
+      - name: Replace commit
+        run: |
+          git config --global --add safe.directory '*'
+          COMMIT=$(git rev-parse --short HEAD)
+          sed -i -e "s/@@@COMMIT@@@/${COMMIT}/g" config.yml
+        shell: bash
+
+      - name: Generate static
+        run: |
+          hugo version
+          hugo -D --gc --verbose --config config.yml
+          cp ${GITHUB_WORKSPACE}/content/robots.txt ${GITHUB_WORKSPACE}/public/robots.txt
+        shell: bash
+
+      - name: Rsync
+        run: |
+          rsync --version
+          rsync -avhz --progress \
+            -e 'ssh -i ${HOME}/.ssh/id_rsa_deploy -o StrictHostKeyChecking=no' \
+            ${GITHUB_WORKSPACE}/public/ \
+            ${VPS_DEPLOY_USER}@${VPS_DEPLOY_HOST}:${VPS_DEPLOY_DEST}/ --delete
+        shell: bash
 
       - name: Telegram Notify OK
         if: ${{ success() }}
