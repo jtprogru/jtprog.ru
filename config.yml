@@ -12,7 +12,7 @@ paginate: 10
 canonifyURLs: true
 summaryLength: 15
 
-enableRobotsTXT: true
+enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false
 buildExpired: false
