@@ -2,15 +2,15 @@
 categories: DevOps
 cover:
   alt: devops
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: "Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)"
   image: devops.png
   relative: false
-date: '2018-07-12T16:15:04+03:00'
+date: "2018-07-12T16:15:04+03:00"
 tags:
-- postgres
-- pgsql
-- cli
-title: '[DevOps] Работаем руками'
+  - postgres
+  - pgsql
+  - cli
+title: "[DevOps] Работаем руками с PostgreSQL"
 type: post
 ---
 
@@ -37,7 +37,7 @@ postgres=# \list
 На вывод нам поступит список всех БД которые созданы на сервере, после чего мы можем подключиться к нужной нам базе и работать с ней - для примера посмотрим все таблицы в ней:
 
 ```sql
-postgres=# \connect testdb 
+postgres=# \connect testdb
 testdb=# \dt
 ```
 
@@ -50,8 +50,8 @@ SELECT relname AS "table_name", relpages AS "size_in_pages" FROM pg_class ORDER 
 В результате нам будет показана самая большая таблица (размер указывается в страницах):
 
 | table_name | size_in_pages |
-| :---|:---------------|
-| testtb1 | 299211 |
+| :--------- | :------------ |
+| testtb1    | 299211        |
 
 Следующий вопрос: как посмотреть размер все базы данных. Ответ - легко:
 
@@ -62,8 +62,8 @@ SELECT pg_database_size( 'testdb' );
 В результате нам покажется размер всей БД:
 
 | pg_database_size |
-|:---:|
-| 27641546936 |
+| :--------------: |
+|   27641546936    |
 
 И снова размер нам представлен в непонятном виде, но мы можем легко это исправить следующим образом:
 
@@ -74,8 +74,8 @@ SELECT pg_size_pretty( pg_database_size( 'testdb' ) );
 Результат:
 
 | pg_size_pretty |
-|:---:|
-|26 GB|
+| :------------: |
+|     26 GB      |
 
 Логичным продолжением будет просмотр всех БД в таком нормально виде:
 
@@ -85,11 +85,11 @@ SELECT pg_database.datname as "database_name", pg_size_pretty(pg_database_size(p
 
 Результат:
 
-| database_name | size|
-|:---|---:|
-|sampledb | 45 GB|
-|loremdb_001 | 21 GB|
-| ipsumdb | 3358 MB |
+| database_name |    size |
+| :------------ | ------: |
+| sampledb      |   45 GB |
+| loremdb_001   |   21 GB |
+| ipsumdb       | 3358 MB |
 
 Посмотрим размер таблицы в базе данных:
 
@@ -99,9 +99,9 @@ SELECT pg_size_pretty( pg_total_relation_size( 'testtb1' ) );
 
 Результатом будет размер таблицы `testtable1`, включая индексы. Результат будет отображен сразу в удобном для чтения формате, а не в байтах.
 
-|pg_size_pretty|
-|:---:|
-|4872 MB |
+| pg_size_pretty |
+| :------------: |
+|    4872 MB     |
 
 Если вам нужно узнать размер таблицы без индексов, тогда следует выполнить такой запрос:
 
@@ -112,8 +112,8 @@ SELECT pg_size_pretty( pg_relation_size( 'testtb1' ) );
 Результат:
 
 | pg_size_pretty |
-|:---:|
-| 2338 MB |
+| :------------: |
+|    2338 MB     |
 
 Как узнать текущую версию сервера PostgreSQL?
 
@@ -123,11 +123,11 @@ SELECT version();
 
 Результат будет подобным этому:
 
-| version |
-|:---:|
-| PostgreSQL 9.3.1 on x86_64-unknown-linux-gnu, compiled by gcc (Debian 4.7.2-5) 4.7.2, 64-bit|
+|                                           version                                            |
+| :------------------------------------------------------------------------------------------: |
+| PostgreSQL 9.3.1 on x86_64-unknown-linux-gnu, compiled by gcc (Debian 4.7.2-5) 4.7.2, 64-bit |
 
-Как выполнить SQL-файл в PostgreSQL?  
+Как выполнить SQL-файл в PostgreSQL?
 
 Для данной цели существует специальная команда в консольной утилите:
 
@@ -147,19 +147,19 @@ SELECT version();
 Где `testtb1` — имя таблицы  
 Результат:
 
-|Table "public.testtb1" |||
-|---|---|---|
-|Column|Type| Modifiers|
-|begin_ip | ip4 | not null|
-|end_ip | ip4 | not null|
-|begin_num | bigint | not null|
-| end_num | bigint | not null|
-| country_code | character(2) | not null|
-| country_name | character varying(255) | not null|
-| ip_range | ip4r ||
-| Indexes: |||
-|"testtable1_iprange_index" gist (ip_range) WITH (fillfactor=100)|||
-|||
+| Table "public.testtb1"                                           |                        |           |
+| ---------------------------------------------------------------- | ---------------------- | --------- |
+| Column                                                           | Type                   | Modifiers |
+| begin_ip                                                         | ip4                    | not null  |
+| end_ip                                                           | ip4                    | not null  |
+| begin_num                                                        | bigint                 | not null  |
+| end_num                                                          | bigint                 | not null  |
+| country_code                                                     | character(2)           | not null  |
+| country_name                                                     | character varying(255) | not null  |
+| ip_range                                                         | ip4r                   |           |
+| Indexes:                                                         |                        |           |
+| "testtable1_iprange_index" gist (ip_range) WITH (fillfactor=100) |                        |           |
+|                                                                  |                        |
 
 Как отобразить время выполнения запроса в консольной утилите PostgreSQL?
 
@@ -193,10 +193,10 @@ SELECT relname AS name, relfilenode AS oid, (relpages * 8192 / (1024*1024))::int
 ```bash
 #!/bin/sh
 oid2name=/usr/local/pgsql/bin/oid2name
-pg_data_path=/usr/local/pgsql/data/base 
+pg_data_path=/usr/local/pgsql/data/base
 {
     $oid2name| grep '='| while read oid delim name; do
-        size=`du -s $pg_data_path/$oid|cut -f1` 
+        size=`du -s $pg_data_path/$oid|cut -f1`
         echo "$size $name"
     done
 }|sort -rn
@@ -205,12 +205,12 @@ pg_data_path=/usr/local/pgsql/data/base
 Если нужно без индексов, тогда запрос другой:
 
 ```sql
-SELECT pg_size_pretty( pg_relation_size( 'table' ) ); 
+SELECT pg_size_pretty( pg_relation_size( 'table' ) );
 ```
 
-|pg_size_pretty|
-|:---:|
-|1341 MB|
+| pg_size_pretty |
+| :------------: |
+|    1341 MB     |
 
 Полный размер таблицы и сопутствующих индексов:
 
@@ -229,4 +229,5 @@ SELECT pg_column_size('column_name') FROM 'testtb1';
 Думаю на этом можно пока притормозить. На первое время хватит и этих данных. На этом всё!
 
 ---
+
 Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).
