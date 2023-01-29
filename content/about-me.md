@@ -17,3 +17,5 @@ type: page
 Для связи со мной есть [Twitter](https://twitter.com/jtprogru), [Telegram-чат](https://ttttt.me/jtprogru_chat), E-mail: [mail@jtprog.ru](mailto:mail@jtprog.ru). Еще у меня есть канал в [Telegram](https://ttttt.me/jtprogru_channel) – туда я стараюсь писать свой опыт, мысли и анонсы статей с этого блога.
 
 **UPD**: Меня опубликовали на [Хабре](https://habr.com/ru/post/333732/) в июле 2017. Для меня, как для самоучки это достижение, пусть и маленькое.
+
+**UDP 2**: Завел себе страничку на [getMentor](https://getmentor.dev/mentor/michael-savin-1427) – обращайся если нужна помощь.
