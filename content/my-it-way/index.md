@@ -2,7 +2,7 @@
 categories: Story
 cover:
   alt: stories
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   image: stories.png
   relative: false
 date: "2021-05-15T18:30:00+03:00"

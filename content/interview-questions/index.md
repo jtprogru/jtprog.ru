@@ -2,7 +2,7 @@
 categories: Interview
 cover:
   alt: interview
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   image: interview.png
   relative: false
 date: "2021-07-03T15:55:00+03:00"

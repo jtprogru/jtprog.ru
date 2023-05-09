@@ -2,7 +2,7 @@
 categories: howto
 cover:
   alt: howto
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   image: howto.png
   relative: false
 date: "2015-10-09T10:15:30+03:00"

@@ -2,7 +2,7 @@
 categories: Work
 cover:
   alt: work
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   image: work.png
   relative: false
 date: "2021-04-07T22:31:31+03:00"

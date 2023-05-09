@@ -2,7 +2,7 @@
 categories: Blog
 cover:
   alt: blog
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   image: blog.png
   relative: false
 date: 2022-09-03T23:04:09+03:00

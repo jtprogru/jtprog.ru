@@ -2,7 +2,7 @@
 categories: Opinion
 cover:
   alt: opinions
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   image: opinions.png
   relative: false
 date: "2020-11-09T22:25:00+03:00"

@@ -2,7 +2,7 @@
 categories: Meetup
 cover:
   alt: meetup
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   image: meetup.png
   relative: false
 date: "2018-04-04T15:02:00+03:00"

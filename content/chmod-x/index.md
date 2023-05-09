@@ -1,16 +1,16 @@
 ---
 categories: Basics
 cover:
-  alt: basics
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
-  image: basics.png
-  relative: false
+    alt: basics
+    caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+    image: basics.png
+    relative: false
 date: 2023-03-08T20:16:24+03:00
 tags:
-  - linux
-  - kernel
-  - syscall
-  - chmod
+    - linux
+    - kernel
+    - syscall
+    - chmod
 title: '[Basics] chmod a-x chmod'
 type: post
 ---
@@ -77,19 +77,19 @@ cp --attributes-only --preserve=mode /bin/chown /bin/chmod
 package main
 
 import (
-	"log"
-	"os"
+    "log"
+    "os"
 )
 
 func main() {
-  var perm fs.FileMode
-	perm = 0755
-	file := "/bin/chmod"
-	err := os.Chmod(file, perm)
-	if err != nil {
-		log.Fatalf("can't set file permissions for %s with err: %s", file, err)
-	}
-	log.Printf("file permissions for %s is set to %d", file, perm)
+    var perm fs.FileMode
+    perm = 0755
+    file := "/bin/chmod"
+    err := os.Chmod(file, perm)
+    if err != nil {
+        log.Fatalf("can't set file permissions for %s with err: %s", file, err)
+    }
+    log.Printf("file permissions for %s is set to %d", file, perm)
 }
 ```
 

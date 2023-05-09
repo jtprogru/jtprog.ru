@@ -8,7 +8,7 @@
 
 Автор текстов: [Michael (jtprogru) Savin](https://savinmi.ru).
 
-Автор иллюстраций: [Igan Pol](https://www.behance.net/dreamwolf97d61e).
+Автор иллюстраций: [Igan Pol](https://www.behance.net/iganpol).
 
 ## Лицензия
 

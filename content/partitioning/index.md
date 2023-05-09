@@ -2,7 +2,7 @@
 categories: DevOps
 cover:
   alt: devops
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/dreamwolf97d61e)'
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   image: devops.png
   relative: false
 date: '2018-07-16T16:27:55+03:00'
