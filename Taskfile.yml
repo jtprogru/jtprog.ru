@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: "3"
+
+set:
+  - pipefail
+
+silent: false
+
+env:
+  ENV: development
+
+dotenv: [".env", "{{.ENV}}/.env.", "{{.HOME}}/.env"]
+
+vars:
+  CONFIG: config.yml
+  NAME: 00000000-init
+  PORT: 1313
+  HOST:
+    sh: ifconfig en0 | grep 'inet ' | awk '{ print $2 }'
+
+tasks:
+  default:
+    cmd: task --list
+
+  prec:
+    desc: All preconditions
+    preconditions:
+      - test -f $(which hugo)
+
+  build:
+    desc: Build static site
+    deps:
+      - prec
+    cmds:
+      - hugo -D --gc --verbose --config ./{{.CONFIG}}
+
+  serve:
+    desc: Run local development server with hugo
+    deps:
+      - prec
+    cmd: hugo server -D -E -F --bind {{.HOST}} --port {{.PORT}} --baseURL "http://{{.HOST}}:{{.PORT}}" --noHTTPCache --ignoreCache --enableGitInfo --gc --renderStaticToDisk --forceSyncStatic --logLevel {{.LOG_LEVEL}} --minify --watch --printMemoryUsage --templateMetricsHints --templateMetrics --disableFastRender --renderToDisk --renderStaticToDisk --printUnusedTemplates --printPathWarnings --printI18nWarnings --cleanDestinationDir --config ./{{.CONFIG}}
+
+  update.theme:
+    desc: Update all git submodules - now is only themes/bear
+    deps:
+      - prec
+    preconditions:
+      - test -f $(which git)
+    cmds:
+      - git submodule update --init --recursive --remote
