@@ -15,6 +15,7 @@ dotenv: [".env", "{{.ENV}}/.env.", "{{.HOME}}/.env"]
 vars:
   CONFIG: config.yml
   NAME: 00000000-init
+  LOG_LEVEL: debug
   PORT: 1313
   HOST:
     sh: ifconfig en0 | grep 'inet ' | awk '{ print $2 }'
