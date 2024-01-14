@@ -1,15 +1,15 @@
 ---
-categories: Basics
+categories: Opinion
 cover:
-  alt: basics
+  alt: opinions
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: basics.png
+  image: opinions.png
   relative: false
 date: 2024-01-14T17:28:38+03:00
 tags:
   - education
   - основы
-title: '[Basics] Обучение и образование'
+title: '[Opinion] Обучение и образование'
 type: post
 ---
 
