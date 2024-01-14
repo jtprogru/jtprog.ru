@@ -2,7 +2,7 @@
 baseURL: "https://jtprog.ru"
 theme: "bear"
 title: "Мишка на сервере"
-copyright: "[CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) &copy; / Michael (jtprogru) Savin / Commit: @@@COMMIT@@@"
+copyright: "[CC BY-NC-ND 4.0 DEED](https://creativecommons.org/licenses/by-nc-nd/4.0/) &copy; / Michael (jtprogru) Savin / Commit: @@@COMMIT@@@"
 languageCode: "ru-RU"
 defaultContentLanguage: "ru"
 enableEmoji: true
