@@ -7,7 +7,8 @@ cover:
   relative: false
 date: 2024-01-14T17:28:38+03:00
 tags:
-  - first
+  - education
+  - основы
 title: '[Basics] Обучение и образование'
 type: post
 ---
