@@ -28,6 +28,7 @@ tasks:
     desc: All preconditions
     preconditions:
       - test -f $(which hugo)
+    internal: true
 
   build:
     desc: Build static site
