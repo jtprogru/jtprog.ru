@@ -41,7 +41,7 @@ tasks:
     desc: Run local development server with hugo
     deps:
       - prec
-    cmd: hugo server -D -E -F --bind {{.HOST}} --port {{.PORT}} --baseURL "http://{{.HOST}}:{{.PORT}}" --noHTTPCache --ignoreCache --enableGitInfo --gc --renderStaticToDisk --forceSyncStatic --logLevel {{.LOG_LEVEL}} --minify --watch --printMemoryUsage --templateMetricsHints --templateMetrics --disableFastRender --renderToDisk --renderStaticToDisk --printUnusedTemplates --printPathWarnings --printI18nWarnings --cleanDestinationDir --config ./{{.CONFIG}}
+    cmd: hugo server -D -E -F --bind {{.HOST}} --port {{.PORT}} --baseURL "http://{{.HOST}}:{{.PORT}}" --noHTTPCache --ignoreCache --enableGitInfo --gc --renderStaticToDisk --forceSyncStatic --logLevel {{.LOG_LEVEL}} --minify --watch --printMemoryUsage --templateMetricsHints --templateMetrics --disableFastRender --renderStaticToDisk --printUnusedTemplates --printPathWarnings --printI18nWarnings --cleanDestinationDir --config ./{{.CONFIG}}
 
   update.theme:
     desc: Update all git submodules - now is only themes/bear
