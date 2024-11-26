@@ -2,7 +2,7 @@
 baseURL: "https://jtprog.ru"
 theme: "bear"
 title: "Мишка на сервере"
-copyright: "[CC BY-NC-ND 4.0 DEED](https://creativecommons.org/licenses/by-nc-nd/4.0/) &copy; / Michael (jtprogru) Savin / Commit: @@@COMMIT@@@"
+copyright: "[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) &copy; / Mikhail (jtprogru) Savin / Commit: @@@COMMIT@@@"
 languageCode: "ru-RU"
 defaultContentLanguage: "ru"
 enableEmoji: true
@@ -29,10 +29,10 @@ params:
   env: production
   comments: false
   ShowPostNavLinks: true
-  description: 'Записная книга самоучки'
-  author: 'jtprogru'
+  description: "Заметки самоучки"
+  author: "jtprogru"
   editPost:
-    URL: "https://github.com/jtprogru/jtprog.ru/blob/master/content"
+    URL: "https://github.com/jtprogru/jtprog.ru/blob/main/content"
     Text: "Edit..."
     appendFilePath: true
   label:
@@ -49,9 +49,9 @@ params:
     safari_pinned_tab: /safari-pinned-tab.svg
     disableFingerprinting: true
   cover:
-    hidden: false  # hide everywhere but not in structured data
-    hiddenInList: false  # hide on list pages and home
-    hiddenInSingle: false  # hide on single page
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -65,7 +65,7 @@ params:
   twitter_cards: true
   images: ["twitter-card.svg"]
   defaultTheme: auto
-  copyright: "Mihael (jtprogru) Savin"
+  copyright: "Mikhail (jtprogru) Savin"
   mainSections: ["post"]
   dateFormat: "2006-01-02 15:04"
   related: true
@@ -86,39 +86,39 @@ params:
 
   socialIcons:
     - name: telegram
-      url: 'https://ttttt.me/jtprogru_chat'
+      url: "https://ttttt.me/jtprogru_chat"
     - name: twitter
-      url: 'https://twitter.com/jtprogru'
-    - name: vkcom
-      url: "https://vk.com/jtprogru_channel"
-    - name: boosty
-      url: 'https://boosty.to/jtprogru'
+      url: "https://twitter.com/jtprogru"
+    # - name: vkcom
+    #   url: "https://vk.com/jtprogru_channel"
+    # - name: boosty
+    #   url: "https://boosty.to/jtprogru"
     - name: youtube
-      url: 'https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg'
+      url: "https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg"
     - name: github
-      url: 'https://github.com/jtprogru'
+      url: "https://github.com/jtprogru"
     - name: mastodon
-      url: 'https://mas.to/@jtprogru'
+      url: "https://mas.to/@jtprogru"
     - name: buymeacoffee
-      url: 'https://www.buymeacoffee.com/jtprogru'
+      url: "https://boosty.to/jtprogru"
     - name: dev
-      url: 'https://dev.to/jtprogru'
-    - name: discord
-      url: 'https://discord.gg/aKZNvaXQmR'
+      url: "https://dev.to/jtprogru"
+    # - name: discord
+    #   url: "https://discord.gg/aKZNvaXQmR"
     - name: medium
-      url: 'https://jtprogru.medium.com'
+      url: "https://jtprogru.medium.com"
     - name: linkedin
-      url: 'https://www.linkedin.com/in/jtprogru'
+      url: "https://www.linkedin.com/in/jtprogru"
     - name: unsplash
-      url: 'https://unsplash.com/@jtprogru'
+      url: "https://unsplash.com/@jtprogru"
     - name: keybase
-      url: 'https://keybase.io/jtprog'
-    - name: soundcloud
-      url: 'https://soundcloud.com/jtprogru/'
+      url: "https://keybase.io/jtprog"
+    # - name: soundcloud
+    #   url: "https://soundcloud.com/jtprogru/"
     - name: cv
       url: "https://savinmi.ru"
     - name: rss
-      url: '/index.xml'
+      url: "/index.xml"
 
   analytics:
     google:
@@ -265,4 +265,3 @@ module:
       target: i18n
     - source: archetypes
       target: archetypes
-
