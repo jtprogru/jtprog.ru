@@ -8,7 +8,9 @@ defaultContentLanguage: "ru"
 enableEmoji: true
 enablegitinfo: true
 forcesyncstatic: true
-paginate: 10
+pagination:
+
+  pagerSize: 10
 canonifyURLs: true
 summaryLength: 15
 
