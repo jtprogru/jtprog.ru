@@ -29,6 +29,13 @@ type: page
 
 Прямая ссылка на страничку [**Boosty**](https://boosty.to/jtprogru/donate).
 
+### Telegram Tribute
+
+Чисто для тех, кто сидит в телеге, есть два варианта:
+
+- Разовая поддержка – [Only Telegram](https://t.me/tribute/app?startapp=dl5a);
+- Подписка на закрытый чат – [Telegram](https://t.me/tribute/app?startapp=soRV) или на [Tribute](https://web.tribute.tg/s/oRV);
+
 ### Crypto
 
 - ETH: **0xC58c596dc159Adfe606af60F226d97aCd82EA228**
@@ -50,6 +57,5 @@ type: page
 - [DigitalOcean](https://m.do.co/c/915531dbfa41)
 - [Fozzy](https://fozzy.com/aff.php?aff=1116)
 - [SmartApe](http://www.smartape.ru/?partner=52369)
-- [Boosty](https://boosty.to/jtprogru/donate)
 
 **СПАСИБО ТЕБЕ, `%username%`!**

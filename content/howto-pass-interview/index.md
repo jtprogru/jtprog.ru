@@ -23,4 +23,7 @@ type: post
 Продолжение доступно по подписке на [Boosty](https://boosty.to/jtprogru/posts/d9e514f4-02b3-40f7-ab50-7716d0fc81b3)...
 
 ---
+
 Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).
+
+О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". Попасть в закрытый Telegram-чат единомышленников "BearLoga" можно по ссылке на [Tribute](https://web.tribute.tg/s/oRV).
