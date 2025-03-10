@@ -57,5 +57,6 @@ type: page
 - [DigitalOcean](https://m.do.co/c/915531dbfa41)
 - [Fozzy](https://fozzy.com/aff.php?aff=1116)
 - [SmartApe](http://www.smartape.ru/?partner=52369)
+- [ChadGPT](https://ask.chadgpt.ru/ref/536fe51050034a61)
 
 **СПАСИБО ТЕБЕ, `%username%`!**
