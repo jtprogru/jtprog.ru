@@ -162,7 +162,7 @@ params:
 menu:
   main:
     - name: "Поддержать"
-      url: "https://bearonserver.ru/donations/"
+      url: "https://jtprog.ru/donations/"
       weight: 1
 
 frontmatter:
