@@ -1,16 +1,27 @@
 ---
-categories: Work
-cover:
-  alt: work
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: work.png
-  relative: false
-date: 2025-02-09T15:56:15+03:00
+title: 'Хочу программировать на Golang'
+description: "Практические советы по интеграции Golang в рабочие процессы: автоматизация рутинных задач, SQL-запросов и создание собственных инструментов"
+keywords:
+  - golang автоматизация
+  - программирование на golang
+  - примеры кода golang
+  - инструменты для devops
+  - автоматизация рабочих задач
+  - генерация паролей cli
+  - работа с базами данных
+date: "2025-02-09T15:56:15+03:00"
+lastmod: "2025-02-09T15:56:15+03:00"
 tags:
   - golang
   - coding
-title: 'Хочу программировать на Golang'
+categories: ["Work"]
+cover:
+  image: work.png
+  alt: work
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: 'want-coding-golang'
 ---
 
 Привет, `%username%`! В том или ином виде часто сталкиваюсь с таким вопросом:
