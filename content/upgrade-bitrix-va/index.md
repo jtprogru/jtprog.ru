@@ -9,8 +9,19 @@ date: "2021-08-20T22:47:51+03:00"
 tags:
 - bitrix
 - work
+- centos
+- php 7.4
+- yum репозитории
 title: '[Work] Обновление Bitrix VA'
 type: post
+description: "Пошаговое обновление PHP до версии 7.4 в Bitrix Virtual Appliance на CentOS 7. Настройка репозиториев Remi и работа с MySQL."
+keywords:
+  - "обновление Bitrix VA"
+  - "PHP 7.4 CentOS"
+  - "Remi репозиторий"
+  - "настройка my.cnf"
+  - "перезапуск Apache и MySQL"
+  - "innodb_strict_mode"
 ---
 
 Привет, `%username%`! Это старая заметка о процедуре обновления Bitrix VA до версии PHP 7.4. Но вдруг кому-то будет полезно, так что пусть тут живет.

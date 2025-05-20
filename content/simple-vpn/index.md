@@ -1,18 +1,28 @@
----
-categories: howto
-cover:
-  alt: howto
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
-  relative: false
-date: "2015-03-30T14:39:00+03:00"
-tags:
-- vpn
-- pptpd
-- ubuntu
-title: '[HowTo] Простой VPN-сервер на базе Ubuntu+pptpd'
-type: post
----
+---  
+title: '[HowTo] Простой VPN-сервер на базе Ubuntu+pptpd'  
+description: "Пошаговое руководство по развертыванию VPN-сервера с использованием pptpd: настройка IP-форвардинга, управление клиентами и правила iptables"  
+keywords:  
+  - vpn сервер ubuntu  
+  - pptpd настройка  
+  - ip-forwarding  
+  - iptables правила  
+  - клиентские подключения  
+  - безопасность vpn  
+date: "2015-03-30T14:39:00+03:00"  
+lastmod: "2015-03-30T14:39:00+03:00"  
+tags:  
+  - vpn  
+  - pptpd  
+  - ubuntu  
+categories: ["howto"]  
+cover:  
+  image: howto.png  
+  alt: howto  
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'  
+  relative: false  
+type: post  
+slug: 'simple-vpn'
+---  
 
 Приспичило поднять VPN-сервер, с которым смогли бы работать все устройства (Android, Windows) потому, что старый добрый VPN поднятый на базе Cisco работал исключительно через специальное приложение-клиент. Нам хотелось работать просто и без постороннего ПО, пусть даже и просто запускаемого на стороне клиента без всяких установок. Решение было найдено довольно быстро, а главное бесплатно.
 

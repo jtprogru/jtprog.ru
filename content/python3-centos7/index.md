@@ -1,16 +1,26 @@
 ---
-categories: howto
+title: '[HowTo] Установка Python 3 в CentOS 7'
+description: "Пошаговая инструкция по установке Python 3.6 и настройке виртуального окружения в CentOS 7 с использованием репозитория IUS"
+keywords:
+  - установка python centos 7
+  - python 3 centos
+  - виртуальное окружение python
+  - pip установка
+  - настройка python
+  - ius репозиторий
+date: "2019-08-15T11:33:00+03:00"
+lastmod: "2019-08-15T11:33:00+03:00"
+tags:
+  - python
+  - centos
+categories: ["howto"]
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2019-08-15T11:33:00+03:00"
-tags:
-- python
-- centos
-title: '[HowTo] Установка Python 3 в CentOS 7'
 type: post
+slug: 'python3-centos7'
 ---
 
 Привет, `%username%`! При работе на CentOS всё чаще необходим становится Python третьей ветки, ибо вторая ветка скоро умрёт. Как ставить Python 3.x из репозиториев? Легко!

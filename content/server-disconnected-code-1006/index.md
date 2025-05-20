@@ -1,17 +1,26 @@
----
-categories: howto
-cover:
-  alt: howto
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
-  relative: false
-date: "2016-08-03T10:00:03+03:00"
-tags:
-- proxmox
-- cert
-title: '[HowTo] Ошибка Server disconnected (code: 1006)'
-type: post
----
+---  
+title: '[HowTo] Ошибка Server disconnected (code: 1006)'  
+description: "Решение ошибки noVNC в Proxmox: экспорт SSL-сертификата, добавление в доверенные источники и настройка безопасного подключения через Safari"  
+keywords:  
+  - proxmox novnc ошибка  
+  - ssl сертификат proxmox  
+  - ошибка 1006  
+  - добавление сертификата macos  
+  - безопасное подключение hypervisor  
+date: "2016-08-03T10:00:03+03:00"  
+lastmod: "2016-08-03T10:00:03+03:00"  
+tags:  
+  - proxmox  
+  - cert  
+categories: ["howto"]  
+cover:  
+  image: howto.png  
+  alt: howto  
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'  
+  relative: false  
+type: post  
+slug: "server-disconnected-code-1006"
+---  
 
 Познакомившись с гипервизором Proxmox, я столкнулся с ошибкой при попытке открыть консоль noVNC на любую виртуалку. Ошибка гласила `Server disconected (code: 1006)`. А мне ну категорически срочно надо было попасть на виртуалку для того, чтобы поставить на нее систему.
 

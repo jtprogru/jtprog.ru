@@ -1,17 +1,27 @@
 ---
-categories: Opinion
-cover:
-  alt: opinion
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: opinions.png
-  relative: false
-date: 2023-05-08T22:22:00+03:00
+title: '[Opinion] Как зарекомендовать себя'
+description: "Практические советы по адаптации на новой работе: задавание вопросов, конспектирование, проявление инициативы и создание ценности для команды"
+keywords:
+  - адаптация на работе
+  - профессиональное развитие
+  - советы новичкам
+  - карьерный рост
+  - работа в команде
+  - менторство
+date: "2023-05-08T22:22:00+03:00"
+lastmod: "2023-05-08T22:22:00+03:00"
 tags:
   - работа
   - мысли
   - getmentor
-title: '[Opinion] Как зарекомендовать себя'
+categories: ["Opinion"]
+cover:
+  image: opinions.png
+  alt: opinion
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: 'prove-yourself'
 ---
 
 Привет, `%username%`! Я не особо афиширую некоторые свои телодвижения, но видимо пришло время – я зарегистрировался в роли наставника на площадке по поиску менторов [getmentor.dev](https://getmentor.dev/mentor/michael-savin-1427) и прямо сейчас один из подписчиков получает от меня консультации на постоянной основе (*Денис, привет!*).

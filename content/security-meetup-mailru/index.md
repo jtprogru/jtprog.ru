@@ -1,18 +1,27 @@
----
-categories: Meetup
-cover:
-  alt: meetup
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: meetup.png
-  relative: false
-date: "2018-04-04T15:02:00+03:00"
-tags:
-- event
-- meetup
-- mailru
-title: '[Meetup] Security Meetup Mail.Ru Group'
-type: post
----
+---  
+title: '[Meetup] Security Meetup Mail.Ru Group'  
+description: "Обзор докладов Security Meetup от Mail.Ru Group: атаки в Windows-сетях, Bug Bounty, социотехническое тестирование и уязвимости веб-кэша"  
+keywords:  
+  - security meetup  
+  - mail.ru bug bounty  
+  - NTLM атаки  
+  - социотехническое тестирование  
+  - отравление кэша  
+date: "2018-04-04T15:02:00+03:00"  
+lastmod: "2018-04-04T15:02:00+03:00"  
+tags:  
+  - event  
+  - meetup  
+  - mailru  
+categories: ["Meetup"]  
+cover:  
+  image: meetup.png  
+  alt: meetup  
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'  
+  relative: false  
+type: post  
+slug: 'security-meetup-mailru'
+---  
 
 Привет, `%username%`! Мне удалось посетить Security Meetup MailRu Group в этот вторник 03.04.2018 г. Посетил данное мероприятие я по счастливой случайности и отличному стечению обстоятельств вместе со своей *будущей* женой.
 

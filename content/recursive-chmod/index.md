@@ -1,16 +1,25 @@
 ---
-categories: howto
+title: '[HowTo] Recursive chmod'
+description: "Использование утилиты find для рекурсивного изменения прав доступа к файлам и каталогам в Linux: базовые команды и примеры"
+keywords:
+  - рекурсивный chmod
+  - linux права доступа
+  - find команда
+  - изменение прав каталогов
+  - массовое chmod
+date: "2015-06-30T19:33:11+03:00"
+lastmod: "2015-06-30T19:33:11+03:00"
+tags:
+  - chmod
+  - linux
+categories: ["howto"]
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2015-06-30T19:33:11+03:00"
-tags:
-- chmod
-- linux
-title: '[HowTo] Recursive chmod'
 type: post
+slug: 'recursive-chmod'
 ---
 
 На днях пришлось выставлять права на файлы и каталоги на одном из серверов. Собственно задача самая простая, но после двух каталогов мне стало лень ползать по каждому каталогу и повторять одно и то же действие.

@@ -1,17 +1,27 @@
 ---
-categories: OS
+title: '[OS] Shadow Defender или Простая защита от дурака'
+description: "Использование Shadow Defender для защиты Windows: настройка режима тени, управление исключениями и рекомендации по резервному копированию"
+keywords:
+  - shadow defender
+  - защита windows
+  - режим тени
+  - исключения файлов
+  - резервное копирование
+  - защита от вирусов
+date: "2014-12-29T20:28:00+03:00"
+lastmod: "2014-12-29T20:28:00+03:00"
+tags:
+  - windows
+  - shadow defender
+  - security
+categories: ["OS"]
 cover:
+  image: OS.png
   alt: OS
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: OS.png
   relative: false
-date: "2014-12-29T20:28:00+03:00"
-tags:
-- windows
-- shadow defender
-- security
-title: '[OS] Shadow Defender или Простая защита от дурака'
 type: post
+slug: "shadow-defender"
 ---
 
 Была в моей работе [печальная история](https://jtprog.ru/bad-story/) связанная с плохой компьютерной грамотностью пользователей. Ситуация была прямо скажу совсем говно. Но посовещавшись мы нашли выход и решение, дающее гарантию, что данная ситуация не повторится. А решение было простое - установить на машины пользователей ПО под названием [Shadow Defender](https://ru.wikipedia.org/wiki/Shadow_Defender).

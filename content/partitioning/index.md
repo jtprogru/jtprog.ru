@@ -1,17 +1,26 @@
 ---
-categories: DevOps
+title: '[DevOps] Партицирование таблиц в PostgreSQL'
+description: "Пошаговое руководство по секционированию больших таблиц в PostgreSQL с использованием триггеров, наследования и управления последовательностями"
+keywords:
+  - postgres партицирование
+  - секционирование таблиц
+  - оптимизация postgres
+  - триггеры postgresql
+  - управление большими данными
+date: "2018-07-16T16:27:55+03:00"
+lastmod: "2018-07-16T16:27:55+03:00"
+tags:
+  - postgres
+  - pgsql
+  - linux
+categories: ["DevOps"]
 cover:
+  image: devops.png
   alt: devops
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: devops.png
   relative: false
-date: '2018-07-16T16:27:55+03:00'
-tags:
-- postgres
-- pgsql
-- linux
-title: '[DevOps] Партицирование таблиц в PostgreSQL'
 type: post
+slug: 'partitioning'
 ---
 
 Привет, `%username%`! Мне понадобилось на работе заняться партицированием одной из таблиц в БД у заказчика. Не буду рассказывать о том, почему именно я выбрал партиционирование т.к. по этому вопросу и так много информации в сети Интернет. Далее в статье будет немного о том, как делается партицирование (секционирование).

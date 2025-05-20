@@ -1,17 +1,26 @@
 ---
-categories: howto
+title: '[HowTo] Сбросить забытый пароль'
+description: "Пошаговая инструкция по сбросу пароля root в Ubuntu через Recovery Mode: монтирование файловой системы и изменение учетных данных"
+keywords:
+  - сброс пароля root
+  - ubuntu recovery mode
+  - восстановление пароля linux
+  - grub загрузчик
+  - remount файловой системы
+date: "2018-06-18T14:57:25+03:00"
+lastmod: "2018-06-18T14:57:25+03:00"
+tags:
+  - linux
+  - password
+  - root
+categories: ["howto"]
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2018-06-18T14:57:25+03:00"
-tags:
-- linux
-- password
-- root
-title: '[HowTo] Сбросить забытый пароль'
 type: post
+slug: 'reset-lost-password'
 ---
 
 Привет, `%username%`! Как бы это печально не звучало, но все мы рано или поздно забываем свои пароли. Существует множество различных утилит для восстановления пароля к системам Windows. Но тут будет краткая и простая инструкция восстановления пароля root от систем Ubuntu.

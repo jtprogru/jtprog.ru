@@ -7,12 +7,20 @@ cover:
   relative: false
 date: 2023-10-17T20:58:16+03:00
 tags:
-  - taskfile
-  - makefile
-  - YAML
-  - CLI
+- taskfile
+- makefile
+- YAML
+- CLI
 title: '[Work] Taskfile'
 type: post
+description: "Сравнение Taskfile и Makefile для автоматизации DevOps-задач. Примеры конфигураций, плюсы и минусы инструментов."
+keywords:
+  - "Taskfile vs Makefile"
+  - "автоматизация DevOps"
+  - "YAML для сборки"
+  - "инструменты CLI"
+  - "настройка Go-Task"
+  - "сравнение систем сборки"
 ---
 
 Привет, `%username%`! Есть такая примитивная утилита автоматизации жизни любого DevOps и SRE как `make`, которая настраивается через `Makefile` и позволяет делать разные вещи. Но знаешь ли ты про `Taskfile` и утилиту `task`?

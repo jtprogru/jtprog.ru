@@ -10,8 +10,19 @@ tags:
   - Yandex.Cloud
   - Yandex Scale
   - Meetup
+  - BareMetal
+  - Chaos Engineering
+  - S3
 title: 'Yandex Scale 2024'
 type: post
+description: "Итоги конференции Yandex.Scale 2024: обзор докладов по BareMetal, Chaos Engineering, безопасности и интеграции S3 в Yandex.Cloud."
+keywords:
+  - "Yandex BareMetal"
+  - "хаос-инжиниринг в облаке"
+  - "безопасность Yandex.Cloud"
+  - "доступ к S3 без интернета"
+  - "новости Yandex.Scale"
+  - "облачные сервисы 2024"
 ---
 
 Привет, `%username%`! Я побывал на конференции [Yandex.Scale](https://scale.yandex.cloud/), которая прошла *2024-09-25*. Посетил несколько докладов, послушал про запуск нового продукта, а так же довольно интересно и полезно провел время. Сейчас попробую рассказать о том, как это было.

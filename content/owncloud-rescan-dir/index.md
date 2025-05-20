@@ -1,16 +1,25 @@
 ---
-categories: howto
+title: '[HowTo] Удаляем фантомные файлы'
+description: "Решение проблемы с фантомными файлами в ownCloud после ручного удаления через консоль: восстановление синхронизации и очистка кэша"
+keywords:
+  - owncloud фантомные файлы
+  - owncloud очистка кэша
+  - owncloud ошибки синхронизации
+  - occ files:scan
+  - owncloud команды консоли
+date: "2017-05-25T15:41:28+03:00"
+lastmod: "2017-05-25T15:41:28+03:00"
+tags:
+  - owncloud
+  - linux
+categories: ["howto"]
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2017-05-25T15:41:28+03:00"
-tags:
-- owncloud
-- linux
-title: '[HowTo] Удаляем фантомные файлы'
 type: post
+slug: 'owncloud-rescan-dir'
 ---
 
 Я очень давно пользуюсь такой прелестной вещью как ownCloud как на работе, так и для себя лично. Меня этот комбайн во всем устраивает. И я умудрился столкнуться с интересным глюком в его работе.

@@ -1,16 +1,26 @@
 ---
-categories: OS
+title: '[OS] Очередь и blacklist Postfix'
+description: "Практическое руководство по управлению очередью почтовых сообщений и настройке черного списка в Postfix: очистка очереди, блокировка доменов и интеграция с SpamAssassin"
+keywords:
+  - postfix очередь
+  - очистка почтовой очереди
+  - blacklist postfix
+  - настройка spamassassin
+  - блокировка email
+  - управление почтовым сервером
+date: "2016-10-31T09:00:14+03:00"
+lastmod: "2016-10-31T09:00:14+03:00"
+tags:
+  - postfix
+  - blacklist
+categories: ["OS"]
 cover:
+  image: OS.png
   alt: OS
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: OS.png
   relative: false
-date: "2016-10-31T09:00:14+03:00"
-tags:
-- postfix
-- blacklist
-title: '[OS] Очередь и blacklist Postfix'
 type: post
+slug: 'queue-blacklist-postfix'
 ---
 
 Приветствую, `%username%`! Рано или поздно все сталкиваются с проблемами в работе почтового сервера. И одна из распространенных причин это переполнение очереди сообщений. Рассмотрим как же эту очередь посмотреть и почистить.

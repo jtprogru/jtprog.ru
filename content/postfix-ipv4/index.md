@@ -1,16 +1,25 @@
 ---
-categories: howto
+title: '[HowTo] Лечим Postfix'
+description: "Исправление ошибок запуска Postfix после отключения IPv6: настройка протоколов и обновление конфигурации main.cf"
+keywords:
+  - postfix ошибка inet_protocols
+  - postfix ipv6 отключение
+  - настройка postfix ipv4
+  - ошибки запуска postfix
+  - конфигурация main.cf
+date: "2019-05-23T15:48:55+03:00"
+lastmod: "2019-05-23T15:48:55+03:00"
+tags:
+  - postfix
+  - linux
+categories: ["howto"]
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2019-05-23T15:48:55+03:00"
-tags:
-- postfix
-- linux
-title: '[HowTo] Лечим Postfix'
 type: post
+slug: 'postfix-ipv4'
 ---
 
 После отключения IPv6 на сервере перестал запускаться Postfix, но оставлял в логах следующие ошибки:

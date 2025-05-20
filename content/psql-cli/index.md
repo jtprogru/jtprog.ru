@@ -1,17 +1,27 @@
 ---
-categories: DevOps
-cover:
-  alt: devops
-  caption: "Illustrated by [Igan Pol](https://www.behance.net/iganpol)"
-  image: devops.png
-  relative: false
+title: '[DevOps] Работаем руками с PostgreSQL'
+description: "Сборник ключевых команд CLI для администрирования PostgreSQL: управление базами данных, таблицами, индексами и анализ производительности"
+keywords:
+  - postgresql команды
+  - администрирование баз данных
+  - оптимизация postgres
+  - размер таблиц postgres
+  - работа с cli
+  - анализ производительности
 date: "2018-07-12T16:15:04+03:00"
+lastmod: "2018-07-12T16:15:04+03:00"
 tags:
   - postgres
   - pgsql
   - cli
-title: "[DevOps] Работаем руками с PostgreSQL"
+categories: ["DevOps"]
+cover:
+  image: devops.png
+  alt: devops
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: 'psql-cli'
 ---
 
 Привет, `%username%`! Иногда бывает необходимо поработать ручками с базой данных PostgreSQL, но не для всех бывает очевидно что и как там делать. Поэтому ниже будет список из нескольких полезных примеров команд, которые помогу быстро разобраться и начать. Главное помнить: не тестируйте на production-серверах!
@@ -159,7 +169,6 @@ SELECT version();
 | ip_range                                                         | ip4r                   |           |
 | Indexes:                                                         |                        |           |
 | "testtable1_iprange_index" gist (ip_range) WITH (fillfactor=100) |                        |           |
-|                                                                  |                        |
 
 Как отобразить время выполнения запроса в консольной утилите PostgreSQL?
 

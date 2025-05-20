@@ -1,17 +1,26 @@
 ---
-categories: howto
+title: '[HowTo] Лечим исчезнувший NetworkManager applet'
+description: "Решение проблемы с отсутствующим апплетом NetworkManager в Ubuntu: восстановление сетевого интерфейса и альтернативные инструменты управления"
+keywords:
+  - networkmanager ubuntu
+  - восстановление nm-applet
+  - wicd установка
+  - ошибки сетевого интерфейса
+  - libnl фикс
+date: "2016-02-02T21:51:19+03:00"
+lastmod: "2016-02-02T21:51:19+03:00"
+tags:
+  - ubuntu
+  - network
+  - networkmanager
+categories: ["howto"]
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2016-02-02T21:51:19+03:00"
-tags:
-- ubuntu
-- network
-- networkmanager
-title: '[HowTo] Лечим исчезнувший NetworkManager applet'
 type: post
+slug: 'recover-nm-applet'
 ---
 
 Случилась беда у меня на днях. Пришел с работы и не могу подключиться к домашней сетке. Пытаюсь посмотреть на сетевые подключения, а знакомого значка не нахожу на панели. Оказывается отвалился `nm-applet` вместе со всем `NetworkManager`'ом.
