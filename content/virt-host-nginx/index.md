@@ -1,17 +1,22 @@
 ---
-categories: howto
+title: '[HowTo] Настройка виртуальных хостов Nginx в CentOS 7'
+description: "Пошаговая инструкция по настройке виртуальных хостов (server blocks) в Nginx на CentOS 7: создание структуры каталогов, настройка прав, конфигурирование server blocks, тестирование и рекомендации по безопасности."
+keywords: ["nginx виртуальные хосты", "настройка nginx centos 7", "nginx server blocks", "nginx конфигурация", "виртуальный хост nginx", "nginx sites-enabled", "nginx sites-available", "nginx настройка домена", "nginx best practices"]
+date: "2017-10-27T14:36:00+03:00"
+lastmod: "2017-10-27T14:36:00+03:00"
+tags:
+  - nginx
+  - vhosts
+  - centos
+categories:
+  - howto
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2017-10-27T14:36:00+03:00"
-tags:
-- nginx
-- vhosts
-- centos
-title: '[HowTo] Настройка виртуальных хостов Nginx в CentOS 7'
 type: post
+slug: virt-host-nginx
 ---
 
 Привет, `%username%`! Как известно Nginx – один из самых популярных веб-серверов в мире. Nginx отвечает за размещение и обслуживание объёмных и производительных сайтов с большой нагрузкой. В большинстве случаев Nginx легче Apache и лучше подаётся масштабированию. Кроме того, Nginx можно использовать как веб-сервер и обратный прокси.

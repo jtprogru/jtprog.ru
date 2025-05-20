@@ -1,17 +1,27 @@
 ---
-categories: Story
+title: '[Story] Как я вошёл в IT'
+description: "Личный опыт и история вхождения в IT: путь от школьника до системного администратора, обучение, армия, первые шаги в профессии и советы новичкам."
+keywords: ["как войти в IT", "личная история IT", "опыт в IT", "путь в айти", "системный администратор", "обучение программированию", "работа в IT", "советы новичкам", "Linux", "школьный кружок программирования"]
+date: "2021-05-15T18:30:00+03:00"
+lastmod: "2021-05-15T18:30:00+03:00"
+tags:
+  - story
+  - войти в айти
+  - войтивайти
+  - IT career
+  - system administrator
+  - Linux
+  - programming
+  - personal story
+categories:
+  - Story
 cover:
+  image: stories.png
   alt: stories
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: stories.png
   relative: false
-date: "2021-05-15T18:30:00+03:00"
-tags:
-- story
-- войти в айти
-- войтивайти
-title: '[Story] Как я вошёл в IT'
 type: post
+slug: my-it-way
 ---
 
 Привет, `%username%`! Ниже по тексту не будет никаких советов, рекомендаций, списков курсов которые тебе могут помочь. Будет только моя личная история о том, как я смог "Войти в АйТи".

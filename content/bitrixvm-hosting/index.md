@@ -11,8 +11,18 @@ tags:
 - bitrixvm
 - hosting
 - nginx
+- migration
+- backup
+- restore
+- ssl
+- letsencrypt
+- certbot
+- gzip
+- troubleshooting
 title: '[Work] Перенос сайта на хостинг с BitrixVM'
 type: post
+description: "Подробная инструкция по переносу сайта на хостинг с BitrixVM: резервное копирование, восстановление, настройка SSL-сертификата Let's Encrypt с Certbot и решение распространенной проблемы с gzip в Nginx."
+keywords: ["перенос сайта bitrix", "хостинг bitrixvm", "миграция bitrix", "резервное копирование bitrix", "восстановление bitrix", "ssl bitrix", "lets encrypt certbot", "настройка nginx gzip", "bitrix troubleshooting", "bitrixvm инструкция"]
 ---
 
 Привет, `%username%`! У многих хостинг-провайдеров есть тарифные планы для тех "малышей", кому хочется ~~свой бизнес~~ интернет-магазин. Данный тариф представляет из себя максимально минимальную по характеристикам VM с предустановленной CMS Bitrix – стандартное коробочное решение поставляемое авторами данного продукта в виде готовой BitrixVM.

@@ -11,8 +11,14 @@ tags:
 - ubuntu
 - mtp
 - udev rules
+- howto
+- file transfer
+- usb
+- linux configuration
 title: '[HowTo] Дружим Android и Ubuntu 14.04'
 type: post
+description: "Пошаговая инструкция по подключению Android устройства к Ubuntu 14.04 с использованием MTP и правил udev для доступа к файлам и обмена данными."
+keywords: ["подключение android ubuntu", "mtp linux", "udev rules android", "доступ к файлам android ubuntu", "ubuntu 14.04", "htc desire 310", "usb debugging", "transfer files linux android", "ubuntu howto", "android usb"]
 ---
 
 Я относительно недавно обзавелся довольно простой мобилкой - `HTC Desire 310` на `Android 4.2.2`. И все было нормально до тех пор пока мне не понадобилось подружить этот агрегат с моим ноутбуком, на котором стоит Ubuntu 14.04 LTS.

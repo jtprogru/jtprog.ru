@@ -11,8 +11,16 @@ tags:
 - devops
 - hugo
 - ci-cd
+- automation
+- deployment
+- static site
+- markdown
+- docker
+- rsync
 title: '[DevOps] GitLab-CI – делаем себе просто'
 type: post
+description: "Описание простой схемы автоматизации CI/CD для статического сайта на Hugo с использованием GitLab CI, Docker и rsync для деплоя."
+keywords: ["gitlab ci", "hugo", "ci/cd", "автоматизация деплоя", "статический сайт", "docker", "rsync", "gitlab pipeline", "devops", "markdown blog"]
 ---
 
 Привет, `%username%`! Я решил вернуться к генераторам статических сайтов. На просторах данного блога я уже писал о переезде с [Wordpress на Hugo](https://jtprog.ru/gohugo/). В сентябре я решил дать Wordpress'у второй шанс, но увы и ах.

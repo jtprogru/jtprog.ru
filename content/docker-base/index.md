@@ -1,17 +1,29 @@
 ---
-categories: Basics
-cover:
-    image: basics.png
-    alt: basics
-    caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-    relative: false
-date: "2020-08-08T18:50:00+03:00"
-tags:
-- docker
-- dockerfile
-- docker-compose
 title: '[Basics] Основы Docker: Dockerfile и docker-compose.yml'
+description: "Пошаговое руководство по созданию и использованию Dockerfile и docker-compose для разработки и деплоя приложений: примеры, best practices, автоматизация."
+keywords: ["dockerfile пример", "docker compose инструкция", "основы docker", "docker best practices", "docker автоматизация", "docker для начинающих", "docker compose vs dockerfile", "контейнеризация приложений", "docker hub публикация"]
+date: "2020-08-08T18:50:00+03:00"
+lastmod: "2020-08-08T18:50:00+03:00"
+tags:
+  - docker
+  - dockerfile
+  - docker-compose
+  - containerization
+  - containers
+  - images
+  - build
+  - orchestration
+  - deployment
+  - basics
+categories:
+  - Basics
+cover:
+  image: basics.png
+  alt: basics
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: docker-base
 ---
 Привет, `%username%`! Поскольку Docker мы уже установили, теперь надо что-то в нем запустить. И как только мы захотели что-то запустить, то первое с чем мы сталкиваемся это `Dockerfile` и `docker-compose.yml`. О них и будет речь далее.
 
@@ -46,7 +58,7 @@ FROM ubuntu:20.04
 COPY . /var/www/html
 ```
 
-Новые слои в итоговом образе создаются только инструкциями `FROM`, `RUN`, `COPY`, `ADD`. Остальные инструкции что-то описывают, настраивают или общаются с Docker’ом говоря, например – открыть такой-то порт.
+Новые слои в итоговом образе создаются только инструкциями `FROM`, `RUN`, `COPY`, `ADD`. Остальные инструкции что-то описывают, настраивают или общаются с Docker'ом говоря, например – открыть такой-то порт.
 
 ## Инструкции Dockerfile
 
@@ -157,7 +169,7 @@ docker ps
 
 ## Используем docker-compose
 
-Согласно одной из легенд, `docker-compose` появился после того, как к разработчикам Docker пришли и сказали: “Docker – отличная вещь! Но сделайте удобно!”. Будем считать что он уже [поставлен](https://jtprog.ru/docker-install/) у вас. Так что сразу перейдем к делу – содаем локально рядом с `Dockerfile` еще и `docker-compose.yml`.
+Согласно одной из легенд, `docker-compose` появился после того, как к разработчикам Docker пришли и сказали: "Docker – отличная вещь! Но сделайте удобно!" Будем считать что он уже [поставлен](https://jtprog.ru/docker-install/) у вас. Так что сразу перейдем к делу – содаем локально рядом с `Dockerfile` еще и `docker-compose.yml`.
 
 И приводим его к такому виду:
 

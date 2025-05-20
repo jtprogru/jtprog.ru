@@ -10,8 +10,15 @@ tags:
 - locale
 - perl
 - linux
+- ubuntu
+- troubleshooting
+- error
+- localization
+- command line
 title: '[HowTo] Fix locale Perl'
 type: post
+description: "Решение проблемы с настройками локали Perl в Ubuntu Server 14.04, которая приводит к предупреждениям и ошибкам при обновлении системы, с использованием команды locale-gen."
+keywords: ["fix locale perl", "ubuntu locale error", "perl warning setting locale failed", "locale-gen ubuntu", "linux localization", "troubleshooting ubuntu", "perl locale settings", "command line howto"]
 ---
 
 Привет, `%username%`! В последнее время заметил на всех сервера под управлением `Ubuntu Server 14.04` одну общую проблему. При попытке обновиться стандартными средствами выдается ошибка настройки локализации. Быстрый гуглеж выдает вот такое примитивное решение.

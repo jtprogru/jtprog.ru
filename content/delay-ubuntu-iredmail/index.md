@@ -10,8 +10,17 @@ tags:
 - iredmail
 - ubuntu
 - mail
+- mail server
+- email
+- troubleshooting
+- postfix
+- dovecot
+- mail client
+- performance
 title: '[HowTo] Задержки почтового сервера на Ubuntu + iRedMail'
 type: post
+description: "Устранение неполадок и решение проблемы задержек почтового сервера на Ubuntu с iRedMail, вызванных чрезмерной частотой проверки почтового клиента."
+keywords: ["iredmail", "ubuntu", "mail server", "email delay", "troubleshooting", "postfix", "dovecot", "the bat", "mail client", "configuration", "performance"]
 ---
 
 Привет, `%username%`! Вчера на работе возникла проблема с почтовым сервером. Проблема проявляла себя следующим образом: клиенты (сотрудники компании в подавляющем большинстве) стали жаловаться на то, что почта у них приходит с задержками. Задержки были самыми разными по времени.

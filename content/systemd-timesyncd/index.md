@@ -1,17 +1,21 @@
 ---
-categories: Work
-cover:
-  alt: work
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: work.png
-  relative: false
+title: '[Work] Настраиваем systemd-timesyncd'
+description: 'Пошаговая инструкция по настройке systemd-timesyncd для синхронизации времени в Linux: удаление ntpd, настройка серверов времени, запуск и проверка статуса.'
+keywords: ['systemd-timesyncd настройка', 'linux ntp', 'systemd timesyncd', 'настройка времени linux', 'linux time sync', 'systemd-timesyncd инструкция', 'ntpd альтернатива']
 date: "2020-11-27T20:20:00+03:00"
+lastmod: "2020-11-27T20:20:00+03:00"
 tags:
 - systemd
 - timesyncd
 - linux
-title: '[Work] Настраиваем systemd-timesyncd'
+categories: [Work]
+cover:
+  image: work.png
+  alt: work
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: systemd-timesyncd
 ---
 
 Привет, `%username%`! Для синхронизации времени в Linux традиционно используется `ntpd` как стандарт де-факто, но есть альтернатива в виде `systemd-timesyncd`. Посмотрим как оно настраивается и включается, а `ntpd` забудем и удалим.

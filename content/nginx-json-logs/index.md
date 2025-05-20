@@ -1,17 +1,26 @@
 ---
-categories: Work
+title: '[Work] Логи Nginx в JSON'
+description: "Пошаговое руководство по настройке логирования Nginx в JSON-формате для удобного парсинга и интеграции с системами анализа логов"
+keywords: 
+  - nginx logs
+  - json logging
+  - elk stack
+  - nginx configuration
+  - access logs
+date: "2021-08-26T18:14:09+03:00"
+lastmod: "2021-08-26T18:14:09+03:00"
+tags:
+  - nginx
+  - json
+  - logs
+categories: ["Work"]
 cover:
+  image: work.png
   alt: work
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: work.png
   relative: false
-date: "2021-08-26T18:14:09+03:00"
-tags:
-- nginx
-- json
-- logs
-title: '[Work] Логи Nginx в JSON'
 type: post
+slug: 'nginx-json-logs'
 ---
 
 Привет, `%username%`! Логи это очень хорошо! Логи – это машина времени, которая работает исключительно в прошлое. А логи в JSON сильно проще парсить и лить в тот же ELK.

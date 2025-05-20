@@ -1,18 +1,21 @@
 ---
 title: 'Little Snitch'
-type: post
+description: "Обзор и опыт использования фаервола Little Snitch для macOS: настройка, профили, мониторинг сетевой активности и рекомендации по безопасности."
+keywords: ["Little Snitch", "macOS", "фаервол", "firewall", "безопасность", "Alert mode", "мониторинг сети", "профили", "сетевой доступ"]
 date: 2020-06-22T14:41:00+03:00
-draft: false
+lastmod: 2020-06-22T14:41:00+03:00
+tags:
+  - macOS
+  - firewall
+  - Little Snitch
 categories:
   - Opinions
 cover:
-    alt: Opinions
-    caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-    image: opinions.png
-    relative: false
-tags:
-- macOS
-- firewall
+  image: opinions.png
+  alt: Opinions
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
+type: post
 slug: little-snitch
 ---
 

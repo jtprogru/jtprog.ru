@@ -1,19 +1,22 @@
 ---
-categories: Basics
+title: '[Basics] Мониторинг: что/куда/зачем?'
+description: "Пошаговое руководство по мониторингу инфраструктуры и приложений: выбор инструментов (Zabbix, Prometheus), модели работы, метрики, алерты, best practices для DevOps и системных администраторов."
+keywords: ["мониторинг инфраструктуры", "zabbix vs prometheus", "метрики мониторинга", "алерты мониторинг", "инструменты мониторинга", "devops monitoring", "push vs pull monitoring", "мониторинг приложений", "best practices monitoring"]
+date: "2020-10-14T20:48:00+03:00"
+lastmod: "2020-10-14T20:48:00+03:00"
+tags:
+  - monitoring
+  - prometheus
+  - zabbix
+categories:
+  - Basics
 cover:
+  image: basics.png
   alt: basics
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: basics.png
   relative: false
-date: "2020-10-14T20:48:00+03:00"
-description: ""
-draft: false
-tags:
-- monitoring
-- prometheus
-- zabbix
-title: '[Basics] Мониторинг: что/куда/зачем?'
 type: post
+slug: wat-monitoring
 ---
 
 Привет, `%username%`! Поговорим о такой безумно важной вещи как **мониторинг**! Постараемся ответить на некоторые вопросы связанные с мониторингом инфраструктуры и приложений.

@@ -10,10 +10,21 @@ tags:
 - docker
 - docker-compose
 - howto
+- installation
+- ubuntu
+- linux
+- command line
+- apt
+- package manager
+- containerization
+- development environment
 title: '[HowTo] Установка Docker на Ubuntu 20.04'
 type: post
+description: "Пошаговое руководство по установке Docker и Docker Compose на Ubuntu 20.04, включая удаление старых версий, добавление репозиториев и проверку установки."
+keywords: ["docker install ubuntu 20.04", "install docker compose", "ubuntu docker", "linux containerization", "how to install docker", "docker guide", "apt get docker", "docker command line", "development environment setup"]
 ---
-Привет, `%username%`! Это небольшая заметка “на память”, о том какие шаги необходимо выполнить для установки Docker на свежий сервер с Ubuntu 20.04.
+
+Привет, `%username%`! Это небольшая заметка "на память", о том какие шаги необходимо выполнить для установки Docker на свежий сервер с Ubuntu 20.04.
 
 Вопросы в духе "зачем нам докер?" возможно будут рассмотрены в следующих статьях. А тут будет описана просто последовательность шагов по установке Docker и docker-compose для личный нужд так сказать.
 

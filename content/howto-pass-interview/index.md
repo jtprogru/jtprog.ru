@@ -1,17 +1,30 @@
 ---
-categories: Interview
-cover:
-  alt: interview
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: interview.png
-  relative: false
+title: '[Interview] Как пройти собеседование'
+description: "Простая схема поведения на собеседовании в качестве кандидата. Узнайте, как правильно выстраивать диалог во время интервью."
+keywords:
+- собеседование
+- интервью
+- кандидат
+- поведение на собеседовании
+- как пройти собеседование
+- поиск работы
+- трудоустройство
+- диалог на интервью
+- общение на собеседовании
 date: "2021-07-22T20:18:34+03:00"
+lastmod: "2021-07-22T20:18:34+03:00"
 tags:
 - interview
 - work
 - patreon
-title: '[Interview] Как пройти собеседование'
+categories: Interview
+cover:
+  image: interview.png
+  alt: interview
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: 'howto-pass-interview'
 ---
 
 Привет, `%username%`! Я бы хотел поделиться простой схемой ведения собеседования. Именно схема того, как правильно вести себя на собеседовании в качестве кандидата.

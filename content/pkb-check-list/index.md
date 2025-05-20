@@ -1,17 +1,27 @@
 ---
-categories: Opinions
-cover:
-  alt: opinions
-  caption: "Illustrated by [Igan Pol](https://www.behance.net/iganpol)"
-  image: opinions.png
-  relative: false
+title: 'Чек-лист для организации персональной базы знаний'
+description: "Практические советы и чек-лист по организации персональной базы знаний: выбор инструмента, структура, обработка информации, рекомендации по развитию и систематизации."
+keywords: ["персональная база знаний", "чек-лист знаний", "организация знаний", "obsidian vs notion", "структура базы знаний", "dikw модель", "эффективность знаний", "личная продуктивность", "review заметок"]
 date: 2024-10-10T21:03:35+03:00
+lastmod: 2024-10-10T21:03:35+03:00
 tags:
   - Obsidian
   - Знания
   - Чек-лист
-title: "Чек-лист для организации персональной базы знаний"
+  - knowledge base
+  - personal knowledge management
+  - note-taking
+  - organization
+  - DIKW
+categories:
+  - Opinions
+cover:
+  image: opinions.png
+  alt: opinions
+  caption: "Illustrated by [Igan Pol](https://www.behance.net/iganpol)"
+  relative: false
 type: post
+slug: pkb-check-list
 ---
 
 Привет, `%username%`! Как подходить к вопросу организации персональной базы знаний, а главное зачем? Этот и некоторые другие вопросы довольно часто возникают в голове тех, кто так или иначе сталкивается с этой темой. Давай попробуем порассуждать, а возможно даже составим простенький чек-лист, который сможет тебе или твоему другу помочь в этой обширной теме.

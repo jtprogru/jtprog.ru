@@ -1,17 +1,26 @@
 ---
-categories: Basics
+title: '[Basics] Авторизация по ключу при подключении по SSH'
+description: "Пошаговая инструкция по созданию и использованию SSH-ключей для безопасной авторизации на сервере: генерация, копирование, отключение паролей, рекомендации по безопасности."
+keywords: ["ssh ключи", "авторизация по ssh", "ssh-keygen", "ssh-copy-id", "безопасность ssh", "отключение пароля ssh", "linux ssh", "настройка ssh", "secure shell"]
+date: "2021-04-22T10:37:20+03:00"
+lastmod: "2021-04-22T10:37:20+03:00"
+tags:
+  - linux
+  - ssh
+  - ssh key
+  - authentication
+  - security
+  - ssh-keygen
+  - ssh-copy-id
+categories:
+  - Basics
 cover:
+  image: basics.png
   alt: basics
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: basics.png
   relative: false
-date: "2021-04-22T10:37:20+03:00"
-tags:
-- linux
-- ssh
-- ssh key
-title: '[Basics] Авторизация по ключу при подключении по SSH'
 type: post
+slug: ssh-keys
 ---
 
 Привет, `%username%`! В 21-ом веке на сервера уже никто не ходит руками, а если требуется такое, то ходить по паролю – моветон!

@@ -9,8 +9,18 @@ date: "2016-08-01T15:00:28+03:00"
 tags:
 - docker
 - linux
+- containerization
+- docker exec
+- docker ps
+- command line
+- troubleshooting
+- file editing
+- bash
+- gitlab
 title: '[HowTo] Как зайти в контейнер и выполнить команду внутри'
 type: post
+description: "Руководство о том, как получить доступ к работающему контейнеру Docker и выполнять команды внутри, включая редактирование файлов и использование команд docker ps и docker exec."
+keywords: ["docker exec", "docker ps", "редактировать файл в docker контейнере", "docker контейнер", "зайти в docker", "командная строка docker", "linux", "docker howto", "troubleshooting docker", "file editing docker", "gitlab"]
 ---
 
 Привет, `%username%`! Я с недавних пор начал изучать контейнеризацию на базе Docker. И вот в определенный момент мне понадобилось подправить пару файлов внутри готового и запущенного контейнера `gitlab`. Оказалось это делается довольно просто.

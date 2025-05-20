@@ -10,8 +10,18 @@ tags:
 - centos
 - converter
 - vmware
+- error
+- troubleshooting
+- virtualization
+- p2v
+- esxi
+- vcenter
+- hosts file
+- networking
 title: '[OS] vCenter Converter Standalone error'
 type: post
+description: "Анализ и решение ошибки \"A file i/o error occurred while accessing\" в VMware vCenter Converter Standalone при конвертации физического сервера в виртуальный, включая проблему совместимости версий и настройку файла hosts."
+keywords: ["vmware converter error", "vcenter converter standalone", "p2v conversion", "physical to virtual", "a file i/o error occurred while accessing", "vmware troubleshooting", "esxi", "vcenter", "hosts file", "конвертация сервера", "виртуализация", "ошибка vmware"]
 ---
 
 Привет, `%username%`! Бывают ситуации когда единственное решение это конвертировать физический сервер в виртуальный. Ошибка с которой я столкнулся при работе с конвертером звучит вот так `A file i/o error occurred while accessing`. Рассмотрим когда она возникает и как её лечить.

@@ -1,19 +1,24 @@
 ---
-categories: Basics
-cover:
-    image: "basics.png"
-    alt: "basics"
-    caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-    relative: false
-date: "2021-08-27T21:00:00+03:00"
-tags:
-- HA
-- high availability
-- clusterisation
-- architecture
-- примитивы
 title: '[Basics] Кластеризация и доступность'
+description: "Пошаговое руководство по кластеризации и обеспечению высокой доступности (HA): термины, архитектура, примеры для frontend, backend, database, балансировка нагрузки, best practices для DevOps."
+keywords: ["кластеризация приложений", "high availability ha", "кластеризация серверов", "балансировка нагрузки", "ha архитектура", "симметричный кластер", "асимметричный кластер", "devops ha", "mysql master-slave"]
+date: "2021-08-27T21:00:00+03:00"
+lastmod: "2021-08-27T21:00:00+03:00"
+tags:
+  - HA
+  - high availability
+  - clusterisation
+  - architecture
+  - примитивы
+categories:
+  - Basics
+cover:
+  image: basics.png
+  alt: basics
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: ha-clustering
 ---
 
 Привет, `%username%`! Часто можно слышать, что "приложение запущено в кластере" или не редко вопросом для новичков на собесе может быть такое: "Что такое кластеризация приложения?" или "Что такое HA?"

@@ -1,19 +1,37 @@
 ---
+title: '[HowTo] Установка Zabbix 5.0 на Ubuntu 20.04'
+description: "Пошаговая инструкция по установке и настройке Zabbix 5.0 на Ubuntu Server 20.04. Включает добавление репозитория, настройку PostgreSQL, запуск сервера и веб-интерфейса."
+keywords: 
+  - "Zabbix"
+  - "Ubuntu 20.04"
+  - "установка Zabbix"
+  - "мониторинг"
+  - "Zabbix сервер"
+  - "PostgreSQL"
+  - "Nginx"
+  - "веб-интерфейс Zabbix"
+  - "настройка Zabbix"
 categories: howto
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
 date: "2020-07-10T02:00:00+03:00"
+lastmod: "2020-07-10T02:00:00+03:00"
 tags:
-- zabbix
-- ubuntu
-- monitoring
-- zbx
-title: '[HowTo] Установка Zabbix 5.0 на Ubuntu 20.04'
+  - zabbix
+  - ubuntu
+  - monitoring
+  - zbx
+  - "Zabbix 5.0"
+  - "Ubuntu Server"
+  - PostgreSQL
+  - Nginx
 type: post
+slug: "install-zabbix50"
 ---
+
 Привет, `%username%`! Данная статья - обычный пересказ официальной документации [Zabbix](https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.04_focal&db=postgresql&ws=nginx) и не содержит в себе ничего магического. Да и процесс установки уже мною освещался ранее на [CentOS](https://jtprog.ru/install-zabbix-centos/) и [Ubuntu](https://jtprog.ru/install-zabbix-ubuntu/).
 
 Ставить буду максимально свежую версию (на момент написания статьи) Zabbix на такую же свежую Ubuntu Server 20.04.

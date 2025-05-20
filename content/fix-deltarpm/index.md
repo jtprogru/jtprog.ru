@@ -10,8 +10,16 @@ tags:
 - centos
 - yum
 - deltarpm
+- error
+- troubleshooting
+- package manager
+- linux
+- command line
+- howto
 title: '[HowTo] Delta RPMs disabled'
 type: post
+description: "Решение ошибки \"Delta RPMs disabled because /usr/bin/applydeltarpm not installed\" при работе с пакетным менеджером YUM в CentOS, включая поиск и установку необходимого пакета."
+keywords: ["centos yum error", "delta rpms disabled", "applydeltarpm not installed", "yum provides", "yum install deltarpm", "troubleshooting centos", "package manager linux", "fix yum error", "centos howto"]
 ---
 
 Привет, `%username%`! Продолжаем исправлять косяки, которые периодически возникают при работе с менеджером пакетов `YUM`.

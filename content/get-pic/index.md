@@ -9,8 +9,17 @@ date: "2019-08-15T19:50:55+03:00"
 tags:
 - python
 - requests
+- unsplash api
+- image processing
+- pil
+- pillow
+- image download
+- image resize
+- scripting
 title: '[Develop] Качаем и ресайзим картинки'
 type: post
+description: "Скрипт на Python для скачивания случайных изображений с Unsplash API и их последующего изменения размера с использованием библиотеки Pillow."
+keywords: ["python script", "unsplash api", "скачать картинку python", "изменить размер картинки python", "pillow library", "обработка изображений python", "requests library", "автоматизация", "скрипт для изображений"]
 ---
 
 Привет, `%username%`! Для оформления нового поста мне необходимо где-то взять новую картинку. Решение нашлось довольно быстро: [unsplash.com](https://unsplash.com).

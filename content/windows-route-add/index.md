@@ -1,17 +1,22 @@
 ---
-categories: OS
+title: '[OS] Шпаргалка про роутинг в Windows'
+description: "Пошаговая инструкция по добавлению и управлению статическими маршрутами в Windows: синтаксис, параметры, примеры команд, советы по настройке и устранению ошибок."
+keywords: ["роутинг windows", "статические маршруты windows", "route add windows", "windows routing table", "настройка маршрутизации windows", "route print", "windows network troubleshooting", "windows route delete", "windows route change"]
+date: "2015-06-08T12:49:00+03:00"
+lastmod: "2015-06-08T12:49:00+03:00"
+tags:
+  - windows
+  - route
+  - man
+categories:
+  - OS
 cover:
+  image: OS.png
   alt: OS
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: OS.png
   relative: false
-date: "2015-06-08T12:49:00+03:00"
-tags:
-- windows
-- route
-- man
-title: '[OS] Шпаргалка про роутинг в Windows'
 type: post
+slug: windows-route-add
 ---
 
 Привет, `%username%`! Поскольку часто приходится настраивать ВПНы на чужих машинах и предоставлять доступ к каки-либо ресурсам нашей сети, а чаще всего это просто конкретные машины, то надо записать себе шпаргалку по добавлению статических маршрутов в ОСях семейства Windows (XP/7/8/8.1). Все элементарно и просто.

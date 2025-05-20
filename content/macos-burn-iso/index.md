@@ -1,18 +1,32 @@
 ---
-categories: OS
+title: '[OS] Записываем ISO-образ на флешку или диск'
+description: "Инструкция по записи ISO-образов на DVD и USB-накопители в macOS: использование терминала, команды hdiutil и dd."
+keywords:
+  - "запись ISO macOS"
+  - "терминал macOS"
+  - "hdiutil команда"
+  - "dd команда"
+  - "запись DVD"
+  - "USB-флешка macOS"
+  - "diskutil unmountdisk"
+  - "создание ISO образа"
+  - "работа с дисками"
+date: "2016-09-27T17:27:00+03:00"
+lastmod: "2016-09-27T17:27:00+03:00"
+tags:
+  - macos
+  - iso
+  - "работа с дисками"
+categories:
+  - OS
 cover:
+  image: OS.png
   alt: OS
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: OS.png
   relative: false
-date: "2016-09-27T17:27:00+03:00"
-tags:
-- macos
-- iso
-title: '[OS] Записываем ISO-образ на флешку или диск'
 type: post
+slug: "macos-burn-iso"
 ---
-
 
 Возникла у меня на днях потребность скинуть лишние фотки в архив на DVD. В моем MacBook Pro пока еще есть DVD-привод. А вот с софтом для записи дисков проблема. А еще и создать этот ISO образ необходимо. Все подробности под катом.
 

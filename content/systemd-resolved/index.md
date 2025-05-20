@@ -1,17 +1,21 @@
 ---
-categories: Work
-cover:
-  alt: work
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: work.png
-  relative: false
+title: '[Work] Настройка systemd-resolved'
+description: 'Пошаговая инструкция по настройке systemd-resolved в Linux: кэширование DNS, интеграция с NSS, настройка /etc/resolv.conf и запуск службы.'
+keywords: ['systemd-resolved настройка', 'linux dns cache', 'systemd resolved', 'nss-resolve', 'systemd-resolved конфиг', 'linux dns', 'systemd-resolved инструкция']
 date: "2020-11-29T12:00:00+03:00"
+lastmod: "2020-11-29T12:00:00+03:00"
 tags:
 - systemd
 - resolved
 - systemd-resolved
-title: '[Work] Настройка systemd-resolved'
+categories: [Work]
+cover:
+  image: work.png
+  alt: work
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: systemd-resolved
 ---
 
 Привет, `%username%`! Очень давно я писал о том, как я настраивал [dnsmasq](https://jtprog.ru/domain-zone-dnsmasq/) для настройки локальной зоны. Сейчас мы настроим `systemd-resolved` как локальный кэширующий резолвер.

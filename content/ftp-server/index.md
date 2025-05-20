@@ -10,8 +10,17 @@ tags:
 - vsftpd
 - ubuntu
 - ftp
+- ftp server
+- installation
+- configuration
+- linux
+- networking
+- security
+- file transfer
 title: '[HowTo] Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04'
 type: post
+description: "Руководство по быстрой установке и базовой настройке FTP-сервера vsFTPd на Ubuntu 14.04 для предоставления доступа локальным пользователям с разграничением прав."
+keywords: ["vsftpd ubuntu 14.04", "установка ftp сервера linux", "настройка vsftpd", "ftp server configuration", "ubuntu ftp", "secure ftp", "file transfer protocol", "vsftpd configuration file", "linux networking"]
 ---
 
 Давным-давно... Хотя... Короче говоря понадобился нам для рабочих нужд нормальный FTP-сервер. Долго шли к такому решению и все же приняли его. Да и вообще FTP-сервер штука полезная во многих ситуациях.

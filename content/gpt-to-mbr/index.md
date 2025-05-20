@@ -10,8 +10,15 @@ tags:
 - gpt
 - mbr
 - windows
+- diskpart
+- disk partitioning
+- command line
+- installation
+- troubleshooting
 title: '[OS] Делаем MBR из GPT'
 type: post
+description: "Памятка о том, как преобразовать разделы GPT в MBR с использованием утилиты DiskPart через командную строку Windows, полезно перед установкой старых версий Windows."
+keywords: ["gpt to mbr", "конвертировать gpt в mbr", "diskpart", "командная строка windows", "разметка диска", "установка windows", "troubleshooting windows", "mbr partition", "gpt partition"]
 ---
 
 Давно пора сделать маленький пост как памятку о том, как правильно преобразовывать GPT разделы в MBR перед установкой Windows 7 (да и любой другой наверно тоже).

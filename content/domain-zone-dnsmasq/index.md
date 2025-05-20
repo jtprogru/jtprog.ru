@@ -10,8 +10,16 @@ tags:
 - dnsmasq
 - dns
 - linux
+- local development
+- web development
+- apache2
+- wordpress
+- hosts file
+- networking
 title: '[HowTo] Своя доменная зона с dnsmasq'
 type: post
+description: "Руководство по настройке локальной доменной зоны (*.dev) с помощью dnsmasq на Ubuntu для веб-разработки, включая настройку и интеграцию с виртуальными хостами Apache2."
+keywords: ["dnsmasq local domain", "local dns server", "ubuntu dnsmasq", "web development environment", "apache2 virtual host", "local website testing", "linux networking", "dns caching"]
 ---
 
 Всем привет! Сейчас будем создавать свою собственную доменную зону с помощью dnsmasq на локальном компьютере. Это очень удобно если вы занимаетесь разработкой сайтов или вам часто приходится смотреть какие-либо подобные вещи на локальной машине, а на хостинг не имеет смысла разоряться "ради посмотреть". Будем делать доменную зону `*.dev`. В итоге у нас будут красивые имена сайтов типа `blog.dev` или `mybestcrm.dev`, открывающиеся с локального компьютера.

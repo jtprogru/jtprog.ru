@@ -1,20 +1,29 @@
 ---
-categories: Notes
+title: '[Notes] Заметки на полях 2021.05.08'
+description: "Разбор ошибок при миграции Ingress-ресурсов Kubernetes на новую версию API с использованием Helm и werf"
+keywords:
+  - kubernetes ingress
+  - helm charts
+  - werf tutorial
+  - api migration
+  - k8s troubleshooting
+date: "2021-05-08T18:37:56+03:00"
+lastmod: "2021-05-08T18:37:56+03:00"
+tags:
+  - fuckup
+  - заметкинаполях
+  - werf
+  - helm
+  - kubernetes
+  - k8s
+categories: ["Notes"]
 cover:
+  image: notes.png
   alt: notes
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: notes.png
   relative: false
-date: "2021-05-08T18:37:56+03:00"
-tags:
-- fuckup
-- заметкинаполях
-- werf
-- helm
-- kubernetes
-- k8s
-title: '[Notes] Заметки на полях 2021.05.08'
 type: post
+slug: 'notes-20210508'
 ---
 
 Привет, `%username%`! Очередная рубрика факапов и человеческого фактора.

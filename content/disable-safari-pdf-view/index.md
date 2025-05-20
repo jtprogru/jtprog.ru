@@ -9,28 +9,37 @@ date: "2016-08-01T05:55:44+03:00"
 tags:
 - macos
 - safari
+- pdf
+- browser
+- configuration
+- terminal
+- defaults write
+- webkit
+- user experience
 title: '[HowTo] Разрешаем просмотр pdf-файлов в Safari'
 type: post
+description: "Краткое руководство по настройке Safari на macOS для отображения PDF-файлов непосредственно в браузере вместо их загрузки с помощью простой команды терминала."
+keywords: ["macos", "safari", "pdf viewer", "browser settings", "terminal command", "defaults write", "webkit", "how to", "guide", "configuration"]
 ---
 
 С недавних пор я стал маководом, прикупив себе не новый `MacBook Pro 15` 2011 года. Конфигурация вполне себе приличная для такого старичка:
 
 - CPU Intel Core i7;
 - RAM 2x4 GB DDR3 1600 MHz;
-- SSD PLEXTOR PX-512M5Pro 512 GB.
+- SSD PLEXTOR PX-512M5Pro 512 GB.
 
 Остальное в целом стандартное. И вот постепенно осваиваясь в новой системе я захотел решить одну проблему связанную просмотром PDF в браузере `Safari`.
 
-Я перешел на `Safari` с родной и близкой моему сердцу `Mozilla Firefox` по причине того, что `Safari` более оптимизирована для экономии заряда батареи. В целом все хорошо, но мне очень не понравилось, что `Safari` вместо открытия `pdf`-файла скачивает его, и я всё же нашел как эту проблему решить.
+Я перешел на `Safari` с родной и близкой моему сердцу `Mozilla Firefox` по причине того, что `Safari` более оптимизирована для экономии заряда батареи. В целом все хорошо, но мне очень не понравилось, что `Safari` вместо открытия `pdf`-файла скачивает его, и я всё же нашел как эту проблему решить.
 
-Делается это выполнением в `Терминале` следующей команды:
+Делается это выполнением в `Терминале` следующей команды:
 
 ```bash
 defaults write com.apple.Safari WebKitOmitPDFSupport -boolean true 
 defaults delete com.apple.Safari WebKitOmitPDFSupport
 ```
 
-После чего необходимо перезапустить `Safari`.
+После чего необходимо перезапустить `Safari`.
 
 Как говорится "Все гениальное - просто!"
 

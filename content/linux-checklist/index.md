@@ -1,17 +1,21 @@
 ---
-categories: Basics
+title: '[Basics] Мой личный чек-лист для Linux сервера'
+description: 'Практический чек-лист для настройки нового Linux-сервера: выбор дистрибутива, авторизация, базовый софт, параметры ядра, мониторинг и автоматизация.'
+keywords: ['linux чек-лист', 'настройка linux сервера', 'linux server checklist', 'ansible roles', 'linux best practices', 'linux monitoring', 'linux hardening', 'linux automation']
+date: "2021-08-26T20:14:09+03:00"
+lastmod: "2021-08-26T20:14:09+03:00"
+tags:
+- linux
+- checklist
+- basics
+categories: [Basics]
 cover:
     image: "basics.png"
     alt: "basics"
     caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
     relative: false
-date: "2021-08-26T20:14:09+03:00"
-tags:
-- linux
-- checklist
-- basics
-title: '[Basics] Мой личный чек-лист для Linux сервера'
 type: post
+slug: linux-checklist
 ---
 
 Привет, `%username%`! Небольшая заметка (в первую очередь для меня) о том, что требуется сделать при разворачивании нового Linux-сервера.

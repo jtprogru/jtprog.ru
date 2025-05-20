@@ -1,15 +1,19 @@
 ---
-categories: Work
-cover:
-  alt: work
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: work.png
-  relative: false
+title: '{{ replace .Name "-" " " | title }}'
+description: ""
+keywords: []
 date: {{ .Date }}
+lastmod: {{ .Date }}
 tags:
   - first
-title: '[Work] {{ replace .Name "-" " " | title }}'
+categories: ["Work"]
+cover:
+  image: work.png
+  alt: work
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: '{{ replace .Name " " "-" }}'
 ---
 
 Привет, `%username%`!

@@ -1,16 +1,26 @@
 ---
-categories: OS
+title: '[OS] Наблюдение за процессами при помощи strace'
+description: "Практическое руководство по использованию strace для диагностики и отладки процессов в Linux: основные опции, примеры, анализ системных вызовов."
+keywords: ["strace linux", "отладка процессов linux", "диагностика linux", "системные вызовы strace", "пример использования strace", "strace опции", "мониторинг процессов linux", "bsd лицензия strace", "инструменты linux"]
+date: "2019-07-29T12:01:18+03:00"
+lastmod: "2019-07-29T12:01:18+03:00"
+tags:
+  - strace
+  - linux
+  - debugging
+  - troubleshooting
+  - system calls
+  - linux tools
+  - command line
+categories:
+  - OS
 cover:
+  image: OS.png
   alt: OS
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: OS.png
   relative: false
-date: "2019-07-29T12:01:18+03:00"
-tags:
-- strace
-- linux
-title: '[OS] Наблюдение за процессами при помощи strace'
 type: post
+slug: strace
 ---
 
 Привет, `%username%`! Поговорим о такой болезни как [вуайеризм](https://ru.m.wikipedia.org/wiki/Вуайеризм). Подглядывать мы будем за процессами в Linux, а использовать для столь интимного дела мы будем утилиту `strace`.
@@ -116,7 +126,7 @@ openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 
 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@p\0\0\0\0\0\0"..., 832) = 832
 fstat(3, {st_mode=S_IFREG|0644, st_size=163200, ...}) = 0
 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2f60f20000
-mmap(NULL, 174600, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2f60ef5000
+mmap(0x7f2f60f1c000, 174600, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2f60ef5000
 mprotect(0x7f2f60efb000, 135168, PROT_NONE) = 0
 mmap(0x7f2f60efb000, 102400, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f2f60efb000
 mmap(0x7f2f60f14000, 28672, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f2f60f14000

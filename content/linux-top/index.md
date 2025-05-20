@@ -1,17 +1,34 @@
 ---
-categories: Basics
-cover:
-    image: "basics.png"
-    alt: "basics"
-    caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-    relative: false
-date: "2020-11-04T16:14:13+03:00"
-tags:
-- linux
-- top
-- basics
 title: '[Linux] Что показывает top?'
+description: "Полное руководство по использованию утилиты top в Linux: расшифровка показателей загрузки CPU, памяти, процессов, управление интерфейсом и практические команды."
+keywords:
+  - "Linux top команда"
+  - "мониторинг процессов Linux"
+  - "интерпретация вывода top"
+  - "управление процессами"
+  - "системная диагностика"
+  - "ресурсы системы"
+  - "CPU нагрузка Linux"
+  - "анализ памяти"
+  - "работа с процессами"
+  - "администрирование Linux"
+date: "2020-11-04T16:14:13+03:00"
+lastmod: "2020-11-04T16:14:13+03:00"
+tags:
+  - linux
+  - top
+  - "мониторинг"
+  - "системное администрирование"
+  - "диагностика"
+categories:
+  - Basics
+cover:
+  image: basics.png
+  alt: basics
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: "linux-top"
 ---
 
 Привет, `%username%`! Для того, чтобы посмотреть чем именно занят ваш Linux-сервер, надо посмотреть, что же запущено в нем – какие процессы, сколько ресурсов они используют. Для этого есть замечательная утилита `top`, которая присутствует "из коробки".

@@ -1,17 +1,35 @@
 ---
-categories: howto
+title: '[HowTo] Добавление SWAP в систему'
+description: "Подробное руководство по созданию и настройке SWAP-файла в Linux. Инструкции для Ubuntu/CentOS, управление параметром swappiness, активация и отключение подкачки."
+keywords:
+  - "SWAP Linux"
+  - "создание swap-файла"
+  - "настройка swappiness"
+  - "оптимизация памяти"
+  - "fallocate команда"
+  - "mkswap использование"
+  - "автомонтирование swap"
+  - "vm.swappiness параметр"
+  - "отключение swap"
+  - "диагностика памяти"
+date: "2019-11-11T11:23:09+03:00"
+lastmod: "2019-11-11T11:23:09+03:00"
+tags:
+  - swap
+  - linux
+  - "оптимизация"
+  - "системное администрирование"
+categories:
+  - "Администрирование"
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2019-11-11T11:23:09+03:00"
-tags:
-- swap
-- linux
-title: '[HowTo] Добавление SWAP в систему'
 type: post
+slug: "linux-add-swap"
 ---
+
 Привет, `%username%`! Есть сервер на который при разворачивании не добавили `SWAP` раздел и это необходимо исправить. Все как всегда довольно просто.
 
 `SWAP` - это пространство на диске, которое используется, когда объем физической оперативной памяти заполнен. Когда в системе Linux заканчивается `RAM`, неактивные страницы перемещаются из `RAM` в `SWAP`.

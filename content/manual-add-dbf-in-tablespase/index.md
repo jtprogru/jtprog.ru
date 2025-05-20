@@ -1,17 +1,32 @@
 ---
-categories: howto
+title: '[HowTo] Ручное добавление файлов данных в табличной пространство в CentOS 7'
+description: "Руководство по добавлению файлов данных в табличное пространство ORCL_DATA в Oracle Database на CentOS 7 с использованием SQLPlus."
+keywords:
+  - "Oracle DB табличное пространство"
+  - "добавление файлов данных Oracle"
+  - "SQLPlus команды"
+  - "ALTER TABLESPACE"
+  - "Oracle CentOS 7"
+  - "управление данными Oracle"
+  - "dba_data_files"
+  - "расширение табличного пространства"
+  - "TEMP файлы Oracle"
+date: "2017-11-21T17:26:35+03:00"
+lastmod: "2017-11-21T17:26:35+03:00"
+tags:
+  - oracledb
+  - centos
+  - orcl_data
+  - "администрирование БД"
+categories:
+  - "Базы данных"
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2017-11-21T17:26:35+03:00"
-tags:
-- oracledb
-- centos
-- orcl_data
-title: '[HowTo] Ручное добавление файлов данных в табличной пространство в CentOS 7'
 type: post
+slug: "manual-add-dbf-in-tablespase"
 ---
 
 Привет `%username%`! При работе с БД Oracle иногда приходится вручную добавлять файлы данных в табличное пространство `ORCL_DATA`.

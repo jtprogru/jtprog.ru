@@ -1,17 +1,34 @@
 ---
-categories: Basics
-cover:
-    image: "basics.png"
-    alt: "basics"
-    caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-    relative: false
-date: "2021-08-28T14:30:00+03:00"
-tags:
-- logrotate
-- basics
-- примитивы
 title: '[Basics] Ротация логов с logrotate'
+description: "Полное руководство по настройке автоматической ротации логов в Linux с использованием logrotate: примеры конфигурации, основные директивы и проверка работы."
+keywords:
+  - "logrotate"
+  - "ротация логов"
+  - "настройка logrotate"
+  - "автоматизация логов"
+  - "Linux логи"
+  - "конфигурация logrotate"
+  - "примеры logrotate"
+  - "Nginx логи"
+  - "сжатие логов"
+  - "проверка logrotate"
+date: "2021-08-28T14:30:00+03:00"
+lastmod: "2021-08-28T14:30:00+03:00"
+tags:
+  - logrotate
+  - basics
+  - "примитивы"
+  - "автоматизация"
+  - "системное администрирование"
+categories:
+  - Basics
+cover:
+  image: basics.png
+  alt: basics
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: "logrotate-basics"
 ---
 
 Привет, `%username%`! Логи – наше всё! Это знает каждый нормальный админ. Но что делать если они растут в объёме? Правильно! Настраивать logrotate чтоб он рулил размерами и количеством.

@@ -1,19 +1,29 @@
 ---
-categories: howto
+title: '[HowTo] Установка и настройка Zabbix 4.4 на Ubuntu'
+description: "Пошаговая инструкция по установке и настройке Zabbix 4.4 на Ubuntu 18.04: добавление репозитория, настройка PostgreSQL, запуск и базовая конфигурация через WEB-UI."
+keywords: ["установка zabbix ubuntu", "zabbix 4.4 инструкция", "настройка zabbix", "мониторинг ubuntu", "zabbix server", "postgreSQL zabbix", "zabbix web ui", "zabbix-agent", "zabbix nginx"]
+date: "2020-02-18T22:40:00+03:00"
+lastmod: "2020-02-18T22:40:00+03:00"
+tags:
+  - zabbix
+  - ubuntu
+  - monitoring
+  - zbx
+  - configuration
+  - PostgreSQL
+  - Nginx
+  - web UI
+categories:
+  - howto
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2020-02-18T22:40:00+03:00"
-tags:
-- zabbix
-- ubuntu
-- monitoring
-- zbx
-title: '[HowTo] Установка и настройка Zabbix 4.4 на Ubuntu'
 type: post
+slug: install-zabbix-ubuntu
 ---
+
 Привет, `%username%`! Данная статья - обычный пересказ официальной документации [Zabbix](https://www.zabbix.com/download?zabbix=4.4&os_distribution=ubuntu&os_version=18.04_bionic&db=postgresql&ws=nginx) и не содержит в себе ничего магического. Да и процесс установки уже мною освещался ранее на [CentOS](https://jtprog.ru/install-zabbix-centos/).
 
 Ставить буду максимально свежую версию (на момент написания статьи) Zabbix на такую же свежую Ubuntu Server 18.04.4.

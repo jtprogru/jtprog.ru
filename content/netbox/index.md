@@ -1,17 +1,29 @@
 ---
-categories: howto
+title: '[HowTo] Установка Netbox на Ubuntu 20.04'
+description: "Пошаговая инструкция по установке и настройке Netbox на Ubuntu 20.04: подготовка окружения, настройка PostgreSQL, Redis, интеграция с MS Active Directory."
+keywords: ["установка netbox ubuntu", "netbox инструкция", "настройка netbox", "postgreSQL netbox", "redis netbox", "active directory netbox", "python venv", "network automation", "dokumentaciya netbox"]
+date: "2020-07-22T23:15:00+03:00"
+lastmod: "2020-07-22T23:15:00+03:00"
+tags:
+  - netbox
+  - ldap
+  - ubuntu
+  - installation
+  - configuration
+  - PostgreSQL
+  - Redis
+  - Active Directory
+  - DCIM
+  - IPAM
+categories:
+  - howto
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2020-07-22T23:15:00+03:00"
-tags:
-- netbox
-- ldap
-- ubuntu
-title: '[HowTo] Установка Netbox на Ubuntu 20.04'
 type: post
+slug: netbox
 ---
 Привет, `%username%`! Поговорим о такой классной штуке как [Netbox](https://netbox.readthedocs.io/en/stable/), а так же установим её на Ubuntu 20.04 и прикрутим авторизацию через MS Active Directory.
 
@@ -226,7 +238,7 @@ CORS_ORIGIN_REGEX_WHITELIST = [
 ]
 
 # Set to True to enable server debugging. WARNING: Debugging introduces a substantial performance penalty and may reveal
-# sensitive information about your installation. Only enable debugging while performing testing. Never enable debugging
+# sensitive information about your installation. Only enable debugging
 # on a production system.
 DEBUG = False
 
@@ -447,7 +459,7 @@ python3 manage.py runserver 0.0.0.0:8000 --insecure
 
 ![NetBox UI для администратора](img/netbox_ui_admin.png)
 
-Теперь можно “почти” пользоваться.
+Теперь можно "почти" пользоваться.
 
 ## Запуск
 

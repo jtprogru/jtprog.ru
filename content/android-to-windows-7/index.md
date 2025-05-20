@@ -1,16 +1,21 @@
 ---
-categories: howto
+title: '[HowTo] Подключаем Android к Windows 7'
+description: "Пошаговая инструкция по подключению Android к Windows 7 в режиме MTP: решение проблем с драйверами, настройка реестра, советы по устранению ошибок подключения."
+keywords: ["android windows 7 mtp", "подключение android к windows", "mtp ошибка windows 7", "решение проблем mtp", "драйверы android windows", "windows 7 реестр mtp", "android usb подключение", "windows 7 android fix"]
+date: "2015-06-26T14:42:00+03:00"
+lastmod: "2015-06-26T14:42:00+03:00"
+tags:
+  - android
+  - windows
+categories:
+  - howto
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2015-06-26T14:42:00+03:00"
-tags:
-- android
-- windows
-title: '[HowTo] Подключаем Android к Windows 7'
 type: post
+slug: android-to-windows-7
 ---
 
 Некоторое время назад столкнулся с проблемой при попытке подключить Андроидофон к рабочему компу (Windpws 7 x64) сотрудника в режиме MTP. Естесственно нихрена не получилось :-) ЭтожВинда! Пораскинув мозгами и поработав с паре с гуглом решение было найдено. Так вот где собака зарыта!

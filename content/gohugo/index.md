@@ -9,8 +9,16 @@ date: "2019-07-22T15:00:00+03:00"
 tags:
 - blog
 - hugo
+- migration
+- wordpress
+- static site generator
+- markdown
+- workflow
+- rsync
 title: '[Blog] Основательный и бесповоротный переезд'
 type: post
+description: "История и процесс миграции блога с WordPress на статический генератор сайтов Hugo, включая причины переезда, выбор платформы и описание нового рабочего процесса публикации статей на Markdown."
+keywords: ["переезд на hugo", "wordpress to hugo migration", "статический генератор сайтов", "hugo blog", "markdown", "wordpress alternative", "блогинг", "rsync deployment", "workflow", "личный опыт"]
 ---
 
 Привет, `%username%`! Думаю многие заметили, что меня тут давненько не было. Всякое разное за это время произошло и в числе прочего этот переезд, о котором будет дальше...

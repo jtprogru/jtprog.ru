@@ -10,8 +10,14 @@ tags:
 - windows
 - outlook
 - "0x8004010F"
+- error
+- troubleshooting
+- email
+- microsoft office
 title: '[OS] Ошибка 0x8004010F в Outlook 2010-2013'
 type: post
+description: "Решение распространенной ошибки 0x8004010F в Microsoft Outlook 2010-2013, возникающей при отправке и получении почты, с пошаговой инструкцией."
+keywords: ["outlook error 0x8004010f", "microsoft outlook", "email error", "troubleshooting outlook", "outlook 2010", "outlook 2013", "файл данных outlook", "настройка учетных записей outlook", "решение проблем outlook"]
 ---
 
 По долгу службы приходится общаться с таким продуктом ~~корпорации зла~~ Microsoft как Outlook из пакета Microsoft Office. И довольно часто в его работе появляются удивительные ошибки (как и у большинства продуктов Microsoft), которые порой ставят в тупик.

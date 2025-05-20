@@ -1,17 +1,27 @@
 ---
-categories: DevOps
+title: '[DevOps] Github Actions для блогера'
+description: "Практическое руководство по автоматизации публикации блога с помощью GitHub Actions: настройка workflow, деплой через hugo-rsync, примеры и советы."
+keywords: ["github actions", "ci/cd для блога", "hugo rsync deployment", "github workflow", "автоматизация публикаций", "devops блог", "деплой hugo", "github marketplace actions", "static site deployment"]
+date: "2021-04-28T16:27:11+03:00"
+lastmod: "2021-04-28T16:27:11+03:00"
+tags:
+  - devops
+  - github
+  - GitHub Actions
+  - CI/CD
+  - Hugo
+  - rsync
+  - deployment
+  - workflow
+categories:
+  - DevOps
 cover:
+  image: devops.png
   alt: devops
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: devops.png
   relative: false
-date: "2021-04-28T16:27:11+03:00"
-tags:
-- devops
-- github
-- GitHub Actions
-title: '[DevOps] Github Actions для блогера'
 type: post
+slug: github-actions
 ---
 
 Привет, `%username%`! Я тут недавно на [Medium](https://jtprog.medium.com/как-и-зачем-я-веду-свой-блог-cd0c429f9ffa) расписывал как именно я работаю с контентом на этом сайте.

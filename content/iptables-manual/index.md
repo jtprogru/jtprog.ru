@@ -1,17 +1,22 @@
 ---
-categories: howto
+title: '[HowTo] Шпаргалка по iptables'
+description: "Подробная шпаргалка по iptables: основные команды, примеры настройки, удаление и добавление правил, сохранение и восстановление конфигурации файрвола."
+keywords: ["iptables linux", "настройка файрвола", "iptables команды", "пример iptables", "iptables правила", "linux firewall", "iptables howto", "iptables flush", "iptables restore"]
+date: "2015-03-30T16:48:37+03:00"
+lastmod: "2015-03-30T16:48:37+03:00"
+tags:
+  - iptables
+  - man
+  - linux
+categories:
+  - howto
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2015-03-30T16:48:37+03:00"
-tags:
-- iptables
-- man
-- linux
-title: '[HowTo] Шпаргалка по iptables'
 type: post
+slug: iptables-manual
 ---
 
 Файрвол в системе linux контролируется программой `iptables` (для ipv4) и `ip6tables` (для ipv6). В данной шпаргалке я указал самые распространённые варианты использования iptables. Знак `#` означает, что команда выполняется от root'а. Получение прав root'а в системе Ubuntu делается командой `sudo -s`, в других системах командой `su`. Этот пост можно считать частичным дополнением моего поста про [VPN-сервер](http://jtprog.ru/simple-vpn/ "Простой VPN-сервер на базе Ubuntu+pptpd") и других, потому что пришлось изрядно поломать голову на тему доступа к серверу извне.

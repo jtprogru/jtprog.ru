@@ -1,17 +1,30 @@
 ---
-categories: Opinion
+title: '[Opinion] Что ты такое – DevOps?'
+description: "Авторское мнение и разбор методологии DevOps: основные понятия, этапы внедрения, автоматизация, CI/CD, мониторинг, советы по развитию DevOps-культуры в компании."
+keywords: ["devops что это", "devops методология", "devops внедрение", "devops best practices", "автоматизация devops", "ci/cd devops", "devops monitoring", "devops культура", "devops советы"]
+date: "2020-11-09T22:25:00+03:00"
+lastmod: "2020-11-09T22:25:00+03:00"
+tags:
+  - devops
+  - opinion
+  - sysops
+  - CI
+  - CD
+  - automation
+  - monitoring
+  - collaboration
+  - culture
+  - methodology
+  - practices
+categories:
+  - Opinion
 cover:
+  image: opinions.png
   alt: opinions
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: opinions.png
   relative: false
-date: "2020-11-09T22:25:00+03:00"
-tags:
-- devops
-- opinion
-- sysops
-title: '[Opinion] Что ты такое – DevOps?'
 type: post
+slug: wat-devops
 ---
 
 Привет, `%username%`! Последние несколько лет у всех на слуху такой термин как `DevOps`. И скажу больше – я даже нанимал иногда людей на позицию `DevOps`. Но вот на просторах интернета очень много статей на тему, что это такое и эта будет еще одной – отражающей мое мнение о том, что или кто этот ваш `DevOps`.

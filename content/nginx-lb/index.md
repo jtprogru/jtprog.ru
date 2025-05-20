@@ -1,16 +1,25 @@
 ---
-categories: howto
+title: '[HowTo] Балансировка бэкендов'
+description: "Практическое руководство по настройке балансировки нагрузки в Nginx: методы распределения, веса серверов и мониторинг доступности"
+keywords:
+  - nginx load balancing
+  - high availability
+  - upstream configuration
+  - round-robin
+  - least connections
+date: "2019-08-21T19:10:00+03:00"
+lastmod: "2019-08-21T19:10:00+03:00"
+tags:
+  - load balancing
+  - nginx
+categories: ["howto"]
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2019-08-21T19:10:00+03:00"
-tags:
-- load balancing
-- nginx
-title: '[HowTo] Балансировка бэкендов'
 type: post
+slug: 'nginx-lb'
 ---
 
 Привет, `%username%`! Немного накину на вентилятор о страшных вещах вроде `load balancing`, `nginx`, `high load` и вот этих вот кишочках.

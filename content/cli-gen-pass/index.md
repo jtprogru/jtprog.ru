@@ -10,8 +10,19 @@ tags:
 - linux
 - cli
 - pass
+- password generation
+- command line
+- security
+- bash
+- scripting
+- urandom
+- openssl
+- md5sum
+- awk
 title: '[OS] Генерация паролей в CLI'
 type: post
+description: "Несколько способов генерации надежных паролей прямо в командной строке Linux с использованием стандартных утилит и скриптов."
+keywords: ["генерация паролей cli", "linux generate password", "случайный пароль linux", "командная строка пароль", "безопасность linux", "urandom password", "openssl rand", "md5sum password", "bash скрипт пароль"]
 ---
 
 Привет, `%username%`! Довольно не редко приходится придумывать себе и/или кому-то пароль и далеко не всегда есть под рукой менеджер паролей с функцией генератора паролей. Рассмотрим несколько способов генерации паролей прямо в `CLI` - мне так очень удобно.
@@ -83,3 +94,4 @@ date | md5sum | awk '{ print $1 }'
 Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).
 
 О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". Попасть в закрытый Telegram-чат единомышленников "BearLoga" можно по ссылке на [Tribute](https://web.tribute.tg/s/oRV).
+

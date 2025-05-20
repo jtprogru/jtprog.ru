@@ -1,18 +1,27 @@
 ---
-categories: Notes
+title: '[Notes] Заметки на полях 24.04.2022'
+description: "Решение проблемы с устаревшим apt-key в Ubuntu 22.04 LTS: миграция ключей репозиториев и обновление конфигурации"
+keywords:
+  - apt-key deprecated
+  - ubuntu 22.04
+  - docker repository
+  - gpg key management
+  - apt sources
+date: "2022-04-24T14:30:18+03:00"
+lastmod: "2022-04-24T14:30:18+03:00"
+tags:
+  - заметкинаполях
+  - apt
+  - apt-key
+  - ubuntu
+categories: ["Notes"]
 cover:
+  image: notes.png
   alt: notes
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: notes.png
   relative: false
-date: "2022-04-24T14:30:18+03:00"
-tags:
-- заметкинаполях
-- apt
-- apt-key
-- ubuntu
-title: '[Notes] Заметки на полях 24.04.2022'
 type: post
+slug: 'notes-20220424'
 ---
 
 Привет, `%username%`! Сегодня я решил пересобрать свой домашний стенд из старенького ноутбука и переустановить на

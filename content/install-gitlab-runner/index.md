@@ -1,17 +1,27 @@
 ---
-categories: Work
+title: '[Work] Установка GitLab Runner'
+description: "Пошаговая инструкция по установке и регистрации GitLab Runner на Ubuntu/Debian: добавление репозитория, установка, регистрация, автоматизация через Ansible."
+keywords: ["установка gitlab runner", "gitlab-ci инструкция", "регистрация gitlab runner", "ansible gitlab runner", "gitlab runner ubuntu", "gitlab runner debian", "ci/cd gitlab", "gitlab автоматизация"]
+date: "2020-11-27T13:30:00+03:00"
+lastmod: "2020-11-27T13:30:00+03:00"
+tags:
+  - gitlab-ci
+  - gitlab runner
+  - gitlab
+  - installation
+  - configuration
+  - CI/CD
+  - automation
+  - Ansible
+categories:
+  - Work
 cover:
+  image: work.png
   alt: work
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: work.png
   relative: false
-date: "2020-11-27T13:30:00+03:00"
-tags:
-- gitlab-ci
-- gitlab runner
-- gitlab
-title: '[Work] Установка GitLab Runner'
 type: post
+slug: install-gitlab-runner
 ---
 
 Привет, `%username%`! Простая шпаргалка о том, как быстро и просто установить Gitlab Runner на Ubuntu/Debian.

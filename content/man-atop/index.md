@@ -1,17 +1,24 @@
 ---
-categories: Basics
+title: '[Basics] Что показывает atop?'
+description: 'Подробная инструкция по использованию atop для мониторинга Linux-серверов: установка, настройка, анализ логов, основные ключи и примеры использования.'
+keywords: ['atop инструкция', 'мониторинг Linux', 'atopsar', 'мониторинг серверов', 'установка atop', 'анализ логов Linux', 'ключи atop', 'Linux monitoring tools', 'ресурсы сервера']
+date: "2020-12-05T19:36:36+03:00"
+lastmod: "2020-12-05T19:36:36+03:00"
+tags:
+  - atop
+  - linux
+  - monitoring
+  - server monitoring
+  - performance monitoring
+  - command line
+categories: [Basics]
 cover:
+  image: basics.png
   alt: basics
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: basics.png
   relative: false
-date: "2020-12-05T19:36:36+03:00"
-tags:
-- atop
-- linux
-- monitoring
-title: '[Basics] Что показывает atop?'
 type: post
+slug: man-atop
 ---
 
 Привет, `%username%`! Мониторинга много не бывает, а значит такие инструменты как Zabbix, Prometheus и другие имеют какие-то недостатки. Одним из основных недостатков может быть то, что для мониторинга нужна инфраструктура. А если у нас один сервер, то нам может быть достаточно такого инструмента как `atop`.
@@ -71,10 +78,10 @@ LOGGENERATIONS=10
 
 Поиск отдельных процессов:
 
-- `-O`  — TOP-3 процессов по CPU;
-- `-G`  — TOP-3 процессов по RAM;
-- `-D`  — TOP-3 процессов по диску;
-- `-N`  — TOP-3 процессов по сети;
+- `-O`  — TOP-3 процессов по CPU;
+- `-G`  — TOP-3 процессов по RAM;
+- `-D`  — TOP-3 процессов по диску;
+- `-N`  — TOP-3 процессов по сети;
 
 Если вам этого недостаточно, можно посмотреть полный снимок нагрузки на сервер командой:
 

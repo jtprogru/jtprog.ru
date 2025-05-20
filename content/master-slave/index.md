@@ -1,18 +1,35 @@
 ---
-categories: howto
+title: '[HowTo] Репликация Master-Slave'
+description: "Пошаговая настройка Master-Slave репликации в MySQL с использованием Percona XtraDB на Ubuntu: конфигурация серверов, резервное копирование и управление репликацией."
+keywords:
+  - "MySQL репликация"
+  - "Master-Slave настройка"
+  - "Percona XtraDB"
+  - "Ubuntu MySQL"
+  - "xtrabackup"
+  - "настройка my.cnf"
+  - "CHANGE MASTER"
+  - "SHOW SLAVE STATUS"
+  - "GTID"
+  - "восстановление бэкапа"
+date: "2020-04-01T23:55:00+03:00"
+lastmod: "2020-04-01T23:55:00+03:00"
+tags:
+  - mysql
+  - replication
+  - howto
+  - "администрирование БД"
+categories:
+  - HowTo
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2020-04-01T23:55:00+03:00"
-tags:
-- mysql
-- replication
-- howto
-title: '[HowTo] Репликация Master-Slave'
 type: post
+slug: "master-slave"
 ---
+
 Привет, `%username%`! Тут я рассмотрю настройку репликации master-slave в БД MySQL. Процесс установки всех необходимых пакетов не вижу смысла описывать, т.к. подобное можно прочитать в документации. Упомяну лишь то, что в моем случае стоит Percona XtraDB 5.7 на Ubuntu 16.04.
 
 В моей конфигурации изначально была Galera, которую мне необходимо было выпилить. Для выпиливания необходимо из файла `/etc/mysql/my.cnf` удалить все упоминания переменных начинающихся на `wsrep_` и корректно перезапустить демон `mysql`. Для упрощения схемы представим, что у нас `master` имеет IP `192.168.99.20`, а будущий `slave` имеет IP `192.168.99.30`

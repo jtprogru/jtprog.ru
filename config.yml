@@ -138,12 +138,13 @@ params:
 
   outputs:
     home:
-      - "HTML"
-      - "RSS"
-      - "JSON"
+      - HTML
+      - RSS
+      - JSON
+      - Sitemap
     section:
-      - "HTML"
-      - "RSS"
+      - HTML
+      - RSS
 
   outputFormats:
     RSS:

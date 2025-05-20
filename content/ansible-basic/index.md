@@ -1,19 +1,22 @@
 ---
-categories: Work
-cover:
-  alt: work
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: work.png
-  relative: false
+title: '[DevOps] Ansible – основы управления конфигурацией'
+description: 'Пошаговое введение в основы Ansible для автоматизации управления конфигурацией: преимущества, ключевые понятия, примеры использования и сравнение с другими CM-инструментами.'
+keywords: ['ansible основы', 'управление конфигурацией', 'devops', 'infrastructure as code', 'ansible tutorial', 'ansible vs puppet', 'ansible преимущества', 'ansible playbook', 'cm инструменты']
 date: "2020-12-29T00:30:54+03:00"
-draft: false
+lastmod: "2020-12-29T00:30:54+03:00"
 tags:
 - DevOps
 - Ansible
 - Configuration management
 - IaC
-title: '[DevOps] Ansible – основы управления конфигурацией'
+categories: [Work]
+cover:
+  image: work.png
+  alt: work
+  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  relative: false
 type: post
+slug: ansible-basic
 ---
 
 Привет, `%username%`! На страницах этого блога уже [было](/notes-20200925/) небольшое упоминание [Ansible](https://www.ansible.com) – инструмента для управления конфигурацией. Пройдемся по основам, определениям дабы зафиксировать.

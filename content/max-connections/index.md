@@ -1,18 +1,34 @@
 ---
-categories: howto
+title: '[HowTo] Максимальное количество коннектов'
+description: "Решение ошибки 'too many connections' в MySQL: увеличение параметра max_connections, временные и постоянные настройки через консоль и конфигурационный файл."
+keywords:
+  - "MySQL max_connections"
+  - "ошибка подключений"
+  - "настройка MySQL"
+  - "show variables"
+  - "set global"
+  - "конфигурация my.cnf"
+  - "оптимизация сервера"
+  - "увеличение лимитов"
+  - "перезапуск MySQL"
+date: "2020-08-14T17:42:54+03:00"
+lastmod: "2020-08-14T17:42:54+03:00"
+tags:
+  - mysql
+  - "max connections"
+  - linux
+  - "оптимизация"
+categories:
+  - HowTo
 cover:
+  image: howto.png
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: howto.png
   relative: false
-date: "2020-08-14T17:42:54+03:00"
-tags:
-- mysql
-- max connections
-- linux
-title: '[HowTo] Максимальное количество коннектов'
 type: post
+slug: "max-connections"
 ---
+
 Привет, `%username%`! Рано или поздно при работе с MySQL возникает ошибка `too many connections`. Пофиксить ее можно легко и даже без перезапуска сервиса, изменив всего один параметр - `max_connections`, тем самым увеличив количество разрешенных коннектов.
 
 По умолчанию параметр `max_connections` установлен в `100` - это его дефолтное значение даже если он не указан в конфигурационном файле MySQL. Посмотреть текущее значение данного параметра можно просто подключившись в консоль `mysql` и выполив одну из следующих команд:

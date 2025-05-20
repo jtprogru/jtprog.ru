@@ -1,16 +1,29 @@
 ---
-categories: Work
+title: '[Work] Ubuntu в домене Windows AD'
+description: "Пошаговая инструкция по вводу Ubuntu в домен Windows Active Directory: настройка Kerberos, Samba, Winbind, DNS, синхронизация времени и интеграция с AD."
+keywords: ["ubuntu в домене windows", "ввод ubuntu в AD", "настройка kerberos ubuntu", "samba active directory", "winbind ubuntu", "dns ubuntu ad", "интеграция ubuntu windows", "linux в домене windows", "ubuntu 14.04 ad"]
+date: "2014-08-24T22:40:30+03:00"
+lastmod: "2014-08-24T22:40:30+03:00"
+tags:
+  - ubuntu
+  - active directory
+  - windows ad
+  - domain join
+  - kerberos
+  - samba
+  - winbind
+  - dns
+  - linux
+  - integration
+categories:
+  - Work
 cover:
+  image: work.png
   alt: work
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: work.png
   relative: false
-date: "2014-08-24T22:40:30+03:00"
-tags:
-- ubuntu
-- active directory
-title: '[Work] Ubuntu в домене Windows AD'
 type: post
+slug: ubuntu-in-domen-windows
 ---
 
 Некоторое время назад на работе достался мне для работы ноутбук HP ProBook 6460b. Ну и пришла в голову идея поставить на него вместо надоевшей Windows 7 Pro давно понравившуюся мне Ubuntu 14.04 Trusty LTS. Выбор операционной системы связан с тем, что Ubuntu я использую на домашнем ноутбуке и мне захотелось иметь такую же систему на рабочем компьютере. Потому, что постоянное переключение между ОСями дома и на работе быстро надоело мне и я решился на установку Ubuntu на рабочем ноуте.
@@ -53,7 +66,7 @@ nameserver 127.0.1.1
 search domain.ru first.domain.ru
 ```
 
-В современных дистрибутивах файл `resolv.conf` создается автоматически и править вручную его не нужно. Для получение нужного результата нужно добавить необходимые изменения в файл: `/etc/resolvconf/resolv.conf.d/head`. Данные которые будут добавлены в него, будут автоматически вставлены в файл `/etc/resolv.conf`. Если IP-адрес динамический и присваивается DHCP сервером то после перезагрузки `resolv.conf` может формироваться "неправильный" `resolv.conf`, например присутствует только один `nameserver 192.168.1.1` и не указаны `domain` и `search`. Нужно отредактировать `/etc/dhcp/dhclient.conf`. Чтобы появились записи `domain` и `search` нужно убрать комментарий перед строкой `supersede domain-name`, и вписать свой домен:
+В современных дистрибутивах файл `resolv.conf` создается автоматически и править вручную его не нужно. Для получение нужного результата нужно добавить необходимые изменения в файл `/etc/resolvconf/resolv.conf.d/head`. Данные которые будут добавлены в него, будут автоматически вставлены в файл `/etc/resolv.conf`. Если IP-адрес динамический и присваивается DHCP сервером то после перезагрузки `resolv.conf` может формироваться "неправильный" `resolv.conf`, например присутствует только один `nameserver 192.168.1.1` и не указаны `domain` и `search`. Нужно отредактировать `/etc/dhcp/dhclient.conf`. Чтобы появились записи `domain` и `search` нужно убрать комментарий перед строкой `supersede domain-name`, и вписать свой домен:
 
 ```bash
 supersede domain-name "domain.ru first.domain.ru"

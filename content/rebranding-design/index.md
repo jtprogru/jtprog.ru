@@ -1,16 +1,26 @@
 ---
-categories: Opinion
+title: '[Opinion] Ребрендинг и дезигн'
+description: "История ребрендинга и редизайна блога: причины изменений, планы на развитие, личные мысли автора о делении знаниями и развитии сообщества."
+keywords: ["ребрендинг блога", "редизайн сайта", "история блога", "развитие блога", "делиться знаниями", "личный опыт", "Patreon", "Telegram канал", "дизайн логотипа"]
+date: "2021-07-13T13:00:00+03:00"
+lastmod: "2021-07-13T13:00:00+03:00"
+tags:
+  - opinion
+  - share knowledge
+  - rebranding
+  - redesign
+  - blogging
+  - Patreon
+  - community
+categories:
+  - Opinion
 cover:
+  image: opinions.png
   alt: opinions
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: opinions.png
   relative: false
-date: "2021-07-13T13:00:00+03:00"
-tags:
-- opinion
-- share knowledge
-title: '[Opinion] Ребрендинг и дезигн'
 type: post
+slug: rebranding-design
 ---
 
 Привет, `%username%`! Я хочу объявить время перемен и глобальных изменений как минимум потому, что я задолбался.

@@ -9,8 +9,17 @@ date: "2019-05-20T10:55:05+03:00"
 tags:
 - btrfs
 - linux
+- filesystem
+- commands
+- subvolumes
+- snapshots
+- ext3 conversion
+- resize
+- basics
 title: '[Basics] Btrfs - что это и как это'
 type: post
+description: "Введение в файловую систему Btrfs для Linux: основные понятия, история, примеры команд для создания, управления томами, подтомами, снимками, конвертации из ext3 и изменения размера."
+keywords: ["btrfs файловая система", "linux filesystem", "btrfs команды", "btrfs subvolume", "btrfs snapshot", "конвертация ext3 в btrfs", "изменение размера btrfs", "администрирование linux", "btrfs основы"]
 ---
 **Btrfs** (иногда произносится butter fs) — новая свободная файловая система, разрабатываемая при поддержке компании Oracle. Распространяется по лицензии GPL. Несмотря на то, что её разработка ещё далека от завершения, 9 января 2009 года файловая система была интегрирована в ядро Linux, и доступна в Debian Squueze.
 
