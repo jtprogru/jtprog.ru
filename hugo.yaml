@@ -1,26 +1,51 @@
 ---
 baseURL: "https://jtprog.ru"
-# theme: "bear"
-theme: "PaperMod"
-title: "Мишка на сервере"
-copyright: "[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) &copy; / Mikhail (jtprogru) Savin / Commit: @@@COMMIT@@@"
 languageCode: "ru-RU"
+# theme: "bear"
+theme: PaperMod
+title: "Мишка на сервере"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+    - Sitemap
+  page:
+    - HTML
+    - RSS
+
+enableRobotsTXT: false
+
+services:
+  googleAnalytics:
+    id: G-NK4TC343YF
+
+pagination:
+  pagerSize: 10
+
+menu:
+  main:
+    - identifier: donations
+      name: "Поддержать"
+      url: "/donations/"
+      weight: 2
+    - identifier: cv
+      name: CV
+      url: https://savinmi.ru
+      weight: 1
+
+copyright: "[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) &copy; / Mikhail (jtprogru) Savin / Commit: @@@COMMIT@@@"
 defaultContentLanguage: "ru"
 enableEmoji: true
 enablegitinfo: true
 forcesyncstatic: true
-pagination:
-
-  pagerSize: 10
 canonifyURLs: true
 summaryLength: 15
 
-enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-
-googleAnalytics: G-NK4TC343YF
 
 minify:
   disableXML: true
@@ -32,7 +57,7 @@ params:
   env: production
   comments: false
   ShowPostNavLinks: true
-  description: "Заметки самоучки"
+  # description: "Заметки самоучки"
   author: "jtprogru"
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/main/content"
@@ -78,44 +103,44 @@ params:
   ShowShareButtons: false
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  disableSpecial1stPost: true
+  disableSpecial1stPost: false
 
   homeInfoParams:
     Title: "Привет, `%username%`!"
     Content: |+
       Меня зовут Михаил и добро пожаловать на страницы моего блога.
-      Подписывайся на [telegram-канал](https://ttttt.me/jtprogru_channel) или заходи в
-      [telegram-чат](https://ttttt.me/jtprogru_chat) и задавай вопросы.
+      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в
+      [telegram-чат](https://t.me/jtprogru_chat) и задавай вопросы.
 
   socialIcons:
     - name: telegram
-      url: "https://ttttt.me/jtprogru_chat"
-    - name: twitter
-      url: "https://twitter.com/jtprogru"
+      url: "https://t.me/jtprogru_chat"
+    # - name: twitter
+    #   url: "https://x.com/jtprogru"
     # - name: vkcom
     #   url: "https://vk.com/jtprogru_channel"
     # - name: boosty
     #   url: "https://boosty.to/jtprogru"
-    - name: youtube
-      url: "https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg"
+    # - name: youtube
+    #   url: "https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg"
     - name: github
       url: "https://github.com/jtprogru"
-    - name: mastodon
-      url: "https://mas.to/@jtprogru"
-    - name: buymeacoffee
-      url: "https://boosty.to/jtprogru"
+    # - name: mastodon
+    #   url: "https://mas.to/@jtprogru"
+    # - name: buymeacoffee
+    #   url: "https://boosty.to/jtprogru"
     - name: dev
       url: "https://dev.to/jtprogru"
     # - name: discord
     #   url: "https://discord.gg/aKZNvaXQmR"
-    - name: medium
-      url: "https://jtprogru.medium.com"
+    # - name: medium
+    #   url: "https://jtprogru.medium.com"
     - name: linkedin
       url: "https://www.linkedin.com/in/jtprogru"
     - name: unsplash
       url: "https://unsplash.com/@jtprogru"
-    - name: keybase
-      url: "https://keybase.io/jtprog"
+    # - name: keybase
+    #   url: "https://keybase.io/jtprog"
     # - name: soundcloud
     #   url: "https://soundcloud.com/jtprogru/"
     - name: cv
@@ -137,15 +162,6 @@ params:
   featured:
     previewOnly: true
 
-  outputs:
-    home:
-      - HTML
-      - RSS
-      - JSON
-      - Sitemap
-    section:
-      - HTML
-      - RSS
 
   outputFormats:
     RSS:
@@ -159,13 +175,8 @@ params:
     tag: "tags"
 
   permalinks:
-    post: "/:slug/"
+    post: "/blog/:slug/"
 
-menu:
-  main:
-    - name: "Поддержать"
-      url: "https://jtprog.ru/donations/"
-      weight: 1
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]

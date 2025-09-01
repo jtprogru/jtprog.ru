@@ -13,12 +13,12 @@ env:
 dotenv: [".env", "{{.ENV}}/.env.", "{{.HOME}}/.env"]
 
 vars:
-  CONFIG: config.yml
+  CONFIG: hugo.yaml
   NAME: 00000000-init
   LOG_LEVEL: debug
   PORT: 1313
-  HOST:
-    sh: ifconfig en0 | grep 'inet ' | awk '{ print $2 }'
+  HOST: 127.0.0.1
+    # sh: ifconfig en0 | grep 'inet ' | awk '{ print $2 }'
 
 tasks:
   default:

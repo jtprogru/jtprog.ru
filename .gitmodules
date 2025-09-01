@@ -1,4 +1,8 @@
 [submodule "themes/bear"]
 	path = themes/bear
-    url = https://github.com/jtprogru/hugo-bear.git
-    branch = main
+  url = https://github.com/jtprogru/hugo-bear.git
+  branch = main
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+  url = https://github.com/adityatelange/hugo-PaperMod.git
+  branch = master
