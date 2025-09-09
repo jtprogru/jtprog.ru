@@ -6,7 +6,7 @@
 
 Все статьи опубликованные в моем блоге.
 
-Автор текстов: [Michael (jtprogru) Savin](https://savinmi.ru).
+Автор текстов: [Mikhail (jtprogru) Savin](https://savinmi.ru).
 
 Автор иллюстраций: [Igan Pol](https://www.behance.net/iganpol).
 
@@ -23,5 +23,5 @@
 
 > "[Basics] Мой личный чек-лист для Linux сервера", &copy; Михаил (jtprogru) Савин, [https://jtprog.ru/linux-checklist/](https://jtprog.ru/linux-checklist/), CC BY-NC-ND 4.0
 >
-> "[Basics] Мой личный чек-лист для Linux сервера", &copy; Michael (jtprogru) Savin, [https://jtprog.ru/linux-checklist/](https://jtprog.ru/linux-checklist/), CC BY-NC-ND 4.0
+> "[Basics] Мой личный чек-лист для Linux сервера", &copy; Mikhail (jtprogru) Savin, [https://jtprog.ru/linux-checklist/](https://jtprog.ru/linux-checklist/), CC BY-NC-ND 4.0
 
