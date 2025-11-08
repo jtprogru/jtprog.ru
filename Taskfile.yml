@@ -34,8 +34,7 @@ tasks:
     desc: Build static site
     deps:
       - prec
-    cmds:
-      - hugo -D --gc --verbose --config ./{{.CONFIG}}
+    cmd: hugo -D -E -F
 
   serve:
     desc: Run local development server with hugo
