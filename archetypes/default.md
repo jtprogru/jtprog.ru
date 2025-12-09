@@ -14,6 +14,8 @@ cover:
   relative: false
 type: post
 slug: '{{ replace .Name " " "-" }}'
+aliases:
+  - '{{ .Date "2006/01/02" }}/{{ replace .Name " " "-" }}'
 ---
 
 Привет, `%username%`!
