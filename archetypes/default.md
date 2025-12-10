@@ -15,7 +15,7 @@ cover:
 type: post
 slug: '{{ replace .Name " " "-" }}'
 aliases:
-  - '{{ .Date "2006/01/02" }}/{{ replace .Name " " "-" }}'
+  - '{{ .Date | time.AsTime | time.Format "2006/01/02" }}/{{ replace .Name " " "-" }}'
 ---
 
 Привет, `%username%`!
