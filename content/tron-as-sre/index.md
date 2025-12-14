@@ -4,11 +4,24 @@ description: "Разбор одного из героев серии фильм�
 keywords:
   - SRE
   - Tron
+  - Site Reliability Engineering
+  - мониторинг
+  - безопасность
+  - архитектура систем
+  - анти-паттерны
+  - security
+  - SIEM
+  - remediation
+  - runbook
 date: 2025-12-14T10:22:28+03:00
 lastmod: 2025-12-14T10:22:28+03:00
 tags:
   - tron
   - SRE
+  - monitoring
+  - security
+  - architecture
+  - devops
 categories: ["Opinions"]
 cover:
   image: opinions.png
