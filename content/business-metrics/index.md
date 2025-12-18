@@ -37,7 +37,7 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: '2025/12/20/business-metrics'
+slug: '2025-12-20-business-metrics'
 aliases:
   - 'business-metrics'
 ---

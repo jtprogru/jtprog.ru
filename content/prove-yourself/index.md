@@ -21,7 +21,7 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: '2023/05/08/prove-yourself'
+slug: '2023-05-08-prove-yourself'
 aliases:
   - 'prove-yourself'
 ---
