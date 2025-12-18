@@ -18,8 +18,7 @@ tags:
   - centos
   - orcl_data
   - "администрирование БД"
-categories:
-  - "Базы данных"
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

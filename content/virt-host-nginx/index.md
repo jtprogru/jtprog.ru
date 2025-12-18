@@ -8,8 +8,7 @@ tags:
   - nginx
   - vhosts
   - centos
-categories:
-  - howto
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

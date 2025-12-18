@@ -11,7 +11,7 @@ keywords:
   - "Nginx"
   - "веб-интерфейс Zabbix"
   - "настройка Zabbix"
-categories: howto
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

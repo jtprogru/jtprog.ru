@@ -20,8 +20,7 @@ tags:
   - "примитивы"
   - "автоматизация"
   - "системное администрирование"
-categories:
-  - Basics
+categories: ["Basics"]
 cover:
   image: basics.png
   alt: basics

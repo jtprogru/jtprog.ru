@@ -17,7 +17,7 @@ tags:
 - interview
 - work
 - patreon
-categories: Interview
+categories: ["Interview"]
 cover:
   image: interview.png
   alt: interview

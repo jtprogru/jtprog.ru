@@ -12,7 +12,7 @@ lastmod: "2015-06-30T19:33:11+03:00"
 tags:
   - chmod
   - linux
-categories: ["howto"]
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

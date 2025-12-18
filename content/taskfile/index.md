@@ -1,5 +1,5 @@
 ---
-categories: Work
+categories: ["Work"]
 cover:
   alt: work
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

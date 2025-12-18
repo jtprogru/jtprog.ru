@@ -9,7 +9,7 @@ tags:
 - Ansible
 - Configuration management
 - IaC
-categories: [Work]
+categories: ["Work"]
 cover:
   image: work.png
   alt: work

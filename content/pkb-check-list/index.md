@@ -13,8 +13,7 @@ tags:
   - note-taking
   - organization
   - DIKW
-categories:
-  - Opinions
+categories: ["Opinions"]
 cover:
   image: opinions.png
   alt: opinions

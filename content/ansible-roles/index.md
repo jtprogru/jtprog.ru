@@ -13,8 +13,7 @@ tags:
   - testing
   - best practices
   - Ansible Galaxy
-categories:
-  - Basics
+categories: ["Basics"]
 cover:
   image: basics.png
   alt: basics

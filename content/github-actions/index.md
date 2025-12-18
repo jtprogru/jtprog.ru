@@ -13,8 +13,7 @@ tags:
   - rsync
   - deployment
   - workflow
-categories:
-  - DevOps
+categories: ["DevOps"]
 cover:
   image: devops.png
   alt: devops

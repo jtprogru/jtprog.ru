@@ -1,5 +1,5 @@
 ---
-categories: Meetup
+categories: ["Meetup"]
 cover:
   alt: meetup
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

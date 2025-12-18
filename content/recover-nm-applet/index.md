@@ -13,7 +13,7 @@ tags:
   - ubuntu
   - network
   - networkmanager
-categories: ["howto"]
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

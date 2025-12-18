@@ -8,8 +8,7 @@ tags:
   - macOS
   - firewall
   - Little Snitch
-categories:
-  - Opinions
+categories: ["Opinions"]
 cover:
   image: opinions.png
   alt: Opinions

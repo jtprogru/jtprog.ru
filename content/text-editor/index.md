@@ -11,8 +11,7 @@ tags:
   - Obsidian
   - notes
   - Zettelkästen
-categories:
-  - Blog
+categories: ["Blog"]
 cover:
   image: blog.png
   alt: blog

@@ -15,8 +15,7 @@ tags:
   - Active Directory
   - DCIM
   - IPAM
-categories:
-  - howto
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

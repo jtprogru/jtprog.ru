@@ -13,8 +13,7 @@ tags:
   - T-shaped
   - career
   - personal development
-categories:
-  - Interview
+categories: ["Interview"]
 cover:
   image: interview.png
   alt: Interview

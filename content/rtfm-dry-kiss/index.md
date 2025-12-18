@@ -15,8 +15,7 @@ tags:
   - IT principles
   - devops
   - programming
-categories:
-  - Opinion
+categories: ["Opinions"]
 cover:
   image: opinions.png
   alt: opinions

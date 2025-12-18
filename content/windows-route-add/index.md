@@ -8,8 +8,7 @@ tags:
   - windows
   - route
   - man
-categories:
-  - OS
+categories: ["OS"]
 cover:
   image: OS.png
   alt: OS

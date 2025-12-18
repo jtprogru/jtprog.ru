@@ -7,8 +7,7 @@ lastmod: "2015-06-26T14:42:00+03:00"
 tags:
   - android
   - windows
-categories:
-  - howto
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

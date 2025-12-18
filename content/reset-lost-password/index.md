@@ -13,7 +13,7 @@ tags:
   - linux
   - password
   - root
-categories: ["howto"]
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

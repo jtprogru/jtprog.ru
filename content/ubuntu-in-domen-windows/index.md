@@ -15,8 +15,7 @@ tags:
   - dns
   - linux
   - integration
-categories:
-  - Work
+categories: ["Work"]
 cover:
   image: work.png
   alt: work

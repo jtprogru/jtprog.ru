@@ -12,8 +12,7 @@ tags:
   - system calls
   - linux tools
   - command line
-categories:
-  - OS
+categories: ["OS"]
 cover:
   image: OS.png
   alt: OS

@@ -12,7 +12,7 @@ lastmod: "2019-05-23T15:48:55+03:00"
 tags:
   - postfix
   - linux
-categories: ["howto"]
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

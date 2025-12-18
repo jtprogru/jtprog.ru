@@ -1,5 +1,5 @@
 ---
-title: '[OS] Установка iperf3'
+title: '[HowTo] Установка iperf3'
 description: "Полное руководство по установке и использованию iperf3 на Linux для тестирования пропускной способности сети. Примеры команд для сервера и клиента, анализ UDP/TCP трафика."
 keywords:
   - "iperf3"
@@ -20,11 +20,10 @@ tags:
   - network
   - "сетевые технологии"
   - "администрирование"
-categories:
-  - OS
+categories: ["HowTo"]
 cover:
-  image: OS.png
-  alt: OS
+  image: howto.png
+  alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post

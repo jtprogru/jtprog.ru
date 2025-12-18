@@ -7,7 +7,7 @@ lastmod: "2019-07-26T18:50:58+03:00"
 tags:
   - sysctl
   - linux
-categories: [OS]
+categories: ["OS"]
 cover:
   image: OS.png
   alt: OS

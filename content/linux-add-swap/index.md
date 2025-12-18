@@ -19,8 +19,7 @@ tags:
   - linux
   - "оптимизация"
   - "системное администрирование"
-categories:
-  - "Администрирование"
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

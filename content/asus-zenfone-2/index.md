@@ -1,5 +1,5 @@
 ---
-categories: Other
+categories: ["Other"]
 cover:
   alt: other
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

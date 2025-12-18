@@ -1,5 +1,5 @@
 ---
-categories: Develop
+categories: ["Develop"]
 cover:
   alt: develop
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

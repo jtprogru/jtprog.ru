@@ -13,8 +13,7 @@ tags:
   - Linux
   - programming
   - personal story
-categories:
-  - Story
+categories: ["Story"]
 cover:
   image: stories.png
   alt: stories

@@ -7,8 +7,7 @@ lastmod: "2018-07-28T14:29:00+03:00"
 tags:
   - work
   - admins
-categories:
-  - Work
+categories: ["Work"]
 cover:
   image: work.png
   alt: work

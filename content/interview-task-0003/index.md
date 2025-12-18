@@ -20,8 +20,7 @@ tags:
   - monitoring
   - logging
   - alerting
-categories:
-  - Interview
+categories: ["Interview"]
 cover:
   image: interview.png
   alt: interview

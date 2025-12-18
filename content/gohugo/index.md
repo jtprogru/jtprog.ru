@@ -1,5 +1,5 @@
 ---
-categories: Blog
+categories: ["Blog"]
 cover:
   alt: blog
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
