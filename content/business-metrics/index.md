@@ -20,8 +20,8 @@ keywords:
   - операционная аналитика
   - метрики для бизнеса
   - чек-лист мониторинга
-date: 2025-12-20T11:23:38+03:00
-lastmod: 2025-12-20T11:23:38+03:00
+date: 2025-12-22T10:23:38+03:00
+lastmod: 2025-12-22T10:23:38+03:00
 tags:
   - monitoring
   - sre
@@ -37,7 +37,7 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: '2025-12-20-business-metrics'
+slug: '2025-12-22-business-metrics'
 aliases:
   - 'business-metrics'
 ---
