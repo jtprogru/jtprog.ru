@@ -12,7 +12,7 @@ lastmod: "2016-08-03T10:00:03+03:00"
 tags:  
   - proxmox  
   - cert  
-categories: ["howto"]  
+categories: ["HowTo"]
 cover:  
   image: howto.png  
   alt: howto  

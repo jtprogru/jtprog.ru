@@ -18,8 +18,7 @@ tags:
   - "max connections"
   - linux
   - "оптимизация"
-categories:
-  - HowTo
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

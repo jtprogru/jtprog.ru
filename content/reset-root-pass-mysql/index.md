@@ -12,7 +12,7 @@ lastmod: "2015-10-09T10:15:30+03:00"
 tags:  
   - mysql  
   - password  
-categories: ["howto"]  
+categories: ["HowTo"]
 cover:  
   image: howto.png  
   alt: howto  

@@ -16,8 +16,7 @@ tags:
   - culture
   - methodology
   - practices
-categories:
-  - Opinion
+categories: ["Opinions"]
 cover:
   image: opinions.png
   alt: opinions

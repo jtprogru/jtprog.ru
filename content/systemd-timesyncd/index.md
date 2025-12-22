@@ -8,7 +8,7 @@ tags:
 - systemd
 - timesyncd
 - linux
-categories: [Work]
+categories: ["Work"]
 cover:
   image: work.png
   alt: work

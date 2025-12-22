@@ -1,9 +1,9 @@
 ---
-categories: Other
+categories: ["OS"]
 cover:
-  alt: other
+  alt: OS
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: other.png
+  image: OS.png
   relative: false
 date: "2013-09-22T03:36:00+03:00"
 tags:
@@ -12,7 +12,7 @@ tags:
 - миграция с Windows
 - настройка ОС
 - KDE
-title: '[Other] Основательный переезд'
+title: '[OS] Основательный переезд'
 type: post
 description: "Личный опыт перехода с Windows 7 на Linux Mint. Сравнение производительности, настройка 3G-модема и преимущества Linux."
 keywords:

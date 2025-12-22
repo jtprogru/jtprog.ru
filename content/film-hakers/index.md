@@ -1,5 +1,5 @@
 ---
-categories: Story
+categories: ["Story"]
 cover:
   alt: stories
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

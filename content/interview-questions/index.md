@@ -11,8 +11,7 @@ tags:
   - интервью
   - вопросы
   - interview
-categories:
-  - Interview
+categories: ["Interview"]
 cover:
   image: interview.png
   alt: interview

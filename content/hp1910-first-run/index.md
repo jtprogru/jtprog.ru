@@ -7,7 +7,7 @@ lastmod: "2018-01-07T22:10:30+03:00"
 tags:
 - hp1910
 - network
-categories: [howto]
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

@@ -12,7 +12,7 @@ lastmod: "2017-05-25T15:41:28+03:00"
 tags:
   - owncloud
   - linux
-categories: ["howto"]
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

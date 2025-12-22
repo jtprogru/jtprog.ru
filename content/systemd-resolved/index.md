@@ -8,7 +8,7 @@ tags:
 - systemd
 - resolved
 - systemd-resolved
-categories: [Work]
+categories: ["Work"]
 cover:
   image: work.png
   alt: work

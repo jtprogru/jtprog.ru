@@ -13,8 +13,7 @@ tags:
   - PostgreSQL
   - Nginx
   - web UI
-categories:
-  - howto
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

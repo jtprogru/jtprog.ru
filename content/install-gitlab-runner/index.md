@@ -13,8 +13,7 @@ tags:
   - CI/CD
   - automation
   - Ansible
-categories:
-  - Work
+categories: ["Work"]
 cover:
   image: work.png
   alt: work

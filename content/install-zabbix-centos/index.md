@@ -13,8 +13,7 @@ tags:
   - MariaDB
   - web UI
   - Zabbix 3.4
-categories:
-  - howto
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

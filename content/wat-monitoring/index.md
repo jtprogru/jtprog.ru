@@ -8,8 +8,7 @@ tags:
   - monitoring
   - prometheus
   - zabbix
-categories:
-  - Basics
+categories: ["Basics"]
 cover:
   image: basics.png
   alt: basics

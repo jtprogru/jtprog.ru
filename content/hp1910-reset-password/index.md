@@ -17,7 +17,7 @@ lastmod: "2018-01-07T21:40:57+03:00"
 tags:
 - hp1910
 - network
-categories: howto
+categories: ["HowTo"]
 cover:
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

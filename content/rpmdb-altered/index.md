@@ -13,7 +13,7 @@ tags:
   - rpmdb  
   - centos  
   - yum  
-categories: ["howto"]  
+categories: ["HowTo"]
 cover:  
   image: howto.png  
   alt: howto  

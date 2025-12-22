@@ -1,5 +1,5 @@
 ---
-title: '[OS] Записываем ISO-образ на флешку или диск'
+title: '[HowTo] Записываем ISO-образ на флешку или диск'
 description: "Инструкция по записи ISO-образов на DVD и USB-накопители в macOS: использование терминала, команды hdiutil и dd."
 keywords:
   - "запись ISO macOS"
@@ -17,11 +17,10 @@ tags:
   - macos
   - iso
   - "работа с дисками"
-categories:
-  - OS
+categories: ["HowTo"]
 cover:
-  image: OS.png
-  alt: OS
+  image: howto.png
+  alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post

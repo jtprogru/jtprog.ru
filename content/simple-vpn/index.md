@@ -14,7 +14,7 @@ tags:
   - vpn  
   - pptpd  
   - ubuntu  
-categories: ["howto"]  
+categories: ["HowTo"]
 cover:  
   image: howto.png  
   alt: howto  

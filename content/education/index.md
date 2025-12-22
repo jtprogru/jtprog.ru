@@ -1,5 +1,5 @@
 ---
-categories: Opinion
+categories: ["Opinions"]
 cover:
   alt: opinions
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

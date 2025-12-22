@@ -13,7 +13,7 @@ lastmod: "2019-08-15T11:33:00+03:00"
 tags:
   - python
   - centos
-categories: ["howto"]
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

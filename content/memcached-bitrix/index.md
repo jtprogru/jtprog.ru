@@ -18,8 +18,7 @@ tags:
   - memcached
   - "оптимизация"
   - "веб-разработка"
-categories:
-  - HowTo
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

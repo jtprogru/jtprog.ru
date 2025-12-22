@@ -12,8 +12,7 @@ tags:
   - security
   - ssh-keygen
   - ssh-copy-id
-categories:
-  - Basics
+categories: ["Basics"]
 cover:
   image: basics.png
   alt: basics

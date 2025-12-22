@@ -12,8 +12,7 @@ tags:
   - license
   - SSH
   - howto
-categories:
-  - howto
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

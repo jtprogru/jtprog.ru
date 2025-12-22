@@ -8,8 +8,7 @@ tags:
   - iptables
   - man
   - linux
-categories:
-  - howto
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

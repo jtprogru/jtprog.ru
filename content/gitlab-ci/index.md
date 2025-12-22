@@ -1,5 +1,5 @@
 ---
-categories: DevOps
+categories: ["DevOps"]
 cover:
   alt: devops
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

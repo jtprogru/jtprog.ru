@@ -20,7 +20,7 @@ tags:
   - interrupts
   - ACPI
   - "системное администрирование"
-categories: howto
+categories: ["HowTo"]
 cover:
   alt: howto
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

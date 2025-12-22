@@ -19,8 +19,7 @@ tags:
   - replication
   - howto
   - "администрирование БД"
-categories:
-  - HowTo
+categories: ["HowTo"]
 cover:
   image: howto.png
   alt: howto

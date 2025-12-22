@@ -1,5 +1,5 @@
 ---
-categories: OS
+categories: ["OS"]
 cover:
   alt: OS
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
