@@ -26,7 +26,9 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: 'sre-evolution-2020-2025'
+slug: '2026-01-05-sre-evolution-2020-2025'
+aliases:
+  - 'sre-evolution-2020-2025'
 ---
 
 Привет, `%username%`! Попытался разобраться, куда катится Site Reliability Engineering (SRE) за последние лет пять. Ниже накидал мысли по этому поводу. Ссылки на все отчеты вроде не забыл, так что зацени, а потом го в комменты – обсудим вместе.
