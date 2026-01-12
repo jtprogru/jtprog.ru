@@ -1,7 +1,18 @@
 ---
 title: 'Эволюция практик Site Reliability Engineering: краткий анализ тенденций 2020-2025'
-description: ""
-keywords: []
+description: "Обзор ключевых трендов SRE 2020-2025: рост Toil, влияние AI/AIOps, сближение с Platform Engineering и FinOps, стандартизация наблюдаемости через OpenTelemetry, развитие chaos engineering и зрелых SLO/error budgets."
+keywords:
+  - SRE
+  - Site Reliability Engineering
+  - Toil
+  - AIOps
+  - AI
+  - Platform Engineering
+  - FinOps
+  - OpenTelemetry
+  - Chaos Engineering
+  - SLO
+  - Error Budgets
 date: 2026-01-05T19:16:29+03:00
 lastmod: 2026-01-05T19:16:29+03:00
 tags:
