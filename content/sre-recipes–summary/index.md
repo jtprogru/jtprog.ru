@@ -41,9 +41,9 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: '2026-02-14-sre-recipes–summary'
+slug: '2026-02-14-sre-recipes-summary'
 aliases:
-  - 'sre-recipes–summary'
+  - 'sre-recipes-summary'
 ---
 
 Привет, `%username%`! Иногда кажется, что про надежность уже сказано всё: SLO, error budget, postmortem’ы, Chaos Engineering и вот это всё. Но потом ты открываешь очередной инцидент в проде — и понимаешь, что падает не «абстрактная система», а вполне конкретная «штука», которую ты вчера трогал руками. И вот ты сидишь, смотришь в логи и графики, и главный вопрос звучит примерно так: «А можно было сделать так, чтобы сегодня я спал?»
