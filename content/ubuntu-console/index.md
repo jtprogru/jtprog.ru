@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-06-19T12:37:00+03:00"
+lastmod: "2015-06-19T12:37:00+03:00"
 tags:
 - encoding
 - cli

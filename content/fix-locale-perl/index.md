@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2016-08-08T10:34:00+03:00"
+lastmod: "2016-08-08T10:34:00+03:00"
 tags:
 - locale
 - perl

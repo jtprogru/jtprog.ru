@@ -6,6 +6,7 @@ cover:
   image: develop.png
   relative: false
 date: "2019-08-15T19:50:55+03:00"
+lastmod: "2019-08-15T19:50:55+03:00"
 tags:
 - python
 - requests

@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-02-02T17:25:00+03:00"
+lastmod: "2015-02-02T17:25:00+03:00"
 tags:
 - vsftpd
 - ubuntu

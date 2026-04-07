@@ -6,6 +6,7 @@ cover:
     caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
     relative: false
 date: "2019-05-20T10:55:05+03:00"
+lastmod: "2019-05-20T10:55:05+03:00"
 tags:
 - btrfs
 - linux

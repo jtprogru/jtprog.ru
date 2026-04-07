@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2015-04-21T18:55:51+03:00"
+lastmod: "2015-04-21T18:55:51+03:00"
 tags:
 - kernel
 - upgrade

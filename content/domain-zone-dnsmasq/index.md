@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-12-16T10:48:00+03:00"
+lastmod: "2015-12-16T10:48:00+03:00"
 tags:
 - dnsmasq
 - dns

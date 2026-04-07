@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2013-09-22T03:36:00+03:00"
+lastmod: "2013-09-22T03:36:00+03:00"
 tags:
 - linux mint
 - go to linux

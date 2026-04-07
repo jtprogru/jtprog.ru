@@ -6,6 +6,7 @@ cover:
   image: work.png
   relative: false
 date: "2015-03-19T19:11:00+03:00"
+lastmod: "2015-03-19T19:11:00+03:00"
 tags:
 - windows
 - neshta

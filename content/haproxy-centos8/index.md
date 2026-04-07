@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2020-04-09T01:30:00+03:00"
+lastmod: "2020-04-09T01:30:00+03:00"
 tags:
 - haproxy
 - centos

@@ -6,6 +6,7 @@ cover:
   image: work.png
   relative: false
 date: 2023-10-17T20:58:16+03:00
+lastmod: 2023-10-17T20:58:16+03:00
 tags:
 - taskfile
 - makefile

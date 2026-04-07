@@ -6,6 +6,7 @@ cover:
   image: opinions.png
   relative: false
 date: 2024-01-14T17:28:38+03:00
+lastmod: 2024-01-14T17:28:38+03:00
 tags:
   - education
   - основы

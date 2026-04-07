@@ -6,6 +6,7 @@ cover:
   image: meetup.png
   relative: false
 date: 2024-10-19T10:17:06+03:00
+lastmod: 2024-10-19T10:17:06+03:00
 tags:
   - Yandex.Cloud
   - Yandex Scale

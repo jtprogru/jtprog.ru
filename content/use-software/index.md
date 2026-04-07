@@ -6,6 +6,7 @@ cover:
   image: work.png
   relative: false
 date: "2015-07-03T12:30:00+03:00"
+lastmod: "2015-07-03T12:30:00+03:00"
 tags:
 - soft
 - work

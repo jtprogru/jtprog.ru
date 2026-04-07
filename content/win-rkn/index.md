@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2019-05-13T14:17:25+03:00"
+lastmod: "2019-05-13T14:17:25+03:00"
 tags:
 - windows
 - rkn

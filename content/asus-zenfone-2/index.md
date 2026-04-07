@@ -6,6 +6,7 @@ cover:
   image: other.png
   relative: false
 date: "2015-08-31T18:31:00+03:00"
+lastmod: "2015-08-31T18:31:00+03:00"
 tags:
 - asus
 - zenfone

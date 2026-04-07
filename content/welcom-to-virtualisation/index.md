@@ -6,6 +6,7 @@ cover:
   image: work.png
   relative: false
 date: "2014-06-18T17:10:00+03:00"
+lastmod: "2014-06-18T17:10:00+03:00"
 tags:
 - esxi
 - work

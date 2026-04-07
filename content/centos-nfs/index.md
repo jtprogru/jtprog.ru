@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2019-07-19T14:35:42+03:00"
+lastmod: "2019-07-19T14:35:42+03:00"
 tags:
 - centos
 - linux

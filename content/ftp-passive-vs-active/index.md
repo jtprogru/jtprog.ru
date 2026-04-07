@@ -6,6 +6,7 @@ cover:
     caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
     relative: false
 date: "2015-06-25T10:52:13+03:00"
+lastmod: "2015-06-25T10:52:13+03:00"
 tags:
 - man
 - ftp

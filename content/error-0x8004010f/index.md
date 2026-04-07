@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2015-11-05T15:15:00+03:00"
+lastmod: "2015-11-05T15:15:00+03:00"
 tags:
 - windows
 - outlook

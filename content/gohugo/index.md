@@ -6,6 +6,7 @@ cover:
   image: blog.png
   relative: false
 date: "2019-07-22T15:00:00+03:00"
+lastmod: "2019-07-22T15:00:00+03:00"
 tags:
 - blog
 - hugo
