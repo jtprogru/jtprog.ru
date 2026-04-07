@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-06-08T18:51:46+03:00"
+lastmod: "2015-06-08T18:51:46+03:00"
 tags:
 - ubuntu
 - route

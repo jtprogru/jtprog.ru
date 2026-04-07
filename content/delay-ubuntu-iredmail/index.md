@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-06-04T19:14:00+03:00"
+lastmod: "2015-06-04T19:14:00+03:00"
 tags:
 - iredmail
 - ubuntu

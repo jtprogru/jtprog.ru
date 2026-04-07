@@ -6,6 +6,7 @@ cover:
   image: work.png
   relative: false
 date: "2021-04-07T22:31:31+03:00"
+lastmod: "2021-04-07T22:31:31+03:00"
 tags:
 - bitrix
 - bitrixvm

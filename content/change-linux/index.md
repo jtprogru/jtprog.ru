@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2013-08-26T19:14:00+03:00"
+lastmod: "2013-08-26T19:14:00+03:00"
 tags:
 - linux
 - unix

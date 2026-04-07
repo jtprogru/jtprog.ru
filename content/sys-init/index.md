@@ -6,6 +6,7 @@ cover:
     caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
     relative: false
 date: "2021-09-12T12:13:37+03:00"
+lastmod: "2021-09-12T12:13:37+03:00"
 tags:
 - systemd
 - openrc

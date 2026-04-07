@@ -6,6 +6,7 @@ cover:
   image: work.png
   relative: false
 date: "2014-09-18T19:20:00+03:00"
+lastmod: "2014-09-18T19:20:00+03:00"
 tags:
 - spam
 - virus

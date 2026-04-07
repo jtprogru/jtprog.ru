@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2018-09-17T07:00:05+03:00"
+lastmod: "2018-09-17T07:00:05+03:00"
 tags:
 - centos
 - converter

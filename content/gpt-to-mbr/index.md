@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2015-03-23T21:16:38+03:00"
+lastmod: "2015-03-23T21:16:38+03:00"
 tags:
 - gpt
 - mbr

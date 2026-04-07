@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2015-06-18T21:06:00+03:00"
+lastmod: "2015-06-18T21:06:00+03:00"
 tags:
 - restore point
 - windows

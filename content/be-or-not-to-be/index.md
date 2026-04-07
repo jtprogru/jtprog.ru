@@ -6,6 +6,7 @@ cover:
   image: other.png
   relative: false
 date: "2013-07-05T21:16:00+03:00"
+lastmod: "2013-07-05T21:16:00+03:00"
 tags:
 - start
 - first post

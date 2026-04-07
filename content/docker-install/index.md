@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2020-08-02T16:10:00+03:00"
+lastmod: "2020-08-02T16:10:00+03:00"
 tags:
 - docker
 - docker-compose

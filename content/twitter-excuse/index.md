@@ -6,6 +6,7 @@ cover:
   image: develop.png
   relative: false
 date: '2017-09-13T15:00:00+03:00'
+lastmod: '2017-09-13T15:00:00+03:00'
 tags:
 - python
 - twitter api

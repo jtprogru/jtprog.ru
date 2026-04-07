@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-09-23T10:21:00+03:00"
+lastmod: "2015-09-23T10:21:00+03:00"
 tags:
 - zsh
 - oh-my-zsh

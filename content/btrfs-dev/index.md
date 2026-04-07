@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2019-05-22T12:27:22+03:00"
+lastmod: "2019-05-22T12:27:22+03:00"
 tags:
 - btrfs
 - linux

@@ -6,6 +6,7 @@ cover:
   image: work.png
   relative: false
 date: "2021-08-20T22:47:51+03:00"
+lastmod: "2021-08-20T22:47:51+03:00"
 tags:
 - bitrix
 - work

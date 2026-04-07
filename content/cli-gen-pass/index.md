@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2020-02-17T15:13:11+03:00"
+lastmod: "2020-02-17T15:13:11+03:00"
 tags:
 - linux
 - cli

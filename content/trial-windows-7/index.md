@@ -6,6 +6,7 @@ cover:
   image: OS.png
   relative: false
 date: "2014-12-03T14:00:00+03:00"
+lastmod: "2014-12-03T14:00:00+03:00"
 tags:
 - windows
 - trial

@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2016-08-01T05:55:44+03:00"
+lastmod: "2016-08-01T05:55:44+03:00"
 tags:
 - macos
 - safari

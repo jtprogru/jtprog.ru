@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-01-10T19:56:11+03:00"
+lastmod: "2015-01-10T19:56:11+03:00"
 tags:
 - the bat
 - outlook

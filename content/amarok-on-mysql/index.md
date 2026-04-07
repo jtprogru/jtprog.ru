@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-10-09T09:45:00+03:00"
+lastmod: "2015-10-09T09:45:00+03:00"
 tags:
 - amarok
 - mysql

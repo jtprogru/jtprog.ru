@@ -6,6 +6,7 @@ cover:
   image: devops.png
   relative: false
 date: "2020-11-05T23:00:00+03:00"
+lastmod: "2020-11-05T23:00:00+03:00"
 tags:
 - gitlab-ci
 - devops

@@ -6,6 +6,7 @@ cover:
   image: howto.png
   relative: false
 date: "2015-02-18T14:49:00+03:00"
+lastmod: "2015-02-18T14:49:00+03:00"
 tags:
 - android
 - ubuntu
