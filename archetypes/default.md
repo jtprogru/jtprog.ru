@@ -13,7 +13,7 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: '{{ .Date | time.AsTime | time.Format "2006-01-02" }}-{{ replace .Name " " "-" }}'
+slug: '{{ replace .Name " " "-" }}'
 aliases:
   - '{{ replace .Name " " "-" }}'
 ---
