@@ -16,7 +16,7 @@ tags:
 - active mode
 - passive mode
 - firewall
-title: '[Basics] FTP passive VS. FTP active'
+title: 'FTP passive VS. FTP active'
 type: post
 description: "Объяснение ключевых различий между активным и пассивным режимами работы протокола FTP, включая установление управляющего соединения и соединения для передачи данных."
 keywords: ["ftp passive vs active", "режимы ftp", "протокол ftp", "активный режим ftp", "пассивный режим ftp", "сетевые протоколы", "клиент-сервер", "брандмауэр ftp"]

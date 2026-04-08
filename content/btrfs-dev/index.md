@@ -15,7 +15,7 @@ tags:
 - balance
 - delete device
 - howto
-title: '[HowTo] Btrfs - работаем с разделом'
+title: 'Btrfs - работаем с разделом'
 type: post
 description: "Практическое руководство по работе с файловой системой Btrfs в Linux: добавление и удаление устройств, балансировка данных, примеры команд для управления разделами."
 keywords: ["btrfs linux", "управление разделами btrfs", "добавить диск btrfs", "удалить диск btrfs", "балансировка btrfs", "btrfs команды", "файловая система linux", "btrfs howto", "расширение раздела linux"]

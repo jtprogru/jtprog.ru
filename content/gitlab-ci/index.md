@@ -18,7 +18,7 @@ tags:
 - markdown
 - docker
 - rsync
-title: '[DevOps] GitLab-CI – делаем себе просто'
+title: 'GitLab-CI – делаем себе просто'
 type: post
 description: "Описание простой схемы автоматизации CI/CD для статического сайта на Hugo с использованием GitLab CI, Docker и rsync для деплоя."
 keywords: ["gitlab ci", "hugo", "ci/cd", "автоматизация деплоя", "статический сайт", "docker", "rsync", "gitlab pipeline", "devops", "markdown blog"]

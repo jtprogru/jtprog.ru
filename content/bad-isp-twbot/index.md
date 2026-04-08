@@ -15,7 +15,7 @@ tags:
 - isp
 - automation
 - script
-title: '[Develop] Bad ISP Twitter bot'
+title: 'Bad ISP Twitter bot'
 type: post
 description: "Описание Python-бота для Twitter, который автоматически сообщает интернет-провайдеру о проблемах со скоростью интернета, помогая фиксировать инциденты и контролировать качество услуг."
 keywords: ["python twitter bot", "мониторинг скорости интернета", "жалоба провайдеру", "автоматизация сообщений", "twitter api", "скрипт на python", "качество интернета", "devops инструмент", "bad isp"]

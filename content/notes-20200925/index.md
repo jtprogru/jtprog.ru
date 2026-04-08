@@ -1,5 +1,5 @@
 ---
-title: '[Notes] Заметки на полях 2020.09.25'
+title: 'Заметки на полях 2020.09.25'
 description: 'Практические заметки по работе с Ansible, SSH и конфигурацией инвентаря: типичные ошибки, советы и разбор ситуаций из реального опыта.'
 keywords: ['ansible заметки', 'ansible inventory', 'ssh config', 'ansible ошибки', 'ansible best practices', 'ansible ssh', 'ansible hosts.ini', 'ansible controlpath']
 date: "2020-09-25T20:39:00+03:00"

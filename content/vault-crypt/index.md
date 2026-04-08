@@ -14,7 +14,7 @@ tags:
 - восстановление данных
 - ransomware
 - windows
-title: '[Work] Очередной шифровальщик'
+title: 'Очередной шифровальщик'
 type: post
 description: "Практические советы по защите от шифровальщиков. Использование ShadowExplorer и точек восстановления Windows для минимизации потерь."
 keywords:

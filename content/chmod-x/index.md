@@ -1,5 +1,5 @@
 ---
-title: '[Basics] chmod a-x chmod'
+title: 'chmod a-x chmod'
 description: 'Разбор ситуации с удалением execute-бита у chmod: как восстановить права, способы решения, советы для Linux-админов и примеры команд.'
 keywords: ['chmod a-x', 'chmod восстановление', 'linux права доступа', 'chmod execute bit', 'chmod fix', 'chmod linux', 'chmod ошибка', 'chmod a+x']
 date: 2023-03-08T20:16:24+03:00

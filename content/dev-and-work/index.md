@@ -22,7 +22,7 @@ tags:
 - test-driven development
 - career development
 - skill improvement
-title: '[Work] Программирование и работа'
+title: 'Программирование и работа'
 type: post
 description: "Личный путь автора и его подход к совершенствованию навыков программирования на Python и Golang, отработке алгоритмов на платформах LeetCode и Codewars, а также внедрению TDD."
 keywords: ["programming", "development", "python", "golang", "leetcode", "codewars", "stepik", "tdd", "algorithms", "self-improvement", "learning", "coding practice", "software development", "career"]

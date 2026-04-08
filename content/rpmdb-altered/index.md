@@ -1,5 +1,5 @@
 ---  
-title: '[HowTo] RPMDB altered outside of yum'  
+title: 'RPMDB altered outside of yum'  
 description: "Решение ошибки 'RPMDB altered outside of yum' в CentOS: очистка кэша, восстановление целостности базы RPM и рекомендации по работе с пакетами"  
 keywords:  
   - yum ошибка rpmdb  

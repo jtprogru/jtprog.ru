@@ -11,7 +11,7 @@ tags:
 - kernel
 - upgrade
 - ubuntu
-title: '[OS] Обновляем ядро до версии 4.0 в Ubuntu'
+title: 'Обновляем ядро до версии 4.0 в Ubuntu'
 description: "Руководство по обновлению ядра Linux до версии 4.0 в Ubuntu 14.04 LTS. Включает шаги по скачиванию и установке пакетов ядра, а также обновлению GRUB."
 keywords:
 - linux kernel

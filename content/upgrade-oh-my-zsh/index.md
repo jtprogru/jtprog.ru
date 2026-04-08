@@ -13,7 +13,7 @@ tags:
 - linux
 - обновление оболочки
 - git ошибки
-title: '[HowTo] Upgrade OhMyZsh'
+title: 'Upgrade OhMyZsh'
 type: post
 description: "Решение ошибки 'Cannot pull with rebase' при обновлении Oh-My-Zsh. Команды для фиксации изменений и успешного апгрейда."
 keywords:

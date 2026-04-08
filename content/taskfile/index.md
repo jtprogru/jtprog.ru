@@ -12,7 +12,7 @@ tags:
 - makefile
 - YAML
 - CLI
-title: '[Work] Taskfile'
+title: 'Taskfile'
 type: post
 description: "Сравнение Taskfile и Makefile для автоматизации DevOps-задач. Примеры конфигураций, плюсы и минусы инструментов."
 keywords:

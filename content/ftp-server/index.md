@@ -18,7 +18,7 @@ tags:
 - networking
 - security
 - file transfer
-title: '[HowTo] Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04'
+title: 'Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04'
 type: post
 description: "Руководство по быстрой установке и базовой настройке FTP-сервера vsFTPd на Ubuntu 14.04 для предоставления доступа локальным пользователям с разграничением прав."
 keywords: ["vsftpd ubuntu 14.04", "установка ftp сервера linux", "настройка vsftpd", "ftp server configuration", "ubuntu ftp", "secure ftp", "file transfer protocol", "vsftpd configuration file", "linux networking"]

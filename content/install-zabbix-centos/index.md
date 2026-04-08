@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Установка и настройка Zabbix 3.4 на CentOS 7'
+title: 'Установка и настройка Zabbix 3.4 на CentOS 7'
 description: "Пошаговая инструкция по установке и настройке Zabbix 3.4 на CentOS 7: подготовка системы, настройка MariaDB, запуск и базовая конфигурация web-интерфейса."
 keywords: ["установка zabbix centos", "zabbix 3.4 инструкция", "настройка zabbix", "мониторинг centos", "zabbix server", "mariadb zabbix", "zabbix web ui", "zabbix-agent", "zabbix firewall"]
 date: "2017-10-05T13:00:15+03:00"

@@ -1,5 +1,5 @@
 ---
-title: '[OS] Настройка Linux для HL и защиты от DDoS'
+title: 'Настройка Linux для HL и защиты от DDoS'
 description: 'Пошаговая инструкция по настройке sysctl для повышения производительности Linux, защиты от DDoS и оптимизации под высокие нагрузки: параметры, примеры, рекомендации.'
 keywords: ['sysctl настройка linux', 'ddos защита linux', 'оптимизация ядра linux', 'linux highload', 'sysctl.conf примеры', 'сетевые параметры linux', 'linux performance tuning', 'linux ddos mitigation', 'настройка tcp linux']
 date: "2019-07-26T18:50:58+03:00"

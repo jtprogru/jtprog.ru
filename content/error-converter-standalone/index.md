@@ -19,7 +19,7 @@ tags:
 - vcenter
 - hosts file
 - networking
-title: '[OS] vCenter Converter Standalone error'
+title: 'vCenter Converter Standalone error'
 type: post
 description: "Анализ и решение ошибки \"A file i/o error occurred while accessing\" в VMware vCenter Converter Standalone при конвертации физического сервера в виртуальный, включая проблему совместимости версий и настройку файла hosts."
 keywords: ["vmware converter error", "vcenter converter standalone", "p2v conversion", "physical to virtual", "a file i/o error occurred while accessing", "vmware troubleshooting", "esxi", "vcenter", "hosts file", "конвертация сервера", "виртуализация", "ошибка vmware"]

@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Установка и настройка Zabbix 4.4 на Ubuntu'
+title: 'Установка и настройка Zabbix 4.4 на Ubuntu'
 description: "Пошаговая инструкция по установке и настройке Zabbix 4.4 на Ubuntu 18.04: добавление репозитория, настройка PostgreSQL, запуск и базовая конфигурация через WEB-UI."
 keywords: ["установка zabbix ubuntu", "zabbix 4.4 инструкция", "настройка zabbix", "мониторинг ubuntu", "zabbix server", "postgreSQL zabbix", "zabbix web ui", "zabbix-agent", "zabbix nginx"]
 date: "2020-02-18T22:40:00+03:00"

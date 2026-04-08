@@ -11,7 +11,7 @@ tags:
 - the bat
 - outlook
 - windows
-title: '[HowTo] Перенос почты с The Bat в Outlook'
+title: 'Перенос почты с The Bat в Outlook'
 type: post
 description: "Пошаговая инструкция по миграции почты из The Bat! в Microsoft Outlook. Экспорт EML-файлов и импорт в Outlook."
 keywords:

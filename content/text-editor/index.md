@@ -1,5 +1,5 @@
 ---
-title: '[Blog] Редактор текста'
+title: 'Редактор текста'
 description: "Обзор лучших текстовых редакторов для заметок и написания статей: сравнение iA Writer, Obsidian, Evernote, Apple Notes и других, выбор оптимального инструмента для работы с markdown и ведения блога."
 keywords: ["текстовый редактор", "markdown редактор", "лучшие редакторы для заметок", "iA Writer обзор", "Obsidian сравнение", "Evernote vs Apple Notes", "markdown для блога", "выбор редактора", "Zettelkästen", "cross-linking", "экспорт в PDF", "синхронизация заметок"]
 date: 2022-09-03T23:04:09+03:00

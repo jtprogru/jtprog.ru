@@ -13,7 +13,7 @@ tags:
 - ubuntu
 - сетевые настройки
 - sysctl
-title: '[HowTo] Отключаем IPv6 на сервере'
+title: 'Отключаем IPv6 на сервере'
 type: post
 description: "Пошаговая инструкция по отключению IPv6 в Ubuntu Server через редактирование sysctl.conf."
 keywords:

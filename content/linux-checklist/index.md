@@ -1,5 +1,5 @@
 ---
-title: '[Basics] Мой личный чек-лист для Linux сервера'
+title: 'Мой личный чек-лист для Linux сервера'
 description: 'Практический чек-лист для настройки нового Linux-сервера: выбор дистрибутива, авторизация, базовый софт, параметры ядра, мониторинг и автоматизация.'
 keywords: ['linux чек-лист', 'настройка linux сервера', 'linux server checklist', 'ansible roles', 'linux best practices', 'linux monitoring', 'linux hardening', 'linux automation']
 date: "2021-08-26T20:14:09+03:00"

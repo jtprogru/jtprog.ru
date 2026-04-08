@@ -14,7 +14,7 @@ tags:
 - Active Directory
 - VMware
 - репликация
-title: '[Work] Знакомство с виртуальными серверами'
+title: 'Знакомство с виртуальными серверами'
 type: post
 description: "Практический опыт настройки VMware ESXi: создание тестового стенда с Active Directory, решение проблем сетевых карт и синхронизации времени."
 keywords:

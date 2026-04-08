@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Установка Netbox на Ubuntu 20.04'
+title: 'Установка Netbox на Ubuntu 20.04'
 description: "Пошаговая инструкция по установке и настройке Netbox на Ubuntu 20.04: подготовка окружения, настройка PostgreSQL, Redis, интеграция с MS Active Directory."
 keywords: ["установка netbox ubuntu", "netbox инструкция", "настройка netbox", "postgreSQL netbox", "redis netbox", "active directory netbox", "python venv", "network automation", "dokumentaciya netbox"]
 date: "2020-07-22T23:15:00+03:00"

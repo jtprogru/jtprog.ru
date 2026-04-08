@@ -1,5 +1,5 @@
 ---  
-title: '[HowTo] Простой VPN-сервер на базе Ubuntu+pptpd'  
+title: 'Простой VPN-сервер на базе Ubuntu+pptpd'  
 description: "Пошаговое руководство по развертыванию VPN-сервера с использованием pptpd: настройка IP-форвардинга, управление клиентами и правила iptables"  
 keywords:  
   - vpn сервер ubuntu  

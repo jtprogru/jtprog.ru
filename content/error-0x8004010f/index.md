@@ -15,7 +15,7 @@ tags:
 - troubleshooting
 - email
 - microsoft office
-title: '[OS] Ошибка 0x8004010F в Outlook 2010-2013'
+title: 'Ошибка 0x8004010F в Outlook 2010-2013'
 type: post
 description: "Решение распространенной ошибки 0x8004010F в Microsoft Outlook 2010-2013, возникающей при отправке и получении почты, с пошаговой инструкцией."
 keywords: ["outlook error 0x8004010f", "microsoft outlook", "email error", "troubleshooting outlook", "outlook 2010", "outlook 2013", "файл данных outlook", "настройка учетных записей outlook", "решение проблем outlook"]

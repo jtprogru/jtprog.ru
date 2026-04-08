@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Лечим Postfix'
+title: 'Лечим Postfix'
 description: "Исправление ошибок запуска Postfix после отключения IPv6: настройка протоколов и обновление конфигурации main.cf"
 keywords:
   - postfix ошибка inet_protocols

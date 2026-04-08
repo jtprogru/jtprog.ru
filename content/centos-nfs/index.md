@@ -18,7 +18,7 @@ tags:
 - firewall
 - networking
 - fstab
-title: '[OS] Установка NFS сервера на CentOS 7'
+title: 'Установка NFS сервера на CentOS 7'
 type: post
 description: "Пошаговая инструкция по установке и настройке NFS сервера и клиента на CentOS 7: конфигурация экспортов, правила Firewalld, монтирование шары через fstab."
 keywords: ["centos nfs server", "установка nfs centos 7", "настройка nfs клиента linux", "конфигурация exports nfs", "firewalld nfs", "монтирование nfs fstab", "nfs шара linux", "centos 7 nfs", "настройка общего доступа linux"]

@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Recursive chmod'
+title: 'Recursive chmod'
 description: "Использование утилиты find для рекурсивного изменения прав доступа к файлам и каталогам в Linux: базовые команды и примеры"
 keywords:
   - рекурсивный chmod

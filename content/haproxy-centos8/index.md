@@ -13,7 +13,7 @@ tags:
 - howto
 description: "Инструкция по установке и настройке свежей стабильной версии HAProxy (2.1.4) из исходников на Linux-системы. Включает шаги по активации репозитория PowerTools, установке зависимостей, компиляции с поддержкой Prometheus, настройке SystemD-юнита, конфигурации брандмауэра и запуску сервиса."
 keywords: ["HAProxy", "установка из исходников", "компиляция HAProxy", "настройка SystemD", "поддержка Prometheus", "firewall-cmd", "CentOS", "RHEL", "OpenSSL", "Lua", "systemd-devel", "HAProxy-конфигурация", "сборка HAProxy", "Load Balancer", "Reverse Proxy", "High Availability"]
-title: '[HowTo] Установка HAProxy на Centos 8'
+title: 'Установка HAProxy на Centos 8'
 type: post
 ---
 
