@@ -17,7 +17,7 @@ tags:
 - defaults write
 - webkit
 - user experience
-title: '[HowTo] Разрешаем просмотр pdf-файлов в Safari'
+title: 'Разрешаем просмотр pdf-файлов в Safari'
 type: post
 description: "Краткое руководство по настройке Safari на macOS для отображения PDF-файлов непосредственно в браузере вместо их загрузки с помощью простой команды терминала."
 keywords: ["macos", "safari", "pdf viewer", "browser settings", "terminal command", "defaults write", "webkit", "how to", "guide", "configuration"]

@@ -1,5 +1,5 @@
 ---
-title: '[Work] Логи Nginx в JSON'
+title: 'Логи Nginx в JSON'
 description: "Пошаговое руководство по настройке логирования Nginx в JSON-формате для удобного парсинга и интеграции с системами анализа логов"
 keywords: 
   - nginx logs

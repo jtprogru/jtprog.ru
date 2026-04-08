@@ -1,5 +1,5 @@
 ---
-title: '[Work] Ubuntu в домене Windows AD'
+title: 'Ubuntu в домене Windows AD'
 description: "Пошаговая инструкция по вводу Ubuntu в домен Windows Active Directory: настройка Kerberos, Samba, Winbind, DNS, синхронизация времени и интеграция с AD."
 keywords: ["ubuntu в домене windows", "ввод ubuntu в AD", "настройка kerberos ubuntu", "samba active directory", "winbind ubuntu", "dns ubuntu ad", "интеграция ubuntu windows", "linux в домене windows", "ubuntu 14.04 ad"]
 date: "2014-08-24T22:40:30+03:00"

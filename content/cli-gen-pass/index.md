@@ -20,7 +20,7 @@ tags:
 - openssl
 - md5sum
 - awk
-title: '[OS] Генерация паролей в CLI'
+title: 'Генерация паролей в CLI'
 type: post
 description: "Несколько способов генерации надежных паролей прямо в командной строке Linux с использованием стандартных утилит и скриптов."
 keywords: ["генерация паролей cli", "linux generate password", "случайный пароль linux", "командная строка пароль", "безопасность linux", "urandom password", "openssl rand", "md5sum password", "bash скрипт пароль"]

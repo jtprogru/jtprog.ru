@@ -13,7 +13,7 @@ tags:
 - SSD
 - миграция данных
 - Acronis
-title: '[OS] Windows XP на новом SSD'
+title: 'Windows XP на новом SSD'
 type: post
 description: "Опыт переноса Windows XP на SSD: клонирование диска, решение проблем с драйверами и оптимизация производительности старого ПК."
 keywords:

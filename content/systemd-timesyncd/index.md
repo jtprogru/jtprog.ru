@@ -1,5 +1,5 @@
 ---
-title: '[Work] Настраиваем systemd-timesyncd'
+title: 'Настраиваем systemd-timesyncd'
 description: 'Пошаговая инструкция по настройке systemd-timesyncd для синхронизации времени в Linux: удаление ntpd, настройка серверов времени, запуск и проверка статуса.'
 keywords: ['systemd-timesyncd настройка', 'linux ntp', 'systemd timesyncd', 'настройка времени linux', 'linux time sync', 'systemd-timesyncd инструкция', 'ntpd альтернатива']
 date: "2020-11-27T20:20:00+03:00"

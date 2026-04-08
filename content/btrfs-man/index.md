@@ -17,7 +17,7 @@ tags:
 - ext3 conversion
 - resize
 - basics
-title: '[Basics] Btrfs - что это и как это'
+title: 'Btrfs - что это и как это'
 type: post
 description: "Введение в файловую систему Btrfs для Linux: основные понятия, история, примеры команд для создания, управления томами, подтомами, снимками, конвертации из ext3 и изменения размера."
 keywords: ["btrfs файловая система", "linux filesystem", "btrfs команды", "btrfs subvolume", "btrfs snapshot", "конвертация ext3 в btrfs", "изменение размера btrfs", "администрирование linux", "btrfs основы"]

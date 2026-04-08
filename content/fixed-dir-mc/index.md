@@ -15,7 +15,7 @@ tags:
 - file manager
 - terminal
 - utility
-title: '[HowTo] Исправляем глюк Midnight Commander'
+title: 'Исправляем глюк Midnight Commander'
 type: post
 description: "Исправление ошибки в Midnight Commander (mc) на macOS и Linux, когда левая панель всегда открывает одну и ту же директорию, путем редактирования файла panels.ini."
 keywords: ["midnight commander fix", "mc bug", "mc panels ini", "fixed directory mc", "linux mc", "macos mc", "command line file manager", "troubleshooting mc", "mc configuration"]

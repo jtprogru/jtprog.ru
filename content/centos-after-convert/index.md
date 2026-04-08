@@ -18,7 +18,7 @@ tags:
 - troubleshooting
 - virtualization
 - vmware converter
-title: '[OS] Исправляем работу конвертера'
+title: 'Исправляем работу конвертера'
 type: post
 description: "Руководство по устранению проблем с загрузчиком Grub и сетевыми интерфейсами в виртуальной машине CentOS после конвертации с помощью VMware Center Converter Standalone."
 keywords: ["centos vmware converter", "ошибки загрузки centos", "проблемы сети centos", "исправление grub", "настройка сети linux", "vmware troubleshooting", "виртуализация centos", "конвертация виртуальных машин", "сетевые интерфейсы linux"]

@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Репликация Master-Slave'
+title: 'Репликация Master-Slave'
 description: "Пошаговая настройка Master-Slave репликации в MySQL с использованием Percona XtraDB на Ubuntu: конфигурация серверов, резервное копирование и управление репликацией."
 keywords:
   - "MySQL репликация"

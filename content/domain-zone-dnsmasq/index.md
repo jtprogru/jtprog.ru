@@ -17,7 +17,7 @@ tags:
 - wordpress
 - hosts file
 - networking
-title: '[HowTo] Своя доменная зона с dnsmasq'
+title: 'Своя доменная зона с dnsmasq'
 type: post
 description: "Руководство по настройке локальной доменной зоны (*.dev) с помощью dnsmasq на Ubuntu для веб-разработки, включая настройку и интеграцию с виртуальными хостами Apache2."
 keywords: ["dnsmasq local domain", "local dns server", "ubuntu dnsmasq", "web development environment", "apache2 virtual host", "local website testing", "linux networking", "dns caching"]

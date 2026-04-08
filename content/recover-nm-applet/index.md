@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Лечим исчезнувший NetworkManager applet'
+title: 'Лечим исчезнувший NetworkManager applet'
 description: "Решение проблемы с отсутствующим апплетом NetworkManager в Ubuntu: восстановление сетевого интерфейса и альтернативные инструменты управления"
 keywords:
   - networkmanager ubuntu

@@ -17,7 +17,7 @@ tags:
 - image download
 - image resize
 - scripting
-title: '[Develop] Качаем и ресайзим картинки'
+title: 'Качаем и ресайзим картинки'
 type: post
 description: "Скрипт на Python для скачивания случайных изображений с Unsplash API и их последующего изменения размера с использованием библиотеки Pillow."
 keywords: ["python script", "unsplash api", "скачать картинку python", "изменить размер картинки python", "pillow library", "обработка изображений python", "requests library", "автоматизация", "скрипт для изображений"]

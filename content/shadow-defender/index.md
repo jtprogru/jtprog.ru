@@ -1,5 +1,5 @@
 ---
-title: '[OS] Shadow Defender или Простая защита от дурака'
+title: 'Shadow Defender или Простая защита от дурака'
 description: "Использование Shadow Defender для защиты Windows: настройка режима тени, управление исключениями и рекомендации по резервному копированию"
 keywords:
   - shadow defender

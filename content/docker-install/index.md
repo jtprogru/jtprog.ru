@@ -19,7 +19,7 @@ tags:
 - package manager
 - containerization
 - development environment
-title: '[HowTo] Установка Docker на Ubuntu 20.04'
+title: 'Установка Docker на Ubuntu 20.04'
 type: post
 description: "Пошаговое руководство по установке Docker и Docker Compose на Ubuntu 20.04, включая удаление старых версий, добавление репозиториев и проверку установки."
 keywords: ["docker install ubuntu 20.04", "install docker compose", "ubuntu docker", "linux containerization", "how to install docker", "docker guide", "apt get docker", "docker command line", "development environment setup"]

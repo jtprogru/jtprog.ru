@@ -18,7 +18,7 @@ tags:
 - file editing
 - bash
 - gitlab
-title: '[HowTo] Как зайти в контейнер и выполнить команду внутри'
+title: 'Как зайти в контейнер и выполнить команду внутри'
 type: post
 description: "Руководство о том, как получить доступ к работающему контейнеру Docker и выполнять команды внутри, включая редактирование файлов и использование команд docker ps и docker exec."
 keywords: ["docker exec", "docker ps", "редактировать файл в docker контейнере", "docker контейнер", "зайти в docker", "командная строка docker", "linux", "docker howto", "troubleshooting docker", "file editing docker", "gitlab"]

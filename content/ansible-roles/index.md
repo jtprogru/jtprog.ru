@@ -1,5 +1,5 @@
 ---
-title: '[Basics] Ansible Roles'
+title: 'Ansible Roles'
 description: "Подробное руководство по Ansible Roles: структура ролей, best practices, примеры, тестирование с molecule, хранение и публикация ролей, ответы на частые вопросы."
 keywords: ["ansible roles", "ansible best practices", "структура ansible роли", "ansible-galaxy", "molecule тестирование", "ansible playbook", "devops", "ansible lint", "ansible tutorial", "ansible role dependencies"]
 date: 2022-09-05T10:15:00+03:00

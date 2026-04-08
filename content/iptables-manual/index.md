@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Шпаргалка по iptables'
+title: 'Шпаргалка по iptables'
 description: "Подробная шпаргалка по iptables: основные команды, примеры настройки, удаление и добавление правил, сохранение и восстановление конфигурации файрвола."
 keywords: ["iptables linux", "настройка файрвола", "iptables команды", "пример iptables", "iptables правила", "linux firewall", "iptables howto", "iptables flush", "iptables restore"]
 date: "2015-03-30T16:48:37+03:00"

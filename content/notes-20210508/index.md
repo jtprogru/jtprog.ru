@@ -1,5 +1,5 @@
 ---
-title: '[Notes] Заметки на полях 2021.05.08'
+title: 'Заметки на полях 2021.05.08'
 description: "Разбор ошибок при миграции Ingress-ресурсов Kubernetes на новую версию API с использованием Helm и werf"
 keywords:
   - kubernetes ingress

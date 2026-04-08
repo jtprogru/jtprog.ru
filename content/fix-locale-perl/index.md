@@ -16,7 +16,7 @@ tags:
 - error
 - localization
 - command line
-title: '[HowTo] Fix locale Perl'
+title: 'Fix locale Perl'
 type: post
 description: "Решение проблемы с настройками локали Perl в Ubuntu Server 14.04, которая приводит к предупреждениям и ошибкам при обновлении системы, с использованием команды locale-gen."
 keywords: ["fix locale perl", "ubuntu locale error", "perl warning setting locale failed", "locale-gen ubuntu", "linux localization", "troubleshooting ubuntu", "perl locale settings", "command line howto"]

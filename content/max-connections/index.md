@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Максимальное количество коннектов'
+title: 'Максимальное количество коннектов'
 description: "Решение ошибки 'too many connections' в MySQL: увеличение параметра max_connections, временные и постоянные настройки через консоль и конфигурационный файл."
 keywords:
   - "MySQL max_connections"

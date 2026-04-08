@@ -22,7 +22,7 @@ tags:
 - json
 - monitoring
 - visualization
-title: '[Develop] Экспорт dashboards/datasource из Grafana'
+title: 'Экспорт dashboards/datasource из Grafana'
 type: post
 description: "Методы автоматизации экспорта и импорта дашбордов и источников данных Grafana с использованием Python скрипта и утилиты curl, а также упоминание о миграции данных из SQLite в MySQL."
 keywords: ["grafana export dashboard", "grafana export datasource", "grafana api", "автоматизация grafana", "миграция grafana", "grafana sqlite to mysql", "python grafana api", "curl grafana api", "резервное копирование grafana", "мониторинг", "визуализация данных"]

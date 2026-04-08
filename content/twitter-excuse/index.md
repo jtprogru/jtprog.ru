@@ -13,7 +13,7 @@ tags:
 - redis
 - docker
 - автоматизация
-title: '[Develop] Пишем отмазки в Twitter'
+title: 'Пишем отмазки в Twitter'
 type: post
 description: "Скрипт на Python для автоматической публикации случайных сообщений в Twitter с использованием Redis и Docker."
 keywords:

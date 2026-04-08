@@ -1,5 +1,5 @@
 ---
-title: '[OS] Шпаргалка про роутинг в Windows'
+title: 'Шпаргалка про роутинг в Windows'
 description: "Пошаговая инструкция по добавлению и управлению статическими маршрутами в Windows: синтаксис, параметры, примеры команд, советы по настройке и устранению ошибок."
 keywords: ["роутинг windows", "статические маршруты windows", "route add windows", "windows routing table", "настройка маршрутизации windows", "route print", "windows network troubleshooting", "windows route delete", "windows route change"]
 date: "2015-06-08T12:49:00+03:00"

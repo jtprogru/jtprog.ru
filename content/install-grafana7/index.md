@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Установка Grafana 7 на Ubuntu 20.04'
+title: 'Установка Grafana 7 на Ubuntu 20.04'
 description: "Подробное руководство по установке Grafana 7 на Ubuntu 20.04 с настройкой авторизации через LDAP (MS Active Directory)."
 keywords:
 - grafana

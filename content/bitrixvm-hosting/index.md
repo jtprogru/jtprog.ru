@@ -20,7 +20,7 @@ tags:
 - certbot
 - gzip
 - troubleshooting
-title: '[Work] Перенос сайта на хостинг с BitrixVM'
+title: 'Перенос сайта на хостинг с BitrixVM'
 type: post
 description: "Подробная инструкция по переносу сайта на хостинг с BitrixVM: резервное копирование, восстановление, настройка SSL-сертификата Let's Encrypt с Certbot и решение распространенной проблемы с gzip в Nginx."
 keywords: ["перенос сайта bitrix", "хостинг bitrixvm", "миграция bitrix", "резервное копирование bitrix", "восстановление bitrix", "ssl bitrix", "lets encrypt certbot", "настройка nginx gzip", "bitrix troubleshooting", "bitrixvm инструкция"]

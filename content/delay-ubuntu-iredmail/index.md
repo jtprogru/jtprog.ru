@@ -18,7 +18,7 @@ tags:
 - dovecot
 - mail client
 - performance
-title: '[HowTo] Задержки почтового сервера на Ubuntu + iRedMail'
+title: 'Задержки почтового сервера на Ubuntu + iRedMail'
 type: post
 description: "Устранение неполадок и решение проблемы задержек почтового сервера на Ubuntu с iRedMail, вызванных чрезмерной частотой проверки почтового клиента."
 keywords: ["iredmail", "ubuntu", "mail server", "email delay", "troubleshooting", "postfix", "dovecot", "the bat", "mail client", "configuration", "performance"]

@@ -13,7 +13,7 @@ tags:
 - centos
 - php 7.4
 - yum репозитории
-title: '[Work] Обновление Bitrix VA'
+title: 'Обновление Bitrix VA'
 type: post
 description: "Пошаговое обновление PHP до версии 7.4 в Bitrix Virtual Appliance на CentOS 7. Настройка репозиториев Remi и работа с MySQL."
 keywords:

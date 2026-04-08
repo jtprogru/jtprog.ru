@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Подключаем Android к Windows 7'
+title: 'Подключаем Android к Windows 7'
 description: "Пошаговая инструкция по подключению Android к Windows 7 в режиме MTP: решение проблем с драйверами, настройка реестра, советы по устранению ошибок подключения."
 keywords: ["android windows 7 mtp", "подключение android к windows", "mtp ошибка windows 7", "решение проблем mtp", "драйверы android windows", "windows 7 реестр mtp", "android usb подключение", "windows 7 android fix"]
 date: "2015-06-26T14:42:00+03:00"

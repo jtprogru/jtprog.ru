@@ -15,7 +15,7 @@ tags:
 - android
 - smartphone
 - zenui
-title: '[Other] Мой новый телефончик ASUS Zenfone 2'
+title: 'Мой новый телефончик ASUS Zenfone 2'
 type: post
 description: "Обзор и личный опыт использования смартфона ASUS Zenfone 2: характеристики, сравнение с предыдущей моделью, впечатления от камеры, производительности и интерфейса ZenUI."
 keywords: ["asus zenfone 2 обзор", "asus zenfone 2 характеристики", "htc desire 310 сравнение", "android смартфон", "обзор телефона", "zenui", "камера смартфона", "выбор телефона", "мобильное устройство"]

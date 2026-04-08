@@ -1,5 +1,5 @@
 ---
-title: '[Basics] Основы Docker: Dockerfile и docker-compose.yml'
+title: 'Основы Docker: Dockerfile и docker-compose.yml'
 description: "Пошаговое руководство по созданию и использованию Dockerfile и docker-compose для разработки и деплоя приложений: примеры, best practices, автоматизация."
 keywords: ["dockerfile пример", "docker compose инструкция", "основы docker", "docker best practices", "docker автоматизация", "docker для начинающих", "docker compose vs dockerfile", "контейнеризация приложений", "docker hub публикация"]
 date: "2020-08-08T18:50:00+03:00"

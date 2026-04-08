@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Установка Zabbix 5.0 на Ubuntu 20.04'
+title: 'Установка Zabbix 5.0 на Ubuntu 20.04'
 description: "Пошаговая инструкция по установке и настройке Zabbix 5.0 на Ubuntu Server 20.04. Включает добавление репозитория, настройку PostgreSQL, запуск сервера и веб-интерфейса."
 keywords: 
   - "Zabbix"

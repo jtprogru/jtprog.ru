@@ -1,5 +1,5 @@
 ---
-title: '[DevOps] Работаем руками с PostgreSQL'
+title: 'Работаем руками с PostgreSQL'
 description: "Сборник ключевых команд CLI для администрирования PostgreSQL: управление базами данных, таблицами, индексами и анализ производительности"
 keywords:
   - postgresql команды

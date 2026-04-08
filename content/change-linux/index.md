@@ -18,7 +18,7 @@ tags:
 - security
 - personal experience
 - os choice
-title: '[OS] Какую *nix-систему поставить на ноутбук?!'
+title: 'Какую *nix-систему поставить на ноутбук?!'
 type: post
 description: "Выбор *nix-системы для ноутбука: сравнение Ubuntu и FreeBSD с точки зрения программирования, безопасности и личного опыта."
 keywords: ["выбор linux для ноутбука", "ubuntu vs freebsd", "nix система", "программирование на linux", "безопасность linux", "установка unix", "операционные системы", "it-talk", "vmware workstation"]

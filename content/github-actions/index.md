@@ -1,5 +1,5 @@
 ---
-title: '[DevOps] Github Actions для блогера'
+title: 'Github Actions для блогера'
 description: "Практическое руководство по автоматизации публикации блога с помощью GitHub Actions: настройка workflow, деплой через hugo-rsync, примеры и советы."
 keywords: ["github actions", "ci/cd для блога", "hugo rsync deployment", "github workflow", "автоматизация публикаций", "devops блог", "деплой hugo", "github marketplace actions", "static site deployment"]
 date: "2021-04-28T16:27:11+03:00"

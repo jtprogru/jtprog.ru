@@ -14,7 +14,7 @@ tags:
 - initd
 - runit
 - linux
-title: '[Basics] Инициализация системы'
+title: 'Инициализация системы'
 type: post
 description: "Обзор основных систем инициализации в Linux: System V, systemd, Upstart, Runit и OpenRC. Принципы работы, особенности и сравнение решений."
 keywords: 

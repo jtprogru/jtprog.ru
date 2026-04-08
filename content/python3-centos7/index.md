@@ -1,5 +1,5 @@
 ---
-title: '[HowTo] Установка Python 3 в CentOS 7'
+title: 'Установка Python 3 в CentOS 7'
 description: "Пошаговая инструкция по установке Python 3.6 и настройке виртуального окружения в CentOS 7 с использованием репозитория IUS"
 keywords:
   - установка python centos 7

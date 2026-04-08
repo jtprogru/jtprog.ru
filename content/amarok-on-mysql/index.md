@@ -15,7 +15,7 @@ tags:
 - database
 - linux
 - music library
-title: '[HowTo] Связываем Amarok и MySQL'
+title: 'Связываем Amarok и MySQL'
 type: post
 description: "Подробная инструкция по связыванию аудиоплеера Amarok с базой данных MySQL для эффективной организации и ускорения работы музыкальной библиотеки."
 keywords: ["Amarok", "MySQL", "музыкальная библиотека", "аудиоплеер", "настройка базы данных", "ускорение работы", "linux", "howto", "sqlite альтернатива", "управление музыкой"]
