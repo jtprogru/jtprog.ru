@@ -24,6 +24,16 @@ services:
 pagination:
   pagerSize: 10
 
+related:
+  includeNewer: true
+  threshold: 80
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 70
+
 menu:
   main:
     - identifier: donations

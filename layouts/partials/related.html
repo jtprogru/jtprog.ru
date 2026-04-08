@@ -1,0 +1,11 @@
+{{- $related := .Site.RegularPages.Related . | first (.Param "relatedMax" | default 5) }}
+{{- with $related }}
+<div class="related-posts">
+  <h3>Похожие посты</h3>
+  <ul>
+    {{- range . }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{- end }}
+  </ul>
+</div>
+{{- end }}
