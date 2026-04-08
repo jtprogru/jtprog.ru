@@ -21,9 +21,10 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: '2023-05-08-prove-yourself'
+slug: 'prove-yourself'
 aliases:
   - 'prove-yourself'
+  - '2023-05-08-prove-yourself'
 ---
 
 Привет, `%username%`! Я не особо афиширую некоторые свои телодвижения, но видимо пришло время – я зарегистрировался в роли наставника на площадке по поиску менторов [getmentor.dev](https://getmentor.dev/mentor/michael-savin-1427) и прямо сейчас один из подписчиков получает от меня консультации на постоянной основе (*Денис, привет!*).

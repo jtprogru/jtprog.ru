@@ -37,9 +37,10 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: '2025-12-22-business-metrics'
+slug: 'business-metrics'
 aliases:
   - 'business-metrics'
+  - '2025-12-22-business-metrics'
 ---
 
 Привет, `%username%`! Сегодня поговорим о теме, которая часто остается в тени инфраструктурного мониторинга, но при этом не менее важна — о **мониторинге бизнес-метрик**. Если ты SRE, DevOps или TeamLead, то наверняка сталкивался с ситуацией: все графики зеленые, CPU не плавится, память в норме, а бизнес приходит и говорит "что-то не работает". И вот тут начинается самое интересное.

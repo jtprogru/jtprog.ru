@@ -34,9 +34,10 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: '2026-01-30-digital-immune-system'
+slug: 'digital-immune-system'
 aliases:
   - 'digital-immune-system'
+  - '2026-01-30-digital-immune-system'
 ---
 
 Привет, `%username%`! Сегодня поговорим о концепции, которую Gartner включил в топ-10 стратегических технологических трендов — **Digital Immune System (DIS)**, или «Цифровая иммунная система». Звучит футуристично, но на самом деле это про то, как сделать наши системы такими же адаптивными и самовосстанавливающимися, как человеческий организм.
