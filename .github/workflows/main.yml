@@ -26,6 +26,10 @@ jobs:
           hugo-arguments: '--minify'
           rsync-arguments: '-avz --delete --progress'
 
+      - name: Ping Yandex Webmaster sitemap
+        if: ${{ success() }}
+        run: curl -s "https://webmaster.yandex.ru/ping?sitemap=https://jtprog.ru/sitemap.xml"
+
       - name: Telegram Notify OK
         if: ${{ success() }}
         uses: appleboy/telegram-action@master
