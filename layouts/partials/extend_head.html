@@ -1,1 +1,9 @@
 <link rel="alternate" hreflang="ru" href="{{ .Permalink }}">
+<link rel="manifest" href="/manifest.json">
+{{- with (templates.Defer (dict "key" "pagination-noindex")) }}
+  {{- with .Page.Paginator }}
+    {{- if gt .PageNumber 1 }}
+<meta name="robots" content="noindex, follow">
+    {{- end }}
+  {{- end }}
+{{- end }}

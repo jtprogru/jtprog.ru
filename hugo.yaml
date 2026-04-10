@@ -172,7 +172,6 @@ params:
   featured:
     previewOnly: true
 
-
   outputFormats:
     RSS:
       mediaType: "application/rss+xml"
@@ -186,7 +185,6 @@ params:
 
   permalinks:
     post: "/blog/:slug/"
-
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
@@ -260,12 +258,6 @@ markup:
 caches:
   assets:
     dir: ":resourceDir/_gen"
-    maxAge: -1
-  getcsv:
-    dir: ":cacheDir/:project"
-    maxAge: -1
-  getjson:
-    dir: ":cacheDir/:project"
     maxAge: -1
   images:
     dir: ":cacheDir/images"
