@@ -16,6 +16,8 @@ type: post
 slug: '{{ replace .Name " " "-" }}'
 aliases:
   - '{{ replace .Name " " "-" }}'
+params:
+  math: false
 ---
 
 Привет, `%username%`!

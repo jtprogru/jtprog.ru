@@ -98,7 +98,7 @@ params:
     threshold: 0.2
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
-
+  math: true
   opengraph: true
   twitter_cards: true
   images: ["twitter-card.svg"]
@@ -234,6 +234,17 @@ markup:
       table: true
       taskList: true
       typographer: true
+      passthrough:
+        delimiters:
+          block:
+            - - '\['
+              - '\]'
+            - - $$
+              - $$
+          inline:
+            - - '\('
+              - '\)'
+        enable: true
     parser:
       attribute: true
       autoHeadingID: true

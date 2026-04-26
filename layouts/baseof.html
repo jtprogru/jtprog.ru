@@ -14,6 +14,9 @@
 
 <head>
     {{- partial "head.html" . }}
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
 </head>
 
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
