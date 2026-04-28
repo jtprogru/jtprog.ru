@@ -19,4 +19,4 @@ rundev.sh
 draft-config.yml
 .hugo_build.lock
 themes/bear-dev
-SEO_PLAN.md
+plans/
