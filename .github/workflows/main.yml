@@ -5,7 +5,6 @@ name: CI
     branches:
       - "main"
 
-
 jobs:
   deploy-website:
     runs-on: ubuntu-latest
@@ -23,12 +22,16 @@ jobs:
           VPS_DEPLOY_HOST: ${{secrets.DEPLOY_HOST}}
           VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
         with:
+          hugo-version: '0.161.1'
           hugo-arguments: '--minify'
-          rsync-arguments: '-avz --delete --progress'
+          hugo-config: 'hugo.yaml'
+          rsync-arguments: '--archive --compress --delete'
+          robots-txt-source: 'content/robots.txt'
 
       - name: Ping Yandex Webmaster sitemap
         if: ${{ success() }}
-        run: curl -s "https://webmaster.yandex.ru/ping?sitemap=https://jtprog.ru/sitemap.xml"
+        run: curl -s
+          "https://webmaster.yandex.ru/ping?sitemap=https://jtprog.ru/sitemap.xml"
 
       - name: Telegram Notify OK
         if: ${{ success() }}
