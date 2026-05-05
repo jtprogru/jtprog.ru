@@ -1,5 +1,9 @@
 <link rel="alternate" hreflang="ru" href="{{ .Permalink }}">
 <link rel="manifest" href="/manifest.json">
+{{- $author := .Params.author | default site.Params.author }}
+{{- with $author }}
+<meta name="author" content="{{ . }}">
+{{- end }}
 {{- with (templates.Defer (dict "key" "pagination-noindex")) }}
   {{- with .Page.Paginator }}
     {{- if gt .PageNumber 1 }}
