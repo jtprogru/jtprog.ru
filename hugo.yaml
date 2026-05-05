@@ -115,6 +115,18 @@ params:
   ShowCodeCopyButtons: true
   disableSpecial1stPost: false
 
+  profileMode:
+    enabled: true
+    title: "Мишка на сервере"
+    subtitle: |
+      Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про DevOps, SRE и системное администрирование.
+      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в [telegram-чат](https://t.me/jtprogru_chat).
+    imageUrl: "/avatar.webp"
+    imageTitle: "jtprogru"
+    imageWidth: 160
+    imageHeight: 160
+    latestPostsCount: 6
+
   homeInfoParams:
     Title: "Привет, `%username%`!"
     Content: |+
