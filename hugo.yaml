@@ -1,6 +1,6 @@
 ---
 baseURL: "https://jtprog.ru"
-languageCode: "ru-RU"
+language: "ru-RU"
 # theme: "bear"
 theme: PaperMod
 title: "Мишка на сервере"
