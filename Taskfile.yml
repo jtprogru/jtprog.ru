@@ -42,6 +42,14 @@ tasks:
       - prec
     cmd: hugo server -D -E -F --bind {{.HOST}} --port {{.PORT}} --baseURL "http://{{.HOST}}:{{.PORT}}" --noHTTPCache --ignoreCache --enableGitInfo --gc --renderStaticToDisk --forceSyncStatic --logLevel {{.LOG_LEVEL}} --minify --watch --printMemoryUsage --templateMetricsHints --templateMetrics --disableFastRender --renderStaticToDisk --printUnusedTemplates --printPathWarnings --printI18nWarnings --cleanDestinationDir --config ./{{.CONFIG}}
 
+  new:
+    desc: "Create new post from archetype (usage: task new SLUG=my-post)"
+    deps:
+      - prec
+    requires:
+      vars: [SLUG]
+    cmd: hugo new content/{{.SLUG}}/index.md
+
   update.theme:
     desc: Update all git submodules - now is only themes/PaperMod
     deps:
