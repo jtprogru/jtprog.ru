@@ -1,10 +1,10 @@
 <style>
 .profile { min-height: auto !important; padding-bottom: 1rem; }
+body:has(.profile) .main { max-width: min(1200px, 95vw); }
 .latest-posts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  max-width: var(--main-width);
   margin: 0 auto 2rem;
   padding: 0 var(--gap);
 }
@@ -46,6 +46,7 @@
   font-size: 1.1rem;
   color: var(--secondary);
   margin-top: 0.3rem;
+  white-space: nowrap;
 }
 .latest-posts .lp-card a.lp-link {
   position: absolute;
@@ -94,7 +95,7 @@
     {{- end }}
     <div class="lp-meta">
       <span class="lp-title">{{ .Title }}</span>
-      <span class="lp-date">{{ .Date.Format $dateFmt }}</span>
+      <span class="lp-date">{{ .Date.Format $dateFmt }} · {{ .ReadingTime }} мин</span>
     </div>
     <a class="lp-link" aria-label="{{ .Title | plainify }}" href="{{ .Permalink }}"></a>
   </article>
