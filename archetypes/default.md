@@ -1,9 +1,10 @@
 ---
 title: '{{ replace .Name "-" " " | title }}'
-description: ""
+description: "TODO: краткое описание поста (150-160 символов)"
 keywords: []
 date: {{ .Date }}
 lastmod: {{ .Date }}
+draft: true
 tags:
   - first
 categories: ["Work"]
@@ -14,8 +15,6 @@ cover:
   relative: false
 type: post
 slug: '{{ replace .Name " " "-" }}'
-aliases:
-  - '{{ replace .Name " " "-" }}'
 params:
   math: false
 ---

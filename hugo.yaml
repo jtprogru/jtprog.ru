@@ -10,7 +10,6 @@ outputs:
     - HTML
     - RSS
     - JSON
-    - Sitemap
   page:
     - HTML
     - RSS
@@ -76,7 +75,7 @@ params:
   label:
     text: "Мишка на сервере"
     icon: /fav-light.svg
-    iconHeight: 35
+    iconHeight: 45
     # icon_dark: /fav-light.svg
     # icon_light: /fav-dark.svg
   assets:
@@ -115,10 +114,22 @@ params:
   ShowCodeCopyButtons: true
   disableSpecial1stPost: false
 
+  profileMode:
+    enabled: true
+    title: "Мишка на сервере"
+    subtitle: |
+      Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про SRE, DevOps и системное администрирование.
+      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в [telegram-чат](https://t.me/jtprogru_chat).
+    imageUrl: "/avatar.webp"
+    imageTitle: "jtprogru"
+    imageWidth: 160
+    imageHeight: 160
+    latestPostsCount: 6
+
   homeInfoParams:
     Title: "Привет, `%username%`!"
     Content: |+
-      Меня зовут Михаил и добро пожаловать на страницы моего блога.
+      Меня зовут Михаил aka `jtprogru` и добро пожаловать на страницы моего блога.
       Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в
       [telegram-чат](https://t.me/jtprogru_chat) и задавай вопросы.
 

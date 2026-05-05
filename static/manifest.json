@@ -2,31 +2,40 @@
   "name": "Мишка на сервере",
   "short_name": "jtprog.ru",
   "description": "Блог о DevOps, SRE и системном администрировании",
+  "id": "/",
   "start_url": "/",
-  "display": "browser",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#2e2e33",
   "theme_color": "#2e2e33",
   "lang": "ru",
+  "dir": "ltr",
+  "categories": ["blog", "education", "technology"],
   "icons": [
     {
       "src": "/favicon-16x16.svg",
       "sizes": "16x16",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
       "src": "/favicon-32x32.svg",
       "sizes": "32x32",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
       "src": "/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     },
     {
       "src": "/apple-touch-icon.svg",
       "sizes": "180x180",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }

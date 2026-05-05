@@ -1,5 +1,33 @@
+<style>
+.entry-cover img:not([width]) { aspect-ratio: 1490 / 1117; width: 100%; height: auto; }
+</style>
 <link rel="alternate" hreflang="ru" href="{{ .Permalink }}">
 <link rel="manifest" href="/manifest.json">
+{{- $author := .Params.author | default site.Params.author }}
+{{- with $author }}
+<meta name="author" content="{{ . }}">
+{{- end }}
+{{- if and (eq .Kind "page") .Params.howto .Params.howto.steps }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ .Title | jsonify }},
+  "description": {{ (.Description | default .Summary) | jsonify }},
+  "step": [
+    {{- range $i, $s := .Params.howto.steps }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "HowToStep",
+      "position": {{ add $i 1 }},
+      "name": {{ (index $s "name") | jsonify }},
+      "text": {{ (index $s "text") | jsonify }}
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
 {{- with (templates.Defer (dict "key" "pagination-noindex")) }}
   {{- with .Page.Paginator }}
     {{- if gt .PageNumber 1 }}
