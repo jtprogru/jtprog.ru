@@ -10,7 +10,6 @@ outputs:
     - HTML
     - RSS
     - JSON
-    - Sitemap
   page:
     - HTML
     - RSS
@@ -119,7 +118,7 @@ params:
     enabled: true
     title: "Мишка на сервере"
     subtitle: |
-      Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про DevOps, SRE и системное администрирование.
+      Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про SRE, DevOps и системное администрирование.
       Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в [telegram-чат](https://t.me/jtprogru_chat).
     imageUrl: "/avatar.webp"
     imageTitle: "jtprogru"
