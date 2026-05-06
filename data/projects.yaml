@@ -1,0 +1,28 @@
+- name: srekit
+  url: https://github.com/jtprogru/srekit
+  desc: "Генератор текстовых SRE-артефактов: задачи, постмортемы, RFC, runbook'и, changelog'и."
+  lang: Go
+- name: jtsekret
+  url: https://github.com/jtprogru/jtsekret
+  desc: "CLI для централизованного и безопасного управления личными секретами: пароли, OAuth-токены, API-ключи."
+  lang: Go
+- name: jtpost
+  url: https://github.com/jtprogru/jtpost
+  desc: "CLI-редактор постов для управления контент-пайплайном Telegram-канала."
+  lang: Go
+- name: jtgpwgen
+  url: https://github.com/jtprogru/jtgpwgen
+  desc: "Генератор паролей с настраиваемыми классами символов."
+  lang: Go
+- name: repo-opener
+  url: https://github.com/jtprogru/repo-opener
+  desc: "Открывает remote-репозиторий из локального клона прямо в браузере."
+  lang: Go
+- name: cubic-root
+  url: https://github.com/jtprogru/cubic-root
+  desc: "Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes."
+  lang: Go
+- name: The-Way-of-SRE
+  url: https://github.com/jtprogru/The-Way-of-SRE
+  desc: "Подборка материалов и заметок для тех, кто развивается в SRE-направлении."
+  lang: Docs

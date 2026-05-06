@@ -55,6 +55,68 @@ body:has(.profile) .main { max-width: min(1200px, 95vw); }
 @media (max-width: 600px) {
   .latest-posts { grid-template-columns: 1fr; }
 }
+
+.projects {
+  margin: 0 auto 2.5rem;
+  padding: 0 var(--gap);
+}
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+  padding: 0 var(--gap);
+  color: var(--primary);
+  text-align: center;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.proj-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.1rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.proj-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+.proj-card .proj-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.proj-card .proj-name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--primary);
+  font-family: var(--font-mono, monospace);
+}
+.proj-card .proj-lang {
+  font-size: 1rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: var(--code-bg);
+  color: var(--secondary);
+  white-space: nowrap;
+}
+.proj-card .proj-desc {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--secondary);
+}
+.proj-card a.proj-link {
+  position: absolute;
+  inset: 0;
+}
 </style>
 
 <div class="profile">
@@ -71,12 +133,31 @@ body:has(.profile) .main { max-width: min(1200px, 95vw); }
     {{- end }}
 </div>
 
+{{- with site.Data.projects }}
+<h2 class="section-title">Мои проекты</h2>
+<section class="projects">
+  <div class="projects-grid">
+    {{- range . }}
+    <article class="proj-card">
+      <div class="proj-head">
+        <span class="proj-name">{{ .name }}</span>
+        {{- with .lang }}<span class="proj-lang">{{ . }}</span>{{- end }}
+      </div>
+      <span class="proj-desc">{{ .desc }}</span>
+      <a class="proj-link" aria-label="{{ .name }} на GitHub" href="{{ .url }}" target="_blank" rel="noopener noreferrer"></a>
+    </article>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
 {{- $count := site.Params.profileMode.latestPostsCount | default 6 }}
 {{- $dateFmt := site.Params.dateFormat | default "2006-01-02" }}
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 {{- $latest := first $count $pages }}
 {{- with $latest }}
+<h2 class="section-title">Свежие посты</h2>
 <section class="latest-posts">
   {{- range . }}
   {{- $cover := .Params.cover.image }}
