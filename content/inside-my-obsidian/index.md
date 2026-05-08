@@ -22,6 +22,7 @@ cover:
   relative: false
 type: post
 slug: 'inside-my-obsidian'
+canonicalURL: 'https://habr.com/ru/articles/1033090/'
 ShowToc: true
 TocOpen: false
 params:
