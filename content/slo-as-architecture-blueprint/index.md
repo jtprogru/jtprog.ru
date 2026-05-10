@@ -30,6 +30,9 @@ cover:
   relative: false
 type: post
 slug: 'slo-as-architecture-blueprint'
+canonicalURL: 'https://jtprog.ru/slo-as-architecture-blueprint/'
+ShowToc: true
+TocOpen: false
 aliases:
   - 'slo-as-architecture-blueprint'
 params:
