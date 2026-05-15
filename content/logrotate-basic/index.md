@@ -12,8 +12,11 @@ keywords:
   - "Nginx логи"
   - "сжатие логов"
   - "проверка logrotate"
+  - "systemd-journald"
+  - "journalctl"
+  - "vector logs"
 date: "2021-08-28T14:30:00+03:00"
-lastmod: "2021-08-28T14:30:00+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - logrotate
   - basics
@@ -31,6 +34,8 @@ slug: "logrotate-basics"
 ---
 
 Привет, `%username%`! Логи – наше всё! Это знает каждый нормальный админ. Но что делать если они растут в объёме? Правильно! Настраивать logrotate чтоб он рулил размерами и количеством.
+
+> 🔄 **Обновлено 2026-05-15**: `logrotate` живёт и работает. Кроме него в современной системе у тебя ещё два места, где живут логи и где ротация уже на месте: **systemd-journald** (своя политика size/time) и пайплайны типа **Vector** (где логи переезжают в стор и локальная ротация не нужна). В конце добавил про оба варианта.
 
 В любой Linux-системе всегда работает множество фоновых процессов и демонов, которые пишут в свои лог-файлы статусную информацию: об ошибках которые обработали, о выполнении каких-то задач. По стандарту все файлы логов должны храниться в директории `/var/log/`.
 
@@ -164,6 +169,48 @@ man logrotate
 ```bash
 ansible-galaxy install jtprogru.logrotate
 ```
+
+## А ещё на сервере есть journald
+
+Часть логов в современных дистрибутивах живёт не в `/var/log/*.log`, а в `systemd-journald` — бинарный журнал, который можно читать через `journalctl`. Для journald **не нужен** `logrotate` — у него своя политика ротации, описанная в `/etc/systemd/journald.conf`:
+
+```ini
+[Journal]
+Storage=persistent          # persistent | volatile | none
+SystemMaxUse=2G             # верхний лимит места под /var/log/journal
+SystemMaxFileSize=200M      # размер одного файла журнала
+SystemMaxFiles=10           # сколько архивных файлов хранить
+MaxFileSec=1week            # принудительно ротировать раз в неделю
+MaxRetentionSec=30day       # удалять записи старше 30 дней
+```
+
+После правки — `sudo systemctl restart systemd-journald`. Принудительная ротация выполняется через `journalctl --rotate`, очистка старого — `journalctl --vacuum-time=7d` или `--vacuum-size=1G`.
+
+Один из частых факапов на серверах с `journald` — он копится в `/run/log/journal/` (`Storage=volatile`), потому что `/var/log/journal/` не создан. Проверить можно так:
+
+```bash
+journalctl --disk-usage
+```
+
+Если показывает что-то в `/run/log/`, а не `/var/log/`, и при этом тебе нужна персистентность — создай директорию:
+
+```bash
+sudo mkdir -p /var/log/journal
+sudo systemd-tmpfiles --create --prefix /var/log/journal
+sudo systemctl restart systemd-journald
+```
+
+## Vector и Loki: когда `logrotate` не нужен вовсе
+
+Если на хосте уже работает агент, который собирает логи и отправляет их в централизованный стор ([Vector](https://vector.dev/), Promtail, Grafana Alloy, Fluent Bit), то вопрос ротации местных файлов становится сильно проще:
+
+1. Локальный файл нужен только как буфер на случай, если стор недоступен;
+2. Сам стор (Loki, Elasticsearch, ClickHouse) держит долгосрочное хранение со своим жизненным циклом;
+3. Локальный `logrotate` с очень коротким сроком (`rotate 2`, `daily`, `compress`) — этого достаточно.
+
+Минимальный `logrotate` в такой архитектуре часто превращается в одну строку: «храним 2-3 дня, сжимаем». Всё, что важно — уже улетело в централизованное место и видно в `Grafana`.
+
+Если используешь Vector, то его `file`-source сам отслеживает inode и без проблем переживает ротацию logrotate'ом — никаких `copytruncate` ему не нужно. Подробнее про сбор JSON-логов nginx через Vector я писал в [Логи Nginx в JSON](/nginx-json-logs/).
 
 На этом всё!
 
