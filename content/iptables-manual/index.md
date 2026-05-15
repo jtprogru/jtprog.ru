@@ -1,9 +1,9 @@
 ---
 title: 'Шпаргалка по iptables'
 description: "Подробная шпаргалка по iptables: основные команды, примеры настройки, удаление и добавление правил, сохранение и восстановление конфигурации файрвола."
-keywords: ["iptables linux", "настройка файрвола", "iptables команды", "пример iptables", "iptables правила", "linux firewall", "iptables howto", "iptables flush", "iptables restore"]
+keywords: ["iptables linux", "настройка файрвола", "iptables команды", "пример iptables", "iptables правила", "linux firewall", "iptables howto", "iptables flush", "iptables restore", "nftables", "iptables-nft", "iptables-translate"]
 date: "2015-03-30T16:48:37+03:00"
-lastmod: "2015-03-30T16:48:37+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - iptables
   - man
@@ -18,7 +18,9 @@ type: post
 slug: iptables-manual
 ---
 
-Файрвол в системе linux контролируется программой `iptables` (для ipv4) и `ip6tables` (для ipv6). В данной шпаргалке я указал самые распространённые варианты использования iptables. Знак `#` означает, что команда выполняется от root'а. Получение прав root'а в системе Ubuntu делается командой `sudo -s`, в других системах командой `su`. Этот пост можно считать частичным дополнением моего поста про [VPN-сервер](http://jtprog.ru/simple-vpn/ "Простой VPN-сервер на базе Ubuntu+pptpd") и других, потому что пришлось изрядно поломать голову на тему доступа к серверу извне.
+Файрвол в системе linux контролируется программой `iptables` (для ipv4) и `ip6tables` (для ipv6). В данной шпаргалке я указал самые распространённые варианты использования iptables. Знак `#` означает, что команда выполняется от root'а. Получение прав root'а в системе Ubuntu делается командой `sudo -s`, в других системах командой `su`.
+
+> 🔄 **Обновлено 2026-05-15**: команды ниже по-прежнему работают на современных дистрибутивах, но фактически выполняются через wrapper `iptables-nft` поверх ядра-`nftables`. Старый бэкенд (`iptables-legacy`) тоже жив, но это про совместимость, а не про новые установки. Если ты начинаешь с нуля — смотри сразу нативный синтаксис `nft`, краткая таблица соответствий в конце поста: [iptables → nftables](#iptables--nftables-таблица-соответствий).
 
 ## Узнать статус
 
@@ -522,6 +524,50 @@ nmap -sS -p 80 ya.ru
 ```
 
 На этом можно и притормозить, потому что описанных здесь методов достаточно, чтобы  разобраться как с помощью `iptables` управлять сетевой безопасностью сервера и маршрутизацией на нем.
+
+## iptables → nftables: таблица соответствий
+
+Шпаргалка выше написана в 2015-ом — тогда `iptables` был дефолтом во всех дистрибутивах. Сейчас (2026) под капотом почти везде `nftables`, а команды `iptables` — это вызов wrapper'а `iptables-nft`, который транслирует старый синтаксис в новый. Старый бэкенд `iptables-legacy` остался, но новые инсталляции его не используют.
+
+**Где живут правила:**
+
+- iptables-legacy: `/etc/iptables/rules.v4` и `rules.v6` (через `iptables-save`/`iptables-restore`)
+- nftables: `/etc/nftables.conf` (загружается через `systemctl enable --now nftables`)
+
+**Базовая структура nft.** Вместо отдельных бинарей `iptables`/`ip6tables`/`arptables`/`ebtables` — один `nft` и family `inet` (одновременно ipv4 + ipv6):
+
+```bash
+nft add table inet filter
+nft add chain inet filter input { type filter hook input priority 0\; policy drop\; }
+nft add chain inet filter forward { type filter hook forward priority 0\; policy drop\; }
+nft add chain inet filter output { type filter hook output priority 0\; policy accept\; }
+```
+
+**Соответствие типовых команд:**
+
+| iptables | nft |
+|----------|-----|
+| `iptables -L -n -v` | `nft list ruleset` |
+| `iptables -F` | `nft flush ruleset` |
+| `iptables -A INPUT -p tcp --dport 22 -j ACCEPT` | `nft add rule inet filter input tcp dport 22 accept` |
+| `iptables -A INPUT -s 1.2.3.4 -j DROP` | `nft add rule inet filter input ip saddr 1.2.3.4 drop` |
+| `iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT` | `nft add rule inet filter input ct state established,related accept` |
+| `iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT` | `nft add rule inet filter input icmp type echo-request accept` |
+| `iptables-save > /etc/iptables.rules` | `nft list ruleset > /etc/nftables.conf` |
+| `iptables-restore < /etc/iptables.rules` | `nft -f /etc/nftables.conf` |
+
+**Мостик для миграции.** Если у тебя уже есть рабочий набор iptables-правил, не надо переписывать руками — есть штатный транслятор:
+
+```bash
+iptables-translate -A INPUT -p tcp --dport 22 -j ACCEPT
+# выведет:
+# nft add rule ip filter INPUT tcp dport 22 counter accept
+
+# целиком из текущего набора:
+iptables-save | iptables-restore-translate -f -
+```
+
+Выхлоп всё ещё надо причесать (особенно если у тебя кастомные цепочки и счётчики), но 80% работы он делает за тебя.
 
 ---
 
