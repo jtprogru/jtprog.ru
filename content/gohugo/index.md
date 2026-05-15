@@ -90,11 +90,11 @@ exit 0
 
 ### PaperMod вместо bear
 
-Изначально я сидел на собственной форкнутой теме [`bear`](https://github.com/jtprogru/hugo-bear), потом переехал на [**PaperMod**](https://github.com/adityatelange/hugo-PaperMod) — она дала мне всё, что хотелось от темы для технического блога: тёмная/светлая тема, ToC, поиск через fuse.js, OpenGraph, профиль автора, аккуратная типографика. В `hugo.yaml` сейчас стоит `theme: PaperMod`, а старая `bear` так и осталась подключённой в `.gitmodules` — на случай возврата. Текущий конфиг блога — [hugo.yaml на гитхабе](https://github.com/jtprogru/jtprog.ru/blob/main/hugo.yaml).
+Изначально я сидел на теме `bear`, потом переехал на [**PaperMod**](https://github.com/adityatelange/hugo-PaperMod) — она дала мне всё, что хотелось от темы для технического блога: тёмная/светлая тема, ToC, поиск через fuse.js, OpenGraph, профиль автора, аккуратная типографика. В `hugo.yaml` сейчас стоит `theme: PaperMod`. Текущий конфиг блога — [hugo.yaml на гитхабе](https://github.com/jtprogru/jtprog.ru/blob/main/hugo.yaml).
 
 ### Темы — пока submodule, но Hugo Modules уже стучатся
 
-Я до сих пор подключаю темы через `git submodule` — это рабочая схема, особенно когда ты держишь форк темы (как у меня с `bear`). Но для новых сайтов в 2026-м осмысленный путь — это [**Hugo Modules**](https://gohugo.io/hugo-modules/) поверх Go modules:
+Я до сих пор подключаю темы через `git submodule` — это рабочая схема, особенно если ты иногда правишь тему под себя и держишь свой форк. Но для новых сайтов в 2026-м осмысленный путь — это [**Hugo Modules**](https://gohugo.io/hugo-modules/) поверх Go modules:
 
 ```bash
 hugo mod init github.com/your/site
