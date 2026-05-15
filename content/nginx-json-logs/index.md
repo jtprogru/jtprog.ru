@@ -1,14 +1,18 @@
 ---
 title: 'Логи Nginx в JSON'
 description: "Пошаговое руководство по настройке логирования Nginx в JSON-формате для удобного парсинга и интеграции с системами анализа логов"
-keywords: 
+keywords:
   - nginx logs
   - json logging
   - elk stack
   - nginx configuration
   - access logs
+  - loki
+  - vector
+  - promtail
+  - grafana alloy
 date: "2021-08-26T18:14:09+03:00"
-lastmod: "2021-08-26T18:14:09+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - nginx
   - json
@@ -24,6 +28,8 @@ slug: 'nginx-json-logs'
 ---
 
 Привет, `%username%`! Логи это очень хорошо! Логи – это машина времени, которая работает исключительно в прошлое. А логи в JSON сильно проще парсить и лить в тот же ELK.
+
+> 🔄 **Обновлено 2026-05-15**: nginx-конфиг ниже работает как был — поля и `escape=json` валидны. Внизу добавил короткий блок про то, как этот лог забирать в современный лог-стек (Loki через Vector или Grafana Alloy) — ELK уже не единственный вариант.
 
 Чтобы писать логи в формате JSON достаточно правильно сконфигурировать Nginx.
 
@@ -84,6 +90,69 @@ include /etc/nginx/conf.d/*.conf;
 access_log /var/log/nginx/jtprog.ru.json.log main_json;
 ...
 ```
+
+## Куда лить эти логи
+
+В 2021-м первой ассоциацией с «JSON-логи» был ELK. В 2026-м чаще встречается стек **Loki + Vector/Alloy + Grafana** — он легче, дешевле и не требует ворочать Elasticsearch.
+
+**Минимальный pipeline через Vector** (`/etc/vector/vector.toml`):
+
+```toml
+[sources.nginx_access]
+type           = "file"
+include        = ["/var/log/nginx/*.json.log"]
+read_from      = "end"
+
+[transforms.parse_json]
+type           = "remap"
+inputs         = ["nginx_access"]
+source         = ". = parse_json!(.message)"
+
+[sinks.loki]
+type           = "loki"
+inputs         = ["parse_json"]
+endpoint       = "http://loki:3100"
+encoding.codec = "json"
+labels.host    = "{{ host }}"
+labels.app     = "nginx"
+labels.vhost   = "{{ server_name }}"
+```
+
+`labels` берёт смысл прямо из полей JSON-лога — `server_name`, `host`, можно добавить `status` и `request_method`. Не злоупотребляй высокой кардинальностью (например, `request_uri` или `remote_addr` лейблами лучше не делать — взорвут индекс Loki).
+
+**Альтернатива — Grafana Alloy** (унифицированный коллектор Grafana Labs, заменяет Promtail/OTel collector/node_exporter):
+
+```alloy
+loki.source.file "nginx" {
+  targets = [{
+    __path__ = "/var/log/nginx/*.json.log",
+    job      = "nginx",
+  }]
+  forward_to = [loki.process.nginx.receiver]
+}
+
+loki.process "nginx" {
+  stage.json {
+    expressions = {
+      status      = "status",
+      method      = "request_method",
+      server_name = "server_name",
+    }
+  }
+  stage.labels {
+    values = { status = "", method = "", server_name = "" }
+  }
+  forward_to = [loki.write.default.receiver]
+}
+
+loki.write "default" {
+  endpoint { url = "http://loki:3100/loki/api/v1/push" }
+}
+```
+
+Дальше — `{job="nginx", status="5xx"}` в Grafana, и ты видишь все 5xx за окно. Запросы вида `| json | duration > 1s` без проблем работают на структурированных JSON-логах.
+
+Если стек ELK уже есть — `filebeat` с модулем `nginx` или `logstash` с `json` codec тоже отлично заходят: формат универсальный.
 
 На этом всё!
 
