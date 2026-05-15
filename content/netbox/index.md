@@ -1,11 +1,13 @@
 ---
-title: 'Установка Netbox на Ubuntu 20.04'
-description: "Пошаговая инструкция по установке и настройке Netbox на Ubuntu 20.04: подготовка окружения, настройка PostgreSQL, Redis, интеграция с MS Active Directory."
-keywords: ["установка netbox ubuntu", "netbox инструкция", "настройка netbox", "postgreSQL netbox", "redis netbox", "active directory netbox", "python venv", "network automation", "dokumentaciya netbox"]
+title: 'Установка Netbox: Docker-флоу для v4 и заметки про апгрейд'
+description: "Установка Netbox 4.x на Ubuntu Server 24.04 через netbox-docker: docker compose, переменные окружения, LDAP/AD-интеграция, апгрейд через upgrade.sh, исторический раздел про ручную установку 2.x."
+keywords: ["установка netbox", "netbox 4", "netbox docker", "netbox-docker", "netbox-community", "netbox compose", "netbox ubuntu 24.04", "netbox ldap", "active directory netbox", "netbox upgrade.sh", "network automation", "ipam dcim"]
 date: "2020-07-22T23:15:00+03:00"
-lastmod: "2020-07-22T23:15:00+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - netbox
+  - netbox-docker
+  - docker
   - ldap
   - ubuntu
   - installation
@@ -24,9 +26,237 @@ cover:
 type: post
 slug: netbox
 ---
-Привет, `%username%`! Поговорим о такой классной штуке как [Netbox](https://netbox.readthedocs.io/en/stable/), а так же установим её на Ubuntu 20.04 и прикрутим авторизацию через MS Active Directory.
+Привет, `%username%`! Поговорим о такой классной штуке как [Netbox](https://netboxlabs.com/docs/netbox/) — это «единый источник правды» для сетевой инфраструктуры: IPAM, DCIM, виртуалки, кабели, схемы, VLAN'ы, регионы и сайты. В этой статье ставим Netbox **4.x** на Ubuntu Server **24.04** и подключаем авторизацию через LDAP/AD.
 
-## Подготовка
+> 🔄 **Обновлено 2026-05-15**: пост целиком переработан под Netbox v4.x. Основной рекомендованный путь установки — через [netbox-docker](https://github.com/netbox-community/netbox-docker) (compose-флоу, который поддерживает само сообщество). Ручная установка из исходников осталась как опция, но теперь штатно делается одним скриптом `upgrade.sh` — про неё короткий раздел. Исходный текст про установку 2.8.8 на Ubuntu 20.04 сохранён ниже как исторический раздел.
+
+## Установка через netbox-docker (рекомендованный путь)
+
+С появлением официального репозитория [netbox-community/netbox-docker](https://github.com/netbox-community/netbox-docker) необходимость городить вручную PostgreSQL, Redis, gunicorn и nginx отпала. Compose-файл уже содержит всё, что нужно для запуска.
+
+### Подготовка хоста
+
+Берём чистый Ubuntu Server 24.04 (см. мой пост про [чек-лист Linux-сервера](/linux-checklist/)). Ставим Docker по [официальной инструкции](https://docs.docker.com/engine/install/ubuntu/) и плагин `docker compose`.
+
+Краткая проверка, что всё на месте:
+
+```bash
+docker --version
+docker compose version
+```
+
+### Клонируем netbox-docker
+
+```bash
+cd /opt
+sudo git clone -b release https://github.com/netbox-community/netbox-docker.git
+cd /opt/netbox-docker
+```
+
+Ветка `release` отслеживает последний стабильный релиз. Если нужна конкретная версия — переключайся на тег.
+
+### Override и переменные окружения
+
+Compose-файл `docker-compose.yml` из репозитория трогать не надо — все локальные изменения кладутся в `docker-compose.override.yml`. Стартовый пример:
+
+```yaml
+services:
+  netbox:
+    ports:
+      - 8000:8080
+    environment:
+      ALLOWED_HOSTS: "netbox.jtprog.ru netbox.jtprog.local 127.0.0.1"
+      TIME_ZONE: "Europe/Moscow"
+      SUPERUSER_NAME: "admin"
+      SUPERUSER_EMAIL: "admin@jtprog.local"
+      SUPERUSER_PASSWORD: "ChangeMeBeforeProd"
+      SECRET_KEY: "сгенерируй 50+ символов и положи сюда"
+```
+
+`SECRET_KEY` сгенерировать просто:
+
+```bash
+docker compose run --rm netbox /opt/netbox/netbox/generate_secret_key.py
+```
+
+Скопируй выхлоп в override.
+
+### Запуск
+
+```bash
+cd /opt/netbox-docker
+sudo docker compose up -d
+```
+
+Compose поднимает образы PostgreSQL, Redis (двух — для tasks и для caching), netbox, netbox-worker и netbox-housekeeping. Первый старт занимает минуту-две — netbox прогоняет миграции и собирает статику автоматически. Прогресс смотри через `docker compose logs -f netbox`.
+
+Когда логи устаканились — открой `http://<host>:8000` и логинься суперпользователем из override-файла.
+
+### Reverse-proxy
+
+В проде перед netbox ставится Nginx/Caddy с TLS. Минимальный nginx-конфиг:
+
+```nginx
+server {
+    listen 443 ssl http2;
+    server_name netbox.jtprog.ru;
+
+    ssl_certificate     /etc/letsencrypt/live/netbox.jtprog.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/netbox.jtprog.ru/privkey.pem;
+
+    client_max_body_size 25m;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+```
+
+И не забудь добавить `https://netbox.jtprog.ru` в `ALLOWED_HOSTS` и в `CSRF_TRUSTED_ORIGINS` (в netbox 4 этот параметр обязателен для https).
+
+### Апгрейд
+
+Когда выходит новая версия — просто:
+
+```bash
+cd /opt/netbox-docker
+sudo git pull
+sudo docker compose pull
+sudo docker compose up -d
+```
+
+Миграции прогоняются автоматически на старте. Перед апгрейдом — снапшот тома с PostgreSQL (или штатный `pg_dump`).
+
+## LDAP / Active Directory
+
+В netbox-docker LDAP не подключён по умолчанию — это плагин python-окружения. Включается одной переменной окружения и одним конфигом.
+
+В `docker-compose.override.yml` добавь:
+
+```yaml
+services:
+  netbox:
+    environment:
+      REMOTE_AUTH_ENABLED: "True"
+      REMOTE_AUTH_BACKEND: "netbox.authentication.LDAPBackend"
+    volumes:
+      - ./configuration/ldap/ldap_config.py:/etc/netbox/config/ldap/ldap_config.py:ro
+```
+
+И создай файл `configuration/ldap/ldap_config.py` рядом с compose:
+
+```python
+import ldap
+from django_auth_ldap.config import LDAPSearch, NestedGroupOfNamesType
+
+AUTH_LDAP_SERVER_URI = "ldap://dc.jtprog.local"
+
+AUTH_LDAP_CONNECTION_OPTIONS = {
+    ldap.OPT_REFERRALS: 0,
+}
+
+AUTH_LDAP_BIND_DN = "CN=netboxsa,OU=ServiceAccounts,DC=jtprog,DC=local"
+AUTH_LDAP_BIND_PASSWORD = "сюда пароль сервисной учётки"
+
+AUTH_LDAP_USER_SEARCH = LDAPSearch(
+    "DC=jtprog,DC=local",
+    ldap.SCOPE_SUBTREE,
+    "(sAMAccountName=%(user)s)",
+)
+
+AUTH_LDAP_USER_ATTR_MAP = {
+    "first_name": "givenName",
+    "last_name": "sn",
+    "email": "mail",
+}
+
+AUTH_LDAP_GROUP_SEARCH = LDAPSearch(
+    "OU=Groups,DC=jtprog,DC=local",
+    ldap.SCOPE_SUBTREE,
+    "(objectClass=group)",
+)
+AUTH_LDAP_GROUP_TYPE = NestedGroupOfNamesType()
+
+AUTH_LDAP_USER_FLAGS_BY_GROUP = {
+    "is_active":    "CN=netbox_active,OU=Groups,DC=jtprog,DC=local",
+    "is_staff":     "CN=netbox_staff,OU=Groups,DC=jtprog,DC=local",
+    "is_superuser": "CN=netbox_superuser,OU=Groups,DC=jtprog,DC=local",
+}
+
+AUTH_LDAP_FIND_GROUP_PERMS = True
+AUTH_LDAP_MIRROR_GROUPS    = True
+AUTH_LDAP_ALWAYS_UPDATE_USER = True
+AUTH_LDAP_CACHE_TIMEOUT    = 10
+```
+
+Пояснения:
+
+- `is_active` — пользователи этой группы смогут логиниться в интерфейс. Все, кому нужен доступ в Netbox, должны быть членами этой группы;
+- `is_staff` — автоматически проставленная галочка «staff status», даёт доступ в `/admin/`;
+- `is_superuser` — даёт суперюзера со всеми правами.
+
+Аутентификация молча упадёт, если LDAP-группы не существуют. Логи смотри через `docker compose logs -f netbox`.
+
+Подробнее по тонким настройкам — [django-auth-ldap docs](https://django-auth-ldap.readthedocs.io/) и раздел `external-authentication/ldap` в [официальной документации Netbox](https://netboxlabs.com/docs/netbox/en/stable/installation/6-ldap/).
+
+## Manual install: коротко
+
+Если по каким-то причинам Docker не подходит (политики, размер инсталляции, желание контроля) — Netbox-комьюнити поддерживает скрипт `upgrade.sh`, который сам разворачивает venv, ставит зависимости из requirements, прогоняет миграции и собирает статику. На свежей Ubuntu 24.04 базовый сценарий выглядит так:
+
+```bash
+# системные зависимости
+sudo apt-get update
+sudo apt-get install -y postgresql redis-server git python3 python3-pip \
+    python3-venv python3-dev build-essential libxml2-dev libxslt1-dev \
+    libffi-dev libpq-dev libssl-dev zlib1g-dev
+
+# БД и пользователь
+sudo -u postgres psql <<'SQL'
+CREATE DATABASE netbox;
+CREATE USER netbox WITH PASSWORD 'ChangeMe';
+GRANT ALL PRIVILEGES ON DATABASE netbox TO netbox;
+\c netbox
+GRANT CREATE ON SCHEMA public TO netbox;
+SQL
+
+# собственно netbox (см. тег актуальной версии)
+sudo git clone -b master https://github.com/netbox-community/netbox.git /opt/netbox
+cd /opt/netbox
+sudo cp netbox/netbox/configuration_example.py netbox/netbox/configuration.py
+# правим configuration.py: DATABASE, REDIS, SECRET_KEY, ALLOWED_HOSTS
+sudo ./upgrade.sh
+```
+
+Скрипт делает всё, что в исторической инструкции ниже выполнялось руками. Дальше — systemd-юниты из `contrib/`, nginx из `contrib/`, как и раньше:
+
+```bash
+sudo cp contrib/*.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now netbox netbox-rq
+```
+
+Подробности — в [официальном гайде по инсталляции](https://netboxlabs.com/docs/netbox/en/stable/installation/).
+
+## Что изменилось в v4 по сравнению с v2
+
+Если ты помнишь Netbox по этой статье из 2020-го — вот короткий пересказ, что поменялось:
+
+- **Python ≥ 3.10**, **PostgreSQL ≥ 14**, **Redis ≥ 4.0** — минимальные требования.
+- **Secrets** как фича Netbox удалены ещё в 3.x, рекомендованная замена — отдельный secret manager (Vault и компания).
+- **Плагины** стали первым классом: есть [маркетплейс](https://netboxlabs.com/netbox-plugins/), унифицированная установка через `local_requirements.txt` + `PLUGINS`/`PLUGINS_CONFIG` в `configuration.py`.
+- **CSRF_TRUSTED_ORIGINS** обязателен для HTTPS-доступа.
+- **Housekeeping** — отдельный сервис, который чистит старые changelog'и/journal'ы. В netbox-docker уже включён.
+- **REST API → GraphQL** — оба живы, GraphQL стал стабильным и удобным для интеграций.
+
+## Старая инструкция: установка Netbox 2.8.8 вручную (исторический раздел)
+
+> ⚠️ Всё, что ниже, написано в 2020 году под Netbox 2.8.8 и Ubuntu 20.04 — обе ОС-версии давно EOL, и сам Netbox 2.x уже не получает обновлений безопасности. Текст оставлен ради тех, кто поддерживает легаси-инсталляции и точно знает, зачем они там.
+
+### Подготовка
 
 Начнем по порядку с обновления пакетов и установки PostgreSQL:
 
@@ -78,7 +308,7 @@ PONG
 sudo apt-get install -y python3 python3-pip python3-venv python3-dev build-essential libxml2-dev libxslt1-dev libffi-dev libpq-dev libssl-dev zlib1g-dev
 ```
 
-## Установка Netbox
+### Установка Netbox
 
 Качаем архив с github'a и распаковываем его:
 
@@ -112,7 +342,7 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-## Настройка Netbox
+### Настройка Netbox
 
 Копируем пример конфигурации:
 
@@ -460,7 +690,7 @@ python3 manage.py runserver 0.0.0.0:8000 --insecure
 
 Теперь можно "почти" пользоваться.
 
-## Запуск
+### Запуск
 
 Устанавливаем Nginx:
 
@@ -496,7 +726,7 @@ sudo systemctl enable netbox netbox-rq
 sudo systemctl status netbox.service
 ```
 
-## Настройка LDAP
+### Настройка LDAP (для v2.x)
 
 Устанавливаем пакеты для работы с LDAP (MS AD):
 
