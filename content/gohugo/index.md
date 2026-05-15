@@ -6,7 +6,7 @@ cover:
   image: blog.png
   relative: false
 date: "2019-07-22T15:00:00+03:00"
-lastmod: "2019-07-22T15:00:00+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
 - blog
 - hugo
@@ -19,10 +19,12 @@ tags:
 title: 'Основательный и бесповоротный переезд'
 type: post
 description: "История и процесс миграции блога с WordPress на статический генератор сайтов Hugo, включая причины переезда, выбор платформы и описание нового рабочего процесса публикации статей на Markdown."
-keywords: ["переезд на hugo", "wordpress to hugo migration", "статический генератор сайтов", "hugo blog", "markdown", "wordpress alternative", "блогинг", "rsync deployment", "workflow", "личный опыт"]
+keywords: ["переезд на hugo", "wordpress to hugo migration", "статический генератор сайтов", "hugo blog", "markdown", "wordpress alternative", "блогинг", "rsync deployment", "workflow", "личный опыт", "hugo modules", "papermod", "github actions hugo"]
 ---
 
 Привет, `%username%`! Думаю многие заметили, что меня тут давненько не было. Всякое разное за это время произошло и в числе прочего этот переезд, о котором будет дальше...
+
+> 🔄 **Обновлено 2026-05-15**: историю переезда оставляю как есть. В конце добавил короткий блок «Что изменилось с 2019-го» — про переход на PaperMod, текущий submodule-сетап (и что в 2026-м осмысленно смотреть в сторону Hugo Modules) и деплой через GitHub Actions с `rsync` под капотом.
 
 ## Причина
 
@@ -81,6 +83,50 @@ exit 0
 - Получить эстетическое удовольствие от простоты;
 
 Все оказалось даже проще, чем я думал изначально.
+
+## Что изменилось с 2019-го
+
+История выше — про самый первый переезд. С тех пор инфраструктура блога ещё несколько раз эволюционировала, и мне есть что добавить.
+
+### Тема: PaperMod
+
+На текущий момент блог живёт на теме [**PaperMod**](https://github.com/adityatelange/hugo-PaperMod) — она даёт всё, что хотелось от темы для технического блога: тёмная/светлая тема, ToC, поиск через fuse.js, OpenGraph, профиль автора, аккуратная типографика. В `hugo.yaml` это сводится к одной строке `theme: PaperMod`. Текущий конфиг блога — [hugo.yaml на гитхабе](https://github.com/jtprogru/jtprog.ru/blob/main/hugo.yaml).
+
+### Темы — пока submodule, но Hugo Modules уже стучатся
+
+Я до сих пор подключаю темы через `git submodule` — это рабочая схема, особенно если ты иногда правишь тему под себя и держишь свой форк. Но для новых сайтов в 2026-м осмысленный путь — это [**Hugo Modules**](https://gohugo.io/hugo-modules/) поверх Go modules:
+
+```bash
+hugo mod init github.com/your/site
+hugo mod get github.com/adityatelange/hugo-PaperMod
+```
+
+И в конфиге:
+
+```yaml
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+```
+
+Обновление — `hugo mod get -u`. Никаких `git submodule update --init --recursive`, никакого `submodules: true` в CI-чекаутах. Я свой setup пока не переписываю — submodule работает и менять рабочее ради «красивее» лень, но если ты начинаешь с нуля — иди сразу через Modules.
+
+### Деплой через GitHub Actions + rsync
+
+В исходном посте у меня был локальный shell-скрипт с `hugo && rsync`. Сейчас та же логика живёт в [GitHub Actions](/github-actions/) — пуш в `main` запускает workflow, [который](https://github.com/jtprogru/jtprog.ru/blob/main/.github/workflows/main.yml) дёргает мой же action [`jtprogru/hugo-rsync-deployment`](https://github.com/jtprogru/hugo-rsync-deployment). Под капотом он по-прежнему делает `hugo --minify` + `rsync --archive --compress --delete` на VPS — никакого GitHub Pages, никаких CDN-провайдеров, просто свой сервер с Nginx.
+
+Сверху повешены ещё две полезные мелочи:
+
+- после успешного деплоя `curl` пингует Yandex Webmaster, чтобы он быстрее переиндексировал sitemap;
+- через [appleboy/telegram-action](https://github.com/appleboy/telegram-action) в личный Telegram падает уведомление об успехе/провале деплоя.
+
+То есть `rsync` никуда не делся — он просто переехал из `~/deploy.sh` в облако.
+
+### Что ещё стоит знать
+
+- **Hugo сильно ускорился** за эти годы. На текущей версии 0.161 сборка ~140 постов занимает секунды. Если сидишь на чём-то старом 0.7x — обнови, особенно ради `--gc --minify` и нормальной обработки изображений.
+- **Goldmark + math passthrough.** В `hugo.yaml` теперь можно прокинуть `\(...\)`/`$$...$$` в KaTeX/MathJax без шорткодов — у меня это включено для постов с формулами.
+- **`enablegitinfo: true`** — Hugo берёт `lastmod` из git-истории, удобно для технического блога с регулярными правками. Тоже стоит у меня в конфиге.
 
 ## Итоги
 

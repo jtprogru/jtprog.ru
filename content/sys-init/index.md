@@ -6,7 +6,7 @@ cover:
     caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
     relative: false
 date: "2021-09-12T12:13:37+03:00"
-lastmod: "2021-09-12T12:13:37+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
 - systemd
 - openrc
@@ -17,16 +17,22 @@ tags:
 title: 'Инициализация системы'
 type: post
 description: "Обзор основных систем инициализации в Linux: System V, systemd, Upstart, Runit и OpenRC. Принципы работы, особенности и сравнение решений."
-keywords: 
+keywords:
   - "системы инициализации Linux"
   - "systemd vs SysV"
   - "процесс init в Linux"
   - "OpenRC Gentoo"
   - "Runit система"
   - "загрузка Linux"
+  - "systemd-run"
+  - "systemd-oomd"
+  - "systemctl edit"
+  - "systemd soft-reboot"
 ---
 
 Привет, `%username%`! В Linux после загрузки ядра начинается инициализация системы, сервисов и других компонентов. За это отвечает процесс с PID 1, называемый "init proccess" или "процесс инициализации". Он запускается ядром сразу после завершения загрузки и будет выполняться пока будет работать система.
+
+> 🔄 **Обновлено 2026-05-15**: обзорная часть про SysV/systemd/Upstart/Runit/OpenRC валидна. В конце добавил блок «`systemd` для повседневной работы» — про то, что в systemd за 4-5 лет реально пригодилось админу: `systemctl edit` (drop-in без редактирования юнитов), `systemd-run` (запуск разовых задач в нормальном scope), `systemd-oomd` (userspace-killer вместо OOM ядра), soft-reboot для k8s-нод, journald-utils.
 
 Процесс инициализации запускает все процессы, которые должны быть запущены и является для них родительским процессом. Все процессы, которые запускает процесс инициализации, так же могу порождать дочерние процессы.
 
@@ -115,6 +121,102 @@ keywords:
 - Поддержка зависимостей служб;
 
 Дополнительно почитать в [Wikipedia](https://ru.wikipedia.org/wiki/OpenRC).
+
+## systemd для повседневной работы
+
+Раз в большинстве систем `systemd`, давай по верхам пробежимся по штукам, без которых системный администратор в 2026-м точно не должен жить — они почти все появились или стабилизировались как раз за последние 4-5 лет.
+
+### `systemctl edit` — drop-in вместо правки юнита
+
+Никогда не редактируй `/usr/lib/systemd/system/*.service` руками — твои правки снесёт при обновлении пакета. Вместо этого:
+
+```bash
+sudo systemctl edit nginx.service
+```
+
+Откроется редактор с пустым drop-in файлом в `/etc/systemd/system/nginx.service.d/override.conf`. Кладёшь туда **только** то, что меняешь — например:
+
+```ini
+[Service]
+LimitNOFILE=65536
+Environment="ENV=production"
+```
+
+После выхода из редактора `systemd daemon-reload` уже не нужен — `systemctl edit` сам перезагрузит конфиг. А `systemctl edit --full` откроет копию юнита целиком, если хочется переписать его полностью.
+
+### `systemd-run` — разовый запуск в scope
+
+Запустить любую команду как полноценный systemd-юнит можно без написания `.service`-файла:
+
+```bash
+# фоновый бэкап с лимитами и таймаутом
+sudo systemd-run \
+    --unit=db-backup \
+    --property=MemoryMax=2G \
+    --property=CPUQuota=50% \
+    --on-active=5min \
+    --timer-property=AccuracySec=1us \
+    /usr/local/bin/pg_dump_app.sh
+
+# таймер для регулярного запуска прямо из строки
+sudo systemd-run --on-calendar="hourly" /usr/local/bin/sync.sh
+```
+
+Это альтернатива `at`/`nohup`/`tmux`/`cron` для одноразовых задач — с готовыми логами в journald и нормальной изоляцией.
+
+### `systemd-oomd` — userspace OOM-killer
+
+Ядерный OOM-killer срабатывает поздно и часто прибивает не тот процесс. `systemd-oomd` (по умолчанию включён в Ubuntu 22.04+ и Fedora) работает в userspace и принимает решения **до** того, как система упрётся в стенку — через cgroup'ы и метрики PSI (Pressure Stall Information). По дороге пишет в journald, кого и почему придушил:
+
+```bash
+journalctl -u systemd-oomd.service
+```
+
+Настройка — `OOMPolicy=kill|stop|continue` в юнитах + `/etc/systemd/oomd.conf`.
+
+### Soft-reboot для горячих обновлений
+
+`systemd 254` (август 2023) принёс [soft-reboot](https://www.freedesktop.org/software/systemd/man/systemd-soft-reboot.service.html) — перезагрузку userspace **без перезагрузки ядра**. Сценарий: обновил все пакеты, надо «начать с чистого PID 1», но даунтайм от полной перезагрузки слишком дорогой:
+
+```bash
+sudo systemctl soft-reboot
+```
+
+Все процессы userspace убиваются, заново стартует PID 1 со свежим окружением — без ребута ядра, без BIOS/firmware. Особенно полезно для k8s-нод и серверов, у которых boot занимает минуты.
+
+### `journalctl` — каждый день
+
+Полезные шорткаты:
+
+```bash
+# логи юнита с момента старта системы
+journalctl -u nginx.service -b
+
+# хвост в реальном времени (как tail -f)
+journalctl -u nginx.service -f
+
+# только ошибки за последний час
+journalctl -p err --since "1 hour ago"
+
+# логи за конкретный boot
+journalctl --list-boots
+journalctl -b -1   # предыдущий boot
+
+# логи в JSON (для парсинга)
+journalctl -o json -u nginx.service
+```
+
+### `systemd-analyze`
+
+Хочешь узнать, что тормозит загрузку:
+
+```bash
+systemd-analyze blame              # сортировка юнитов по времени старта
+systemd-analyze critical-chain     # критический путь
+systemd-analyze security nginx     # security score юнита (NoNewPrivileges, ProtectHome и т.д.)
+```
+
+Последняя команда отдельно полезна — даёт чек-лист, как ужесточить sandbox любого сервиса.
 
 ## Итоги
 

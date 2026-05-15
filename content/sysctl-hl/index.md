@@ -1,9 +1,9 @@
 ---
 title: 'Настройка Linux для HL и защиты от DDoS'
 description: 'Пошаговая инструкция по настройке sysctl для повышения производительности Linux, защиты от DDoS и оптимизации под высокие нагрузки: параметры, примеры, рекомендации.'
-keywords: ['sysctl настройка linux', 'ddos защита linux', 'оптимизация ядра linux', 'linux highload', 'sysctl.conf примеры', 'сетевые параметры linux', 'linux performance tuning', 'linux ddos mitigation', 'настройка tcp linux']
+keywords: ['sysctl настройка linux', 'ddos защита linux', 'оптимизация ядра linux', 'linux highload', 'sysctl.conf примеры', 'сетевые параметры linux', 'linux performance tuning', 'linux ddos mitigation', 'настройка tcp linux', 'tcp bbr', 'tcp_notsent_lowat', 'tcp_syncookies', 'tcp_fastopen', 'ядро 6.x']
 date: "2019-07-26T18:50:58+03:00"
-lastmod: "2019-07-26T18:50:58+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - sysctl
   - linux
@@ -18,6 +18,15 @@ slug: sysctl-hl
 ---
 
 Привет, `%username%`! Настройки ядра, защита от DDoS, HL и высокие нагрузки. Именно в таких ситуациях думаешь, что пора настраивать параметры через `sysctl`. Эта инструкция далеко не первая, и уж тем более не последняя.
+
+> 🔄 **Обновлено 2026-05-15**: пост писался под ядра 4.x — большая часть параметров до сих пор актуальна, но на ядре 6.x кое-что **уже неправильно**. Самое важное и быстрое к исправлению:
+>
+> - `net.ipv4.tcp_syncookies = 0` ниже — **не делай этого**. С 2019-го рекомендация развернулась: syncookies должны быть включены (`= 1`), это штатная защита от SYN-flood без побочки;
+> - `net.ipv4.tcp_congestion_control = htcp` ниже — пора менять на `bbr`. Про CUBIC/BIC-«баги в RedHat-ядрах» уже не актуально, а BBR заметно лучше для типичного HL;
+> - `net.ipv4.netfilter.ip_conntrack_max` — legacy от старого iptables, оставить только `net.netfilter.nf_conntrack_max`;
+> - `net.ipv4.route.flush = 1` с комментарием «актуально для ядер 2.4» — можно смело убирать.
+>
+> Полный апдейт под современные ядра — в разделе [«Что обновить в 2026»](#что-обновить-в-2026) в конце поста.
 
 Листинг того, что желательно добавить в конец `/etc/sysctl.conf`
 
@@ -368,6 +377,113 @@ net.core.wmem_max = 16777216
 ```bash
 wc -l /proc/net/ip_conntrack
 ```
+
+Хотя для современных ядер правильнее смотреть в `/proc/net/nf_conntrack` или через `conntrack -C` из пакета `conntrack-tools`.
+
+## Что обновить в 2026
+
+С момента публикации поста прошло 7 лет, в индустрии — ~4 LTS-релиза ядра. Что в этом листинге стоит пересмотреть, если ты ставишь это на свежее ядро 6.x (Debian 12/13, Ubuntu 22.04/24.04, Rocky/Alma 9):
+
+### Включи syncookies (важно!)
+
+```ini
+# было: net.ipv4.tcp_syncookies = 0
+net.ipv4.tcp_syncookies = 1
+```
+
+`tcp_syncookies` — штатная защита от SYN-flood, в современных ядрах включена по умолчанию. Когда listen-очередь переполнена, ядро отвечает зашифрованным cookie вместо хранения half-open-соединения — таблицы не переполняются, легитимные клиенты не страдают. Старые рекомендации «выключи, ломает RFC» в 2026-м не актуальны.
+
+### Поставь BBR вместо htcp
+
+```ini
+# было: net.ipv4.tcp_congestion_control = htcp
+net.ipv4.tcp_congestion_control = bbr
+net.core.default_qdisc           = fq
+```
+
+[BBR](https://github.com/google/bbr) (от Google, мейнлайн с ядра 4.9) — congestion control на модели пропускной способности, а не на потере пакетов. В реальном инете с buffer-bloat и lossy-соединениями он стабильно даёт лучший throughput и заметно меньший latency-tail. Требует `fq` qdisc по умолчанию. В свежих ядрах уже есть `bbr3` (с 6.4+), который дружелюбнее к остальному трафику.
+
+Проверить, какие алгоритмы доступны на твоём ядре:
+
+```bash
+sysctl net.ipv4.tcp_available_congestion_control
+```
+
+### Добавь tcp_notsent_lowat
+
+```ini
+# нового параметра в посте нет — добавь
+net.ipv4.tcp_notsent_lowat = 131072
+```
+
+Лимит на «несентенированные» байты в send-buffer'е. Без него write-приложение может набить себе огромный backlog, который сидит в памяти ядра и выдаёт хвосты по latency. С `tcp_notsent_lowat = 128KB` приложение блокируется на write раньше — память тратится экономнее, latency предсказуемее. Стандартное значение в современных рекомендациях — `131072` (128 KiB).
+
+### Включи TCP Fast Open
+
+```ini
+net.ipv4.tcp_fastopen = 3
+```
+
+Позволяет передать данные уже в SYN-пакете — экономит один RTT. `3` означает «и server, и client». В мейнлайне стабильно с ядра 3.7, в реальных стеках сейчас почти везде используется (CDN, мобильные клиенты).
+
+### Подними backlogs
+
+Дефолтные значения 2019-го уже малы для современных сетевых карт и нагрузок:
+
+```ini
+# было: net.core.somaxconn = 65535 — норм, но не у всех приложений Listen-backlog большой
+net.core.somaxconn       = 32768
+# Был: net.core.netdev_max_backlog = 1000 — мало для 10G+ NIC
+net.core.netdev_max_backlog = 250000
+# tcp_max_syn_backlog в посте 4096 — можно поднять
+net.ipv4.tcp_max_syn_backlog = 8192
+# и orphans на серверах с 32+ GB RAM
+net.ipv4.tcp_max_orphans = 262144
+```
+
+`somaxconn` в современных ядрах поднят с 128 до 4096 как дефолт, явное значение можно ставить под нагрузку.
+
+### Очисти устаревшее
+
+Можно убирать:
+
+```ini
+# Legacy от старого iptables — connection tracking теперь только через nf_conntrack
+net.ipv4.netfilter.ip_conntrack_max = ...
+
+# Костыль для ядер 2.4
+net.ipv4.route.flush = 1
+```
+
+### Пара слов про fs.inotify
+
+```ini
+# было: fs.inotify.max_user_watches = 16777216
+fs.inotify.max_user_watches = 524288
+```
+
+16 миллионов watch'ей — это сильно с запасом. Современная рекомендация (от тех же VS Code, IntelliJ, watchman) — 524288 (полмиллиона). Этого хватает даже для здорового монорепо.
+
+### Не повторяй слепо
+
+Это всё **общие рекомендации**, а не cargo-cult. На своём железе под своей нагрузкой обязательно мерь до и после — что у одного сервера хорошо, у другого может сломать конкретный workload. Минимум что стоит проверить:
+
+```bash
+# текущие congestion + buffer'ы
+ss -tin
+
+# заполнение backlog'ов и потери в очередях
+ss -lnt
+sysctl net.ipv4.tcp_listen_portaddr_hash_shift
+sar -n SOFT 1            # softirq за секунду
+nstat                    # счётчики TCP
+
+# conntrack — самый частый тихий killer
+conntrack -C
+cat /proc/sys/net/netfilter/nf_conntrack_count
+```
+
+Если параметр меняешь — фиксируй в `/etc/sysctl.d/99-tuning.conf`, а не в `/etc/sysctl.conf` (последний при обновлении пакетов трогать не любят). Применить без ребута — `sysctl --system`.
 
 ---
 
