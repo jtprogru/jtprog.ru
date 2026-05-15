@@ -1,9 +1,9 @@
 ---
 title: 'Основы Docker: Dockerfile и docker-compose.yml'
 description: "Пошаговое руководство по созданию и использованию Dockerfile и docker-compose для разработки и деплоя приложений: примеры, best practices, автоматизация."
-keywords: ["dockerfile пример", "docker compose инструкция", "основы docker", "docker best practices", "docker автоматизация", "docker для начинающих", "docker compose vs dockerfile", "контейнеризация приложений", "docker hub публикация"]
+keywords: ["dockerfile пример", "docker compose инструкция", "основы docker", "docker best practices", "docker автоматизация", "docker для начинающих", "docker compose vs dockerfile", "контейнеризация приложений", "docker hub публикация", "buildkit", "multi-stage build", "compose v2", "podman", "nerdctl"]
 date: "2020-08-08T18:50:00+03:00"
-lastmod: "2020-08-08T18:50:00+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - docker
   - dockerfile
@@ -24,7 +24,9 @@ cover:
 type: post
 slug: docker-base
 ---
-Привет, `%username%`! Поскольку Docker мы уже установили, теперь надо что-то в нем запустить. И как только мы захотели что-то запустить, то первое с чем мы сталкиваемся это `Dockerfile` и `docker-compose.yml`. О них и будет речь далее.
+Привет, `%username%`! Поскольку Docker мы уже установили, теперь надо что-то в нем запустить. И как только мы захотели что-то запустить, то первое с чем мы сталкиваемся это `Dockerfile` и `compose.yml` (исторически — `docker-compose.yml`). О них и будет речь далее.
+
+> 🔄 **Обновлено 2026-05-15**: подтянул примеры под современные версии — образ `python:3.12-slim` вместо `3.8`, `postgres:16-alpine` вместо `12`, убрал `version:` из compose-файла (deprecated с Compose v2). Команда `docker-compose` (Python, v1) End-of-life с июня 2023 — пиши `docker compose` (плагин, v2, без дефиса). В конце поста добавил блоки про BuildKit/multi-stage и альтернативы (Podman, nerdctl).
 
 ## Образы Docker
 
@@ -53,7 +55,7 @@ docker buid
 В Dockerfile написаны инструкции по соданию образа. Каждая инструкция пишется с начала строки заглавными буквами, а после инструкции идут ее аргументы. Обработка инструкций происходит сверху вниз согласно тому порядку, как они написаны в файле. Простейший пример Dockerfile выглядит следующим образом:
 
 ```docker
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 COPY . /var/www/html
 ```
 
@@ -81,14 +83,14 @@ COPY . /var/www/html
 Вот живой, но довольно простой пример Dockerfile:
 
 ```docker
-# В качестве родителя используем Python v3.8 основанный на Ubuntu
-FROM python:3.8
+# В качестве родителя используем slim-образ с Python 3.12
+FROM python:3.12-slim
 
 # Просим Python не писать .pyc файлы
-ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONDONTWRITEBYTECODE=1
 
 # Просим Python не буферизовать stdin/stdout
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
 
 # Задаем рабочую директорию
 WORKDIR /opt/app
@@ -126,8 +128,8 @@ docker build -t jtprog/django_movie:0.1 .
 ```bash
 docker images
 REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
-jtprog/django_movie   0.1                 e4d1fb505769        24 minutes ago      1.04GB
-python                3.8                 4e2d08f34f6d        3 days ago          934MB
+jtprog/django_movie   0.1                 e4d1fb505769        24 minutes ago      230MB
+python                3.12-slim           4e2d08f34f6d        3 days ago          155MB
 ```
 
 Данная команда покажет все images которые у нас есть и локально доступны – скачаны. Собственно после сборки образа его можно отправить в реестр (`docker registry`), дабы им могли воспользоваться другие или вы сами с другого компьютера/сервера. Самым простым вариантом в таком случае является собственно [Docker Hub](https://hub.docker.com/) и к тому же он бесплатный. Регистрация там простая, так что справитесь.
@@ -168,19 +170,21 @@ docker ps
 
 ## Используем docker-compose
 
-Согласно одной из легенд, `docker-compose` появился после того, как к разработчикам Docker пришли и сказали: "Docker – отличная вещь! Но сделайте удобно!" Будем считать что он уже [поставлен](https://jtprog.ru/docker-install/) у вас. Так что сразу перейдем к делу – содаем локально рядом с `Dockerfile` еще и `docker-compose.yml`.
+Согласно одной из легенд, `docker-compose` появился после того, как к разработчикам Docker пришли и сказали: "Docker – отличная вещь! Но сделайте удобно!" Будем считать что он уже [поставлен](https://jtprog.ru/docker-install/) у вас. Так что сразу перейдем к делу – содаем локально рядом с `Dockerfile` еще и `compose.yml` (или `docker-compose.yml` — старое имя файла, его до сих пор подхватывают все версии compose).
+
+> С 2023 года официально `docker compose` (без дефиса, плагин на Go). Старая команда `docker-compose` (Python, v1) — End-of-Life. В большинстве дистрибутивов `docker-compose-plugin` ставится автоматически вместе с `docker-ce`. Если у тебя `docker compose version` отвечает осмысленно — всё ок.
 
 И приводим его к такому виду:
 
 ```yaml
-# Версия Docker API
-version: '3.7'
+# В Compose v2 поле `version:` больше не нужно — формат файла определяется
+# самим compose-движком автоматически. Если оно у тебя ещё есть — можно смело удалять.
 # Сервисы которые мы будем запускать
 services:
 # Первый сервис - db
 db:
 # Образ на основе которого он будет запускаться
-image: postgres:12-alpine
+image: postgres:16-alpine
 # volumes - магическая вещь, которая создает некоторое устройство в
 # рамках Docker и монтирует его в директорию /var/lib/postgresql/data
 volumes:
@@ -217,25 +221,25 @@ postgres_data:
 После этого в консоли выполним вот эту команду:
 
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
 
 Тут мы говорим: `up` – поднять, `--build` – собрать, `-d` – пусть робит в фоне. После чего мы можем посмотреть список запущенных сервисов:
 
 ```bash
-docker-compose ps
+docker compose ps
 Name                       Command               State           Ports
 ----------------------------------------------------------------------------------------
 django_movie_drf_app_1   python /opt/app/manage.py  ...   Up      0.0.0.0:8000->8000/tcp
 django_movie_drf_db_1    docker-entrypoint.sh postgres    Up      5432/tcp
 ```
 
-> **Важно:** Все команды docker-compose должны выполняться в той же директории где расположен файл docker-compose.yml. В противном случае необходимо его указывать явно через флаг -f и путь до файла docker-compose.yml.
+> **Важно:** Все команды `docker compose` должны выполняться в той же директории где расположен файл `compose.yml` (или `docker-compose.yml`). В противном случае необходимо указывать его явно через флаг `-f` и путь до файла.
 
 К слову у вас может быть несколько файлов `docker-compose.yml` и их можно включать все например вот такой конструкцией:
 
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose.admin.yml run -it backup_db
+docker compose -f compose.yml -f compose.admin.yml run -it backup_db
 ```
 
 Кейс: в файле `docker-compose.admin.yml` может быть больше доступа. Или для среды разработки можно поднимать моки вместо реальных сервисов.
@@ -243,6 +247,66 @@ docker-compose -f docker-compose.yml -f docker-compose.admin.yml run -it backup_
 Так же замечу, что все сервисы описанные в рамках одного `docker-compose.yml` файла (в нашем примере это сервисы `db` и `app`), будут сразу "из коробки" видеть друг друга по указанным именам.
 
 Ну а теперь откройте в браузере [http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/) и убедитесь, что приложение поднялось и заработало – откроется Swagger-документация по API нашего приложения. По крайней мере так может казаться на первый взгляд.
+
+## BuildKit и multi-stage
+
+Пост написан в 2020-ом, и тогда `docker build` был «классический»: один Dockerfile = одна цепочка слоёв, никакого кеша зависимостей между сборками, никаких параллельных стадий. С Docker 23.x (январь 2023) [BuildKit](https://docs.docker.com/build/buildkit/) — дефолтный сборщик. Это даёт сразу несколько полезных штук.
+
+**Включить новый синтаксис.** Первой строкой в `Dockerfile`:
+
+```docker
+# syntax=docker/dockerfile:1.7
+```
+
+Это говорит BuildKit'у использовать актуальный фронтенд с поддержкой `RUN --mount`, heredocs и прочих современных директив.
+
+**Кеш пакетного менеджера.** Без кеша каждый `pip install` / `apt-get install` качает зависимости заново. С BuildKit можно подмонтировать кеш-том:
+
+```docker
+# syntax=docker/dockerfile:1.7
+FROM python:3.12-slim
+WORKDIR /opt/app
+COPY req.txt .
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install -r req.txt
+COPY ./src /opt/app
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+```
+
+Кеш сохраняется между сборками — повторный `docker build` ставит зависимости из кеша за секунды.
+
+**Multi-stage.** Финальный образ часто получается жирным: компилятор, dev-зависимости, build-tooling в нём не нужны. Multi-stage позволяет собрать в одном слое, а в финальный взять только результат:
+
+```docker
+# syntax=docker/dockerfile:1.7
+
+# --- build stage ---
+FROM golang:1.23 AS build
+WORKDIR /src
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=0 go build -o /out/app ./cmd/app
+
+# --- runtime stage ---
+FROM gcr.io/distroless/static:nonroot
+COPY --from=build /out/app /app
+USER nonroot
+ENTRYPOINT ["/app"]
+```
+
+Результат — 10-20 MB вместо 800+ MB исходного Go-образа.
+
+## Альтернативы Docker
+
+Docker — не единственный игрок на поле контейнеров. Полезно знать про альтернативы — особенно когда упираешься в demon-only режим, root-привилегии или хочешь чего-то более OCI-нативного.
+
+- **[Podman](https://podman.io/)** — daemonless, rootless из коробки, CLI почти 1-в-1 с docker (`alias docker=podman` работает в 95% случаев). Стандарт в RHEL/Rocky/Alma 8+. Умеет в pod'ы (k8s-style группировки контейнеров) и в systemd-юниты через `podman generate systemd` / quadlet.
+- **[nerdctl](https://github.com/containerd/nerdctl)** + **containerd** — docker-совместимый CLI поверх containerd (того самого, что под капотом у Kubernetes). Удобно, когда уже есть containerd и не хочется держать второй runtime.
+- **Rootless Docker** — если уходить от Docker не хочется, но root-демона стрёмно, можно [запустить сам Docker в rootless-режиме](https://docs.docker.com/engine/security/rootless/). Чуть медленнее по I/O, но безопасности заметно больше.
+- **[BuildKit standalone](https://github.com/moby/buildkit)** (`buildctl`) — если нужен только build-этап без runtime'а. Часто используется в CI.
+
+Для большинства повседневных задач Docker всё ещё де-факто стандарт, но если ты пишешь что-то для прода в 2026-ом — стоит хотя бы раз попробовать Podman или nerdctl, чтобы понимать что есть выбор.
 
 ## Работа напильником
 
