@@ -88,9 +88,9 @@ exit 0
 
 История выше — про самый первый переезд. С тех пор инфраструктура блога ещё несколько раз эволюционировала, и мне есть что добавить.
 
-### PaperMod вместо bear
+### Тема: PaperMod
 
-Изначально я сидел на теме `bear`, потом переехал на [**PaperMod**](https://github.com/adityatelange/hugo-PaperMod) — она дала мне всё, что хотелось от темы для технического блога: тёмная/светлая тема, ToC, поиск через fuse.js, OpenGraph, профиль автора, аккуратная типографика. В `hugo.yaml` сейчас стоит `theme: PaperMod`. Текущий конфиг блога — [hugo.yaml на гитхабе](https://github.com/jtprogru/jtprog.ru/blob/main/hugo.yaml).
+На текущий момент блог живёт на теме [**PaperMod**](https://github.com/adityatelange/hugo-PaperMod) — она даёт всё, что хотелось от темы для технического блога: тёмная/светлая тема, ToC, поиск через fuse.js, OpenGraph, профиль автора, аккуратная типографика. В `hugo.yaml` это сводится к одной строке `theme: PaperMod`. Текущий конфиг блога — [hugo.yaml на гитхабе](https://github.com/jtprogru/jtprog.ru/blob/main/hugo.yaml).
 
 ### Темы — пока submodule, но Hugo Modules уже стучатся
 
