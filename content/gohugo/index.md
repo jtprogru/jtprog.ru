@@ -6,7 +6,7 @@ cover:
   image: blog.png
   relative: false
 date: "2019-07-22T15:00:00+03:00"
-lastmod: "2019-07-22T15:00:00+03:00"
+lastmod: "2026-05-15T20:00:00+03:00"
 tags:
 - blog
 - hugo
@@ -19,10 +19,12 @@ tags:
 title: 'Основательный и бесповоротный переезд'
 type: post
 description: "История и процесс миграции блога с WordPress на статический генератор сайтов Hugo, включая причины переезда, выбор платформы и описание нового рабочего процесса публикации статей на Markdown."
-keywords: ["переезд на hugo", "wordpress to hugo migration", "статический генератор сайтов", "hugo blog", "markdown", "wordpress alternative", "блогинг", "rsync deployment", "workflow", "личный опыт"]
+keywords: ["переезд на hugo", "wordpress to hugo migration", "статический генератор сайтов", "hugo blog", "markdown", "wordpress alternative", "блогинг", "rsync deployment", "workflow", "личный опыт", "hugo modules", "papermod", "github actions hugo"]
 ---
 
 Привет, `%username%`! Думаю многие заметили, что меня тут давненько не было. Всякое разное за это время произошло и в числе прочего этот переезд, о котором будет дальше...
+
+> 🔄 **Обновлено 2026-05-15**: историю переезда оставляю как есть. В конце добавил короткий блок «Что изменилось с 2019-го» — про Hugo Modules вместо submodule для тем, переход на PaperMod и деплой через GitHub Actions вместо `rsync` из скрипта.
 
 ## Причина
 
@@ -81,6 +83,43 @@ exit 0
 - Получить эстетическое удовольствие от простоты;
 
 Все оказалось даже проще, чем я думал изначально.
+
+## Что изменилось с 2019-го
+
+История выше — про самый первый переезд. С тех пор инфраструктура блога ещё несколько раз эволюционировала, и мне есть что добавить.
+
+### Hugo Modules вместо submodule для темы
+
+Тогда я подключал тему через `git submodule` — рабочий, но капризный способ. С 2019-го Hugo поддерживает [**Hugo Modules**](https://gohugo.io/hugo-modules/) — пакеты тем и компонентов поверх Go modules. Подключается одной командой:
+
+```bash
+hugo mod init github.com/your/site
+hugo mod get github.com/adityatelange/hugo-PaperMod
+```
+
+И в `hugo.yaml`:
+
+```yaml
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+```
+
+Обновление темы — `hugo mod get -u`. Никаких submodule'ов, никаких «забыл сделать `git submodule update --init --recursive`».
+
+### PaperMod вместо bear
+
+Изначально я сидел на теме `bear`, потом переехал на [**PaperMod**](https://github.com/adityatelange/hugo-PaperMod) — она дала мне всё, что хотелось от темы для технического блога: тёмная/светлая тема, ToC, поиск через fuse.js, OpenGraph, профиль автора, аккуратная типографика. Конкретно текущий конфиг этого блога — см. [hugo.yaml на гитхабе](https://github.com/jtprogru/jtprog.ru/blob/main/hugo.yaml).
+
+### Деплой через GitHub Actions
+
+В исходном посте у меня был `rsync` через скрипт. Сейчас всё это уехало в [GitHub Actions](/github-actions/) — пуш в `main`, CI собирает Hugo, выкладывает на хостинг. Про конкретный пайплайн я писал отдельно.
+
+### Что ещё стоит знать
+
+- **Hugo сильно ускорился.** Если сидишь на старых версиях — обнови `hugo` (особенно `--gc --minify` и обработка изображений).
+- **Goldmark + math passthrough.** В `hugo.yaml` теперь можно прокинуть `\(...\)`/`$$...$$` в KaTeX/MathJax без шорткодов.
+- **`enablegitinfo: true`** — Hugo берёт `lastmod` из git-истории, удобно для технического блога с регулярными правками.
 
 ## Итоги
 
