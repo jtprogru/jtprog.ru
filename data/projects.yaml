@@ -1,3 +1,7 @@
+- name: The-Way-of-SRE
+  url: https://github.com/jtprogru/The-Way-of-SRE
+  desc: "Подборка материалов и заметок для тех, кто развивается в SRE-направлении."
+  lang: Docs
 - name: srekit
   url: https://github.com/jtprogru/srekit
   desc: "Генератор текстовых SRE-артефактов: задачи, постмортемы, RFC, runbook'и, changelog'и."
@@ -22,7 +26,3 @@
   url: https://github.com/jtprogru/cubic-root
   desc: "Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes."
   lang: Go
-- name: The-Way-of-SRE
-  url: https://github.com/jtprogru/The-Way-of-SRE
-  desc: "Подборка материалов и заметок для тех, кто развивается в SRE-направлении."
-  lang: Docs
