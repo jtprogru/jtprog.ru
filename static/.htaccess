@@ -46,12 +46,13 @@
     ExpiresByType image/svg+xml             "access plus 30 days"
 </IfModule>
 
-# --- 5. HTTPS canonical (на случай прямых HTTP-хитов) ---
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTPS} off
-    RewriteRule ^(.*)$ https://jtprog.ru/$1 [R=301,L]
-</IfModule>
+# --- 5. HTTPS canonical: НЕ ВКЛЮЧАТЬ через mod_rewrite ---
+# На REG.RU nginx-фронт терминирует TLS и проксирует на Apache по HTTP,
+# поэтому %{HTTPS} в Apache ВСЕГДА = off, и любой redirect "off → https://"
+# создаст бесконечную петлю. Правильная HTTPS-канонизация уже делается
+# на уровне nginx-фронта REG.RU. Если когда-то потребуется делать это
+# в .htaccess — использовать %{HTTP:X-Forwarded-Proto} !https, предварительно
+# проверив, какой именно header проксирует фронт.
 
 # --- 6. Кастомная 404 (Hugo генерирует /404.html) ---
 ErrorDocument 404 /404.html
