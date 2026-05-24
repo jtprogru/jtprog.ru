@@ -42,13 +42,20 @@ MMDC = [
     "mmdc",
 ]
 MMDC_COMMON = ["--quiet", "--backgroundColor", "transparent"]
+SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 
 # Каждой mermaid-диаграмме генерим две версии — под light и dark CSS-темы
 # сайта. Render hook темы mishka вставляет обе и переключает видимость
 # через `:root[data-theme="..."]`. Имена: <hash>.svg (light), <hash>.dark.svg.
+#
+# Цветовая палитра задаётся через mermaid-config.{light,dark}.json — там
+# themeVariables, согласованные с CSS-переменными темы сайта (см.
+# themes/mishka/assets/css/modules/00-vars.css). Чтобы избежать тёмных
+# блоков и плохого контраста, используем mermaid theme=base и переопределяем
+# все основные переменные вручную.
 VARIANTS = (
-    ("",      "default"),   # suffix, mermaid theme
-    (".dark", "dark"),
+    ("",      SCRIPTS_DIR / "mermaid-config.light.json"),
+    (".dark", SCRIPTS_DIR / "mermaid-config.dark.json"),
 )
 
 
@@ -56,7 +63,9 @@ def hash_block(code: str) -> str:
     return hashlib.sha256(code.encode("utf-8")).hexdigest()
 
 
-def render_block(code: str, out_path: pathlib.Path, mermaid_theme: str) -> None:
+def render_block(
+    code: str, out_path: pathlib.Path, config_file: pathlib.Path, svg_id: str
+) -> None:
     with tempfile.NamedTemporaryFile(
         "w", suffix=".mmd", delete=False, encoding="utf-8"
     ) as tmp:
@@ -65,7 +74,8 @@ def render_block(code: str, out_path: pathlib.Path, mermaid_theme: str) -> None:
     try:
         subprocess.run(
             [*MMDC, "-i", tmp_path, "-o", str(out_path),
-             *MMDC_COMMON, "--theme", mermaid_theme],
+             *MMDC_COMMON, "--configFile", str(config_file),
+             "--svgId", svg_id],
             check=True,
         )
     finally:
@@ -74,6 +84,7 @@ def render_block(code: str, out_path: pathlib.Path, mermaid_theme: str) -> None:
 
 def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    force = "--force" in sys.argv
     rendered = skipped = 0
     for md in sorted(CONTENT_DIR.rglob("*.md")):
         text = md.read_text(encoding="utf-8")
@@ -81,15 +92,22 @@ def main() -> int:
             code = block.strip()
             h = hash_block(code)
             rel_md = md.relative_to(REPO_ROOT)
-            for suffix, mermaid_theme in VARIANTS:
+            for suffix, config_file in VARIANTS:
                 out = OUT_DIR / f"{h}{suffix}.svg"
-                label = mermaid_theme
-                if out.exists():
+                label = "dark" if suffix else "light"
+                # Unique svg id avoids CSS cascade conflicts when both light
+                # and dark SVGs are inlined on the same page. Without this,
+                # mmdc emits id="my-svg" for every file, and the second
+                # <style> block (#my-svg .node rect{...}) overrides the
+                # first — so on a light page you'd see dark colors.
+                svg_id = f"m-{h[:12]}-{label}"
+                if out.exists() and not force:
                     print(f"  · {rel_md}: {h[:8]} [{label}]  (cached)")
                     skipped += 1
                     continue
-                print(f"  → {rel_md}: {h[:8]} [{label}]  (rendering...)")
-                render_block(code, out, mermaid_theme)
+                tag = "re-rendering" if out.exists() else "rendering"
+                print(f"  → {rel_md}: {h[:8]} [{label}]  ({tag}...)")
+                render_block(code, out, config_file, svg_id)
                 rendered += 1
     print(f"\nDone. rendered={rendered}, cached={skipped}, total={rendered + skipped}")
     return 0

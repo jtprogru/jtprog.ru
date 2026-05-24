@@ -1,0 +1,30 @@
+{
+  "theme": "base",
+  "themeVariables": {
+    "background": "transparent",
+    "primaryColor": "#ffffff",
+    "primaryTextColor": "#1c1c1f",
+    "primaryBorderColor": "#c8c5bb",
+    "secondaryColor": "#f3f1ed",
+    "secondaryTextColor": "#1c1c1f",
+    "secondaryBorderColor": "#c8c5bb",
+    "tertiaryColor": "#fed7aa",
+    "tertiaryTextColor": "#1c1c1f",
+    "tertiaryBorderColor": "#c2410c",
+    "lineColor": "#5b5b62",
+    "textColor": "#1c1c1f",
+    "mainBkg": "#ffffff",
+    "secondBkg": "#f3f1ed",
+    "nodeBorder": "#c8c5bb",
+    "clusterBkg": "#f3f1ed",
+    "clusterBorder": "#c8c5bb",
+    "edgeLabelBackground": "#fafaf7",
+    "noteBkgColor": "#fef3c7",
+    "noteTextColor": "#1c1c1f",
+    "noteBorderColor": "#f59e0b",
+    "errorBkgColor": "#fee2e2",
+    "errorTextColor": "#7f1d1d",
+    "fontFamily": "Inter, system-ui, -apple-system, sans-serif",
+    "fontSize": "15px"
+  }
+}
