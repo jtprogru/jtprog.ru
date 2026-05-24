@@ -3,14 +3,24 @@
 # Brotli (mod_brotli) на REG.RU shared НЕ установлен — пропускаем.
 # Подробный план: plans/performance-improvement-plan.md (раздел P0, пункт 0).
 
-# --- 1. Сжатие: gzip только для текстовых типов ---
+# --- 1. Сжатие: отменить gzip для уже сжатых форматов ---
+# Родительский ~/.htaccess (контролируется REG.RU) ставит
+# `SetOutputFilter DEFLATE` универсально — он жмёт всё, включая PNG/WebP/JPEG.
+# AddOutputFilterByType ниже его не отменяет (это разные директивы),
+# поэтому используем SetEnvIfNoCase + no-gzip — это снимает фильтр для
+# бинарных форматов.
+<IfModule mod_setenvif.c>
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|avif|ico|woff2?|mp4|webm|zip|gz|br)$ no-gzip dont-vary
+</IfModule>
+
 <IfModule mod_deflate.c>
+    # Явно подтверждаем gzip для текстовых типов (на случай, если родитель
+    # вдруг ужесточится в будущем).
     AddOutputFilterByType DEFLATE text/html text/css text/xml text/plain
     AddOutputFilterByType DEFLATE application/javascript application/json
     AddOutputFilterByType DEFLATE application/xml application/rss+xml application/atom+xml
     AddOutputFilterByType DEFLATE application/manifest+json
     AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf
-    # Явно НЕ включаем image/png, image/webp, image/jpeg — уже сжаты.
 </IfModule>
 
 # --- 2. Vary: перебить родительский ~/.htaccess (он добавляет User-Agent) ---
