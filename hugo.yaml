@@ -66,6 +66,8 @@ params:
   env: production
   comments: false
   ShowPostNavLinks: true
+  PWA:
+    enabled: false
   # description: "Заметки самоучки"
   author: "jtprogru"
   editPost:
