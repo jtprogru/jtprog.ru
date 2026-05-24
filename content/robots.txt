@@ -10,6 +10,8 @@ Disallow: */comment
 Disallow: /?p=
 Disallow: /?share=
 Disallow: /not-found/
+Disallow: /offline/
+Disallow: /offline
 Disallow: /ip/
 
 
