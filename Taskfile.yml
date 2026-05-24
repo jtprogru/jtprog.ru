@@ -59,3 +59,10 @@ tasks:
       - test -f $(which git)
     cmds:
       - git submodule update --init --recursive --remote
+
+  mermaid:render:
+    desc: Pre-render mermaid blocks from content/**/*.md to assets/mermaid/<sha256>.svg
+    preconditions:
+      - test -f $(which python3)
+      - test -f $(which npx)
+    cmd: python3 scripts/mermaid-prerender.py
