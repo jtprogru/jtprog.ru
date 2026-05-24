@@ -262,6 +262,10 @@ markup:
       attribute: true
       autoHeadingID: true
       autoHeadingIDType: github
+      # Не оборачивать одиночные картинки в <p>. Render-image hook отдаёт
+      # <figure>, и обёртка <p><figure>...</figure></p> и невалидна по HTML,
+      # и не принимается Telegram Instant View («<img> is not supported in <p>»).
+      wrapStandAloneImageWithinParagraph: false
     renderer:
       hardWraps: false
       unsafe: false
