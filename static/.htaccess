@@ -1,0 +1,57 @@
+# jtprog.ru — Apache .htaccess для REG.RU shared (Apache 2.4.66 + cPanel).
+# Цель: gzip-фильтры, Cache-Control, корректный Vary, HTTPS canonical.
+# Brotli (mod_brotli) на REG.RU shared НЕ установлен — пропускаем.
+# Подробный план: plans/performance-improvement-plan.md (раздел P0, пункт 0).
+
+# --- 1. Сжатие: gzip только для текстовых типов ---
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/xml text/plain
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE application/xml application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE application/manifest+json
+    AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf
+    # Явно НЕ включаем image/png, image/webp, image/jpeg — уже сжаты.
+</IfModule>
+
+# --- 2. Vary: перебить родительский ~/.htaccess (он добавляет User-Agent) ---
+<IfModule mod_headers.c>
+    Header unset Vary
+    Header set Vary "Accept-Encoding"
+
+    # --- 3. Cache-Control ---
+    # HTML — короткий TTL, ревалидация по ETag/Last-Modified
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=300, must-revalidate"
+    </FilesMatch>
+    # CSS/JS — fingerprinted Hugo'й, immutable на год
+    <FilesMatch "\.(css|js|woff2?|ttf|otf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    # Картинки — на 30 дней
+    <FilesMatch "\.(png|jpe?g|webp|avif|svg|ico)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>
+
+# --- 4. mod_expires как fallback (если mod_headers где-то не сработает) ---
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html                 "access plus 5 minutes"
+    ExpiresByType text/css                  "access plus 1 year"
+    ExpiresByType application/javascript    "access plus 1 year"
+    ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresByType image/png                 "access plus 30 days"
+    ExpiresByType image/webp                "access plus 30 days"
+    ExpiresByType image/avif                "access plus 30 days"
+    ExpiresByType image/svg+xml             "access plus 30 days"
+</IfModule>
+
+# --- 5. HTTPS canonical (на случай прямых HTTP-хитов) ---
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://jtprog.ru/$1 [R=301,L]
+</IfModule>
+
+# --- 6. Кастомная 404 (Hugo генерирует /404.html) ---
+ErrorDocument 404 /404.html
