@@ -99,7 +99,10 @@ params:
     threshold: 0.2
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
-  math: true
+  # math: false (default) — KaTeX подключается лениво:
+  # тема math.html auto-detect'ит формулы по `$$` / `\(` в .RawContent
+  # или по `math: true` во frontmatter поста. KaTeX не грузится на
+  # 99% страниц (home, listings, посты без формул).
   mathRenderer: katex
   opengraph: true
   twitter_cards: true
