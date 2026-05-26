@@ -6,6 +6,10 @@
   url: https://github.com/jtprogru/todushka
   desc: "Терминальный аналог Things 3 с аналогичным функционалом."
   lang: Go
+- name: thingsexporter
+  url: https://github.com/jtprogru/thingsexporter
+  desc: "Экспорт задач из Things 3 в разные форматы."
+  lang: Go
 - name: srekit
   url: https://github.com/jtprogru/srekit
   desc: "Генератор текстовых SRE-артефактов: задачи, постмортемы, RFC, runbook'и, changelog'и."
