@@ -1,36 +1,69 @@
+# Список проектов для блока «Мои проекты» на главной и страницы /projects/.
+#
+# Поля:
+#   name      — заголовок карточки (моноширинно).
+#   url       — внешняя ссылка (обычно GitHub).
+#   desc      — короткое описание (1-2 строки).
+#   lang      — основной язык/стек, тег справа от названия.
+#   status    — active | maintenance | archived. Влияет на группу на /projects/.
+#               Если поле опущено — попадает в «Прочее».
+#   featured  — true поднимает карточку на главную (см. params.homeSections.projects)
+#               и в группу «Избранное» на /projects/.
+#   tags      — массив тегов для будущих фильтров (опционально).
 - name: The-Way-of-SRE
   url: https://github.com/jtprogru/The-Way-of-SRE
   desc: "Подборка материалов и заметок для тех, кто развивается в SRE-направлении."
   lang: Docs
-- name: todushka
-  url: https://github.com/jtprogru/todushka
-  desc: "Терминальный аналог Things 3 с аналогичным функционалом."
-  lang: Go
-- name: thingsexporter
-  url: https://github.com/jtprogru/thingsexporter
-  desc: "Экспорт задач из Things 3 в разные форматы."
-  lang: Go
+  status: active
+  featured: true
+  tags: [sre, docs]
 - name: srekit
   url: https://github.com/jtprogru/srekit
   desc: "Генератор текстовых SRE-артефактов: задачи, постмортемы, RFC, runbook'и, changelog'и."
   lang: Go
+  status: active
+  featured: true
+  tags: [sre, cli]
+- name: todushka
+  url: https://github.com/jtprogru/todushka
+  desc: "Терминальный аналог Things 3 с аналогичным функционалом."
+  lang: Go
+  status: active
+  featured: true
+  tags: [cli, productivity]
+- name: thingsexporter
+  url: https://github.com/jtprogru/thingsexporter
+  desc: "Экспорт задач из Things 3 в разные форматы."
+  lang: Go
+  status: active
+  tags: [cli, productivity]
 - name: jtsekret
   url: https://github.com/jtprogru/jtsekret
   desc: "CLI для централизованного и безопасного управления личными секретами: пароли, OAuth-токены, API-ключи."
   lang: Go
+  status: active
+  tags: [cli, security]
 - name: jtpost
   url: https://github.com/jtprogru/jtpost
   desc: "CLI-редактор постов для управления контент-пайплайном Telegram-канала."
   lang: Go
+  status: active
+  tags: [cli, content]
 - name: jtgpwgen
   url: https://github.com/jtprogru/jtgpwgen
   desc: "Генератор паролей с настраиваемыми классами символов."
   lang: Go
+  status: active
+  tags: [cli, security]
 - name: repo-opener
   url: https://github.com/jtprogru/repo-opener
   desc: "Открывает remote-репозиторий из локального клона прямо в браузере."
   lang: Go
+  status: active
+  tags: [cli, devx]
 - name: cubic-root
   url: https://github.com/jtprogru/cubic-root
   desc: "Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes."
   lang: Go
+  status: maintenance
+  tags: [learning, k8s]

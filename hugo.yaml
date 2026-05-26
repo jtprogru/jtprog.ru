@@ -35,6 +35,10 @@ related:
 
 menu:
   main:
+    - identifier: projects
+      name: "Проекты"
+      url: "/projects/"
+      weight: 3
     - identifier: donations
       name: "Поддержать"
       url: "/donations/"
@@ -119,6 +123,13 @@ params:
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   disableSpecial1stPost: false
+
+  homeSections:
+    projects:
+      enabled: true        # показывать блок «Мои проекты» на главной
+      featuredOnly: true   # true: показывать только проекты с `featured: true` в data/projects.yaml
+      limit: 6             # потолок карточек; если featuredOnly=true и избранных меньше — вернётся столько, сколько есть
+      moreLink: /projects/ # ссылка «Все проекты →» под сеткой; пусто = не показывать
 
   profileMode:
     enabled: true
