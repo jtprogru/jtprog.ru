@@ -1,10 +1,13 @@
 ---
+# === Идентичность сайта ===
 baseURL: "https://jtprog.ru"
 language: "ru-RU"
+defaultContentLanguage: "ru"
 theme: "mishka"
-# theme: PaperMod
 title: "Мишка на сервере"
+copyright: "[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) &copy; / Mikhail (jtprogru) Savin / Commit: @@@COMMIT@@@"
 
+# === Output / выдача ===
 outputs:
   home:
     - HTML
@@ -14,14 +17,28 @@ outputs:
     - HTML
     - RSS
 
+# === Hugo-features ===
 enableRobotsTXT: false
+enableEmoji: true
+enablegitinfo: true
+forcesyncstatic: true
+canonifyURLs: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+summaryLength: 15
+pluralizeListTitles: true
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
 
 services:
   googleAnalytics:
     id: G-NK4TC343YF
-
-pagination:
-  pagerSize: 10
 
 related:
   includeNewer: true
@@ -33,226 +50,38 @@ related:
     - name: categories
       weight: 70
 
-menu:
-  main:
-    - identifier: projects
-      name: "Проекты"
-      url: "/projects/"
-      weight: 3
-    - identifier: donations
-      name: "Поддержать"
-      url: "/donations/"
-      weight: 2
-    - identifier: cv
-      name: CV
-      url: https://savinmi.ru
-      weight: 1
-
-copyright: "[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) &copy; / Mikhail (jtprogru) Savin / Commit: @@@COMMIT@@@"
-defaultContentLanguage: "ru"
-enableEmoji: true
-enablegitinfo: true
-forcesyncstatic: true
-canonifyURLs: true
-summaryLength: 15
-
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-
-minify:
-  disableXML: true
-  minifyOutput: true
-
-pluralizeListTitles: true
-
-params:
-  env: production
-  comments: false
-  ShowPostNavLinks: true
-  PWA:
-    enabled: false
-  # description: "Заметки самоучки"
-  author: "jtprogru"
-  editPost:
-    URL: "https://github.com/jtprogru/jtprog.ru/blob/main/content"
-    Text: "Edit..."
-    appendFilePath: true
-  label:
-    text: "Мишка на сервере"
-    icon: /fav-light.svg
-    iconHeight: 45
-    # icon_dark: /fav-light.svg
-    # icon_light: /fav-dark.svg
-  assets:
-    favicon: /favicon.svg
-    favicon16x16: /favicon-16x16.svg
-    favicon32x32: /favicon-32x32.svg
-    apple_touch_icon: /apple-touch-icon.svg
-    safari_pinned_tab: /safari-pinned-tab.svg
-    disableFingerprinting: true
-  cover:
-    hidden: false # hide everywhere but not in structured data
-    hiddenInList: false # hide on list pages and home
-    hiddenInSingle: false # hide on single page
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 1
-    distance: 1000
-    threshold: 0.2
-    minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
-  # math: false (default) — KaTeX подключается лениво:
-  # тема math.html auto-detect'ит формулы по `$$` / `\(` в .RawContent
-  # или по `math: true` во frontmatter поста. KaTeX не грузится на
-  # 99% страниц (home, listings, посты без формул).
-  mathRenderer: katex
-  opengraph: true
-  twitter_cards: true
-  images: ["twitter-card.svg"]
-  defaultTheme: auto
-  copyright: "Mikhail (jtprogru) Savin"
-  mainSections: ["post"]
-  dateFormat: "2006-01-02 15:04"
-  related: true
-  relatedMax: 5
-
-  ShowReadingTime: true
-  ShowShareButtons: false
-  ShowBreadCrumbs: false
-  ShowCodeCopyButtons: true
-  disableSpecial1stPost: false
-
-  homeSections:
-    projects:
-      enabled: true        # показывать блок «Мои проекты» на главной
-      featuredOnly: true   # true: показывать только проекты с `featured: true` в data/projects.yaml
-      limit: 6             # потолок карточек; если featuredOnly=true и избранных меньше — вернётся столько, сколько есть
-      moreLink: /projects/ # ссылка «Все проекты →» под сеткой; пусто = не показывать
-
-  profileMode:
-    enabled: true
-    title: "Мишка на сервере"
-    subtitle: |
-      Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про SRE, DevOps и системное администрирование.
-      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в [telegram-чат](https://t.me/jtprogru_chat).
-    imageUrl: "/avatar.webp"
-    imageTitle: "jtprogru"
-    imageWidth: 160
-    imageHeight: 160
-    latestPostsCount: 6
-
-  homeInfoParams:
-    Title: "Привет, `%username%`!"
-    Content: |+
-      Меня зовут Михаил aka `jtprogru` и добро пожаловать на страницы моего блога.
-      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в
-      [telegram-чат](https://t.me/jtprogru_chat) и задавай вопросы.
-
-  socialIcons:
-    - name: telegram
-      url: "https://t.me/jtprogru_chat"
-    # - name: twitter
-    #   url: "https://x.com/jtprogru"
-    # - name: vkcom
-    #   url: "https://vk.com/jtprogru_channel"
-    # - name: boosty
-    #   url: "https://boosty.to/jtprogru"
-    # - name: youtube
-    #   url: "https://www.youtube.com/channel/UCuGKtGjbVk-BtpLM1I6Yzrg"
-    - name: github
-      url: "https://github.com/jtprogru"
-    # - name: mastodon
-    #   url: "https://mas.to/@jtprogru"
-    # - name: buymeacoffee
-    #   url: "https://boosty.to/jtprogru"
-    - name: dev
-      url: "https://dev.to/jtprogru"
-    # - name: discord
-    #   url: "https://discord.gg/aKZNvaXQmR"
-    # - name: medium
-    #   url: "https://jtprogru.medium.com"
-    - name: linkedin
-      url: "https://www.linkedin.com/in/jtprogru"
-    - name: unsplash
-      url: "https://unsplash.com/@jtprogru"
-    # - name: keybase
-    #   url: "https://keybase.io/jtprog"
-    # - name: soundcloud
-    #   url: "https://soundcloud.com/jtprogru/"
-    - name: cv
-      url: "https://savinmi.ru"
-    - name: rss
-      url: "/index.xml"
-
-  analytics:
-    google:
-      SiteVerificationTag: "7XYgVY2xnjODEkc6HA_dLMdLSQDNEQ3v5bG40MpnB0U"
-    yandex:
-      SiteVerificationTag: "766a09b06b27e0f2"
-  metrics:
-    yandexMetrics: 31190141
-  entry:
-    meta: ["date", "tags", "author"]
-    toc: false
-
-  featured:
-    previewOnly: true
-
-  outputFormats:
-    RSS:
-      mediaType: "application/rss+xml"
-      baseName: "manifest"
-      isPlainText: true
-      notAlternative: true
-
-  taxonomies:
-    category: "categories"
-    tag: "tags"
-
-  permalinks:
-    post: "/blog/:slug/"
-
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
   lastmod: [":git", "lastmod", "date", "publishDate"]
   publishDate: ["publishDate", "date"]
   expiryDate: ["expiryDate"]
 
+# === Меню ===
+menu:
+  main:
+    - identifier: cv
+      name: CV
+      url: https://savinmi.ru
+      weight: 1
+    - identifier: donations
+      name: "Поддержать"
+      url: "/donations/"
+      weight: 2
+    - identifier: projects
+      name: "Проекты"
+      url: "/projects/"
+      weight: 3
+    - identifier: archives
+      name: "Архив"
+      url: "/archives/"
+      weight: 4
+    - identifier: search
+      name: "Поиск"
+      url: "/search/"
+      weight: 5
+
+# === Markup ===
 markup:
-  asciidocExt:
-    attributes: {}
-    backend: html5
-    extensions: []
-    failureLevel: fatal
-    noHeaderOrFooter: true
-    preserveTOC: false
-    safeMode: unsafe
-    sectionNumbers: false
-    trace: false
-    verbose: false
-    workingFolderCurrent: false
-
-  blackFriday:
-    angledQuotes: false
-    extensions: null
-    extensionsMask: null
-    footnoteAnchorPrefix: ""
-    footnoteReturnLinkContents: ""
-    fractions: true
-    hrefTargetBlank: false
-    latexDashes: true
-    nofollowLinks: false
-    noreferrerLinks: false
-    plainIDAnchors: true
-    skipHTML: false
-    smartDashes: true
-    smartypants: true
-    smartypantsQuotesNBSP: false
-    taskLists: true
-    defaultMarkdownHandler: goldmark
-
   goldmark:
     extensions:
       definitionList: true
@@ -298,6 +127,7 @@ markup:
     style: onedark
     tabWidth: 4
 
+# === Кеши ===
 caches:
   assets:
     dir: ":resourceDir/_gen"
@@ -309,6 +139,7 @@ caches:
     dir: ":cacheDir/modules"
     maxAge: -1
 
+# === Mounts ===
 module:
   mounts:
     - source: content
@@ -325,3 +156,119 @@ module:
       target: i18n
     - source: archetypes
       target: archetypes
+
+# === Параметры темы Mishka ===
+params:
+  env: production
+  author: "jtprogru"
+  mainSections: ["post"]
+  dateFormat: "2006-01-02 15:04"
+  defaultTheme: auto
+  comments: false
+
+  # --- UI-флаги ---
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  relatedMax: 5
+  cover:
+    hidden: false        # hide everywhere but not in structured data
+    hiddenInList: false  # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  # --- KaTeX подключается лениво:
+  # math.html auto-detect'ит формулы по `$$` / `\(` в .RawContent
+  # или по `math: true` во frontmatter поста. KaTeX не грузится на
+  # 99% страниц (home, listings, посты без формул). ---
+  mathRenderer: katex
+
+  opengraph: true
+  twitter_cards: true
+
+  PWA:
+    enabled: false
+
+  # --- Шапка / иконки ---
+  label:
+    text: "Мишка на сервере"
+    icon: /fav-light.svg
+    iconHeight: 45
+  assets:
+    favicon: /favicon.svg
+    favicon16x16: /favicon-16x16.svg
+    favicon32x32: /favicon-32x32.svg
+    apple_touch_icon: /apple-touch-icon.svg
+    safari_pinned_tab: /safari-pinned-tab.svg
+    disableFingerprinting: true
+
+  editPost:
+    URL: "https://github.com/jtprogru/jtprog.ru/blob/main/content"
+    Text: "Edit..."
+    appendFilePath: true
+
+  # --- Главная: блок «Мои проекты» ---
+  homeSections:
+    projects:
+      enabled: true        # показывать блок «Мои проекты» на главной
+      featuredOnly: true   # true: показывать только проекты с `featured: true` в data/projects.yaml
+      limit: 6             # потолок карточек; если featuredOnly=true и избранных меньше — вернётся столько, сколько есть
+      moreLink: /projects/ # ссылка «Все проекты →» под сеткой; пусто = не показывать
+
+  # --- Profile-mode (hero на главной) ---
+  profileMode:
+    enabled: true
+    title: "Мишка на сервере"
+    subtitle: |
+      Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про SRE, DevOps и системное администрирование.
+      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в [telegram-чат](https://t.me/jtprogru_chat).
+    imageUrl: "/avatar.webp"
+    imageTitle: "jtprogru"
+    imageWidth: 160
+    imageHeight: 160
+    latestPostsCount: 6
+
+  # Альтернатива profileMode (не используется одновременно).
+  homeInfoParams:
+    Title: "Привет, `%username%`!"
+    Content: |+
+      Меня зовут Михаил aka `jtprogru` и добро пожаловать на страницы моего блога.
+      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в
+      [telegram-чат](https://t.me/jtprogru_chat) и задавай вопросы.
+
+  # --- Social icons ---
+  socialIcons:
+    - name: telegram
+      url: "https://t.me/jtprogru_chat"
+    - name: github
+      url: "https://github.com/jtprogru"
+    - name: dev
+      url: "https://dev.to/jtprogru"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/jtprogru"
+    - name: unsplash
+      url: "https://unsplash.com/@jtprogru"
+    - name: cv
+      url: "https://savinmi.ru"
+    - name: rss
+      url: "/index.xml"
+
+  # --- Поиск ---
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 1
+    distance: 1000
+    threshold: 0.2
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  # --- Аналитика ---
+  analytics:
+    google:
+      SiteVerificationTag: "7XYgVY2xnjODEkc6HA_dLMdLSQDNEQ3v5bG40MpnB0U"
+    yandex:
+      SiteVerificationTag: "766a09b06b27e0f2"
+  metrics:
+    yandexMetrics: 31190141
