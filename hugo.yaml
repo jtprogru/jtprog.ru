@@ -255,14 +255,8 @@ params:
       url: "/index.xml"
 
   # --- Поиск ---
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 1
-    distance: 1000
-    threshold: 0.2
-    minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
+  # Опции Fuse вынесены в data/fuse.yaml — Hugo lower-case'ит ключи
+  # внутри params, а Fuse такие ключи игнорирует. Data-файлы сохраняют case.
 
   # --- Аналитика ---
   analytics:

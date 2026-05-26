@@ -1,0 +1,12 @@
+# Опции Fuse.js для поиска (https://www.fusejs.io/api/options.html).
+# Лежит в data/, а не в hugo.yaml params, потому что Hugo lower-case'ит
+# ключи в Params.* (isCaseSensitive → iscasesensitive) — Fuse такие
+# ключи игнорирует и использует свои дефолты. Data-файлы сохраняют
+# регистр как написано, и Fuse читает их без перевода.
+isCaseSensitive: false
+shouldSort: true
+location: 1
+distance: 1000
+threshold: 0.2
+minMatchCharLength: 0
+keys: ["title", "permalink", "summary", "content"]
