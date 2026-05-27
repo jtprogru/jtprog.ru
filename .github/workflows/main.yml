@@ -36,7 +36,7 @@ jobs:
 
       - name: Telegram Notify
         if: always()
-        uses: jtprogru/notiflow@v1
+        uses: jtprogru/notiflow@v1.6.1
         with:
           bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           chat_id:   ${{ secrets.TELEGRAM_USER_ID }}
