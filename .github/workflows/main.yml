@@ -34,30 +34,14 @@ jobs:
         run: curl -s
           "https://webmaster.yandex.ru/ping?sitemap=https://jtprog.ru/sitemap.xml"
 
-      - name: Telegram Notify OK
-        if: ${{ success() }}
-        uses: appleboy/telegram-action@master
+      - name: Telegram Notify
+        if: always()
+        uses: jtprogru/notiflow@ea314602cceba3aa53e5479b23843b50e9375fb6  # v1.0.0
         with:
-          to: ${{ secrets.TELEGRAM_USER_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          format: markdown
-          disable_web_page_preview: true
-          message: |
-            **Deploy status**: ✅
-            **Project**: `${{github.repository}}`
-            **Runs on**: https://github.com/${{github.repository}}/tree/${{github.sha}}
-            **Branch**: `${{github.ref}}`
-
-      - name: Telegram Notify NOK
-        if: ${{ failure() }}
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_USER_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          format: markdown
-          disable_web_page_preview: true
-          message: |
-            **Deploy status**: ❌
-            **Project**: `${{github.repository}}`
-            **Runs on**: https://github.com/${{github.repository}}/tree/${{github.sha}}
-            **Branch**: `${{github.ref}}`
+          bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          chat_id:   ${{ secrets.TELEGRAM_USER_ID }}
+          message_template: |
+            *Deploy status*: {{.StatusEmoji}}
+            *Project*: `{{.Repo}}`
+            *Runs on*: {{.ServerUrl}}/{{.Repo}}/tree/{{.Sha}}
+            *Branch*: `{{.Ref}}`
