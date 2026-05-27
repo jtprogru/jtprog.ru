@@ -163,6 +163,7 @@ params:
   author: "jtprogru"
   mainSections: ["post"]
   dateFormat: "2006-01-02 15:04"
+  archivesDateFormat: "2006-01-02"
   defaultTheme: auto
   comments: false
 
@@ -174,8 +175,8 @@ params:
   ShowPostNavLinks: true
   relatedMax: 5
   cover:
-    hidden: false        # hide everywhere but not in structured data
-    hiddenInList: false  # hide on list pages and home
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
     hiddenInSingle: false # hide on single page
 
   # --- KaTeX подключается лениво:
@@ -211,9 +212,9 @@ params:
   # --- Главная: блок «Мои проекты» ---
   homeSections:
     projects:
-      enabled: true        # показывать блок «Мои проекты» на главной
-      featuredOnly: true   # true: показывать только проекты с `featured: true` в data/projects.yaml
-      limit: 6             # потолок карточек; если featuredOnly=true и избранных меньше — вернётся столько, сколько есть
+      enabled: true # показывать блок «Мои проекты» на главной
+      featuredOnly: true # true: показывать только проекты с `featured: true` в data/projects.yaml
+      limit: 6 # потолок карточек; если featuredOnly=true и избранных меньше — вернётся столько, сколько есть
       moreLink: /projects/ # ссылка «Все проекты →» под сеткой; пусто = не показывать
 
   # --- Profile-mode (hero на главной) ---
