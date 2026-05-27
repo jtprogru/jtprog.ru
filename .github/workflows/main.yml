@@ -36,10 +36,11 @@ jobs:
 
       - name: Telegram Notify
         if: always()
-        uses: jtprogru/notiflow@ea314602cceba3aa53e5479b23843b50e9375fb6  # v1.0.0
+        uses: jtprogru/notiflow@f7e24d9d00865a389877680c65293ae480af880b  # v1.0.1
         with:
           bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           chat_id:   ${{ secrets.TELEGRAM_USER_ID }}
+          status:    ${{ job.status }}
           message_template: |
             *Deploy status*: {{.StatusEmoji}}
             *Project*: `{{.Repo}}`
