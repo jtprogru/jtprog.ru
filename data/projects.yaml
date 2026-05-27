@@ -31,6 +31,12 @@
   status: active
   featured: true
   tags: [cli, productivity]
+- name: notiflow
+  url: https://github.com/jtprogru/notiflow
+  desc: "Github Actions для отправки уведомлений в Telegram."
+  lang: Go
+  status: active
+  tags: [alerting, ci]
 - name: thingsexporter
   url: https://github.com/jtprogru/thingsexporter
   desc: "Экспорт задач из Things 3 в разные форматы."
