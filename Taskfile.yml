@@ -49,7 +49,7 @@ tasks:
       - prec
     requires:
       vars: [SLUG]
-    cmd: hugo new content/{{.SLUG}}/index.md
+    cmd: hugo new content/posts/{{.SLUG}}/index.md
 
   update.theme:
     desc: Update all git submodules - now is only themes/PaperMod

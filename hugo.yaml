@@ -52,7 +52,7 @@ related:
 
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
-  lastmod: [":git", "lastmod", "date", "publishDate"]
+  lastmod: ["lastmod", ":git", "date", "publishDate"]
   publishDate: ["publishDate", "date"]
   expiryDate: ["expiryDate"]
 
