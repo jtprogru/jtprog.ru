@@ -18,7 +18,7 @@ tags:
   - helm
   - kubernetes
   - k8s
-categories: ["Notes"]
+categories: ["notes"]
 cover:
   image: notes.png
   alt: notes

@@ -1,7 +1,7 @@
 ---
 aliases:
   - '/film-hakers/'
-categories: ["Story"]
+categories: ["notes"]
 cover:
   alt: stories
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

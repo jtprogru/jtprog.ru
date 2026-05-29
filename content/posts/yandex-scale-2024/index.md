@@ -1,7 +1,7 @@
 ---
 aliases:
   - '/yandex-scale-2024/'
-categories: ["Meetup"]
+categories: ["notes"]
 cover:
   alt: meetup
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

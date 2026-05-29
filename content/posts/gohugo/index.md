@@ -1,7 +1,7 @@
 ---
 aliases:
   - '/gohugo/'
-categories: ["Blog"]
+categories: ["notes"]
 cover:
   alt: blog
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

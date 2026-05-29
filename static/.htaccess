@@ -78,6 +78,7 @@
     RewriteRule "^linux-checklist/?$" "/posts/linux-checklist/" [R=301,L]
     RewriteRule "^linux-top/?$" "/posts/linux-top/" [R=301,L]
     RewriteRule "^little-snitch/?$" "/posts/little-snitch/" [R=301,L]
+    RewriteRule "^logrotate-basic/?$" "/posts/logrotate-basics/" [R=301,L]
     RewriteRule "^logrotate-basics/?$" "/posts/logrotate-basics/" [R=301,L]
     RewriteRule "^macos-burn-iso/?$" "/posts/macos-burn-iso/" [R=301,L]
     RewriteRule "^man-atop/?$" "/posts/man-atop/" [R=301,L]

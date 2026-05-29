@@ -1,7 +1,7 @@
 ---
 aliases:
   - '/be-or-not-to-be/'
-categories: ["Other"]
+categories: ["notes"]
 cover:
   alt: other
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

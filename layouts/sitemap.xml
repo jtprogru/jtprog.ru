@@ -1,0 +1,24 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{{- range .Data.Pages -}}
+  {{- /* Тонкие term-страницы (теги/категории с <2 постами) Google всё равно
+         не индексирует — выкидываем из sitemap, чтобы не съедать crawl budget
+         и не раздувать «обнаружена, не проиндексирована» в GSC. */ -}}
+  {{- if and (eq .Kind "term") (lt (len .Pages) 2) -}}{{- continue -}}{{- end -}}
+  {{- with .Permalink }}
+  <url>
+    <loc>{{ . }}</loc>
+    {{- with $.Lastmod }}{{ if not .IsZero }}
+    <lastmod>{{ safeHTML (.Format "2006-01-02T15:04:05-07:00") }}</lastmod>
+    {{- end }}{{ end }}
+    {{- with $.Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>
+    {{- end }}
+    {{- if ge $.Sitemap.Priority 0.0 }}
+    <priority>{{ $.Sitemap.Priority }}</priority>
+    {{- end }}
+  </url>
+  {{- end }}
+{{- end }}
+</urlset>

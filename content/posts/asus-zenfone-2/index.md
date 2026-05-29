@@ -1,7 +1,7 @@
 ---
 aliases:
   - '/asus-zenfone-2/'
-categories: ["Other"]
+categories: ["notes"]
 cover:
   alt: other
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'

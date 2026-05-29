@@ -12,7 +12,7 @@ tags:
 - ssh
 - sshconfig
 - заметкинаполях
-categories: ["Notes"]
+categories: ["notes"]
 cover:
   image: notes.png
   alt: notes

@@ -16,7 +16,7 @@ tags:
   - apt
   - apt-key
   - ubuntu
-categories: ["Notes"]
+categories: ["notes"]
 cover:
   image: notes.png
   alt: notes
