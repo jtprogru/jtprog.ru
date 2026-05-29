@@ -13,7 +13,7 @@ keywords:
   - метрики SRE
   - мультипродукт
 date: 2026-05-28T20:08:56+03:00
-lastmod: 2026-05-28T20:08:56+03:00
+lastmod: 2026-05-29T12:00:00+03:00
 draft: false
 tags:
   - SRE
@@ -24,7 +24,7 @@ tags:
 categories: ["SRE"]
 cover:
   image: devops.png
-  alt: SRE
+  alt: 'Диалог SRE и бизнеса о надёжности, SLO и бюджете ошибок'
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
