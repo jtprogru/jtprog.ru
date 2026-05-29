@@ -22,9 +22,9 @@ lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - logrotate
   - basics
-  - "примитивы"
-  - "автоматизация"
-  - "системное администрирование"
+  - примитивы
+  - автоматизация
+  - системное администрирование
 categories: ["Basics"]
 cover:
   image: basics.png
@@ -32,7 +32,9 @@ cover:
   caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
   relative: false
 type: post
-slug: "logrotate-basics"
+slug: 'logrotate-basics'
+params:
+  math: false
 ---
 
 Привет, `%username%`! Логи – наше всё! Это знает каждый нормальный админ. Но что делать если они растут в объёме? Правильно! Настраивать logrotate чтоб он рулил размерами и количеством.
