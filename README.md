@@ -68,6 +68,31 @@ gh workflow run CI               # из CLI
 # и нажать «Run workflow»
 ```
 
+## Скрипты
+
+Всё, что лежит в `scripts/`, делится на две группы: регулярные хелперы (живут долго, могут пригодиться завтра) и разовые finalize'ы (фиксируют конкретную миграцию, оставлены для истории).
+
+### Регулярные
+
+| Скрипт | Зачем |
+| --- | --- |
+| `add_lastmod.py` | Бэкфилл `lastmod` во frontmatter постов (`content/**/index.md`), где он отсутствует — берёт значение из `date`. |
+| `mermaid-prerender.py` | Оффлайн-рендер всех ```mermaid```-блоков в SVG → `assets/mermaid/<sha256>.svg`. Render hook темы встраивает их inline; runtime mermaid bundle грузится только если SVG не найден. Запускается через `task mermaid:render`. |
+| `typograf.py` | Standalone Python 3 клиент ArtLebedev Typograf (stdlib-only). Используется как модуль из `typografy_md.py` и как CLI. |
+| `typografy_md.py` | Прогон Typograf по Markdown с защитой кода, frontmatter, шорткодов, формул, ссылок и list-маркеров — типографируется только проза. |
+| `indexnow.sh` | Дельта-сабмит в IndexNow (Bing/Yandex/Seznam/Naver) после деплоя: маппит изменённые файлы под `content/` в канонические URL и шлёт уникальный список. Вызывается из CI; шаг неблокирующий. |
+| `indexnow-full.sh` | Разовый сабмит **всех** URL сайта (источник — `sitemap.xml` с разворачиванием sitemap-index). Уместен после миграции домена или массового рефактора permalinks; в CI не дёргать. |
+
+### Разовые finalize'ы (исторические)
+
+Сценарии-склейки, которыми закрывались конкретные фичи: каждый чистит локи sandbox'а, коммитит подготовленные изменения в нужные ветки `hugo-mishka` и `jtprog.ru`, мержит и бампит submodule. Отдельно от своей фичи бессмысленны, но удобны как краткая летопись изменений.
+
+- `migrate-to-mishka.sh` — финальные шаги переезда с PaperMod на mishka.
+- `finalize-og-image.sh` — auto-resize обложек под og:image.
+- `finalize-cache-bust.sh` — cache-bust по mtime для og:image.
+- `finalize-cache-bust-everywhere.sh` — тот же cache-bust для in-page обложек (нужно для Telegram IV).
+- `finalize-iv-img-fix.sh` — совместимость с Telegram Instant View: убрать `<p>`-обёртку вокруг одиночных картинок + cache-bust.
+
 ## Тема
 
 Все правки темы делаю в репо [`hugo-mishka`](https://github.com/jtprogru/hugo-mishka) — он же прикреплён через symlink `themes/mishka-dev`. После публикации правок:
