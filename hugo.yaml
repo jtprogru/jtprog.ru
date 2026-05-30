@@ -124,7 +124,6 @@ markup:
     lineNos: false
     lineNumbersInTable: true
     noClasses: true
-    style: onedark
     tabWidth: 4
 
 # === Кеши ===
