@@ -14,13 +14,15 @@
 #        content/<name>.md         → /<slug|name>/
 #      slug читается из YAML-frontmatter (90/143 поста его переопределяют);
 #      схема сверена с `hugo list all` на всех страницах сайта.
-#   4. POST'ит уникальный список на api.indexnow.org.
+#   4. Передаёт уникальный список в `indexnow submit --stdin` (CLI
+#      https://github.com/jtprogru/indexnow), который и делает POST.
 #
 # Ключ IndexNow публичен по дизайну: лежит в static/<KEY>.txt и отдаётся
 # с https://jtprog.ru/<KEY>.txt. Значение передаётся через env INDEXNOW_KEY.
 #
-# Шаг неблокирующий: при любой ошибке сабмита печатает warning и выходит 0,
-# чтобы не ронять статус деплоя (нотификации post-deploy — fire-and-forget).
+# Шаг неблокирующий: CLI запускается с `--fail-on never`, плюс сам вызов
+# обёрнут в `|| true`, чтобы не ронять статус деплоя (нотификации post-deploy
+# — fire-and-forget).
 set -euo pipefail
 
 BASE="https://jtprog.ru"
@@ -108,20 +110,17 @@ fi
 echo "IndexNow: submitting $count URL(s):"
 sed 's/^/  /' "$urls_file"
 
-payload="$(jq -R . "$urls_file" | jq -s \
-  --arg host "$HOST" --arg key "$KEY" --arg kl "$KEYLOC" \
-  '{host: $host, key: $key, keyLocation: $kl, urlList: .}')"
-
-code="$(curl -sS -o /tmp/indexnow_resp.txt -w '%{http_code}' \
-  -X POST "$ENDPOINT" \
-  -H 'Content-Type: application/json; charset=utf-8' \
-  --data-binary "$payload" || echo "000")"
-
-if [ "$code" = "200" ] || [ "$code" = "202" ]; then
-  echo "IndexNow: OK (HTTP $code)"
-else
-  echo "::warning::IndexNow submit returned HTTP $code"
-  cat /tmp/indexnow_resp.txt 2>/dev/null || true
-  echo
+if ! command -v indexnow >/dev/null 2>&1; then
+  echo "::warning::indexnow CLI not found in PATH — skipping submit"
+  exit 0
 fi
+
+indexnow submit --stdin \
+  --host "$HOST" \
+  --key "$KEY" \
+  --key-location "$KEYLOC" \
+  --endpoint "$ENDPOINT" \
+  --fail-on never \
+  < "$urls_file" || echo "::warning::indexnow submit exited non-zero"
+
 exit 0

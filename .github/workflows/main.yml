@@ -38,6 +38,18 @@ jobs:
       # Уведомляет участников IndexNow (Bing, Yandex, Seznam, Naver…) о реально
       # изменившихся страницах. Google в IndexNow не входит. Ключ публичный,
       # его файл лежит в static/<KEY>.txt → https://jtprog.ru/<KEY>.txt.
+      - name: Install indexnow CLI
+        if: ${{ success() }}
+        env:
+          INDEXNOW_VERSION: v0.3.0
+        run: |
+          set -euo pipefail
+          url="https://github.com/jtprogru/indexnow/releases/download/${INDEXNOW_VERSION}/indexnow_Linux_x86_64.tar.gz"
+          tmp="$(mktemp -d)"
+          curl -fsSL "$url" | tar -xz -C "$tmp"
+          sudo install -m 0755 "$tmp/indexnow" /usr/local/bin/indexnow
+          indexnow --version
+
       - name: Submit changed pages to IndexNow
         if: ${{ success() }}
         env:
