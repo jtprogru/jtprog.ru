@@ -15,9 +15,9 @@
 
 ## Структура
 
-```
+```txt
 .
-├── content/          # посты + одиночные страницы (about-me, archives, search, projects, donations…)
+├── content/          # посты + одиночные страницы (about-me, archives, search, projects, donations, chat-rules, privacy-policy)
 ├── data/             # projects.yaml — источник для блока проектов и /projects/
 ├── assets/           # обложки и прочее, что должен пайплайнить Hugo
 ├── static/           # «как есть» — favicon, manifest, robots
@@ -51,7 +51,9 @@ task --list
 ## Новый пост
 
 ```sh
-hugo new content/<slug>/index.md
+hugo new content/posts/<slug>/index.md
+# или через task-обёртку:
+task new SLUG=<slug>
 ```
 
 Архетип лежит в `archetypes/default.md`. Cover-картинка — рядом с `index.md` (page bundle) **или** в `assets/covers/<slug>.{jpg,png,webp}` (общий).
