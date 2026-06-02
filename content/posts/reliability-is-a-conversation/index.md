@@ -23,9 +23,9 @@ tags:
   - Надёжность
 categories: ["SRE"]
 cover:
-  image: devops.png
+  image: cover.svg
   alt: 'Диалог SRE и бизнеса о надёжности, SLO и бюджете ошибок'
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 type: post
 slug: 'reliability-is-a-conversation'
