@@ -38,25 +38,24 @@ jobs:
       # Уведомляет участников IndexNow (Bing, Yandex, Seznam, Naver…) о реально
       # изменившихся страницах. Google в IndexNow не входит. Ключ публичный,
       # его файл лежит в static/<KEY>.txt → https://jtprog.ru/<KEY>.txt.
-      - name: Install indexnow CLI
-        if: ${{ success() }}
-        env:
-          INDEXNOW_VERSION: v0.3.0
-        run: |
-          set -euo pipefail
-          url="https://github.com/jtprogru/indexnow/releases/download/${INDEXNOW_VERSION}/indexnow_Linux_x86_64.tar.gz"
-          tmp="$(mktemp -d)"
-          curl -fsSL "$url" | tar -xz -C "$tmp"
-          sudo install -m 0755 "$tmp/indexnow" /usr/local/bin/indexnow
-          indexnow --version
-
-      - name: Submit changed pages to IndexNow
+      - name: Compute changed URLs for IndexNow
+        id: indexnow-urls
         if: ${{ success() }}
         env:
           INDEXNOW_KEY: f5059cf9a4a60e4b769ca074324beb1b
           BEFORE: ${{ github.event.before }}
           AFTER: ${{ github.sha }}
         run: bash scripts/indexnow.sh
+
+      - name: Submit changed pages to IndexNow
+        if: ${{ success() && steps.indexnow-urls.outputs.count != '0' && steps.indexnow-urls.outputs.count != '' }}
+        # main @ 2026-06-02 (docs(changelog): cut v0.5.0)
+        uses: jtprogru/indexnow@da0ce6b0e524a9293f075bbf4dfe961b662eaa10
+        with:
+          key: f5059cf9a4a60e4b769ca074324beb1b
+          file: ${{ steps.indexnow-urls.outputs.urls-file }}
+          host: jtprog.ru
+          fail-on: never
 
       - name: Telegram Notify
         if: always()
