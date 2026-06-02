@@ -37,6 +37,12 @@
   lang: Go
   status: active
   tags: [alerting, ci]
+- name: indexnow
+  url: https://github.com/jtprogru/indexnow
+  desc: "CLI и composite GitHub Action для уведомления IndexNow (Bing, Yandex и др.) об изменившихся страницах."
+  lang: Go
+  status: active
+  tags: [cli, ci, seo]
 - name: thingsexporter
   url: https://github.com/jtprogru/thingsexporter
   desc: "Экспорт задач из Things 3 в разные форматы."
