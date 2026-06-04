@@ -49,6 +49,12 @@
   lang: Go
   status: active
   tags: [cli, productivity]
+- name: thingscli
+  url: https://github.com/jtprogru/thingscli
+  desc: "Тонкая Go-обёртка над AppleScript для Things 3: чтение и запись задач из терминала и пайплайнов."
+  lang: Go
+  status: active
+  tags: [cli, productivity]
 - name: jtsekret
   url: https://github.com/jtprogru/jtsekret
   desc: "CLI для централизованного и безопасного управления личными секретами: пароли, OAuth-токены, API-ключи."
