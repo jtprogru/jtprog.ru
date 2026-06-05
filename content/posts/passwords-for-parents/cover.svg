@@ -1,0 +1,72 @@
+<svg width="1050" height="480" viewBox="0 0 1050 480" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Сложный пароль для мамы, папы, бабушки и дедушки</title>
+<desc>Слева — приглушённый короткий «сложный» пароль из восьми символов; справа — длинная парольная фраза из четырёх несвязанных слов, горящая янтарём; между ними знак сравнения подчёркивает, что длина бьёт сложность.</desc>
+<defs>
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1e2327"/>
+    <stop offset="100%" stop-color="#181c20"/>
+  </linearGradient>
+  <linearGradient id="passphraseGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#fb923c"/>
+    <stop offset="100%" stop-color="#c2410c"/>
+  </linearGradient>
+</defs>
+
+<!-- база: прямые края, весь холст, без rx -->
+<rect x="0" y="0" width="1050" height="480" fill="url(#bgGrad)"/>
+
+<!-- тихая структурная сетка -->
+<g stroke="#333b41" stroke-width="0.5" opacity="0.4">
+  <line x1="0" y1="120" x2="1050" y2="120"/>
+  <line x1="0" y1="380" x2="1050" y2="380"/>
+  <line x1="270" y1="120" x2="270" y2="380"/>
+  <line x1="780" y1="120" x2="780" y2="380"/>
+</g>
+
+<!-- Заголовок -->
+<text x="525" y="58" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="28" font-weight="700" fill="#e6e1d9">Сложный пароль для мамы, папы, бабушки и дедушки</text>
+<text x="525" y="88" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="15" fill="#9aa0a4">Длина важнее символов — четыре случайных слова бьют «сложный» восьмисимвольник в одну калитку</text>
+
+<!-- ЛЕВО: старая школа, приглушённый короткий «сложный» пароль -->
+<rect x="70" y="200" width="280" height="100" rx="10" fill="#252b30" stroke="#333b41" stroke-width="1.5"/>
+<text x="210" y="232" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="26" font-weight="700" fill="#9aa0a4" letter-spacing="2">P@ss1!</text>
+<text x="210" y="262" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="12" fill="#9aa0a4">8 символов · «сложно», но коротко</text>
+<text x="210" y="282" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="11" fill="#9aa0a4">brute-force: часы</text>
+<text x="210" y="170" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="11" fill="#9aa0a4" letter-spacing="1">раньше</text>
+
+<!-- РАЗДЕЛИТЕЛЬ: знак «много больше» — нейтральный, без акцента -->
+<text x="425" y="258" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="48" font-weight="700" fill="#9aa0a4">≪</text>
+
+<!-- ПРАВО: СМЫСЛОВОЙ ЦЕНТР — длинная парольная фраза, горящая янтарём -->
+<rect x="478" y="186" width="502" height="128" rx="12" fill="#252b30" stroke="#fb923c" stroke-width="2.5"/>
+<!-- горящая корешковая полоса слева бокса -->
+<rect x="478" y="186" width="10" height="128" rx="5" fill="url(#passphraseGrad)"/>
+<text x="734" y="218" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="11" fill="#fdba74" letter-spacing="1">passphrase</text>
+<text x="734" y="256" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="22" font-weight="700" fill="#fdba74" letter-spacing="0.5">корзина-трактор-ягода-фонарь</text>
+<text x="734" y="282" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="12" fill="#9aa0a4">28 символов · четыре несвязанных слова</text>
+<text x="734" y="302" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="11" fill="#9aa0a4">brute-force: века</text>
+<text x="734" y="170" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="11" fill="#fdba74" letter-spacing="1">сегодня</text>
+
+<!-- НИЖНЯЯ СНОСКА: NIST -->
+<g stroke="#333b41" stroke-width="1" opacity="0.6">
+  <line x1="350" y1="365" x2="700" y2="365"/>
+</g>
+<text x="525" y="394" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="12" fill="#9aa0a4">NIST SP 800-63B Rev.4 · минимум 15 символов · уникально · не из утечек</text>
+
+<!-- Подпись канала -->
+<text x="525" y="442" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="12" fill="#fdba74">Мишка на сервере · @jtprogru_channel</text>
+</svg>
