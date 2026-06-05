@@ -103,7 +103,9 @@ markup:
               - '\)'
         enable: true
     parser:
-      attribute: true
+      attribute:
+        block: false
+        title: true
       autoHeadingID: true
       autoHeadingIDType: github
       # Не оборачивать одиночные картинки в <p>. Render-image hook отдаёт
@@ -118,8 +120,6 @@ markup:
     anchorLineNos: false
     codeFences: true
     guessSyntax: false
-    hl_Lines: ""
-    lineAnchors: ""
     lineNoStart: 1
     lineNos: false
     lineNumbersInTable: true
