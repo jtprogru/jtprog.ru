@@ -66,7 +66,7 @@ description: Пиши и оформляй посты для блога jtprog.ru
 
 ## Hugo frontmatter
 
-Полная схема (см. `archetypes/default.md` в репозитории — она канон). Заполняй все поля, не оставляй TODO.
+Полная схема (см. `archetypes/posts.md` в репозитории — она канон). Заполняй все поля, не оставляй TODO.
 
 ```yaml
 ---

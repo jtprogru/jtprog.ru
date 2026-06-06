@@ -56,7 +56,17 @@ hugo new content/posts/<slug>/index.md
 task new SLUG=<slug>
 ```
 
-Архетип лежит в `archetypes/default.md`. Cover-картинка — рядом с `index.md` (page bundle) **или** в `assets/covers/<slug>.{jpg,png,webp}` (общий).
+Архетип лежит в `archetypes/posts.md`. Cover-картинка — рядом с `index.md` (page bundle) **или** в `assets/covers/<slug>.{jpg,png,webp}` (общий).
+
+Для одиночной страницы (about-me, donations и т.п.):
+
+```sh
+hugo new --kind page content/<slug>.md
+# или через task-обёртку:
+task new:page SLUG=<slug>
+```
+
+Архетип — `archetypes/page.md`.
 
 ## Деплой
 

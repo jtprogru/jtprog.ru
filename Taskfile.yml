@@ -51,6 +51,14 @@ tasks:
       vars: [SLUG]
     cmd: hugo new content/posts/{{.SLUG}}/index.md
 
+  new:page:
+    desc: "Create new standalone page from archetype (usage: task new:page SLUG=my-page)"
+    deps:
+      - prec
+    requires:
+      vars: [SLUG]
+    cmd: hugo new --kind page content/{{.SLUG}}.md
+
   update.theme:
     desc: Update all git submodules - now is only themes/PaperMod
     deps:
