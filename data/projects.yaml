@@ -73,6 +73,12 @@
   lang: Go
   status: active
   tags: [cli, security]
+- name: rspassimpt
+  url: https://github.com/jtprogru/rspassimpt
+  desc: "Быстрый импортёр CSV-экспорта из macOS Passwords прямо в локальный pass-store (passwordstore.org)."
+  lang: Rust
+  status: active
+  tags: [cli, security]
 - name: repo-opener
   url: https://github.com/jtprogru/repo-opener
   desc: "Открывает remote-репозиторий из локального клона прямо в браузере."
