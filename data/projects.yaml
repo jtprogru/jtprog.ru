@@ -85,6 +85,12 @@
   lang: Go
   status: active
   tags: [cli, devx]
+- name: dsa-for-ops
+  url: https://jtprogru.github.io/dsa-for-ops/
+  desc: "Лабораторные и конспект по алгоритмам и структурам данных (Python) на MkDocs Material."
+  lang: Docs
+  status: active
+  tags: [learning, algorithms]
 - name: cubic-root
   url: https://github.com/jtprogru/cubic-root
   desc: "Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes."
