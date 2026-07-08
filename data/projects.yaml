@@ -91,6 +91,12 @@
   lang: Docs
   status: active
   tags: [learning, algorithms]
+- name: pack-ui.nvim
+  url: https://github.com/jtprogru/pack-ui.nvim
+  desc: "Плавающее окно для встроенного менеджера плагинов vim.pack: смотреть статусы и обновлять плагины (Neovim 0.12+)."
+  lang: Lua
+  status: active
+  tags: [neovim, plugin]
 - name: cubic-root
   url: https://github.com/jtprogru/cubic-root
   desc: "Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes."
