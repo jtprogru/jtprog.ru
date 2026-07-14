@@ -24,10 +24,9 @@ tags:
   - troubleshooting
 categories: ["DevOps"]
 cover:
-  image: devops.png
-  alt: devops
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  relative: false
+  image: cover.png
+  alt: 'Как облачная синхронизация тихо ломает git'
+  relative: true
 type: post
 slug: 'cloud-sync-breaks-git'
 params:
