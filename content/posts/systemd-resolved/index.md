@@ -5,7 +5,7 @@ title: 'Настройка systemd-resolved'
 description: 'Пошаговая инструкция по настройке systemd-resolved в Linux: кэширование DNS, интеграция с NSS, настройка /etc/resolv.conf и запуск службы.'
 keywords: ['systemd-resolved настройка', 'linux dns cache', 'systemd resolved', 'nss-resolve', 'systemd-resolved конфиг', 'linux dns', 'systemd-resolved инструкция']
 date: "2020-11-29T12:00:00+03:00"
-lastmod: "2020-11-29T12:00:00+03:00"
+lastmod: "2026-07-20T12:00:00+03:00"
 tags:
 - systemd
 - resolved
@@ -20,7 +20,7 @@ type: post
 slug: systemd-resolved
 ---
 
-Привет, `%username%`! Очень давно я писал о том, как я настраивал [dnsmasq](https://jtprog.ru/posts/domain-zone-dnsmasq/) для настройки локальной зоны. Сейчас мы настроим `systemd-resolved` как локальный кэширующий резолвер.
+Привет, `%username%`! Очень давно я писал о том, как я настраивал [dnsmasq](https://jtprog.ru/posts/domain-zone-dnsmasq/) для настройки локальной зоны. Сейчас мы настроим `systemd-resolved` как локальный кэширующий резолвер. Куда этот кэш встраивается в общую цепочку – от браузера до authoritative-сервера – я разбирал в посте [«Что происходит, когда ты открываешь сайт»](https://jtprog.ru/posts/what-happens-when-you-open-website/).
 
 Его настройку я рассматриваю только потому, что `systemd-resolved` есть в системе (в нормальной свежей системе с systemd).
 

@@ -5,7 +5,7 @@ title: 'Настройка Linux для HL и защиты от DDoS'
 description: 'Пошаговая инструкция по настройке sysctl для повышения производительности Linux, защиты от DDoS и оптимизации под высокие нагрузки: параметры, примеры, рекомендации.'
 keywords: ['sysctl настройка linux', 'ddos защита linux', 'оптимизация ядра linux', 'linux highload', 'sysctl.conf примеры', 'сетевые параметры linux', 'linux performance tuning', 'linux ddos mitigation', 'настройка tcp linux', 'tcp bbr', 'tcp_notsent_lowat', 'tcp_syncookies', 'tcp_fastopen', 'ядро 6.x']
 date: "2019-07-26T18:50:58+03:00"
-lastmod: "2026-05-15T20:00:00+03:00"
+lastmod: "2026-07-20T12:00:00+03:00"
 tags:
   - sysctl
   - linux
@@ -403,7 +403,7 @@ net.ipv4.tcp_congestion_control = bbr
 net.core.default_qdisc           = fq
 ```
 
-[BBR](https://github.com/google/bbr) (от Google, мейнлайн с ядра 4.9) — congestion control на модели пропускной способности, а не на потере пакетов. В реальном инете с buffer-bloat и lossy-соединениями он стабильно даёт лучший throughput и заметно меньший latency-tail. Требует `fq` qdisc по умолчанию. В свежих ядрах уже есть `bbr3` (с 6.4+), который дружелюбнее к остальному трафику.
+[BBR](https://github.com/google/bbr) (от Google, мейнлайн с ядра 4.9) — congestion control на модели пропускной способности, а не на потере пакетов. В реальном инете с buffer-bloat и lossy-соединениями он стабильно даёт лучший throughput и заметно меньший latency-tail. Требует `fq` qdisc по умолчанию. В свежих ядрах уже есть `bbr3` (с 6.4+), который дружелюбнее к остальному трафику. Что такое congestion window и почему slow start вообще существует – разбирал в посте [«Что происходит, когда ты открываешь сайт»](/posts/what-happens-when-you-open-website/).
 
 Проверить, какие алгоритмы доступны на твоём ядре:
 
