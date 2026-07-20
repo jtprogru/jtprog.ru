@@ -15,7 +15,7 @@ keywords:
   - congestion control
   - вопрос на собеседовании
 date: "2026-07-20T12:00:00+03:00"
-lastmod: "2026-07-20T12:00:00+03:00"
+lastmod: "2026-07-20T22:45:00+03:00"
 tags:
   - networking
   - linux
