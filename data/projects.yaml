@@ -24,13 +24,13 @@
   status: active
   featured: true
   tags: [sre, cli]
-- name: todushka
-  url: https://github.com/jtprogru/todushka
-  desc: "Терминальный аналог Things 3 с аналогичным функционалом."
-  lang: Go
+- name: pack-ui.nvim
+  url: https://github.com/jtprogru/pack-ui.nvim
+  desc: "Плавающее окно для встроенного менеджера плагинов vim.pack: смотреть статусы и обновлять плагины (Neovim 0.12+)."
+  lang: Lua
   status: active
   featured: true
-  tags: [cli, productivity]
+  tags: [neovim, plugin]
 - name: notiflow
   url: https://github.com/jtprogru/notiflow
   desc: "Github Actions для отправки уведомлений в Telegram."
@@ -91,12 +91,12 @@
   lang: Docs
   status: active
   tags: [learning, algorithms]
-- name: pack-ui.nvim
-  url: https://github.com/jtprogru/pack-ui.nvim
-  desc: "Плавающее окно для встроенного менеджера плагинов vim.pack: смотреть статусы и обновлять плагины (Neovim 0.12+)."
-  lang: Lua
+- name: todushka
+  url: https://github.com/jtprogru/todushka
+  desc: "Терминальный аналог Things 3 с аналогичным функционалом."
+  lang: Go
   status: active
-  tags: [neovim, plugin]
+  tags: [cli, productivity]
 - name: cubic-root
   url: https://github.com/jtprogru/cubic-root
   desc: "Учебное Go-приложение с Docker multi-stage сборкой и Helm-чартом для Kubernetes."
