@@ -160,6 +160,8 @@ module:
 params:
   env: production
   author: "jtprogru"
+  # Fallback meta description для страниц без своего описания (в т.ч. главной).
+  description: "Блог Михаила aka jtprogru про SRE, DevOps и системное администрирование: инженерные заметки, разборы инцидентов и практики эксплуатации."
   mainSections: ["post"]
   dateFormat: "2006-01-02 15:04"
   archivesDateFormat: "2006-01-02"
