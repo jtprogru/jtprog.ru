@@ -208,6 +208,34 @@
     </FilesMatch>
 </IfModule>
 
+# --- 3.5. Security headers ---
+# Ставятся на backend-Apache; nginx-фронт REG.RU + DDoS-Guard могут их
+# перекрывать/дублировать — после деплоя ОБЯЗАТЕЛЬНО сверить `curl -I https://jtprog.ru`.
+# `always`, чтобы заголовки попадали и в error-ответы (404 и т.п.).
+<IfModule mod_headers.c>
+    # Запрет MIME-sniffing.
+    Header always set X-Content-Type-Options "nosniff"
+    # Анти-кликджекинг для старых браузеров (в новых работает frame-ancestors в CSP).
+    Header always set X-Frame-Options "SAMEORIGIN"
+    # Утечка реферера: полный путь только на свой origin.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Изоляция origin (PSI: COOP). Для статического блога без oauth-popup безопасно.
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    # Отключаем ненужные мощные API.
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    # HSTS. Пока БЕЗ includeSubDomains/preload — сначала убедиться, что все
+    # поддомены (netbox.jtprog.ru и пр.) отдаются по HTTPS. Поднять после проверки.
+    Header always set Strict-Transport-Security "max-age=31536000"
+
+    # CSP — пока Report-Only: не блокирует, только пишет нарушения в консоль DevTools.
+    # Источники: gtag (G-NK4TC343YF), Yandex.Metrica (mc.yandex.ru), KaTeX (cdn.jsdelivr.net).
+    # 'unsafe-inline' нужен из-за инлайн-скриптов (тема-тоггл, загрузчик аналитики),
+    # инлайн event-handlers (onload=) и style=-атрибутов. Чтобы перейти в блокирующий
+    # режим без 'unsafe-inline' — нужен nonce-рефакторинг инлайнов в теме (отдельная задача).
+    # Собрать нарушения, вычистить лишнее и заменить заголовок на Content-Security-Policy.
+    Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://mc.yandex.ru https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://mc.yandex.ru https://www.google-analytics.com; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://mc.yandex.ru https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-src https://mc.yandex.ru; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+</IfModule>
+
 # --- 4. mod_expires как fallback (если mod_headers где-то не сработает) ---
 <IfModule mod_expires.c>
     ExpiresActive On
