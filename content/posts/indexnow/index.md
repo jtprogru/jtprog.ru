@@ -21,9 +21,9 @@ tags:
   - ci
 categories: ["HowTo"]
 cover:
-  image: howto.png
-  alt: howto
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  image: cover.svg
+  alt: 'IndexNow: один git push дёргает один запрос, который расходится сразу ко всем поисковикам протокола, а Google остаётся на sitemap'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 type: post
 slug: 'indexnow'
