@@ -195,6 +195,7 @@ params:
     text: "Мишка на сервере"
     icon: /fav-light.svg
     iconHeight: 45
+    iconWidth: 35 # fav-light.svg viewBox 23.16×29.57 → при height 45 ширина ≈ 35; резервирует бокс, чтобы шапка не прыгала (CLS)
   assets:
     favicon: /favicon.svg
     favicon16x16: /favicon-16x16.svg
