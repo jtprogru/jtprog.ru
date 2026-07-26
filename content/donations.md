@@ -53,7 +53,8 @@ type: page
 
 Честно: это реферальные ссылки — за регистрацию по ним я получаю бонус, ты тоже получаешь приветственный бонус сервиса. Win-win, но прозрачность дороже:
 
-- [SmartApe](http://www.smartape.ru/?partner=52369) — хостинг/VPS
-- [ChadGPT](https://ask.chadgpt.ru/ref/536fe51050034a61) — доступ к ChatGPT из РФ
+- [SmartApe](http://www.smartape.ru/?partner=52369) — хостинг/VPS;
+- [ChadGPT](https://ask.chadgpt.ru/ref/536fe51050034a61) — доступ к ChatGPT из РФ;
+- [Wispr Flow](https://wisprflow.ai/r?MIKHAIL207) — отличный голосовой ввод (STT);
 
 **СПАСИБО ТЕБЕ, `%username%`!**
