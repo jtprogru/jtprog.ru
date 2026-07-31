@@ -79,6 +79,12 @@
   lang: Rust
   status: active
   tags: [cli, security]
+- name: jlic
+  url: https://github.com/jtprogru/jlic
+  desc: "Генератор LICENSE-файлов: семь популярных лицензий зашиты в бинарь, правообладатель и год подставляются из git config."
+  lang: Rust
+  status: active
+  tags: [cli, devx]
 - name: repo-opener
   url: https://github.com/jtprogru/repo-opener
   desc: "Открывает remote-репозиторий из локального клона прямо в браузере."
