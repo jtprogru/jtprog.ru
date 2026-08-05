@@ -184,6 +184,6 @@ tar -cP --mode=755 /bin/chmod | tar x
 
 ---
 
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://ttttt.me/jtprogru_chat), а так же подписывайся на [канал](https://ttttt.me/jtprogru_channel).
+Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
 
 О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 
