@@ -25,9 +25,9 @@ tags:
   - DevOps
 categories: ["Opinions"]
 cover:
-  image: opinions.png
+  image: cover.svg
   alt: 'Зрелая Digital Immune System как замкнутая петля обратной связи'
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 type: post
 slug: 'digital-immune-system-maturity'
