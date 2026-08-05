@@ -42,8 +42,8 @@ hugo server -D -E -F
 # одноразовый билд
 hugo --gc --minify
 
-# task-обёртки (см. Taskfile.yml)
-task --list
+# make-обёртки (см. Makefile)
+make help
 ```
 
 > Тема дев-клонируется через symlink `themes/mishka-dev → ~/Work/.../hugo-mishka` и подключается флагом `hugo --theme mishka-dev`. Прод использует pinned-submodule `themes/mishka`.
@@ -52,8 +52,8 @@ task --list
 
 ```sh
 hugo new content/posts/<slug>/index.md
-# или через task-обёртку:
-task new SLUG=<slug>
+# или через make-обёртку:
+make new SLUG=<slug>
 ```
 
 Архетип лежит в `archetypes/posts.md`. Cover-картинка — рядом с `index.md` (page bundle) **или** в `assets/covers/<slug>.{jpg,png,webp}` (общий).
@@ -62,8 +62,8 @@ task new SLUG=<slug>
 
 ```sh
 hugo new --kind page content/<slug>.md
-# или через task-обёртку:
-task new:page SLUG=<slug>
+# или через make-обёртку:
+make new-page SLUG=<slug>
 ```
 
 Архетип — `archetypes/page.md`.
