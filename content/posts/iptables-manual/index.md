@@ -5,7 +5,7 @@ title: 'Шпаргалка по iptables'
 description: "Подробная шпаргалка по iptables: основные команды, примеры настройки, удаление и добавление правил, сохранение и восстановление конфигурации файрвола."
 keywords: ["iptables linux", "настройка файрвола", "iptables команды", "пример iptables", "iptables правила", "linux firewall", "iptables howto", "iptables flush", "iptables restore", "nftables", "iptables-nft", "iptables-translate"]
 date: "2015-03-30T16:48:37+03:00"
-lastmod: "2026-07-20T12:00:00+03:00"
+lastmod: "2026-08-06T12:00:00+03:00"
 tags:
   - iptables
   - man
@@ -305,41 +305,41 @@ iptables -A INPUT -i eth1 -p tcp -s 192.168.1.0/24 --dport 80 -j DROP
 
 ## Заблокировать запросы на исходящий IP адрес
 
-Чтобы заблокировать определенный домен, узнаем его адрес:
+Чтобы заблокировать определенный домен, узнаем его адрес. Для примера возьмём yandex.ru:
 
 ```bash
-host -t a facebook.com
+host -t a yandex.ru
 ```
 
 Вывод:
 
 ```bash
-facebook.com has address 69.171.228.40
+yandex.ru has address 77.88.55.242
 ```
 
-Найдем `CIDR` для `69.171.228.40`:
+Найдем сеть для `77.88.55.242` (адрес из зоны RIPE, поэтому grep'аем поле `route`; у ARIN оно называется `CIDR`):
 
 ```bash
-whois 69.171.228.40 | grep CIDR
+whois 77.88.55.242 | grep route
 ```
 
 Вывод:
 
 ```bash
-CIDR: 69.171.224.0/19
+route:          77.88.55.0/24
 ```
 
-Заблокируем доступ на `69.171.224.0/19`:
+Заблокируем доступ на `77.88.55.0/24`:
 
 ```bash
-iptables -A OUTPUT -p tcp -d 69.171.224.0/19 -j DROP
+iptables -A OUTPUT -p tcp -d 77.88.55.0/24 -j DROP
 ```
 
 Также можно использовать домен для блокировки:
 
 ```bash
-iptables -A OUTPUT -p tcp -d www.fаcebook.com -j DROP 
-iptables -A OUTPUT -p tcp -d fаcebook.com -j DROP
+iptables -A OUTPUT -p tcp -d www.yandex.ru -j DROP 
+iptables -A OUTPUT -p tcp -d yandex.ru -j DROP
 ```
 
 ## Записать событие и сбросить
