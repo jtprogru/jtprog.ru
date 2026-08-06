@@ -1,6 +1,6 @@
 ---
 title: 'Digital Immune System: инженерия устойчивости как продукт'
-description: "Чем зрелый DIS отличается от набора практик: петля обратной связи, SLO как gate в CI/CD, границы автоматики, экономика надёжности и пять маркеров зрелости."
+description: "Чем зрелый DIS отличается от набора практик: петля обратной связи, SLO как gate в CI/CD, границы автоматики, чужие модели зрелости и пять собственных маркеров."
 keywords:
   - Digital Immune System
   - DIS
@@ -13,6 +13,8 @@ keywords:
   - постмортем
   - graceful degradation
   - надёжность
+  - модель зрелости
+  - maturity model
 date: 2026-08-05T12:00:00+03:00
 lastmod: 2026-08-05T12:00:00+03:00
 draft: false
@@ -62,7 +64,9 @@ params:
 
 ## Связность вместо перечисления
 
-DIS обычно описывают через шесть практик: observability, AI-augmented testing, chaos engineering, auto remediation, SRE, supply chain security — в таком виде концепцию упаковал Gartner в [Top Strategic Technology Trends for 2023](https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2023), анонсированных в октябре 2022 года. Каждая закрывает часть проблем, но шесть квадратов в презентации ещё не делают систему иммунной. Иммунитет рождается из связей между ними.
+DIS обычно описывают через [шесть практик](/posts/digital-immune-system/#шесть-столпов-dis) — в таком виде концепцию упаковал Gartner в [Top Strategic Technology Trends for 2023](https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2023), анонсированных в октябре 2022 года. Каждая закрывает часть проблем, но шесть квадратов в презентации ещё не делают систему иммунной. Иммунитет рождается из связей между ними.
+
+У самого термина, кстати, судьба показательная. Из топ-трендов Gartner DIS выпал сразу после 2023 года — в списках 2024, 2025 и [2026](https://www.gartner.com/en/newsroom/press-releases/2025-10-20-gartner-identifies-the-top-strategic-technology-trends-for-2026) его уже нет, а сама концепция переехала в [Hype Cycle for Emerging Technologies 2024](https://www.gartner.com/en/newsroom/press-releases/2024-08-21-gartner-2024-hype-cycle-for-emerging-technologies-highlights-developer-productivity-total-experience-ai-and-security), причём в security-компанию к AI TRiSM и cybersecurity mesh. Знаменитый прогноз «инвестировавшие в digital immunity к 2025 году сократят downtime на 80%» Gartner публично так и не проверил. Инженерные лидеры вывеску тоже не подхватили: AWS называет то же самое continuous resilience, Google и Meta[^meta] — reliability engineering, Microsoft — reliability maturity. Термином пользуются в основном аутсорсеры вроде [Infosys TechCompass](https://www.infosys.com/iki/techcompass/digital-immune-system.html) и HCLTech. Хоронить концепцию из-за этого не стоит: все шесть практик живее всех живых и развиваются активнее, чем в 2022-м. Просто бренд не прижился, а содержание разошлось по индустрии под другими именами — и дальше я говорю «DIS» именно про содержание.
 
 Связь первая — **SLO как gate в CI/CD**. Observability и release safety встречаются в одной точке: метрики ошибок и латентности превращаются в условие, при котором релиз продолжается или останавливается. Если [SLO существуют отдельно от пайплайна](/posts/slo-as-architecture-blueprint/) — это отчёты, не контракты.
 
@@ -99,7 +103,7 @@ flowchart TD
 
 Канонический публичный пример — [инцидент GitHub 21 октября 2018](https://github.blog/news-insights/company-news/oct21-post-incident-analysis/). После 43-секундного разрыва между восточными ДЦ orchestrator автоматически промоутнул реплики MySQL, и в данных образовалось расхождение. Команда сознательно остановила доставку 5 миллионов webhook-событий и 80 тысяч Pages-сборок на время восстановления целостности БД — формулировка из постмортема: «explicit choice to partially degrade site usability […] instead of jeopardizing data we had already received from users». Это и есть приоритет «целостность данных > доступность фичи», превращённый в решение под давлением.
 
-Другой угол — деградация как продукт, а не аварийный режим. Cloudflare продаёт [Always Online](https://developers.cloudflare.com/cache/how-to/always-online/) как явный контракт: если origin недоступен, edge отдаст статическую копию из кеша или версию из Internet Archive, динамика честно режется до статики. Клиент покупает «худший, но живой» ответ заранее. Netflix формализовал ту же идею в Hystrix (проект давно в maintenance mode, но паттерн пережил инструмент) и архитектуре рекомендательных пайплайнов: онлайн-расчёт может не уложиться в SLA — тогда отдаётся precomputed fallback вроде неперсонализированной подборки, а не ошибка.
+Другой угол — деградация как продукт, а не аварийный режим. Cloudflare продаёт [Always Online](https://developers.cloudflare.com/cache/how-to/always-online/) как явный контракт: если origin недоступен, edge отдаст статическую копию из кеша или версию из Internet Archive, динамика честно режется до статики. Клиент покупает «худший, но живой» ответ заранее. Netflix формализовал ту же идею в Hystrix (проект давно в maintenance mode, но паттерн пережил инструмент) и архитектуре рекомендательных пайплайнов: онлайн-расчёт может не уложиться в SLA — тогда отдаётся precomputed fallback вроде неперсонализированной подборки, а не ошибка. Свежее продолжение той же линии — [service-level prioritized load shedding](https://netflixtechblog.com/enhancing-netflix-reliability-with-service-level-prioritized-load-shedding-e735e6ce8f7d): приоритизированный сброс нагрузки переехал с edge внутрь отдельных сервисов, чтобы переживать рекордные пики live-трансляций. Показательно, куда сместился центр тяжести Netflix за десять лет: от «сломай прод и посмотри» к деградации, встроенной в каждый сервис как штатный механизм.
 
 Отсюда три практических следствия.
 
@@ -115,7 +119,7 @@ Auto remediation на бумаге звучит как «система сама
 
 **Разделение control plane и data plane по уровню автоматизации.** Data plane может рестартиться, переезжать между узлами, масштабироваться самостоятельно — здесь автоматика работает в зоне с предсказуемыми последствиями. Control plane — нет, или с дополнительными гардрейлами: автоматические изменения IAM, политик доступа, маршрутизации трафика между регионами — это операции с длинным blast radius и долгим rollback.
 
-[Глобальный отказ Facebook 4 октября 2021](https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/) — учебник по тому, что происходит, когда control plane завязан сам на себя. Рутинная команда оценки доступности backbone обвалила все межДЦ-линки; audit-инструмент, который должен был такую команду остановить, не сработал из-за бага. DNS-серверы автоматически сняли BGP-анонсы дата-центров — корректная политика «unhealthy = снимаем» превратилась в самоблокировку, когда «unhealthy» стало «всё одновременно». Инженеры на полдня лишились внутренних инструментов диагностики и физического доступа к части помещений. Урок: автоматика control plane должна иметь канал управления, не зависящий от того, что она контролирует.
+[Глобальный отказ Facebook 4 октября 2021](https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/)[^meta] — учебник по тому, что происходит, когда control plane завязан сам на себя. Рутинная команда оценки доступности backbone обвалила все межДЦ-линки; audit-инструмент, который должен был такую команду остановить, не сработал из-за бага. DNS-серверы автоматически сняли BGP-анонсы дата-центров — корректная политика «unhealthy = снимаем» превратилась в самоблокировку, когда «unhealthy» стало «всё одновременно». Инженеры на полдня лишились внутренних инструментов диагностики и физического доступа к части помещений. Урок: автоматика control plane должна иметь канал управления, не зависящий от того, что она контролирует.
 
 Зеркальный кейс — [платформа Yandex Infrastructure](https://habr.com/ru/companies/yandex_cloud_and_infra/articles/1004584/), где тот же урок реализован заранее, а не выучен на аварии. Компоненты основного облака выкатывает отдельный редко обновляемый админский контур: сервис не деплоит сам себя, и кольцо «чтобы поднять облако, нужно облако» разорвано архитектурно. Система прав живёт внутри облака, но у дежурного есть аварийный обход — кнопка выдаёт абсолютный доступ мимо IDM, чтобы разбор инцидента не ждал восстановления той самой системы, которая лежит. SSH-сервер написан с нулём онлайновых зависимостей, аутентификация переведена с ключей на сертификаты, и раскатка прав по хостам перестала занимать 15 минут и ушла с критического пути. За шесть лет — три серьёзных инцидента на ~150 000 хостов и ни одного полного краха. «Канал управления, не зависящий от контролируемого» стоит читать не как принцип, а как список конкретных решений, каждое из которых кто-то оплатил временем команды.
 
@@ -126,6 +130,8 @@ Auto remediation на бумаге звучит как «система сама
 **Auto-healing допустим только там, где есть наблюдаемость, reversible-действия и понятный rollback-план.** Если автоматику нельзя откатить одним действием — она работает только с человеком в петле. Это отсеивает большинство «умных» сценариев самовосстановления, которые красиво звучат в обзорах, но в проде разрывают петлю обратной связи.
 
 Та же платформа Яндекса — сильный аргумент в пользу такой строгости. На масштабе ~50 000 приложений компания выбрала не самовосстановление, а быстрый обходной путь для человека: не «система сама чинит», а «дай дежурному дотянуться до системы за секунды». Философия прямо обратная модному auto-healing, и результат по надёжности от этого не пострадал. Полезная поправка к ощущению, что зрелость измеряется долей автоматических действий: измеряется она тем, у кого остаётся возможность вмешаться, когда автоматика ошиблась.
+
+Meta решает ту же дилемму с третьей стороны: автоматизирует не действие, а диагноз. Платформа [DrP](https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/) — это root cause analysis как сервис: 300+ команд, 2000 анализаторов, 50 тысяч автоматических расследований в день и снижение MTTR на 20–80%, при этом решение о вмешательстве остаётся за человеком. Ещё раньше туда же [подключили LLM](https://engineering.fb.com/2024/06/24/data-infrastructure/leveraging-ai-for-efficient-incident-response/) — ранжировать подозрительные изменения при расследовании инцидента. Логика та же, что у Яндекса с break-glass: автоматический диагноз — безопасная зона. Ошибётся анализатор — дежурный потеряет минуты на проверку гипотезы, а не прод.
 
 **Runbook-as-code: ручное действие живёт один раз.** Попало в постмортем — либо исчезает (через архитектурное изменение, после которого действие не нужно), либо становится безопасной автоматикой с лимитами. Накопление повторяющихся ручных шагов — главный симптом разорванной петли.
 
@@ -148,6 +154,24 @@ Auto remediation на бумаге звучит как «система сама
 **Управляемая девяточность** — целимся не в максимум, а в оптимум. Лишняя девятка стоит дорого: переход с 99.9% на 99.99% кратно увеличивает вложения в инфраструктуру и команду, а прирост пользовательской ценности с этими вложениями несопоставим. Зрелая команда умеет сказать руководству «нам не нужна следующая девятка» и объяснить, почему.
 
 Когда DIS обсуждается на языке денег, руководство принимает решения о надёжности так же, как о фичах. Пока этого языка нет, надёжность живёт только на инженерных совещаниях — а бюджет уходит туда, где ценность показана в деньгах.
+
+## Чужие лестницы зрелости
+
+Прежде чем предлагать свою диагностику, честный вопрос: может, готовая линейка уже есть? Я пошёл проверять и обнаружил показательную вещь. **Сводной модели зрелости DIS не существует.** Gartner её не публиковал: ни [статья-первоисточник](https://www.gartner.com/en/articles/what-is-a-digital-immune-system-and-why-does-it-matter), ни [глоссарий](https://www.gartner.com/en/information-technology/glossary/digital-immune-system) уровней не предлагают, а в названиях платных Hype Cycle модель зрелости DIS не значится. Зато в 2023–2025 стадийные модели появились у тех, кто термин не употребляет вовсе — и по ним хорошо видно, куда индустрия смотрит на самом деле.
+
+Самая близкая к «лестнице зрелости DIS» вещь на рынке — [Reliability Maturity Model](https://learn.microsoft.com/en-us/azure/well-architected/reliability/maturity-model) из Azure Well-Architected Framework, появившаяся в 2025 году. Пять уровней: Get resilient → Self-preservation → Recovery readiness → Maintain stability → Stay resilient. SRE как роль появляется на третьем уровне, выделенная SRE-функция и safe deployment practices — на четвёртом, а пятый честно объявлен бесконечным: устойчивость к рискам, которые ещё не случались. Ирония в том, что «гартнеровскую» модель зрелости в итоге написал Microsoft.
+
+AWS пошёл другим путём, и для этого поста он показательнее. [Resilience Lifecycle Framework](https://docs.aws.amazon.com/prescriptive-guidance/latest/resilience-lifecycle-framework/introduction.html) — сознательно не лестница, а цикл из пяти стадий: Set Objectives → Design and Implement → Evaluate and Test → Operate → Respond and Learn. Последняя стадия возвращает тебя к первой: выучил урок инцидента — пересмотрел цели. AWS независимо пришёл к тому же выводу, вокруг которого построен весь этот пост: зрелость — это замкнутая петля, а не этаж, на который поднялся и остался. Инструментальная обвязка тоже живая: [Resilience Hub](https://aws.amazon.com/about-aws/whats-new/2024/12/aws-resilience-hub-fault-injection-service-recommendations/) с конца 2024 года сам рекомендует эксперименты Fault Injection Service под конкретную архитектуру — chaos engineering из ручной дисциплины превращается в подсказку сервиса.
+
+У CNCF есть [Cloud Native Maturity Model](https://maturitymodel.cncf.io/) от рабочей группы Cartografos: пять уровней по четырём измерениям — People, Process, Policy, Technology. Для нашей темы интересны верхние ступени: chaos engineering как штатная операция появляется на четвёртом уровне, автоматическое восстановление в known good state — на пятом. То есть и здесь автоматика самовосстановления — вершина лестницы, а не входной билет.
+
+По отдельным столпам DIS лестницы существуют давно, но живут независимо друг от друга. Chaos engineering — классическая Chaos Maturity Model из книги Netflix/O'Reilly с осями sophistication и adoption, которую сегодня поддерживает [Gremlin](https://www.gremlin.com/community/tutorials/chaos-engineering-adoption-guide), плюс [eBook Harness](https://www.harness.io/resources/the-chaos-engineering-maturity-model) 2024 года. Observability — [Grafana Observability Journey](https://grafana.com/blog/2024/01/29/how-to-improve-your-observability-strategy-introducing-the-observability-journey-maturity-model/) (Reactive → Proactive → Systematic) и [модель New Relic](https://docs.newrelic.com/docs/new-relic-solutions/observability-maturity/introduction/). Reliability в целом — [Reliability Maturity Model в USENIX ;login:](https://www.usenix.org/publications/loginonline/reliability-maturity-model) (Absent → Reactive → Stable → Proactive → Predictive → Optimized) и опросник [Google CRE Production Maturity Assessment](https://sre.google/static/pdf/cloud-cre-production-maturity-assessment.pdf). Supply chain — [SLSA](https://slsa.dev/spec/latest/levels) с уровнями L0–L3, единственная по-настоящему формализованная лестница из всех шести столпов. А для auto remediation индустриального стандарта нет вовсе — только вендорские блоги, каждый со своей нумерацией.
+
+Google и Meta лестниц не публикуют: у них вместо уровней — эволюция метода. Google в статье [«The Evolution of SRE at Google»](https://www.usenix.org/publications/loginonline/evolution-sre-google) (USENIX ;login:, авторы Tim Falzone и Ben Treynor Sloss, основатель Google SRE) признал, что классическая модель error budgets перестала покрывать системы, где допустимый ущерб равен нулю, и переходит на [STAMP/STPA](https://sre.google/resources/practices-and-processes/stpa/) — системный анализ опасностей вместо подсчёта бюджета ошибок. Meta вкладывается в автоматизацию диагноза, о которой я писал выше. Обе стратегии — не «поднимись на уровень N», а «поменяй способ думать об отказах», что тоже аргумент против лестниц как жанра.
+
+Академия к теме только подбирается. Единственная известная мне работа, которая целенаправленно строит именно DIS Maturity Model — [«A Conceptual Model of Digital Immune System to Increase the Resilience of Technology Ecosystems»](https://link.springer.com/chapter/10.1007/978-3-031-59465-6_6) Краузе и Грабиса из Рижского технического университета (RCIS 2024, Springer): три измерения — Technologies, Data, Processes — в контексте европейской регуляторики NIS2 и DORA. Судя по [продолжению 2025 года](https://link.springer.com/chapter/10.1007/978-3-031-92471-2_13), до опубликованной шкалы уровней дело пока не дошло. А в ноябре 2025 вышла первая целая книга про DIS — [«Digital Immune System: Principles and Practices»](https://onlinelibrary.wiley.com/doi/book/10.1002/9781394383788) (Wiley-Scrivener): уклон в security и AI, но отдельная глава про экономику внедрения там есть. Приятно: не мне одному кажется, что разговор про DIS — это в том числе разговор экономистов.
+
+Итог ревизии: компонентные лестницы есть, цельной — нет. Ни одна из существующих моделей не проверяет главного — замыкается ли петля между компонентами. Поэтому дальше не ещё одна лестница, а диагностика связности.
 
 ## Маркеры зрелого DIS
 
@@ -181,15 +205,15 @@ Auto remediation на бумаге звучит как «система сама
 
 DIS — это про связность и дисциплину. Архитектурные границы (домены отказа, blast radius), измеряемые обещания (SLO как контракты), проверяемые гипотезы надёжности (нагрузка и хаос как регламент), безопасная автоматика (kill-switch и bounds), управляемый онколл (шумовой бюджет, право стоп-поставки), прозрачная экономика (стоимость девяточек, FinOps-витрина). Ни один из этих элементов отдельно не делает систему иммунной — иммунитет возникает, когда они замыкаются в петлю обучения.
 
-В российском контексте близкую идею развивает «Лаборатория Касперского» под названием **кибериммунитет** — с акцентом на встроенной безопасности (Secure by Design, Secure by Default) и минимизации доверенной кодовой базы. DIS дополняет этот подход петлёй обучения через инциденты и явной экономикой надёжности.
+Про российский контекст и **кибериммунитет** я уже писал в [февральской заметке](/posts/digital-immune-system/#связь-с-другими-концепциями). Здесь добавлю только одно: DIS дополняет этот подход петлёй обучения через инциденты и явной экономикой надёжности.
 
-Практический шаг для команды, которая хочет понять, где она стоит на этой шкале — пройтись по пяти маркерам и честно ответить, сколько из них выполняются. Это даст более реалистичную картину, чем аудит инструментов: инструменты — следствие, а не причина.
+Практический шаг для команды, которая хочет понять, где она стоит на этой шкале — пройтись по пяти маркерам и честно ответить, сколько из них выполняются. Это даст более реалистичную картину, чем аудит инструментов или примерка чужих лестниц из предыдущей секции: инструменты и уровни — следствие, а не причина.
 
 PS: эта статья — то, что я не разобрал в [февральской заметке про DIS](/posts/digital-immune-system/). Если первая отвечала на «что это такое и из чего состоит», эта — на «что отличает зрелый DIS от витрины из шести квадратов».
 
 ## Публичные кейсы
 
-Подборка постмортемов и инженерных описаний, на которых строится бо́льшая часть тезисов выше. Полезна как карта дальнейшего чтения.
+Подборка постмортемов, инженерных описаний и моделей зрелости, на которых строится бо́льшая часть тезисов выше. Полезна как карта дальнейшего чтения.
 
 **Право на отказ и организованная деградация:**
 
@@ -214,6 +238,22 @@ PS: эта статья — то, что я не разобрал в [февра
 
 - [Google Cloud Networking, 2.06.2019](https://status.cloud.google.com/incident/cloud-networking/19009) — первый пункт follow-up в постмортеме — «immediately halted the datacenter automation software».
 - [Netflix Chaos Monkey](https://github.com/Netflix/chaosmonkey) и [Simian Army](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116) — автоматика как тренажёр: регулярная поломка прода посреди рабочего дня приучила архитектуру к фоллбекам.
+
+**Модели зрелости и свежие публикации (2024–2026):**
+
+- [Azure Well-Architected Reliability Maturity Model](https://learn.microsoft.com/en-us/azure/well-architected/reliability/maturity-model) — пять уровней от Get resilient до Stay resilient; ближайший на рынке аналог «лестницы зрелости DIS».
+- [AWS Resilience Lifecycle Framework](https://docs.aws.amazon.com/prescriptive-guidance/latest/resilience-lifecycle-framework/introduction.html) — пять стадий циклом, а не лестницей; финальная стадия Respond and Learn возвращает к пересмотру целей.
+- [CNCF Cloud Native Maturity Model](https://maturitymodel.cncf.io/) — chaos engineering на четвёртом уровне, автоматическое восстановление на пятом.
+- [The Evolution of SRE at Google](https://www.usenix.org/publications/loginonline/evolution-sre-google) (USENIX ;login:) и [STPA на sre.google](https://sre.google/resources/practices-and-processes/stpa/) — отказ от error budgets как универсального инструмента в пользу системного анализа опасностей.
+- [DrP: Meta's Root Cause Analysis Platform at Scale](https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/) и [Leveraging AI for efficient incident response](https://engineering.fb.com/2024/06/24/data-infrastructure/leveraging-ai-for-efficient-incident-response/) — автоматизация диагноза вместо автоматизации действия.
+- [Netflix: service-level prioritized load shedding](https://netflixtechblog.com/enhancing-netflix-reliability-with-service-level-prioritized-load-shedding-e735e6ce8f7d) — деградация как штатный механизм каждого сервиса.
+- [DORA Research](https://dora.dev/) — отчёты 2024–2025: метрики throughput/instability и reliability как операционная характеристика.
+- [Krauze, Grabis — A Conceptual Model of Digital Immune System…](https://link.springer.com/chapter/10.1007/978-3-031-59465-6_6) (RCIS 2024, Springer, полный текст платный) и [продолжение 2025 года](https://link.springer.com/chapter/10.1007/978-3-031-92471-2_13) — единственная академическая попытка построить именно DIS Maturity Model.
+- [Digital Immune System: Principles and Practices](https://onlinelibrary.wiley.com/doi/book/10.1002/9781394383788) (Wiley-Scrivener, ноябрь 2025, платная) — первая книга целиком про DIS, включая главу об экономике внедрения.
+- Gartner: [What Is a Digital Immune System and Why Does It Matter](https://www.gartner.com/en/articles/what-is-a-digital-immune-system-and-why-does-it-matter), [глоссарий](https://www.gartner.com/en/information-technology/glossary/digital-immune-system), [Hype Cycle for Emerging Technologies 2024](https://www.gartner.com/en/newsroom/press-releases/2024-08-21-gartner-2024-hype-cycle-for-emerging-technologies-highlights-developer-productivity-total-experience-ai-and-security) — первоисточники; часть страниц Gartner прячет за регистрацию.
+- [Infosys TechCompass: Digital Immune System](https://www.infosys.com/iki/techcompass/digital-immune-system.html) — редкий пример живого использования термина у сервисных компаний.
+
+[^meta]: Meta Platforms Inc. (владелец Facebook и Instagram) признана экстремистской организацией, её деятельность запрещена на территории РФ. Упоминается здесь исключительно в инженерном контексте.
 
 ---
 
