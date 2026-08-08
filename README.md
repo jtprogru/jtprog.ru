@@ -1,14 +1,15 @@
 # [jtprog.ru](https://jtprog.ru)
 
-[![CI](https://github.com/jtprogru/jtprog.ru/actions/workflows/main.yml/badge.svg)](https://github.com/jtprogru/jtprog.ru/actions/workflows/main.yml)
-![GitHub](https://img.shields.io/github/license/jtprogru/jtprog.ru)
-![GitHub issues](https://img.shields.io/github/issues/jtprogru/jtprog.ru?style=plastic)
+[![CI](https://github.com/jtprogru/jtprog.ru/actions/workflows/main.yaml/badge.svg)](https://github.com/jtprogru/jtprog.ru/actions/workflows/main.yaml)
+[![License: MIT](https://img.shields.io/github/license/jtprogru/jtprog.ru)](LICENSE)
+[![Content: CC BY-NC-ND 4.0](https://img.shields.io/badge/content-CC%20BY--NC--ND%204.0-lightgrey)](LICENSE-CONTENT.md)
+![GitHub issues](https://img.shields.io/github/issues/jtprogru/jtprog.ru)
 
 Личный блог про SRE, DevOps и системное администрирование — [jtprog.ru](https://jtprog.ru).
 
 ## Стек
 
-- **[Hugo](https://gohugo.io/)** (Extended, версия из CI: см. `.github/workflows/main.yml`).
+- **[Hugo](https://gohugo.io/)** (Extended, версия из CI: см. `.github/workflows/main.yaml`).
 - **Тема [`hugo-mishka`](https://github.com/jtprogru/hugo-mishka)** — собственная, подключена submodule'ом в `themes/mishka`.
 - **GitHub Actions** + [`jtprogru/hugo-rsync-deployment`](https://github.com/jtprogru/hugo-rsync-deployment) — сборка и `rsync` на VPS.
 - Контент — markdown в `content/`, обложки — `assets/covers/`, метаданные проектов — `data/projects.yaml`.
@@ -23,7 +24,7 @@
 ├── static/           # «как есть» — favicon, manifest, robots
 ├── layouts/          # override'ы поверх темы (если нужны)
 ├── archetypes/       # шаблоны фронтматтера для `hugo new`
-├── scripts/          # хелперы для актуализации постов и cover-pipeline
+├── scripts/          # хелперы: lastmod, типографика, mermaid-prerender, IndexNow
 ├── themes/mishka/    # submodule на hugo-mishka
 └── hugo.yaml         # единый конфиг сайта
 ```
@@ -76,7 +77,7 @@ make new-page SLUG=<slug>
 
 ```sh
 gh workflow run CI               # из CLI
-# или открыть https://github.com/jtprogru/jtprog.ru/actions/workflows/main.yml
+# или открыть https://github.com/jtprogru/jtprog.ru/actions/workflows/main.yaml
 # и нажать «Run workflow»
 ```
 
@@ -89,7 +90,7 @@ gh workflow run CI               # из CLI
 | Скрипт | Зачем |
 | --- | --- |
 | `add_lastmod.py` | Бэкфилл `lastmod` во frontmatter постов (`content/**/index.md`), где он отсутствует — берёт значение из `date`. |
-| `mermaid-prerender.py` | Оффлайн-рендер всех ```mermaid```-блоков в SVG → `assets/mermaid/<sha256>.svg`. Render hook темы встраивает их inline; runtime mermaid bundle грузится только если SVG не найден. Запускается через `task mermaid:render`. |
+| `mermaid-prerender.py` | Оффлайн-рендер всех ```mermaid```-блоков в SVG → `assets/mermaid/<sha256>.svg`. Render hook темы встраивает их inline; runtime mermaid bundle грузится только если SVG не найден. Запускается через `make mermaid-render`. |
 | `typograf.py` | Standalone Python 3 клиент ArtLebedev Typograf (stdlib-only). Используется как модуль из `typografy_md.py` и как CLI. |
 | `typografy_md.py` | Прогон Typograf по Markdown с защитой кода, frontmatter, шорткодов, формул, ссылок и list-маркеров — типографируется только проза. |
 | `indexnow.sh` | Дельта-сабмит в IndexNow (Bing/Yandex/Seznam/Naver) после деплоя: маппит изменённые файлы под `content/` в канонические URL и шлёт уникальный список. Вызывается из CI; шаг неблокирующий. |
@@ -117,20 +118,11 @@ git commit -m "chore(theme): bump mishka with <что нового>"
 
 ## Лицензия
 
-Посты блога распространяются по лицензии [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). Свободно модифицировать и/или распространять — при соблюдении условий:
+В репозитории две лицензии, потому что код и тексты живут по разным правилам:
 
-- указать меня как автора оригинального текста;
-- указать адрес оригинального поста на домене [jtprog.ru](https://jtprog.ru), активной ссылкой;
-- если вносили изменения — явно указать это (например, «…с изменениями» / «основано на…»);
-- указать, что пост распространяется по этой лицензии.
+- **Код** (конфиги Hugo, layout-override'ы, `scripts/`, CI, Makefile) — [MIT](LICENSE).
+- **Тексты постов** из `content/` и **иллюстрации** — [CC BY-NC-ND 4.0](LICENSE-CONTENT.md): копировать можно, коммерчески использовать и переделывать — нет, атрибуция со ссылкой на оригинал обязательна.
+- Права на обложки принадлежат мне: старые обложки категорий рисовал [Igan Pol](https://www.behance.net/iganpol) и они выкуплены, обложки к постам я делаю сам.
 
-Рекомендованный формат ссылки:
+Подробности и рекомендованный формат ссылки на пост — в [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
 
-> «Мой личный чек-лист для Linux сервера», &copy; Михаил (jtprogru) Савин, [https://jtprog.ru/linux-checklist/](https://jtprog.ru/linux-checklist/), CC BY-NC-ND 4.0
->
-> "My personal checklist for a Linux server", &copy; Mikhail (jtprogru) Savin, [https://jtprog.ru/linux-checklist/](https://jtprog.ru/linux-checklist/), CC BY-NC-ND 4.0
-
-## Кредиты
-
-- Тексты — [Mikhail (jtprogru) Savin](https://savinmi.ru).
-- Иллюстрации — [Igan Pol](https://www.behance.net/iganpol).
