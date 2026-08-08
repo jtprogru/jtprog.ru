@@ -36,7 +36,7 @@ new-page: prec ## Create new standalone page from archetype (usage: make new-pag
 	@test -n "$(SLUG)" || { echo "usage: make new-page SLUG=my-page"; exit 1; }
 	hugo new --kind page content/$(SLUG).md
 
-update-theme: prec ## Update all git submodules - now is only themes/PaperMod
+update-theme: prec ## Update all git submodules - now is only themes/mishka
 	@command -v git >/dev/null || { echo "git not found"; exit 1; }
 	git submodule update --init --recursive --remote
 
