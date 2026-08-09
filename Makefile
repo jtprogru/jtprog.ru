@@ -14,7 +14,7 @@ HOST      ?= 127.0.0.1
 
 .DEFAULT_GOAL := help
 
-.PHONY: help prec build serve new new-page update-theme mermaid-render
+.PHONY: help prec build serve new new-page update-theme mermaid-render cover-rasterize
 
 help: ## Show available targets
 	@grep -E '^[a-zA-Z_-]+:.*## ' $(firstword $(MAKEFILE_LIST)) | awk 'BEGIN {FS = ":.*## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'
@@ -44,3 +44,7 @@ mermaid-render: ## Pre-render mermaid blocks from content/**/*.md to assets/merm
 	@command -v python3 >/dev/null || { echo "python3 not found"; exit 1; }
 	@command -v npx >/dev/null || { echo "npx not found"; exit 1; }
 	python3 scripts/mermaid-prerender.py
+
+cover-rasterize: ## Rasterize SVG covers to PNG for og:image (social parsers do not render SVG)
+	@command -v rsvg-convert >/dev/null || { echo "rsvg-convert not found: brew install librsvg"; exit 1; }
+	bash scripts/cover-rasterize.sh
