@@ -2,10 +2,10 @@
 aliases:
   - '/ubuntu-in-domen-windows/'
 title: 'Ubuntu в домене Windows AD'
-description: "Пошаговая инструкция по вводу Ubuntu в домен Windows Active Directory: настройка Kerberos, Samba, Winbind, DNS, синхронизация времени и интеграция с AD."
+description: "Ввод Ubuntu в домен Windows AD: современный способ через realmd и sssd в три команды — и подробный разбор старой связки Kerberos, Samba и Winbind для унаследованных конфигураций."
 keywords: ["ubuntu в домене windows", "ввод ubuntu в AD", "настройка kerberos ubuntu", "samba active directory", "winbind ubuntu", "dns ubuntu ad", "интеграция ubuntu windows", "linux в домене windows", "ubuntu 14.04 ad"]
 date: "2014-08-24T22:40:30+03:00"
-lastmod: "2014-08-24T22:40:30+03:00"
+lastmod: "2026-08-09T12:00:00+03:00"
 tags:
   - ubuntu
   - active directory
@@ -17,6 +17,8 @@ tags:
   - dns
   - linux
   - integration
+  - realmd
+  - sssd
 categories: ["Work"]
 cover:
   image: work.png
@@ -28,6 +30,120 @@ slug: ubuntu-in-domen-windows
 ---
 
 Некоторое время назад на работе достался мне для работы ноутбук HP ProBook 6460b. Ну и пришла в голову идея поставить на него вместо надоевшей Windows 7 Pro давно понравившуюся мне Ubuntu 14.04 Trusty LTS. Выбор операционной системы связан с тем, что Ubuntu я использую на домашнем ноутбуке и мне захотелось иметь такую же систему на рабочем компьютере. Потому, что постоянное переключение между ОСями дома и на работе быстро надоело мне и я решился на установку Ubuntu на рабочем ноуте.
+
+> 🔄 **Обновлено 2026-08-09.** Пост написан под Ubuntu 14.04, и с тех пор способ ввода в домен поменялся принципиально. Ручная связка `krb5-user` + `samba` + `winbind` с правкой пяти конфигов работает до сих пор, но начиная примерно с Ubuntu 16.04 всё это делается тремя командами через `realmd` и `sssd`. Если ты заводишь машину в домен сегодня — иди сразу в раздел [«Как это делается сейчас»](#как-это-делается-сейчас), а инструкция ниже пусть остаётся для тех, кому досталась унаследованная конфигурация на winbind и надо понять, что там настроено.
+
+## Как это делается сейчас
+
+Короткий путь для Ubuntu 16.04 и новее. Домен для примера тот же — `DOMAIN.RU`.
+
+Ставим пакеты:
+
+```bash
+sudo apt update
+sudo apt install -y realmd sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
+```
+
+Проверяем, что домен вообще виден. Эта команда ничего не меняет и полезна сама по себе — она сразу покажет, находится ли домен через DNS:
+
+```bash
+realm discover domain.ru
+```
+
+Если домен не нашёлся, дело почти всегда в DNS: машина должна спрашивать доменный контроллер, а не публичный резолвер. В современной Ubuntu `/etc/resolv.conf` — это симлинк на `systemd-resolved`, править его руками бесполезно, изменения затрутся. Настраивать надо через netplan:
+
+```yaml
+# /etc/netplan/01-netcfg.yaml
+network:
+  version: 2
+  ethernets:
+    ens3:
+      dhcp4: false
+      addresses: [192.168.1.50/24]
+      routes:
+        - to: default
+          via: 192.168.1.1
+      nameservers:
+        addresses: [192.168.1.2, 192.168.1.3]
+        search: [domain.ru]
+```
+
+```bash
+sudo netplan apply
+resolvectl status        # проверить, какие DNS реально используются
+```
+
+Время должно быть синхронно с контроллером домена — Kerberos не прощает расхождения больше пяти минут:
+
+```bash
+timedatectl status
+sudo timedatectl set-ntp true
+```
+
+Собственно ввод в домен. Одна команда, пароль доменного администратора спросят интерактивно:
+
+```bash
+sudo realm join --user=Administrator domain.ru
+```
+
+Проверяем:
+
+```bash
+realm list
+id Administrator@domain.ru
+```
+
+Если `id` вернул пользователя с UID и группами — машина в домене, `sssd` работает.
+
+Дальше несколько вещей, которые почти всегда нужны, но по умолчанию выключены. Домашние каталоги доменных пользователей при первом входе:
+
+```bash
+sudo pam-auth-update --enable mkhomedir
+```
+
+Вход без указания домена, чтобы логиниться как `ivanov`, а не `ivanov@domain.ru` — в `/etc/sssd/sssd.conf`:
+
+```ini
+[sssd]
+domains = domain.ru
+config_file_version = 2
+services = nss, pam
+
+[domain/domain.ru]
+id_provider = ad
+access_provider = ad
+use_fully_qualified_names = False
+fallback_homedir = /home/%u
+default_shell = /bin/bash
+ad_gpo_access_control = permissive
+```
+
+```bash
+sudo systemctl restart sssd
+```
+
+Права доступа: по умолчанию после `realm join` пускает всех доменных пользователей. Обычно надо иначе:
+
+```bash
+# запретить всех, разрешить точечно
+sudo realm deny --all
+sudo realm permit ivanov@domain.ru
+sudo realm permit -g 'Domain Admins'
+```
+
+И sudo для доменной группы — файл `/etc/sudoers.d/domain-admins`:
+
+```sudoers
+%domain\ admins@domain.ru ALL=(ALL:ALL) ALL
+```
+
+Если что-то не работает, смотреть надо в `/var/log/sssd/` и в `journalctl -u sssd`, а для проверки Kerberos отдельно — `kinit Administrator@DOMAIN.RU` и `klist`. Обрати внимание, что realm домена в Kerberos пишется заглавными буквами, а имя домена в `realm join` — строчными; на этом спотыкаются регулярно.
+
+Вывести машину из домена, если что-то пошло совсем не так: `sudo realm leave domain.ru`.
+
+## Как это делалось в 2014-м
+
+Дальше — оригинальная инструкция на `winbind`. Она рабочая, но многословная: то, что выше умещается в три команды, здесь занимает пять конфигурационных файлов.
 
 ## Начну по порядку
 

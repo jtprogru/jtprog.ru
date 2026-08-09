@@ -1,7 +1,9 @@
 ---
 # === Идентичность сайта ===
 baseURL: "https://jtprog.ru"
-language: "ru-RU"
+# Именно languageCode: ключа `language` в Hugo нет, значение просто не читалось,
+# из-за чего og:locale уезжал как `ru` вместо ожидаемого соцсетями `ru_RU`.
+languageCode: "ru-RU"
 defaultContentLanguage: "ru"
 theme: "mishka"
 title: "Мишка на сервере"
@@ -13,9 +15,11 @@ outputs:
     - HTML
     - RSS
     - JSON
+  # Без RSS: per-page фид у поста не имеет дочерних страниц, поэтому каждый из
+  # 149 постов отдавал пустой <channel> без единого <item>, и этот пустой фид
+  # объявлялся через <link rel=alternate> в <head>. Основной /index.xml цел.
   page:
     - HTML
-    - RSS
 
 # === Hugo-features ===
 enableRobotsTXT: false
@@ -71,14 +75,21 @@ menu:
       name: "Проекты"
       url: "/projects/"
       weight: 3
+    # /posts/ был недостижим из главной обходом в ширину: ShowFooterNav
+    # выключен, а в меню раздела не было. Хаб-страница с 15 страницами
+    # пагинации попадала в индекс только через sitemap.
+    - identifier: posts
+      name: "Записи"
+      url: "/posts/"
+      weight: 4
     - identifier: archives
       name: "Архив"
       url: "/archives/"
-      weight: 4
+      weight: 5
     - identifier: search
       name: "Поиск"
       url: "/search/"
-      weight: 5
+      weight: 6
 
 # === Markup ===
 markup:
@@ -160,6 +171,10 @@ module:
 params:
   env: production
   author: "jtprogru"
+  # Настоящее имя для структурированных данных: в JSON-LD ник без имени и без
+  # sameAs сущностью не является, связать статьи с человеком по нему нельзя.
+  # На meta name=author и в вёрстке по-прежнему используется `author`.
+  authorName: "Михаил Савин"
   # Fallback meta description для страниц без своего описания (в т.ч. главной).
   description: "Блог Михаила aka jtprogru про SRE, DevOps и системное администрирование: инженерные заметки, разборы инцидентов и практики эксплуатации."
   mainSections: ["post"]
@@ -180,6 +195,10 @@ params:
     hidden: false # hide everywhere but not in structured data
     hiddenInList: false # hide on list pages and home
     hiddenInSingle: false # hide on single page
+    # og:image для страниц без своей обложки: главная, листинги, теги,
+    # статические страницы. Без него шаринг главной идёт вообще без картинки.
+    # Ищется в assets/covers/.
+    defaultImage: blog.png
 
   # --- KaTeX подключается лениво:
   # math.html auto-detect'ит формулы по `$$` / `\(` в .RawContent

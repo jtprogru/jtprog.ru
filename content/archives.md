@@ -3,7 +3,6 @@ title: "Архив"
 description: "Все публикации блога jtprog.ru — сгруппировано по годам."
 layout: "archives"
 url: "/archives/"
-ShowBreadCrumbs: true
 ShowReadingTime: false
 ShowShareButtons: false
 ShowPostNavLinks: false

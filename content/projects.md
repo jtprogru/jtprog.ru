@@ -3,7 +3,6 @@ title: "Проекты"
 description: "Подборка моих open-source проектов: SRE-инструменты, CLI-утилиты и учебные эксперименты."
 layout: "projects"
 url: "/projects/"
-ShowBreadCrumbs: true
 ShowReadingTime: false
 ShowShareButtons: false
 ShowPostNavLinks: false
