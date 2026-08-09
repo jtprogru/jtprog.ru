@@ -217,9 +217,3 @@ sudo systemctl restart systemd-journald
 Если используешь Vector, то его `file`-source сам отслеживает inode и без проблем переживает ротацию logrotate'ом — никаких `copytruncate` ему не нужно. Подробнее про сбор JSON-логов nginx через Vector я писал в [Логи Nginx в JSON](/posts/nginx-json-logs/).
 
 На этом всё!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

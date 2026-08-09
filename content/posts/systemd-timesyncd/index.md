@@ -175,9 +175,3 @@ Fri Nov 27 20:31:52 MSK 2020
 На этом все! Profit!
 
 UPD: На Ansible Galaxy есть моя ролька для автоматизации – [jtprogru.configure_timesyncd](https://galaxy.ansible.com/jtprogru/configure_timesyncd).
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

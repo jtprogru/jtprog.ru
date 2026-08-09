@@ -105,7 +105,3 @@ wget -qO- https://myrepo.example/myrepo.asc | sudo tee /etc/apt/trusted.gpg.d/my
 ```
 
 Собственно вот и всё. Пойду дальше переделывать стенд, настраивать раннер для запуска тестов ролей Ansible и пройчий маразм.
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).

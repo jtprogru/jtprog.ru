@@ -164,9 +164,3 @@ Remove-NetRoute -DestinationPrefix "10.41.0.0/16"
 Если та же задача стоит на Linux — у меня есть [аналогичная шпаргалка про `ip route`](/ubuntu-route-add/).
 
 На этом все! Profit!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

@@ -254,9 +254,3 @@ PS: эта статья — то, что я не разобрал в [февра
 - [Infosys TechCompass: Digital Immune System](https://www.infosys.com/iki/techcompass/digital-immune-system.html) — редкий пример живого использования термина у сервисных компаний.
 
 [^meta]: Meta Platforms Inc. (владелец Facebook и Instagram) признана экстремистской организацией, её деятельность запрещена на территории РФ. Упоминается здесь исключительно в инженерном контексте.
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)".

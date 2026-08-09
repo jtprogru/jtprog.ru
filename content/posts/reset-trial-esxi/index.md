@@ -47,9 +47,3 @@ cp /etc/vmware/.#license.cfg /etc/vmware/license.cfg
 На этом все!
 
 ЗЫЖ Данная схема подходит и для версии ESXi 5.1
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

@@ -348,9 +348,3 @@ SHOW REPLICA STATUS\G
 Терминология сменилась — `source/replica` или `primary/standby`. Для MySQL новых установок используй GTID + `CHANGE REPLICATION SOURCE TO`. Для production смотри в сторону **InnoDB Cluster** (MySQL) или **Patroni + CloudNativePG** (PostgreSQL), а не вручную поднятой пары. Один-в-один по позиционным binlog'ам в 2026-м — это либо легаси, либо очень специфический кейс.
 
 На этом всё! Улыбаемся и пашем!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

@@ -80,9 +80,3 @@ docker exec -u 0 -it <container_id> bash
 - **Нет bash — не паникуй.** Минимальные образы (Alpine, distroless) идут без `bash`, иногда вообще без шелла. Для Alpine — `sh`, в distroless заходить нечем, отлаживай через `docker logs` и пересборку.
 
 На этом все!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 
