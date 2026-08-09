@@ -97,9 +97,3 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 Для работы с gitlab-runner есть официальный [модуль](https://docs.ansible.com/ansible/latest/collections/community/general/gitlab_runner_module.html) в Ansible, а так же есть вроде бы не плохая [роль](https://github.com/riemers/ansible-gitlab-runner) для установки gitlab-runner.
 
 На это всё! Profit!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

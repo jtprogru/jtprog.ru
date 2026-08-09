@@ -120,9 +120,3 @@ sudo systemctl enable zabbix-server zabbix-agent nginx php7.4-fpm
 ## Итог
 
 Теперь необходимо настроить авторизацию по LDAP – но там всё очень просто. На это всё!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

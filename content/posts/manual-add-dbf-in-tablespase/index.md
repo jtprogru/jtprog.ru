@@ -87,9 +87,3 @@ SQL> ALTER tablespace TEMP add TEMPFILE '/opt/oracle/oradata/orcl/temp02.dbf' SI
 ```
 
 На этом всё!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

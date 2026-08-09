@@ -42,9 +42,3 @@ keywords: ["vmware converter error", "vcenter converter standalone", "p2v conver
 Ошибка `A file i/o error occurred while accessing` решается добавлением записей о хостах ESXi в файл `hosts`
 
 На этом все!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 

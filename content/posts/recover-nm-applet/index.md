@@ -54,9 +54,3 @@ sudo service network-manager restart
 ЗЫЖ Линки по которым все выше указанное сделано: [askubuntu](http://askubuntu.com/questions/727127/last-upgrade-crashes-network-manager-no-internet-connection-no-applet/727204#727204), и сами bug'и заведенные в launchpad: [раз](https://bugs.launchpad.net/ubuntu/+source/libnl3/+bug/1539513), [два](https://bugs.launchpad.net/ubuntu/+source/libnl3/+bug/1511735), [три](https://bugs.launchpad.net/ubuntu/+source/network-manager/+bug/1539634).
 
 На этом все!
-
----
-
-Если у тебя есть вопросы, комментарии и/или замечания – заходи в [чат](https://t.me/jtprogru_chat), а так же подписывайся на [канал](https://t.me/jtprogru_channel).
-
-О способах отблагодарить автора можно почитать на странице "[Донаты](https://jtprog.ru/donations/)". 
