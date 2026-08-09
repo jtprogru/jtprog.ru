@@ -3,7 +3,48 @@
 # Brotli (mod_brotli) на REG.RU shared НЕ установлен — пропускаем.
 # Подробный план: plans/performance-improvement-plan.md (раздел P0, пункт 0).
 
-# --- 0. 301-редиректы: посты переехали из / в /posts/ ---
+# --- 0. Канонизация хоста и схемы ---
+#
+# История вопроса. Раньше здесь стояло правило по %{HTTPS}, и оно давало
+# бесконечную петлю (снято в 0ed1748): на REG.RU nginx-фронт терминирует TLS и
+# проксирует на Apache по HTTP, поэтому %{HTTPS} в Apache ВСЕГДА = off.
+# Комментарий на его месте утверждал, что канонизацию делает nginx-фронт. По
+# факту не делает: на 2026-08-09 все четыре хоста — http/https × с www и без —
+# отдавали 200 без единого редиректа.
+#
+# Почему это всё же не пожар: canonifyURLs делает все ссылки абсолютными от
+# baseURL, поэтому копии самоканонизируются, и Google ни www-, ни http-версию
+# в индекс не взял (проверено по domain property в Search Console за 16
+# месяцев — ни одного такого URL). Но canonical это подсказка, а не
+# директива: Яндекс склеивает зеркала именно 301-редиректом, директива Host
+# отменена в 2018, а краул-бюджет тратится вчетверо.
+#
+# Правило ниже сформулировано так, чтобы петля была невозможна в принципе:
+# редирект срабатывает, только если X-Forwarded-Proto ЯВНО равен http. Если
+# фронт этот заголовок не проставляет вовсе, условие не выполнится и ничего
+# не произойдёт — правило просто не сработает, вместо того чтобы зациклиться.
+#
+# ПОСЛЕ ВЫКАТА ПРОВЕРИТЬ:
+#   curl -sSI http://jtprog.ru/       -> ожидаем 301 на https://jtprog.ru/
+#   curl -sSI https://www.jtprog.ru/  -> ожидаем 301 на https://jtprog.ru/
+#   curl -sSI https://jtprog.ru/      -> ожидаем 200, БЕЗ редиректа
+# Если первый пункт остался 200 — значит фронт не отдаёт X-Forwarded-Proto,
+# и HTTPS-редирект надо включать в панели REG.RU (cPanel → Domains → Force
+# HTTPS Redirect), а не здесь.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # www → apex. Условие по хосту, петля невозможна: после редиректа хост
+    # уже не начинается с www.
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # http → https, только при явном X-Forwarded-Proto: http.
+    RewriteCond %{HTTP:X-Forwarded-Proto} =http
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+# --- 1. 301-редиректы: посты переехали из / в /posts/ ---
 # Старые URL (/<slug>/) активно ранжируются в поиске — отдаём постоянный 301
 # на новый путь /posts/<slug>/. Явный allowlist по slug: НЕ задевает корневые
 # страницы (/about-me/, /donations/, ...) и таксономии (/tags/, /categories/).
@@ -167,7 +208,7 @@
     RewriteRule "^2026-02-14-sre-recipes-summary/?$" "/posts/sre-recipes-summary/" [R=301,L]
 </IfModule>
 
-# --- 1. Сжатие: отменить gzip для уже сжатых форматов ---
+# --- 2. Сжатие: отменить gzip для уже сжатых форматов ---
 # Родительский ~/.htaccess (контролируется REG.RU) ставит
 # `SetOutputFilter DEFLATE` универсально — он жмёт всё, включая PNG/WebP/JPEG.
 # AddOutputFilterByType ниже его не отменяет (это разные директивы),
@@ -188,7 +229,7 @@
     AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf
 </IfModule>
 
-# --- 2. Vary: перебить родительский ~/.htaccess (он добавляет User-Agent) ---
+# --- 3. Vary: перебить родительский ~/.htaccess (он добавляет User-Agent) ---
 <IfModule mod_headers.c>
     Header unset Vary
     Header set Vary "Accept-Encoding"
@@ -208,7 +249,7 @@
     </FilesMatch>
 </IfModule>
 
-# --- 3.5. Security headers ---
+# --- 4. Security headers ---
 # Ставятся на backend-Apache; nginx-фронт REG.RU + DDoS-Guard могут их
 # перекрывать/дублировать — после деплоя ОБЯЗАТЕЛЬНО сверить `curl -I https://jtprog.ru`.
 # `always`, чтобы заголовки попадали и в error-ответы (404 и т.п.).
@@ -236,7 +277,7 @@
     Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://mc.yandex.ru https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://mc.yandex.ru https://www.google-analytics.com; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://mc.yandex.ru https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-src https://mc.yandex.ru; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 </IfModule>
 
-# --- 4. mod_expires как fallback (если mod_headers где-то не сработает) ---
+# --- 5. mod_expires как fallback (если mod_headers где-то не сработает) ---
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType text/html                 "access plus 5 minutes"
@@ -248,14 +289,6 @@
     ExpiresByType image/avif                "access plus 30 days"
     ExpiresByType image/svg+xml             "access plus 30 days"
 </IfModule>
-
-# --- 5. HTTPS canonical: НЕ ВКЛЮЧАТЬ через mod_rewrite ---
-# На REG.RU nginx-фронт терминирует TLS и проксирует на Apache по HTTP,
-# поэтому %{HTTPS} в Apache ВСЕГДА = off, и любой redirect "off → https://"
-# создаст бесконечную петлю. Правильная HTTPS-канонизация уже делается
-# на уровне nginx-фронта REG.RU. Если когда-то потребуется делать это
-# в .htaccess — использовать %{HTTP:X-Forwarded-Proto} !https, предварительно
-# проверив, какой именно header проксирует фронт.
 
 # --- 6. Кастомная 404 (Hugo генерирует /404.html) ---
 ErrorDocument 404 /404.html
