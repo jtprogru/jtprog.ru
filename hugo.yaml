@@ -206,6 +206,17 @@ params:
     safari_pinned_tab: /safari-pinned-tab.svg
     disableFingerprinting: true
 
+  # --- Приписка под текстом поста (partial post_endnote.html) ---
+  # Рендерится только на постах (type: post), выключается на конкретном
+  # посте фронтматтером `endnote: false`.
+  postEndnote:
+    enabled: true
+    icon: "lock"
+    title: "Есть ещё закрытая часть"
+    text: "Не всё доезжает до открытого блога — часть заметок и разборов уходит в закрытый проект на Sponsr. Если блог тебе полезен, подписка — самый прямой способ это поддержать."
+    url: "https://sponsr.ru/jtprogru_channel/"
+    linkText: "Посмотреть проект на Sponsr"
+
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/main/content"
     Text: "Edit..."
@@ -225,7 +236,8 @@ params:
     title: "Мишка на сервере"
     subtitle: |
       Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про SRE, DevOps и системное администрирование.
-      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в [telegram-чат](https://t.me/jtprogru_chat).
+      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel), заходи в [telegram-чат](https://t.me/jtprogru_chat),
+      а если хочется закрытой части — она на [Sponsr](https://sponsr.ru/jtprogru_channel/).
     imageUrl: "/avatar.webp"
     imageTitle: "jtprogru"
     imageWidth: 160
@@ -244,6 +256,8 @@ params:
   socialIcons:
     - name: telegram
       url: "https://t.me/jtprogru_chat"
+    - name: sponsr
+      url: "https://sponsr.ru/jtprogru_channel/"
     - name: github
       url: "https://github.com/jtprogru"
     - name: dev
