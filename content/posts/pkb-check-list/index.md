@@ -17,9 +17,9 @@ tags:
   - DIKW
 categories: ["Opinions"]
 cover:
-  image: opinions.png
-  alt: opinions
-  caption: "Illustrated by [Igan Pol](https://www.behance.net/iganpol)"
+  image: cover.png
+  alt: 'Хаос сырых заметок проходит через воронку обработки и становится связанным графом знаний'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 type: post
 slug: pkb-check-list
