@@ -47,25 +47,25 @@
   url: https://github.com/jtprogru/thingsexporter
   desc: "Экспорт задач из Things 3 в разные форматы."
   lang: Go
-  status: active
+  status: maintenance
   tags: [cli, productivity]
 - name: thingscli
   url: https://github.com/jtprogru/thingscli
   desc: "Тонкая Go-обёртка над AppleScript для Things 3: чтение и запись задач из терминала и пайплайнов."
   lang: Go
-  status: active
+  status: maintenance
   tags: [cli, productivity]
 - name: jtsekret
   url: https://github.com/jtprogru/jtsekret
   desc: "CLI для централизованного и безопасного управления личными секретами: пароли, OAuth-токены, API-ключи."
   lang: Go
-  status: active
+  status: maintenance
   tags: [cli, security]
 - name: jtpost
   url: https://github.com/jtprogru/jtpost
   desc: "CLI-редактор постов для управления контент-пайплайном Telegram-канала."
   lang: Go
-  status: active
+  status: maintenance
   tags: [cli, content]
 - name: jtgpwgen
   url: https://github.com/jtprogru/jtgpwgen
@@ -101,7 +101,7 @@
   url: https://github.com/jtprogru/todushka
   desc: "Терминальный аналог Things 3 с аналогичным функционалом."
   lang: Go
-  status: active
+  status: maintenance
   tags: [cli, productivity]
 - name: cubic-root
   url: https://github.com/jtprogru/cubic-root
