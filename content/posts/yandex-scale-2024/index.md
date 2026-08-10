@@ -3,9 +3,9 @@ aliases:
   - '/yandex-scale-2024/'
 categories: ["notes"]
 cover:
-  alt: meetup
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
-  image: meetup.png
+  image: cover.png
+  alt: 'Четыре доклада односторонними стрелками уходят со сцены к слушателю, а справа светится единственный двусторонний канал — разговор с архитектором'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 date: 2024-10-19T10:17:06+03:00
 lastmod: "2026-08-10T11:00:00+03:00"
