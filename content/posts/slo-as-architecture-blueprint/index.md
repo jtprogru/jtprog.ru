@@ -24,9 +24,9 @@ tags:
   - Архитектура
 categories: ["SRE"]
 cover:
-  image: devops.png
-  alt: 'SLO, SLI и бюджет ошибок как чертёж архитектуры сервиса'
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  image: cover.png
+  alt: 'Один кейс поиска каталога проходит через три значения SLO — 99.0%, 99.9%, 99.99% — и превращается в три архитектуры разной сложности'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 type: post
 slug: 'slo-as-architecture-blueprint'

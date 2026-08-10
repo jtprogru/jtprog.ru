@@ -1,0 +1,151 @@
+<svg width="1050" height="480" viewBox="0 0 1050 480" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>SLO как чертёж архитектуры</title>
+<desc>Один и тот же кейс поиска каталога проходит через светящуюся панель с тремя значениями SLO — 99.0%, 99.9%, 99.99% — и превращается в три разные по сложности архитектуры: от одного Postgres до трёх активных регионов.</desc>
+<defs>
+<linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#24273a"/><stop offset="100%" stop-color="#1e2030"/>
+</linearGradient>
+<linearGradient id="bandGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#2c3448"/><stop offset="100%" stop-color="#222839"/>
+</linearGradient>
+<linearGradient id="glowGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#0b7285" stop-opacity="0"/>
+<stop offset="50%" stop-color="#0b7285" stop-opacity="0.42"/>
+<stop offset="100%" stop-color="#0b7285" stop-opacity="0"/>
+</linearGradient>
+<marker id="arrHead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+<path d="M0,0 L7,3.5 L0,7 Z" fill="#7dc4e4"/>
+</marker>
+<marker id="arrHeadMuted" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+<path d="M0,0 L7,3.5 L0,7 Z" fill="#818aa8"/>
+</marker>
+</defs>
+
+<!-- база -->
+<rect x="0" y="0" width="1050" height="480" fill="url(#bgGrad)"/>
+
+<!-- тихая структурная сетка -->
+<g stroke="#494d64" stroke-width="0.5" opacity="0.22">
+  <line x1="75" y1="0" x2="75" y2="480"/>
+  <line x1="150" y1="0" x2="150" y2="480"/>
+  <line x1="225" y1="0" x2="225" y2="480"/>
+  <line x1="300" y1="0" x2="300" y2="480"/>
+  <line x1="375" y1="0" x2="375" y2="480"/>
+  <line x1="450" y1="0" x2="450" y2="480"/>
+  <line x1="525" y1="0" x2="525" y2="480"/>
+  <line x1="600" y1="0" x2="600" y2="480"/>
+  <line x1="675" y1="0" x2="675" y2="480"/>
+  <line x1="750" y1="0" x2="750" y2="480"/>
+  <line x1="825" y1="0" x2="825" y2="480"/>
+  <line x1="900" y1="0" x2="900" y2="480"/>
+  <line x1="975" y1="0" x2="975" y2="480"/>
+</g>
+<line x1="0" y1="110" x2="1050" y2="110" stroke="#494d64" stroke-width="0.5" opacity="0.4"/>
+
+<!-- Заголовок -->
+<text x="525" y="54" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="30" font-weight="700" fill="#cad3f5">SLO как чертёж архитектуры</text>
+<text x="525" y="86" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="15" fill="#a5adcb">одна задача, три числа — три разные системы</text>
+
+<!-- колоночные подписи -->
+<text x="205" y="134" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="10.5" fill="#a5adcb">один кейс</text>
+<text x="400" y="134" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="10.5" fill="#7dc4e4">SLO</text>
+<text x="720" y="134" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="10.5" fill="#a5adcb">архитектура, которая из него следует</text>
+
+<!-- левая карточка: постановка задачи -->
+<rect x="130" y="218" width="150" height="104" rx="10" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+<text x="205" y="247" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="14" fill="#cad3f5">поиск каталога</text>
+<text x="205" y="272" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="10.5" fill="#a5adcb">50M · 30k RPS</text>
+<text x="205" y="294" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="10.5" fill="#a5adcb">P99 &lt; 500 ms</text>
+
+<!-- стрелка кейс -> SLO -->
+<line x1="284" y1="270" x2="320" y2="270" stroke="#818aa8" stroke-width="1.4" marker-end="url(#arrHeadMuted)"/>
+
+<!-- СМЫСЛОВОЙ ЦЕНТР: сапфировый очаг -->
+<rect x="306" y="132" width="188" height="286" fill="url(#glowGrad)"/>
+<rect x="330" y="150" width="140" height="250" rx="10" fill="url(#bandGrad)" stroke="#7dc4e4" stroke-width="1.5"/>
+<line x1="330" y1="232" x2="470" y2="232" stroke="#7dc4e4" stroke-width="0.8" opacity="0.45"/>
+<line x1="330" y1="320" x2="470" y2="320" stroke="#7dc4e4" stroke-width="0.8" opacity="0.45"/>
+<text x="400" y="185" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+      font-size="21" font-weight="700" fill="#7dc4e4">99.0%</text>
+<text x="400" y="275" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+      font-size="21" font-weight="700" fill="#7dc4e4">99.9%</text>
+<text x="400" y="365" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+      font-size="21" font-weight="700" fill="#7dc4e4">99.99%</text>
+
+<!-- стрелки SLO -> архитектуры -->
+<line x1="474" y1="185" x2="518" y2="185" stroke="#7dc4e4" stroke-width="1.5" marker-end="url(#arrHead)"/>
+<line x1="474" y1="275" x2="518" y2="275" stroke="#7dc4e4" stroke-width="1.5" marker-end="url(#arrHead)"/>
+<line x1="474" y1="365" x2="518" y2="365" stroke="#7dc4e4" stroke-width="1.5" marker-end="url(#arrHead)"/>
+
+<!-- полоса 1: 99.0% -->
+<g>
+  <rect x="530" y="168" width="86" height="34" rx="7" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <text x="573" y="185" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+        font-size="10" fill="#a5adcb">1 регион</text>
+  <line x1="616" y1="185" x2="628" y2="185" stroke="#494d64" stroke-width="1"/>
+  <rect x="628" y="168" width="86" height="34" rx="7" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <text x="671" y="185" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+        font-size="10" fill="#a5adcb">pg_trgm</text>
+  <text x="530" y="222" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#a5adcb">бюджет ~7 ч / мес · инфра 1×</text>
+</g>
+
+<!-- полоса 2: 99.9% -->
+<g>
+  <rect x="530" y="258" width="86" height="34" rx="7" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <text x="573" y="275" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+        font-size="10" fill="#a5adcb">Redis</text>
+  <line x1="616" y1="275" x2="628" y2="275" stroke="#494d64" stroke-width="1"/>
+  <rect x="628" y="258" width="86" height="34" rx="7" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <text x="671" y="275" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+        font-size="10" fill="#a5adcb">ES cluster</text>
+  <line x1="714" y1="275" x2="726" y2="275" stroke="#494d64" stroke-width="1"/>
+  <rect x="726" y="258" width="86" height="34" rx="7" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <text x="769" y="275" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+        font-size="10" fill="#a5adcb">CDC + Kafka</text>
+  <line x1="812" y1="275" x2="824" y2="275" stroke="#494d64" stroke-width="1"/>
+  <rect x="824" y="258" width="86" height="34" rx="7" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <text x="867" y="275" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', monospace"
+        font-size="10" fill="#a5adcb">AZ failover</text>
+  <text x="530" y="312" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#a5adcb">бюджет ~43 мин / мес · инфра 4–6×</text>
+</g>
+
+<!-- полоса 3: 99.99% -->
+<g>
+  <rect x="530" y="336" width="118" height="58" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <rect x="542" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <rect x="576" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <rect x="610" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <text x="589" y="380" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+        font-size="9.5" fill="#a5adcb">регион A</text>
+
+  <rect x="661" y="336" width="118" height="58" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <rect x="673" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <rect x="707" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <rect x="741" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <text x="720" y="380" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+        font-size="9.5" fill="#a5adcb">регион B</text>
+
+  <rect x="792" y="336" width="118" height="58" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+  <rect x="804" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <rect x="838" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <rect x="872" y="345" width="26" height="18" rx="4" fill="#494d64"/>
+  <text x="851" y="380" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+        font-size="9.5" fill="#a5adcb">регион C</text>
+
+  <line x1="648" y1="365" x2="661" y2="365" stroke="#494d64" stroke-width="1"/>
+  <line x1="779" y1="365" x2="792" y2="365" stroke="#494d64" stroke-width="1"/>
+  <text x="530" y="414" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#a5adcb">бюджет ~4 мин 20 с / мес · инфра 15–25×</text>
+</g>
+
+<!-- Подпись -->
+<text x="525" y="462" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="12" fill="#7dc4e4">Мишка на сервере · @jtprogru_channel</text>
+</svg>
