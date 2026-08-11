@@ -85,6 +85,12 @@
   lang: Rust
   status: active
   tags: [cli, devx]
+- name: hostsctl
+  url: https://github.com/jtprogru/hostsctl
+  desc: "Управление /etc/hosts из YAML-конфига: группы, zone-файлы, удалённые blocklist'ы и бэкапы."
+  lang: Rust
+  status: active
+  tags: [cli, dns, sysadmin]
 - name: repo-opener
   url: https://github.com/jtprogru/repo-opener
   desc: "Открывает remote-репозиторий из локального клона прямо в браузере."
