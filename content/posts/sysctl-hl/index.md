@@ -486,3 +486,5 @@ cat /proc/sys/net/netfilter/nf_conntrack_count
 ```
 
 Если параметр меняешь — фиксируй в `/etc/sysctl.d/99-tuning.conf`, а не в `/etc/sysctl.conf` (последний при обновлении пакетов трогать не любят). Применить без ребута — `sysctl --system`.
+
+Рядом по теме: [шпаргалка по iptables](/posts/iptables-manual/) для фильтрации, [чек-лист для Linux-сервера](/posts/linux-checklist/) как общая гигиена и [«Что происходит, когда ты открываешь сайт»](/posts/what-happens-when-you-open-website/) — чтобы понимать, какой из этих параметров на каком этаже работает.

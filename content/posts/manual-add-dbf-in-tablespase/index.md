@@ -86,4 +86,6 @@ Tablespace altered
 SQL> ALTER tablespace TEMP add TEMPFILE '/opt/oracle/oradata/orcl/temp02.dbf' SIZE 32M AUTOEXTEND ON NEXT 32M MAXSIZE unlimited;
 ```
 
+Если место кончилось не в табличном пространстве, а на самом разделе — [добавляем диск в LVM без перезагрузки](/posts/add-disk-lvm/).
+
 На этом всё!

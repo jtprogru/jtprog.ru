@@ -154,4 +154,6 @@ sudo nginx -t
 sudo nginx -s reload
 ```
 
+По соседним темам: [обновление Bitrix VA](/posts/upgrade-bitrix-va/) и [настройка memcached в Битрикс](/posts/memcached-bitrix/) для кеша. Про сами `server`-блоки nginx — [здесь](/posts/virt-host-nginx/).
+
 И наслаждаемся жизнью... Profit!

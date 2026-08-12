@@ -174,4 +174,4 @@ Fri Nov 27 20:31:52 MSK 2020
 
 На этом все! Profit!
 
-UPD: На Ansible Galaxy есть моя ролька для автоматизации – [jtprogru.configure_timesyncd](https://galaxy.ansible.com/jtprogru/configure_timesyncd).
+UPD: На Ansible Galaxy есть моя ролька для автоматизации – [jtprogru.configure_timesyncd](https://galaxy.ansible.com/jtprogru/configure_timesyncd). Как такие роли устроены внутри, разбирал в [«Ansible Roles»](/posts/ansible-roles/), а про соседний сервис из того же семейства — в [«Настройка systemd-resolved»](/posts/systemd-resolved/).

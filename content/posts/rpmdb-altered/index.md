@@ -49,4 +49,6 @@ yum history new
 yum clean all
 ```
 
+Из соседних yum-грабель: [Delta RPMs disabled](/posts/fix-deltarpm/).
+
 Profit!

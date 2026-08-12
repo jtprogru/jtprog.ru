@@ -237,3 +237,5 @@ SET enable_partitionwise_aggregate = on;
 2. Ключ партицирования — в PK таблицы.
 3. Для time-series — `pg_partman` или TimescaleDB вместо ручных скриптов.
 4. Проверь, что `enable_partition_pruning = on` (дефолт), и попробуй включить `partitionwise_join`/`partitionwise_aggregate` под свой workload.
+
+Если `psql` пока чужой инструмент — базовые команды и навигация по нему в [«Работаем руками с PostgreSQL»](/posts/psql-cli/).

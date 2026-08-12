@@ -59,4 +59,6 @@ inet_protocols=ipv4
 systemctl restart postfix
 ```
 
+Ещё про Postfix: [очередь и blacklist](/posts/queue-blacklist-postfix/). А если IPv6 мешает не только почте — [отключаем его на сервере целиком](/posts/ubuntu-disable-ipv6/).
+
 Profit!

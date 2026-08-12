@@ -234,4 +234,6 @@ sudo systemctls restart grafana-server
 
 > **ВАЖНО**! Пользователи с ролью `Viewer` могут переводить триггеры в статус `Ack`. В кейсе когда в качестве datasource используется Zabbix – такой момент имеет место быть.
 
+Рядом по теме: [установка Zabbix 5.0](/posts/install-zabbix50/) как источник данных, [экспорт дашбордов и datasource из Grafana](/posts/grafana-exports/) в git и общий разбор [«Мониторинг: что/куда/зачем?»](/posts/wat-monitoring/).
+
 На этом всё!

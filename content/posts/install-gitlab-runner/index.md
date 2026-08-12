@@ -94,6 +94,8 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 
 ## Автоматизация
 
-Для работы с gitlab-runner есть официальный [модуль](https://docs.ansible.com/ansible/latest/collections/community/general/gitlab_runner_module.html) в Ansible, а так же есть вроде бы не плохая [роль](https://github.com/riemers/ansible-gitlab-runner) для установки gitlab-runner.
+Для работы с gitlab-runner есть официальный [модуль](https://docs.ansible.com/ansible/latest/collections/community/general/gitlab_runner_module.html) в Ansible, а так же есть вроде бы не плохая [роль](https://github.com/riemers/ansible-gitlab-runner) для установки gitlab-runner. Если с Ansible пока не по пути — начни с [основ управления конфигурацией](/posts/ansible-basic/) и [структуры ролей](/posts/ansible-roles/).
+
+Раннер сам по себе бесполезен без пайплайна — как я собирал свой, описано в [«GitLab-CI – делаем себе просто»](/posts/gitlab-ci/).
 
 На это всё! Profit!

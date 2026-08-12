@@ -36,4 +36,6 @@ openssl s_client -showcerts -connect 192.168.0.131:8006 /dev/null | openssl x509
 
 Далее мы просто добавляем этот сертификат и выставляем права на него "Всегда доверять". После чего можно смело перезагружать страничку с веб-интерфейсом гипервизора и работать в web-консоли.
 
+Ещё про эксплуатацию ESXi: [сброс триала](/posts/reset-trial-esxi/) и [ошибки vCenter Converter Standalone](/posts/error-converter-standalone/).
+
 На это все!

@@ -347,4 +347,6 @@ SHOW REPLICA STATUS\G
 
 Терминология сменилась — `source/replica` или `primary/standby`. Для MySQL новых установок используй GTID + `CHANGE REPLICATION SOURCE TO`. Для production смотри в сторону **InnoDB Cluster** (MySQL) или **Patroni + CloudNativePG** (PostgreSQL), а не вручную поднятой пары. Один-в-один по позиционным binlog'ам в 2026-м — это либо легаси, либо очень специфический кейс.
 
+Из соседнего: [максимальное количество коннектов](/posts/max-connections/) — первое, во что упирается реплика под нагрузкой, а зачем вообще нужна пара «primary + standby», разобрано в [«Кластеризация и доступность»](/posts/ha-clustering/).
+
 На этом всё! Улыбаемся и пашем!

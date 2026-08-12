@@ -149,4 +149,6 @@ DevOps как методология жив и работает. Но вокру
 6. [https://azure.microsoft.com/ru-ru/overview/what-is-devops/](https://azure.microsoft.com/ru-ru/overview/what-is-devops/)
 7. [https://habr.com/ru/company/oleg-bunin/blog/448492/](https://habr.com/ru/company/oleg-bunin/blog/448492/)
 
+Если хочется той же темы, но в виде истории — [разбор «Проекта Феникс»](/posts/project-phoenix/). А куда это всё уехало за пять лет — в [«Эволюции практик SRE»](/posts/sre-evolution-2020-2025/).
+
 На этом всё! Если с чем-то не согласны или вам есть что сказать или как-то дополнить, то жду в [чате](https://t.me/jtprogru_chat)!

@@ -41,4 +41,6 @@ keywords: ["vmware converter error", "vcenter converter standalone", "p2v conver
 
 Ошибка `A file i/o error occurred while accessing` решается добавлением записей о хостах ESXi в файл `hosts`
 
+А когда машина сконвертировалась, но не грузится или потеряла сеть — [«Исправляем работу конвертера»](/posts/centos-after-convert/).
+
 На этом все!

@@ -126,4 +126,6 @@ blacklist_from *@static.vnpt.vn
 service spamassassin restart
 ```
 
+Из соседнего про тот же Postfix: [лечим отправку через IPv6](/posts/postfix-ipv4/) и [разбираемся с задержками почтового сервера на Ubuntu + iRedMail](/posts/delay-ubuntu-iredmail/).
+
 На этом собственно всё!

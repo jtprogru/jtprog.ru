@@ -240,4 +240,6 @@ fdisk /dev/xxx
 btrfsck /dev/xxx
 ```
 
+Про добавление, удаление и балансировку устройств в живой Btrfs — в соседней заметке [«Btrfs - работаем с разделом»](/posts/btrfs-dev/).
+
 Profit!

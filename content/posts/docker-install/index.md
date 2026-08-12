@@ -107,4 +107,6 @@ sudo rm -rf /var/lib/docker
 sudo rm -rf /usr/local/bin/docker-compose
 ```
 
+Докер поставили — дальше [основы `Dockerfile` и `docker-compose.yml`](/posts/docker-base/), а когда контейнер уже крутится и надо залезть внутрь — [`docker exec` и правка файлов](/posts/edit-file-in-docker/).
+
 На этом всё! Profit!

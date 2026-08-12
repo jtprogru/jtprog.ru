@@ -79,4 +79,6 @@ ln -s /etc/init.d/kw_eat_cpu.sh /etc/rc2.d/S99kw_eat_cpu
 
 После чего ваша машинка перезагружается.
 
+Если ядро грузит не `kworker`, а что-то другое, начинать диагностику стоит с [`top`](/posts/linux-top/) и [`atop`](/posts/man-atop/), а разбираться, чем занят конкретный процесс, — через [`strace`](/posts/strace/).
+
 На этом все! Profit!

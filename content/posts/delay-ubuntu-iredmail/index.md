@@ -42,4 +42,4 @@ keywords: ["iredmail", "ubuntu", "mail server", "email delay", "troubleshooting"
 
 Итог: Коллеги! Следите за своими хомяками!
 
-ЗЫЖ Сервер настроен на базе Ubuntu 14.04 + iRedMail free. О процессе настройки этой связки я как-нибудь напишу позже и подробнее.
+ЗЫЖ Сервер настроен на базе Ubuntu 14.04 + iRedMail free. О процессе настройки этой связки я как-нибудь напишу позже и подробнее. Пока что рядом есть заметки про [очередь и blacklist в Postfix](/posts/queue-blacklist-postfix/) и [лечение отправки через IPv6](/posts/postfix-ipv4/).

@@ -156,4 +156,6 @@ loki.write "default" {
 
 Если стек ELK уже есть — `filebeat` с модулем `nginx` или `logstash` с `json` codec тоже отлично заходят: формат универсальный.
 
+Чтобы логи не съели диск, рядом нужен [logrotate](/posts/logrotate-basics/), а сами `server`-блоки, которые эти логи пишут, — в [«Настройка виртуальных хостов Nginx»](/posts/virt-host-nginx/).
+
 На этом всё!

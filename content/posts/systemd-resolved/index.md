@@ -83,4 +83,6 @@ systemctl restart systemd-resolved
 systemctl status systemd-resolved
 ```
 
+Рядом по теме: [что вообще за системы инициализации](/posts/sys-init/) и как поднять [свою доменную зону на dnsmasq](/posts/domain-zone-dnsmasq/) — с `systemd-resolved` им придётся делить 53-й порт.
+
 На этом всё! Profit!

@@ -38,7 +38,7 @@ slug: netbox
 
 ### Подготовка хоста
 
-Берём чистый Ubuntu Server 24.04 (см. мой пост про [чек-лист Linux-сервера](/posts/linux-checklist/)). Ставим Docker по [официальной инструкции](https://docs.docker.com/engine/install/ubuntu/) и плагин `docker compose`.
+Берём чистый Ubuntu Server 24.04 (см. мой пост про [чек-лист Linux-сервера](/posts/linux-checklist/)). Ставим Docker по [официальной инструкции](https://docs.docker.com/engine/install/ubuntu/) и плагин `docker compose` (мой вариант установки — [тут](/posts/docker-install/), а если compose-файлы пока читаются с трудом — [основы Docker](/posts/docker-base/)).
 
 Краткая проверка, что всё на месте:
 

@@ -125,6 +125,6 @@ Error: UPGRADE FAILED: error validating "": error validating data: [ValidationEr
 - `name <string>` – Name is the name of the port on the Service. This is a mutually exclusive setting with "Number";
 - `number <integer>` – Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name";
 
-Итого получаем тот факт, что у меня ушло дохрена времени на то, что можно было бы решить простейшим чтением документации и спецификации ingress'a.
+Итого получаем тот факт, что у меня ушло дохрена времени на то, что можно было бы решить простейшим чтением документации и спецификации ingress'a. Про пользу RTFM у меня даже отдельный пост есть — [«Документация, Сухой поцелуй и джуны»](/posts/rtfm-dry-kiss/).
 
 За сим откланяюсь! Не совершай моих ошибок!

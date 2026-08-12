@@ -145,4 +145,6 @@ iptables --append FORWARD --in-interface eth0 -j ACCEPT
 iptables-save
 ```
 
+Рядом по сетевой части: [шпаргалка про маршрутизацию в Ubuntu](/posts/ubuntu-route-add/) и [правила iptables](/posts/iptables-manual/) — без них клиенты подключатся, но никуда не пойдут.
+
 На этом все! Profit!
