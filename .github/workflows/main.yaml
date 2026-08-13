@@ -6,6 +6,10 @@ name: CI
       - "main"
   workflow_dispatch:
 
+env:
+  # Версия, на которой собирался прод в jtprogru/hugo-rsync-deployment.
+  HUGO_VERSION: '0.161.1'
+
 jobs:
   deploy-website:
     runs-on: ubuntu-latest
@@ -16,19 +20,62 @@ jobs:
           submodules: true
           fetch-depth: 0 # нужна история коммитов для git diff в IndexNow-шаге
 
-      - name: Generate and deploy website
-        uses: jtprogru/hugo-rsync-deployment@master
+      # Раньше Hugo ставил внутри себя deploy-экшен, и флаги сборки жили в его
+      # inputs. Теперь сборка описана в Makefile (make build-prod), поэтому
+      # локально и в CI собирается буквально одна и та же команда, а здесь
+      # остаётся только положить нужный бинарник.
+      - name: Install Hugo
+        run: |
+          set -euo pipefail
+          asset="hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
+          base="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
+          tmp="$(mktemp -d)"
+          curl -fsSL "${base}/${asset}" -o "${tmp}/${asset}"
+          curl -fsSL "${base}/hugo_${HUGO_VERSION}_checksums.txt" \
+            -o "${tmp}/checksums.txt"
+          (cd "${tmp}" && grep " ${asset}\$" checksums.txt | sha256sum -c -)
+          tar xf "${tmp}/${asset}" -C "${tmp}" hugo
+          sudo install -m 0755 "${tmp}/hugo" /usr/local/bin/hugo
+          rm -rf "${tmp}"
+          hugo version
+
+      # Блок без пререндера уезжает на runtime-ветку render hook'а: mermaid с
+      # CDN и цвета, которых никто не видел до публикации. Ровно так уехала
+      # схема в digital-immune-system-maturity.
+      - name: Verify mermaid diagrams are pre-rendered
+        run: make mermaid-check
+
+      - name: Stamp commit hash into the config
         env:
-          VPS_DEPLOY_KEY: ${{secrets.DEPLOY_SSH_KEY}}
-          VPS_DEPLOY_USER: ${{secrets.DEPLOY_USER}}
-          VPS_DEPLOY_HOST: ${{secrets.DEPLOY_HOST}}
-          VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
-        with:
-          hugo-version: '0.161.1'
-          hugo-arguments: '--minify'
-          hugo-config: 'hugo.yaml'
-          rsync-arguments: '--archive --compress --delete'
-          robots-txt-source: 'content/robots.txt'
+          CI: 'true'
+        run: make stamp-commit
+
+      - name: Build site
+        run: make build-prod
+
+      - name: Copy robots.txt into the built site
+        run: make robots
+
+      - name: Deploy to VPS
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_DEST: ${{ secrets.DEPLOY_TARGET_PATH }}
+        run: |
+          set -euo pipefail
+          install -d -m 700 "${HOME}/.ssh"
+          printf '%s\n' "${DEPLOY_SSH_KEY}" > "${HOME}/.ssh/id_rsa_deploy"
+          chmod 600 "${HOME}/.ssh/id_rsa_deploy"
+          # Часть shared-хостингов (fail2ban, троттлинг) молча роняет keyscan.
+          # Пустой known_hosts не должен ломать деплой — ниже accept-new.
+          ssh-keyscan -T 10 "${DEPLOY_HOST}" \
+            > "${HOME}/.ssh/known_hosts" 2>/dev/null || true
+          if [ ! -s "${HOME}/.ssh/known_hosts" ]; then
+            echo "WARN: ssh-keyscan не отдал ключ для ${DEPLOY_HOST}," \
+                 "полагаемся на StrictHostKeyChecking=accept-new"
+          fi
+          make deploy
 
       - name: Ping Yandex Webmaster sitemap
         if: ${{ success() }}
