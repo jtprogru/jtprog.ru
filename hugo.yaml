@@ -215,9 +215,13 @@ params:
   # --- Шапка / иконки ---
   label:
     text: "Мишка на сервере"
+    # Два файла логотипа: `icon` для светлой темы, `iconDark` — для тёмной.
+    # В разметку идут оба, лишний прячет CSS по data-theme. Подмена src из JS
+    # моргала бы не тем логотипом, пока скрипт не отработает.
     icon: /fav-light.svg
+    iconDark: /fav-dark.svg
     iconHeight: 45
-    iconWidth: 35 # fav-light.svg viewBox 23.16×29.57 → при height 45 ширина ≈ 35; резервирует бокс, чтобы шапка не прыгала (CLS)
+    iconWidth: 35 # viewBox обоих файлов 23.16×29.57 → при height 45 ширина ≈ 35; резервирует бокс, чтобы шапка не прыгала (CLS)
   assets:
     favicon: /favicon.svg
     favicon16x16: /favicon-16x16.svg
