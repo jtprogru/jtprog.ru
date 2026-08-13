@@ -1,9 +1,11 @@
 ---
 # === Идентичность сайта ===
 baseURL: "https://jtprog.ru"
-# Именно languageCode: ключа `language` в Hugo нет, значение просто не читалось,
+# Именно `locale`: ключа `language` в Hugo нет, значение просто не читалось,
 # из-за чего og:locale уезжал как `ru` вместо ожидаемого соцсетями `ru_RU`.
-languageCode: "ru-RU"
+# До Hugo 0.158 этот ключ назывался `languageCode`, сейчас он deprecated.
+# Читает значение partial opengraph.html через site.Language.Locale.
+locale: "ru-RU"
 defaultContentLanguage: "ru"
 theme: "mishka"
 title: "Мишка на сервере"

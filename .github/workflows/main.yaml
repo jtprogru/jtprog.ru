@@ -7,8 +7,9 @@ name: CI
   workflow_dispatch:
 
 env:
-  # Версия, на которой собирался прод в jtprogru/hugo-rsync-deployment.
-  HUGO_VERSION: '0.161.1'
+  # Держим вровень с локальной: расхождение версий — это расхождение сборок,
+  # а весь смысл `make build-prod` в том, что команда одна и та же.
+  HUGO_VERSION: '0.165.0'
 
 jobs:
   deploy-website:
