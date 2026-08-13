@@ -290,8 +290,6 @@ params:
       url: "https://dev.to/jtprogru"
     - name: linkedin
       url: "https://www.linkedin.com/in/jtprogru"
-    - name: unsplash
-      url: "https://unsplash.com/@jtprogru"
     - name: cv
       url: "https://savinmi.ru"
     - name: rss
