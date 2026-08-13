@@ -42,20 +42,21 @@ MMDC = [
     "mmdc",
 ]
 MMDC_COMMON = ["--quiet", "--backgroundColor", "transparent"]
-SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 
 # Каждой mermaid-диаграмме генерим две версии — под light и dark CSS-темы
 # сайта. Render hook темы mishka вставляет обе и переключает видимость
 # через `:root[data-theme="..."]`. Имена: <hash>.svg (light), <hash>.dark.svg.
 #
-# Цветовая палитра задаётся через mermaid-config.{light,dark}.json — там
-# themeVariables, согласованные с CSS-переменными темы сайта (см.
-# themes/mishka/assets/css/modules/00-vars.css). Чтобы избежать тёмных
-# блоков и плохого контраста, используем mermaid theme=base и переопределяем
-# все основные переменные вручную.
+# Палитра берётся из темы, а не из локальной копии. Раньше рядом лежали свои
+# scripts/mermaid-config.{light,dark}.json, и это была вторая независимая
+# палитра: она отстала от BRANDING 0.2 и рисовала схемы тёплыми, пока сайт
+# уже был в catppuccin. Конфиги темы генерятся из тех же токенов, что и CSS
+# (mishka-ds/scripts/gen-mermaid-theme.mjs), поэтому пререндер и runtime-
+# фолбэк дают одинаковые цвета по построению.
+THEME_MERMAID_DIR = REPO_ROOT / "themes" / "mishka" / "assets" / "mermaid"
 VARIANTS = (
-    ("",      SCRIPTS_DIR / "mermaid-config.light.json"),
-    (".dark", SCRIPTS_DIR / "mermaid-config.dark.json"),
+    ("",      THEME_MERMAID_DIR / "mermaid-config.json"),
+    (".dark", THEME_MERMAID_DIR / "mermaid-config.dark.json"),
 )
 
 
@@ -83,9 +84,20 @@ def render_block(
 
 
 def main() -> int:
+    for _, config_file in VARIANTS:
+        if not config_file.exists():
+            print(
+                f"нет конфига {config_file.relative_to(REPO_ROOT)} — "
+                "подтяни сабмодуль темы: make update-theme",
+                file=sys.stderr,
+            )
+            return 1
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     force = "--force" in sys.argv
-    rendered = skipped = 0
+    # --check ничего не рисует и не требует npx: только проверяет, что каждому
+    # блоку в контенте соответствует пара SVG. Для CI.
+    check = "--check" in sys.argv
+    rendered = skipped = missing = 0
     for md in sorted(CONTENT_DIR.rglob("*.md")):
         text = md.read_text(encoding="utf-8")
         for block in MERMAID_RE.findall(text):
@@ -95,6 +107,13 @@ def main() -> int:
             for suffix, config_file in VARIANTS:
                 out = OUT_DIR / f"{h}{suffix}.svg"
                 label = "dark" if suffix else "light"
+                if check:
+                    if out.exists():
+                        skipped += 1
+                    else:
+                        missing += 1
+                        print(f"  ✗ {rel_md}: {h[:8]} [{label}] — нет {out.name}")
+                    continue
                 # Unique svg id avoids CSS cascade conflicts when both light
                 # and dark SVGs are inlined on the same page. Without this,
                 # mmdc emits id="my-svg" for every file, and the second
@@ -109,6 +128,15 @@ def main() -> int:
                 print(f"  → {rel_md}: {h[:8]} [{label}]  ({tag}...)")
                 render_block(code, out, config_file, svg_id)
                 rendered += 1
+    if check:
+        if missing:
+            print(
+                f"\nНе хватает {missing} SVG. Прогони: make mermaid-render",
+                file=sys.stderr,
+            )
+            return 1
+        print(f"\nOK. Все {skipped} SVG на месте.")
+        return 0
     print(f"\nDone. rendered={rendered}, cached={skipped}, total={rendered + skipped}")
     return 0
 
