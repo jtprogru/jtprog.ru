@@ -243,7 +243,7 @@ params:
     url: "https://sponsr.ru/jtprogru_channel/"
     linkText: "Посмотреть проект на Sponsr"
     # Сюда переехал футер, который раньше дублировался в конце каждого поста.
-    note: "Вопросы, замечания и просто поговорить — в [чат](https://t.me/jtprogru_chat). Анонсы новых постов — в [канале](https://t.me/jtprogru_channel). Другие способы сказать спасибо — на странице «[Донаты](/donations/)»."
+    note: "Вопросы, замечания и просто поговорить — в [чат](https://t.me/+WkR_-AWNbXVjMWUy). Анонсы новых постов — в [канале](https://t.me/jtprogru_channel). Другие способы сказать спасибо — на странице «[Донаты](/donations/)»."
 
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/main/content"
@@ -264,7 +264,7 @@ params:
     title: "Мишка на сервере"
     subtitle: |
       Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про SRE, DevOps и системное администрирование.
-      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel), заходи в [telegram-чат](https://t.me/jtprogru_chat),
+      Подписывайся на [telegram-канал](https://t.me/jtprogru_channel), заходи в [telegram-чат](https://t.me/+WkR_-AWNbXVjMWUy),
       а если хочется закрытой части — она на [Sponsr](https://sponsr.ru/jtprogru_channel/).
     imageUrl: "/avatar.webp"
     imageTitle: "jtprogru"
@@ -278,12 +278,12 @@ params:
     Content: |+
       Меня зовут Михаил aka `jtprogru` и добро пожаловать на страницы моего блога.
       Подписывайся на [telegram-канал](https://t.me/jtprogru_channel) или заходи в
-      [telegram-чат](https://t.me/jtprogru_chat) и задавай вопросы.
+      [telegram-чат](https://t.me/+WkR_-AWNbXVjMWUy) и задавай вопросы.
 
   # --- Social icons ---
   socialIcons:
     - name: telegram
-      url: "https://t.me/jtprogru_chat"
+      url: "https://t.me/+WkR_-AWNbXVjMWUy"
     - name: sponsr
       url: "https://sponsr.ru/jtprogru_channel/"
     - name: github
