@@ -36,7 +36,7 @@ schemaProfile: true
 ## Где меня найти
 
 - [Telegram-канал](https://t.me/jtprogru_channel) — опыт, мысли и анонсы статей из блога
-- [Telegram-чат](https://t.me/jtprogru_chat) — вопросы, замечания и просто поговорить
+- [Telegram-чат](https://t.me/+WkR_-AWNbXVjMWUy) — вопросы, замечания и просто поговорить
 - [GitHub](https://github.com/jtprogru) — код и открытые проекты
 - [LinkedIn](https://www.linkedin.com/in/jtprogru)
 - [dev.to](https://dev.to/jtprogru)
