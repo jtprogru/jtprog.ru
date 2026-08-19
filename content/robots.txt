@@ -1,12 +1,14 @@
 User-agent: *
 Disallow: /offline/
 Disallow: /ip/
+Disallow: /go/
 Disallow: /*?p=
 Disallow: /*?share=
 
 User-agent: Yandex
 Disallow: /offline/
 Disallow: /ip/
+Disallow: /go/
 Clean-param: p&share
 
 Sitemap: https://jtprog.ru/sitemap.xml
