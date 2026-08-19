@@ -273,12 +273,12 @@ params:
     latestPostsCount: 6
 
   # Альтернатива profileMode (не используется одновременно).
-  homeInfoParams:
-    Title: "Привет, `%username%`!"
-    Content: |+
-      Меня зовут Михаил aka `jtprogru` и добро пожаловать на страницы моего блога.
-      Подписывайся на [telegram-канал](https://t.me/+gLeURJwFz5Q4NTA6) или заходи в
-      [telegram-чат](https://t.me/+WkR_-AWNbXVjMWUy) и задавай вопросы.
+  # homeInfoParams:
+  #   Title: "Привет, `%username%`!"
+  #   Content: |+
+  #     Меня зовут Михаил aka `jtprogru` и добро пожаловать на страницы моего блога.
+  #     Подписывайся на [telegram-канал](https://t.me/+gLeURJwFz5Q4NTA6) или заходи в
+  #     [telegram-чат](https://t.me/+WkR_-AWNbXVjMWUy) и задавай вопросы.
 
   # --- Social icons ---
   socialIcons:
