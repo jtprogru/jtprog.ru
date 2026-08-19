@@ -13,6 +13,9 @@
 #                                     включая обложки → URL самого поста)
 #        content/posts/_index.md   → /posts/
 #        content/<name>.md         → /<slug|name>/
+#        content/<section>/...     → пропускаем: вложенные разделы, кроме
+#                                     content/posts/, — служебные (content/go/),
+#                                     закрыты noindex и в индексе им не место
 #      slug читается из YAML-frontmatter (90/143 поста его переопределяют);
 #      схема сверена с `hugo list all` на всех страницах сайта.
 #   4. Пишет уникальный список в файл и публикует через $GITHUB_OUTPUT
@@ -67,9 +70,17 @@ resolve_url() {
       slug="$(fm_slug "$index")"
       echo "$BASE/posts/${slug:-$dir}/"
       ;;
+    content/_index.md)
+      echo "$BASE/"
+      ;;
+    content/*/*)
+      # Вложенные разделы, кроме content/posts/ (он разобран выше). Сюда попадают
+      # служебные страницы вида content/go/tg.md: они закрыты robotsNoIndex и
+      # выкинуты из sitemap, а без этой ветки уезжали в IndexNow как /tg/, /chat/
+      # и /tws/ — то есть три несуществующих URL на каждый пуш.
+      : ;;
     content/*.md)
       name="$(basename "$f" .md)"
-      [ "$name" = "_index" ] && { echo "$BASE/"; return 0; }
       [ -f "$f" ] || return 0       # страница удалена — не сабмитим
       slug="$(fm_slug "$f")"
       echo "$BASE/${slug:-$name}/"
@@ -83,7 +94,13 @@ urls_file="${RUNNER_TEMP:-/tmp}/indexnow-urls.txt"
 git diff --name-only "$BEFORE" "$AFTER" -- content/ | while IFS= read -r f; do
   [ -n "$f" ] || continue
   url="$(resolve_url "$f")"
-  [ -n "$url" ] && printf '%s\n' "$url"
+  # Именно if, а не `[ -n "$url" ] && printf`: при пустом url тест возвращает 1,
+  # это становится статусом последней итерации, а с pipefail + set -e роняет весь
+  # шаг. Ловилось на пуше, где последний изменённый файл в content/ — не страница
+  # (например, content/robots.txt).
+  if [ -n "$url" ]; then
+    printf '%s\n' "$url"
+  fi
 done | sort -u > "$urls_file"
 
 count="$(wc -l < "$urls_file" | tr -d '[:space:]')"
