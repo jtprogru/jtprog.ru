@@ -1,0 +1,88 @@
+<svg width="1050" height="480" viewBox="0 0 1050 480" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Как пройти собеседование</title>
+<desc>Кандидат и интервьюер сидят по разные стороны стола как равные стороны разговора; между ними встречные стрелки идут через единственный светящийся сапфиром объект — то, что кандидат кладёт на стол: репозиторий с ответом «почему именно так». Снизу тихая полоса из четырёх шагов схемы.</desc>
+<defs>
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#24273a"/>
+    <stop offset="100%" stop-color="#1e2030"/>
+  </linearGradient>
+  <linearGradient id="spineGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#7dc4e4"/>
+    <stop offset="100%" stop-color="#0b7285"/>
+  </linearGradient>
+  <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#a5adcb"/>
+  </marker>
+  <marker id="arrL" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#a5adcb"/>
+  </marker>
+</defs>
+
+<!-- база: прямые края, весь холст, без rx -->
+<rect x="0" y="0" width="1050" height="480" fill="url(#bgGrad)"/>
+
+<!-- тихая структурная сетка -->
+<g stroke="#494d64" stroke-width="0.5" opacity="0.35">
+  <line x1="0" y1="112" x2="1050" y2="112"/>
+  <line x1="0" y1="330" x2="1050" y2="330"/>
+  <line x1="0" y1="410" x2="1050" y2="410"/>
+  <line x1="262" y1="112" x2="262" y2="410"/>
+  <line x1="525" y1="112" x2="525" y2="410"/>
+  <line x1="788" y1="112" x2="788" y2="410"/>
+</g>
+
+<!-- Заголовок -->
+<text x="525" y="55" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="30" font-weight="700" fill="#cad3f5">Как пройти собеседование</text>
+<text x="525" y="84" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="15" fill="#a5adcb">Собеседование — разговор двух сторон, и одна из них ты</text>
+
+<!-- ЛЕВАЯ СТОРОНА: кандидат (нейтральная) -->
+<rect x="135" y="192" width="180" height="92" rx="10" fill="#363a4f" stroke="#494d64" stroke-width="1.5"/>
+<text x="225" y="226" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="18" font-weight="700" fill="#cad3f5">кандидат</text>
+<text x="225" y="256" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="13" fill="#a5adcb">выбирает тоже</text>
+
+<!-- ПРАВАЯ СТОРОНА: интервьюер (нейтральная, равноправная) -->
+<rect x="735" y="192" width="180" height="92" rx="10" fill="#363a4f" stroke="#494d64" stroke-width="1.5"/>
+<text x="825" y="226" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="18" font-weight="700" fill="#cad3f5">интервьюер</text>
+<text x="825" y="256" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="13" fill="#a5adcb">задаёт вопросы</text>
+
+<!-- ВСТРЕЧНЫЕ СТРЕЛКИ: разговор в обе стороны -->
+<line x1="322" y1="216" x2="386" y2="216" stroke="#a5adcb" stroke-width="2" marker-end="url(#arrR)"/>
+<line x1="664" y1="216" x2="728" y2="216" stroke="#a5adcb" stroke-width="2" marker-end="url(#arrR)"/>
+<line x1="728" y1="260" x2="664" y2="260" stroke="#a5adcb" stroke-width="2" marker-end="url(#arrL)"/>
+<line x1="386" y1="260" x2="322" y2="260" stroke="#a5adcb" stroke-width="2" marker-end="url(#arrL)"/>
+
+<!-- СМЫСЛОВОЙ ЦЕНТР: то, что ты кладёшь на стол -->
+<rect x="395" y="168" width="260" height="140" rx="12" fill="#363a4f" stroke="#7dc4e4" stroke-width="2.5"/>
+<rect x="395" y="168" width="14" height="140" rx="7" fill="url(#spineGrad)"/>
+<text x="530" y="196" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="14" font-weight="700" fill="#7dc4e4">предмет для разговора</text>
+<g stroke="#7dc4e4" stroke-width="2" stroke-linecap="round" opacity="0.85">
+  <line x1="428" y1="226" x2="440" y2="226"/>
+  <line x1="428" y1="252" x2="440" y2="252"/>
+  <line x1="428" y1="278" x2="440" y2="278"/>
+</g>
+<text x="452" y="226" font-family="'JetBrains Mono', monospace" font-size="12" fill="#cad3f5" dominant-baseline="central">ansible-roles/</text>
+<text x="452" y="252" font-family="'JetBrains Mono', monospace" font-size="12" fill="#cad3f5" dominant-baseline="central">galaxy.yml</text>
+<text x="452" y="278" font-family="'PT Sans', sans-serif" font-size="12" fill="#a5adcb" dominant-baseline="central">почему именно так</text>
+
+<!-- НИЖНЯЯ ПОЛОСА: четыре шага схемы -->
+<line x1="230" y1="358" x2="815" y2="358" stroke="#494d64" stroke-width="1.5"/>
+<circle cx="230" cy="358" r="5" fill="#363a4f" stroke="#494d64" stroke-width="1.5"/>
+<circle cx="425" cy="358" r="5" fill="#363a4f" stroke="#494d64" stroke-width="1.5"/>
+<circle cx="620" cy="358" r="5" fill="#363a4f" stroke="#494d64" stroke-width="1.5"/>
+<circle cx="815" cy="358" r="6" fill="#7dc4e4"/>
+<text x="230" y="384" text-anchor="middle" font-family="'PT Sans', sans-serif" font-size="13" fill="#a5adcb">честно</text>
+<text x="425" y="384" text-anchor="middle" font-family="'PT Sans', sans-serif" font-size="13" fill="#a5adcb">слабые стороны первыми</text>
+<text x="620" y="384" text-anchor="middle" font-family="'PT Sans', sans-serif" font-size="13" fill="#a5adcb">результат, не участие</text>
+<text x="815" y="384" text-anchor="middle" font-family="'PT Sans', sans-serif" font-size="13" fill="#7dc4e4">своё на стол</text>
+
+<!-- Подпись канала -->
+<text x="525" y="452" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="12" fill="#7dc4e4">Мишка на сервере · @jtprogru_channel</text>
+</svg>
