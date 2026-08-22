@@ -14,7 +14,7 @@ keywords:
   - promtail
   - grafana alloy
 date: "2021-08-26T18:14:09+03:00"
-lastmod: "2026-05-15T20:00:00+03:00"
+lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - nginx
   - json
@@ -156,6 +156,6 @@ loki.write "default" {
 
 Если стек ELK уже есть — `filebeat` с модулем `nginx` или `logstash` с `json` codec тоже отлично заходят: формат универсальный.
 
-Чтобы логи не съели диск, рядом нужен [logrotate](/posts/logrotate-basics/), а сами `server`-блоки, которые эти логи пишут, — в [«Настройка виртуальных хостов Nginx»](/posts/virt-host-nginx/).
+Чтобы логи не съели диск, рядом нужен [logrotate](/posts/logrotate-basics/), а сами `server`-блоки, которые эти логи пишут, — в [«Настройка виртуальных хостов Nginx»](/posts/virt-host-nginx/). Следующий вопрос приходит сразу за структурированными логами и звучит неприятно: сколько это стоит. Кардинальность полей, семплирование и сроки хранения разобраны [в листе про экономику телеметрии](https://jtprogru.github.io/The-Way-of-SRE/engineering/telemetry-economics/).
 
 На этом всё!

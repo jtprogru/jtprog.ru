@@ -8,7 +8,7 @@ cover:
   image: develop.png
   relative: false
 date: "2020-03-11T22:50:00+03:00"
-lastmod: "2026-08-09T12:00:00+03:00"
+lastmod: "2026-08-22T12:00:00+03:00"
 tags:
 - grafana
 - export
@@ -150,6 +150,6 @@ datasources:
 
 Ручной экспорт при этом остаётся полезным ровно один раз — чтобы вытащить то, что уже накликано в интерфейсе, и положить в git.
 
-Если Grafana ещё не поставлена — [вот инструкция](/posts/install-grafana7/), а зачем вообще весь этот зоопарк — в [«Мониторинг: что/куда/зачем?»](/posts/wat-monitoring/).
+Если Grafana ещё не поставлена — [вот инструкция](/posts/install-grafana7/), а зачем вообще весь этот зоопарк — в [«Мониторинг: что/куда/зачем?»](/posts/wat-monitoring/). Сам приём шире дашбордов: держать желаемое состояние в git и накатывать его оттуда — это [инфраструктура как код](https://jtprogru.github.io/The-Way-of-SRE/engineering/infrastructure-as-code/), а когда сведение состояния берёт на себя контроллер в кластере — уже [GitOps](https://jtprogru.github.io/The-Way-of-SRE/engineering/gitops/).
 
 А на этом всё!
