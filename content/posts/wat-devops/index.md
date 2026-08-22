@@ -5,7 +5,7 @@ title: 'Что ты такое – DevOps?'
 description: "Авторское мнение и разбор методологии DevOps: основные понятия, этапы внедрения, автоматизация, CI/CD, мониторинг, советы по развитию DevOps-культуры в компании."
 keywords: ["devops что это", "devops методология", "devops внедрение", "devops best practices", "автоматизация devops", "ci/cd devops", "devops monitoring", "devops культура", "devops советы", "platform engineering", "internal developer platform", "devsecops", "finops"]
 date: "2020-11-09T22:25:00+03:00"
-lastmod: "2026-05-15T20:00:00+03:00"
+lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - devops
   - opinion
@@ -121,13 +121,15 @@ slug: wat-devops
 
 Платформа, о которой выше — это не один инструмент, а собранный из кубиков набор: GitOps, секреты, observability, темплейты сервисов, golden paths. На рынке сформировался класс IDP-инструментов: **[Backstage](https://backstage.io/)** (от Spotify, в CNCF), **Port**, **Humanitec**, **Mia-Platform**. Идея простая: разработчик заходит в портал, нажимает «новый сервис», получает репозиторий, CI/CD-пайплайн, мониторинг и сертификат — без письма «админам».
 
+Ломается это обычно не на инструментах, а на том, что платформу строят без пользователей: [лист про платформу как продукт](https://jtprogru.github.io/The-Way-of-SRE/engineering/platform-as-a-product/) — про спрос, границы и правила удаления невостребованного, а [golden paths](https://jtprogru.github.io/The-Way-of-SRE/engineering/golden-paths/) — про то, как выглядит сам поддерживаемый путь.
+
 ### DevSecOps и supply chain
 
 В 2020-м «DevSecOps» звучало как маркетинговое словцо. После SolarWinds (декабрь 2020), Log4Shell (декабрь 2021), xz-backdoor (март 2024) — это уже базовая гигиена. Что появилось в обиходе: **SBOM** (Software Bill of Materials) как обязательный артефакт сборки, **SLSA** (Supply-chain Levels for Software Artifacts) как фреймворк зрелости, **Sigstore/cosign** для подписи образов, **Trivy/Grype/Snyk** в каждом CI-пайплайне, secrets-сканеры на pre-commit. Если в твоём пайплайне в 2026-м нет хотя бы SBOM и сканирования зависимостей — это не пайплайн, это самоубийство.
 
 ### SRE и DevOps окончательно разъехались
 
-В 2020-м я писал, что граница между DevOps-инженером и SRE размытая. Сейчас она вполне чёткая — у них разные KPI. **DevOps-инженер/Platform Engineer** отвечает за поток поставки (lead time, deployment frequency, change failure rate, MTTR — те самые DORA-метрики). **SRE** отвечает за надёжность сервиса (SLO/SLI, error budget). Эти роли пересекаются в инструментарии, но не в целях. Подробнее — в моём свежем посте [Эволюция SRE 2020-2025](/posts/sre-evolution-2020-2025/).
+В 2020-м я писал, что граница между DevOps-инженером и SRE размытая. Сейчас она вполне чёткая — у них разные KPI. **DevOps-инженер/Platform Engineer** отвечает за поток поставки (lead time, deployment frequency, change failure rate, MTTR — те самые DORA-метрики). **SRE** отвечает за надёжность сервиса (SLO/SLI, error budget). Эти роли пересекаются в инструментарии, но не в целях. Подробнее — в моём свежем посте [Эволюция SRE 2020-2025](/posts/sre-evolution-2020-2025/). Про сами DORA-метрики — как их читают и как из них делают KPI-театр — [есть отдельный лист](https://jtprogru.github.io/The-Way-of-SRE/culture/dora-metrics/).
 
 ### FinOps
 

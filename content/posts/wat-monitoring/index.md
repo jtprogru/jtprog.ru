@@ -5,7 +5,7 @@ title: 'Мониторинг: что/куда/зачем?'
 description: "Пошаговое руководство по мониторингу инфраструктуры и приложений: выбор инструментов (Zabbix, Prometheus), модели работы, метрики, алерты, best practices для DevOps и системных администраторов."
 keywords: ["мониторинг инфраструктуры", "zabbix vs prometheus", "метрики мониторинга", "алерты мониторинг", "инструменты мониторинга", "devops monitoring", "push vs pull monitoring", "мониторинг приложений", "best practices monitoring", "observability", "opentelemetry", "ebpf monitoring", "victoriametrics", "loki tempo"]
 date: "2020-10-14T20:48:00+03:00"
-lastmod: "2026-05-15T20:00:00+03:00"
+lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - monitoring
   - prometheus
@@ -143,7 +143,7 @@ slug: wat-monitoring
 
 В исходном посте я писал «алертить надо о том, на что требуется сиюминутная реакция». В 2026-м это правило формализовали в **SLO-подход**: алертим не «CPU выше 80%», а «error budget на текущий период исчерпан на N% быстрее, чем должен». Это убирает алерт-фатигу за счёт того, что симптомы (latency, error rate) важнее причин (CPU/RAM).
 
-Подробнее — в моём свежем посте [SLO как чертёж архитектуры](/posts/slo-as-architecture-blueprint/) и [Burn rate — не скорость, а ускорение](/posts/burn-rate-is-not-speed/).
+Подробнее — в моём свежем посте [SLO как чертёж архитектуры](/posts/slo-as-architecture-blueprint/) и [Burn rate — не скорость, а ускорение](/posts/burn-rate-is-not-speed/). Список того, что вокруг такого алертинга надо уметь, — [в листе SLI-based Alerting](https://jtprogru.github.io/The-Way-of-SRE/engineering/sli-based-alerting/) карты компетенций.
 
 ### Современный open-source-стек
 
@@ -160,6 +160,8 @@ slug: wat-monitoring
 | Алертинг | [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/) + [Grafana OnCall](https://grafana.com/products/oncall/) |
 
 Zabbix всё ещё отлично подходит для классического infra-monitoring (особенно физика, сеть, BMC/IPMI) и в 7.0 серьёзно подтянул API и интеграцию с TimescaleDB.
+
+Вопрос, который этот стек ставит на второй месяц эксплуатации, — сколько он стоит. Кардинальность меток, семплирование трейсов и сроки хранения решают тут больше, чем выбор между Mimir и VictoriaMetrics: [про экономику телеметрии](https://jtprogru.github.io/The-Way-of-SRE/engineering/telemetry-economics/) есть отдельный лист.
 
 ### TL;DR апдейта
 

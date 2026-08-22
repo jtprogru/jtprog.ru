@@ -5,7 +5,7 @@ title: 'Настройка Linux для HL и защиты от DDoS'
 description: 'Пошаговая инструкция по настройке sysctl для повышения производительности Linux, защиты от DDoS и оптимизации под высокие нагрузки: параметры, примеры, рекомендации.'
 keywords: ['sysctl настройка linux', 'ddos защита linux', 'оптимизация ядра linux', 'linux highload', 'sysctl.conf примеры', 'сетевые параметры linux', 'linux performance tuning', 'linux ddos mitigation', 'настройка tcp linux', 'tcp bbr', 'tcp_notsent_lowat', 'tcp_syncookies', 'tcp_fastopen', 'ядро 6.x']
 date: "2019-07-26T18:50:58+03:00"
-lastmod: "2026-07-20T12:00:00+03:00"
+lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - sysctl
   - linux
@@ -487,4 +487,4 @@ cat /proc/sys/net/netfilter/nf_conntrack_count
 
 Если параметр меняешь — фиксируй в `/etc/sysctl.d/99-tuning.conf`, а не в `/etc/sysctl.conf` (последний при обновлении пакетов трогать не любят). Применить без ребута — `sysctl --system`.
 
-Рядом по теме: [шпаргалка по iptables](/posts/iptables-manual/) для фильтрации, [чек-лист для Linux-сервера](/posts/linux-checklist/) как общая гигиена и [«Что происходит, когда ты открываешь сайт»](/posts/what-happens-when-you-open-website/) — чтобы понимать, какой из этих параметров на каком этаже работает.
+Рядом по теме: [шпаргалка по iptables](/posts/iptables-manual/) для фильтрации, [чек-лист для Linux-сервера](/posts/linux-checklist/) как общая гигиена и [«Что происходит, когда ты открываешь сайт»](/posts/what-happens-when-you-open-website/) — чтобы понимать, какой из этих параметров на каком этаже работает. А общий список того, что тут стоит понимать не по случаю, а системно, — в листах [Networking](https://jtprogru.github.io/The-Way-of-SRE/engineering/networking/) и [Operating Systems](https://jtprogru.github.io/The-Way-of-SRE/engineering/operating-systems/).

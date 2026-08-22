@@ -5,7 +5,7 @@ title: 'Ansible Roles'
 description: "Подробное руководство по Ansible Roles: структура ролей, best practices, примеры, тестирование с molecule, хранение и публикация ролей, ответы на частые вопросы."
 keywords: ["ansible roles", "ansible best practices", "структура ansible роли", "ansible-galaxy", "molecule тестирование", "ansible playbook", "devops", "ansible lint", "ansible tutorial", "ansible role dependencies"]
 date: 2022-09-05T10:15:00+03:00
-lastmod: 2022-09-05T10:15:00+03:00
+lastmod: 2026-08-22T12:00:00+03:00
 tags:
   - ansible
   - basics
@@ -417,3 +417,5 @@ dependencies: []
 - Будет ли ей пользоваться кто-то кроме меня?
 
 Сформировав ответы на все эти вопросы, ты сможешь написать роль, которой будет пользовать удобно, а главное, результат работы которой будет всегда ожидаемый.
+
+Как только ролью начинает пользоваться кто-то кроме тебя, она перестаёт быть скриптом и становится внутренним инструментом: у неё появляются пользователи, версии и обещание не ломать их молча. Про то, как такой типовой путь собирают и поддерживают, — [лист про golden paths](https://jtprogru.github.io/The-Way-of-SRE/engineering/golden-paths/).

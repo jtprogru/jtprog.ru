@@ -5,7 +5,7 @@ title: 'Установка Netbox: Docker-флоу для v4 и заметки �
 description: "Установка Netbox 4.x на Ubuntu Server 24.04 через netbox-docker: docker compose, переменные окружения, LDAP/AD-интеграция, апгрейд через upgrade.sh, исторический раздел про ручную установку 2.x."
 keywords: ["установка netbox", "netbox 4", "netbox docker", "netbox-docker", "netbox-community", "netbox compose", "netbox ubuntu 24.04", "netbox ldap", "active directory netbox", "netbox upgrade.sh", "network automation", "ipam dcim"]
 date: "2020-07-22T23:15:00+03:00"
-lastmod: "2026-05-15T20:00:00+03:00"
+lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - netbox
   - netbox-docker
@@ -815,5 +815,7 @@ AUTH_LDAP_CACHE_TIMEOUT = 10
 ```bash
 sudo journalctl -xef -u netbox.service
 ```
+
+Netbox отвечает на вопрос «что у нас есть». Вторая половина задачи — «кто за это отвечает»: у каждой записи в каталоге должен быть живой владелец, иначе через квартал вместо источника правды получается музей. Про то, как владение сервисами держат в актуальном состоянии, — [отдельный лист в карте компетенций](https://jtprogru.github.io/The-Way-of-SRE/culture/service-ownership/).
 
 На этом всё! Profit!

@@ -8,7 +8,7 @@ cover:
   image: howto.png
   relative: false
 date: "2016-08-01T15:00:28+03:00"
-lastmod: "2026-08-09T12:00:00+03:00"
+lastmod: "2026-08-22T12:00:00+03:00"
 tags:
 - docker
 - linux
@@ -126,5 +126,6 @@ docker run --rm -it -v myvolume:/data alpine sh -c "apk add --no-cache vim && vi
 - **Для постоянных правок конфигов есть volume и bind-mount.** Если файл нужно менять регулярно — пробрасывай его через `volumes` в `docker-compose.yml`, тогда он живёт на хосте и переживает любые пересборки.
 - **Сначала — база.** Если `Dockerfile` и `docker-compose.yml` пока выглядят как магия, [начни отсюда](/posts/docker-base/).
 - **Нет bash — не паникуй.** Минимальные образы (Alpine, distroless) идут без `bash`, иногда вообще без шелла. Для Alpine — `sh`, в distroless заходить нечем, отлаживай через `docker logs` и пересборку.
+- **Регулярный заход руками — это уже toil.** Один раз в три часа ночи — нормально. Привычка — нет: она означает, что чего-то не хватает в образе, конфиге или пайплайне, и ты каждый раз доделываешь это пальцами. Про то, как такую работу сначала считают, а потом убирают, — [в листе про toil](https://jtprogru.github.io/The-Way-of-SRE/engineering/toil-tracking/).
 
 На этом все!

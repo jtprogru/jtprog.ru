@@ -8,7 +8,7 @@ cover:
   image: work.png
   relative: false
 date: 2023-10-17T20:58:16+03:00
-lastmod: 2023-10-17T20:58:16+03:00
+lastmod: 2026-08-22T12:00:00+03:00
 tags:
 - taskfile
 - makefile
@@ -518,4 +518,4 @@ tasks:
 
 PS: Данную статью можно считать расширенным дополнением моей простенькой [презентации](https://jtprogru.github.io/taskfiles/), которую я показывал команде.
 
-Кстати, Taskfile хорошо ложится рядом с CI: те же команды, что гоняешь локально, дёргаются из пайплайна — что на [GitHub Actions](/posts/github-actions/), что на [GitLab-CI](/posts/gitlab-ci/).
+Кстати, Taskfile хорошо ложится рядом с CI: те же команды, что гоняешь локально, дёргаются из пайплайна — что на [GitHub Actions](/posts/github-actions/), что на [GitLab-CI](/posts/gitlab-ci/). А сам навык — складывать повседневные команды в набор вместо того, чтобы каждый раз вспоминать флаги, — самый дешёвый уровень борьбы с рутиной: [про личный тулкит SRE](https://jtprogru.github.io/The-Way-of-SRE/engineering/personal-sre-toolkit/) есть отдельный лист.
