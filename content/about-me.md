@@ -13,7 +13,7 @@ schemaProfile: true
 
 Зовут меня Михаил, в сети — `jtprogru`. Раз ты на этой страничке, значит решил посмотреть, кто я такой.
 
-Сейчас работаю Lead SRE в [h3llo.cloud](https://h3llo.cloud), отвечаю за надёжность облака. В эксплуатации с 2014 года, в IT в целом с 2003-го. Специализация — Site Reliability Engineering: надёжность инфраструктуры, SLO и error budget, разбор инцидентов, автоматизация и выстраивание практик в командах. Вхожу в программный комитет [DevOpsConf](https://devopsconf.io/), веду открытый проект «The Way of SRE», менторю на [getMentor](https://getmentor.dev/mentor/michael-savin-1427).
+Сейчас работаю Lead SRE в [h3llo.cloud](https://h3llo.cloud), отвечаю за надёжность облака. В эксплуатации с 2014 года, в IT в целом с 2003-го. Специализация — Site Reliability Engineering: надёжность инфраструктуры, SLO и error budget, разбор инцидентов, автоматизация и выстраивание практик в командах. Вхожу в программный комитет [DevOpsConf](https://devopsconf.io/), веду открытый проект «The Way of SRE», менторю на [getMentor](https://getmentor.dev/mentor/jtprogru).
 
 Подробности по опыту и стеку — в [резюме](https://savinmi.ru).
 
@@ -40,5 +40,5 @@ schemaProfile: true
 - [GitHub](https://github.com/jtprogru) — код и открытые проекты
 - [LinkedIn](https://www.linkedin.com/in/jtprogru)
 - [dev.to](https://dev.to/jtprogru)
-- [getMentor](https://getmentor.dev/mentor/michael-savin-1427) — если нужна помощь или консультация
+- [getMentor](https://getmentor.dev/mentor/jtprogru) — если нужна помощь или консультация
 - [Sponsr](https://sponsr.ru/jtprogru_channel/) — закрытая часть, то, что не идёт в открытый доступ
