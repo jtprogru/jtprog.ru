@@ -211,6 +211,12 @@ params:
   opengraph: true
   twitter_cards: true
 
+  # Публичный @username канала. Уходит в <meta property="te:channel">, откуда
+  # его читает Instant View-шаблон и рисует кнопку подписки под статьёй.
+  # Нужен именно публичный handle: в socialIcons лежит приватная инвайт-ссылка
+  # на чат, из неё Telegram канал не вычислит. Без "@" — партиал добавит сам.
+  telegramChannel: "jtprogru_channel"
+
   PWA:
     enabled: false
 
