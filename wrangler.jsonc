@@ -1,0 +1,17 @@
+{
+  // Статика Hugo, отдаваемая Cloudflare Worker'ом. Скрипта нет — только assets,
+  // так что это по сути CDN поверх собранного public/.
+  //
+  // Зачем вообще: краулер превью Telegram не достаёт до origin на REG.RU
+  // (31.31.197.51), из-за чего ссылки на посты не показывают карточку. Домен при
+  // этом чистый — twtr.jtprog.ru на teletype.in превьюшится нормально. План
+  // переезда: plans/telegram-preview-hosting-migration.md (каталог в .gitignore).
+  "name": "jtprog-ru",
+  "compatibility_date": "2026-09-02",
+  "assets": {
+    "directory": "./public",
+    // Отдавать /404.html на несуществующих путях — эквивалент
+    // `ErrorDocument 404 /404.html` из static/.htaccess.
+    "not_found_handling": "404-page"
+  }
+}
