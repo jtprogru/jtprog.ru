@@ -249,6 +249,44 @@
     </FilesMatch>
 </IfModule>
 
+# --- 3.1. Соц-краулеры: charset и обход 304 ---
+#
+# Проблема 1 — charset. Apache отдаёт `Content-Type: text/html` БЕЗ charset
+# (проверено: `curl -I https://jtprog.ru/posts/<slug>/`). Браузер вытащит
+# кодировку из `<meta charset>`, а краулеры соцсетей парсят только <head>
+# и часто решают по заголовку — кириллица в og:title/og:description
+# приезжает к ним битой. AddDefaultCharset дописывает charset к text/html
+# и text/plain, бинарных типов не касается.
+AddDefaultCharset UTF-8
+
+# Проблема 2 — 304 без тела. Проверено:
+#   LM=$(curl -sSI https://jtprog.ru/posts/<slug>/ | grep -i ^last-modified | cut -d' ' -f2-)
+#   curl -H "If-Modified-Since: $LM" ... -> 304, size=0
+# ETag Apache здесь не отдаёт вовсе, остаётся только Last-Modified.
+# Кэширующая прокся Telegram (ivwebcontent.telegram.org) при ревалидации
+# получает 304 с пустым телом и не всегда умеет восстановить страницу из
+# своего кэша — отсюда "Can't fetch url..." в Instant View и пустое превью.
+# Для обложек это уже обойдено через `?v=<mtime>` (см. cover_og_image.html),
+# но у HTML-страницы URL обязан быть стабильным, cache-bust туда не приклеить.
+#
+# Снимаем условные заголовки на входе — краулер всегда получает 200 с телом.
+# Тело для всех клиентов одинаковое, поэтому Vary трогать не нужно и кэш
+# на nginx-фронте это не расслаивает.
+<IfModule mod_setenvif.c>
+    BrowserMatchNoCase "TelegramBot"         social_bot
+    BrowserMatchNoCase "ivwebcontent"        social_bot
+    BrowserMatchNoCase "TwitterBot"          social_bot
+    BrowserMatchNoCase "facebookexternalhit" social_bot
+    BrowserMatchNoCase "vkShare"             social_bot
+    BrowserMatchNoCase "Slackbot"            social_bot
+    BrowserMatchNoCase "Discordbot"          social_bot
+    BrowserMatchNoCase "WhatsApp"            social_bot
+</IfModule>
+<IfModule mod_headers.c>
+    RequestHeader unset If-Modified-Since env=social_bot
+    RequestHeader unset If-None-Match     env=social_bot
+</IfModule>
+
 # --- 4. Security headers ---
 # Ставятся на backend-Apache; nginx-фронт REG.RU + DDoS-Guard могут их
 # перекрывать/дублировать — после деплоя ОБЯЗАТЕЛЬНО сверить `curl -I https://jtprog.ru`.
