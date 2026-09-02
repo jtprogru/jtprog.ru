@@ -18,7 +18,12 @@ PUBLIC_DIR   ?= public
 HUGO_PROD    ?= --minify
 DEPLOY_KEY   ?= $(HOME)/.ssh/id_rsa_deploy
 DEPLOY_PORT  ?= 22
-RSYNC_ARGS   ?= --archive --compress --delete
+# --delay-updates: все обновлённые файлы кладутся во временный каталог и
+# переставляются на место одним махом в конце. Без него сайт на время
+# заливки полуразобран, и краулер (Telegram кэширует и отрицательный
+# результат — навсегда, до ручного флаша через @WebpageBot) может
+# застать 404 на странице или обложке.
+RSYNC_ARGS   ?= --archive --compress --delete --delay-updates
 
 .DEFAULT_GOAL := help
 
