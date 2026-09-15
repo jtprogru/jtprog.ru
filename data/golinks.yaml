@@ -5,26 +5,33 @@
 # по источнику (?src=<slug> статьи), цели уходят в Яндекс.Метрику (счётчик
 # указан в hugo.yaml → params.metrics.yandexMetrics).
 #
-# Этот файл — единый список целей для сверки. Сами страницы лежат в
-# content/go/<slug>.md: при трёх-четырёх ссылках генерировать их из данных
-# кастомным output дороже, чем держать руками. Если список вырастет —
-# переключиться на генерацию и удалить дубликаты.
+# Этот файл — единственный источник коротких ссылок. Страницы /go/<slug>/
+# генерирует content adapter content/go/_content.gotmpl, руками в content/go/
+# ничего создавать не нужно: новая ссылка = новая запись здесь. Сам /go/
+# уводит на главную (content/go/_index.md), чтобы не отдавать 403 от nginx.
+#
+# Поля: slug — путь /go/<slug>/, title — <title> страницы, target — куда
+# уводим, goal — цель в Метрике (можно не указывать), label — во что уводим,
+# для строки «Открываем …».
 #
 # target у канала и чата — именно invite-ссылка, а не публичный @handle:
 # вступления Telegram считает по конкретной invite-ссылке, и разные ссылки
 # под разные источники — это её единственный способ разделить трафик.
 
 - slug: tg
+  title: "Переход в telegram-канал"
   target: "https://t.me/+gLeURJwFz5Q4NTA6"
   goal: "go_tg"
   label: "канал"
 
 - slug: chat
+  title: "Переход в telegram-чат"
   target: "https://t.me/+WkR_-AWNbXVjMWUy"
   goal: "go_chat"
   label: "чат"
 
 - slug: tws
+  title: "Переход в The Way of SRE"
   target: "https://jtprogru.github.io/The-Way-of-SRE/"
   goal: "go_tws"
   label: "The Way of SRE"

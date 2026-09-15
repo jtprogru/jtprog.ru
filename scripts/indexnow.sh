@@ -74,10 +74,10 @@ resolve_url() {
       echo "$BASE/"
       ;;
     content/*/*)
-      # Вложенные разделы, кроме content/posts/ (он разобран выше). Сюда попадают
-      # служебные страницы вида content/go/tg.md: они закрыты robotsNoIndex и
-      # выкинуты из sitemap, а без этой ветки уезжали в IndexNow как /tg/, /chat/
-      # и /tws/ — то есть три несуществующих URL на каждый пуш.
+      # Вложенные разделы, кроме content/posts/ (он разобран выше). Сюда попадает
+      # служебный content/go/ (_index.md и _content.gotmpl со страницами /go/<slug>/):
+      # он закрыт robotsNoIndex и выкинут из sitemap, а без этой ветки
+      # content/go/_index.md уезжал бы в IndexNow несуществующим URL /_index/.
       : ;;
     content/*.md)
       name="$(basename "$f" .md)"

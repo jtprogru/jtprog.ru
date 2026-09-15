@@ -1,0 +1,29 @@
+{{- /* Страницы-редиректы /go/<slug>/ из data/golinks.yaml.
+
+       Раньше каждая ссылка лежала отдельным content/go/<slug>.md и дублировала
+       запись в data/golinks.yaml. Теперь список один, а страницы собираются
+       здесь с тем же frontmatter, что был у файлов: layout redirect из темы,
+       noindex, Метрика без ленивой загрузки и без попадания в списки. Смысл
+       полей описан в шапке layouts/redirect.html темы. */ -}}
+{{- range hugo.Data.golinks }}
+  {{- if not .slug }}
+    {{- errorf "content/go/_content.gotmpl: запись без slug в data/golinks.yaml: %v" . }}
+  {{- end }}
+  {{- $params := dict
+    "target" .target
+    "goal" .goal
+    "label" .label
+    "robotsNoIndex" true
+    "analyticsEager" true
+  }}
+  {{- $.AddPage (dict
+    "path" .slug
+    "title" .title
+    "layout" "redirect"
+    "params" $params
+    "build" (dict "list" "never" "render" "always")
+  ) }}
+  {{- /* render указан явно: в отличие от frontmatter, build из AddPage без
+         render не получает умолчание always, и страница молча не рендерится
+         (проверено на Hugo 0.166). */ -}}
+{{- end }}
