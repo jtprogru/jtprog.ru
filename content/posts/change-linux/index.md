@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/change-linux/'
 categories: ["OS"]
 cover:
   alt: OS

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/amarok-on-mysql/'
 categories: ["HowTo"]
 cover:
   alt: howto

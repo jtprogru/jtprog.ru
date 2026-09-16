@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/ftp-passive-vs-active/'
 categories: ["Basics"]
 cover:
     image: basics.png

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/yandex-scale-2024/'
 categories: ["notes"]
 cover:
   image: cover.png

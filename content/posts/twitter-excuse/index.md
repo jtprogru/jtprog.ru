@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/twitter-excuse/'
 categories: ["Develop"]
 cover:
   alt: develop

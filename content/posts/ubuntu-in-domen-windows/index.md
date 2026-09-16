@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/ubuntu-in-domen-windows/'
 title: 'Ubuntu в домене Windows AD'
 description: "Ввод Ubuntu в домен Windows AD: современный способ через realmd и sssd в три команды — и подробный разбор старой связки Kerberos, Samba и Winbind для унаследованных конфигураций."
 keywords: ["ubuntu в домене windows", "ввод ubuntu в AD", "настройка kerberos ubuntu", "samba active directory", "winbind ubuntu", "dns ubuntu ad", "интеграция ubuntu windows", "linux в домене windows", "ubuntu 14.04 ad"]

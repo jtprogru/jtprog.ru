@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/gohugo/'
 categories: ["notes"]
 cover:
   alt: blog

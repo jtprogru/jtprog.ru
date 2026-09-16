@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/get-pic/'
 categories: ["Develop"]
 cover:
   alt: develop

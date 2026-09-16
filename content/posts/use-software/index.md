@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/use-software/'
 categories: ["Work"]
 cover:
   alt: work

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/upgrade-oh-my-zsh/'
 categories: ["HowTo"]
 cover:
   alt: howto

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/vault-crypt/'
 categories: ["Work"]
 cover:
   alt: work

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/be-or-not-to-be/'
 categories: ["notes"]
 cover:
   alt: other

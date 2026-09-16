@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/linux-add-swap/'
 title: 'Добавление SWAP в систему'
 description: "Подробное руководство по созданию и настройке SWAP-файла в Linux. Инструкции для Ubuntu/CentOS, управление параметром swappiness, активация и отключение подкачки."
 keywords:

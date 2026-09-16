@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/thebat-move-to-outlook/'
 categories: ["HowTo"]
 cover:
   alt: howto

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/bitrixvm-hosting/'
 categories: ["Work"]
 cover:
   alt: work

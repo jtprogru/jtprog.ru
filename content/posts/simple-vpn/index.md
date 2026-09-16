@@ -1,6 +1,4 @@
 ---  
-aliases:
-  - '/simple-vpn/'
 title: 'Простой VPN-сервер на базе Ubuntu+pptpd'  
 description: "Разбор старой конфигурации VPN-сервера на pptpd под Ubuntu — и почему PPTP сегодня разворачивать нельзя: протокол взломан, вместо него WireGuard или OpenVPN."  
 keywords:  

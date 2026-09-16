@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/chmod-x/'
 title: 'chmod a-x $(which chmod): как починить сломанный chmod'
 description: 'Что делает chmod +x, a+x, a-x — и что будет, если снять бит исполнения у самого chmod. Десяток способов восстановить права: cp, tar, rsync, python, gdb и другие.'
 keywords: ['chmod +x', 'chmod a+x', 'chmod a-x', 'chmod что делает', 'chmod восстановление', 'как восстановить chmod', 'linux права доступа', 'chmod execute bit', 'chmod linux', 'chmod recursive']

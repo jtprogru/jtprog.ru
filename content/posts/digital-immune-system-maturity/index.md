@@ -36,8 +36,6 @@ slug: 'digital-immune-system-maturity'
 canonicalURL: 'https://jtprog.ru/posts/digital-immune-system-maturity/'
 ShowToc: true
 TocOpen: false
-aliases:
-  - '/digital-immune-system-maturity/'
 params:
   math: false
 ---

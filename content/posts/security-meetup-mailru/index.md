@@ -1,6 +1,4 @@
 ---  
-aliases:
-  - '/security-meetup-mailru/'
 title: 'Security Meetup Mail.Ru Group'  
 description: "Обзор докладов Security Meetup от Mail.Ru Group: атаки в Windows-сетях, Bug Bounty, социотехническое тестирование и уязвимости веб-кэша"  
 keywords:  

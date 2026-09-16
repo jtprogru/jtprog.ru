@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/docker-base/'
 title: 'Основы Docker: Dockerfile и docker-compose.yml'
 description: "Пошаговое руководство по созданию и использованию Dockerfile и docker-compose для разработки и деплоя приложений: примеры, best practices, автоматизация."
 keywords: ["dockerfile пример", "docker compose инструкция", "основы docker", "docker best practices", "docker автоматизация", "docker для начинающих", "docker compose vs dockerfile", "контейнеризация приложений", "docker hub публикация", "buildkit", "multi-stage build", "compose v2", "podman", "nerdctl"]

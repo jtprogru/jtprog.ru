@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/reset-lost-password/'
 title: 'Сбросить забытый пароль'
 description: "Пошаговая инструкция по сбросу пароля root в Ubuntu через Recovery Mode: монтирование файловой системы и изменение учетных данных"
 keywords:

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/ubuntu-route-add/'
 categories: ["HowTo"]
 cover:
   alt: howto

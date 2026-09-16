@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/reset-trial-esxi/'
 title: 'Сбрасываем триал на VMware ESXi 5.5'
 description: "Пошаговая инструкция по сбросу триального периода на VMware ESXi 5.5: восстановление лицензии без переустановки, SSH-команды, советы для тестовых сред."
 keywords: ["сброс триала esxi", "vmware esxi 5.5", "продление trial esxi", "esxi лицензия", "ssh esxi", "виртуализация vmware", "esxi без переустановки", "esxi test lab", "esxi лицензирование"]

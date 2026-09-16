@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/install-linux-kernel-4_0/'
 categories: ["OS"]
 cover:
   alt: OS

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/bad-story/'
 categories: ["Work"]
 cover:
   alt: work

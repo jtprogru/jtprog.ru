@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/inside-my-obsidian/'
 title: 'Содержимое моей персональной базы знаний'
 description: "Как устроена моя персональная база знаний в Obsidian: структура папок, шаблоны, теги, жизненный цикл заметки, дневник и принципы — что записывать, а что нет."
 keywords: ["obsidian", "персональная база знаний", "PKB", "PARA", "ведение заметок", "second brain", "дневник", "zettelkasten", "knowledge management", "note-taking", "dataview", "templater"]

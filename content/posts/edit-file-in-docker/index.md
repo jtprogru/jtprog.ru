@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/edit-file-in-docker/'
 categories: ["HowTo"]
 cover:
   alt: howto

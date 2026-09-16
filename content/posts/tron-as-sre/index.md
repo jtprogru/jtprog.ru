@@ -30,9 +30,6 @@ cover:
   relative: false
 type: post
 slug: 'tron-as-sre'
-aliases:
-  - '/2025/12/14/tron-as-sre/'
-  - '/tron-as-sre/'
 ---
 
 Привет, `%username%`! В 2010 году в прокат вышел фильм [Tron: Наследие](https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%BE%D0%BD:_%D0%9D%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D0%B8%D0%B5). И только с недавних пор, уже работая на позициях Site Reliability Engineer (SRE), я начал считать его (программу Tron) первой имплементацией SRE.

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/centos-after-convert/'
 categories: ["OS"]
 cover:
   alt: OS

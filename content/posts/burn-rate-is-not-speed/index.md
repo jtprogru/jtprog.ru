@@ -23,8 +23,6 @@ cover:
   relative: false
 type: post
 slug: 'burn-rate-is-not-speed'
-aliases:
-  - '/burn-rate-is-not-speed/'
 params:
   math: true
 ---

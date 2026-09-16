@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/sys-init/'
 categories: ["Basics"]
 cover:
     image: "basics.png"

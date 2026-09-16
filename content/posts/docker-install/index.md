@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/docker-install/'
 categories: ["HowTo"]
 cover:
   alt: howto

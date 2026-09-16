@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/add-disk-lvm/'
 title: 'Добавляем диск в lvm без перезагрузки виртуальной машины'
 description: "Как добавить диск в LVM и расширить раздел на живом сервере без перезагрузки: rescan SCSI, pvcreate, vgextend, lvextend — и чем resize2fs отличается от xfs_growfs."
 keywords: ["CentOS", "LVM", "добавить диск", "расширение раздела", "виртуальная машина", "fdisk", "vgextend", "lvextend", "resize2fs", "Linux"]

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/windows-restore-point/'
 categories: ["OS"]
 cover:
   alt: OS

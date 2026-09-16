@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/sysctl-hl/'
 title: 'Настройка Linux для HL и защиты от DDoS'
 description: 'Пошаговая инструкция по настройке sysctl для повышения производительности Linux, защиты от DDoS и оптимизации под высокие нагрузки: параметры, примеры, рекомендации.'
 keywords: ['sysctl настройка linux', 'ddos защита linux', 'оптимизация ядра linux', 'linux highload', 'sysctl.conf примеры', 'сетевые параметры linux', 'linux performance tuning', 'linux ddos mitigation', 'настройка tcp linux', 'tcp bbr', 'tcp_notsent_lowat', 'tcp_syncookies', 'tcp_fastopen', 'ядро 6.x']

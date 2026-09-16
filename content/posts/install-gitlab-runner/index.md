@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/install-gitlab-runner/'
 title: 'Установка GitLab Runner'
 description: "Пошаговая инструкция по установке и регистрации GitLab Runner на Ubuntu/Debian: добавление репозитория, установка, регистрация, автоматизация через Ansible."
 keywords: ["установка gitlab runner", "gitlab-ci инструкция", "регистрация gitlab runner", "ansible gitlab runner", "gitlab runner ubuntu", "gitlab runner debian", "ci/cd gitlab", "gitlab автоматизация"]

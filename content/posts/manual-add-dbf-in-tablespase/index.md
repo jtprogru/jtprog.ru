@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/manual-add-dbf-in-tablespase/'
 title: 'Ручное добавление файлов данных в табличной пространство в CentOS 7'
 description: "Руководство по добавлению файлов данных в табличное пространство ORCL_DATA в Oracle Database на CentOS 7 с использованием SQLPlus."
 keywords:

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/delay-ubuntu-iredmail/'
 categories: ["HowTo"]
 cover:
   alt: howto

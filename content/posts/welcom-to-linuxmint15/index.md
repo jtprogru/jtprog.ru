@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/welcom-to-linuxmint15/'
 categories: ["OS"]
 cover:
   alt: OS

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/ubuntu-console/'
 categories: ["HowTo"]
 cover:
   alt: howto

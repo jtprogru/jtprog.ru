@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/nginx-json-logs/'
 title: 'Логи Nginx в JSON'
 description: "Пошаговое руководство по настройке логирования Nginx в JSON-формате для удобного парсинга и интеграции с системами анализа логов"
 keywords:

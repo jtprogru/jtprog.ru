@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/win32-neshta-a/'
 categories: ["Work"]
 cover:
   alt: work

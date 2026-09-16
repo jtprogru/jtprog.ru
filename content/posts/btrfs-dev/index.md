@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/btrfs-dev/'
 categories: ["HowTo"]
 cover:
   alt: howto

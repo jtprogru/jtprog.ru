@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/taskfile/'
 categories: ["Work"]
 cover:
   alt: work

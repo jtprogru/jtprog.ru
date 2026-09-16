@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/install-zabbix-ubuntu/'
 title: 'Установка и настройка Zabbix 4.4 на Ubuntu'
 description: "Пошаговая инструкция по установке и настройке Zabbix 4.4 на Ubuntu 18.04: добавление репозитория, настройка PostgreSQL, запуск и базовая конфигурация через WEB-UI."
 keywords: ["установка zabbix ubuntu", "zabbix 4.4 инструкция", "настройка zabbix", "мониторинг ubuntu", "zabbix server", "postgreSQL zabbix", "zabbix web ui", "zabbix-agent", "zabbix nginx"]

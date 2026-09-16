@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/ubuntu-disable-ipv6/'
 categories: ["HowTo"]
 cover:
   alt: howto

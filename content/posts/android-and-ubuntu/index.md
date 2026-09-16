@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/android-and-ubuntu/'
 categories: ["HowTo"]
 cover:
   alt: howto

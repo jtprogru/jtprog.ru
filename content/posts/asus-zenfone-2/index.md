@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/asus-zenfone-2/'
 categories: ["notes"]
 cover:
   alt: other

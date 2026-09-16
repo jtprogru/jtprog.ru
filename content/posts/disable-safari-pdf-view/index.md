@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/disable-safari-pdf-view/'
 categories: ["HowTo"]
 cover:
   alt: howto

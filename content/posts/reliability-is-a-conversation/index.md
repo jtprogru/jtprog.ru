@@ -32,8 +32,6 @@ slug: 'reliability-is-a-conversation'
 canonicalURL: 'https://jtprog.ru/posts/reliability-is-a-conversation/'
 ShowToc: true
 TocOpen: false
-aliases:
-  - '/reliability-is-a-conversation/'
 params:
   math: true
 ---

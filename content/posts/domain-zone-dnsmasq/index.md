@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/domain-zone-dnsmasq/'
 categories: ["HowTo"]
 cover:
   alt: howto

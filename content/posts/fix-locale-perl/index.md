@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/fix-locale-perl/'
 categories: ["HowTo"]
 cover:
   alt: howto

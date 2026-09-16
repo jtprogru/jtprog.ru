@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/linux-checklist/'
 title: 'Мой личный чек-лист для Linux сервера'
 description: 'Практический чек-лист для настройки нового Linux-сервера: выбор дистрибутива, авторизация, базовый софт, параметры ядра, мониторинг и автоматизация.'
 keywords: ['linux чек-лист', 'настройка linux сервера', 'linux server checklist', 'ansible roles', 'linux best practices', 'linux monitoring', 'linux hardening', 'linux automation', 'debian 12', 'rocky linux', 'alma linux', 'opentelemetry']

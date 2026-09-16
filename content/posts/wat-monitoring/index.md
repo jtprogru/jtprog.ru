@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/wat-monitoring/'
 title: 'Мониторинг: что/куда/зачем?'
 description: "Пошаговое руководство по мониторингу инфраструктуры и приложений: выбор инструментов (Zabbix, Prometheus), модели работы, метрики, алерты, best practices для DevOps и системных администраторов."
 keywords: ["мониторинг инфраструктуры", "zabbix vs prometheus", "метрики мониторинга", "алерты мониторинг", "инструменты мониторинга", "devops monitoring", "push vs pull monitoring", "мониторинг приложений", "best practices monitoring", "observability", "opentelemetry", "ebpf monitoring", "victoriametrics", "loki tempo"]

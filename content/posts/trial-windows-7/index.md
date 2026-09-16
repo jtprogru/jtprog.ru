@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/trial-windows-7/'
 categories: ["OS"]
 cover:
   alt: OS

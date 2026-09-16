@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/wat-devops/'
 title: 'Что ты такое – DevOps?'
 description: "Авторское мнение и разбор методологии DevOps: основные понятия, этапы внедрения, автоматизация, CI/CD, мониторинг, советы по развитию DevOps-культуры в компании."
 keywords: ["devops что это", "devops методология", "devops внедрение", "devops best practices", "автоматизация devops", "ci/cd devops", "devops monitoring", "devops культура", "devops советы", "platform engineering", "internal developer platform", "devsecops", "finops"]

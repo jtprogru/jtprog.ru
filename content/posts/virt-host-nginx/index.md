@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/virt-host-nginx/'
 title: 'Настройка виртуальных хостов Nginx в CentOS 7'
 description: "Пошаговая инструкция по настройке виртуальных хостов (server blocks) в Nginx на CentOS 7: создание структуры каталогов, настройка прав, конфигурирование server blocks, тестирование и рекомендации по безопасности."
 keywords: ["nginx виртуальные хосты", "настройка nginx centos 7", "nginx server blocks", "nginx конфигурация", "виртуальный хост nginx", "nginx sites-enabled", "nginx sites-available", "nginx настройка домена", "nginx best practices"]

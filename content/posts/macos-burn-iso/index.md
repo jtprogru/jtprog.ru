@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/macos-burn-iso/'
 title: 'Записываем ISO-образ на флешку или диск'
 description: "Инструкция по записи ISO-образов на DVD и USB-накопители в macOS: использование терминала, команды hdiutil и dd."
 keywords:

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/queue-blacklist-postfix/'
 title: 'Очередь и blacklist Postfix'
 description: "Практическое руководство по управлению очередью почтовых сообщений и настройке черного списка в Postfix: очистка очереди, блокировка доменов и интеграция с SpamAssassin"
 keywords:

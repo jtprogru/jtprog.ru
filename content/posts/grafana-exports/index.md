@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/grafana-exports/'
 categories: ["Develop"]
 cover:
   alt: develop

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/winxp-ssd/'
 categories: ["OS"]
 cover:
   alt: OS

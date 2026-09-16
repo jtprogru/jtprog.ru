@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/ftp-server/'
 categories: ["HowTo"]
 cover:
   alt: howto

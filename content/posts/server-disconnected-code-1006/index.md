@@ -1,6 +1,4 @@
 ---  
-aliases:
-  - '/server-disconnected-code-1006/'
 title: 'Ошибка Server disconnected (code: 1006)'  
 description: "Решение ошибки noVNC в Proxmox: экспорт SSL-сертификата, добавление в доверенные источники и настройка безопасного подключения через Safari"  
 keywords:  

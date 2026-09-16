@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/cli-gen-pass/'
 categories: ["OS"]
 cover:
   alt: OS

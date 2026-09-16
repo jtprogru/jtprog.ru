@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/gitlab-ci/'
 categories: ["DevOps"]
 cover:
   alt: devops

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/shadow-defender/'
 title: 'Shadow Defender или Простая защита от дурака'
 description: "Использование Shadow Defender для защиты Windows: настройка режима тени, управление исключениями и рекомендации по резервному копированию"
 keywords:

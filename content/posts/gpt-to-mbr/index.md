@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/gpt-to-mbr/'
 categories: ["OS"]
 cover:
   alt: OS

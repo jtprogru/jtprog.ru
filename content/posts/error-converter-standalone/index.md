@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/error-converter-standalone/'
 categories: ["OS"]
 cover:
   alt: OS

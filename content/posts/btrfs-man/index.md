@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/btrfs-man/'
 categories: ["Basics"]
 cover:
     image: basics.png

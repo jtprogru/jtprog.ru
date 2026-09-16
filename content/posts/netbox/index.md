@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/netbox/'
 title: 'Установка Netbox: Docker-флоу для v4 и заметки про апгрейд'
 description: "Установка Netbox 4.x на Ubuntu Server 24.04 через netbox-docker: docker compose, переменные окружения, LDAP/AD-интеграция, апгрейд через upgrade.sh, исторический раздел про ручную установку 2.x."
 keywords: ["установка netbox", "netbox 4", "netbox docker", "netbox-docker", "netbox-community", "netbox compose", "netbox ubuntu 24.04", "netbox ldap", "active directory netbox", "netbox upgrade.sh", "network automation", "ipam dcim"]

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/windows-route-add/'
 title: 'Шпаргалка про роутинг в Windows'
 description: "Пошаговая инструкция по добавлению и управлению статическими маршрутами в Windows: синтаксис, параметры, примеры команд, советы по настройке и устранению ошибок."
 keywords: ["роутинг windows", "статические маршруты windows", "route add windows", "route add windows пример", "windows 10 route add", "route -p add", "route print", "windows routing table", "настройка маршрутизации windows", "powershell new-netroute", "get-netroute", "windows route delete", "windows route change"]

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/film-hakers/'
 categories: ["notes"]
 cover:
   alt: stories

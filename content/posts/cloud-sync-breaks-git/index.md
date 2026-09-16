@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/cloud-sync-breaks-git/'
 title: 'Как облачная синхронизация тихо ломает git и как это чинить'
 description: "Реальный инцидент: git падает с garbage at end of loose object из-за облачной синхронизации .git. Чиним без потери данных и разбираем раздутый .git."
 keywords:

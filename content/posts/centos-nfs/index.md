@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/centos-nfs/'
 categories: ["OS"]
 cover:
   alt: OS

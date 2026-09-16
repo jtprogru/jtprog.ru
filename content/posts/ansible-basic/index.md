@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/ansible-basic/'
 title: 'Ansible – основы управления конфигурацией'
 description: 'Пошаговое введение в основы Ansible для автоматизации управления конфигурацией: преимущества, ключевые понятия, примеры использования и сравнение с другими CM-инструментами.'
 keywords: ['ansible основы', 'управление конфигурацией', 'devops', 'infrastructure as code', 'ansible tutorial', 'ansible vs puppet', 'ansible преимущества', 'ansible playbook', 'cm инструменты', 'ansible-core', 'ansible коллекции', 'ansible-lint', 'molecule', 'ansible vs terraform']

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/hp1910-reset-password/'
 title: 'Сброс пароля на коммутаторе HP 1910 серии'
 description: "Подробное руководство по сбросу забытого или неизвестного пароля на коммутаторах HP 1910 и 3Com Baseline Switch 2952."
 keywords:

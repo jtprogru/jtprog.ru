@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/win-rkn/'
 categories: ["OS"]
 cover:
   alt: OS

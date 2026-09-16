@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/dev-and-work/'
 categories: ["Work"]
 cover:
   alt: work

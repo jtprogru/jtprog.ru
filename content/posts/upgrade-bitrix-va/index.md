@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/upgrade-bitrix-va/'
 categories: ["Work"]
 cover:
   alt: work

@@ -20,9 +20,6 @@ cover:
   relative: false
 type: post
 slug: 'hacking-aeroflot'
-aliases:
-  - '/2025/12/09/hacking-aeroflot/'
-  - '/hacking-aeroflot/'
 ---
 
 Привет, `%username%`! Далее будет небольшой разбор нашумевшей истории о сбое информационных систем компании «Аэрофлот».

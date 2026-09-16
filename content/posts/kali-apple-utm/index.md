@@ -43,9 +43,6 @@ cover:
   relative: false
 type: post
 slug: 'kali-apple-utm'
-aliases:
-  - '/2025/12/18/kali-apple-utm/'
-  - '/kali-apple-utm/'
 ---
 
 Привет, `%username%`! Сегодня я расскажу тебе про то, как можно развернуть Kali Linux на маках с процессорами Apple Silicon (M1/M2/M3), используя бесплатную альтернативу Parallels Desktop — виртуализатор [UTM](https://mac.getutm.app/). И да, это не только для пентестеров, но и для всех, кому нужна тестовая среда на базе Linux.

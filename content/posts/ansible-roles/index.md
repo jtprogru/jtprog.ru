@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/ansible-roles/'
 title: 'Ansible Roles'
 description: "Подробное руководство по Ansible Roles: структура ролей, best practices, примеры, тестирование с molecule, хранение и публикация ролей, ответы на частые вопросы."
 keywords: ["ansible roles", "ansible best practices", "структура ansible роли", "ansible-galaxy", "molecule тестирование", "ansible playbook", "devops", "ansible lint", "ansible tutorial", "ansible role dependencies"]

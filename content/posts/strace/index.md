@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/strace/'
 title: 'strace в Linux: как смотреть системные вызовы процесса'
 description: "Как пользоваться strace в Linux: смотрим системные вызовы процесса, основные опции, примеры запуска и анализ вывода. Плюс чем заменить, когда strace мало."
 keywords: ["strace linux", "отладка процессов linux", "диагностика linux", "системные вызовы strace", "пример использования strace", "strace опции", "мониторинг процессов linux", "bsd лицензия strace", "инструменты linux", "bpftrace", "perf trace", "bcc-tools", "ebpf debugging"]

@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/haproxy-centos8/'
 categories: ["HowTo"]
 cover:
   alt: howto

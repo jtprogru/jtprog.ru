@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/fix-deltarpm/'
 categories: ["HowTo"]
 cover:
   alt: howto

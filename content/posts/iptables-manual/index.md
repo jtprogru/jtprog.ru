@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/iptables-manual/'
 title: 'Шпаргалка по iptables'
 description: "Подробная шпаргалка по iptables: основные команды, примеры настройки, удаление и добавление правил, сохранение и восстановление конфигурации файрвола."
 keywords: ["iptables linux", "настройка файрвола", "iptables команды", "пример iptables", "iptables правила", "linux firewall", "iptables howto", "iptables flush", "iptables restore", "nftables", "iptables-nft", "iptables-translate"]

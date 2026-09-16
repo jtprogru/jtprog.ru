@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/little-snitch/'
 title: 'Little Snitch'
 description: "Обзор и опыт использования фаервола Little Snitch для macOS: настройка, профили, мониторинг сетевой активности и рекомендации по безопасности."
 keywords: ["Little Snitch", "macOS", "фаервол", "firewall", "безопасность", "Alert mode", "мониторинг сети", "профили", "сетевой доступ"]

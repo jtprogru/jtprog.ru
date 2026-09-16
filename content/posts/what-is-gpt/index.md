@@ -27,8 +27,6 @@ cover:
   relative: false
 type: post
 slug: 'what-is-gpt'
-aliases:
-  - '/what-is-gpt/'
 params:
   math: false
 ---

@@ -27,8 +27,6 @@ cover:
   relative: false
 type: post
 slug: 'what-is-mbr'
-aliases:
-  - '/what-is-mbr/'
 params:
   math: false
 ---

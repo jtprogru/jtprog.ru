@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/error-0x8004010f/'
 categories: ["OS"]
 cover:
   alt: OS

@@ -27,8 +27,6 @@ cover:
   relative: false
 type: post
 slug: 'how-read-qr-code'
-aliases:
-  - '/how-read-qr-code/'
 params:
   math: true
 ---

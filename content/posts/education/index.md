@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/education/'
 categories: ["Opinions"]
 cover:
   alt: opinions

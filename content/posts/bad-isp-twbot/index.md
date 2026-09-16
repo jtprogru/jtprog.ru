@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/bad-isp-twbot/'
 categories: ["Develop"]
 cover:
   alt: develop

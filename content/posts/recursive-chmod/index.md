@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/recursive-chmod/'
 title: 'Recursive chmod'
 description: "Использование утилиты find для рекурсивного изменения прав доступа к файлам и каталогам в Linux: базовые команды и примеры"
 keywords:

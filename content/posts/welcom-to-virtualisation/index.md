@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/welcom-to-virtualisation/'
 categories: ["Work"]
 cover:
   alt: work

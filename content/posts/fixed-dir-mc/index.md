@@ -1,6 +1,4 @@
 ---
-aliases:
-  - '/fixed-dir-mc/'
 categories: ["HowTo"]
 cover:
   alt: howto

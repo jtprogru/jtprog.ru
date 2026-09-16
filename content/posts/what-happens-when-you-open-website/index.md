@@ -29,8 +29,6 @@ cover:
   relative: true
 type: post
 slug: 'what-happens-when-you-open-website'
-aliases:
-  - '/what-happens-when-you-open-website/'
 params:
   math: false
 ---
