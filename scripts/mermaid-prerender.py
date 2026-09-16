@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-mermaid-prerender — оффлайн-генератор SVG для mermaid-блоков в постах.
+mermaid-prerender — оффлайн-генератор картинок для mermaid-блоков в постах.
 
 Зачем: чтобы не таскать ~330 KB mermaid.esm с jsdelivr на клиенте.
 Render hook темы mishka (layouts/_default/_markup/render-codeblock-mermaid.html)
@@ -14,8 +14,11 @@ Render hook темы mishka (layouts/_default/_markup/render-codeblock-mermaid.h
 Скрипт:
   • Обходит content/**/*.md
   • Для каждого mermaid-блока считает sha256 от trimmed-кода
-  • Если assets/mermaid/<hash>.svg уже есть — skip
-  • Иначе вызывает mmdc (через npx) и сохраняет SVG
+  • Если файл в assets/mermaid/ уже есть — skip
+  • Иначе вызывает mmdc (через npx) и сохраняет результат
+
+На каждый блок получается три файла: <hash>.svg (light), <hash>.dark.svg
+и <hash>.png — растр для парсеров без поддержки SVG, см. VARIANTS ниже.
 
 Зависимости (ставятся автоматически через npx):
   • Node.js (>= 18)
@@ -37,11 +40,13 @@ OUT_DIR = REPO_ROOT / "assets" / "mermaid"
 MERMAID_RE = re.compile(r"```mermaid\n(.*?)\n```", re.DOTALL)
 
 MMDC = [
-    "npx", "-y",
-    "-p", "@mermaid-js/mermaid-cli",
+    "npx",
+    "-y",
+    "-p",
+    "@mermaid-js/mermaid-cli",
     "mmdc",
 ]
-MMDC_COMMON = ["--quiet", "--backgroundColor", "transparent"]
+MMDC_COMMON = ["--quiet"]
 
 # Каждой mermaid-диаграмме генерим две версии — под light и dark CSS-темы
 # сайта. Render hook темы mishka вставляет обе и переключает видимость
@@ -54,9 +59,20 @@ MMDC_COMMON = ["--quiet", "--backgroundColor", "transparent"]
 # (mishka-ds/scripts/gen-mermaid-theme.mjs), поэтому пререндер и runtime-
 # фолбэк дают одинаковые цвета по построению.
 THEME_MERMAID_DIR = REPO_ROOT / "themes" / "mishka" / "assets" / "mermaid"
+LIGHT_CONFIG = THEME_MERMAID_DIR / "mermaid-config.json"
+DARK_CONFIG = THEME_MERMAID_DIR / "mermaid-config.dark.json"
+
+# Третий вариант — PNG со светлой палитрой, для парсеров, которые не умеют SVG.
+# Ради него всё и затевалось: Telegram Instant View растеризовать SVG не умеет,
+# и без растра пост со схемой приходится целиком помечать @unsupported.
+# Фон здесь непрозрачный, в отличие от inline-SVG: тёмный текст латте на
+# прозрачном фоне в тёмной теме Telegram не читается вообще. scale 2 даёт
+# ретина-плотность, не растягивая layout (в отличие от --width).
 VARIANTS = (
-    ("",      THEME_MERMAID_DIR / "mermaid-config.json"),
-    (".dark", THEME_MERMAID_DIR / "mermaid-config.dark.json"),
+    # suffix,  ext,   label,   config,        extra mmdc args
+    ("", "svg", "light", LIGHT_CONFIG, ["--backgroundColor", "transparent"]),
+    (".dark", "svg", "dark", DARK_CONFIG, ["--backgroundColor", "transparent"]),
+    ("", "png", "png", LIGHT_CONFIG, ["--backgroundColor", "#eff1f5", "--scale", "2"]),
 )
 
 
@@ -65,7 +81,11 @@ def hash_block(code: str) -> str:
 
 
 def render_block(
-    code: str, out_path: pathlib.Path, config_file: pathlib.Path, svg_id: str
+    code: str,
+    out_path: pathlib.Path,
+    config_file: pathlib.Path,
+    svg_id: str,
+    extra_args: list,
 ) -> None:
     with tempfile.NamedTemporaryFile(
         "w", suffix=".mmd", delete=False, encoding="utf-8"
@@ -74,9 +94,19 @@ def render_block(
         tmp_path = tmp.name
     try:
         subprocess.run(
-            [*MMDC, "-i", tmp_path, "-o", str(out_path),
-             *MMDC_COMMON, "--configFile", str(config_file),
-             "--svgId", svg_id],
+            [
+                *MMDC,
+                "-i",
+                tmp_path,
+                "-o",
+                str(out_path),
+                *MMDC_COMMON,
+                *extra_args,
+                "--configFile",
+                str(config_file),
+                "--svgId",
+                svg_id,
+            ],
             check=True,
         )
     finally:
@@ -84,7 +114,7 @@ def render_block(
 
 
 def main() -> int:
-    for _, config_file in VARIANTS:
+    for _, _, _, config_file, _ in VARIANTS:
         if not config_file.exists():
             print(
                 f"нет конфига {config_file.relative_to(REPO_ROOT)} — "
@@ -95,7 +125,7 @@ def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     force = "--force" in sys.argv
     # --check ничего не рисует и не требует npx: только проверяет, что каждому
-    # блоку в контенте соответствует пара SVG. Для CI.
+    # блоку в контенте соответствует полный комплект файлов. Для CI.
     check = "--check" in sys.argv
     rendered = skipped = missing = 0
     for md in sorted(CONTENT_DIR.rglob("*.md")):
@@ -104,9 +134,8 @@ def main() -> int:
             code = block.strip()
             h = hash_block(code)
             rel_md = md.relative_to(REPO_ROOT)
-            for suffix, config_file in VARIANTS:
-                out = OUT_DIR / f"{h}{suffix}.svg"
-                label = "dark" if suffix else "light"
+            for suffix, ext, label, config_file, extra_args in VARIANTS:
+                out = OUT_DIR / f"{h}{suffix}.{ext}"
                 if check:
                     if out.exists():
                         skipped += 1
@@ -126,16 +155,16 @@ def main() -> int:
                     continue
                 tag = "re-rendering" if out.exists() else "rendering"
                 print(f"  → {rel_md}: {h[:8]} [{label}]  ({tag}...)")
-                render_block(code, out, config_file, svg_id)
+                render_block(code, out, config_file, svg_id, extra_args)
                 rendered += 1
     if check:
         if missing:
             print(
-                f"\nНе хватает {missing} SVG. Прогони: make mermaid-render",
+                f"\nНе хватает {missing} файлов. Прогони: make mermaid-render",
                 file=sys.stderr,
             )
             return 1
-        print(f"\nOK. Все {skipped} SVG на месте.")
+        print(f"\nOK. Все {skipped} файлов на месте.")
         return 0
     print(f"\nDone. rendered={rendered}, cached={skipped}, total={rendered + skipped}")
     return 0
