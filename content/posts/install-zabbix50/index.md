@@ -26,8 +26,7 @@ tags:
   - ubuntu
   - monitoring
   - zbx
-  - "Zabbix 5.0"
-  - "Ubuntu Server"
+  - Linux
   - PostgreSQL
   - Nginx
 type: post

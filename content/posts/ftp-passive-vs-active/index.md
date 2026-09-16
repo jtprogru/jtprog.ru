@@ -10,14 +10,11 @@ cover:
 date: "2015-06-25T10:52:13+03:00"
 lastmod: "2015-06-25T10:52:13+03:00"
 tags:
-- man
-- ftp
-- networking
-- protocols
-- client-server
-- active mode
-- passive mode
-- firewall
+  - man
+  - ftp
+  - networking
+  - file transfer
+  - firewall
 title: 'FTP passive VS. FTP active'
 type: post
 description: "Объяснение ключевых различий между активным и пассивным режимами работы протокола FTP, включая установление управляющего соединения и соединения для передачи данных."

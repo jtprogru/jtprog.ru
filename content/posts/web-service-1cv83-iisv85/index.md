@@ -8,13 +8,10 @@ date: "2016-01-19T16:13:31+03:00"
 lastmod: "2016-01-19T16:13:31+03:00"
 tags:
   - windows
-  - 1c
-  - 1cv8
-  - iis
-  - web services
+  - bitrix
+  - web development
   - configuration
   - Windows Server
-  - web.config
 categories: ["HowTo"]
 cover:
   image: howto.png

@@ -10,17 +10,17 @@ cover:
 date: "2020-08-02T16:10:00+03:00"
 lastmod: "2020-08-02T16:10:00+03:00"
 tags:
-- docker
-- docker-compose
-- howto
-- installation
-- ubuntu
-- linux
-- command line
-- apt
-- package manager
-- containerization
-- development environment
+  - docker
+  - docker-compose
+  - howto
+  - installation
+  - ubuntu
+  - Linux
+  - command line
+  - apt
+  - package manager
+  - containerization
+  - web development
 title: 'Установка Docker на Ubuntu 20.04'
 type: post
 description: "Пошаговое руководство по установке Docker и Docker Compose на Ubuntu 20.04, включая удаление старых версий, добавление репозиториев и проверку установки."

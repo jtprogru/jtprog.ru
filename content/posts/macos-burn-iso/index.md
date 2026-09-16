@@ -16,9 +16,8 @@ keywords:
 date: "2016-09-27T17:27:00+03:00"
 lastmod: "2016-09-27T17:27:00+03:00"
 tags:
-  - macos
-  - iso
-  - "работа с дисками"
+  - macOS
+  - disks
 categories: ["HowTo"]
 cover:
   image: howto.png

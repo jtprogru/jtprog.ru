@@ -13,7 +13,7 @@ date: "2015-06-30T19:33:11+03:00"
 lastmod: "2015-06-30T19:33:11+03:00"
 tags:
   - chmod
-  - linux
+  - Linux
 categories: ["HowTo"]
 cover:
   image: howto.png

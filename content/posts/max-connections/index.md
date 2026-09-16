@@ -17,9 +17,9 @@ date: "2020-08-14T17:42:54+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - mysql
-  - "max connections"
-  - linux
-  - "оптимизация"
+  - database
+  - Linux
+  - оптимизация
 categories: ["HowTo"]
 cover:
   image: howto.png

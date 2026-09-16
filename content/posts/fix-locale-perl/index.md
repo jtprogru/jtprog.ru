@@ -10,14 +10,12 @@ cover:
 date: "2016-08-08T10:34:00+03:00"
 lastmod: "2016-08-08T10:34:00+03:00"
 tags:
-- locale
-- perl
-- linux
-- ubuntu
-- troubleshooting
-- error
-- localization
-- command line
+  - Linux
+  - web development
+  - ubuntu
+  - troubleshooting
+  - error
+  - command line
 title: 'Fix locale Perl'
 type: post
 description: "Решение проблемы с настройками локали Perl в Ubuntu Server 14.04, которая приводит к предупреждениям и ошибкам при обновлении системы, с использованием команды locale-gen."

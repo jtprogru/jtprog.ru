@@ -16,12 +16,12 @@ keywords:
 date: 2025-12-14T10:22:28+03:00
 lastmod: 2026-08-22T12:00:00+03:00
 tags:
-  - tron
+  - мысли
   - SRE
   - monitoring
   - security
   - architecture
-  - devops
+  - DevOps
 categories: ["Opinions"]
 cover:
   image: opinions.png

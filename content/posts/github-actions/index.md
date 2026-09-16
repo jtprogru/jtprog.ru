@@ -7,8 +7,8 @@ keywords: ["github actions", "ci/cd для блога", "hugo rsync deployment",
 date: "2021-04-28T16:27:11+03:00"
 lastmod: "2021-04-28T16:27:11+03:00"
 tags:
-  - devops
-  - github
+  - DevOps
+  - git
   - GitHub Actions
   - CI/CD
   - Hugo

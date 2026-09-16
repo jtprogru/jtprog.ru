@@ -10,16 +10,12 @@ cover:
 date: "2015-06-04T19:14:00+03:00"
 lastmod: "2015-06-04T19:14:00+03:00"
 tags:
-- iredmail
-- ubuntu
-- mail
-- mail server
-- email
-- troubleshooting
-- postfix
-- dovecot
-- mail client
-- performance
+  - mail
+  - ubuntu
+  - email
+  - troubleshooting
+  - postfix
+  - SRE
 title: 'Задержки почтового сервера на Ubuntu + iRedMail'
 type: post
 description: "Устранение неполадок и решение проблемы задержек почтового сервера на Ubuntu с iRedMail, вызванных чрезмерной частотой проверки почтового клиента."

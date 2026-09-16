@@ -7,8 +7,7 @@ keywords: ["установка netbox", "netbox 4", "netbox docker", "netbox-doc
 date: "2020-07-22T23:15:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - netbox
-  - netbox-docker
+  - networking
   - docker
   - ldap
   - ubuntu
@@ -17,8 +16,6 @@ tags:
   - PostgreSQL
   - Redis
   - Active Directory
-  - DCIM
-  - IPAM
 categories: ["HowTo"]
 cover:
   image: howto.png

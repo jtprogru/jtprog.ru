@@ -10,16 +10,14 @@ cover:
 date: "2018-09-25T12:12:00+03:00"
 lastmod: "2018-09-25T12:12:00+03:00"
 tags:
-- centos
-- converter
-- vmware
-- boot
-- grub
-- network
-- networking
-- troubleshooting
-- virtualization
-- vmware converter
+  - centos
+  - converter
+  - VMware
+  - disks
+  - network
+  - networking
+  - troubleshooting
+  - virtualization
 title: 'Исправляем работу конвертера'
 type: post
 description: "Руководство по устранению проблем с загрузчиком Grub и сетевыми интерфейсами в виртуальной машине CentOS после конвертации с помощью VMware Center Converter Standalone."

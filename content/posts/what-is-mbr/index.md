@@ -15,9 +15,9 @@ date: 2026-05-05T20:36:08+03:00
 lastmod: 2026-05-05T20:36:08+03:00
 tags:
   - MBR
-  - BIOS
+  - disks
   - разметка диска
-  - linux
+  - Linux
   - администрирование
 categories: ["OS"]
 cover:

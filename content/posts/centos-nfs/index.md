@@ -10,16 +10,14 @@ cover:
 date: "2019-07-19T14:35:42+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-- centos
-- linux
-- nfs
-- nfs server
-- nfs client
-- installation
-- configuration
-- firewall
-- networking
-- fstab
+  - centos
+  - Linux
+  - file transfer
+  - installation
+  - configuration
+  - firewall
+  - networking
+  - disks
 title: 'Установка NFS сервера на CentOS 7'
 type: post
 description: "Пошаговая инструкция по установке и настройке NFS сервера и клиента на CentOS 7: конфигурация экспортов, правила Firewalld, монтирование шары через fstab."

@@ -10,11 +10,11 @@ cover:
 date: "2021-08-20T22:47:51+03:00"
 lastmod: "2021-08-20T22:47:51+03:00"
 tags:
-- bitrix
-- work
-- centos
-- php 7.4
-- yum репозитории
+  - bitrix
+  - work
+  - centos
+  - web development
+  - Linux
 title: 'Обновление Bitrix VA'
 type: post
 description: "Пошаговое обновление PHP до версии 7.4 в Bitrix Virtual Appliance на CentOS 7. Настройка репозиториев Remi и работа с MySQL."

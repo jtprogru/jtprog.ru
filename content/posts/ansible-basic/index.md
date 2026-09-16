@@ -7,10 +7,8 @@ keywords: ['ansible основы', 'управление конфигураци�
 date: "2020-12-29T00:30:54+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-- DevOps
-- Ansible
-- Configuration management
-- IaC
+  - DevOps
+  - Ansible
 categories: ["Work"]
 cover:
   image: work.png

@@ -10,15 +10,12 @@ cover:
 date: "2016-08-01T05:55:44+03:00"
 lastmod: "2016-08-01T05:55:44+03:00"
 tags:
-- macos
-- safari
-- pdf
-- browser
-- configuration
-- terminal
-- defaults write
-- webkit
-- user experience
+  - macOS
+  - browser
+  - blog
+  - configuration
+  - terminal
+  - CLI
 title: 'Разрешаем просмотр pdf-файлов в Safari'
 type: post
 description: "Краткое руководство по настройке Safari на macOS для отображения PDF-файлов непосредственно в браузере вместо их загрузки с помощью простой команды терминала."

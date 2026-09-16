@@ -7,16 +7,11 @@ keywords: ["документация в IT", "rtfm что значит", "dry п
 date: "2021-07-16T16:00:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - rtfm
-  - kiss
-  - dry
-  - documentation
-  - junior
-  - mentorship
-  - self-education
-  - IT principles
-  - devops
   - programming
+  - documentation
+  - career
+  - self-education
+  - DevOps
 categories: ["Opinions"]
 cover:
   image: opinions.png

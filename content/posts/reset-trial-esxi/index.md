@@ -8,10 +8,9 @@ date: "2015-11-10T12:09:00+03:00"
 lastmod: "2015-11-10T12:09:00+03:00"
 tags:
   - esxi
-  - vmware
+  - VMware
   - trial
-  - VMware ESXi
-  - license
+  - virtualization
   - SSH
   - howto
 categories: ["HowTo"]

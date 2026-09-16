@@ -7,17 +7,15 @@ keywords: ["devops что это", "devops методология", "devops вн
 date: "2020-11-09T22:25:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - devops
+  - DevOps
   - opinion
-  - sysops
+  - career
   - CI
-  - CD
+  - CI/CD
   - automation
   - monitoring
-  - collaboration
-  - culture
-  - methodology
-  - practices
+  - мысли
+  - programming
 categories: ["Opinions"]
 cover:
   image: opinions.png

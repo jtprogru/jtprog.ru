@@ -10,11 +10,11 @@ cover:
 date: "2016-07-15T19:14:00+03:00"
 lastmod: "2016-07-15T19:14:00+03:00"
 tags:
-- windows
-- upgrade
-- SSD
-- миграция данных
-- Acronis
+  - windows
+  - upgrade
+  - disks
+  - migration
+  - backup
 title: 'Windows XP на новом SSD'
 type: post
 description: "Опыт переноса Windows XP на SSD: клонирование диска, решение проблем с драйверами и оптимизация производительности старого ПК."

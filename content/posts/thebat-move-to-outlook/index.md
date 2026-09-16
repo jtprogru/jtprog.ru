@@ -10,9 +10,9 @@ cover:
 date: "2015-01-10T19:56:11+03:00"
 lastmod: "2015-01-10T19:56:11+03:00"
 tags:
-- the bat
-- outlook
-- windows
+  - mail
+  - outlook
+  - windows
 title: 'Перенос почты с The Bat в Outlook'
 type: post
 description: "Пошаговая инструкция по миграции почты из The Bat! в Microsoft Outlook. Экспорт EML-файлов и импорт в Outlook."

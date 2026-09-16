@@ -10,14 +10,13 @@ cover:
 date: "2015-03-23T21:16:38+03:00"
 lastmod: "2015-03-23T21:16:38+03:00"
 tags:
-- gpt
-- mbr
-- windows
-- diskpart
-- disk partitioning
-- command line
-- installation
-- troubleshooting
+  - GPT
+  - MBR
+  - windows
+  - disks
+  - command line
+  - installation
+  - troubleshooting
 title: 'Делаем MBR из GPT'
 type: post
 description: "Памятка о том, как преобразовать разделы GPT в MBR с использованием утилиты DiskPart через командную строку Windows, полезно перед установкой старых версий Windows."

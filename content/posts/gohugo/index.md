@@ -10,14 +10,13 @@ cover:
 date: "2019-07-22T15:00:00+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-- blog
-- hugo
-- migration
-- wordpress
-- static site generator
-- markdown
-- workflow
-- rsync
+  - blog
+  - Hugo
+  - migration
+  - wordpress
+  - markdown
+  - workflow
+  - rsync
 title: 'Основательный и бесповоротный переезд'
 type: post
 description: "История и процесс миграции блога с WordPress на статический генератор сайтов Hugo, включая причины переезда, выбор платформы и описание нового рабочего процесса публикации статей на Markdown."

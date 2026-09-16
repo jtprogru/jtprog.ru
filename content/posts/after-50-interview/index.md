@@ -11,10 +11,7 @@ tags:
   - собеседование
   - мысли
   - soft skills
-  - hard skills
-  - T-shaped
   - career
-  - personal development
 categories: ["Interview"]
 cover:
   image: interview.png

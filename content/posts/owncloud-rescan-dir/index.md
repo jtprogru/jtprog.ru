@@ -12,8 +12,8 @@ keywords:
 date: "2017-05-25T15:41:28+03:00"
 lastmod: "2017-05-25T15:41:28+03:00"
 tags:
-  - owncloud
-  - linux
+  - file transfer
+  - Linux
 categories: ["HowTo"]
 cover:
   image: howto.png

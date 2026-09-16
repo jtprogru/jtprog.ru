@@ -11,7 +11,6 @@ tags:
   - работа
   - собеседование
   - интервью
-  - вопросы
   - interview
 categories: ["Interview"]
 cover:

@@ -7,9 +7,7 @@ keywords: ["кластеризация приложений", "high availability
 date: "2021-08-27T21:00:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - HA
-  - high availability
-  - clusterisation
+  - SRE
   - architecture
   - примитивы
 categories: ["Basics"]

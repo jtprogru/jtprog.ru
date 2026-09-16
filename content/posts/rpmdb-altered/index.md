@@ -11,10 +11,10 @@ keywords:
   - управление пакетами centos  
 date: "2019-07-29T11:47:56+03:00"  
 lastmod: "2019-07-29T11:47:56+03:00"  
-tags:  
-  - rpmdb  
-  - centos  
-  - yum  
+tags:
+  - Linux
+  - centos
+  - yum
 categories: ["HowTo"]
 cover:  
   image: howto.png  

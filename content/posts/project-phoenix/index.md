@@ -7,7 +7,7 @@ keywords:
 date: 2025-09-01T21:51:59+03:00
 lastmod: 2026-08-22T12:00:00+03:00
 tags:
-  - книги
+  - Знания
   - DevOps
 categories: ["Opinions"]
 cover:

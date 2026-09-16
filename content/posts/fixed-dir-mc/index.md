@@ -10,13 +10,11 @@ cover:
 date: "2016-10-04T12:36:54+03:00"
 lastmod: "2016-10-04T12:36:54+03:00"
 tags:
-- mc
-- macos
-- troubleshooting
-- configuration
-- file manager
-- terminal
-- utility
+  - file transfer
+  - macOS
+  - troubleshooting
+  - configuration
+  - terminal
 title: 'Исправляем глюк Midnight Commander'
 type: post
 description: "Исправление ошибки в Midnight Commander (mc) на macOS и Linux, когда левая панель всегда открывает одну и ту же директорию, путем редактирования файла panels.ini."

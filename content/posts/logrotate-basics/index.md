@@ -20,7 +20,7 @@ keywords:
 date: "2021-08-28T14:30:00+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-  - logrotate
+  - monitoring
   - basics
   - примитивы
   - автоматизация

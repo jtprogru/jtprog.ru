@@ -24,11 +24,9 @@ date: 2025-12-22T10:23:38+03:00
 lastmod: 2026-08-22T12:00:00+03:00
 tags:
   - monitoring
-  - sre
-  - devops
-  - metrics
-  - business
-  - analytics
+  - SRE
+  - DevOps
+  - мысли
   - observability
 categories: ["Work"]
 cover:

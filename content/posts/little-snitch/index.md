@@ -9,7 +9,6 @@ lastmod: 2020-06-22T14:41:00+03:00
 tags:
   - macOS
   - firewall
-  - Little Snitch
 categories: ["Opinions"]
 cover:
   image: opinions.png

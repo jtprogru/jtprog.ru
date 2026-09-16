@@ -16,10 +16,9 @@ keywords:
 date: "2017-11-21T17:26:35+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-  - oracledb
+  - database
   - centos
-  - orcl_data
-  - "администрирование БД"
+  - администрирование БД
 categories: ["HowTo"]
 cover:
   image: howto.png

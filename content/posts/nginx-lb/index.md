@@ -12,8 +12,8 @@ keywords:
 date: "2019-08-21T19:10:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - load balancing
-  - nginx
+  - networking
+  - Nginx
 categories: ["howto"]
 cover:
   image: howto.png

@@ -17,9 +17,7 @@ lastmod: 2026-08-22T12:00:00+03:00
 tags:
   - career
   - work
-  - it
-  - burnout
-  - reality
+  - мысли
 categories: ["Work"]
 cover:
   image: work.png

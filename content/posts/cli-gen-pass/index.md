@@ -10,18 +10,14 @@ cover:
 date: "2020-02-17T15:13:11+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-- linux
-- cli
-- pass
-- password generation
-- command line
-- security
-- bash
-- scripting
-- urandom
-- openssl
-- md5sum
-- awk
+  - Linux
+  - CLI
+  - password
+  - command line
+  - security
+  - bash
+  - scripting
+  - ssl
 title: 'Генерация паролей в CLI'
 type: post
 description: "Несколько способов генерации надежных паролей прямо в командной строке Linux с использованием стандартных утилит и скриптов."

@@ -16,9 +16,8 @@ date: 2026-05-20T11:07:45+03:00
 lastmod: 2026-05-20T11:07:45+03:00
 draft: false
 tags:
-  - QR
-  - декодирование
-  - стандарты
+  - blog
+  - programming
   - howto
 categories: ["HowTo"]
 cover:

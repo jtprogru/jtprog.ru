@@ -10,10 +10,8 @@ cover:
 date: "2014-12-03T14:00:00+03:00"
 lastmod: "2014-12-03T14:00:00+03:00"
 tags:
-- windows
-- trial
-- активация
-- slmgr
+  - windows
+  - trial
 title: 'Если некогда искать ключ активации Windows 7'
 type: post
 description: "Законное продление триального периода Windows 7 с помощью команды slmgr.vbs. Инструкция по сбросу счётчика активации."

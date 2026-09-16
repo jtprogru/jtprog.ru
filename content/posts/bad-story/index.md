@@ -10,16 +10,14 @@ cover:
 date: "2014-09-18T19:20:00+03:00"
 lastmod: "2014-09-18T19:20:00+03:00"
 tags:
-- spam
-- virus
-- cryptor
-- ransomware
-- security
-- incident response
-- data recovery
-- backup
-- windows server
-- infosec
+  - mail
+  - virus
+  - cryptor
+  - ransomware
+  - security
+  - SRE
+  - backup
+  - Windows Server
 title: 'Спам и шифрование или Печальная история'
 type: post
 description: "Печальная история о том, как спам и вирус-шифровальщик атаковали компанию, привели к шифрованию файлов на файловом хранилище, и какие уроки по информационной безопасности были извлечены из этой ситуации."

@@ -10,16 +10,12 @@ cover:
 date: "2013-08-26T19:14:00+03:00"
 lastmod: "2013-08-26T19:14:00+03:00"
 tags:
-- linux
-- unix
-- freebsd
-- ubuntu
-- operating system
-- laptop
-- programming
-- security
-- personal experience
-- os choice
+  - Linux
+  - ubuntu
+  - hardware
+  - programming
+  - security
+  - personal experience
 title: 'Какую *nix-систему поставить на ноутбук?!'
 type: post
 description: "Выбор *nix-системы для ноутбука: сравнение Ubuntu и FreeBSD с точки зрения программирования, безопасности и личного опыта."

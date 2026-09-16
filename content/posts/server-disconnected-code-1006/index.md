@@ -11,9 +11,9 @@ keywords:
   - безопасное подключение hypervisor  
 date: "2016-08-03T10:00:03+03:00"  
 lastmod: "2016-08-03T10:00:03+03:00"  
-tags:  
-  - proxmox  
-  - cert  
+tags:
+  - virtualization
+  - ssl
 categories: ["HowTo"]
 cover:  
   image: howto.png  

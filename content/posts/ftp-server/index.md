@@ -10,16 +10,14 @@ cover:
 date: "2015-02-02T17:25:00+03:00"
 lastmod: "2015-02-02T17:25:00+03:00"
 tags:
-- vsftpd
-- ubuntu
-- ftp
-- ftp server
-- installation
-- configuration
-- linux
-- networking
-- security
-- file transfer
+  - file transfer
+  - ubuntu
+  - ftp
+  - installation
+  - configuration
+  - Linux
+  - networking
+  - security
 title: 'Поднимаем FTP-сервер vsFTPd+Ubuntu 14.04'
 type: post
 description: "Руководство по быстрой установке и базовой настройке FTP-сервера vsFTPd на Ubuntu 14.04 для предоставления доступа локальным пользователям с разграничением прав."

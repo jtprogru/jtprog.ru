@@ -18,10 +18,9 @@ draft: false
 tags:
   - SRE
   - SLO
-  - SLI
   - System Design
   - Error Budget
-  - Архитектура
+  - programming
 categories: ["SRE"]
 cover:
   image: cover.png

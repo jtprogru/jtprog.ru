@@ -7,12 +7,10 @@ keywords: ["текстовый редактор", "markdown редактор", "
 date: 2022-09-03T23:04:09+03:00
 lastmod: 2022-09-03T23:04:09+03:00
 tags:
-  - iawriter
-  - editor
+  - documentation
   - markdown
   - Obsidian
-  - notes
-  - Zettelkästen
+  - Знания
 categories: ["notes"]
 cover:
   image: blog.png

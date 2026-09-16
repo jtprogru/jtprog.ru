@@ -14,7 +14,7 @@ lastmod: "2022-04-24T14:30:18+03:00"
 tags:
   - заметкинаполях
   - apt
-  - apt-key
+  - Linux
   - ubuntu
 categories: ["notes"]
 cover:

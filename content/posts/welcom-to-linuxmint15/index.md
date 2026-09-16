@@ -10,11 +10,7 @@ cover:
 date: "2013-09-22T03:36:00+03:00"
 lastmod: "2013-09-22T03:36:00+03:00"
 tags:
-- linux mint
-- go to linux
-- миграция с Windows
-- настройка ОС
-- KDE
+  - Linux
 title: 'Основательный переезд'
 type: post
 description: "Личный опыт перехода с Windows 7 на Linux Mint. Сравнение производительности, настройка 3G-модема и преимущества Linux."

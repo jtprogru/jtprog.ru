@@ -8,7 +8,6 @@ date: "2018-07-18T12:29:00+03:00"
 lastmod: "2026-08-09T12:00:00+03:00"
 tags:
   - centos
-  - lvm
   - disks
 categories: ["OS"]
 cover:

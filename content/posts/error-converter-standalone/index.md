@@ -10,17 +10,15 @@ cover:
 date: "2018-09-17T07:00:05+03:00"
 lastmod: "2018-09-17T07:00:05+03:00"
 tags:
-- centos
-- converter
-- vmware
-- error
-- troubleshooting
-- virtualization
-- p2v
-- esxi
-- vcenter
-- hosts file
-- networking
+  - centos
+  - converter
+  - VMware
+  - error
+  - troubleshooting
+  - virtualization
+  - esxi
+  - hosts file
+  - networking
 title: 'vCenter Converter Standalone error'
 type: post
 description: "Анализ и решение ошибки \"A file i/o error occurred while accessing\" в VMware vCenter Converter Standalone при конвертации физического сервера в виртуальный, включая проблему совместимости версий и настройку файла hosts."

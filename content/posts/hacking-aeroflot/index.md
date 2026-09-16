@@ -10,12 +10,8 @@ lastmod: 2026-08-22T12:00:00+03:00
 tags:
   - SRE
   - DevOps
-  - DevSecOps
-  - Security
-  - ZeroTrust
-  - IncidentResponse
-  - Postmortem
-  - Aeroflot
+  - security
+  - мысли
 categories: ["Opinions"]
 cover:
   image: opinions.png

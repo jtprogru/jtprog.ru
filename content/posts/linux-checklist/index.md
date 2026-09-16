@@ -7,9 +7,9 @@ keywords: ['linux чек-лист', 'настройка linux сервера', '
 date: "2021-08-26T20:14:09+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-- linux
-- checklist
-- basics
+  - Linux
+  - Знания
+  - basics
 categories: ["Basics"]
 cover:
     image: "basics.png"

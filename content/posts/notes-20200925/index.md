@@ -7,11 +7,10 @@ keywords: ['ansible заметки', 'ansible inventory', 'ssh config', 'ansible
 date: "2020-09-25T20:39:00+03:00"
 lastmod: "2020-09-25T20:39:00+03:00"
 tags:
-- fuckup
-- ansible
-- ssh
-- sshconfig
-- заметкинаполях
+  - fuckup
+  - Ansible
+  - SSH
+  - заметкинаполях
 categories: ["notes"]
 cover:
   image: notes.png

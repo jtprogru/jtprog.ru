@@ -9,12 +9,8 @@ lastmod: "2026-08-10T11:00:00+03:00"
 tags:
   - Obsidian
   - Знания
-  - Чек-лист
-  - knowledge base
   - personal knowledge management
   - note-taking
-  - organization
-  - DIKW
 categories: ["Opinions"]
 cover:
   image: cover.png

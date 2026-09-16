@@ -9,19 +9,13 @@ lastmod: "2026-07-20T12:00:00+03:00"
 tags:
   - interview
   - собеседование
-  - задача
-  - task
-  - тасксобес
   - architecture
-  - highload
-  - scaling
-  - devops
+  - SRE
+  - DevOps
   - kubernetes
-  - redis
-  - nginx
+  - Redis
+  - Nginx
   - monitoring
-  - logging
-  - alerting
 categories: ["Interview"]
 cover:
   image: interview.png

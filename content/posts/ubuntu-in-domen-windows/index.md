@@ -8,17 +8,11 @@ date: "2014-08-24T22:40:30+03:00"
 lastmod: "2026-08-09T12:00:00+03:00"
 tags:
   - ubuntu
-  - active directory
-  - windows ad
-  - domain join
-  - kerberos
-  - samba
-  - winbind
+  - Active Directory
+  - windows
+  - file transfer
   - dns
-  - linux
-  - integration
-  - realmd
-  - sssd
+  - Linux
 categories: ["Work"]
 cover:
   image: work.png

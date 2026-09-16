@@ -8,12 +8,9 @@ date: "2021-07-13T13:00:00+03:00"
 lastmod: "2021-07-13T13:00:00+03:00"
 tags:
   - opinion
-  - share knowledge
-  - rebranding
-  - redesign
-  - blogging
-  - Patreon
-  - community
+  - Знания
+  - blog
+  - мысли
 categories: ["Opinions"]
 cover:
   image: opinions.png

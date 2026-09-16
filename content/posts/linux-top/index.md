@@ -17,11 +17,10 @@ keywords:
 date: "2020-11-04T16:14:13+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - linux
-  - top
-  - "мониторинг"
-  - "системное администрирование"
-  - "диагностика"
+  - Linux
+  - monitoring
+  - мониторинг
+  - системное администрирование
 categories: ["Basics"]
 cover:
   image: basics.png

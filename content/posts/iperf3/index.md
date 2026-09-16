@@ -17,11 +17,10 @@ keywords:
 date: "2018-07-11T10:38:39+03:00"
 lastmod: "2018-07-11T10:38:39+03:00"
 tags:
-  - iperf
-  - linux
+  - networking
+  - Linux
   - network
-  - "сетевые технологии"
-  - "администрирование"
+  - администрирование
 categories: ["HowTo"]
 cover:
   image: howto.png

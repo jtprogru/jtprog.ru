@@ -10,10 +10,8 @@ cover:
 date: 2023-10-17T20:58:16+03:00
 lastmod: 2026-08-22T12:00:00+03:00
 tags:
-- taskfile
-- makefile
-- YAML
-- CLI
+  - automation
+  - CLI
 title: 'Taskfile'
 type: post
 description: "Сравнение Taskfile и Makefile для автоматизации DevOps-задач. Примеры конфигураций, плюсы и минусы инструментов."

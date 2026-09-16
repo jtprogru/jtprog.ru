@@ -10,13 +10,12 @@ cover:
 date: "2019-08-14T12:10:00+03:00"
 lastmod: "2019-08-14T12:10:00+03:00"
 tags:
-- python
-- twitter api
-- bot
-- internet monitoring
-- isp
-- automation
-- script
+  - python
+  - twitter api
+  - automation
+  - monitoring
+  - networking
+  - CLI
 title: 'Bad ISP Twitter bot'
 type: post
 description: "Описание Python-бота для Twitter, который автоматически сообщает интернет-провайдеру о проблемах со скоростью интернета, помогая фиксировать инциденты и контролировать качество услуг."

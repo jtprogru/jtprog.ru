@@ -10,20 +10,11 @@ cover:
 date: "2022-05-19T12:50:30+03:00"
 lastmod: "2026-06-19T12:00:00+03:00"
 tags:
-- python
-- golang
-- leetcode
-- codewars
-- stepik
-- selfedu
-- programming
-- software development
-- algorithms
-- data structures
-- coding challenges
-- test-driven development
-- career development
-- skill improvement
+  - python
+  - golang
+  - learning
+  - programming
+  - career
 title: 'Программирование и работа'
 type: post
 description: "Личный путь автора и его подход к совершенствованию навыков программирования на Python и Golang, отработке алгоритмов на платформах LeetCode и Codewars, а также внедрению TDD."

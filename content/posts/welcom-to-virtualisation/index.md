@@ -10,12 +10,12 @@ cover:
 date: "2014-06-18T17:10:00+03:00"
 lastmod: "2026-08-09T12:00:00+03:00"
 tags:
-- esxi
-- work
-- виртуализация
-- Active Directory
-- VMware
-- репликация
+  - esxi
+  - work
+  - виртуализация
+  - Active Directory
+  - VMware
+  - database
 title: 'Знакомство с виртуальными серверами'
 type: post
 description: "Практический опыт настройки VMware ESXi: создание тестового стенда с Active Directory, решение проблем сетевых карт и синхронизации времени."

@@ -13,7 +13,7 @@ date: "2019-05-23T15:48:55+03:00"
 lastmod: "2019-05-23T15:48:55+03:00"
 tags:
   - postfix
-  - linux
+  - Linux
 categories: ["HowTo"]
 cover:
   image: howto.png

@@ -7,13 +7,10 @@ keywords: ["ssh ключи", "авторизация по ssh", "ssh-keygen", "s
 date: "2021-04-22T10:37:20+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-  - linux
-  - ssh
-  - ssh key
-  - authentication
+  - Linux
+  - SSH
+  - password
   - security
-  - ssh-keygen
-  - ssh-copy-id
 categories: ["Basics"]
 cover:
   image: basics.png

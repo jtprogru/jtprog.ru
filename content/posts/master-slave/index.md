@@ -24,9 +24,9 @@ date: "2020-04-01T23:55:00+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - mysql
-  - replication
+  - database
   - howto
-  - "администрирование БД"
+  - администрирование БД
 categories: ["HowTo"]
 cover:
   image: howto.png

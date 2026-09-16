@@ -10,12 +10,8 @@ cover:
 date: 2024-01-14T17:28:38+03:00
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - education
-  - основы
-  - self-education
   - learning
-  - university
-  - online courses
+  - self-education
   - IT career
   - programming
   - networking

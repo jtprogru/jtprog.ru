@@ -10,13 +10,10 @@ cover:
 date: "2015-10-09T09:45:00+03:00"
 lastmod: "2015-10-09T09:45:00+03:00"
 tags:
-- amarok
-- mysql
-- audio
-- howto
-- database
-- linux
-- music library
+  - mysql
+  - howto
+  - database
+  - Linux
 title: 'Связываем Amarok и MySQL'
 type: post
 description: "Подробная инструкция по связыванию аудиоплеера Amarok с базой данных MySQL для эффективной организации и ускорения работы музыкальной библиотеки."

@@ -17,11 +17,9 @@ keywords:
 date: "2015-09-11T17:21:00+03:00"
 lastmod: "2015-09-11T17:21:00+03:00"
 tags:
-  - kworker
-  - cpu
-  - interrupts
-  - ACPI
-  - "системное администрирование"
+  - Linux
+  - disks
+  - системное администрирование
 categories: ["HowTo"]
 cover:
   alt: howto

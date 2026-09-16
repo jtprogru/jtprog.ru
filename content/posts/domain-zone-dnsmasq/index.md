@@ -10,15 +10,12 @@ cover:
 date: "2015-12-16T10:48:00+03:00"
 lastmod: "2015-12-16T10:48:00+03:00"
 tags:
-- dnsmasq
-- dns
-- linux
-- local development
-- web development
-- apache2
-- wordpress
-- hosts file
-- networking
+  - networking
+  - dns
+  - Linux
+  - web development
+  - wordpress
+  - hosts file
 title: 'Своя доменная зона с dnsmasq'
 type: post
 description: "Руководство по настройке локальной доменной зоны (*.dev) с помощью dnsmasq на Ubuntu для веб-разработки, включая настройку и интеграцию с виртуальными хостами Apache2."

@@ -12,9 +12,8 @@ keywords:
 date: "2018-06-18T14:57:25+03:00"
 lastmod: "2026-05-29T12:00:00+03:00"
 tags:
-  - linux
+  - Linux
   - password
-  - root
 categories: ["HowTo"]
 cover:
   image: howto.png

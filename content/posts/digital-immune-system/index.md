@@ -26,7 +26,6 @@ tags:
   - auto-remediation
   - DevOps
   - reliability
-  - infrastructure
 categories: ["Opinions"]
 cover:
   image: opinions.png

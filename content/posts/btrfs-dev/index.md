@@ -10,13 +10,12 @@ cover:
 date: "2019-05-22T12:27:22+03:00"
 lastmod: "2019-05-22T12:27:22+03:00"
 tags:
-- btrfs
-- linux
-- filesystem
-- device management
-- balance
-- delete device
-- howto
+  - btrfs
+  - Linux
+  - filesystem
+  - hardware
+  - networking
+  - howto
 title: 'Btrfs - работаем с разделом'
 type: post
 description: "Практическое руководство по работе с файловой системой Btrfs в Linux: добавление и удаление устройств, балансировка данных, примеры команд для управления разделами."

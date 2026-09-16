@@ -10,11 +10,8 @@ cover:
 date: "2015-09-23T10:21:00+03:00"
 lastmod: "2026-08-09T12:00:00+03:00"
 tags:
-- zsh
-- oh-my-zsh
-- linux
-- обновление оболочки
-- git ошибки
+  - Linux
+  - git
 title: 'Upgrade OhMyZsh'
 type: post
 description: "Команда upgrade_oh_my_zsh больше не существует — обновление делается через omz update. Плюс как чинить ошибку Cannot pull with rebase, не ломая следующее обновление."

@@ -7,12 +7,8 @@ keywords: ["strace linux", "отладка процессов linux", "диаг�
 date: "2019-07-29T12:01:18+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - strace
-  - linux
-  - debugging
+  - Linux
   - troubleshooting
-  - system calls
-  - linux tools
   - command line
 categories: ["OS"]
 cover:

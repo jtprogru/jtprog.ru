@@ -8,7 +8,7 @@ date: "2019-07-26T18:50:58+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - sysctl
-  - linux
+  - Linux
 categories: ["OS"]
 cover:
   image: OS.png

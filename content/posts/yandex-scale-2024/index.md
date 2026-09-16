@@ -10,12 +10,11 @@ cover:
 date: 2024-10-19T10:17:06+03:00
 lastmod: "2026-08-10T11:00:00+03:00"
 tags:
-  - Yandex.Cloud
-  - Yandex Scale
-  - Meetup
-  - BareMetal
-  - Chaos Engineering
-  - S3
+  - Yandex Cloud
+  - meetup
+  - virtualization
+  - chaos-engineering
+  - file transfer
 title: 'Yandex Scale 2024'
 type: post
 description: "Итоги конференции Yandex.Scale 2024: обзор докладов по BareMetal, Chaos Engineering, безопасности и интеграции S3 в Yandex.Cloud."

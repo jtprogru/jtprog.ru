@@ -12,9 +12,8 @@ tags:
   - monitoring
   - installation
   - configuration
-  - MariaDB
+  - database
   - web UI
-  - Zabbix 3.4
 categories: ["HowTo"]
 cover:
   image: howto.png

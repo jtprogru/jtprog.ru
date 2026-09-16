@@ -10,13 +10,9 @@ cover:
 date: "2015-08-31T18:31:00+03:00"
 lastmod: "2015-08-31T18:31:00+03:00"
 tags:
-- asus
-- zenfone
-- mobile
-- review
-- android
-- smartphone
-- zenui
+  - hardware
+  - мысли
+  - android
 title: 'Мой новый телефончик ASUS Zenfone 2'
 type: post
 description: "Обзор и личный опыт использования смартфона ASUS Zenfone 2: характеристики, сравнение с предыдущей моделью, впечатления от камеры, производительности и интерфейса ZenUI."

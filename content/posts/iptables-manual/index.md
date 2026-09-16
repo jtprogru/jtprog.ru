@@ -7,9 +7,9 @@ keywords: ["iptables linux", "настройка файрвола", "iptables к
 date: "2015-03-30T16:48:37+03:00"
 lastmod: "2026-08-06T12:00:00+03:00"
 tags:
-  - iptables
+  - firewall
   - man
-  - linux
+  - Linux
 categories: ["HowTo"]
 cover:
   image: howto.png

@@ -12,10 +12,9 @@ keywords:
   - безопасность vpn  
 date: "2015-03-30T14:39:00+03:00"  
 lastmod: "2026-08-09T12:00:00+03:00"  
-tags:  
-  - vpn  
-  - pptpd  
-  - ubuntu  
+tags:
+  - security
+  - ubuntu
 categories: ["HowTo"]
 cover:  
   image: howto.png  

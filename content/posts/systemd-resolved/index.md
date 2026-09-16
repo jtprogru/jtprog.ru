@@ -7,9 +7,8 @@ keywords: ['systemd-resolved настройка', 'linux dns cache', 'systemd re
 date: "2020-11-29T12:00:00+03:00"
 lastmod: "2026-07-20T12:00:00+03:00"
 tags:
-- systemd
-- resolved
-- systemd-resolved
+  - systemd
+  - Linux
 categories: ["Work"]
 cover:
   image: work.png

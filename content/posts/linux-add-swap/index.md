@@ -17,10 +17,10 @@ keywords:
 date: "2019-11-11T11:23:09+03:00"
 lastmod: "2019-11-11T11:23:09+03:00"
 tags:
-  - swap
-  - linux
-  - "оптимизация"
-  - "системное администрирование"
+  - disks
+  - Linux
+  - оптимизация
+  - системное администрирование
 categories: ["HowTo"]
 cover:
   image: howto.png

@@ -7,10 +7,9 @@ keywords: ['chmod +x', 'chmod a+x', 'chmod a-x', 'chmod что делает', 'c
 date: 2023-03-08T20:16:24+03:00
 lastmod: 2026-05-29T20:16:24+03:00
 tags:
-    - linux
-    - kernel
-    - syscall
-    - chmod
+  - Linux
+  - kernel
+  - chmod
 categories: ["Basics"]
 cover:
     image: basics.png

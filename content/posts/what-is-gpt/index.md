@@ -15,9 +15,9 @@ date: 2026-05-05T20:36:01+03:00
 lastmod: 2026-05-05T20:36:01+03:00
 tags:
   - GPT
-  - UEFI
+  - disks
   - разметка диска
-  - linux
+  - Linux
   - администрирование
 categories: ["OS"]
 cover:

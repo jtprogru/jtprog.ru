@@ -7,8 +7,8 @@ keywords: ["nginx виртуальные хосты", "настройка nginx 
 date: "2017-10-27T14:36:00+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-  - nginx
-  - vhosts
+  - Nginx
+  - web development
   - centos
 categories: ["HowTo"]
 cover:

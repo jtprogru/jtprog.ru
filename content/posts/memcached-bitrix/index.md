@@ -17,9 +17,9 @@ date: "2020-01-13T19:48:58+03:00"
 lastmod: "2026-08-06T12:00:00+03:00"
 tags:
   - bitrix
-  - memcached
-  - "оптимизация"
-  - "веб-разработка"
+  - database
+  - оптимизация
+  - web development
 categories: ["HowTo"]
 cover:
   image: howto.png

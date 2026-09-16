@@ -10,12 +10,12 @@ cover:
 date: "2015-06-18T21:12:00+03:00"
 lastmod: "2026-05-29T12:00:00+03:00"
 tags:
-- vault
-- cryptor
-- virus
-- восстановление данных
-- ransomware
-- windows
+  - security
+  - cryptor
+  - virus
+  - backup
+  - ransomware
+  - windows
 title: 'Очередной шифровальщик'
 type: post
 description: "Практические советы по защите от шифровальщиков. Использование ShadowExplorer и точек восстановления Windows для минимизации потерь."

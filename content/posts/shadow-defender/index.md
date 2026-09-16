@@ -14,7 +14,6 @@ date: "2014-12-29T20:28:00+03:00"
 lastmod: "2014-12-29T20:28:00+03:00"
 tags:
   - windows
-  - shadow defender
   - security
 categories: ["OS"]
 cover:

@@ -15,10 +15,10 @@ keywords:
 date: 2026-06-02T14:58:25+03:00
 lastmod: 2026-06-04T18:00:00+03:00
 tags:
-  - hugo
-  - github-actions
-  - seo
-  - ci
+  - Hugo
+  - GitHub Actions
+  - blog
+  - CI
 categories: ["HowTo"]
 cover:
   image: cover.svg

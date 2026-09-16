@@ -20,7 +20,7 @@ lastmod: "2026-05-15T20:00:00+03:00"
 tags:
   - postgres
   - pgsql
-  - linux
+  - Linux
 categories: ["DevOps"]
 cover:
   image: devops.png

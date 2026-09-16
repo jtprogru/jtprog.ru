@@ -17,8 +17,7 @@ date: 2026-01-05T19:16:29+03:00
 lastmod: 2026-08-22T12:00:00+03:00
 tags:
   - SRE
-  - Observability
-  - Report
+  - observability
 categories: ["Opinions"]
 cover:
   image: opinions.png

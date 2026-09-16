@@ -10,12 +10,8 @@ draft: false
 tags:
   - Obsidian
   - Знания
-  - PKB
-  - PARA
   - personal knowledge management
   - note-taking
-  - дневник
-  - second brain
 categories: ["Opinions"]
 cover:
   image: opinions.png

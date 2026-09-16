@@ -10,18 +10,14 @@ cover:
 date: "2021-04-07T22:31:31+03:00"
 lastmod: "2021-04-07T22:31:31+03:00"
 tags:
-- bitrix
-- bitrixvm
-- hosting
-- nginx
-- migration
-- backup
-- restore
-- ssl
-- letsencrypt
-- certbot
-- gzip
-- troubleshooting
+  - bitrix
+  - networking
+  - Nginx
+  - migration
+  - backup
+  - ssl
+  - file transfer
+  - troubleshooting
 title: 'Перенос сайта на хостинг с BitrixVM'
 type: post
 description: "Подробная инструкция по переносу сайта на хостинг с BitrixVM: резервное копирование, восстановление, настройка SSL-сертификата Let's Encrypt с Certbot и решение распространенной проблемы с gzip в Nginx."

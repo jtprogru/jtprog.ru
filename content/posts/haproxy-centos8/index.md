@@ -10,9 +10,9 @@ cover:
 date: "2020-04-09T01:30:00+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-- haproxy
-- centos
-- howto
+  - networking
+  - centos
+  - howto
 description: "Инструкция по установке и настройке свежей стабильной версии HAProxy (2.1.4) из исходников на Linux-системы. Включает шаги по активации репозитория PowerTools, установке зависимостей, компиляции с поддержкой Prometheus, настройке SystemD-юнита, конфигурации брандмауэра и запуску сервиса."
 keywords: ["HAProxy", "установка из исходников", "компиляция HAProxy", "настройка SystemD", "поддержка Prometheus", "firewall-cmd", "CentOS", "RHEL", "OpenSSL", "Lua", "systemd-devel", "HAProxy-конфигурация", "сборка HAProxy", "Load Balancer", "Reverse Proxy", "High Availability"]
 title: 'Установка HAProxy на Centos 8'

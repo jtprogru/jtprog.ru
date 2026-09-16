@@ -27,19 +27,14 @@ lastmod: 2026-08-22T12:00:00+03:00
 tags:
   - DevOps
   - SRE
-  - Kali Linux
-  - UTM
+  - security
+  - virtualization
   - macOS
-  - Apple Silicon
-  - ARM64
+  - hardware
   - виртуализация
-  - Virtualization
-  - QEMU
-  - SPICE
-  - PenTest
   - безопасность
   - Linux
-  - инструкция
+  - howto
 categories: ["HowTo"]
 cover:
   image: howto.png

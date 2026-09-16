@@ -10,14 +10,10 @@ cover:
 date: "2013-08-05T21:10:56+03:00"
 lastmod: "2013-08-05T21:10:56+03:00"
 tags:
-- films
-- hackers
-- movie review
-- inspiration
-- computers
-- programming
-- cybersecurity
-- hacking culture
+  - мысли
+  - security
+  - hardware
+  - programming
 title: 'Фильм изменивший мои интересы'
 type: post
 description: "Обзор фильма \"Хакеры\" 1995 года, рассказывающий о том, как этот фильм повлиял на интересы автора в области компьютеров и программирования."

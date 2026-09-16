@@ -10,13 +10,11 @@ cover:
 date: "2015-11-05T15:15:00+03:00"
 lastmod: "2015-11-05T15:15:00+03:00"
 tags:
-- windows
-- outlook
-- "0x8004010F"
-- error
-- troubleshooting
-- email
-- microsoft office
+  - windows
+  - outlook
+  - error
+  - troubleshooting
+  - email
 title: 'Ошибка 0x8004010F в Outlook 2010-2013'
 type: post
 description: "Решение распространенной ошибки 0x8004010F в Microsoft Outlook 2010-2013, возникающей при отправке и получении почты, с пошаговой инструкцией."

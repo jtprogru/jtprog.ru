@@ -8,7 +8,6 @@ date: "2020-10-14T20:48:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - monitoring
-  - prometheus
   - zabbix
 categories: ["Basics"]
 cover:

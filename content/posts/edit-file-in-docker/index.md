@@ -10,16 +10,14 @@ cover:
 date: "2016-08-01T15:00:28+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-- docker
-- linux
-- containerization
-- docker exec
-- docker ps
-- command line
-- troubleshooting
-- file editing
-- bash
-- gitlab
+  - docker
+  - Linux
+  - containerization
+  - command line
+  - troubleshooting
+  - documentation
+  - bash
+  - gitlab
 title: 'Как зайти в Docker-контейнер и выполнить команду внутри'
 type: post
 description: "Как зайти в запущенный Docker-контейнер через docker exec, выполнить команду или отредактировать файл внутри: docker ps, docker exec -it, вход под root и грабли."

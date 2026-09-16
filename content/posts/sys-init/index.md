@@ -10,12 +10,8 @@ cover:
 date: "2021-09-12T12:13:37+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-- systemd
-- openrc
-- sysv
-- initd
-- runit
-- linux
+  - systemd
+  - Linux
 title: 'Инициализация системы'
 type: post
 description: "Обзор основных систем инициализации в Linux: System V, systemd, Upstart, Runit и OpenRC. Принципы работы, особенности и сравнение решений."

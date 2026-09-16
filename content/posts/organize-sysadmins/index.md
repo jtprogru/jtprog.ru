@@ -8,7 +8,7 @@ date: "2018-07-28T14:29:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - work
-  - admins
+  - career
 categories: ["Work"]
 cover:
   image: work.png

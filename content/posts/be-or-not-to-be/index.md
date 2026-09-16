@@ -10,15 +10,12 @@ cover:
 date: "2013-07-05T21:16:00+03:00"
 lastmod: "2013-07-05T21:16:00+03:00"
 tags:
-- start
-- first post
-- programming
-- php
-- python
-- web development
-- learning
-- personal goals
-- career change
+  - мысли
+  - programming
+  - web development
+  - python
+  - learning
+  - career
 title: 'Быть или не быть...'
 type: post
 description: "Размышления и планы по возвращению в программирование после перерыва: выбор направлений (PHP, Python), постановка целей по изучению веб-разработки и первые шаги в освоении новых языков."

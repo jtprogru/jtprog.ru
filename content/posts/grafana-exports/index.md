@@ -10,20 +10,15 @@ cover:
 date: "2020-03-11T22:50:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-- grafana
-- export
-- python
-- curl
-- api
-- dashboard
-- datasource
-- automation
-- migration
-- sqlite
-- mysql
-- json
-- monitoring
-- visualization
+  - grafana
+  - monitoring
+  - python
+  - CLI
+  - automation
+  - migration
+  - database
+  - mysql
+  - json
 title: 'Экспорт dashboards/datasource из Grafana'
 type: post
 description: "Экспорт дашбордов и datasource из Grafana через API: service accounts вместо устаревших API-ключей, выгрузка по UID скриптом — и почему лучше держать всё в provisioning."

@@ -16,9 +16,9 @@ keywords:
 date: "2021-08-26T18:14:09+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - nginx
+  - Nginx
   - json
-  - logs
+  - monitoring
 categories: ["Work"]
 cover:
   image: work.png

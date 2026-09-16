@@ -10,12 +10,8 @@ cover:
 date: "2015-03-19T19:11:00+03:00"
 lastmod: "2026-08-09T12:00:00+03:00"
 tags:
-- windows
-- neshta
-- virus
-- реестр Windows
-- антивирусы
-- безопасный режим
+  - windows
+  - virus
 title: 'Win32.Neshta.A - устраняем последствия'
 type: post
 description: "Win32.Neshta ломает запуск любых .exe. Как вернуть ассоциацию через reg-файл, когда regedit уже не открывается, убрать svchost.com и вычистить заражённые файлы."

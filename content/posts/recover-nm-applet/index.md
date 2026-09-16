@@ -14,7 +14,7 @@ lastmod: "2016-02-02T21:51:19+03:00"
 tags:
   - ubuntu
   - network
-  - networkmanager
+  - networking
 categories: ["HowTo"]
 cover:
   image: howto.png

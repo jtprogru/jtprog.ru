@@ -13,9 +13,8 @@ lastmod: 2026-08-22T12:00:00+03:00
 tags:
   - SRE
   - Error Budget
-  - Burn Rate
-  - Надежность
-  - Мониторинг
+  - reliability
+  - мониторинг
 categories: ["SRE"]
 cover:
   image: cover.png

@@ -11,10 +11,10 @@ keywords:
   - отравление кэша  
 date: "2018-04-04T15:02:00+03:00"  
 lastmod: "2018-04-04T15:02:00+03:00"  
-tags:  
-  - event  
-  - meetup  
-  - mailru  
+tags:
+  - мысли
+  - meetup
+  - mail
 categories: ["Meetup"]  
 cover:  
   image: meetup.png  

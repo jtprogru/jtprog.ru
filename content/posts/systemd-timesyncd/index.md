@@ -7,9 +7,8 @@ keywords: ['systemd-timesyncd настройка', 'linux ntp', 'systemd timesyn
 date: "2020-11-27T20:20:00+03:00"
 lastmod: "2020-11-27T20:20:00+03:00"
 tags:
-- systemd
-- timesyncd
-- linux
+  - systemd
+  - Linux
 categories: ["Work"]
 cover:
   image: work.png

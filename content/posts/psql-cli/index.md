@@ -15,7 +15,7 @@ lastmod: "2026-08-09T12:00:00+03:00"
 tags:
   - postgres
   - pgsql
-  - cli
+  - CLI
 categories: ["DevOps"]
 cover:
   image: devops.png

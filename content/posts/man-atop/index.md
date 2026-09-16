@@ -7,11 +7,8 @@ keywords: ['atop инструкция', 'мониторинг Linux', 'atopsar',
 date: "2020-12-05T19:36:36+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - atop
-  - linux
   - monitoring
-  - server monitoring
-  - performance monitoring
+  - Linux
   - command line
 categories: ["Basics"]
 cover:

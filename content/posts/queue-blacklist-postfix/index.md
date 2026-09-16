@@ -14,7 +14,7 @@ date: "2016-10-31T09:00:14+03:00"
 lastmod: "2016-10-31T09:00:14+03:00"
 tags:
   - postfix
-  - blacklist
+  - security
 categories: ["OS"]
 cover:
   image: OS.png

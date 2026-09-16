@@ -7,14 +7,9 @@ keywords: ["ansible roles", "ansible best practices", "структура ansibl
 date: 2022-09-05T10:15:00+03:00
 lastmod: 2026-08-22T12:00:00+03:00
 tags:
-  - ansible
+  - Ansible
   - basics
-  - ansiblerole
-  - Ansible Roles
-  - Molecule
-  - testing
-  - best practices
-  - Ansible Galaxy
+  - programming
 categories: ["Basics"]
 cover:
   image: basics.png

@@ -8,13 +8,10 @@ date: "2020-08-08T18:50:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
   - docker
-  - dockerfile
   - docker-compose
   - containerization
-  - containers
-  - images
-  - build
-  - orchestration
+  - blog
+  - CI/CD
   - deployment
   - basics
 categories: ["Basics"]

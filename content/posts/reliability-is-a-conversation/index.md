@@ -20,7 +20,7 @@ tags:
   - SLO
   - Error Budget
   - System Design
-  - Надёжность
+  - reliability
 categories: ["SRE"]
 cover:
   image: cover.svg

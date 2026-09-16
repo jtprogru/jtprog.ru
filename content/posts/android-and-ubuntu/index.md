@@ -10,14 +10,13 @@ cover:
 date: "2015-02-18T14:49:00+03:00"
 lastmod: "2015-02-18T14:49:00+03:00"
 tags:
-- android
-- ubuntu
-- mtp
-- udev rules
-- howto
-- file transfer
-- usb
-- linux configuration
+  - android
+  - ubuntu
+  - hardware
+  - Linux
+  - howto
+  - file transfer
+  - disks
 title: 'Дружим Android и Ubuntu 14.04'
 type: post
 description: "Пошаговая инструкция по подключению Android устройства к Ubuntu 14.04 с использованием MTP и правил udev для доступа к файлам и обмена данными."

@@ -7,14 +7,11 @@ keywords: ["как войти в IT", "личная история IT", "опы�
 date: "2021-05-15T18:30:00+03:00"
 lastmod: "2026-08-22T12:00:00+03:00"
 tags:
-  - story
-  - войти в айти
-  - войтивайти
+  - мысли
+  - career
   - IT career
-  - system administrator
   - Linux
   - programming
-  - personal story
 categories: ["notes"]
 cover:
   image: stories.png

@@ -10,16 +10,16 @@ cover:
 date: "2020-11-05T23:00:00+03:00"
 lastmod: "2026-05-15T20:00:00+03:00"
 tags:
-- gitlab-ci
-- devops
-- hugo
-- ci-cd
-- automation
-- deployment
-- static site
-- markdown
-- docker
-- rsync
+  - gitlab-ci
+  - DevOps
+  - Hugo
+  - CI/CD
+  - automation
+  - deployment
+  - blog
+  - markdown
+  - docker
+  - rsync
 title: 'GitLab-CI – делаем себе просто'
 type: post
 description: "Описание простой схемы автоматизации CI/CD для статического сайта на Hugo с использованием GitLab CI, Docker и rsync для деплоя."

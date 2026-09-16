@@ -28,12 +28,9 @@ tags:
   - SRE
   - reliability
   - monitoring
-  - graceful-degradation
-  - GitOps
+  - docker
   - chaos-engineering
   - DevOps
-  - production
-  - incident-management
 categories: ["Opinions"]
 cover:
   image: opinions.png

@@ -10,11 +10,11 @@ cover:
 date: '2017-09-13T15:00:00+03:00'
 lastmod: '2017-09-13T15:00:00+03:00'
 tags:
-- python
-- twitter api
-- redis
-- docker
-- автоматизация
+  - python
+  - twitter api
+  - Redis
+  - docker
+  - автоматизация
 title: 'Пишем отмазки в Twitter'
 type: post
 description: "Скрипт на Python для автоматической публикации случайных сообщений в Twitter с использованием Redis и Docker."

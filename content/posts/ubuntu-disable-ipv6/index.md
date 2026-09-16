@@ -10,11 +10,11 @@ cover:
 date: "2016-08-12T11:54:00+03:00"
 lastmod: "2016-08-12T11:54:00+03:00"
 tags:
-- ipv6
-- linux
-- ubuntu
-- сетевые настройки
-- sysctl
+  - networking
+  - Linux
+  - ubuntu
+  - сетевые настройки
+  - sysctl
 title: 'Отключаем IPv6 на сервере'
 type: post
 description: "Пошаговая инструкция по отключению IPv6 в Ubuntu Server через редактирование sysctl.conf."

@@ -14,10 +14,8 @@ lastmod: "2021-05-08T18:37:56+03:00"
 tags:
   - fuckup
   - заметкинаполях
-  - werf
-  - helm
+  - docker
   - kubernetes
-  - k8s
 categories: ["notes"]
 cover:
   image: notes.png

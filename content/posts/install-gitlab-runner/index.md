@@ -8,7 +8,6 @@ date: "2020-11-27T13:30:00+03:00"
 lastmod: "2020-11-27T13:30:00+03:00"
 tags:
   - gitlab-ci
-  - gitlab runner
   - gitlab
   - installation
   - configuration
