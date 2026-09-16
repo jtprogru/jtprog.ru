@@ -46,6 +46,17 @@ jobs:
       - name: Verify mermaid diagrams are pre-rendered
         run: make mermaid-check
 
+      # Обложки лежат в репозитории только как .svg — он легче и чётче, и на
+      # самой странице отдаётся именно вектор. Но SVG не рендерит ни один
+      # соцсеть-парсер: ни og:image, ни Telegram Instant View его не покажут.
+      # Растр рисует `make cover-rasterize`, он прописан в зависимостях
+      # build-prod и отработает сам. Здесь остаётся только положить бинарник.
+      - name: Install rsvg-convert for cover rasterization
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends librsvg2-bin
+
       - name: Stamp commit hash into the config
         env:
           CI: 'true'

@@ -21,3 +21,12 @@ draft-config.yml
 themes/bear-dev
 plans/
 themes/mishka-dev
+
+# Растровые обложки постов — сборочный артефакт, а не контент. Источник правды
+# лежит рядом с постом: cover.svg. PNG рисует `make cover-rasterize`, он стоит
+# в зависимостях build / build-prod / serve и отрабатывает перед каждой сборкой,
+# в CI тоже (там отдельным шагом ставится librsvg2-bin).
+# Исключение — посты, у которых обложка изначально растровая и SVG-исходника
+# нет вообще: такие PNG остаются в репозитории и перечислены ниже явно.
+content/posts/*/cover.png
+!content/posts/cloud-sync-breaks-git/cover.png

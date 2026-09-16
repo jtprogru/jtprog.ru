@@ -36,12 +36,12 @@ help: ## Show available targets
 prec:
 	@command -v hugo >/dev/null || { echo "hugo not found"; exit 1; }
 
-build: prec ## Build static site (с черновиками, для локальной проверки)
+build: prec cover-rasterize ## Build static site (с черновиками, для локальной проверки)
 	hugo -D -E -F
 
 # Ровно то, что раньше зашивалось в hugo-arguments у deploy-экшена. Без -D/-E/-F:
 # черновики, отложенные и протухшие посты в прод не едут.
-build-prod: prec ## Production build into public/ (no drafts, minified)
+build-prod: prec cover-rasterize ## Production build into public/ (no drafts, minified)
 	hugo --config $(CONFIG) --destination $(PUBLIC_DIR) $(HUGO_PROD)
 
 # copyright в hugo.yaml содержит плейсхолдер @@@COMMIT@@@. Правит файл на месте,
@@ -63,7 +63,7 @@ deploy: ## rsync built site to the VPS (needs DEPLOY_USER/HOST/DEST)
 		-e "ssh -i $(DEPLOY_KEY) -p $(DEPLOY_PORT) -o StrictHostKeyChecking=accept-new" \
 		$(PUBLIC_DIR)/ "$(DEPLOY_USER)@$(DEPLOY_HOST):$(DEPLOY_DEST)/"
 
-serve: prec ## Run local development server with hugo
+serve: prec cover-rasterize ## Run local development server with hugo
 	hugo server -D -E -F --bind $(HOST) --port $(PORT) --baseURL "http://$(HOST):$(PORT)" --noHTTPCache --ignoreCache --gc --renderStaticToDisk --forceSyncStatic --logLevel $(LOG_LEVEL) --minify --watch --printMemoryUsage --templateMetricsHints --templateMetrics --disableFastRender --renderStaticToDisk --printUnusedTemplates --printPathWarnings --printI18nWarnings --cleanDestinationDir --config ./$(CONFIG) --theme "mishka-dev"
 
 new: prec ## Create new post from archetype (usage: make new SLUG=my-post)
@@ -78,17 +78,20 @@ update-theme: prec ## Update all git submodules - now is only themes/mishka
 	@command -v git >/dev/null || { echo "git not found"; exit 1; }
 	git submodule update --init --recursive --remote
 
-mermaid-render: ## Pre-render mermaid blocks from content/**/*.md to assets/mermaid/<sha256>.svg
+mermaid-render: ## Pre-render mermaid blocks from content/**/*.md to assets/mermaid/<sha256>.{svg,dark.svg,png}
 	@command -v python3 >/dev/null || { echo "python3 not found"; exit 1; }
 	@command -v npx >/dev/null || { echo "npx not found"; exit 1; }
 	python3 scripts/mermaid-prerender.py
 
 # Пост без пререндера молча уезжает на runtime-ветку render hook'а: тянет
 # mermaid с CDN и рисует схему в цветах, которые никто не проверял. Ловим в CI.
-mermaid-check: ## Fail if any mermaid block has no pre-rendered SVG
+mermaid-check: ## Fail if any mermaid block has no pre-rendered svg/png
 	@command -v python3 >/dev/null || { echo "python3 not found"; exit 1; }
 	python3 scripts/mermaid-prerender.py --check
 
+# Растр — сборочный артефакт, а не контент: в репозитории лежит только .svg,
+# PNG рисуется перед каждой сборкой. Поэтому цель стоит в зависимостях build,
+# build-prod и serve, а не вызывается руками.
 cover-rasterize: ## Rasterize SVG covers to PNG for og:image (social parsers do not render SVG)
 	@command -v rsvg-convert >/dev/null || { echo "rsvg-convert not found: brew install librsvg"; exit 1; }
 	bash scripts/cover-rasterize.sh
