@@ -29,8 +29,6 @@ cover:
   relative: false
 type: post
 slug: 'passwords-for-parents'
-aliases:
-  - 'passwords-for-parents'
 params:
   math: false
 ---

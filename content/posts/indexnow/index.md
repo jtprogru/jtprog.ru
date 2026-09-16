@@ -27,8 +27,6 @@ cover:
   relative: false
 type: post
 slug: 'indexnow'
-aliases:
-  - 'indexnow'
 params:
   math: false
 ---
