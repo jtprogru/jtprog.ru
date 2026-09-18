@@ -6,7 +6,7 @@
     "math:render": "node scripts/math-prerender.mjs"
   },
   "devDependencies": {
-    "katex": "0.16.11",
+    "katex": "0.16.21",
     "puppeteer": "^24.0.0"
   }
 }
