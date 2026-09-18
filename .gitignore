@@ -30,3 +30,6 @@ themes/mishka-dev
 # нет вообще: такие PNG остаются в репозитории и перечислены ниже явно.
 content/posts/*/cover.png
 !content/posts/cloud-sync-breaks-git/cover.png
+
+# Сборочные зависимости math-prerender (ставятся через `npm ci`)
+node_modules/

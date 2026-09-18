@@ -1,0 +1,12 @@
+{
+  "name": "jtprog-ru-build",
+  "private": true,
+  "description": "Сборочные инструменты блога: пререндер LaTeX-формул в PNG для Telegram Instant View",
+  "scripts": {
+    "math:render": "node scripts/math-prerender.mjs"
+  },
+  "devDependencies": {
+    "katex": "0.16.11",
+    "puppeteer": "^24.0.0"
+  }
+}

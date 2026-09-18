@@ -46,6 +46,13 @@ jobs:
       - name: Verify mermaid diagrams are pre-rendered
         run: make mermaid-check
 
+      # Формулы KaTeX рисуются в браузере, а Instant View не исполняет JS —
+      # без растра в IV уезжает сырой TeX вида `$$\frac{a}{b}$$`. PNG лежат
+      # в assets/math/ и коммитятся: Chromium в раннере нет, здесь только
+      # проверка, что для каждой формулы двойник на месте.
+      - name: Verify LaTeX formulas are pre-rendered
+        run: make math-check
+
       # Обложки лежат в репозитории только как .svg — он легче и чётче, и на
       # самой странице отдаётся именно вектор. Но SVG не рендерит ни один
       # соцсеть-парсер: ни og:image, ни Telegram Instant View его не покажут.

@@ -24,7 +24,7 @@
 ├── static/           # «как есть» — favicon, manifest, robots
 ├── layouts/          # override'ы поверх темы (если нужны)
 ├── archetypes/       # шаблоны фронтматтера для `hugo new`
-├── scripts/          # хелперы: lastmod, типографика, mermaid-prerender, IndexNow
+├── scripts/          # хелперы: lastmod, типографика, mermaid- и math-prerender, IndexNow
 ├── themes/mishka/    # submodule на hugo-mishka
 └── hugo.yaml         # единый конфиг сайта
 ```
@@ -91,6 +91,7 @@ gh workflow run CI               # из CLI
 | --- | --- |
 | `add_lastmod.py` | Бэкфилл `lastmod` во frontmatter постов (`content/**/index.md`), где он отсутствует — берёт значение из `date`. |
 | `mermaid-prerender.py` | Оффлайн-рендер всех ```mermaid```-блоков в SVG → `assets/mermaid/<sha256>.svg`. Render hook темы встраивает их inline; runtime mermaid bundle грузится только если SVG не найден. Запускается через `make mermaid-render`. |
+| `math-prerender.mjs` | Оффлайн-рендер LaTeX-формул (`$$..$$`, `\[..\]`, `\(..\)`) в PNG → `assets/math/<sha256>.png`. На сайте формулы по-прежнему рисует KaTeX в браузере, растр нужен парсерам без JS — прежде всего Telegram Instant View. Render hook `render-passthrough.html` кладёт URL картинки в `data-png`. Запускается через `make math-render`, наличие двойников проверяет `make math-check` в CI. Требует `npm ci` (puppeteer + katex). |
 | `typograf.py` | Standalone Python 3 клиент ArtLebedev Typograf (stdlib-only). Используется как модуль из `typografy_md.py` и как CLI. |
 | `typografy_md.py` | Прогон Typograf по Markdown с защитой кода, frontmatter, шорткодов, формул, ссылок и list-маркеров — типографируется только проза. |
 | `indexnow.sh` | Дельта-сабмит в IndexNow (Bing/Yandex/Seznam/Naver) после деплоя: маппит изменённые файлы под `content/` в канонические URL и шлёт уникальный список. Вызывается из CI; шаг неблокирующий. |

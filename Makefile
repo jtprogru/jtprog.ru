@@ -28,7 +28,8 @@ RSYNC_ARGS   ?= --archive --compress --delete --delay-updates
 .DEFAULT_GOAL := help
 
 .PHONY: help prec build build-prod serve new new-page update-theme \
-        mermaid-render mermaid-check cover-rasterize stamp-commit robots deploy
+        mermaid-render mermaid-check math-render math-check math-prune \
+        cover-rasterize stamp-commit robots deploy
 
 help: ## Show available targets
 	@grep -E '^[a-zA-Z_-]+:.*## ' $(firstword $(MAKEFILE_LIST)) | awk 'BEGIN {FS = ":.*## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'
@@ -88,6 +89,22 @@ mermaid-render: ## Pre-render mermaid blocks from content/**/*.md to assets/merm
 mermaid-check: ## Fail if any mermaid block has no pre-rendered svg/png
 	@command -v python3 >/dev/null || { echo "python3 not found"; exit 1; }
 	python3 scripts/mermaid-prerender.py --check
+
+# LaTeX-формулы. KaTeX рисует их в браузере, а Instant View никакого JS не
+# исполняет — без растра в IV уезжает сырой TeX. Растр лежит в assets/math/
+# и коммитится (в CI нет Chromium, там работает только math-check).
+math-render: ## Pre-render LaTeX formulas from content/**/*.md to assets/math/<sha256>.png
+	@command -v node >/dev/null || { echo "node not found"; exit 1; }
+	@test -d node_modules || npm ci
+	node scripts/math-prerender.mjs
+
+math-check: ## Fail if any LaTeX formula has no pre-rendered png
+	@command -v node >/dev/null || { echo "node not found"; exit 1; }
+	node scripts/math-prerender.mjs --check
+
+math-prune: ## Drop pre-rendered formula PNGs that no post references anymore
+	@command -v node >/dev/null || { echo "node not found"; exit 1; }
+	node scripts/math-prerender.mjs --prune
 
 # Растр — сборочный артефакт, а не контент: в репозитории лежит только .svg,
 # PNG рисуется перед каждой сборкой. Поэтому цель стоит в зависимостях build,
