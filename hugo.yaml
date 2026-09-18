@@ -272,7 +272,7 @@ params:
       Привет, `%username%`! Меня зовут Михаил aka `jtprogru` — и это блог про SRE, DevOps и системное администрирование.
       Подписывайся на [telegram-канал](https://t.me/+gLeURJwFz5Q4NTA6), заходи в [telegram-чат](https://t.me/+WkR_-AWNbXVjMWUy),
       а если хочется закрытой части — она на [Sponsr](https://sponsr.ru/jtprogru_channel/).
-    imageUrl: "/avatar.webp"
+    imageUrl: "/avatar.png"
     imageTitle: "jtprogru"
     imageWidth: 160
     imageHeight: 160
