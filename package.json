@@ -7,6 +7,6 @@
   },
   "devDependencies": {
     "katex": "0.16.21",
-    "puppeteer": "^24.0.0"
+    "puppeteer": "^25.11.0"
   }
 }
