@@ -207,6 +207,10 @@ params:
   # или по `math: true` во frontmatter поста. KaTeX не грузится на
   # 99% страниц (home, listings, посты без формул). ---
   mathRenderer: katex
+  # Держим вровень с katex в package.json: им рисуются PNG для Instant View,
+  # а сайт грузит KaTeX с jsdelivr. Разные версии — разная вёрстка формул
+  # в браузере и в IV. Dependabot эту строку не видит, бампать руками.
+  katexVersion: "0.16.21"
 
   opengraph: true
   twitter_cards: true
