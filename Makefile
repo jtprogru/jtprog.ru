@@ -27,7 +27,7 @@ RSYNC_ARGS   ?= --archive --compress --delete --delay-updates
 
 .DEFAULT_GOAL := help
 
-.PHONY: help prec build build-prod serve new new-page update-theme \
+.PHONY: help prec build build-prod serve clean new new-page update-theme \
         mermaid-render mermaid-check math-render math-check math-prune \
         cover-rasterize stamp-commit robots deploy
 
@@ -66,6 +66,31 @@ deploy: ## rsync built site to the VPS (needs DEPLOY_USER/HOST/DEST)
 
 serve: prec cover-rasterize ## Run local development server with hugo
 	hugo server -D -E -F --bind $(HOST) --port $(PORT) --baseURL "http://$(HOST):$(PORT)" --noHTTPCache --ignoreCache --gc --renderStaticToDisk --forceSyncStatic --logLevel $(LOG_LEVEL) --minify --watch --printMemoryUsage --templateMetricsHints --templateMetrics --disableFastRender --renderStaticToDisk --printUnusedTemplates --printPathWarnings --printI18nWarnings --cleanDestinationDir --config ./$(CONFIG) --theme "mishka-dev"
+
+# Сносит всё, что порождает сборка и чего нет в git: сайт, кэш ресурсов,
+# растры обложек, node_modules, мусор Finder/Python и файловый кэш Hugo вне
+# репозитория. Пререндеры в assets/math/ и assets/mermaid/ не трогаем: они
+# закоммичены, а math-render в CI не запустить. cover.png удаляется, только
+# если git его игнорирует и рядом лежит cover.svg — иначе его не из чего
+# перерисовать. Кэш картинок в hugo.yaml лежит в :cacheDir/images без имени
+# проекта, поэтому его очистка заставит и другие Hugo-сайты на машине заново
+# нарезать изображения.
+clean: ## Remove all build artifacts and caches (public, resources, cover PNGs, node_modules, hugo cache)
+	rm -rf $(sort public $(PUBLIC_DIR)) resources node_modules .hugo_build.lock
+	git ls-files -z --others --ignored --exclude-standard -- 'content/posts/*/cover.png' \
+		| while IFS= read -r -d '' png; do \
+			if [[ -f "$${png%.png}.svg" ]]; then rm -fv "$$png"; fi; \
+		done
+	find . \( -path ./.git -o -path ./themes \) -prune \
+		-o \( -name .DS_Store -o -name __pycache__ \) -prune -exec rm -rfv {} +
+	@if command -v hugo >/dev/null; then \
+		cachedir=$$(hugo config | awk -F"'" '/^cachedir = /{print $$2}'); \
+		test -n "$$cachedir" || { echo "не удалось узнать cacheDir из hugo config"; exit 1; }; \
+		echo "rm -rf $$cachedir/$(notdir $(CURDIR)) $$cachedir/images"; \
+		rm -rf "$$cachedir/$(notdir $(CURDIR))" "$$cachedir/images"; \
+	else \
+		echo "hugo не найден, файловый кэш Hugo пропущен"; \
+	fi
 
 new: prec ## Create new post from archetype (usage: make new SLUG=my-post)
 	@test -n "$(SLUG)" || { echo "usage: make new SLUG=my-post"; exit 1; }

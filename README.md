@@ -45,6 +45,9 @@ hugo --gc --minify
 
 # make-обёртки (см. Makefile)
 make help
+
+# снести все сборочные артефакты и кэши, чтобы собрать с нуля
+make clean
 ```
 
 > Тема дев-клонируется через symlink `themes/mishka-dev → ~/Work/.../hugo-mishka` и подключается флагом `hugo --theme mishka-dev`. Прод использует pinned-submodule `themes/mishka`.
