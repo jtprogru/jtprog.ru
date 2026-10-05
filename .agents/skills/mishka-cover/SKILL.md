@@ -155,7 +155,7 @@ make cover-rasterize   # обходит content/posts/*/cover.svg и assets/cove
 Скрипт идемпотентный: пропускает файл, если PNG новее SVG, и — внимание — **никогда не понижает разрешение уже существующего PNG**. Если ты правишь SVG после первой растеризации, PNG шириной 2100px он молча пропустит с сообщением «существующий PNG шире». Тогда перерисовывай напрямую:
 
 ```bash
-rsvg-convert --width=2100 --keep-aspect-ratio --format=png \
+rsvg-convert --width=2304 --keep-aspect-ratio --format=png \
   --output=content/posts/<slug>/cover.png content/posts/<slug>/cover.svg
 ```
 
