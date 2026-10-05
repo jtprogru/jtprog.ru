@@ -1,0 +1,97 @@
+<svg width="1050" height="480" viewBox="0 0 1050 480" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Slidev: презентация как код</title>
+<desc>Файл slides.md с Markdown-разметкой превращается в слайд, а из него получаются PDF и сайт на GitHub Pages; под файлом тянется история коммитов.</desc>
+<defs>
+<linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#24273a"/><stop offset="100%" stop-color="#1e2030"/>
+</linearGradient>
+<linearGradient id="slideGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#8fcdea"/><stop offset="100%" stop-color="#7dc4e4"/>
+</linearGradient>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0 0 L10 5 L0 10 z" fill="#7dc4e4"/>
+</marker>
+</defs>
+
+<!-- база: прямые края, весь холст, без rx -->
+<rect x="0" y="0" width="1050" height="480" fill="url(#bgGrad)"/>
+
+<!-- тихая структурная сетка -->
+<g stroke="#494d64" stroke-width="0.5" opacity="0.35">
+  <line x1="0" y1="128" x2="1050" y2="128"/>
+  <line x1="0" y1="434" x2="1050" y2="434"/>
+  <line x1="372" y1="110" x2="372" y2="446"/>
+  <line x1="686" y1="110" x2="686" y2="446"/>
+</g>
+
+<!-- Заголовок -->
+<text x="525" y="58" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="30" font-weight="700" fill="#cad3f5">Slidev: презентация как код</text>
+<text x="525" y="89" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="15" fill="#a5adcb">от пустой папки до PDF и GitHub Pages</text>
+
+<!-- ИСХОДНИК: файл slides.md, нейтральная карточка.
+     Всё держим в x 156..894: карточки листингов кропают обложку под 16:10 (141..909) -->
+<rect x="156" y="175" width="184" height="190" rx="8" fill="#363a4f" stroke="#494d64"/>
+<text x="170" y="197" font-family="'JetBrains Mono', monospace"
+      font-size="13" fill="#cad3f5">slides.md</text>
+<line x1="156" y1="209" x2="340" y2="209" stroke="#494d64"/>
+<g font-family="'JetBrains Mono', monospace" font-size="12">
+  <text x="170" y="229" fill="#a5adcb">---</text>
+  <text x="170" y="248" fill="#cad3f5">theme: bear</text>
+  <text x="170" y="267" fill="#a5adcb">---</text>
+  <text x="170" y="286" fill="#cad3f5" font-weight="700"># SRE MCP</text>
+  <text x="170" y="305" fill="#a5adcb">---</text>
+  <text x="170" y="324" fill="#cad3f5">src: ./pages/hook.md</text>
+  <text x="170" y="343" fill="#a5adcb">---</text>
+</g>
+
+<!-- история под файлом: git log вместо папки с копиями -->
+<line x1="170" y1="391" x2="326" y2="391" stroke="#494d64" stroke-width="1.5"/>
+<g fill="#a5adcb">
+  <circle cx="170" cy="391" r="3.5"/><circle cx="209" cy="391" r="3.5"/>
+  <circle cx="248" cy="391" r="3.5"/><circle cx="287" cy="391" r="3.5"/>
+</g>
+<circle cx="326" cy="391" r="4" fill="#cad3f5"/>
+<text x="248" y="414" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="10.5" fill="#a5adcb">git log · 46 коммитов</text>
+
+<!-- исходник → слайд: сапфировая стрелка (сама сборка) -->
+<line x1="340" y1="270" x2="398" y2="270" stroke="#7dc4e4" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+<!-- ВЕЕР: слайд → два результата (приглушённый сапфир) -->
+<g stroke="#7dc4e4" stroke-width="1.8" opacity="0.4" fill="none">
+  <line x1="646" y1="270" x2="724" y2="210"/>
+  <line x1="646" y1="270" x2="724" y2="330"/>
+</g>
+<g fill="#7dc4e4" opacity="0.55">
+  <circle cx="724" cy="210" r="3"/><circle cx="724" cy="330" r="3"/>
+</g>
+
+<!-- СМЫСЛОВОЙ ЦЕНТР: единственный сапфировый очаг — собранный слайд -->
+<rect x="404" y="199" width="242" height="142" rx="12" fill="#0b7285"/>
+<rect x="410" y="205" width="230" height="130" rx="10" fill="url(#slideGrad)" stroke="#0b7285" stroke-width="1.5"/>
+<text x="430" y="243" font-family="'JetBrains Mono', monospace"
+      font-size="20" font-weight="700" fill="#1e2030">Slidev</text>
+<text x="430" y="263" font-family="'JetBrains Mono', monospace"
+      font-size="11.5" fill="#24273a">markdown → слайд</text>
+<g fill="#0b7285">
+  <rect x="430" y="280" width="186" height="8" rx="2"/>
+  <rect x="430" y="294" width="62" height="8" rx="2"/>
+  <rect x="430" y="308" width="98" height="8" rx="2"/>
+</g>
+
+<!-- результаты: нейтральные боксы -->
+<g text-anchor="middle" font-family="'JetBrains Mono', monospace">
+  <rect x="728" y="182" width="166" height="56" rx="8" fill="#363a4f" stroke="#494d64"/>
+  <text x="811" y="206" font-size="15" fill="#cad3f5">PDF</text>
+  <text x="811" y="226" font-size="10.5" fill="#a5adcb">slidev export</text>
+  <rect x="728" y="302" width="166" height="56" rx="8" fill="#363a4f" stroke="#494d64"/>
+  <text x="811" y="326" font-size="15" fill="#cad3f5">GitHub Pages</text>
+  <text x="811" y="346" font-size="10.5" fill="#a5adcb">slidev build</text>
+</g>
+
+<!-- Подпись -->
+<text x="525" y="462" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="12" fill="#7dc4e4">Мишка на сервере · @jtprogru_channel</text>
+</svg>
