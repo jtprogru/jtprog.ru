@@ -14,7 +14,7 @@ keywords:
   - доклад
 date: 2026-10-05T19:00:00+03:00
 lastmod: 2026-10-05T19:00:00+03:00
-draft: true
+draft: false
 tags:
   - Slidev
   - markdown
