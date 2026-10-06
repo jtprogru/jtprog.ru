@@ -141,7 +141,7 @@ description: >
 content/posts/<slug>/
 ├── index.md
 ├── cover.svg   ← вектор, рисуешь ты; отдаётся на самой странице
-└── cover.png   ← растр 2100px, генерируется скриптом; уходит в og:image
+└── cover.png   ← растр 2304px, генерируется скриптом; уходит в og:image
 ```
 
 Имя всегда `cover.svg`, не `<slug>.svg` — партиал темы ищет ресурс в бандле поста. Каталог `assets/covers/` для концепт-обложек **не** используется: там лежат общие категорийные заглушки (`opinions.png`, `devops.png` и подобные), которые концепт-обложка как раз заменяет.
@@ -152,10 +152,10 @@ content/posts/<slug>/
 make cover-rasterize   # обходит content/posts/*/cover.svg и assets/covers/*.svg
 ```
 
-Скрипт идемпотентный: пропускает файл, если PNG новее SVG, и — внимание — **никогда не понижает разрешение уже существующего PNG**. Если ты правишь SVG после первой растеризации, PNG шириной 2100px он молча пропустит с сообщением «существующий PNG шире». Тогда перерисовывай напрямую:
+Скрипт идемпотентный: пропускает файл, если PNG новее SVG, и — внимание — **никогда не понижает разрешение уже существующего PNG**. Если ты правишь SVG после первой растеризации, PNG шириной 2304px он молча пропустит с сообщением «существующий PNG шире». Тогда перерисовывай напрямую:
 
 ```bash
-rsvg-convert --width=2100 --keep-aspect-ratio --format=png \
+rsvg-convert --width=2304 --keep-aspect-ratio --format=png \
   --output=content/posts/<slug>/cover.png content/posts/<slug>/cover.svg
 ```
 
@@ -187,7 +187,7 @@ rsvg-convert --width=1050 --keep-aspect-ratio --format=png \
 Отдай `.svg` пользователю на просмотр. Краткий отчёт:
 
 ```md
-✅ Обложка готова: content/posts/<slug>/cover.svg (+ cover.png 2100px)
+✅ Обложка готова: content/posts/<slug>/cover.svg (+ cover.png 2304px)
 
 🎨 Метафора: ... (одна фраза)
 💠 Сапфир светится на: ... (смысловой центр)
