@@ -1,0 +1,88 @@
+<svg width="1050" height="480" viewBox="0 0 1050 480" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Твой IaC тоже зависимость</title>
+<desc>Перевёрнутая пирамида: сверху вниз идут npm-пакет, образ сервиса, Helm-чарт и провайдер Terraform. Полосы слева показывают права при исполнении и растут к низу, полосы справа показывают проверки по дороге и к низу сжимаются. У провайдера Terraform в руках облачный аккаунт целиком, а из проверок один lock-файл.</desc>
+<defs>
+<linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#24273a"/><stop offset="100%" stop-color="#1e2030"/>
+</linearGradient>
+<linearGradient id="bandGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#2c3448"/><stop offset="100%" stop-color="#222839"/>
+</linearGradient>
+<linearGradient id="glowGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#0b7285" stop-opacity="0"/>
+<stop offset="38%" stop-color="#0b7285" stop-opacity="0.42"/>
+<stop offset="100%" stop-color="#0b7285" stop-opacity="0"/>
+</linearGradient>
+</defs>
+
+<!-- база: прямые края, весь холст, без rx -->
+<rect x="0" y="0" width="1050" height="480" fill="url(#bgGrad)"/>
+
+<!-- тихая структурная сетка -->
+<g stroke="#494d64" stroke-width="0.5" opacity="0.35">
+  <line x1="0" y1="112" x2="1050" y2="112"/>
+  <line x1="0" y1="434" x2="1050" y2="434"/>
+</g>
+
+<!-- Заголовок -->
+<text x="525" y="58" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="30" font-weight="700" fill="#cad3f5">Твой IaC тоже зависимость</text>
+<text x="525" y="89" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="15" fill="#a5adcb">чем больше прав у артефакта, тем меньше его проверяют</text>
+
+<!-- колоночные подписи -->
+<g font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#a5adcb" text-anchor="middle">
+  <text x="281" y="146">права при исполнении</text>
+  <text x="525" y="146">что приезжает</text>
+  <text x="769" y="146">проверки по дороге</text>
+</g>
+
+<!-- оси: от них полосы расходятся в стороны -->
+<g stroke="#494d64" stroke-width="1">
+  <line x1="425" y1="158" x2="425" y2="402"/>
+  <line x1="625" y1="158" x2="625" y2="402"/>
+</g>
+
+<!-- СМЫСЛОВОЙ ЦЕНТР: подсветка нижней строки -->
+<rect x="96" y="340" width="858" height="66" fill="url(#glowGrad)"/>
+
+<!-- строка 1: npm-пакет -->
+<rect x="353" y="164" width="72" height="46" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+<rect x="625" y="164" width="288" height="46" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+<g font-family="'JetBrains Mono', monospace" dominant-baseline="central">
+  <text x="343" y="187" text-anchor="end" font-size="10.5" fill="#a5adcb">сборочный контейнер</text>
+  <text x="525" y="187" text-anchor="middle" font-size="12.5" fill="#cad3f5">npm-пакет</text>
+  <text x="769" y="187" text-anchor="middle" font-size="10.5" fill="#cad3f5">lock-файл · SCA · карантин</text>
+</g>
+
+<!-- строка 2: образ сервиса -->
+<rect x="281" y="226" width="144" height="46" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+<rect x="625" y="226" width="204" height="46" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+<g font-family="'JetBrains Mono', monospace" dominant-baseline="central" text-anchor="middle">
+  <text x="353" y="249" font-size="10.5" fill="#cad3f5">namespace сервиса</text>
+  <text x="525" y="249" font-size="12.5" fill="#cad3f5">образ сервиса</text>
+  <text x="727" y="249" font-size="10.5" fill="#cad3f5">registry · сканер · подпись</text>
+</g>
+
+<!-- строка 3: Helm-чарт -->
+<rect x="209" y="288" width="216" height="46" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+<rect x="625" y="288" width="112" height="46" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1"/>
+<g font-family="'JetBrains Mono', monospace" dominant-baseline="central" text-anchor="middle">
+  <text x="317" y="311" font-size="10.5" fill="#cad3f5">весь кластер</text>
+  <text x="525" y="311" font-size="12.5" fill="#cad3f5">Helm-чарт</text>
+  <text x="681" y="311" font-size="10.5" fill="#cad3f5">иногда зеркало</text>
+</g>
+
+<!-- строка 4: провайдер Terraform, единственный сапфировый очаг -->
+<rect x="137" y="350" width="288" height="46" rx="8" fill="url(#bandGrad)" stroke="#7dc4e4" stroke-width="1.5"/>
+<rect x="625" y="350" width="44" height="46" rx="8" fill="url(#bandGrad)" stroke="#7dc4e4" stroke-width="1.5"/>
+<g font-family="'JetBrains Mono', monospace" dominant-baseline="central" fill="#7dc4e4">
+  <text x="281" y="373" text-anchor="middle" font-size="12.5" font-weight="700">облачный аккаунт целиком</text>
+  <text x="525" y="373" text-anchor="middle" font-size="12.5" font-weight="700">провайдер Terraform</text>
+  <text x="681" y="373" text-anchor="start" font-size="10.5">lock-файл, если не забыли</text>
+</g>
+
+<!-- Подпись -->
+<text x="525" y="462" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="12" fill="#7dc4e4">Мишка на сервере · @jtprogru_channel</text>
+</svg>
