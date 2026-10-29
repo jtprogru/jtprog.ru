@@ -26,9 +26,9 @@ tags:
   - python
 categories: ["SRE"]
 cover:
-  image: devops.png
-  alt: SRE
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  image: cover.png
+  alt: 'Sequence-схема: orders четыре раза вызывает payments, три соединения закрыты через Close(), а одно так и висит в CLOSE_WAIT'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 type: post
 slug: 'async-calls-connection-audit'
