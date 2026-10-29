@@ -1,0 +1,113 @@
+<svg width="1050" height="480" viewBox="0 0 1050 480" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Кто открыл и не закрыл</title>
+<desc>Схема в стиле sequence-диаграммы: orders четыре раза вызывает payments. Три вызова получили ответ и закрыты через Close(), а у одного ответ пришёл, но соединение так и не закрыли: его полоса активации тянется вниз без конца и заканчивается меткой CLOSE_WAIT.</desc>
+<defs>
+<linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#24273a"/><stop offset="100%" stop-color="#1e2030"/>
+</linearGradient>
+<linearGradient id="leakBar" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#7dc4e4"/><stop offset="100%" stop-color="#0b7285"/>
+</linearGradient>
+<linearGradient id="glowGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#0b7285" stop-opacity="0"/>
+<stop offset="50%" stop-color="#0b7285" stop-opacity="0.45"/>
+<stop offset="100%" stop-color="#0b7285" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="leakRow" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#0b7285" stop-opacity="0.32"/>
+<stop offset="100%" stop-color="#0b7285" stop-opacity="0"/>
+</linearGradient>
+<marker id="headGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+<path d="M0,0 L10,5 L0,10 z" fill="#939ab7"/>
+</marker>
+<marker id="openGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+<path d="M0,0 L10,5 L0,10" fill="none" stroke="#939ab7" stroke-width="1.6"/>
+</marker>
+<marker id="headSapphire" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+<path d="M0,0 L10,5 L0,10 z" fill="#7dc4e4"/>
+</marker>
+<marker id="openSapphire" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+<path d="M0,0 L10,5 L0,10" fill="none" stroke="#7dc4e4" stroke-width="1.8"/>
+</marker>
+</defs>
+
+<!-- база: прямые края, весь холст, без rx -->
+<rect x="0" y="0" width="1050" height="480" fill="url(#bgGrad)"/>
+
+<!-- тихая структурная сетка -->
+<g stroke="#494d64" stroke-width="0.5" opacity="0.35">
+  <line x1="0" y1="104" x2="1050" y2="104"/>
+  <line x1="0" y1="440" x2="1050" y2="440"/>
+</g>
+
+<!-- Заголовок -->
+<text x="525" y="56" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="30" font-weight="700" fill="#cad3f5">Кто открыл и не закрыл</text>
+<text x="525" y="86" text-anchor="middle" font-family="'PT Sans', sans-serif"
+      font-size="15" fill="#a5adcb">схемы асинхронных вызовов как инструмент аудита</text>
+
+<!-- участники -->
+<g font-family="'JetBrains Mono', monospace" font-size="15" fill="#cad3f5" text-anchor="middle">
+  <rect x="270" y="118" width="150" height="38" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1.2"/>
+  <text x="345" y="137" dominant-baseline="central">orders</text>
+  <rect x="630" y="118" width="150" height="38" rx="8" fill="#363a4f" stroke="#494d64" stroke-width="1.2"/>
+  <text x="705" y="137" dominant-baseline="central">payments</text>
+</g>
+
+<!-- линии жизни -->
+<g stroke="#494d64" stroke-width="1.2" stroke-dasharray="4 6">
+  <line x1="345" y1="156" x2="345" y2="430"/>
+  <line x1="705" y1="156" x2="705" y2="430"/>
+</g>
+
+<!-- подсветка строки утечки -->
+<rect x="350" y="230" width="300" height="28" fill="url(#leakRow)"/>
+
+<!-- свечение под незакрытым соединением -->
+<rect x="322" y="232" width="46" height="202" fill="url(#glowGrad)"/>
+
+<!-- полосы активации payments: сервер ответил на все четыре вызова -->
+<g fill="#363a4f" stroke="#494d64" stroke-width="1">
+  <rect x="700" y="182" width="10" height="24"/>
+  <rect x="700" y="232" width="10" height="24"/>
+  <rect x="700" y="282" width="10" height="24"/>
+  <rect x="700" y="332" width="10" height="24"/>
+</g>
+
+<!-- СМЫСЛОВОЙ ЦЕНТР: соединение, которое никто не закрыл -->
+<rect x="340" y="232" width="10" height="186" fill="url(#leakBar)"/>
+<g fill="#7dc4e4">
+  <circle cx="345" cy="424" r="1.8"/>
+  <circle cx="345" cy="431" r="1.5"/>
+  <circle cx="345" cy="437" r="1.2"/>
+</g>
+
+<!-- вызов 1: закрыт -->
+<line x1="345" y1="186" x2="698" y2="186" stroke="#939ab7" stroke-width="1.6" marker-end="url(#headGray)"/>
+<line x1="700" y1="202" x2="347" y2="202" stroke="#939ab7" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#openGray)"/>
+
+<!-- вызов 2: ответ пришёл, Close() нет -->
+<line x1="350" y1="236" x2="698" y2="236" stroke="#7dc4e4" stroke-width="2" marker-end="url(#headSapphire)"/>
+<line x1="700" y1="252" x2="352" y2="252" stroke="#7dc4e4" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#openSapphire)"/>
+
+<!-- вызовы 3 и 4: закрыты, стартуют от висящей полосы -->
+<line x1="350" y1="286" x2="698" y2="286" stroke="#939ab7" stroke-width="1.6" marker-end="url(#headGray)"/>
+<line x1="700" y1="302" x2="352" y2="302" stroke="#939ab7" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#openGray)"/>
+<line x1="350" y1="336" x2="698" y2="336" stroke="#939ab7" stroke-width="1.6" marker-end="url(#headGray)"/>
+<line x1="700" y1="352" x2="352" y2="352" stroke="#939ab7" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#openGray)"/>
+
+<!-- метки закрытия слева от orders -->
+<g font-family="'JetBrains Mono', monospace" font-size="12" fill="#a5adcb" text-anchor="end">
+  <text x="328" y="202" dominant-baseline="central">Close()</text>
+  <text x="328" y="302" dominant-baseline="central">Close()</text>
+  <text x="328" y="352" dominant-baseline="central">Close()</text>
+</g>
+
+<!-- метка утечки -->
+<text x="326" y="404" text-anchor="end" font-family="'JetBrains Mono', monospace"
+      font-size="14" font-weight="700" fill="#7dc4e4" dominant-baseline="central">CLOSE_WAIT</text>
+
+<!-- Подпись -->
+<text x="525" y="463" text-anchor="middle" font-family="'JetBrains Mono', monospace"
+      font-size="12" fill="#7dc4e4">Мишка на сервере · @jtprogru_channel</text>
+</svg>
