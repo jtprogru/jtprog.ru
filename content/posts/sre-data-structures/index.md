@@ -1,6 +1,6 @@
 ---
 title: 'Почему SRE надо знать всякое: прод стоит на структурах данных'
-description: "Как структуры данных определяют поведение прода: conntrack, kube-proxy, nginx, Postgres и Prometheus, четыре публичных инцидента и план изучения алгоритмов."
+description: "Как структуры данных влияют на прод: conntrack, nginx, Postgres, Prometheus и VictoriaMetrics. Разбор инцидентов, замеры из лабы и план изучения алгоритмов."
 keywords:
   - структуры данных
   - алгоритмы для SRE
@@ -8,13 +8,13 @@ keywords:
   - conntrack
   - kube-proxy
   - PostgreSQL B-tree
-  - Prometheus cardinality
+  - кардинальность Prometheus и VictoriaMetrics
   - consistent hashing
   - HyperLogLog
   - Raft
-date: 2026-11-07T17:15:00+03:00
-lastmod: 2026-11-07T17:15:00+03:00
-draft: true
+date: 2026-11-08T20:50:04+03:00
+lastmod: 2026-11-08T20:50:04+03:00
+draft: false
 tags:
   - SRE
   - linux
