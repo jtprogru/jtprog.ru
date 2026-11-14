@@ -1,0 +1,173 @@
+# Версии общие для локальной разработки и CI.
+[tools]
+hugo-extended = "0.165.0"
+node = "24.22.3"
+python = "3.14.10"
+
+[env]
+ENV = { default = "development" }
+# Как в Makefile: поздние файлы перекрывают ранние. Здесь нужен dotenv-синтаксис.
+_.file = [".env", "{{env.ENV}}/.env", "~/.env"]
+
+[task_config]
+shell = "bash -o pipefail -ec"
+
+[tasks.default]
+description = "Показать доступные команды"
+depends = ["help"]
+
+[tasks.help]
+description = "Показать доступные команды"
+run = "mise tasks"
+
+[tasks.prec]
+description = "Проверить доступность Hugo"
+run = 'command -v hugo >/dev/null || { echo "hugo not found"; exit 1; }'
+
+[tasks.build]
+description = "Собрать сайт с черновиками"
+depends = ["prec", "cover-rasterize"]
+run = "hugo -D -E -F"
+
+[tasks.build-prod]
+description = "Собрать production-сайт без черновиков"
+depends = ["prec", "cover-rasterize"]
+run = '''
+# HUGO_PROD — список флагов через пробел; пустое значение отключает их.
+read -r -a flags <<< "${HUGO_PROD---minify}"
+hugo --config "${CONFIG-hugo.yaml}" --destination "${PUBLIC_DIR-public}" "${flags[@]}"
+'''
+
+[tasks.serve]
+description = "Запустить dev-сервер с темой mishka-dev"
+depends = ["prec", "cover-rasterize"]
+run = '''
+hugo server -D -E -F --bind "${HOST-127.0.0.1}" --port "${PORT-1313}" \
+  --baseURL "http://${HOST-127.0.0.1}:${PORT-1313}" \
+  --noHTTPCache --ignoreCache --gc --renderStaticToDisk --forceSyncStatic \
+  --logLevel "${LOG_LEVEL-debug}" --minify --watch --printMemoryUsage \
+  --templateMetricsHints --templateMetrics --disableFastRender \
+  --printUnusedTemplates --printPathWarnings --printI18nWarnings \
+  --cleanDestinationDir --config "${CONFIG-hugo.yaml}" --theme mishka-dev
+'''
+
+[tasks.clean]
+description = "Удалить сборочные артефакты и кэши"
+run = '''
+# Пререндеры в assets/math и assets/mermaid закоммичены — их сохраняем.
+rm -rf public "${PUBLIC_DIR-public}" resources node_modules .hugo_build.lock
+git ls-files -z --others --ignored --exclude-standard -- 'content/posts/*/cover.png' \
+  | while IFS= read -r -d '' png; do
+      if [[ -f "${png%.png}.svg" ]]; then rm -fv "$png"; fi
+    done
+find . \( -path ./.git -o -path ./themes \) -prune \
+  -o \( -name .DS_Store -o -name __pycache__ \) -prune -exec rm -rfv {} +
+if command -v hugo >/dev/null; then
+  cachedir=$(hugo config | awk -F"'" '/^cachedir = /{print $2}')
+  test -n "$cachedir" || { echo "не удалось узнать cacheDir из hugo config"; exit 1; }
+  # images — общий кэш Hugo: как и make clean, очищаем его для всех сайтов.
+  echo "rm -rf $cachedir/$(basename "$PWD") $cachedir/images"
+  rm -rf "${cachedir:?}/$(basename "$PWD")" "${cachedir:?}/images"
+else
+  echo "hugo не найден, файловый кэш Hugo пропущен"
+fi
+'''
+
+[tasks.new]
+description = "Создать пост: mise run new my-post"
+depends = ["prec"]
+usage = 'arg "<slug>" help="Имя поста" env="SLUG"'
+run = 'hugo new "content/posts/${usage_slug:?}/index.md"'
+
+[tasks.new-page]
+description = "Создать страницу: mise run new-page my-page"
+depends = ["prec"]
+usage = 'arg "<slug>" help="Имя страницы" env="SLUG"'
+run = 'hugo new --kind page "content/${usage_slug:?}.md"'
+
+[tasks.update-theme]
+description = "Обновить submodules до последних remote-коммитов"
+depends = ["prec"]
+run = '''
+command -v git >/dev/null || { echo "git not found"; exit 1; }
+git submodule update --init --recursive --remote
+'''
+
+[tasks.mermaid-render]
+description = "Пререндерить Mermaid-схемы"
+run = '''
+command -v python3 >/dev/null || { echo "python3 not found"; exit 1; }
+command -v npx >/dev/null || { echo "npx not found"; exit 1; }
+python3 scripts/mermaid-prerender.py
+'''
+
+[tasks.mermaid-check]
+description = "Проверить наличие пререндеров Mermaid"
+run = '''
+command -v python3 >/dev/null || { echo "python3 not found"; exit 1; }
+python3 scripts/mermaid-prerender.py --check
+'''
+
+[tasks.math-render]
+description = "Пререндерить LaTeX-формулы в PNG"
+run = '''
+command -v node >/dev/null || { echo "node not found"; exit 1; }
+test -d node_modules || npm ci
+node scripts/math-prerender.mjs
+'''
+
+[tasks.math-check]
+description = "Проверить наличие пререндеров формул"
+run = '''
+command -v node >/dev/null || { echo "node not found"; exit 1; }
+node scripts/math-prerender.mjs --check
+'''
+
+[tasks.math-prune]
+description = "Удалить неиспользуемые пререндеры формул"
+run = '''
+command -v node >/dev/null || { echo "node not found"; exit 1; }
+node scripts/math-prerender.mjs --prune
+'''
+
+[tasks.cover-rasterize]
+description = "Растеризовать SVG-обложки в PNG"
+run = '''
+command -v rsvg-convert >/dev/null || { echo "rsvg-convert not found: brew install librsvg"; exit 1; }
+bash scripts/cover-rasterize.sh
+'''
+
+[tasks.stamp-commit]
+description = "Подставить SHA коммита в конфиг (только CI)"
+run = '''
+test -n "${CI-}" || { echo "stamp-commit правит ${CONFIG-hugo.yaml} на месте — только в CI (CI=1)"; exit 1; }
+# Python работает одинаково с файлами на macOS и Linux, в отличие от sed -i.
+python3 - <<'PY'
+import os
+from pathlib import Path
+import subprocess
+
+config = Path(os.environ.get("CONFIG", "hugo.yaml"))
+sha = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"], text=True).strip()
+config.write_text(config.read_text().replace("@@@COMMIT@@@", sha))
+PY
+'''
+
+[tasks.robots]
+description = "Скопировать robots.txt в собранный сайт"
+run = 'cp content/robots.txt "${PUBLIC_DIR-public}/robots.txt"'
+
+[tasks.deploy]
+description = "Загрузить собранный сайт на VPS через rsync"
+run = '''
+test -n "${DEPLOY_USER-}" -a -n "${DEPLOY_HOST-}" -a -n "${DEPLOY_DEST-}" \
+  || { echo "нужны DEPLOY_USER, DEPLOY_HOST, DEPLOY_DEST"; exit 1; }
+public_dir=${PUBLIC_DIR-public}
+test -d "$public_dir" || { echo "нет $public_dir — сначала mise run build-prod"; exit 1; }
+read -r -a flags <<< "${RSYNC_ARGS---archive --compress --delete --delay-updates}"
+# %q сохраняет путь к ключу с пробелами в команде remote shell.
+printf -v transport 'ssh -i %q -p %q -o StrictHostKeyChecking=accept-new' \
+  "${DEPLOY_KEY-$HOME/.ssh/id_rsa_deploy}" "${DEPLOY_PORT-22}"
+rsync "${flags[@]}" -e "$transport" \
+  "$public_dir/" "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DEST}/"
+'''

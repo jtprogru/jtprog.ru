@@ -6,11 +6,6 @@ name: CI
       - "main"
   workflow_dispatch:
 
-env:
-  # Держим вровень с локальной: расхождение версий — это расхождение сборок,
-  # а весь смысл `make build-prod` в том, что команда одна и та же.
-  HUGO_VERSION: '0.165.0'
-
 jobs:
   deploy-website:
     runs-on: ubuntu-latest
@@ -21,24 +16,12 @@ jobs:
           submodules: true
           fetch-depth: 0 # нужна история коммитов для git diff в IndexNow-шаге
 
-      # Раньше Hugo ставил внутри себя deploy-экшен, и флаги сборки жили в его
-      # inputs. Теперь сборка описана в Makefile (make build-prod), поэтому
-      # локально и в CI собирается буквально одна и та же команда, а здесь
-      # остаётся только положить нужный бинарник.
-      - name: Install Hugo
-        run: |
-          set -euo pipefail
-          asset="hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
-          base="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
-          tmp="$(mktemp -d)"
-          curl -fsSL "${base}/${asset}" -o "${tmp}/${asset}"
-          curl -fsSL "${base}/hugo_${HUGO_VERSION}_checksums.txt" \
-            -o "${tmp}/checksums.txt"
-          (cd "${tmp}" && grep " ${asset}\$" checksums.txt | sha256sum -c -)
-          tar xf "${tmp}/${asset}" -C "${tmp}" hugo
-          sudo install -m 0755 "${tmp}/hugo" /usr/local/bin/hugo
-          rm -rf "${tmp}"
-          hugo version
+      # Те же версии Hugo, Node и Python, что и локально, из mise.toml.
+      # Команды сборки остаются в Makefile.
+      - name: Install build tools
+        uses: jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785 # v5
+        with:
+          version: '2026.11.7'
 
       # Блок без пререндера уезжает на runtime-ветку render hook'а: mermaid с
       # CDN и цвета, которых никто не видел до публикации. Ровно так уехала

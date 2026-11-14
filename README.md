@@ -9,9 +9,9 @@
 
 ## Стек
 
-- **[Hugo](https://gohugo.io/)** (Extended, версия из CI: см. `.github/workflows/main.yaml`).
+- **[Hugo](https://gohugo.io/)** (Extended, версия закреплена в `mise.toml`).
 - **Тема [`hugo-mishka`](https://github.com/jtprogru/hugo-mishka)** — собственная, подключена submodule'ом в `themes/mishka`.
-- **GitHub Actions** + [`jtprogru/hugo-rsync-deployment`](https://github.com/jtprogru/hugo-rsync-deployment) — сборка и `rsync` на VPS.
+- **GitHub Actions** + Makefile — сборка и `rsync` на VPS; mise устанавливает версии инструментов из `mise.toml`.
 - Контент — markdown в `content/`, обложки — `assets/covers/`, метаданные проектов — `data/projects.yaml`.
 
 ## Структура
@@ -31,26 +31,57 @@
 
 ## Локальная разработка
 
+`mise.toml` закрепляет версии Hugo Extended, Node и Python для разработки и CI.
+Команды и их зависимости описаны в `mise.toml` и Makefile. Mise tasks
+запускают инструменты напрямую; можно пользоваться обоими интерфейсами.
+
 ```sh
-# зависимости
-brew install hugo                            # macOS
-# (gohugo.io/installation для Linux/Windows)
+# macOS: mise и системные зависимости
+brew install mise librsvg
+# Linux: установи mise по https://mise.jdx.dev/installing-mise.html
+# и системные зависимости: git, rsync, librsvg2-bin (Debian/Ubuntu)
+# make нужен, если пользуешься Makefile
+
+mise trust
+mise install
 git submodule update --init --recursive      # подтянуть тему
 
-# dev-сервер с drafts/future/expired
-hugo server -D -E -F
+# список задач
+mise tasks
+mise run help
 
-# одноразовый билд
-hugo --gc --minify
+# production-сборка
+mise run build-prod
+# та же команда напрямую через make, с инструментами mise
+mise exec -- make build-prod
 
-# make-обёртки (см. Makefile)
-make help
+# dev-сервер с drafts/future/expired, без локальной dev-темы
+mise exec -- hugo server -D -E -F
 
 # снести все сборочные артефакты и кэши, чтобы собрать с нуля
-make clean
+mise run clean
 ```
 
-> Тема дев-клонируется через symlink `themes/mishka-dev → ~/Work/.../hugo-mishka` и подключается флагом `hugo --theme mishka-dev`. Прод использует pinned-submodule `themes/mishka`.
+`mise run` и `mise exec` работают без активации mise в shell. Обычные `make`
+команды тоже доступны: они используют инструменты из текущего `PATH`.
+Mise не устанавливает librsvg и npm-зависимости: для пререндера формул нужен
+`mise exec -- npm ci` (Puppeteer также скачает браузер).
+
+В mise параметры задаются через окружение: `PORT=1414 mise run serve`,
+`PUBLIC_DIR=/tmp/jtprog-preview mise run build-prod`.
+Для нового поста или страницы slug передаётся аргументом: `mise run new my-post`.
+Также работает `SLUG=my-post mise run new`.
+
+Mise загружает `.env`, `${ENV}/.env` и `~/.env` в этом порядке; отсутствующие
+файлы пропускает, поздние значения перекрывают ранние, включая окружение.
+По умолчанию `ENV=development`. Для mise эти файлы должны иметь dotenv-синтаксис
+`KEY=value`; выражения Makefile вроде `?=` и `$(VAR)` здесь не поддерживаются.
+`CONFIG`, `HOST`, `PORT`, `LOG_LEVEL`, `PUBLIC_DIR`, `HUGO_PROD` и `DEPLOY_*`
+сохраняют значения по умолчанию из Makefile. `HUGO_PROD` и `RSYNC_ARGS` принимают
+список флагов через пробел; например, `HUGO_PROD='' mise run build-prod`
+отключает минификацию, если значение не переопределено в `.env`.
+
+> `mise run serve`, как и `make serve`, использует локальную dev-тему: symlink `themes/mishka-dev → ~/Work/.../hugo-mishka`. Для него нужен отдельный checkout темы. Прод использует pinned-submodule `themes/mishka`.
 
 ## Новый пост
 
@@ -58,6 +89,8 @@ make clean
 hugo new content/posts/<slug>/index.md
 # или через make-обёртку:
 make new SLUG=<slug>
+# или через mise с закреплёнными инструментами:
+mise run new <slug>
 ```
 
 Архетип лежит в `archetypes/posts.md`. Cover-картинка — рядом с `index.md` (page bundle) **или** в `assets/covers/<slug>.{jpg,png,webp}` (общий).
@@ -68,6 +101,8 @@ make new SLUG=<slug>
 hugo new --kind page content/<slug>.md
 # или через make-обёртку:
 make new-page SLUG=<slug>
+# или через mise:
+mise run new-page <slug>
 ```
 
 Архетип — `archetypes/page.md`.
