@@ -1,0 +1,7 @@
+/* Prose links have higher specificity than the theme's CTA button rules.
+   Keep the inverse text color on the accent fill in both themes and states. */
+.md-content .telegram-cta__link,
+.md-content .telegram-cta__link:hover {
+  color: var(--bg);
+  text-decoration: none;
+}
