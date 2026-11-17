@@ -1,4 +1,3 @@
----
 # === Идентичность сайта ===
 baseURL: "https://jtprog.ru"
 # Именно `locale`: ключа `language` в Hugo нет, значение просто не читалось,
@@ -10,7 +9,6 @@ defaultContentLanguage: "ru"
 theme: "mishka"
 title: "Мишка на сервере"
 copyright: "[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) &copy; / Mikhail (jtprogru) Savin / Commit: @@@COMMIT@@@"
-
 # === Output / выдача ===
 outputs:
   home:
@@ -22,7 +20,6 @@ outputs:
   # объявлялся через <link rel=alternate> в <head>. Основной /index.xml цел.
   page:
     - HTML
-
 # === Hugo-features ===
 enableRobotsTXT: false
 enableEmoji: true
@@ -34,18 +31,14 @@ buildFuture: false
 buildExpired: false
 summaryLength: 15
 pluralizeListTitles: false
-
 pagination:
   pagerSize: 10
-
 minify:
   disableXML: true
   minifyOutput: true
-
 services:
   googleAnalytics:
     id: G-NK4TC343YF
-
 related:
   includeNewer: true
   threshold: 80
@@ -55,13 +48,11 @@ related:
       weight: 100
     - name: categories
       weight: 70
-
 frontmatter:
   date: ["date", "publishDate", "lastmod"]
   lastmod: ["lastmod", ":git", "date", "publishDate"]
   publishDate: ["publishDate", "date"]
   expiryDate: ["expiryDate"]
-
 # === Меню ===
 menu:
   main:
@@ -92,7 +83,6 @@ menu:
       name: "Поиск"
       url: "/search/"
       weight: 6
-
 # === Markup ===
 markup:
   goldmark:
@@ -138,7 +128,6 @@ markup:
     lineNumbersInTable: true
     noClasses: true
     tabWidth: 4
-
 # === Кеши ===
 caches:
   assets:
@@ -150,7 +139,6 @@ caches:
   modules:
     dir: ":cacheDir/modules"
     maxAge: -1
-
 # === Mounts ===
 module:
   mounts:
@@ -168,7 +156,6 @@ module:
       target: i18n
     - source: archetypes
       target: archetypes
-
 # === Параметры темы Mishka ===
 params:
   env: production
@@ -184,7 +171,6 @@ params:
   archivesDateFormat: "2006-01-02"
   defaultTheme: auto
   comments: false
-
   # --- UI-флаги ---
   ShowReadingTime: true
   ShowShareButtons: false
@@ -201,7 +187,6 @@ params:
     # статические страницы. Без него шаринг главной идёт вообще без картинки.
     # Ищется в assets/covers/.
     defaultImage: blog.png
-
   # --- KaTeX подключается лениво:
   # math.html auto-detect'ит формулы по `$$` / `\(` в .RawContent
   # или по `math: true` во frontmatter поста. KaTeX не грузится на
@@ -211,19 +196,15 @@ params:
   # а сайт грузит KaTeX с jsdelivr. Разные версии — разная вёрстка формул
   # в браузере и в IV. Dependabot эту строку не видит, бампать руками.
   katexVersion: "0.16.21"
-
   opengraph: true
   twitter_cards: true
-
   # Публичный @username канала. Уходит в <meta property="te:channel">, откуда
   # его читает Instant View-шаблон и рисует кнопку подписки под статьёй.
   # Нужен именно публичный handle: в socialIcons лежит приватная инвайт-ссылка
   # на чат, из неё Telegram канал не вычислит. Без "@" — партиал добавит сам.
   telegramChannel: "jtprogru_channel"
-
   PWA:
     enabled: false
-
   # --- Шапка / иконки ---
   label:
     text: "Мишка на сервере"
@@ -241,7 +222,6 @@ params:
     apple_touch_icon: /apple-touch-icon.svg
     safari_pinned_tab: /safari-pinned-tab.svg
     disableFingerprinting: true
-
   # --- Приписка под текстом поста (partial post_endnote.html) ---
   # Рендерится только на постах (type: post), выключается на конкретном
   # посте фронтматтером `endnote: false`.
@@ -254,12 +234,10 @@ params:
     linkText: "Посмотреть проект на Sponsr"
     # Сюда переехал футер, который раньше дублировался в конце каждого поста.
     note: "Вопросы, замечания и просто поговорить — в [чат](https://t.me/+WkR_-AWNbXVjMWUy). Анонсы новых постов — в [канале](https://t.me/+gLeURJwFz5Q4NTA6). Другие способы сказать спасибо — на странице «[Донаты](/donations/)»."
-
   editPost:
     URL: "https://github.com/jtprogru/jtprog.ru/blob/main/content"
     Text: "Edit..."
     appendFilePath: true
-
   # --- Главная: блок «Мои проекты» ---
   homeSections:
     projects:
@@ -267,7 +245,6 @@ params:
       featuredOnly: true # true: показывать только проекты с `featured: true` в data/projects.yaml
       limit: 6 # потолок карточек; если featuredOnly=true и избранных меньше — вернётся столько, сколько есть
       moreLink: /projects/ # ссылка «Все проекты →» под сеткой; пусто = не показывать
-
   # --- Profile-mode (hero на главной) ---
   profileMode:
     enabled: true
@@ -281,7 +258,6 @@ params:
     imageWidth: 160
     imageHeight: 160
     latestPostsCount: 6
-
   # Альтернатива profileMode (не используется одновременно).
   # homeInfoParams:
   #   Title: "Привет, `%username%`!"
@@ -298,15 +274,12 @@ params:
       url: "https://sponsr.ru/jtprogru_channel/"
     - name: github
       url: "https://github.com/jtprogru"
-    - name: dev
-      url: "https://dev.to/jtprogru"
     - name: linkedin
       url: "https://www.linkedin.com/in/jtprogru"
     - name: cv
       url: "https://savinmi.ru"
     - name: rss
       url: "/index.xml"
-
   # --- Поиск ---
   # Опции Fuse вынесены в data/fuse.yaml — Hugo lower-case'ит ключи
   # внутри params, а Fuse такие ключи игнорирует. Data-файлы сохраняют case.
