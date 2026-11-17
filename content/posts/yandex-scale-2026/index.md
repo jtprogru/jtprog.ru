@@ -10,9 +10,9 @@ keywords:
   - Valkey
   - охлаждение данных на диск
   - автомасштабирование шардов
-date: 2026-11-16T19:33:44+03:00
-lastmod: 2026-11-16T19:33:44+03:00
-draft: true
+date: 2026-11-17T09:34:58+03:00
+lastmod: 2026-11-17T09:34:58+03:00
+draft: false
 tags:
   - Yandex Cloud
   - meetup
