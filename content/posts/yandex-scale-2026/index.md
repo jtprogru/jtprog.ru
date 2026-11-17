@@ -20,9 +20,9 @@ tags:
   - Valkey
 categories: ["notes"]
 cover:
-  image: notes.png
-  alt: notes
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  image: cover.png
+  alt: 'Control plane выдержал рост кластера Mindbox со 120 до 650 нод; разрыв на внешнем контуре отмечает сбой облачной обвязки'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 type: post
 slug: 'yandex-scale-2026'
