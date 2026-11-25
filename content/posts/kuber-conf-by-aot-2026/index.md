@@ -17,9 +17,9 @@ tags:
   - SRE
 categories: ["notes"]
 cover:
-  image: notes.png
-  alt: notes
-  caption: 'Illustrated by [Igan Pol](https://www.behance.net/iganpol)'
+  image: cover.png
+  alt: 'План Kuber Conf: пунктир от входа ведёт в зал докладов, а сапфировая линия сворачивает к свободному стулу за столом в гостиной АОТ.'
+  caption: 'Создал «Мишка на сервере» · AI-assisted'
   relative: false
 type: post
 slug: 'kuber-conf-by-aot-2026'

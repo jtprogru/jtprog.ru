@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1050" height="480" viewBox="0 0 1050 480" role="img" aria-labelledby="title desc">
+  <title id="title">Второй раз на Kuber Conf: зачем я пойду и в третий</title>
+  <desc id="desc">Вид сверху на конференцию. От входа серый пунктир ведёт к рядам кресел перед сценой. Сплошной сапфировый маршрут сворачивает к свободному стулу за столом в гостиной АОТ.</desc>
+  <defs>
+    <linearGradient id="paper" x2="0" y2="100%"><stop stop-color="#24273a"/><stop offset="1" stop-color="#1e2030"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.85" fill="#494d64"/></pattern>
+    <g id="seat" fill="#363a4f" stroke="#939ab7" stroke-width="1.5"><rect x="-9" y="-7" width="18" height="14" rx="4"/><path d="M-11 0v6q0 4 4 4H7q4 0 4-4V0" fill="none"/></g>
+    <g id="row"><use xlink:href="#seat" x="245"/><use xlink:href="#seat" x="278"/><use xlink:href="#seat" x="311"/><use xlink:href="#seat" x="383"/><use xlink:href="#seat" x="416"/><use xlink:href="#seat" x="449"/></g>
+    <g id="mark" stroke="#494d64"><path d="M-6 0H6M0-6V6"/></g>
+  </defs>
+  <rect width="1050" height="480" fill="url(#paper)"/>
+  <rect x="88" y="136" width="874" height="273" fill="url(#grid)" opacity=".6"/>
+  <g fill="#cad3f5" font-family="'IBM Plex Sans','PT Sans',sans-serif" text-anchor="middle">
+    <text x="525" y="57" font-size="30" font-weight="700">Второй раз на Kuber Conf: зачем я пойду и в третий</text>
+    <text x="525" y="86" font-size="17" fill="#a5adcb">За докладами — в зал. За продолжением разговора — в гостиную</text>
+  </g>
+  <!-- Survey marks and the broken wall lines of the two rooms. -->
+  <g><use xlink:href="#mark" x="120" y="154"/><use xlink:href="#mark" x="930" y="154"/><use xlink:href="#mark" x="120" y="385"/><use xlink:href="#mark" x="930" y="385"/></g>
+  <g fill="none" stroke="#62677f" stroke-width="3" stroke-linecap="square">
+    <path d="M320 343H187V159H505V343H374"/><path d="M658 343H573V159H863V343H715"/>
+  </g>
+  <g font-family="'IBM Plex Sans','PT Sans',sans-serif" font-weight="600" font-size="19" fill="#cad3f5"><text x="187" y="142">Зал докладов</text><text x="573" y="142">Гостиная АОТ</text></g>
+  <!-- Identical chairs face a single speaker; the aisle stays open. -->
+  <path d="M235 172H459V184Q347 205 235 184Z" fill="#363a4f" stroke="#70758c"/>
+  <text x="347" y="186" text-anchor="middle" font-family="'Iosevka',monospace" fill="#a5adcb" font-size="13">сцена</text>
+  <use xlink:href="#row" y="226"/><use xlink:href="#row" y="263"/><use xlink:href="#row" y="300"/>
+  <!-- One table, the chairs drawn at different angles, an open seat below. -->
+  <g transform="translate(720 244)">
+    <use xlink:href="#seat" transform="translate(-67 -27) rotate(109)"/><use xlink:href="#seat" transform="translate(-23 -50) rotate(156)"/>
+    <use xlink:href="#seat" transform="translate(37 -44) rotate(-150)"/><use xlink:href="#seat" transform="translate(70 7) rotate(-79)"/>
+    <use xlink:href="#seat" transform="translate(40 45) rotate(-35)"/>
+    <ellipse rx="53" ry="33" transform="rotate(12)" fill="#363a4f" stroke="#939ab7" stroke-width="2"/>
+    <!-- A notebook and two cups give the plan its scale. -->
+    <g transform="rotate(15)" stroke="#939ab7" fill="none"><rect x="-16" y="-8" width="19" height="14" rx="1"/><path d="M-12-8V6"/><circle cx="21" cy="10" r="3.5"/><circle cx="-32" cy="-6" r="3"/></g>
+  </g>
+  <!-- At the junction the intended route is dotted; the one actually taken is solid. -->
+  <path d="M525 379H358Q347 379 347 368V265" fill="none" stroke="#a5adcb" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/><path d="m340 270 7-9 7 9" fill="none" stroke="#a5adcb" stroke-width="2.5"/>
+  <path d="M525 408V393Q525 379 539 379H670Q685 379 685 364V331Q685 317 692 310L700 301" fill="none" stroke="#7dc4e4" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(702 295) rotate(20)" fill="#24273a" stroke="#7dc4e4" stroke-width="2.8"><rect x="-11" y="-8" width="22" height="17" rx="4"/><path d="M-14 0v7q0 5 5 5H9q5 0 5-5V0" fill="none"/></g>
+  <g fill="#a5adcb" font-family="'Iosevka',monospace" text-anchor="middle"><text x="525" y="428" font-size="14">вход</text><text x="525" y="462" font-size="12">Мишка на сервере · @jtprogru_channel</text></g>
+</svg>
